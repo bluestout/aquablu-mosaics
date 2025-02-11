@@ -1,0 +1,182 @@
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+
+{%- style -%}
+    #shopify-section-{{ section.id }} .promo-grid--space-top {
+      padding-top: {{ section.settings.gutter_size }}px;
+      margin-top: 0;
+    }
+
+    @media only screen and (max-width: 589px) {
+      #shopify-section-{{ section.id }} .promo-grid--space-top {
+        padding-top: {{ section.settings.gutter_size | divided_by: 2 }}px;
+      }
+    } 
+
+    #shopify-section-{{ section.id }} .promo-grid--space-bottom {
+      padding-bottom: {{ section.settings.gutter_size }}px;
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 589px) {
+      #shopify-section-{{ section.id }} .promo-grid--space-bottom {
+        padding-bottom: {{ section.settings.gutter_size | divided_by: 2 }}px;
+      }
+    }
+
+
+{%- endstyle -%}
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="page-width page-width-carousel {{ css_class }} logo-list-custom   {% if section.settings.space_above %} promo-grid--space-top{% endif %}{% if section.settings.space_below %} promo-grid--space-bottom{% endif %}">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header small--text-center">
+      <h2 class="section-header__title text-center">{{ section.settings.title | escape }}</h2>
+    </div>
+  {%- endif -%}
+  <div class="logo-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false, "wrapAround": true, "setGallerySize": true, "imagesLoaded": true }'>
+    {%- for block in section.blocks -%}
+      <div class="carousel-cell">
+        <a href="{{ block.settings.link }}" class="" aria-label="{{ block.settings.image.alt }}">
+          {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <img class=" lazyload"
+              data-src="{{ img_url }}"
+              data-flickity-lazyload="{{ img_url }}"
+              data-widths="[360, 540, 720, 1020]"
+              data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+              data-sizes="auto"
+              loading="lazy"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              alt="{{ block.settings.image.alt }}">
+          <!-- <img class=" lazyload"
+              data-src="{{ img_url }}"
+              data-flickity-lazyload="{{ img_url }}"
+              data-widths="[360, 540, 720, 1020]"
+              data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+              data-sizes="auto"
+              loading="lazy"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              alt="{{ block.settings.image.alt }}"> -->
+          {%- if block.settings.logo_title != blank -%}
+            <h3>{{ block.settings.logo_title }}</h3>
+          {%- endif -%}
+          {%- if block.settings.logo_text != blank -%}
+            <p>{{ block.settings.logo_text }}</p>
+          {%- endif -%}
+        </a>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+
+{% schema %}
+{
+  "name": "Logo List Custom #2",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.logo-list.settings.title.label",
+      "default": "Our brands"
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.logo-list.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "gutter_size",
+      "label": "t:sections.promo-grid.settings.gutter_size.label",
+      "default": 20,
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "space_above",
+      "label": "t:sections.promo-grid.settings.space_above.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "space_below",
+      "label": "t:sections.promo-grid.settings.space_below.label",
+      "default": false
+    }, 
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "t:sections.logo-list.blocks.logo.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.logo-list.blocks.logo.settings.image.label",
+          "info": "t:sections.logo-list.blocks.logo.settings.image.info"
+        },
+        {
+          "type": "text",
+          "id": "logo_title",
+          "label": "Logo Title",
+          "default": "OCEAN APPROVED"
+        },
+        {
+          "type": "text",
+          "id": "logo_text",
+          "label": "Logo Text",
+          "default": "help protect our oceans"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.logo-list.blocks.logo.settings.link.label",
+          "info": "t:sections.logo-list.blocks.logo.settings.link.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo List Custom #2",
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

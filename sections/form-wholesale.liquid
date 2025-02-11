@@ -1,0 +1,341 @@
+ <style>
+ .three-grid-column{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start;justify-content:center}.three-grid-column .input-field{display:flex;min-width:200px;align-items:baseline}
+ </style>
+
+ <div class="page-width page-width--narrow">
+  <h4 class="text-center">Trade Affiliate Registration Form</h4>
+  {% form 'contact', class: 'hp-form' %}
+    <input type="hidden" name="contact[Subject]" value="Trade Affiliate Registration Form Submission">
+    {% if form.posted_successfully? %}
+    <div class="form-success alert alert-success">
+      {{ 'contact.form.post_success' | t }}
+    </div>
+    {% endif %}
+    {% if form.errors %}
+    <div class="alert alert-danger">
+      {{ form.errors | default_errors }}
+    </div>
+    {% endif %}
+
+    <div class="form-grid form-vertical">
+      <div class="tradetype">
+        <label>Trade Type</label>
+        <div class="radio-container three-grid-column">
+          <div class="input-field">
+            <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-0" type="checkbox" value="Pool Builder" >
+            <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-0">
+              Pool Builder
+            </label>
+          </div>
+          <div class="input-field">
+            <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-1" type="checkbox" value="Tile Installer">
+            <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-1">
+              Tile Installer
+            </label>
+          </div>
+          <div class="input-field">
+            <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-2" type="checkbox" value="Interior Designer" >
+            <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-2">
+              Interior Designer
+            </label>
+          </div>
+          <div class="input-field">
+            <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-3" type="checkbox" value="Landscape Designer" >
+            <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-3">
+              Landscape Designer
+            </label>
+          </div>
+          <div class="input-field">
+            <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-4" type="checkbox" value="Architect" >
+            <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-4" >
+              Architect
+            </label>
+          </div>
+          <div class="input-field">
+            <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+            <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+              Other
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--small">
+        {% render 'form-input', type:'text', name: 'First Name', required: true, size: 'one-half', class: 'input-full' %}
+
+        {% render 'form-input', type:'text', name: 'Last Name', required: true, size: 'one-half', class: 'input-full' %}
+      </div>
+      <div class="grid grid--small">
+        <div class="grid__item medium-up--one-half one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
+          <input required class="input-full" type="email" name="contact[email]" id="ContactFormEmail" placeholder="{{ 'contact.form.email' | t }}*" value="{% if customer %}{{ customer.email }}{% endif %}" spellcheck="false" autocomplete="off" autocapitalize="off">
+        </div>
+
+        <div class="grid__item medium-up--one-half one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+          <input required class="input-full" type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="{{ 'contact.form.phone' | t }}*" value="{% if customer %}{{ customer.phone }}{% endif %}" pattern="[0-9\-]*">
+        </div>
+      </div>
+
+      <div class="grid grid--small">
+        <div class="grid__item medium-up--one-half one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormCompany">Company Name*</label>
+          <input required class="input-full" type="text" name="contact[Company Name]" id="ContactFormCompany" placeholder="Company Name" value="">
+        </div> 
+
+        {% render 'form-input', type:'text', name: 'License Number', required: true, size: 'one-half', class: 'input-full' %}
+      </div>
+      <div class="grid grid--small">
+        {% render 'form-input', type:'text', name: 'Website', required: false, size: 'one-whole', class: 'input-full' %}
+      
+        {% render 'form-input', type:'text', name: 'Street Address', required: true, size: 'one-whole', class: 'input-full' %}
+        
+        {% render 'form-input', type:'text', name: 'Address Line 2', required: true, size: 'one-whole', class: 'input-full' %}
+  
+      </div>
+      <div class="grid grid--small">
+        {% render 'form-input', type:'text', name: 'City', required: true, size: 'one-half', class: 'input-full' %}
+
+        {% render 'form-input', type:'text', name: 'State', required: true, size: 'one-half', class: 'input-full' %}
+
+        {% render 'form-input', type:'text', name: 'Postal / Zip', required: true, size: 'one-half', class: 'input-full' %}
+
+        {% render 'form-input', name: 'Country', required: true, size: 'one-half', class: 'input-full' %}
+
+      </div>
+      <div class="grid grid--small">
+        {% render 'form-input', type:'text', name: 'Shipping Address', required: false, size: 'one-whole', class: 'input-full' %}
+        
+        {% render 'form-input', type:'text', name: 'Address Line 2', required: false, size: 'one-whole', class: 'input-full' %}
+      </div>
+      <div class="grid grid--small">
+        {% render 'form-input', type:'text', name: 'City', required: true, size: 'one-half', class: 'input-full' %}
+
+        {% render 'form-input', type:'text', name: 'State', required: true, size: 'one-half', class: 'input-full' %}
+
+        {% render 'form-input', type:'text', name: 'Postal / Zip', required: true, size: 'one-half', class: 'input-full' %}
+
+        {% render 'form-input', name: 'Country', required: true, size: 'one-half', class: 'input-full' %}
+
+      </div>
+
+      <div class="flex grid form-grid">
+        <div class="tradetype">
+          <label>Do you have a showroom?<span class="error-radio"> Required field</span></label>
+          <div class="radio-container">
+            <div class="input-field">
+              <input class="checkbox" name="contact[Showroom]" id="zkde4ovc_1543688335853-0" type="checkbox" value="Yes" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-0">
+                Yes
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Showroom]" id="zkde4ovc_1543688335853-1" type="checkbox" value="No">
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-1">
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+      
+        {% render 'form-input-custom', type:'text', name: 'How many projects do you complete in a year?', required: false, size: 'one-whole', class: 'input-full' %}
+
+        <div class="tradetype">
+          <label>Tile installation type?<span class="error-radio"> Required field</span></label>
+          <div class="radio-container">
+            <div class="input-field">
+              <input class="checkbox" name="contact[Installation]" id="zkde4ovc_1543688335853-0" type="checkbox" value="Inhouse" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-0">
+                Inhouse
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Installation]" id="zkde4ovc_1543688335853-1" type="checkbox" value="Subcontractor">
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-1">
+                Subcontractor
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="tradetype">
+          {% comment %}
+          {% assign trade_types = 'Pool Builder,Tile Installer,Interior Designer,Landscape Designer,Architect,Other' | split: ',' %}
+          {% render 'form-input', type:'select', name: 'Trade Type', required: true, size: 'one-half', array: trade_types %}
+          {% endcomment %}
+          <label>What products are you interested in?<span class="error-radio"> Required field</span></label>
+          <div class="radio-container three-grid-column">
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-0" type="checkbox" value="Pool Builder" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-0">
+                Glass Tile
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-1" type="checkbox" value="Tile Installer">
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-1">
+                Outdoor Furniture
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-2" type="checkbox" value="Interior Designer" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-2">
+                Pool Furniture
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-3" type="checkbox" value="Landscape Designer" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-3">
+                Procelain Tile
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-4" type="checkbox" value="Architect" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-4" >
+                Pool Care Products
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Waterproofing
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Pool Mosaics
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Pool Accessories
+              </label>
+            </div>        
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Installation
+              </label>
+            </div>        
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Outdoor Pavers
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Kitchen Tile
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Fire Pits
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Fire & Water Features
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Bath Tiles
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-5" type="checkbox" value="Other" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-5">
+                Artificial Turf
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tradetype">
+          <label>How did you find us?<span class="error-radio"> Required field</span></label>
+          <div class="radio-container">
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-0" type="checkbox" value="Pool Builder" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-0">
+                Customer Referral 
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-1" type="checkbox" value="Tile Installer">
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-1">
+                Business Referral
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-2" type="checkbox" value="Interior Designer" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-2">
+                Online Search
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-3" type="checkbox" value="Landscape Designer" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-3">
+                Social Media
+              </label>
+            </div>
+            <div class="input-field">
+              <input class="checkbox" name="contact[Trade Type]" id="zkde4ovc_1543688335853-4" type="checkbox" value="Architect" >
+              <label class="checkOption fitText horizontal" for="zkde4ovc_1543688335853-4" >
+                Other
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid__item anim-in one-whole">
+          
+          <input type="submit" class="btn btn--primary" value="Submit">
+        </div>
+        <div class="grid__item one-whole">
+          {% if form.posted_successfully? %}
+          <div class="form-success alert alert-success">
+            {{ 'contact.form.post_success' | t }}
+          </div>
+          {% endif %}
+          {% if form.errors %}
+          <div class="alert alert-danger">
+            {{ form.errors | default_errors }}
+          </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>  
+  {% endform %}
+</div>
+<script type="text/javascript">
+  var wholesaleContactForm = document.querySelector('#contact_form');
+  var tradetypeErrorRadios = document.querySelectorAll('.tradetype .error-radio');
+
+  wholesaleContactForm.addEventListener('submit', function() {
+    var flag = false;
+    var checkboxes = wholesaleContactForm.querySelectorAll('.checkbox');
+    checkboxes.forEach(function(checkbox) {
+      if (checkbox.checked) {
+        flag = true;
+      }
+    });
+
+    if (!flag) {
+      tradetypeErrorRadios.forEach(function(radio) {
+        radio.style.display = 'inline';
+      });
+      return false; 
+    } else {
+      tradetypeErrorRadios.forEach(function(radio) {
+        radio.style.display = 'none';
+      });
+      return true;
+    }
+  });
+</script>

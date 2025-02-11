@@ -1,0 +1,346 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
+  {% comment %} <div id="qab_placeholder"></div> {% endcomment %}
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+
+  <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-book-subset.woff2">
+  <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-medium-subset.woff2">
+  <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-demi-subset.woff2">
+
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preload" as="script" href="{{ 'theme.js' | asset_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com">
+  {% comment %}--> Add Wish List {% endcomment %}
+  <link rel="preload" as="script" href="{{ 'swym-custom-wishlist-button.js' | asset_url }}">
+  {% comment %}<-- Add Wish List {% endcomment %}
+
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+  {%- endif -%}
+
+  {%- render 'seo-title' -%}
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  {%- render 'social-meta-tags' -%}
+
+  {%- render 'font-face' -%}
+  {%- render 'css-variables' -%}
+  {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}">  
+
+  {%- if shop.enabled_currencies.size > 1 -%}
+    <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url }}">
+  {%- endif -%}
+
+  {%- liquid
+    assign enable_superscript = false
+    unless shop.money_format contains 'money' or shop.money_format contains '.'
+      if settings.superscript_decimals
+        if shop.money_format contains '{{amount}}' or shop.money_format contains '{{ amount }}'
+          assign enable_superscript = true
+        elsif shop.money_format contains '{{amount_with_comma_separator}}' or shop.money_format contains '{{ amount_with_comma_separator }}'
+          assign enable_superscript = true
+        endif
+      endif
+    endunless
+  -%}
+
+  <script defer>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    window.theme = window.theme || {};
+    theme.routes = {
+      home: "{{ routes.root_url }}",
+      collections: "{{ routes.collections_url }}",
+      cart: "{{ routes.cart_url | append: '.js' }}",
+      cartPage: "{{ routes.cart_url }}",
+      cartAdd: "{{ routes.cart_add_url | append: '.js' }}",
+      cartChange: "{{ routes.cart_change_url | append: '.js' }}",
+      search: "{{ routes.search_url }}"
+    };
+    theme.strings = {
+      soldOut: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      inStockLabel: {{ 'products.product.in_stock_label' | t | json }},
+      stockLabel: {{ 'products.product.stock_label' | t: count: '[count]' | json }},
+      willNotShipUntil: {{ 'products.product.will_not_ship_until' | t: date: '[date]' | json }},
+      willBeInStockAfter: {{ 'products.product.will_be_in_stock_after' | t: date: '[date]' | json }},
+      waitingForStock: {{ 'products.product.waiting_for_stock' | t | json }},
+      savePrice: {{ 'products.general.save_html' | t: saved_amount: '[saved_amount]' | json }},
+      cartEmpty: {{ 'cart.general.empty' | t | json }},
+      cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }},
+      searchCollections: {{ 'general.search.collections' | t | json }},
+      searchPages: {{ 'general.search.pages' | t | json }},
+      searchArticles: {{ 'general.search.articles' | t | json }}
+    };
+    theme.settings = {
+      dynamicVariantsEnable: true,
+      cartType: {{ settings.cart_type | json }},
+      isCustomerTemplate: {% if request.page_type contains 'customers/' %}true{% else %}false{% endif %},
+      moneyFormat: {{ shop.money_format | json }},
+      saveType: {{ settings.product_save_type | json }},
+      productImageSize: {{ settings.product_grid_image_size | json }},
+      productImageCover: {{ settings.product_grid_image_fill }},
+      predictiveSearch: {{ settings.predictive_search_enabled }},
+      predictiveSearchType: {{ settings.search_type | json }},
+      superScriptSetting: {{ settings.superscript_decimals }},
+      superScriptPrice: {{ enable_superscript }},
+      quickView: {{ settings.quick_shop_enable }},
+      quickAdd: {{ settings.quick_add_enable }},
+      themeName: 'Expanse',
+      themeVersion: "3.0.0"
+    };
+  </script>
+
+  {{ content_for_header }}
+
+  {% render 'lazysizes' %}
+  {%- if request.page_type == "index" or request.page_type == "collection" -%}
+    <script src="{{ 'flickity.min.js' | asset_url }}" defer="defer"></script>
+  {%- else -%}
+    <script src="{{ 'flickity.min.js' | asset_url }}"></script>
+  {%- endif -%}
+
+  {%- if request.page_type == "product" -%}
+    <script src="{{ 'photoswipe_ori.min.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  {% comment %}--> Add Wish List {% endcomment %}
+  <script src="{{ 'swym-custom-wishlist-button.js' | asset_url }}" defer="defer"></script>
+  {% comment %}<-- Add Wish List {% endcomment %}
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KDW8RQJ');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script src="https://www.googletagmanager.com/gtag/js?id=G-VFRG14EQVG" defer="defer"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []; 
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VFRG14EQVG'); 
+  </script>
+  <script>
+    function getParam(p) {
+      var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+    function getExpiryRecord(value) {
+      var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 90 day expiry in milliseconds
+      var expiryDate = new Date().getTime() + expiryPeriod;
+      return {
+        value: value,
+        expiryDate: expiryDate
+      };
+    }
+    function addGclid() {
+      var gclidParam = getParam('gclid');
+      var gclidFormFields = ['gclid_field', 'foobar']; // all possible gclid form field ids here
+      var gclidRecord = null;
+      var currGclidFormField;
+      var gclsrcParam = getParam('gclsrc');
+      var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+      gclidFormFields.forEach(function (field) {
+        if (document.getElementById(field)) {
+          currGclidFormField = document.getElementById(field);
+        }
+      });
+      if (gclidParam && isGclsrcValid) {
+        gclidRecord = getExpiryRecord(gclidParam);
+        localStorage.setItem('gclid', JSON.stringify(gclidRecord));
+      }
+      var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
+      var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+      if (currGclidFormField && isGclidValid) {
+        currGclidFormField.value = gclid.value;
+      }
+    }
+    window.addEventListener('load', addGclid);
+  </script>
+
+  {%- if settings.enable_hotjar -%}
+    <!-- Hotjar Tracking Code for www.aquablumosaics.com -->
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1106545,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  {%- endif -%}
+
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+
+  <script type="text/javascript">
+    var AddShoppersWidgetOptions = { 'loadCss': false, 'pushResponse': false };
+    (!function(){
+      var t=document.createElement("script");
+      t.type="text/javascript",
+      t.async=!0,
+      t.defer=!0,
+      t.id="AddShoppers",
+      t.src="https://shop.pe/widget/widget_async.js#630e6ec6293f6904d75bea7f",
+      document.getElementsByTagName("head")[0].appendChild(t)
+    }());
+  </script>
+
+<script type="text/javascript">
+ var _conv_page_type = "{{ request.page_type }}";
+ var _conv_category_id = "{{ collection.id }}";
+ var _conv_category_name = "{{ collection.title }}";
+ var _conv_product_sku = "{{ product.selected_or_first_available_variant.sku }}";
+ var _conv_product_name = '{{ product.title }}';
+ var _conv_product_price = "{{ product.price_min | money_without_currency }}";
+ var _conv_customer_id = "{{ customer.id }}";
+ var _conv_custom_v1 = "{{ product.tags.first }}";
+ var _conv_custom_v2 = "{{ collection.current_type }}";
+ var _conv_custom_v3 = "{{ cart.item_count }}";
+ var _conv_custom_v4 = "{{ cart.total_price | money_without_currency }}";
+</script>
+{% render 'convert' %}
+<!--Start ABM Clarity Code-->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "mof3nqf8iw");
+</script>
+<!--End ABM Clarity Code-->
+<!--Start Technical SEO Fixes - pr_prod_strat bug Code-->
+<script type="text/javascript">
+  (function(){
+    if ( window.location.href.includes('?pr_prod_strat=')){
+      console.log("full url: " + window.location.href);
+      var resURLs = window.location.href.split("?pr_prod_strat=");
+      let url = resURLs[0];
+      {% comment %} let result = url.replace(window.location.host, ""); {% endcomment %}
+      window.location.replace(url);
+    }
+    if ( window.location.href.includes('?_pos=')){
+      console.log("full url: " + window.location.href);
+      var resURLs = window.location.href.split("?_pos=");
+      let url = resURLs[0];
+      {% comment %} let result = url.replace(window.location.host, ""); {% endcomment %}
+      window.location.replace(url);
+    }
+    if ( window.location.href.includes('wpm@')){
+      console.log("full url: " + window.location.href);
+      var host = "/";//window.location.host; 
+      window.location.replace(host);
+    }
+  })();
+</script>
+<!--End Technical SEO Fixes - pr_prod_strat bug Code-->
+<!--Start SafeOpt Shopify Tag Update Code-->
+  <script>
+    //DO NOT REMOVE - DRIVES REVENUE
+    var AddShoppersWidgetOptions = { 'loadCss': false, 'pushResponse': false };
+    (!function () {
+      var t = document.createElement("script");
+      t.type = "text/javascript",
+      t.async = !0,
+      t.id = "AddShoppers",
+      t.src = "https://shop.pe/widget/widget_async.js#630e6ec6293f6904d75bea7f",
+      document.getElementsByTagName("head")[0].appendChild(t)
+    }());
+  </script>
+<!--End SafeOpt Shopify Tag Update Code-->
+<!--Start Custom Breadcrumbs-->
+<script src="{{ 'crumbs.js' | asset_url }}" defer="defer"></script>
+<!--End Custom Breadcrumbs-->
+<!--Bing Ads Conversion Tracking--> 
+  <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5727218", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="e4ceXL/uHPvAnd0e2cbEQA" async></script>
+</head>
+
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challenge{% endif %}" data-button_style="{{ settings.button_style }}" data-edges="{{ settings.roundness }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" data-grid-style="{{ settings.product_grid_style }}" data-template-suffix="{{template.name}}.{{template.suffix}}">
+
+  <!--  Clickcease.com tracking-->
+  <script type="text/javascript">var script=document.createElement("script");script.async=!0,script.type="text/javascript";var target="https://www.clickcease.com/monitor/stat.js";script.src=target;var elem=document.head;elem.appendChild(script);</script>
+  <noscript>
+  <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
+  </noscript>
+  <!--  Clickcease.com tracking-->
+
+  {% comment %} --> To Test: Price on ATC Register B2B customer in js {% endcomment %}
+  {% if customer %}
+    {% comment %} {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" or customer.tags contains "vip" or customer.tags contains "VIP" or customer.tags contains "trade" or customer.tags contains "Trade" %} {% endcomment %}
+      <script> 
+        localStorage.setItem("customer_type", "{{ customer.tags }}");
+      </script>
+    {% comment %} {% endif %} {% endcomment %}
+  {% endif %}
+  {% comment %} <-- To Test: Price on ATC Register B2B customer in js {% endcomment %}
+
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+  {%- if template.suffix == "aquapro" -%}
+  <style>
+    html{scroll-behavior:smooth}
+    .aquapro-section-5 #app-embed{scroll-margin-top:100px}
+  </style>
+  {%- endif -%}
+
+  <div id="PageContainer" class="page-container">
+    <div class="transition-body">
+      {%- section 'toolbar' -%}
+      {%- section 'header' -%}  
+      
+      <main class="main-content" id="MainContent">
+        {% comment %} --> Custom Breadcrumbs {% endcomment %}
+        {% if settings.show_breadcrumbs %}
+          {%- section 'breadcrumbs' -%}
+        {% endif %}
+        {% comment %} <-- Custom Breadcrumbs {% endcomment %}
+        {{ content_for_layout }}
+      </main>
+      
+      {%- section 'footer-promotions' -%}
+      {%- section 'footer' -%}
+    </div>
+  </div>
+
+  {%- liquid
+    render 'video-modal'
+    render 'photoswipe-template'
+    if settings.quick_add_enable
+      render 'quick-add-modal'
+    endif
+    render 'tool-tip'
+  -%}
+  <div id="ProductModals"></div>
+
+  <script>var HIDE_POWERED_BY_GORGIAS = true;</script>
+
+  {%- render 'grout-calculator' -%}
+
+  {%- if template.suffix == "sqft" or content_for_layout contains "data-sq-ft-price" -%}
+    {%- render 'sqft-calculator' -%}
+  {%- endif -%}
+
+  {%- if product -%}
+    {%- render 'klaviyo-atc-event' -%}
+  {%- endif -%}
+ 
+  {% comment %}--> Add Wish List {% endcomment %}
+  {% render 'swym-custom' %}
+  {% comment %}<-- Add Wish List {% endcomment %}
+</body>
+</html>

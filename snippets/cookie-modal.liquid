@@ -1,0 +1,25 @@
+<script>
+  /* JavaScript Cookie 2.2.0 */
+  !function(t){var e=!1;if("function"==typeof define&&define.amd&&(define(t),e=!0),"object"==typeof exports&&(module.exports=t(),e=!0),!e){var i=window.Cookies,n=window.Cookies=t();n.noConflict=function(){return window.Cookies=i,n}}}((function(){function t(){for(var t=0,e={};t<arguments.length;t++){var i=arguments[t];for(var n in i)e[n]=i[n]}return e}return function e(i){function n(e,o,r){var s;if("undefined"!=typeof document){if(arguments.length>1){if("number"==typeof(r=t({path:"/"},n.defaults,r)).expires){var a=new Date;a.setMilliseconds(a.getMilliseconds()+864e5*r.expires),r.expires=a}r.expires=r.expires?r.expires.toUTCString():"";try{s=JSON.stringify(o),/^[\{\[]/.test(s)&&(o=s)}catch(t){}o=i.write?i.write(o,e):encodeURIComponent(String(o)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),e=(e=(e=encodeURIComponent(String(e))).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent)).replace(/[\(\)]/g,escape);var l="";for(var c in r)r[c]&&(l+="; "+c,!0!==r[c]&&(l+="="+r[c]));return document.cookie=e+"="+o+l}e||(s={});for(var u=document.cookie?document.cookie.split("; "):[],d=/(%[0-9A-Z]{2})+/g,h=0;h<u.length;h++){var p=u[h].split("="),f=p.slice(1).join("=");this.json||'"'!==f.charAt(0)||(f=f.slice(1,-1));try{var m=p[0].replace(d,decodeURIComponent);if(f=i.read?i.read(f,m):i(f,m)||f.replace(d,decodeURIComponent),this.json)try{f=JSON.parse(f)}catch(t){}if(e===m){s=f;break}e||(s[m]=f)}catch(t){}}return s}}return n.set=n,n.get=function(t){return n.call(n,t)},n.getJSON=function(){return n.apply({json:!0},[].slice.call(arguments))},n.defaults={},n.remove=function(e,i){n(e,"",t(i,{expires:-1}))},n.withConverter=e,n}((function(){}))})),
+</script>
+
+<style>
+  #modal-cookies{padding:10px 20px;background:rgba(0,0,0,.7);color:#fff;bottom:0;position:fixed;display:grid;grid-template-columns:1fr 20%;justify-items:center;align-items:baseline;height:100px}#modal-cookies .modal-close{position:relative;top:auto;right:auto;padding:5px 20px}.modal-cookies-left{font-size:14px;text-align:center;align-self:start;padding-top:15px}.modal-cookies-right{margin-top:30px;margin-right:2%}.modal-close.btn.btn--small{background:#fff;color:#000}.col-sm-3.modal-cookies-right{margin-top:10px}@media screen and (max-width:950px){.modal-cookies-right{margin-right:3%}}@media screen and (max-width:600px){#modal-cookies,.modal-cookies-left{width:100%}.modal-cookies-right{width:100%;text-align:center;margin-top:10px}}
+</style>
+
+<div id="modal-cookies" class="Modal Modal--cookies">
+  <div class="modal-cookies-left">
+    <p>This site uses cookies which allow us to give you the best browsing experience possible. Cookies are files stored in your browser and are used by most websites to help personalize your web experience. By continuing to use our website without changing settings, you are agreeing to our use of cookies. To find out more, please visit our Privacy Policy.</p>
+  </div>
+  <div class="modal-cookies-right">
+    <button class="modal-close btn btn--small">Accept</button>
+    <button class="modal-close btn btn--small">Decline</button>
+  </div>
+</div>
+
+<script>
+  var elCookieModalClose = document.querySelector('#modal-cookies .modal-close');
+  elCookieModalClose.addEventListener('click', function() {
+    document.getElementById('modal-cookies').style.display = 'none';
+  });
+</script>

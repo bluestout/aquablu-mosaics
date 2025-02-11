@@ -1,0 +1,82 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<style>
+    .megamenu-area-installation .megamenu-area-top{
+      display: flex;
+      column-gap: 45px;
+    }
+    .megamenu-area-installation .megamenu-area-divider{
+      height: 1px;
+      width: 100%;
+      background: #A5A5A5;
+      margin: 40px 0;
+    }
+    .megamenu-area-installation .megamenu-area-bottom {
+      display: flex;
+      justify-content: space-around;
+    }
+    .megamenu-area-installation .megamenu-area-menu-content{
+      text-align: left;
+    }
+    .megamenu-area-installation .megamenu-area-menu-items li a{
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+</style>
+  
+<div class="megamenu-area megamenu-area-installation">
+    <div class="megamenu-area-container page-width">  
+         <div class="megamenu-area-top">
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link1 }}"> 
+                <img src="{{ menu_settings.image1 | img_url: '2x' }}" alt="{{ menu_settings.image1.alt | escape }}" width="{{ menu_settings.image1.width }}" height="{{ menu_settings.image1.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text1 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link2 }}"> 
+                <img src="{{ menu_settings.image2 | img_url: '2x' }}" alt="{{ menu_settings.image2.alt | escape }}" width="{{ menu_settings.image2.width }}" height="{{ menu_settings.image2.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text2 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link3 }}"> 
+                <img src="{{ menu_settings.image3 | img_url: '2x' }}" alt="{{ menu_settings.image3.alt | escape }}" width="{{ menu_settings.image3.width }}" height="{{ menu_settings.image3.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text3 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link4 }}"> 
+                <img src="{{ menu_settings.image4 | img_url: '2x' }}" alt="{{ menu_settings.image4.alt | escape }}" width="{{ menu_settings.image4.width }}" height="{{ menu_settings.image4.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text4 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link5 }}"> 
+                <img src="{{ menu_settings.image5 | img_url: '2x' }}" alt="{{ menu_settings.image5.alt | escape }}" width="{{ menu_settings.image5.width }}" height="{{ menu_settings.image5.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text5 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link6 }}"> 
+                <img src="{{ menu_settings.image6 | img_url: '2x' }}" alt="{{ menu_settings.image6.alt | escape }}" width="{{ menu_settings.image6.width }}" height="{{ menu_settings.image6.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text6 }}</p>
+              </a>
+            </div>
+         </div>
+         <div class="megamenu-area-divider"></div>
+        <div class="megamenu-area-bottom"> 
+          {%- for link in menu_link.links -%}
+           <div class="megamenu-area-menu-content">          
+            <a href="{{ link.url }}" > <p class="h3">{{ link.title }} </p> </a>
+              <ul class="megamenu-area-menu-items">
+                {%- for childlink in link.links -%}
+                  <li value=""{%- if childlink.title == "View All" -%} class="megamenu-area-menu-view-all" {%- endif -%}>
+                      <a href="{{ childlink.url }}"> {{ childlink.title }} </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endfor -%}
+        </div>
+    </div>     
+</div>

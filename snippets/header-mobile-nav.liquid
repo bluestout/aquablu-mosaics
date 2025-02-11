@@ -1,0 +1,1559 @@
+<div class="slide-nav__wrapper" data-level="1">
+  <ul class="slide-nav">
+    {%- for link in main_menu.links -%}
+      {%- liquid
+        assign link_index = forloop.index
+        assign child_list_handle = link.title | handleize | append: link_index
+
+        assign is_collection = false
+        assign have_image = false
+        if link.url contains '/collections/'
+          assign lang_code_string = request.locale.iso_code | prepend: '/' | downcase
+          assign subcollection_handle = link.url | remove: '/collections/' | remove: lang_code_string
+          assign subcollection_drop = collections[subcollection_handle]
+          assign have_image = subcollection_drop.products.first.featured_media.preview_image
+          assign is_collection = true
+        endif
+      -%}
+
+      {%- if have_image -%}
+        {%- capture collection_image -%}
+          <div class="slide-nav__image">
+            <img src="{{ have_image | img_url: '400x' }}" width="{{ have_image.width }}" height="{{ have_image.height }}" loading="lazy" alt="{{ collections[subcollection_handle].title }}"> 
+          </div>
+        {%- endcapture -%}
+      {%- endif -%}
+
+      <li class="slide-nav__item {{link.title}}"> 
+        {%- if link.levels > 0 -%}
+          <button type="button"
+            class="slide-nav__button js-toggle-submenu"
+            data-target="tier-2-{{ child_list_handle }}"
+            {% if link.active or link.child_active %}data-active="true"{% endif %}>
+            <span class="slide-nav__link">
+              {% comment %} {%- if have_image -%}
+                {{ collection_image }}
+              {%- endif -%} {% endcomment %}
+              <span class="slide-level-two">{{ link.title }}</span>
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+            </span>
+          </button>
+
+          <ul
+            class="slide-nav__dropdown"
+            data-parent="tier-2-{{ child_list_handle }}"
+            data-level="2">
+            <li class="slide-nav__item">
+              <button type="button"
+                class="slide-nav__button js-toggle-submenu ">
+                <span class="slide-nav__link slide-nav__link--back">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+                  <a href="{{ link.url }}" class="slide-nav__link_title">
+                  <span class="slide-back-link">{{ link.title }}</span>
+                  </a>
+                </span>
+              </button>
+            </li>
+
+            {% comment %}
+              If a collection, automatically add 'view all' link
+            {% endcomment %}
+            {%- if is_collection -%}
+              <li class="slide-nav__item">
+                <a href="{{ link.url }}" class="slide-nav__link">
+                  <span>{{ 'collections.general.all_of_collection' | t }}</span>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                </a>
+              </li>
+            {%- endif -%}
+
+            {%- for childlink in link.links -%}
+              {%- liquid
+                assign grand_child_list_handle = childlink.title | handleize
+                assign grand_child_link_id = grand_child_list_handle | append: link_index
+              -%}
+
+              <li class="slide-nav__item {{ childlink.title }}">
+                {%- if childlink.title == "Glass Tile" -%}
+                  <button type="button"
+                    class="slide-nav__button js-toggle-submenu"
+                    data-target="tier-3-{{ grand_child_link_id }}"
+                    {% if link.active or link.child_active %}data-active="true"{% endif %}>
+                    <span class="slide-nav__link slide-nav__sublist-link">
+                      <span>{{ childlink.title }}</span>
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                      <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+                    </span>
+                  </button>
+                  <ul class="slide-nav__dropdown"
+                    data-parent="tier-3-{{ grand_child_link_id }}"
+                    data-level="3">
+                    <li class="slide-nav__item">
+                      <button type="button"
+                        class="slide-nav__button js-toggle-submenu"
+                        data-target="tier-2-{{ child_list_handle }}">
+                        <span class="slide-nav__link slide-nav__link--back">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+                          <a href="/pages/glass-mosaic-tile" class="slide-nav__link_title">
+                           <span class="slide-back-link">{{ childlink.title }}</span>
+                          </a>
+                        </span>
+                      </button>
+                    </li>
+
+                    {% comment %}
+                      If a collection, automatically add 'view all' link
+                    {% endcomment %}
+                    {%- if childlink.url contains '/collections/' -%}
+                      <li class="slide-nav__item">
+                        <a href="{{ childlink.url }}" class="slide-nav__link">
+                          <span>SHOP ALL</span>
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                        </a>
+                      </li>
+                    {%- endif -%}
+
+                    {%- if childlink.title == "Glass Tile" -%}
+             <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">COLOR</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/blue-glass-tile" class="slide-nav__link grandchild">
+                <span>Blue</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/aqua-glass-tile" class="slide-nav__link grandchild">
+                <span>Aqua</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/white-glass-tile" class="slide-nav__link grandchild">
+                <span>White</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/black-glass-tile" class="slide-nav__link grandchild">
+                <span>Black</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/green-glass-tile" class="slide-nav__link grandchild">
+                <span>Green</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/gray-glass-tile" class="slide-nav__link grandchild">
+                <span>Gray</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                 <p class="h3">FEATURED</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-trim-tile" class="slide-nav__link grandchild">
+                <span>Trim Tile</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glow-in-the-dark-glass-tile" class="slide-nav__link grandchild">
+                <span>Glow in the Dark</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/mixed-glass-mosaic-tile" class="slide-nav__link grandchild">
+                <span>Mixed Format</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/greek-key-series-glass-pool-tile" class="slide-nav__link grandchild">
+                <span>Greek Key</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/slip-resistant-glass-tile" class="slide-nav__link grandchild">
+                <span>Slip Resistant</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>                  
+            <li class="slide-nav__item">
+              <a href="/collections/glass-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">SHAPES & SIZES</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-fish-scale-mosaic-tile" class="slide-nav__link grandchild">
+                <span>Fish Scale</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/1-x-1-glass-mosaic-tile" class="slide-nav__link grandchild">
+                <span>1" x 1"</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/glass-hexagon-tile" class="slide-nav__link grandchild">
+                <span>Hexagon</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/penny-round-tile" class="slide-nav__link grandchild">
+                <span>Penny Round</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-subway-tile" class="slide-nav__link grandchild">
+                <span>Subway</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/glass-herringbone-tile" class="slide-nav__link grandchild">
+                <span>Herringbone</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>      
+            <li class="slide-nav__item">
+              <a href="/collections/glass-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">LOOKS</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/iridescent-tile" class="slide-nav__link grandchild">
+                <span>Iridescent</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-pool-tile-nature-series" class="slide-nav__link grandchild">
+                <span>Natural</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/metallic-glass-tile" class="slide-nav__link grandchild">
+                <span>Metallic</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/decorative-glass-tile" class="slide-nav__link grandchild">
+                <span>Decorative</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/border-wave-glass-waterline-tile" class="slide-nav__link grandchild">
+                <span>Wave Pattern</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>                      
+            <li class="slide-nav__item">
+              <a href="/collections/glass-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">APPLICATION</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-kitchen-tile" class="slide-nav__link grandchild">
+                <span>Kitchen</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-pool-waterline-tile" class="slide-nav__link grandchild">
+                <span>Waterline</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/glass-pool-tile" class="slide-nav__link grandchild">
+                <span>Pool</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/glass-bathroom-tiles" class="slide-nav__link grandchild">
+                <span>Bathroom</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>    
+            <li class="slide-nav__item">
+              <a href="/collections/glass-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">QUICK LINKS</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/glass-mosaic-tile" class="slide-nav__link grandchild">
+                <span>Shop by Category</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/all-glass-tile-pool" class="slide-nav__link grandchild">
+                <span>Glass Tile Pools</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/pages/customer-gallery" class="slide-nav__link grandchild">
+                <span>Customer Gallery</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/wholesale" class="slide-nav__link grandchild">
+                <span>Trade Professionals</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/contact-us" class="slide-nav__link grandchild">
+                <span>Contact Us</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/glass-tile" class="slide-nav__link">
+                <span><p class="h3">SHOP ALL</p></span>
+              </a>
+            </li>
+                      
+                      <div class="mega-menu__image">
+                        <img src="{{ section.settings.mm_glass_image | img_url: '2x' }}" alt="{{ section.settings.mm_glass_image.alt | escape }}" width="{{ section.settings.mm_glass_image.width }}" height="{{ section.settings.mm_glass_image.height }}" loading="lazy">
+                        <p class="megamenu-text-overlay">POPULAR <br> WATERLINE TRENDS</p>
+                      </div>
+                    {%- else -%}
+                    {%- endif -%}
+                  </ul>                  
+                {%- endif -%}
+
+                {%- if childlink.title == "Porcelain Tile" -%}
+                  <button type="button"
+                    class="slide-nav__button js-toggle-submenu"
+                    data-target="tier-3-{{ grand_child_link_id }}"
+                    {% if link.active or link.child_active %}data-active="true"{% endif %}>
+                    <span class="slide-nav__link slide-nav__sublist-link">
+                      <span>{{ childlink.title }}</span>
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                      <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+                    </span>
+                  </button>
+                  <ul class="slide-nav__dropdown"
+                    data-parent="tier-3-{{ grand_child_link_id }}"
+                    data-level="3">
+                    <li class="slide-nav__item">
+                      <button type="button"
+                        class="slide-nav__button js-toggle-submenu"
+                        data-target="tier-2-{{ child_list_handle }}">
+                        <span class="slide-nav__link slide-nav__link--back">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+                          
+                          <a href="/pages/shop-porcelain-tile" class="slide-nav__link_title">
+                           <span class="slide-back-link">{{ childlink.title }}</span>
+                          </a>
+                        </span>
+                      </button>
+                    </li>
+
+                    {% comment %}
+                      If a collection, automatically add 'view all' link
+                    {% endcomment %}
+                    {%- if childlink.url contains '/collections/' -%}
+                      <li class="slide-nav__item">
+                        <a href="{{ childlink.url }}" class="slide-nav__link">
+                          <span>SHOP ALL</span>
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                        </a>
+                      </li>
+                    {%- endif -%}
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">COLOR</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/blue-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Blue</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/green-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Green</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/black-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Black</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/white-porcelain-tile" class="slide-nav__link grandchild">
+                <span>White</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/aqua-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Aqua</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/cream-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Cream</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">APPLICATION</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/6x6-pool-waterline-tile" class="slide-nav__link grandchild">
+                <span>Pool Waterline</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-pool-tile" class="slide-nav__link grandchild">
+                <span>Porcelain Pool Tile</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/kitchen-and-bath-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Kitchen & Bath</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>      
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">SHAPES & SIZES</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/6-x-6-porcelain-tile" class="slide-nav__link grandchild">
+                <span>6" x 6"</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/3-x-3-porcelain-mosaic-tile" class="slide-nav__link grandchild">
+                <span>3" x 3"</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/2-x-2-porcelain-mosaic-tile" class="slide-nav__link grandchild">
+                <span>2" x 2"</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/1-x-1-porcelain-mosaic-tile" class="slide-nav__link grandchild">
+                <span>1" x 1"</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/rectangular-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Rectangular</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-linear-mosaic-tile" class="slide-nav__link grandchild">
+                <span>Linear</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>      
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">LOOKS</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/patterned-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Patterned</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/decorative-porcelain-pool-tile" class="slide-nav__link grandchild">
+                <span>Decorative</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/metallic-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Metallic</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/wave-pattern-decorative-pool-tile" class="slide-nav__link grandchild">
+                <span>Waves</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/stone-look-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Stone Look</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/mixed-porcelain-mosaic-tile" class="slide-nav__link grandchild">
+                <span>Mixed Format</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>                    
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">FEATURED</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/aquatica-porcelain-pool-tile" class="slide-nav__link grandchild">
+                <span>Aquatica Collection</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/fujiwa" class="slide-nav__link grandchild">
+                <span>Fujiwa Tile</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-mosaic-tiles" class="slide-nav__link grandchild">
+                <span>Porcelain Mosaic Tiles</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/botanical-series" class="slide-nav__link grandchild">
+                <span>Botanical Collection</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/fiore-series" class="slide-nav__link grandchild">
+                <span>Fiore Collection</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>                  
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-tile" class="slide-nav__link grandchild">
+                <span class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+               <p class="h3">QUICK LINKS</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/shop-porcelain-tile" class="slide-nav__link grandchild">
+                <span>Shop by Category</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/blogs/news/pool-waterline-tile-options-and-recommendations" class="slide-nav__link grandchild">
+                <span>About Waterline Tile</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/pages/customer-gallery" class="slide-nav__link grandchild">
+                <span>Customer Gallery</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/wholesale" class="slide-nav__link grandchild">
+                <span>Trade Professionals</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/contact-us" class="slide-nav__link grandchild">
+                <span>Contact Us</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/porcelain-tile" class="slide-nav__link">
+                <span><p class="h3">SHOP ALL</p></span>
+              </a>
+            </li>
+                    <div class="mega-menu__image">
+                      <img src="{{ section.settings.mm_porcelain_image | img_url: '2x' }}" alt="{{ section.settings.mm_porcelain_image.alt | escape }}" width="{{ section.settings.mm_porcelain_image.width }}" height="{{ section.settings.mm_porcelain_image.height }}" loading="lazy">
+                      <p class="megamenu-text-overlay">MODERN PORCELAIN<br> POOL TILE TRENDS</p>
+                    </div>
+                  </ul>                  
+                {%- endif -%}
+
+
+                {%- if childlink.title == "Stone Tile" -%}
+                  <button type="button"
+                    class="slide-nav__button js-toggle-submenu"
+                    data-target="tier-3-{{ grand_child_link_id }}"
+                    {% if link.active or link.child_active %}data-active="true"{% endif %}>
+                    <span class="slide-nav__link slide-nav__sublist-link">
+                      <span>{{ childlink.title }}</span>
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                      <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+                    </span>
+                  </button>
+                  <ul class="slide-nav__dropdown"
+                    data-parent="tier-3-{{ grand_child_link_id }}"
+                    data-level="3">
+                    <li class="slide-nav__item">
+                      <button type="button"
+                        class="slide-nav__button js-toggle-submenu"
+                        data-target="tier-2-{{ child_list_handle }}">
+                        <span class="slide-nav__link slide-nav__link--back">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+                          <a href="/pages/stone-tile" class="slide-nav__link_title">
+                           <span class="slide-back-link">{{ childlink.title }}</span>
+                          </a>
+                        </span>
+                      </button>
+                    </li>
+
+                    {% comment %}
+                      If a collection, automatically add 'view all' link
+                    {% endcomment %}
+                    {%- if childlink.url contains '/collections/' -%}
+                      <li class="slide-nav__item">
+                        <a href="{{ childlink.url }}" class="slide-nav__link">
+                          <span>SHOP ALL</span>
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                        </a>
+                      </li>
+                    {%- endif -%}
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">COLOR</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/blue-pebble-tile" class="slide-nav__link grandchild">
+                <span>Blue</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/white-pebble-tile" class="slide-nav__link grandchild">
+                <span>White</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/green-pebble-tile" class="slide-nav__link grandchild">
+                <span>Green</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/black-pebble-tile" class="slide-nav__link grandchild">
+                <span>Black</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/brown-pebble-tile" class="slide-nav__link grandchild">
+                <span>Brown</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/aqua-pebble-tile" class="slide-nav__link grandchild">
+                <span>Aqua</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pebble-tile" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">SHAPES & SIZES</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/round-pebble-tile" class="slide-nav__link grandchild">
+                <span>Round</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/shaved-pebbles-series" class="slide-nav__link grandchild">
+                <span>Shaved</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/square-pebble-tile" class="slide-nav__link grandchild">
+                <span>Square</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/triangular-pebble-tile" class="slide-nav__link grandchild">
+                <span>Triangular</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/interlocking-pebble-tile" class="slide-nav__link grandchild">
+                <span>Interlocking</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>    
+            <li class="slide-nav__item">
+              <a href="/collections/pebble-tile" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">LOOKS</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/shaved-pebbles-series" class="slide-nav__link grandchild">
+                <span>Shaved Pebbles</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/round-pebble-tile" class="slide-nav__link grandchild">
+                <span>Round Pebbles</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/thin-brick-series" class="slide-nav__link grandchild">
+                <span>Thin Brick</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/pebble-tile" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+               <p class="h3">QUICK LINKS</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/installation" class="slide-nav__link grandchild">
+                <span>Setting Materials</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>     
+            <li class="slide-nav__item">
+              <a href="/pages/custom-mosaics" class="slide-nav__link grandchild">
+                <span>Custom Mosaics</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>  
+            <li class="slide-nav__item">
+              <a href="/pages/outdoor-living-products" class="slide-nav__link grandchild">
+                <span>Outdoor Living</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/blogs/news" class="slide-nav__link grandchild">
+                <span>Blog</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pebble-tile" class="slide-nav__link">
+                <span><p class="h3">SHOP ALL</p></span>
+              </a>
+            </li>                 
+                    <div class="mega-menu__image">
+                      <img src="{{ section.settings.mm_stone_image | img_url: '2x' }}" alt="{{ section.settings.mm_stone_image.alt | escape }}" width="{{ section.settings.mm_stone_image.width }}" height="{{ section.settings.mm_stone_image.height }}" loading="lazy">
+                      <p class="megamenu-text-overlay">GLASS & STONE: <br> A TRENDING COMBO</p>
+                    </div>
+                  </ul>                  
+                {%- endif -%}
+
+                {%- if childlink.levels > 0 -%}
+                  <button type="button"
+                    class="slide-nav__button js-toggle-submenu"
+                    data-target="tier-3-{{ grand_child_link_id }}"
+                    {% if link.active or link.child_active %}data-active="true"{% endif %}>
+                    <span class="slide-nav__link slide-nav__sublist-link">
+                      <span>{{ childlink.title }}</span>
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                      <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+                    </span>
+                  </button>
+                  <ul class="slide-nav__dropdown"
+                    data-parent="tier-3-{{ grand_child_link_id }}"
+                    data-level="3">
+                    <li class="slide-nav__item">
+                      <button type="button"
+                        class="slide-nav__button js-toggle-submenu"
+                        data-target="tier-2-{{ child_list_handle }}">
+                        <span class="slide-nav__link slide-nav__link--back">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+                          <span class="slide-back-link">{{ childlink.title }}</span>
+                        </span>
+                      </button>
+                    </li>
+
+                    {% comment %}
+                      If a collection, automatically add 'view all' link
+                    {% endcomment %}
+                    {%- if childlink.url contains '/collections/' -%}
+                      <li class="slide-nav__item">
+                        <a href="{{ childlink.url }}" class="slide-nav__link">
+                          <span>{{ 'collections.general.all_of_collection' | t }}</span>
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                        </a>
+                      </li>
+                    {%- endif -%}
+
+                    {%- if childlink.title == "Glass Tile" -%}
+                      <li class="slide-nav__item">
+                        <a href="{{ }}" class="slide-nav__link grandchild">
+                          <span>Aqua</span>
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                        </a>
+                      </li>
+                      <li class="slide-nav__item">
+                        <a href="{{  }}" class="slide-nav__link grandchild">
+                          <span>Blue</span>
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                        </a>
+                      </li>
+                    {%- else -%}
+                      {%- for grandchildlink in childlink.links -%}
+                        <li class="slide-nav__item">
+                          <a href="{{ grandchildlink.url }}" class="slide-nav__link grandchild">
+                            <span>{{ grandchildlink.title | escape }}</span>
+                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    {%- endif -%}
+                  </ul>
+                {%- else -%}
+                  {%- if childlink.title == "Glass Tile" or childlink.title == "Porcelain Tile" or childlink.title == "Stone Tile" -%}
+                  {%- else -%}
+                    <a href="{{ childlink.url }}" class="slide-nav__link">
+                      <span>{{ childlink.title | escape }}</span>
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                    </a>
+                  {%- endif -%}
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+
+        
+        {%- elsif link.title == "Pool Mosaics" -%}
+          <button type="button"
+            class="slide-nav__button js-toggle-submenu"
+            data-target="tier-2-{{ child_list_handle }}"
+            {% if link.active or link.child_active %}data-active="true"{% endif %}>
+            <span class="slide-nav__link">
+              {% comment %} {%- if have_image -%}
+                {{ collection_image }}
+              {%- endif -%} {% endcomment %}
+              <span class="slide-level-two">{{ link.title }}</span>
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+            </span>
+          </button>
+          <ul class="slide-nav__dropdown" data-parent="tier-2-{{ child_list_handle }}" data-level="2">
+            <li class="slide-nav__item">
+              <button type="button"
+                class="slide-nav__button js-toggle-submenu">
+                <span class="slide-nav__link slide-nav__link--back">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+                  <a href="/collections/pool-mosaics" class="slide-nav__link_title">
+                   <span class="slide-back-link">{{ link.title }}</span>
+                  </a>
+                </span>
+              </button>
+            </li>
+            
+                        
+
+              <li>
+               <span class="slide-nav__link grandchild">
+                <h3>SEA LIFE</h3>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/turtles" class="slide-nav__link grandchild">
+                <span>Turtles</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/dolphins" class="slide-nav__link grandchild">
+                <span>Dolphins</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/sea-life" class="slide-nav__link grandchild">
+                <span>Sea Life</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/tropical-fish" class="slide-nav__link grandchild">
+                <span>Tropical Fish</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/sharks-rays" class="slide-nav__link grandchild">
+                <span>Sharks & Rays</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/mermaids" class="slide-nav__link grandchild">
+                <span>Mermaids</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/game-fish" class="slide-nav__link grandchild">
+                <span>Game Fish</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/sea-life" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <h3>TYPE</h3>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/screen-printed" class="slide-nav__link grandchild">
+                <span>Screen Printed</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/hand-painted" class="slide-nav__link grandchild">
+                <span>Hand Painted</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/glass-mosaic" class="slide-nav__link grandchild">
+                <span>Glass Mosaic</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/glow-in-the-dark-pool-mosaics" class="slide-nav__link grandchild">
+                <span>Glow in the Dark</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-mosaics" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <h3>POOL CENTERPIECES</h3>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/scrolls-and-medallions" class="slide-nav__link grandchild">
+                <span>Medallions</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/contemporary-mosaics" class="slide-nav__link grandchild">
+                <span>Contemporary</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/mandala-series" class="slide-nav__link grandchild">
+                <span>Mandalas</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/grand-design-series" class="slide-nav__link grandchild">
+                <span>Grand Design Series</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-centerpieces" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">ACCENTS & MARKERS</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/accents-and-step-markers" class="slide-nav__link grandchild">
+                <span>Step Markers</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/depth-and-safety-markers" class="slide-nav__link grandchild">
+                <span>Depth Markers</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/accents-and-step-markers" class="slide-nav__link grandchild">
+                <span>Accents</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/glow-in-the-dark-pool-mosaics" class="slide-nav__link grandchild">
+                <span>Glow in the Dark</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/accents-and-step-markers" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">FEATURED</p>
+              </span>
+             
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/reef-scenes" class="slide-nav__link grandchild">
+                <span>Reef Scenes</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-party" class="slide-nav__link grandchild">
+                <span>Pool Party</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/whales" class="slide-nav__link grandchild">
+                <span>Whales</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/garden-geckos" class="slide-nav__link grandchild">
+                <span>Garden & Geckos</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/tribal-and-contemporary" class="slide-nav__link grandchild">
+                <span>Tribal</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/special-order-mosaics" class="slide-nav__link grandchild">
+                <span>Special Order</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>                   
+            <li class="slide-nav__item">
+              <a href="/collections/pool-mosaics" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+               <p class="h3">QUICK LINKS</p>
+              </span>
+               
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/featured-pool-mosaics" class="slide-nav__link grandchild">
+                <span>Featured Pool Mosaics</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/artistry-in-mosaics-pool-mosaics" class="slide-nav__link grandchild">
+                <span>Brand: Artistry in Mosaics</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>            
+            <li class="slide-nav__item">
+              <a href="/collections/custom-mosaics" class="slide-nav__link grandchild">
+                <span>Brand: Custom Mosaics</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li> 
+            <li class="slide-nav__item">
+              <a href="/collections/element-glo" class="slide-nav__link grandchild">
+                <span>Brand: Element Glo</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/installation" class="slide-nav__link grandchild">
+                <span>Setting Materials</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-mosaics" class="slide-nav__link">
+                <span><p class="h3">SHOP ALL</p></span>
+              </a>
+            </li>    
+            <div class="mega-menu__image">
+              <img src="{{ section.settings.mm_mosaics_image | img_url: '2x' }}" alt="{{ section.settings.mm_mosaics_image.alt | escape }}" width="{{ section.settings.mm_mosaics_image.width }}" height="{{ section.settings.mm_mosaics_image.height }}" loading="lazy">
+              <p class="megamenu-text-overlay">EXPLORE POOL <br> CENTERPIECES</p>
+            </div>
+
+
+          </ul>
+        {%- elsif link.title == "Outdoor Living" -%}
+          <button type="button"
+            class="slide-nav__button js-toggle-submenu"
+            data-target="tier-2-{{ child_list_handle }}"
+            {% if link.active or link.child_active %}data-active="true"{% endif %}>
+            <span class="slide-nav__link">
+              {% comment %} {%- if have_image -%}
+                {{ collection_image }}
+              {%- endif -%} {% endcomment %}
+              <span class="slide-level-two">{{ link.title }}</span>
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+            </span>
+          </button>
+          <ul class="slide-nav__dropdown" data-parent="tier-2-{{ child_list_handle }}" data-level="2">
+            <li class="slide-nav__item">
+              <button type="button"
+                class="slide-nav__button js-toggle-submenu">
+                <span class="slide-nav__link slide-nav__link--back">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+                  <a href="/pages/outdoor-living-products" class="slide-nav__link_title">
+                   <span class="slide-back-link">{{ link.title }}</span>
+                  </a>
+                </span>
+              </button>
+            </li>
+
+            
+            <li>
+              <span class="slide-nav__link grandchild">
+                 <p class="h3">FURNITURE</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/in-pool-furniture" class="slide-nav__link grandchild">
+                <span>In-Pool Furniture</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/outdoor-patio-furniture" class="slide-nav__link grandchild">
+                <span>Outdoor Patio Furniture</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/daybeds-and-cabanas" class="slide-nav__link grandchild">
+                <span>Daybeds & Cabanas</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/outdoor-umbrellas-for-pool-and-patio" class="slide-nav__link grandchild">
+                <span>Outdoor Umbrellas</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/outdoor-side-tables" class="slide-nav__link grandchild">
+                <span>Outdoor Side Tables</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-and-patio-outdoor-furniture" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                 <p class="h3">ACCESSORIES</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/luxury-pool-floats-and-accessories" class="slide-nav__link grandchild">
+                <span>Luxury Pool Floats</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-accessories-and-lounger-pillows" class="slide-nav__link grandchild">
+                <span>Pillows, Shades & Side Tables</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/floating-bars-and-drink-holders" class="slide-nav__link grandchild">
+                <span>Floating Drink Holders</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/outdoor-games" class="slide-nav__link grandchild">
+                <span>Outdoor Games</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/artificial-garden-wall-plant-wall-panels" class="slide-nav__link grandchild">
+                <span>Garden Walls</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-and-outdoor-accessories" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">POOL CARE</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/robotic-pool-cleaners" class="slide-nav__link grandchild">
+                <span>Pool Skimmers & Cleaners</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-cleaning-solutions" class="slide-nav__link grandchild">
+                <span>Cleaning Solutions</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/pool-care" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                <p class="h3">FIRE & WATER</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/outdoor-fire-pits" class="slide-nav__link grandchild">
+                <span>Outdoor Fire Pits</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/water-feature" class="slide-nav__link grandchild">
+                <span>Water Features</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/fire-and-water-features" class="slide-nav__link grandchild">
+                <span>Fire & Water Features</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/scuppers-outdoor-water-features" class="slide-nav__link grandchild">
+                <span>Scuppers</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/outdoor-fire-water-and-combination-features" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+                 <p class="h3">LAWN & HARDSCAPES</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/artificial-grass-top-turf-products" class="slide-nav__link grandchild">
+                <span>Artificial Grass</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/outdoor-patio-pavers-and-hardscapes" class="slide-nav__link grandchild">
+                <span>Patio Pavers</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/modern-pool-coping" class="slide-nav__link grandchild">
+                <span>Pool Coping</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/flagstone-tile" class="slide-nav__link grandchild">
+                <span>Flagstone</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/ledger-stone-tile" class="slide-nav__link grandchild">
+                <span>Ledger Stone</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/outdoor-patio-pavers-and-hardscapes" class="slide-nav__link grandchild">
+                <span  class="mobile-view-all">View All >></span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li>
+              <span class="slide-nav__link grandchild">
+               <p class="h3">QUICK LINKS</p>
+              </span>
+              
+            </li>
+            <li class="slide-nav__item">
+              <a href="/blogs/news/2023-pool-and-outdoor-furniture-buying-guide" class="slide-nav__link grandchild">
+                <span>Furniture Buying Guide</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/ledge-lounger-outdoor-pool-and-patio-furniture" class="slide-nav__link grandchild">
+                <span>Ledge Lounger</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/floating-luxuries" class="slide-nav__link grandchild">
+                <span>Floating Luxuries</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/vondom" class="slide-nav__link grandchild">
+                <span>Vondom</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/prism-hardscapes" class="slide-nav__link grandchild">
+                <span>Prism Hardscapes</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/collections/the-outdoor-plus" class="slide-nav__link grandchild">
+                <span>The Outdoor Plus</span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+              </a>
+            </li>
+            <li class="slide-nav__item">
+              <a href="/pages/outdoor-living-products" class="slide-nav__link">
+                <span><p class="h3">SHOP ALL</p></span>
+              </a>
+            </li>      
+            <div class="mega-menu__image">
+              <img src="{{ section.settings.mm_outdoor_image | img_url: '2x' }}" alt="{{ section.settings.mm_mosaics_image.alt | escape }}" width="{{ section.settings.mm_mosaics_image.width }}" height="{{ section.settings.mm_mosaics_image.height }}" loading="lazy">
+              <p class="megamenu-text-overlay">LUXURY OUTDOOR  <br> FURNITURE</p>
+            </div>
+          </ul>
+
+
+        {%- else  -%}
+          <a href="{{ link.url }}" class="slide-nav__link">
+            {% comment %} {%- if have_image -%}
+              {{ collection_image }}
+            {%- endif -%} {% endcomment %}
+            <span class="slide-level-two">{{ link.title | escape }}</span>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}   
+  </ul>
+</div>
+<div class="mobile-menu">
+  <ul class="slide-nav">
+    <li class="slide-nav__item">
+      <a href="https://www.aquablumosaics.com/account/" class="slide-nav__link"><span class="slide-level-two"> My Account </span>  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg></a>
+    </li>
+    <li class="slide-nav__item">
+
+      <a href="https://www.aquablumosaics.com/pages/wholesale" class="slide-nav__link"><span class="slide-level-two"> AquaPRO Sign Up </span> <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg></a>
+    </li>
+
+    {% comment %} --> Header Update {% endcomment %}
+    <li class="slide-nav__item nav-call-item">
+      <a class="slide-nav__link" href="tel:18009711442">
+        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px">
+          <path d="M20.1005 14.4L17.1005 11.4C16.8005 11.1 16.5005 11 16.1005 11C15.7005 11 15.4005 11.1 15.1005 11.4L13.1005 13.4L7.10052 7.4L9.10052 5.4C9.70052 4.8 9.70052 3.9 9.10052 3.4L6.10052 0.4C5.80052 0.1 5.50052 0 5.10052 0C4.70052 0 4.40052 0.1 4.10052 0.4L1.10052 3.4C1.00052 3.5 0.200519 4.3 0.500519 6.2C0.900519 8.4 2.80052 11.2 6.00052 14.4C10.6005 19 13.5005 20 15.2005 20C16.4005 20 16.9005 19.5 17.0005 19.4L20.0005 16.4C20.3005 16.1 20.4005 15.8 20.4005 15.4C20.6005 15 20.4005 14.7 20.1005 14.4ZM16.1005 18.4C16.1005 18.4 13.7005 20 7.10052 13.4C0.300519 6.6 2.10052 4.4 2.10052 4.4L5.10052 1.4L8.10052 4.4L5.60052 6.9C5.30052 7.2 5.30052 7.6 5.60052 7.9L12.6005 14.9C12.9005 15.2 13.3005 15.2 13.6005 14.9L16.1005 12.4L19.1005 15.4L16.1005 18.4Z" fill="black"/>
+        </svg>
+        <span class="slide-level-two"> (800) 971-1442 </span>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+      </a>
+    </li>
+    {% comment %} <-- Header Update {% endcomment %}
+      
+    {% comment %} <li class="slide-nav__item">
+
+      <a href="/" class="slide-nav__link"><span> ClubBlu Sign Up </span> <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg></a>
+    </li> {% endcomment %}
+  </ul>
+</div> 

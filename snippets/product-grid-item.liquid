@@ -1,0 +1,836 @@
+{%- assign sq_ft = false -%}
+{%- assign has_specs = false -%}
+
+{%- for tag in product.tags -%}
+  {%- if tag contains 'coverage:' and tag contains 'Sqft' or tag contains 'sqft' -%}
+    {% assign sq_ft = tag | remove: 'coverage:' | remove: ' sqft' | remove: ' Sqft' | times: 1.00 %}
+    {% assign sq_ft_type = 'Sqft' %}
+
+    {% comment %} <p> {{tag | remove: 'coverage:' | remove: ' Sqft' | times: 1.00 }} </p> {% endcomment %}
+   
+
+  {%- endif -%}
+  {%- if tag contains 'sold by:' -%}
+    {%- assign per = tag | remove: 'sold by:' | prepend: 'per '  -%}
+  {%- endif -%}
+  {%- if product.type == 'Pool Mosaic' %}
+    {% assign per = 'each' %}
+  {%- endif -%}
+  {%- if tag contains ':' %}
+    {% assign spec = tag | split: ':' | first %}
+    {% assign has_specs = true %}
+  {%- endif -%}
+{%- endfor -%}
+
+{% assign customerDiscount = false %}
+{% assign discountTotal = 0 %}
+
+
+{% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
+    {% assign customerDiscount = true %}
+    
+    {% assign discountTotal = 0.25 %}
+    {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+    {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+{% endif %}
+
+{% if customer.tags contains "vip" or customer.tags contains "VIP" %}
+    {% assign customerDiscount = true %}
+    
+    {% assign discountTotal = 0.20 %}
+    {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+    {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+{% endif %}
+
+{% if customer.tags contains "trade" or customer.tags contains "Trade" %}
+    {% assign customerDiscount = true %}
+    
+    {% assign discountTotal = 0.15 %}
+    {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+    {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+{% endif %}
+
+{% comment %} Fix Discounted Pricing not showing on Collection Pages {% endcomment %}
+{% comment %} Fix the on_sale logic by the price_max {% endcomment %}
+{%- liquid
+  assign on_sale = false
+  if sq_ft
+    if product.compare_at_price_max > product.price_max
+      assign on_sale = true
+    endif
+  else
+    if product.compare_at_price > product.price
+      assign on_sale = true
+    endif
+  endif
+
+  assign product_tags = product.tags | join: ','
+  assign has_custom_label = false
+  assign custom_labels = ''
+  if product.metafields.theme.label and product.metafields.theme.label != blank
+    assign has_custom_label = true
+    assign custom_labels = product.metafields.theme.label.value
+  elsif product_tags contains '_label_'
+    for tag in product.tags
+      if tag contains '_label_'
+        assign tag_starts_with = tag | slice: 0
+        if tag_starts_with == '_'
+          assign has_custom_label = true
+          assign custom_label = tag | replace: '_label_', ''
+          assign custom_labels = custom_labels | append: custom_label | append: ','
+        endif
+      endif
+    endfor
+  endif
+-%}
+
+{% comment %} --> Add Wish List {% endcomment %}
+{%- assign has_sample = false -%}
+{%- assign current_variant_price = false -%}
+{%- assign sample_variant = false -%}
+{%- assign sample_current_variant = false -%}
+{%- unless product.has_only_default_variant -%}
+    {% for option in product.variants %}
+        {% if option.title == "Sample" %}
+        {% comment %} <p>{{option.id}} -- {{option.title}} -- {{option.price}} </p> {% endcomment %}
+        {%- assign has_sample = true -%}
+        {%- assign current_variant_price = option.price -%}
+        {%- assign sample_variant = option -%}
+        {%- assign sample_current_variant = option -%}
+
+        {% comment %} <p> {{option}}  </p> {% endcomment %}
+
+    {% endif %}
+    {% endfor %}
+{%- endunless -%}
+{% comment %} <-- Add Wish List {% endcomment %}
+
+<div class="grid-item grid-product {{ classes }} carousel-cell collection-here" data-product-varies="{{ product.price_varies }}" data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}">
+  <div class="grid-item__content">
+
+    {%- unless no_actions -%}
+      {%- if settings.quick_add_enable or settings.quick_shop_enable -%}
+        <div class="grid-product__actions">
+          {%- if settings.quick_shop_enable -%}
+            <button class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide" title="{{ 'products.general.quick_shop' | t }}" tabindex="-1" data-handle="{{ product.handle }}">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_2035_30" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+              <path d="M0 -2.98023e-07H20V20H0V-2.98023e-07Z" fill="white"/>
+              </mask>
+              <g mask="url(#mask0_2035_30)">
+              <path d="M10.0006 0.599412C15.192 0.599412 19.4006 4.80801 19.4006 9.99941C19.4006 15.1908 15.192 19.3994 10.0006 19.3994C4.80919 19.3994 0.600586 15.1908 0.600586 9.99941C0.600586 4.80801 4.80919 0.599412 10.0006 0.599412Z" fill="#55CCD9"/>
+              <path d="M9.76094 5.64023C11.5835 5.64023 13.0609 7.11763 13.0609 8.94023C13.0609 10.7628 11.5835 12.2402 9.76094 12.2402C7.93834 12.2402 6.46094 10.7628 6.46094 8.94023C6.46094 7.11763 7.93834 5.64023 9.76094 5.64023Z" stroke="white" stroke-width="1.33" stroke-miterlimit="10"/>
+              <path d="M11.6592 11.9392L13.5192 15.1592" stroke="white" stroke-width="2.33" stroke-miterlimit="10"/>
+              </g>
+            </svg>
+
+              <span class="icon__fallback-text">{{ 'products.general.quick_shop' | t }}</span>
+            </button>
+          {%- endif -%}
+          {% comment %}--> Add Wish List {% endcomment %}
+          <div class="swym-button--wrapper">
+            <!-- Swym Wishlist Plus EPI Button with default first variant -->
+            <button aria-label="Add to Wishlist" data-with-epi="true" class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" data-variant-id="{%- if has_sample -%}{{sample_current_variant.id}}{%- else -%}{%- if product.selected_variant -%}{{ product.selected_variant.id}}{%- else -%}{{ product.variants[0].id }}{%- endif -%}{%- endif -%}" data-product-url="{{ shop.url }}{{ product.url }}">
+            </button>
+              <!-- Swym Wishlist Plus EPI Button-->
+             </div>
+          {% comment %}<-- Add Wish List {% endcomment %}
+          {%- if settings.quick_add_enable and product.available -%}
+            {% comment %}
+              Quick add feature:
+                - when a single variant option, product is immediately added
+                - when multiple variants, popup with product form appears
+            {% endcomment %}
+            {% comment %} {%- if product.variants.size > 1 -%}
+              <button type="button" class="text-link quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'products.product.add_to_cart' | t }}" tabindex="-1">
+                <span class="btn btn--circle btn--icon">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                  <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                </span>
+              </button>
+            {%- else -%}
+              <button type="button" class="text-link quick-add-btn js-quick-add-btn"
+                      title="{{ 'products.product.add_to_cart' | t }}"
+                      tabindex="-1"
+                      data-id="{{ product.selected_or_first_available_variant.id }}">
+                <span class="btn btn--circle btn--icon">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                  <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                </span>
+              </button>
+            {%- endif -%} {% endcomment %}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endunless -%}
+
+    {%- liquid
+      assign fixed_aspect_ratio = false
+      unless settings.product_grid_image_size == 'natural'
+        assign fixed_aspect_ratio = true
+      endunless
+
+      assign preview_image = product.featured_media.preview_image
+    -%}
+
+    {% comment %} --> Canonicals Update for SEO {% endcomment %}
+    {% comment %} <div href="{{ product.url | within: collection }}" class="grid-item__link">
+      <a href="{{ product.url | within: collection }}"  class="grid-product__image-wrap"> {% endcomment %}
+      <div href="{{ product.url }}" class="grid-item__link">
+        <a href="{{ product.url }}"  class="grid-product__image-wrap">
+      {% comment %} <-- Canonicals Update for SEO {% endcomment %}
+        <div class="grid-product__tags">
+          {%- if has_custom_label -%}
+            {%- assign labels = custom_labels | split: ',' -%}
+            {%- for label in labels -%}
+              <div class="grid-product__tag grid-product__tag--custom">
+                {{ label }}
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+
+          {%- unless product.available -%}
+            <div class="grid-product__tag grid-product__tag--sold-out">
+              {{ 'products.product.sold_out' | t }}
+            </div>
+          {%- endunless -%}
+          {%- if on_sale and product.available -%}
+            <div class="grid-product__tag grid-product__tag--sale">
+              {{ 'products.general.sale' | t }}
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- if fixed_aspect_ratio -%}
+          <div
+            class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+            <img
+              loading="lazy"
+              srcset="{%- if preview_image.width >= 165 -%}{{ preview_image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if preview_image.width >= 250 -%}{{ preview_image | img_url: '250x' }} 250w,{%- endif -%}
+                {%- if preview_image.width >= 300 -%}{{ preview_image | img_url: '300x' }} 300w,{%- endif -%}
+                {%- if preview_image.width >= 360 -%}{{ preview_image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if preview_image.width >= 720 -%}{{ preview_image | img_url: '720x' }} 720w,{%- endif -%}
+                {{ preview_image | img_url: 'master' }} {{ preview_image.width }}w"
+              src="{{ preview_image | img_url: '360x' }}"
+              sizes="
+                (min-width: 1500px) calc((100vw - 130px) / 4),
+                (min-width: 1200px) calc((100vw - 100px) / 4),
+                (min-width: 769px) calc((100vw - 120px) / 4),
+                (min-width: 600px) calc((100vw - 50px) / 2),
+                calc(100vw / 2)"
+              alt="{{ preview_image.alt | escape }}"
+              loading="lazy"
+              class="{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+              width="{{ preview_image.width }}"
+              height="{{ preview_image.height }}"
+            >
+            <noscript>
+              <img class="grid-product__image lazyloaded"
+                src="{{ preview_image | img_url: '400x' }}"
+                alt="{{ preview_image.alt | escape }}">
+            </noscript>
+          </div>
+        {%- else -%}
+          {%- liquid
+            assign ratio = 1
+            if preview_image != blank
+              assign ratio = preview_image.aspect_ratio
+            endif
+          -%}
+          <div style="height: 0; padding-bottom: {{ 100 | divided_by: ratio }}%;">
+            <img
+              loading="lazy"
+              srcset="{%- if preview_image.width >= 165 -%}{{ preview_image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if preview_image.width >= 250 -%}{{ preview_image | img_url: '250x' }} 250w,{%- endif -%}
+                {%- if preview_image.width >= 300 -%}{{ preview_image | img_url: '300x' }} 300w,{%- endif -%}
+                {%- if preview_image.width >= 360 -%}{{ preview_image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if preview_image.width >= 720 -%}{{ preview_image | img_url: '720x' }} 720w,{%- endif -%}
+                {{ preview_image | img_url: 'master' }} {{ preview_image.width }}w"
+              src="{{ preview_image | img_url: '360x' }}"
+              sizes="
+                (min-width: 1500px) calc((100vw - 130px) / 4),
+                (min-width: 1200px) calc((100vw - 100px) / 4),
+                (min-width: 769px) calc((100vw - 120px) / 4),
+                (min-width: 600px) calc((100vw - 50px) / 2),
+                calc(100vw / 2)"
+              alt="{{ preview_image.alt | escape }}"
+              loading="lazy"
+              class="grid-product__image"
+              width="{{ preview_image.width }}"
+              height="{{ preview_image.height }}"
+            >
+            <noscript>
+              <img class="grid-product__image lazyloaded"
+                src="{{ preview_image | img_url: '400x' }}"
+                alt="{{ preview_image.alt | escape }}">
+            </noscript>
+          </div>
+        {%- endif -%}
+
+        {%- if settings.product_hover_image and product.media.size > 1 -%}
+          {%- for media in product.media offset: 1 limit: 1 -%}
+            {%- assign second_image = media.preview_image -%}
+          {%- endfor -%}
+          <div class="grid-product__secondary-image small--hide">
+            <img
+              loading="lazy"
+              srcset="{%- if second_image.width >= 165 -%}{{ second_image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if second_image.width >= 250 -%}{{ second_image | img_url: '250x' }} 250w,{%- endif -%}
+                {%- if second_image.width >= 300 -%}{{ second_image | img_url: '300x' }} 300w,{%- endif -%}
+                {%- if second_image.width >= 360 -%}{{ second_image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if second_image.width >= 720 -%}{{ second_image | img_url: '720x' }} 720w,{%- endif -%}
+                {{ second_image | img_url: 'master' }} {{ second_image.width }}w"
+              src="{{ second_image | img_url: '360x' }}"
+              sizes="
+                (min-width: 1500px) calc((100vw - 130px) / 4),
+                (min-width: 1200px) calc((100vw - 100px) / 4),
+                (min-width: 769px) calc((100vw - 120px) / 4),
+                (min-width: 600px) calc((100vw - 50px) / 2),
+                calc(100vw / 2)"
+              alt="{{ second_image.alt | escape }}"
+              loading="lazy"
+              class="{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+              width="{{ second_image.width }}"
+              height="{{ second_image.height }}"
+            >
+          </div>
+        {%- endif -%}
+
+        {%- if settings.enable_swatches -%}
+          {%- assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase -%}
+          {%- for option in product.options_with_values -%}
+            {%- liquid
+              assign option_name = option.name | downcase
+              assign is_color = false
+              if option_name contains swatch_trigger
+                assign is_color = true
+              elsif swatch_trigger == 'color' and option_name contains 'colour'
+                assign is_color = true
+              endif
+            -%}
+            {%- if is_color -%}
+              {%- assign option_index = forloop.index0 -%}
+              {%- assign values = '' -%}
+              {%- for variant in product.variants -%}
+                {%- assign value = variant.options[option_index] %}
+                {%- unless values contains value -%}
+                  {%- assign values = values | join: ',' | append: ',' | append: value | split: ',' -%}
+
+                  {%- if variant.image -%}
+                    <div
+                      class="grid-product__color-image grid-product__color-image--{{ variant.id }}">
+                    </div>
+                  {%- endif -%}
+                {%- endunless -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </a>
+
+      <div class="grid-item__meta">
+        {% comment %} --> Canonicals Update for SEO {% endcomment %}
+        {% comment %} <a href="{{ product.url | within: collection }}" class="grid-item__meta-main"> {% endcomment %}
+        <a href="{{ product.url }}" class="grid-item__meta-main">
+          {% comment %} <-- Canonicals Update for SEO {% endcomment %}
+          {%- if settings.enable_swatches -%}
+            {%- liquid
+              assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+              assign swatch_file_extension = 'png'
+              assign color_count = 0
+              assign max_colors_show = 4
+              assign more_than_max = false
+            -%}
+
+            {%- for option in product.options_with_values -%}
+              {%- liquid
+                assign option_name = option.name | downcase
+                assign is_color = false
+                if option_name contains swatch_trigger
+                  assign is_color = true
+                elsif swatch_trigger == 'color' and option_name contains 'colour'
+                  assign is_color = true
+                endif
+              -%}
+              {%- if is_color -%}
+                {%- assign option_index = forloop.index0 -%}
+                {%- assign values = '' -%}
+                <div class="grid-product__colors">
+                  {%- for variant in product.variants -%}
+                    {%- assign value = variant.options[option_index] %}
+                    {%- unless values contains value -%}
+                      {%- liquid
+                        assign values = values | join: ',' | append: ',' | append: value | split: ','
+
+                        assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+                        assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                        assign color_swatch_fallback = value | split: ' ' | last | handle
+                        assign color_count = color_count | plus: 1
+                      -%}
+
+                      {%- if color_count <= max_colors_show -%}
+                        <span
+                          class="color-swatch color-swatch--small color-swatch--{{ value | handle }}{% if variant.image %} color-swatch--with-image{% endif %}"
+                          data-url="{{ variant.url | within: collection }}"
+                          {% if variant.image %}
+                            data-variant-id="{{ variant.id }}"
+                            data-variant-image="{{ variant.image | img_url: '400x' }}"
+                          {% endif %}
+                          style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}">
+                          <span class="visually-hidden">{{ value }}</span>
+                        </span>
+                      {%- else -%}
+                        {%- assign more_than_max = true -%}
+                      {%- endif -%}
+                    {%- endunless -%}
+                  {%- endfor -%}
+
+                  {%- if more_than_max -%}
+                    {%- assign more_colors = color_count | minus: max_colors_show -%}
+                    <small class="color-swatch__more">+{{ more_colors }}</small>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+
+          {% comment %} <div class="grid-product__title">{{ product.title }}</div> {% endcomment %}
+          <h2 class="grid-product__title">{{ product.title }}</h2>   {% comment %} Product Titles on Collection Pages {% endcomment %}
+          {%- if settings.vendor_enable -%}
+            <div class="grid-product__vendor">{{ product.vendor }}</div>
+          {%- endif -%}
+        </a>
+        <div class="pricing-block">
+          {% comment %} --> Canonicals Update for SEO {% endcomment %}
+          {% comment %} <a href="{{ product.url | within: collection }}"  class="grid-item__meta-secondary {{sq_ft}} -- {{product.price_max }} - {{product.price_varies}}">  {% endcomment %}
+          <a href="{{ product.url }}"  class="grid-item__meta-secondary {{sq_ft}} -- {{product.price_max }} - {{product.price_varies}}"> 
+          {% comment %} <-- Canonicals Update for SEO {% endcomment %}
+
+            {%- if sq_ft -%}
+              {% assign customerDiscount = false %}
+                {% assign discountTotal = 0 %}
+                {% assign wholesalePriceTotal = 0 %}
+
+                {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
+                    {% assign customerDiscount = true %}
+                    
+                    {% assign discountTotal = 0.25 %}
+                    {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+                    {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+                {%- endif -%}
+
+                {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
+                    {% assign customerDiscount = true %}
+                    
+                    {% assign discountTotal = 0.20 %}
+                    {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+                    {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+                {%- endif -%}
+
+                {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
+                    {% assign customerDiscount = true %}
+                    
+                    {% assign discountTotal = 0.15 %}
+                    {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+                    {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+                {%- endif -%}
+              <div class="grid-product__price collection-pricing {{wholesalePriceTotal[0]}} ">
+                {% if customerDiscount %}
+                
+                  {% comment %} B2BCustomer Discount original product price {% endcomment %}
+                  {% assign per_sq_ft = wholesalePriceTotal[0] | divided_by: sq_ft %}
+                  <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                    <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one collection-pricing-customer-discount grid-product__price--savings">
+                    {%- render 'price' with per_sq_ft -%}
+                    per sq. ft.
+                    </span> 
+                  </span>
+                  {%- if on_sale -%}
+                    {% comment %} Fix Discounted Pricing not showing on Collection Pages {% endcomment %}
+                    {% comment %} product.compare_at_price --> product.compare_at_price_max {% endcomment %}
+                    {% assign per_sq_ft = product.compare_at_price_max | divided_by: sq_ft %}
+                    <p>                           
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+
+                  {%- else -%}
+                    {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+                    <p>                        
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class=" wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+                  {%- endif -%}
+
+                {% else %}
+                  {%- if product.price_varies -%}
+                    {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+                    <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                      <span data-sq-ft-price="{{per_sq_ft | round}}" class="product__price  {% if on_sale %} product__price-sale {% endif %} ">
+                        {%- render 'price' with per_sq_ft -%}
+                        per sq. ft.
+                      </span> 
+                    
+                    </span>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+                    {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+                    <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                      <span data-sq-ft-price="{{per_sq_ft | round}}" class="product__price  {% if on_sale %} product__price-sale {% endif %} ">
+                        {%- render 'price' with per_sq_ft -%}
+                        per sq. ft.
+                      </span> 
+                    </span>
+                  {%- endif -%}
+                  {%- if on_sale -%}
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {% comment %} Fix Discounted Pricing not showing on Collection Pages {% endcomment %}
+                        {% assign per_sq_ft = product.compare_at_price_max | divided_by: sq_ft %}
+                        {% comment %} product.compare_at_price --> product.compare_at_price_max {% endcomment %}
+                        {%- render 'price' with per_sq_ft -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+
+                      {% if sq_ft %}
+                
+                      {% else %}
+                        <span class="grid-product__price--savings">
+                          {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                        </span>
+
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endif -%}
+
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {% endif%}
+              </div>
+            {%- else -%}
+              <div class="grid-product__price - {{customerDiscount}} - {{product.price_varies}}">
+                {% if customerDiscount %}
+                  {%- if product.price_varies -%}
+
+                    {% assign discountTotalRegularVaries = 0 %}
+
+                    {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
+                        {% assign customerDiscount = true %}
+                        
+                        {% assign discountTotalRegularVaries = 0.25 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotalRegularVaries %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {%- endif -%}
+
+                    {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
+                        {% assign customerDiscount = true %}
+                        
+                        {% assign discountTotalRegularVaries = 0.20 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotalRegularVaries %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {%- endif -%}
+
+                    {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
+                        {% assign customerDiscount = true %}
+                        
+                        {% assign discountTotalRegularVaries = 0.15 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotalRegularVaries %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {%- endif -%}
+
+                    <span class="grid-product__price--current grid-product__price--savings  - {{product.price_varies}}">
+                      {%- render 'price-varies', price: wholesalePriceTotal[0] -%}
+                    </span>
+
+                    <p>
+                      <span class="grid-product__price--current grid-product__price--original">
+                        {%- render 'price', price: product.price_min -%}
+                      </span>
+                    </p>
+                  {%- else -%}
+                        {% assign discountTotalRegular = 0 %}
+                        
+                    {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
+                        {% assign customerDiscount = true %}
+                        
+                        {% assign discountTotalRegular = 0.25 %}
+                        {% assign wholesalePriceAmount = product.price | times: discountTotalRegular %}
+                        {% assign wholesalePriceTotal = product.price  | minus: wholesalePriceAmount | split: '.'%}
+                    {%- endif -%}
+
+                    {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
+                        {% assign customerDiscount = true %}
+                        
+                        {% assign discountTotalRegular = 0.20 %}
+                        {% assign wholesalePriceAmount = product.price | times: discountTotalRegular %}
+                        {% assign wholesalePriceTotal = product.price  | minus: wholesalePriceAmount | split: '.'%}
+                    {%- endif -%}
+
+                    {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
+                        {% assign customerDiscount = true %}
+                        
+                        {% assign discountTotalRegular = 0.15 %}
+                        {% assign wholesalePriceAmount = product.price | times: discountTotalRegular %}
+                        {% assign wholesalePriceTotal = product.price  | minus: wholesalePriceAmount | split: '.'%}
+                    {%- endif -%}
+
+
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+
+                    <span class="grid-product__price--current grid-product__price--savings product-price-from - {{discountTotalRegular}} - {{product.price}} - {{wholesalePriceAmount}} - {{wholesalePriceTotal[0]}}">
+                      {%- render 'price', price: wholesalePriceTotal[0] -%}
+                    </span>
+                    {%- if on_sale -%}
+                      <p>
+                        <span class="grid-product__price--original ">
+                          {% comment %} Fix Discounted Pricing not showing on Collection Pages {% endcomment %}
+                          {% comment %} product.compare_at_price --> product.compare_at_price_max {% endcomment %}
+                          {%- render 'price' with product.compare_at_price_max -%}
+                        </span>
+                      </p>
+                    {%- else -%}
+                        <p>
+                        <span class="grid-product__price--original ">
+                          {% comment %} Fix Discounted Pricing not showing on Collection Pages {% endcomment %}
+                          {% comment %} product.compare_at_price --> product.compare_at_price_max {% endcomment %}
+                          {%- render 'price' with product.price_max -%}
+                        </span>
+                      </p>
+                    {%- endif -%}
+
+                  {%- endif -%}
+
+
+
+
+
+
+                {% else %}
+                  {%- if product.price_varies -%} 
+                    <span class="grid-product__price--current">
+                      {%- render 'price-varies', price: product.price_min -%}
+                    </span>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+                    <span class="grid-product__price--current hrerff {% if on_sale %} grid-product__price--savings {% endif %}">
+                      {%- render 'price' with product.price -%}
+                    </span>
+                  {%- endif -%}
+                  {%- if on_sale -%}
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {%- render 'price' with product.compare_at_price -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            
+            {%- if settings.enable_product_reviews -%}
+              <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+            {%- endif -%}
+          </a>
+
+          {%- if settings.quick_add_enable and product.available -%}
+            {%- if product.variants.size > 1 -%}
+              {% if sq_ft %}
+
+                  {%- assign sampleId = "" -%}
+                  {% for variant in product.variants %}
+                    {% if variant.title contains "Sample" %}
+                      {%- assign sampleId = variant.id -%}
+                    {%- endif -%}
+                  {% endfor %}
+
+                  {% comment %} <button class="sample-button" data-variant-id="{{ sampleId }}">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                      <g clip-path="url(#clip0_2035_2)">
+                      <mask id="mask0_2035_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <path d="M0 -2.98023e-07H20V20H0V-2.98023e-07Z" fill="white"></path>
+                      </mask>
+                      <g mask="url(#mask0_2035_2)">
+                      <path d="M16.6666 14.667H5.983C5.617 14.667 5.2694 14.3702 5.2128 14.0082L3.5274 3.33339H2V2.00019H3.3334C4.0664 2.00019 4.7604 2.59279 4.875 3.31679L6.4558 13.3336H16.6668L16.6666 14.667Z" fill="black"></path>
+                      <path d="M8.6668 16.6666C8.6668 17.4026 8.0692 18 7.3334 18C6.5978 18 6 17.4026 6 16.6666C6 15.9298 6.5976 15.3334 7.3334 15.3334C8.0692 15.3334 8.6668 15.9298 8.6668 16.6666Z" fill="black"></path>
+                      <path d="M14.6666 16.6666C14.6666 17.4026 14.0692 18 13.3334 18C12.5962 18 12 17.4026 12 16.6666C12 15.9298 12.5962 15.3334 13.3334 15.3334C14.0692 15.3334 14.6666 15.9298 14.6666 16.6666Z" fill="black"></path>
+                      <path d="M5.08789 4.6666L5.29829 5.9998H16.4023L15.5537 10.6666H6.03509L6.24549 12H16.6667L18.0001 4.6666H5.08789Z" fill="black"></path>
+                      <path d="M5.89789 4.6668H5.08789L5.29829 6H6.10849L5.89789 4.6668Z" fill="black"></path>
+                      <path d="M7.05516 12L6.84496 10.6666H6.03516L6.24556 12H7.05516Z" fill="black"></path>
+                      <path d="M5.29785 6.00019H16.4019L15.5533 10.667H6.03465L5.29785 6.00019Z" fill="white"></path>
+                      <path d="M6.71805 9.86699L6.10805 6.00019H5.29785L6.03465 10.667H15.5533L15.6987 9.86699H6.71805Z" fill="#383838"></path>
+                      <path d="M12.9397 7.93641C12.9397 8.85421 12.1951 9.59961 11.2765 9.59961C10.3585 9.59961 9.61328 8.85421 9.61328 7.93641C9.61328 7.01781 10.3585 6.27321 11.2765 6.27321C12.1951 6.27321 12.9397 7.01781 12.9397 7.93641Z" fill="#55CCDB"></path>
+                      <path d="M12.2741 7.68717H11.5257V6.93877H11.0267V7.68717H10.2783V8.18617H11.0267V8.93457H11.5257V8.18617H12.2741V7.68717Z" fill="white"></path>
+                      </g>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_2035_2">
+                      <rect width="20" height="20" fill="white"></rect>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="custom-area"> Sample </span>
+                  </button> {% endcomment %}
+                  <button type="button" class="text-link quick-add-btn js-quick-add-btn custom-add-to-cart-2 "
+                      title="{{ 'products.product.add_to_cart' | t }}"
+                      tabindex="-1"
+                      data-id="{{ sampleId }}">
+                      <span class="btn btn--circle btn--icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2035_2)">
+                        <mask id="mask0_2035_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                        <path d="M0 -2.98023e-07H20V20H0V-2.98023e-07Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_2035_2)">
+                        <path d="M16.6666 14.667H5.983C5.617 14.667 5.2694 14.3702 5.2128 14.0082L3.5274 3.33339H2V2.00019H3.3334C4.0664 2.00019 4.7604 2.59279 4.875 3.31679L6.4558 13.3336H16.6668L16.6666 14.667Z" fill="black"/>
+                        <path d="M8.6668 16.6666C8.6668 17.4026 8.0692 18 7.3334 18C6.5978 18 6 17.4026 6 16.6666C6 15.9298 6.5976 15.3334 7.3334 15.3334C8.0692 15.3334 8.6668 15.9298 8.6668 16.6666Z" fill="black"/>
+                        <path d="M14.6666 16.6666C14.6666 17.4026 14.0692 18 13.3334 18C12.5962 18 12 17.4026 12 16.6666C12 15.9298 12.5962 15.3334 13.3334 15.3334C14.0692 15.3334 14.6666 15.9298 14.6666 16.6666Z" fill="black"/>
+                        <path d="M5.08789 4.6666L5.29829 5.9998H16.4023L15.5537 10.6666H6.03509L6.24549 12H16.6667L18.0001 4.6666H5.08789Z" fill="black"/>
+                        <path d="M5.89789 4.6668H5.08789L5.29829 6H6.10849L5.89789 4.6668Z" fill="black"/>
+                        <path d="M7.05516 12L6.84496 10.6666H6.03516L6.24556 12H7.05516Z" fill="black"/>
+                        <path d="M5.29785 6.00019H16.4019L15.5533 10.667H6.03465L5.29785 6.00019Z" fill="white"/>
+                        <path d="M6.71805 9.86699L6.10805 6.00019H5.29785L6.03465 10.667H15.5533L15.6987 9.86699H6.71805Z" fill="#383838"/>
+                        <path d="M12.9397 7.93641C12.9397 8.85421 12.1951 9.59961 11.2765 9.59961C10.3585 9.59961 9.61328 8.85421 9.61328 7.93641C9.61328 7.01781 10.3585 6.27321 11.2765 6.27321C12.1951 6.27321 12.9397 7.01781 12.9397 7.93641Z" fill="#55CCDB"/>
+                        <path d="M12.2741 7.68717H11.5257V6.93877H11.0267V7.68717H10.2783V8.18617H11.0267V8.93457H11.5257V8.18617H12.2741V7.68717Z" fill="white"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_2035_2">
+                        <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                  <span class="icon__fallback-text">Sample</span>
+                </span>
+              </button> 
+              {%- else -%}
+                <button type="button" class="text-link quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'products.product.add_to_cart' | t }}" tabindex="-1">
+                  <span class="btn btn--circle btn--icon custom-add-to-cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2035_2)">
+                      <mask id="mask0_2035_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <path d="M0 -2.98023e-07H20V20H0V-2.98023e-07Z" fill="white"/>
+                      </mask>
+                      <g mask="url(#mask0_2035_2)">
+                      <path d="M16.6666 14.667H5.983C5.617 14.667 5.2694 14.3702 5.2128 14.0082L3.5274 3.33339H2V2.00019H3.3334C4.0664 2.00019 4.7604 2.59279 4.875 3.31679L6.4558 13.3336H16.6668L16.6666 14.667Z" fill="black"/>
+                      <path d="M8.6668 16.6666C8.6668 17.4026 8.0692 18 7.3334 18C6.5978 18 6 17.4026 6 16.6666C6 15.9298 6.5976 15.3334 7.3334 15.3334C8.0692 15.3334 8.6668 15.9298 8.6668 16.6666Z" fill="black"/>
+                      <path d="M14.6666 16.6666C14.6666 17.4026 14.0692 18 13.3334 18C12.5962 18 12 17.4026 12 16.6666C12 15.9298 12.5962 15.3334 13.3334 15.3334C14.0692 15.3334 14.6666 15.9298 14.6666 16.6666Z" fill="black"/>
+                      <path d="M5.08789 4.6666L5.29829 5.9998H16.4023L15.5537 10.6666H6.03509L6.24549 12H16.6667L18.0001 4.6666H5.08789Z" fill="black"/>
+                      <path d="M5.89789 4.6668H5.08789L5.29829 6H6.10849L5.89789 4.6668Z" fill="black"/>
+                      <path d="M7.05516 12L6.84496 10.6666H6.03516L6.24556 12H7.05516Z" fill="black"/>
+                      <path d="M5.29785 6.00019H16.4019L15.5533 10.667H6.03465L5.29785 6.00019Z" fill="white"/>
+                      <path d="M6.71805 9.86699L6.10805 6.00019H5.29785L6.03465 10.667H15.5533L15.6987 9.86699H6.71805Z" fill="#383838"/>
+                      <path d="M12.9397 7.93641C12.9397 8.85421 12.1951 9.59961 11.2765 9.59961C10.3585 9.59961 9.61328 8.85421 9.61328 7.93641C9.61328 7.01781 10.3585 6.27321 11.2765 6.27321C12.1951 6.27321 12.9397 7.01781 12.9397 7.93641Z" fill="#55CCDB"/>
+                      <path d="M12.2741 7.68717H11.5257V6.93877H11.0267V7.68717H10.2783V8.18617H11.0267V8.93457H11.5257V8.18617H12.2741V7.68717Z" fill="white"/>
+                      </g>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_2035_2">
+                      <rect width="20" height="20" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                  </span>
+                </button>
+              {%- endif -%}
+              
+            {%- else -%}
+              <button type="button" class="text-link quick-add-btn js-quick-add-btn custom-add-to-cart-2 "
+                      title="{{ 'products.product.add_to_cart' | t }}"
+                      tabindex="-1"
+                      data-id="{{ product.selected_or_first_available_variant.id }}">
+                <span class="btn btn--circle btn--icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2035_2)">
+                      <mask id="mask0_2035_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <path d="M0 -2.98023e-07H20V20H0V-2.98023e-07Z" fill="white"/>
+                      </mask>
+                      <g mask="url(#mask0_2035_2)">
+                      <path d="M16.6666 14.667H5.983C5.617 14.667 5.2694 14.3702 5.2128 14.0082L3.5274 3.33339H2V2.00019H3.3334C4.0664 2.00019 4.7604 2.59279 4.875 3.31679L6.4558 13.3336H16.6668L16.6666 14.667Z" fill="black"/>
+                      <path d="M8.6668 16.6666C8.6668 17.4026 8.0692 18 7.3334 18C6.5978 18 6 17.4026 6 16.6666C6 15.9298 6.5976 15.3334 7.3334 15.3334C8.0692 15.3334 8.6668 15.9298 8.6668 16.6666Z" fill="black"/>
+                      <path d="M14.6666 16.6666C14.6666 17.4026 14.0692 18 13.3334 18C12.5962 18 12 17.4026 12 16.6666C12 15.9298 12.5962 15.3334 13.3334 15.3334C14.0692 15.3334 14.6666 15.9298 14.6666 16.6666Z" fill="black"/>
+                      <path d="M5.08789 4.6666L5.29829 5.9998H16.4023L15.5537 10.6666H6.03509L6.24549 12H16.6667L18.0001 4.6666H5.08789Z" fill="black"/>
+                      <path d="M5.89789 4.6668H5.08789L5.29829 6H6.10849L5.89789 4.6668Z" fill="black"/>
+                      <path d="M7.05516 12L6.84496 10.6666H6.03516L6.24556 12H7.05516Z" fill="black"/>
+                      <path d="M5.29785 6.00019H16.4019L15.5533 10.667H6.03465L5.29785 6.00019Z" fill="white"/>
+                      <path d="M6.71805 9.86699L6.10805 6.00019H5.29785L6.03465 10.667H15.5533L15.6987 9.86699H6.71805Z" fill="#383838"/>
+                      <path d="M12.9397 7.93641C12.9397 8.85421 12.1951 9.59961 11.2765 9.59961C10.3585 9.59961 9.61328 8.85421 9.61328 7.93641C9.61328 7.01781 10.3585 6.27321 11.2765 6.27321C12.1951 6.27321 12.9397 7.01781 12.9397 7.93641Z" fill="#55CCDB"/>
+                      <path d="M12.2741 7.68717H11.5257V6.93877H11.0267V7.68717H10.2783V8.18617H11.0267V8.93457H11.5257V8.18617H12.2741V7.68717Z" fill="white"/>
+                      </g>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_2035_2">
+                      <rect width="20" height="20" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                </span>
+              </button> 
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

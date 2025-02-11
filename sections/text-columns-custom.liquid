@@ -1,0 +1,272 @@
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .promo-grid--space-top {
+    padding-top: {{ section.settings.gutter_size }}px;
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: 589px) {
+    #shopify-section-{{ section.id }} .promo-grid--space-top {
+      padding-top: {{ section.settings.gutter_size | divided_by: 2 }}px;
+    }
+  } 
+
+  #shopify-section-{{ section.id }} .promo-grid--space-bottom {
+    padding-bottom: {{ section.settings.gutter_size }}px;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 589px) {
+    #shopify-section-{{ section.id }} .promo-grid--space-bottom {
+      padding-bottom: {{ section.settings.gutter_size | divided_by: 2 }}px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  @media only screen and (min-width:1024px){.medium-up--one-seven{width:14%}.medium-up--one-eight{width:12%}}.text-column-custom .rte.text-center p{text-align:left}
+</style>
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="index-section color-scheme-{{ section.settings.color_scheme }} {{ css_class }} text-column-custom  {% if section.settings.space_above %} promo-grid--space-top{% endif %}{% if section.settings.space_below %} promo-grid--space-bottom{% endif %}">
+
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <div class="section-header text-{{ section.settings.align_text }}">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <div class="rte text-{{ section.settings.align_text }}">
+          {{ section.settings.text }} 
+      </div>
+    {%- endif -%}
+
+    <div class="custom-overflow">
+      <div class="grid{% unless section.blocks.size == 5 %} grid--uniform{% endunless %} grid--flush-bottom">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            case section.settings.column_size
+              when 4
+                assign column_width = 'one-quarter medium-up--one-quarter'
+              when 5
+                assign column_width = 'medium-up--one-fifth'
+              when 6
+                assign column_width = 'one-quarter medium-up--one-sixth'
+              when 7
+                assign column_width = 'medium-up--one-seven'  
+              when 8
+                assign column_width = 'one-quarter small--one-quarter medium-up--one-eight'
+            endcase
+          -%}
+          <div class="grid__item {{ column_width }} text-{{ section.settings.align_text }}" {{ block.shopify_attributes }}>
+            {%- if block.settings.enable_image -%}
+              <div style="{% if section.settings.align_text == 'center' %}margin: 0 auto;{% endif %} max-width: {{ block.settings.image_width }}px;">
+                {%- if block.settings.button_link != blank -%}
+                  <a href="{{ block.settings.button_link }}">
+                {%- endif -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="image-wrap text-spacing" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
+                    {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img class="lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[180, 360, 540, 720, 900, 1080]"
+                        data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                        data-sizes="auto"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        alt="{{ block.settings.image.alt }}">
+                  </div>
+                {%- else -%}
+                  <div class="image-wrap text-spacing">{{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--no-padding' }}</div>
+                {%- endif -%}
+                {%- if block.settings.button_link != blank -%}
+                  </a>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}
+              <div class="h3 rte--block">{{ block.settings.title }}</div>
+            {%- endif -%}
+            {%- if block.settings.button_label != blank -%}
+              <a href="{{ block.settings.button_link }}" class="btn btn--secondary btn--small">
+                {{ block.settings.button_label }}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+{
+  "name": "Text Columns Custom",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.text-columns.settings.title.label"
+    },
+    {
+      "id": "text",
+      "type": "richtext",
+      "label": "t:sections.rich-text.blocks.text.settings.text.label",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "range",
+      "id": "column_size",
+      "min": 4,
+      "max": 8,
+      "step": 1,
+      "label": "Column Amount",
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "align_text",
+      "label": "t:sections.text-columns.settings.align_text.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.text-columns.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.text-columns.settings.align_text.options.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.text-columns.settings.align_text.options.right.label"
+        }
+      ]
+    },
+      {
+      "type": "range",
+      "id": "gutter_size",
+      "label": "t:sections.promo-grid.settings.gutter_size.label",
+      "default": 20,
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "space_above",
+      "label": "t:sections.promo-grid.settings.space_above.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "space_below",
+      "label": "t:sections.promo-grid.settings.space_below.label",
+      "default": false
+    }, 
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.text-columns.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:sections.text-columns.settings.color_scheme.label",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.text-columns.settings.color_scheme.options.none.label"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "t:sections.text-columns.blocks.column.name",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_image",
+          "label": "t:sections.text-columns.blocks.column.settings.enable_image.label",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.text-columns.blocks.column.settings.image.label"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "t:sections.text-columns.blocks.column.settings.image_width.label",
+          "default": 650,
+          "min": 60,
+          "max": 650,
+          "step": 10,
+          "unit": "px"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.text-columns.blocks.column.settings.title.label",
+          "default": "Example title"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.text-columns.blocks.column.settings.button_label.label",
+          "default": "Optional button"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.text-columns.blocks.column.settings.button_link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Columns Custom",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

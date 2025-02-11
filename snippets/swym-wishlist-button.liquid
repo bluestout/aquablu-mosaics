@@ -1,0 +1,215 @@
+{% comment %} --> Add Wish List {% endcomment %}
+{%- case block.type -%}
+    {%- when 'swymcs-wishlist-button' -%}
+
+    {%- assign has_sample = false -%}
+    {%- assign current_variant_price = false -%}
+    {%- assign sample_variant = false -%}
+    {%- assign sample_current_variant = false -%}
+    {%- unless product.has_only_default_variant -%}
+        {% for option in product.variants %}
+            {% if option.title == "Sample" %}
+            {% comment %} <p>{{option.id}} -- {{option.title}} -- {{option.price}} </p> {% endcomment %}
+            {%- assign has_sample = true -%}
+            {%- assign current_variant_price = option.price -%}
+            {%- assign sample_variant = option -%}
+            {%- assign sample_current_variant = option -%}
+
+            {% comment %} <p> {{option}}  </p> {% endcomment %}
+
+        {% endif %}
+        {% endfor %}
+    {%- endunless -%}
+
+    <div class="product-block product-block--swymcs-wishlist-button">
+      <swymcs-wishlist-button class="swymcs-wishlist-button" {{ block.shopify_attributes }}>
+        <Button
+          id="swymcs-wishlist-button"
+          class="swymcs-wishlist-button swymcs-wishlist-button-{{ product.id }}"
+          data-empi="{{ product.id }}"
+          data-epi="{%- if has_sample -%}{{sample_current_variant.id}}{%- else -%}{%- if product.selected_variant -%}{{ product.selected_variant.id}}{%- else -%}{{ product.variants[0].id }}{%- endif -%}{%- endif -%}"
+          data-du="{{ shop.url }}{{ product.url }}"
+          data-settings="{{ block.settings | json | escape }}"
+        >
+          <div id="swymUnfilled">
+            {%- if block.settings.swym_wishlist_button_type == 'icon'
+              or block.settings.swym_wishlist_button_type == 'icontext'
+            -%}
+            <div id="swym-heart-svg-icon">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none">
+                <path d="M17.1079 3.29742C18.4843 3.29742 19.7781 3.83352 20.7515 4.80666C22.7605 6.81563 22.7605 10.0846 20.7515 12.0939L15.6303 17.2151L11.9867 20.8584L8.34305 17.2148L3.22183 12.0936C1.21285 10.0846 1.21285 6.81563 3.22183 4.80639C4.19496 3.83325 5.48897 3.29716 6.86543 3.29716C8.24189 3.29716 9.53563 3.83325 10.509 4.80639L10.8692 5.16651L11.9867 6.28428L13.1042 5.16677L13.4643 4.80666C14.4377 3.83325 15.7317 3.29742 17.1079 3.29742ZM17.1079 1.7168C15.3847 1.7168 13.6613 2.37407 12.3468 3.68889L11.9867 4.04901L11.6265 3.68889C10.3117 2.37407 8.58857 1.7168 6.86543 1.7168C5.14228 1.7168 3.41888 2.37407 2.10406 3.68889C-0.525572 6.31852 -0.525572 10.5817 2.10406 13.2114L7.22529 18.3326L11.9867 23.094L16.7478 18.3329L21.869 13.2116C24.4986 10.582 24.4986 6.31879 21.869 3.68915C20.5544 2.37407 18.8313 1.7168 17.1079 1.7168Z" fill="black"/>
+              </svg>
+            </div>
+            {%- elsif block.settings.swym_wishlist_button_type == 'customicon'
+              or block.settings.swym_wishlist_button_type == 'customicontext'
+            -%}
+              <img
+                src="{{ block.settings.swym_wishlist_button_add_to_wishlist_icon | img_url: '24x24' }}"
+                width="auto"
+                height="100%"
+              >
+            {%- endif -%}
+            {%- if block.settings.swym_wishlist_button_type == 'icontext'
+              or block.settings.swym_wishlist_button_type == 'customicontext'
+              or block.settings.swym_wishlist_button_type == 'button'
+            -%}
+              <span class="swym-button-content">{{ block.settings.add_to_wishlist_label }}</span>
+            {%- endif -%}
+          </div>
+          <div id="swymFilled" style="display:none">
+            {%- if block.settings.swym_wishlist_button_type == 'icon'
+              or block.settings.swym_wishlist_button_type == 'icontext'
+            -%}
+            {% comment %} <svg id="swym-heart-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M17.1079 3.29742C18.4843 3.29742 19.7781 3.83352 20.7515 4.80666C22.7605 6.81563 22.7605 10.0846 20.7515 12.0939L15.6303 17.2151L11.9867 20.8584L8.34305 17.2148L3.22183 12.0936C1.21285 10.0846 1.21285 6.81563 3.22183 4.80639C4.19496 3.83325 5.48897 3.29716 6.86543 3.29716C8.24189 3.29716 9.53563 3.83325 10.509 4.80639L10.8692 5.16651L11.9867 6.28428L13.1042 5.16677L13.4643 4.80666C14.4377 3.83325 15.7317 3.29742 17.1079 3.29742ZM17.1079 1.7168C15.3847 1.7168 13.6613 2.37407 12.3468 3.68889L11.9867 4.04901L11.6265 3.68889C10.3117 2.37407 8.58857 1.7168 6.86543 1.7168C5.14228 1.7168 3.41888 2.37407 2.10406 3.68889C-0.525572 6.31852 -0.525572 10.5817 2.10406 13.2114L7.22529 18.3326L11.9867 23.094L16.7478 18.3329L21.869 13.2116C24.4986 10.582 24.4986 6.31879 21.869 3.68915C20.5544 2.37407 18.8313 1.7168 17.1079 1.7168Z" fill="black"/>
+              </svg> {% endcomment %}
+              <div id="swym-heart-svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                    <path d="M17.1079 0.716797C15.3847 0.716797 13.6613 1.37407 12.3468 2.68889L11.9867 3.04901L11.6265 2.68889C10.3117 1.37407 8.58857 0.716797 6.86543 0.716797C5.14228 0.716797 3.41888 1.37407 2.10406 2.68889C-0.525572 5.31852 -0.525572 9.58173 2.10406 12.2114L7.22529 17.3326L11.9867 22.094L16.7478 17.3329L21.869 12.2116C24.4986 9.582 24.4986 5.31879 21.869 2.68915C20.5544 1.37407 18.8313 0.716797 17.1079 0.716797Z" fill="black"/>
+                  </svg>
+              </div>
+            {%- elsif block.settings.swym_wishlist_button_type == 'customicon'
+              or block.settings.swym_wishlist_button_type == 'customicontext'
+            -%}
+              <img
+                src="{{ block.settings.swym_wishlist_button_added_to_wishlist_icon | img_url: '24x24' }}"
+                width="auto"
+                height="100%"
+              >
+            {%- endif -%}
+            {%- if block.settings.swym_wishlist_button_type == 'icontext'
+              or block.settings.swym_wishlist_button_type == 'customicontext'
+              or block.settings.swym_wishlist_button_type == 'button'
+            -%}
+              <span class="swym-button-content">{{ block.settings.added_to_wishlist_label }}</span>
+            {%- endif -%}
+          </div>
+        </Button>
+      </swymcs-wishlist-button>
+    </div>
+    <script>
+        if(!customElements.get('swymcs-wishlist-button')){
+          class SwymWishlistButton extends HTMLElement{
+            constructor(){
+              super();
+              if(!window.SwymCallbacks){
+                window.SwymCallbacks = [];
+               }
+               window.SwymCallbacks.push(this.initializeSwymButton.bind(this));
+            }
+  
+            async initializeSwymButton(swat){
+                console.log("initializeSwymButton!!");
+                {% comment %} document.dispatchEvent(new CustomEvent("swym:collections-loaded")); {% endcomment %}
+
+              var swymWishlistButtonElement = this;
+              var swymButton = swymWishlistButtonElement.querySelector('button');
+              var swymUnfilled = swymWishlistButtonElement.querySelector('#swymUnfilled');
+              var swymFilled = swymWishlistButtonElement.querySelector('#swymFilled');
+              console.log(swymButton.id);
+              if( swymButton.id.includes('-modal')){
+                swymUnfilled = swymWishlistButtonElement.querySelector('#swymUnfilled-modal');
+                swymFilled = swymWishlistButtonElement.querySelector('#swymFilled-modal');
+              }
+              this.elements = {
+                wishlistButton: swymButton,
+                unfilledState: swymUnfilled,
+                filledState: swymFilled,
+              }
+  
+  
+              this.elements.wishlistButton.addEventListener('click',()=>{
+                console.log("wishlistButton click!!");
+                let { epi, empi, du } = this.elements.wishlistButton.dataset;
+                let product = { epi, empi, du };
+                if(swat.isCollectionsEnabled()){
+                  swymcsWishlistFunctions.renderPopup(product);
+                }else{
+                  if(this.elements.wishlistButton.classList.contains('swym-added-custom')){
+                    swymcsWishlistFunctions.removeFromWishlist(swat, product);
+                  }else{
+                     swymcsWishlistFunctions.addToWishlist(swat, product); 
+                  } 
+                }
+              });
+              
+              swymcsWishlistFunctions?.updateButtonState();
+            }
+          }
+          customElements.define('swymcs-wishlist-button', SwymWishlistButton);
+      }
+    </script>
+    
+    <style>
+    /*.swymcs-wishlist-button*/
+    .swymcs-wishlist-button #swymcs-wishlist-button, .swymcs-wishlist-button #swymcs-wishlist-button-modal{
+        width: {{block.settings.swymcs_button_width}};
+        height: 40px;
+        padding: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        {%- if block.settings.disable_added_to_wishlist == false -%}
+        opacity: 1 !important;
+        {%- endif -%}
+
+        {%- if block.settings.swymcs_button_type == 'solid' -%}
+        color: {{block.settings.add_to_wishlist_color}} !important;
+        background: {{block.settings.swymcs_button_background_color}} !important;
+        border: unset;
+        {%- elsif block.settings.swymcs_button_type == 'outline'  -%}
+        color: {{block.settings.swymcs_button_background_color}};
+        background: unset;
+        border: 1.5px solid {{block.settings.swymcs_button_background_color}};
+        {%- endif -%}
+
+        display: flex;
+        justify-content: {{block.settings.swymcs_button_align}};
+    }
+
+    .swymcs-wishlist-button #swymcs-wishlist-button #swym-heart-svg-icon, .swymcs-wishlist-button #swymcs-wishlist-button-modal #swym-heart-svg-icon-modal{
+        {% comment %} stroke: {{ block.settings.added_to_wishlist_color }};
+        stroke-width: 2px; {% endcomment %}
+        width: 24px;
+        height: 24px;
+    }
+  
+    .swymcs-wishlist-button #swymcs-wishlist-button #swym-heart-svg-icon.disabled, .swymcs-wishlist-button #swymcs-wishlist-button-modal #swym-heart-svg-icon.disabled-modal{
+            cursor: default;
+    }
+        
+    .swymcs-wishlist-button #swymcs-wishlist-button.swym-added-custom, .swymcs-wishlist-button #swymcs-wishlist-button-modal.swym-added-custom{
+        color: {{block.settings.added_to_wishlist_color}} !important;
+    }
+    .swymcs-wishlist-button #swymFilled, .swymcs-wishlist-button #swymUnfilled, .swymcs-wishlist-button #swymFilled-modal, .swymcs-wishlist-button #swymUnfilled-modal{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swymcs-wishlist-button #swymFilled .swym-button-content, .swymcs-wishlist-button #swymFilled-modal .swym-button-content{
+        margin-left: 10px;
+        color: #000;
+        font-family: FuturaMedium;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 35px; /* 218.75% */
+        letter-spacing: 0.512px;
+        text-transform: uppercase;
+    }
+    .swymcs-wishlist-button #swymUnfilled .swym-button-content, .swymcs-wishlist-button #swymUnfilled-modal .swym-button-content{
+        margin-left: 10px;
+        color: #000;
+        font-family: FuturaMedium;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 35px; /* 218.75% */
+        letter-spacing: 0.512px;
+        text-transform: uppercase;
+    }
+        
+    {{block.settings.swym_wishlist_button_custom_css}}
+   </style>
+   
+   {%- endcase -%}

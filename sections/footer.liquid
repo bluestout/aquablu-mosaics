@@ -1,0 +1,629 @@
+{% comment %} <div style="background-color:#f5f5f5;text-align:center;padding:5px;">
+  <div style="float:center;"><a href="https://www.shopperapproved.com/reviews/aquablumosaics.com/"><img src="https://cdn.shopify.com/s/files/1/1205/7108/files/Shopper_Approved_logo_-_Final.png?v=1645134830" style="border: 0;background-color:transparent!important;max-height:115px;padding:10px;" alt="Shopper Award"  /></a></div>
+  <h2 style="margin-top:-5px;margin-bottom:-5px;"> The Most Trusted Online Seller of Pool Tile and Mosaics </h2>
+  <div style= "max-width:520px;max-height:400px;margin:auto;">
+  <div style="min-height: 100px;" class="shopperapproved_widget sa_rotate sa_count1 sa_vertical sa_bgInherit sa_colorBlack sa_borderWhite sa_noborder sa_FjY sa_fixed sa_showlinks sa_large sa_showdate "></div><script type="text/javascript">var sa_interval = 5000;function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text/javascript'; document.getElementsByTagName("head")[0].appendChild(js); } if (typeof(shopper_first) == 'undefined') saLoadScript('https://www.shopperapproved.com/widgets/testimonial/3.0/28451.js'); shopper_first = true; </script><div style="text-align:right;"><a aria-label="aquablumosaics.com certificate URL" title="Reviews" class="sa_footer" href="https://www.shopperapproved.com/reviews/aquablumosaics.com/" target="_blank" rel="nofollow"><img class="sa_widget_footer" style="border: 0;" alt="aquablumosaics.com widget logo" src=https://www.shopperapproved.com/widgets/widgetfooter-darklogo.png></a></div>
+    <hr>
+     <p style="font-size:12px;"> Customer Satisfaction is very important to us, <a href="mailto:info@aquablumosaics.com" style="color:blue;">let us know how we're doing </a></p>
+     <br/>
+  </div>
+</div> {% endcomment %}
+
+{% comment %} /*-->Header/Footer and 5k Reviews*/ {% endcomment %}
+
+{% style %}
+.footer__section.footer-section-copyright .footer__divider{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .footer__section.footer-section-copyright .footer__divider:after{
+    content: "";
+    height: 2px;
+    background: #fff;
+    width: calc((100% - 90px) / 2 - 35px);
+    margin-left: 35px;
+  }
+  .footer__section.footer-section-copyright .footer__divider:before{
+    content: "";
+    height: 2px;
+    background: #fff;
+    width: calc((100% - 90px) / 2 - 35px);
+    margin-right: 35px;
+  }
+  .footer__section.footer-section-copyright .footer__divider img{
+    width: 90px;
+
+  }
+  .footer__section.footer-section-copyright .footer__logos_title{
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    color: #FFF;
+    font-family: FuturaBook;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .footer__section.footer-section-copyright .footer__logos{
+    display: flex;
+    width: 100%;
+  
+  }
+  .footer__section.footer-section-copyright .footer__logos .flickity-viewport{
+    width: 100%;
+
+  }
+  .footer__section.footer-section-copyright .footer__logos .footer__logo{
+     width: calc((100% / 6) - 10px); 
+     margin-right: 11px;
+  }
+  .footer__section.footer-section-copyright .footer__logos .footer__logo:last-child{
+    margin-right: 50px;
+  }
+
+  .footer__review-block{
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    /* html.js.supports-touch {
+      height: 100vh; 
+      overflow-y: auto; 
+      box-sizing: border-box;
+    } */
+
+    .site-footer{
+      background-image: url({{ section.settings.image_mobile | img_url: 'master' }})!important;
+      background-size: 100vw auto;
+      background-repeat: no-repeat;
+      background-position: top;
+      /* max-height: 733px;
+      overflow: scroll;
+      scroll-behavior: smooth; */
+      background-color: #040f1f;
+    }
+    .footer__review-block{
+      display: flex;
+      padding: 12px 20px;
+      align-items: center;
+      background: #042A47;
+      gap: 15px;
+    }
+    .footer__review-block img{
+      max-width: 130px;
+      width: 130px;
+    }
+    .footer__review-block .top-link{
+      color: #FFF;
+      font-family: FuturaBook;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px; /* 187.5% */
+      letter-spacing: 0.5px;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+    .footer__section.footer-section-copyright .footer__divider img{
+      width: 45px;
+    }
+    .footer__section.footer-section-copyright{
+      padding-left: 20px;
+    }
+    .footer__section.footer-section-copyright .footer__divider:before{
+      width: calc((100% - 45px) / 2 - 25px);
+      margin-right: 25px;
+    }
+    .footer__section.footer-section-copyright .footer__divider:after{
+      width: calc((100% - 45px) / 2 - 25px);
+      margin-left: 25px;
+    }
+    .footer__section.footer-section-copyright .footer__logos_title{
+      margin-top: 22px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .footer__section.footer-section-copyright .footer__logos .footer__logo{
+      width: calc(27%);
+      margin-right: 5px;
+    }
+    .footer__section.footer-section-copyright .footer__logos .footer__logo:last-child{
+    margin-right: 30px;
+  }
+  }
+{% endstyle %}
+
+{%- if section.settings.show_newsletter -%}
+  <div class="footer__section footer__section--border">
+    <div class="page-width">
+      <div class="footer__newsletter">
+        {%- if section.settings.newsletter_richtext != blank -%}
+          <div class="footer__subscribe rte rte--nomargin">
+            {{ section.settings.newsletter_richtext }}
+          </div>
+        {%- endif -%}
+
+        {%- render 'newsletter-form', section_id: section.id, snippet_context: 'footer' -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% comment %}
+  Main navigation is copied here with JS for mobile users
+{% endcomment %}
+{% comment %} {%- if section.settings.footer_main_menu -%}
+  <div id="FooterMobileNavWrap" class="footer__section footer__section--border medium-up--hide hide">
+    <div id="FooterMobileNav" class="page-width"></div>
+  </div>
+{%- endif -%} {% endcomment %}
+
+{% assign reviewBlock = section.blocks | where: 'type', 'center-area' | first %}
+{% if reviewBlock %}
+  <div class="footer__review-block medium-up--hide">
+    <img src="{{ reviewBlock.settings.image_logo | img_url: 'master' }}" loading="lazy" width="{{ reviewBlock.settings.image_logo.width }}" height="{{ reviewBlock.settings.image_logo.height }}" alt="{{ reviewBlock.settings.image_logo.alt | default: shop.name }}">
+    {% if reviewBlock.settings.link_top != blank %}
+      <a class="top-link" href="{{ reviewBlock.settings.link_top }}"> {{ reviewBlock.settings.text_top }} </a>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% comment %} /*-->Header/Footer and 5k Reviews*/ {% endcomment %}
+<footer class="site-footer" data-section-id="{{ section.id }}" data-section-type="footer-section" style="background-image: url({{ section.settings.image | img_url: 'master' }})">
+{% comment %} /*<--Header/Footer and 5k Reviews*/ {% endcomment %}
+  <div id="FooterMenus" class="footer__section footer__section--menus">
+    <div class="page-width">
+      <div class="footer__blocks">
+        {%- for block in section.blocks -%}
+          {% if block.type == 'logo' %}
+            {% continue %}
+          {% endif %}
+          <div {{ block.shopify_attributes }} class="footer__block footer__{{block.type}}" data-type="{{ block.type }}">
+            {%- liquid
+              case block.type
+                when 'menu'
+                  render 'footer-menu', block: block
+                when 'payment'
+                  assign show_currency_flags = block.settings.show_currency_flags
+                  render 'footer-payments', block: block, show_currency_flags: show_currency_flags
+                when 'contact'
+                  render 'footer-contact', block: block
+                when 'left-area'
+                  render 'footer-left', block: block  
+                when 'center-area'
+                  render 'footer-center', block: block  
+                when 'right-area'
+                  render 'footer-right', block: block      
+              endcase
+            -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <div class="footer__section footer-section-copyright">
+    <div class="page-width text-center small--text-left">
+      <div class="footer__divider"> 
+        <img src="{{ section.settings.image_break | img_url: 'master' }}" loading="lazy" width="{{ section.settings.image_break.width }}" height="{{ section.settings.image_break.height }}" alt="{{ section.settings.image_break.alt | default: shop.name }}">
+      </div>
+      {% if section.settings.text_seen %}
+        <p class="footer__logos_title"> {{ section.settings.text_seen }} </p>
+      {% endif %}
+      <div class="footer__logos" data-flickity='{ "cellAlign": "left", "draggable": true, "contain": true, "pageDots": false, "wrapAround": true, "autoPlay": true, "prevNextButtons": false }'>
+        {%- for block in section.blocks -%}
+          {% if block.type == 'logo' %}
+            <div class="footer__logo" data-type="{{ block.type }}">
+              <img src="{{ block.settings.image_logo | img_url: 'master' }}" loading="lazy" width="{{ block.settings.image_logo.width }}" height="{{ block.settings.image_logo.height }}" alt="{{ block.settings.image_logo.alt | default: shop.name }}">
+              
+            </div>
+          {% endif %}
+        {%- endfor -%}
+      </div>
+      <div class="footer__base-links">
+        {% comment %} <div class="bottom-footer-img">
+          <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/AquaBlu_Mosaics_Fish_1.png?v=1667226410" alt=""/>
+        </div> {% endcomment %}
+        {%- if section.settings.show_copyright -%}
+          <div class="bottom-left">
+            {% comment %} &copy; {{ 'now' | date: '%Y' }} {{ shop.name }} {% endcomment %}
+            {%- if section.settings.copyright_text != blank -%}
+            © {{ section.settings.copyright_text }}
+            {%- endif -%}
+            {% comment %} • <a href="/pages/terms-conditions" class="menu-item-footer">Terms & Privacy</a> {% endcomment %}
+            <a href="#" class="menu-item-footer accessibility-button">
+              <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 9L12 10M17 9L12 10M12 10V13M12 13L10 18M12 13L14 18" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 7C11.7239 7 11.5 6.77614 11.5 6.5C11.5 6.22386 11.7239 6 12 6C12.2761 6 12.5 6.22386 12.5 6.5C12.5 6.77614 12.2761 7 12 7Z" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>              
+              Accessibility
+            </a> 
+          </div>
+        {%- endif -%}
+
+        
+        <div class="bottom-right small--hide">
+          <span>FOLLOW US</span> {% render 'social-icons' %}
+        </div>
+
+        {% comment %} {%- unless shop.enabled_payment_types == empty -%}
+          <ul class="inline-list payment-icons">
+            {%- for type in shop.enabled_payment_types -%}
+              <li class="icon--payment">
+                {{ type | payment_type_svg_tag }}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endunless -%} {% endcomment %}
+        {% comment %} {%- if linklists[section.settings.policies_menu].links.size > 0 -%}
+          {%- for link in linklists[section.settings.policies_menu].links -%}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {%- endfor -%}
+        {%- endif -%} {% endcomment %}
+         
+        {% comment %} {{ powered_by_link }} {% endcomment %}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var elFooterTitles = document.querySelectorAll('.footer__blocks .footer__title');
+  var elFooterTitlesContact = document.querySelectorAll('.left-area-2-p0 p');
+
+  elFooterTitlesContact.forEach(function(el) {
+    el.addEventListener('click', function(event) {
+      this.parentElement.classList.toggle('hide-footer-option');
+    });
+  });
+
+  elFooterTitles.forEach(function(el) {
+    el.addEventListener('click', function(event) {
+      this.classList.toggle('hide-footer-option');
+    });
+  });
+{% comment %} 
+  if ('ontouchstart' in window || navigator.maxTouchPoints) {
+    document.documentElement.classList.add('js', 'supports-touch');
+  }
+
+const innerScroll = document.querySelector('.site-footer');
+const outerScroll = document.querySelector('html.js.supports-touch');
+
+let lastTouchY = 0;
+let lastScrollY = 0;
+
+innerScroll.addEventListener('touchstart', function (e) {
+    // Store the starting touch position
+    lastTouchY = e.touches[0].clientY;
+    lastScrollY = innerScroll.scrollTop;  // Track the initial scroll position
+});
+
+innerScroll.addEventListener('touchmove', function (e) {
+  const currentTouchY = e.touches[0].clientY;
+  const currentScrollY = innerScroll.scrollTop;
+  const maxScrollY = innerScroll.scrollHeight - innerScroll.clientHeight;
+  
+  const isAtTop = currentScrollY === 0;
+  const isAtBottom = currentScrollY >= maxScrollY;
+
+  {% comment %} console.log('ScrollTop:', currentScrollY, 'MaxScroll:', maxScrollY, 'AtBottom:', isAtBottom); {% endcomment %}
+
+  if (isAtTop && currentTouchY > lastTouchY) {
+      // Propagate the scroll to the outer container when at the top
+      e.preventDefault();
+      outerScroll.scrollTop -= currentTouchY - lastTouchY;
+  } else if (isAtBottom && currentTouchY < lastTouchY) {
+      // Propagate the scroll to the outer container when at the bottom
+      e.preventDefault();
+      outerScroll.scrollTop += lastTouchY - currentTouchY;
+      console.log("outerscroll.top=" + outerScroll.scrollTop);
+  }
+
+  lastTouchY = currentTouchY; // Update the last touch position
+});
+
+innerScroll.addEventListener('touchend', function () {
+    // Reset touch tracking on touch end
+    lastTouchY = 0;
+    lastScrollY = 0;
+}); {% endcomment %}
+
+
+</script>
+
+{% comment %} /*-->Header/Footer and 5k Reviews: Updated left-area block*/ {% endcomment %}
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header_newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "t:sections.footer.settings.show_newsletter.label",
+      "info": "t:sections.footer.settings.show_newsletter.info",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Background mobile image"
+    },
+    {
+      "type": "richtext",
+      "id": "newsletter_richtext",
+      "label": "t:sections.footer.settings.newsletter_richtext.label",
+      "default": "<p>Subscribe today to hear first about our sales</p>"
+    },
+    {
+      "type": "header",
+      "content": "As Seen In"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_break",
+      "label": "Center image of divider"
+    },
+    {
+      "type": "text",
+      "id": "text_seen",
+      "label": "Title of As Seen IN",
+      "default": "As seen in..."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header_additional_footer_content"
+    },
+    {
+      "type": "checkbox",
+      "id": "footer_main_menu",
+      "label": "t:sections.footer.settings.footer_main_menu.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "label": "t:sections.footer.settings.show_copyright.label"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "t:sections.footer.settings.copyright_text.label"
+    },
+    {
+      "type": "link_list",
+      "id": "policies_menu",
+      "label": "t:sections.footer.settings.policies_menu.label",
+      "info": "t:sections.footer.settings.policies_menu.info"
+    }
+  ], 
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_logo",
+          "label": "Logo"
+        }
+      ]
+    },
+    {
+      "type": "payment",
+      "name": "t:sections.footer.blocks.payments_and_localization.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_payment_icons",
+          "label": "t:sections.footer.blocks.payments_and_localization.settings.show_payment_icons.label",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_locale_selector",
+          "label": "t:sections.footer.blocks.payments_and_localization.settings.show_locale_selector.label",
+          "info": "t:sections.footer.blocks.payments_and_localization.settings.show_locale_selector.info",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_currency_selector",
+          "label": "t:sections.footer.blocks.payments_and_localization.settings.show_currency_selector.label",
+          "info": "t:sections.footer.blocks.payments_and_localization.settings.show_currency_selector.info",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_currency_flags",
+          "label": "t:sections.footer.blocks.payments_and_localization.settings.show_currency_flags.label",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "name": "t:sections.footer.blocks.navigation.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.footer.blocks.navigation.settings.title.label",
+          "info": "t:sections.footer.blocks.navigation.settings.title.info"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "t:sections.footer.blocks.navigation.settings.menu.label",
+          "default": "footer",
+          "info": "t:sections.footer.blocks.navigation.settings.menu.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_account_link",
+          "label": "t:sections.footer.blocks.navigation.settings.enable_account_link.label"
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "name": "t:sections.footer.blocks.contact_and_social.name",
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:sections.footer.blocks.contact_and_social.settings.header_contact"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "t:sections.footer.blocks.contact_and_social.settings.phone.label"
+        },
+        {
+          "type": "page",
+          "id": "contact",
+          "label": "t:sections.footer.blocks.contact_and_social.settings.contact.label"
+        },
+        {
+          "type": "page",
+          "id": "chat",
+          "label": "t:sections.footer.blocks.contact_and_social.settings.chat.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.footer.blocks.contact_and_social.settings.header_social"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_social",
+          "label": "t:sections.footer.blocks.contact_and_social.settings.enable_social.label",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "left-area",
+      "name": "Left Area", 
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_logo",
+          "label": "Image"
+        },
+        {
+          "id": "touch_label",
+          "type": "text",
+          "label": "Button Label",
+          "default": "Get in Touch"
+        },
+        {
+          "id": "touch_link",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "id": "text_phone",
+          "type": "text",
+          "label": "Phone number",
+          "default": "8000.971.1442"
+        },
+        {
+          "id": "text_support",
+          "type": "text",
+          "label": "Support",
+          "default": "Live Customer Support"
+        },
+        {
+          "id": "text_open_time1",
+          "type": "text",
+          "label": "Open time1",
+          "default": "Mon - Thurs, 9AM - 6PM"
+        },
+        {
+          "id": "text_open_time2",
+          "type": "text",
+          "label": "Open time2",
+          "default": "Fri, 9AM - 5PM EST"
+        }
+      ]
+    },
+    {
+      "type": "center-area",
+      "name": "Center Area",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_logo",
+          "label": "Image"
+        },
+        {
+          "id": "text_top",
+          "type": "text",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+          "id": "link_top",
+          "type": "url",
+          "label": "Link"
+        },
+        {
+          "id": "text_bottom",
+          "type": "text",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "text"
+        }
+      ]
+    },
+    {
+      "type": "right-area",
+      "name": "Right Area",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Text Area"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {},
+    "blocks": [
+      {
+        "type": "menu",
+        "settings": {}
+      },
+      {
+        "type": "payment",
+        "settings": {}
+      }
+    ]
+  }
+}
+{% endschema %}
+{% comment %} /*<--Header/Footer and 5k Reviews*/ {% endcomment %}

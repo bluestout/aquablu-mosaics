@@ -1,0 +1,250 @@
+<style> 
+  /* The Modal (background) */
+  .contact-form-modal-container {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 70px;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+  }
+
+  @media(max-width:450px) {
+
+    /* The Modal (background) */
+    .contact-form-modal-container {
+      padding-top: 0px;
+      /* Location of the box */
+      top: 0;
+      z-index: 7;
+    }
+
+    .contact-form-modal-container .form-vertical h2 {
+      max-width: 200px;
+      margin: 0 auto 10px;
+      line-height: 35px;
+    }
+  }
+
+  .additional-contact-form-bg p {
+    color: white;
+  }
+
+  .additional-contact-form-bg .open-chat:hover {
+    cursor: pointer;
+  }
+
+  .additional-contact-form-bg {
+    background-color: #1a1a1a08;
+    position: relative;
+  }
+
+  .form-vertical.additional-contact-form {
+    background: url(https://cdn.shopify.com/s/files/1/1205/7108/files/How-can-we-help.jpg?v=1693504565);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+  }
+
+  textarea#ContactFormMessage {
+    height: 100px;
+  }
+
+  .contact-form-modal-container .form-vertical {
+    padding: 10px 30px;
+    color: white;
+    max-width: 410px;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .contact-form-modal-container .form-vertical .btn {
+    background-color: #152755;
+    padding: 10px 15px;
+  }
+
+  .contact-form-modal-container .form-vertical h2 {
+    font-size: 26px;
+    width: max-content;
+    margin: 5px auto 20px;
+  }
+
+  .contact-form-modal-container .form-vertical h3 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .additional-contact-form-bg .grid__item.medium-up--one-half {
+    width: 100%;
+  }
+
+  .contact-form-modal-container .form-vertical input,
+  textarea {
+    border-color: white;
+  }
+
+  .contact-form-modal-container p.open-chat {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  .additional-contact-form-bg .grid-container ul {
+    margin: 0 0 15px 18px;
+  }
+
+  .additional-contact-form input:active,
+  .additional-contact-form input:focus,
+  .additional-contact-form select:active,
+  .additional-contact-form select:focus,
+  .additional-contact-form textarea:active,
+  .additional-contact-form textarea:focus {
+    border-color: white;
+  }
+
+  .contact-form-modal-container .form-vertical textarea {
+    margin-bottom: 0;
+  }
+
+  .contact-form-modal-container .grid-container {
+    display: grid;
+    grid-template-columns: auto 115px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .additional-contact-form-bg .close-modal {
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+
+  .additional-contact-form-bg .close-modal span {
+    font-size: 18px;
+  }
+
+  .additional-contact-form-bg .close-modal:hover {
+    cursor: pointer;
+  }
+
+  .additional-contact-form .form-vertical input {
+    margin-bottom: 15px !important;
+  }
+</style>
+
+<div id="contact-form-modal" class="contact-form-modal-container">
+
+  <div class="form-vertical additional-contact-form">
+    <div class="additional-contact-form-bg">
+      <div class="close-modal"><span class="close-contact-modal">⨉</span></div>
+      {% comment %} <h1>Ready to bring paradise home?</h1> {% endcomment %}
+      <h2 class="h1">We're here to help.</h2>
+      <div class="grid-container">
+        <ul>
+          <li>Free Design Services</li>
+          <li>Volume Discounts</li>
+          <li>Industry-leading Support</li>
+        </ul>
+  
+        <img class="open-chat" onclick="GorgiasChat.open();" src="//cdn.shopify.com/s/files/1/1205/7108/files/conservation_badge-01_1.png" alt="Conservation badge: Saving our oceans with every purchase" width="100" height="100" loading="lazy">
+    
+        <p>Call or Text<br>(800)971-1442</p>
+        <p class="open-chat" onclick="GorgiasChat.open();">Chat Now</p>
+      </div>
+      <p class="text-center">M-F 9am - 6pm EST</p>
+      {%- form 'contact', id: form_id -%}
+        {%- if form.posted_successfully? -%}
+          <p class="note note--success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+        {%- endif -%}
+
+        {{ form.errors | default_errors }}
+
+        <div class="grid grid--small">
+          <div class="grid__item medium-up--one-half">
+            {% comment %} <label for="ContactFormName">Name:</label> {% endcomment %}
+            <input style="margin-bottom: 15px" placeholder="Name:" class="input-full" type="text" id="ContactFormName" class="input-full" name="contact[name]" autocapitalize="words" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+          </div>
+
+          <div class="grid__item medium-up--one-half">
+            {% comment %} <label for="ContactFormEmail">Email:</label> {% endcomment %}
+            <input style="margin-bottom: 15px" placeholder="Email:" class="input-full" type="email" id="ContactFormEmail" class="input-full" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+          </div>
+        </div>
+
+        {% comment %} <label for="ContactFormMessage">Send us a message:</label> {% endcomment %}
+        <textarea placeholder="Send us a message:" rows="5" id="ContactFormMessage" class="input-full" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+        <p>*We usually respond within a few hours, M-F</p>
+        <button type="submit" class="btn">
+          {{ 'contact.form.send' | t }}
+        </button>
+
+      {%- endform -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('contact-form-modal');
+
+  function hideAdditionalContactModal() {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  }
+
+  function showAdditionalContactModal() {
+    modal.style.display = 'block';
+    document.body.classList.add('modal-open');
+  }
+
+  function toggleAdditionalContactModal() {
+    if (getComputedStyle(modal).getPropertyValue('display') == 'none') {
+      showAdditionalContactModal();
+    } else {
+      hideAdditionalContactModal();
+    }
+  }
+
+  document.addEventListener('click', event => {
+
+    const elModal = event.target.closest('#contact-form-modal');
+    const elCloseModalBtn = event.target.closest('.close-contact-modal');
+    const elOpenModalBtn = event.target.closest('#contact-form-modal-btn');
+
+    if (!elModal && !elCloseModalBtn && !elOpenModalBtn) {
+      hideAdditionalContactModal();
+      return;
+    }
+
+    if (elModal) {
+      const elModalForm = event.target.closest('.additional-contact-form');
+      if (!elModalForm) {
+        hideAdditionalContactModal();
+        return;
+      }
+    }
+
+    if (elCloseModalBtn) {
+      hideAdditionalContactModal();
+    }
+
+    if (elOpenModalBtn) {
+      showAdditionalContactModal();
+    }
+  });
+</script>

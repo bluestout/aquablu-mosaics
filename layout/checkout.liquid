@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFRG14EQVG"></script> 
+    <script> 
+      window.dataLayer = window.dataLayer || []; 
+      function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VFRG14EQVG'); 
+    </script>
+  
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+  
+    <!--Route Code Edited 10/31/2023-->
+    <script type="text/javascript" src="https://cdn.routeapp.io/route-widget-shopify/v2/route-widget-shopify-stable-v2.min.js"></script>
+    <style> 
+      route-protect-widget[payer="customer"]::after{
+        content: "We are proud to partner with Route, the leader in package protection and tracking solutions. By selecting Route at checkout your order will be protected from damage, loss, or theft. If opting out of this service, your order may not be eligible for reimbursement or replacement.";
+        white-space: pre-wrap;
+      }
+      #RouteWidget{
+        font-size: 12px;
+        line-height: 18px;
+        padding-bottom: 10px;
+      }
+      .route-div {
+        margin-bottom: 10px !important;
+      }
+      .route-widget {
+
+        justify-content: flex-end !important;
+
+      }
+    </style>
+    {% if content_for_layout contains 'data-step="contact_information"' %}
+
+    {% endif %}
+    <!--End Route Code-->
+    <!--Start ABM Clarity Code-->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "mof3nqf8iw");
+    </script>
+    <!--End ABM Clarity Code-->
+  
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+
+            <!-- Route Code Edited 10/31/2023 -->
+            {% if content_for_layout contains 'data-step="contact_information"' %}
+            <div class="route-div" reload-products-and-price-separately-checkout id="route-script" desktop-align="center" style="margin-bottom: -20px;"></div>
+            {% endif %}
+            <!-- Route Code End -->
+            
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+
+
+            <div class="guaranteed-checkout">
+              <div class="title-wrap"><h6>Guaranteed SAFE Checkout</h6></div> 
+              <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/footer-icons.png?v=1712258339" width="320" height="28" alt="Payment Icons" class="payment-icons">
+            </div>
+          </div>
+
+
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+ 
+    
+    
+    {% assign wholesale = false %}
+    {% assign wholesale_tier = false %}
+    {% assign wholesale_note = false %}
+
+    {% if checkout.customer %}
+
+    {% if checkout.customer.tags contains 'wholesale' %}
+    {% assign wholesale = true %}
+    {% assign wholesale_tier = 25 %}
+
+
+    {% elsif checkout.customer.tags contains 'VIP' or customer.tags contains 'vip' %}
+    {% assign wholesale = true %}
+    {% assign wholesale_tier = 20 %}
+
+    {% elsif checkout.customer.tags contains 'trade' %}
+    {% assign wholesale = true %}
+    {% assign wholesale_tier = 15 %}
+
+    {% endif %}
+
+    {% unless wholesale_tier == false %}
+    {% assign wholesale_note = 'general.wholesale_note' | t: percent: wholesale_tier %}
+    {% endunless %}
+    
+    {% endif %}
+    
+    <script>
+    window.theme = {
+      wholesale: {{ wholesale | json }},
+      wholesaleTier: {{ wholesale_tier | json }},
+      wholesaleNote: {{ 'general.wholesale_note' | t: percent: wholesale_tier | json }}
+    };
+    var shippingTweaks = {
+      noRatesText: "{{ 'shopify.checkout.shipping.no_rates_for_cart_or_destination_notice' | t }}",
+      types: [
+        {
+          "name":"Flat Rate Truck Delivery",
+          "addition":"{{ 'shopify.checkout.shipping.truck_delivery' | t }}"
+        },
+        {
+          "name":"Flat Rate Truck Delivery - Commercial",
+          "addition":"{{ 'shopify.checkout.shipping.truck_delivery_commercial' | t }}"
+        },
+        {
+          "name":"Flat Rate Truck Delivery - Residential",
+          "addition":"{{ 'shopify.checkout.shipping.truck_delivery_residential' | t }}"
+        }
+      ]
+    };
+    
+    </script>
+    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+    {{ 'checkout.js' | asset_url | script_tag }}
+    <script>
+      function getParam(p) {
+      var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+      }
+      function getExpiryRecord(value) {
+      var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 90 day expiry in milliseconds
+      var expiryDate = new Date().getTime() + expiryPeriod;
+      return {
+      value: value,
+      expiryDate: expiryDate
+      };
+      }
+      function addGclid() {
+      var gclidParam = getParam('gclid');
+      var gclidFormFields = ['gclid_field', 'foobar']; // all possible gclid form field ids here
+      var gclidRecord = null;
+      var currGclidFormField;
+      var gclsrcParam = getParam('gclsrc');
+      var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+      gclidFormFields.forEach(function (field) {
+      if (document.getElementById(field)) {
+      currGclidFormField = document.getElementById(field);
+      }
+      });
+      if (gclidParam && isGclsrcValid) {
+      gclidRecord = getExpiryRecord(gclidParam);
+      localStorage.setItem('gclid', JSON.stringify(gclidRecord));
+      }
+      var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
+      var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+      if (currGclidFormField && isGclidValid) {
+      currGclidFormField.value = gclid.value;
+      }
+      }
+      window.addEventListener('load', addGclid);
+    </script>
+      <script type="text/javascript" src="https://cdn.routeapp.io/route-widget-shopify/v2/route-widget-shopify-stable-v2.min.js"></script>
+    <style> 
+ 
+      #RouteWidget{
+        font-size: 12px;
+        line-height: 18px;
+        padding-bottom: 10px;
+      }
+      .route-div {
+        margin-bottom: 10px !important;
+      }
+      .route-widget {
+
+        justify-content: flex-end !important;
+
+      }
+    </style>
+    <div id="RouteWidget"></div>
+  </body>
+</html>
+<style>
+  @media only screen and (max-width:768px){
+    div#route-script {
+      margin-bottom: 20px !important;
+    }
+  }  
+</style>
+<script>
+  (function($) {
+    $(document).on("page:load page:change", function() {
+      const customerTags = '{% if customer %}{{ checkout.customer.tags }}{% endif %}';
+      const discountSection = document.querySelector('[data-reduction-form="update"]');
+      console.log("customerTags", customerTags);
+      console.log("discountSection", discountSection);
+
+      if(customerTags.includes('b2b') || customerTags.includes('wholesale') || customerTags.includes('trade') || customerTags.includes('VIP') || customerTags.includes('vip') ) {
+        discountSection.remove();
+        $(".order-summary__section.order-summary__section--discount").hide();
+        $(".field__message.field__message--error").hide();
+
+        $(".sidebar__content").addClass("hide_discount_section");
+      }
+{% comment %} 
+      $(document).on("click", "#speakerPower", function(){
+        console.log("Route option changed----------------------");
+        if(customerTags.includes('b2b') || customerTags.includes('wholesale') || customerTags.includes('trade') || customerTags.includes('VIP') || customerTags.includes('vip') ) {
+          discountSection.remove();
+          $(".order-summary__section.order-summary__section--discount").hide();
+          $(".field__message.field__message--error").hide();
+        }
+      }); {% endcomment %}
+    });
+  })(Checkout.$);
+</script>
+
+<script>
+  $(document).ready(function() {
+    console.log( "Tracker Injected!" );
+    $('.edit_checkout').append(
+      `<input type="hidden" id="gclid_field" name="gclid_field" value="">`
+    );
+	});
+</script>
+
+<style>
+  .guaranteed-checkout {
+        width: 320px;
+        margin: auto;
+  }
+  .guaranteed-checkout .title-wrap {
+      margin: 0 auto 7px;
+      position: relative;
+      border-top: 1px solid #999;
+      text-align: center;
+  }
+  .guaranteed-checkout .title-wrap h6 {
+    color: #999;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    margin: -8px auto 0;
+    font-size: 14px;
+    max-width: 200px;
+    background: #fafafa;
+  }
+  .order-summary__sections {
+    height: calc(90vh - 8em);
+  }
+  .sidebar__content.hide_discount_section .order-summary__section.order-summary__section--discount{
+    display: none!important;
+  }
+  .sidebar__content.hide_discount_section .field__message.field__message--error{
+    display: none!important;
+  }
+</style>

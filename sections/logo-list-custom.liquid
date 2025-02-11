@@ -1,0 +1,157 @@
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+
+<style>
+  .collection-list-custom .collection-item__title{padding:9px 7%}@media only screen and (max-width:500px){[data-view="6-3"] .grid-item{flex:0 0 50%!important}}@media only screen and (max-width:1200px){[data-view="6-3"] .grid-item{flex:0 0 33.33333%}}@media only screen and (min-width:769px){.custom-collection-list .collection-item__title{padding:13px 1px}}.collection-list-custom .section-header{text-align:center;margin-bottom:20px}
+</style>
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="page-width {{ css_class }} logo-list-custom">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header small--text-center">
+      <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
+    </div>
+  {%- endif -%}
+  {%- if section.blocks.size > 0 -%}
+    <div class="logo-bar logo-bar--{{ section.id }}">
+
+      <div class="" data-view="">
+        <div class="main-carousel-logo" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false, "wrapAround": true, "setGallerySize": true, "imagesLoaded": true, "autoplay": true }'>
+          {%- for block in section.blocks -%}
+           <div class="carousel-cell">   
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="logo-bar__link" aria-label="{{ block.settings.image.alt }}">
+              {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <div class="logo-element">
+                  <div class="logo-left">
+                    <img class="logo-bar__image lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[360, 540, 720, 1020]"
+                        data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                        data-sizes="auto"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        alt="{{ block.settings.image.alt }}">
+                  </div>
+                  <div class="logo-right">
+                    <h3>{{ block.settings.logo_title }}</h3>
+                    <p>{{ block.settings.logo_text }}</p>
+                  </div>
+                </div>
+              {%- else -%}
+                {{ 'logo' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--no-padding' }}
+              {%- endif -%}
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {% comment %} </div> {% endcomment %} {% comment %} Mobile Search Placement: Fix div bug {% endcomment %}
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+<!-- 
+<script>
+  var flkty = new Flickity( '#shopify-section-{{ section.id }} .main-carousel-logo', {
+    cellAlign: 'left',
+    contain: true,
+    pageDots: false,
+    wrapAround: true,
+    setGallerySize: true,
+    imagesLoaded: true,
+    autoPlay: true
+  });
+</script> -->
+
+{% schema %}
+{
+  "name": "Logo List Custom",
+  "class": "index-section collection-list-custom",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.logo-list.settings.title.label",
+      "default": "Our brands"
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.logo-list.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "t:sections.logo-list.blocks.logo.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.logo-list.blocks.logo.settings.image.label",
+          "info": "t:sections.logo-list.blocks.logo.settings.image.info"
+        },
+        {
+          "type": "text",
+          "id": "logo_title",
+          "label": "Logo Title",
+          "default": "OCEAN APPROVED"
+        },
+        {
+          "type": "text",
+          "id": "logo_text",
+          "label": "Logo Text",
+          "default": "help protect our oceans"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.logo-list.blocks.logo.settings.link.label",
+          "info": "t:sections.logo-list.blocks.logo.settings.link.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo List Custom",
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

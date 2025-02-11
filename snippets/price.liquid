@@ -1,0 +1,15 @@
+{%- assign formatted_price = price | money -%}
+{%- unless shop.money_format contains 'money' or shop.money_format contains '.' -%}
+  {%- if settings.superscript_decimals -%}
+    {%- if shop.money_format contains '{{amount}}' or shop.money_format contains '{{ amount }}' -%}
+      {% capture formatted_price %}{{ formatted_price | replace: '.','<sup>' }}</sup>{% endcapture %}
+    {%- elsif shop.money_format contains '{{amount_with_comma_separator}}' or shop.money_format contains '{{ amount_with_comma_separator }}' -%}
+      {% capture formatted_price %}{{ formatted_price | replace: ',','<sup>' }}</sup>{% endcapture %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endunless -%}
+
+{% comment %} --> To Test: Price on ATC {% endcomment %}
+<span aria-hidden="true" class="{% if on_atc_button %}price-on-atc-area{% else %}price-area{% endif %}">{{ formatted_price }}</span>
+{% comment %} <-- To Test: Price on ATC {% endcomment %}
+<span class="visually-hidden">{{ price | money }}</span>

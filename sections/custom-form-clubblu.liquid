@@ -1,0 +1,50 @@
+<style>
+  .club-blu-form-bg{background-image:url("https://cdn.shopify.com/s/files/1/1205/7108/files/form-bg.png?v=1698767489");background-size:cover;padding:20px}.club-blu-form{border:10px solid #fff;padding:20px 10px;color:#fff}.club-blu-form input[type=email],.club-blu-form input[type=tel],.club-blu-form input[type=text]{border-color:#fff;display:block;margin-bottom:15px}.club-blu-form input[type=email]::placeholder,.club-blu-form input[type=tel]::placeholder,.club-blu-form input[type=text]::placeholder{color:#fff;opacity:1}.club-blu-form input[type=email]::-ms-input-placeholder,.club-blu-form input[type=tel]::-ms-input-placeholder,.club-blu-form input[type=text]::-ms-input-placeholder{color:#fff}.club-blu-form button{margin-top:30px;background:#55ccd9;border:none;border-radius:6px;padding:5px 40px;text-transform:uppercase;font-size:18px}@media(min-width:769px){.club-blu-form{padding:40px 60px}}
+</style>
+
+<div class="page-width hero--padded">
+  <div class="club-blu-form-bg">
+    {% comment %} <form> {% endcomment %}
+    {%- assign form_id = 'contact-' | append: section.id -%}
+    {%- form 'contact', id: form_id, class: "club-blu-form" -%}
+
+      {%- if form.posted_successfully? -%}
+        <p class="note note--success">
+          {{ 'contact.form.post_success' | t }}
+        </p>
+      {%- endif -%}
+
+      {{ form.errors | default_errors }}
+    
+      <input type="text" id="name" class="input-full" name="contact[name]" autocapitalize="words" placeholder="What’s your name?" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+      <input type="email" id="email" class="input-full" name="contact[email]" autocorrect="off" autocapitalize="off" placeholder="Email" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+      <input type="tel" id="phone" class="input-full" name="contact[phone]" pattern="[0-9\-]*" placeholder="Phone Number" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+      <h2>How can AquaBlu help you?</h2>
+      <label><input type="checkbox" name="contact[help]" value="pool tile or mosaic"> Find my dream pool tile or mosaic</label>
+      <label><input type="checkbox" name="contact[help]" value="tile for my kitchen and bath"> Discover amazing tile for my kitchen and bath</label>
+      <label><input type="checkbox" name="contact[help]" value="Decorate or furnish my pool and patio"> Decorate or furnish my pool and patio</label>
+      <h2>Do you have a pool?</h2>
+      <label><input type="radio" id="yes" name="contact[pool]" value="yes"> Yes I do!</label>
+      <label><input type="radio" id="no" name="contact[pool]" value="no">  Unfortunately, no.</label>
+      <label><input type="radio" id="not yet" name="contact[pool]" value="not yet">  Not yet, we’re building one soon.</label>
+      <h2 class="text-center">Are you a pool builder or contractor?<br>Sign up for our AquaPRO Trade Network here &gt;&gt;</h2>
+      {% comment %} </form> {% endcomment %}
+      <div class="text-center">
+        <button type="submit" class="btn">
+          JOIN NOW
+        </button>
+      </div>
+    {%- endform -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Clubblu form",
+  "presets": [
+    {
+      "name": "Clubblu form"
+    }
+  ]
+}
+{% endschema %}

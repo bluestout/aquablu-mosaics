@@ -1,0 +1,1455 @@
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+{%- assign sqft_text = '' %}
+{%- assign regular_prices = -0 %}
+
+{% assign wholesale = false %}
+{% assign wholesale_tier = false %}
+{% assign wholesale_note = false %}
+
+{% if customer %}
+  {% if customer.tags contains 'wholesale' %}
+    {% assign wholesale = true %}
+    {% assign wholesale_tier = 25 %}
+  {% elsif customer.tags contains 'VIP' or customer.tags contains 'vip' %}
+    {% assign wholesale = true %}
+    {% assign wholesale_tier = 20 %}
+  {% elsif customer.tags contains 'trade' %}
+    {% assign wholesale = true %}
+    {% assign wholesale_tier = 15 %}
+  {% endif %}
+
+  {% unless wholesale_tier == false %}
+  	{% assign wholesale_note = 'general.wholesale_note' | t: percent: wholesale_tier %}
+  {% endunless %}
+{% endif %}
+
+{% if wholesale and wholesale_tier %}
+	{% assign amt = wholesale_tier | times: 1.00 | divided_by: 100.00 %}
+	{% assign discount = wholesale_tier | times: 1.00 | divided_by: 100.00 | times: min_price  %}
+	{% assign price = price | times: 1.00 | minus: discount %}
+	{% assign min_price = min_price | times: 1.00 | minus: discount %}
+{% endif %}
+
+{%- liquid
+  assign collection_1 = collections[section.settings.tab_collection_1]
+  assign collection_2 = collections[section.settings.tab_collection_2]
+  assign collection_3 = collections[section.settings.tab_collection_3]
+-%}
+
+<div id="CollectionSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="collection-template" class="page-width {{ css_class }}">
+  {%- if section.settings.title != blank -%}
+    <h2 class="section-header__title">
+      {{ section.settings.title }}
+    </h2>
+  {%- endif -%}
+
+  <ul class="collections-tabs">
+    <li class="collections-tabs-item tabs-item-1"><button data-tab-index="1" class="tablinks active"> {{ section.settings.tabs_title_1 }}</button></li>
+    <li class="collections-tabs-item tabs-item-2"><button data-tab-index="2" class="tablinks">{{ section.settings.tabs_title_2 }}</button></li>
+    <li class="collections-tabs-item tabs-item-3"><button data-tab-index="3" class="tablinks">{{ section.settings.tabs_title_3 }}</button></li>
+  </ul>  
+ 
+  <div class="tab-content tabs-list-1" data-tab-content="1">
+    <div class="main-carousel" data-flickity='{"pageDots": true, "autoPlay": 4500, "cellAlign": "left", "contain": true, "freeScroll": true, "wrapAround": false}'>
+    {% comment %} 1" x 1" Glass Mosaic Tile {% endcomment %}
+      {% for product in collections[section.settings.tab_collection_1].products  limit: 9 %}
+        {%- liquid
+          assign fixed_aspect_ratio = false
+          unless settings.product_grid_image_size == 'natural'
+            assign fixed_aspect_ratio = true
+          endunless
+
+          assign on_sale = false
+            if product.compare_at_price > product.price
+            assign on_sale = true
+          endif
+
+          assign preview_image = product.featured_media.preview_image
+          assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        -%}
+        {%- assign compare_at_price = product.compare_at_price -%}
+        {%- assign price = product.price_max | times: 1.00 -%}
+        {%- assign price_varies = product.price_varies -%}
+        {%- assign money_price = price | money_with_currency -%}
+        {%- assign money_format = money_with_currency -%}
+        {%- assign min_price = price -%}
+        {%- assign productT = product.title -%}
+
+
+
+        {%- assign sq_ft = false -%}
+        {%- assign has_specs = false -%}
+
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'coverage:' and tag contains 'Sqft' -%}
+            {% assign sq_ft = tag | remove: 'coverage:' | remove: ' Sqft' | times: 1.00 %}
+            {% assign sq_ft_type = 'Sqft' %}
+          {%- endif -%}
+          {%- if tag contains 'sold by:' -%}
+            {%- assign per = tag | remove: 'sold by:' | prepend: 'per '  -%}
+          {%- endif -%}
+          {%- if product.type == 'Pool Mosaic' %}
+            {% assign per = 'each' %}
+          {%- endif -%}
+          {%- if tag contains ':' %}
+            {% assign spec = tag | split: ':' | first %}
+            {% assign has_specs = true %}
+          {%- endif -%}
+        {%- endfor -%}
+
+
+        {% assign customerDiscount = false %}
+        {% assign discountTotal = 0 %}
+
+        {% if customer.tags contains "wholesale" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.25 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {% if customer.tags contains "vip" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.20 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {% if customer.tags contains "trade" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.15 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {%- for variant in product.variants -%}
+          {%- unless variant.title == 'Sample' -%}
+            {%- assign regular_prices = regular_prices | plus: 1 -%}
+            {%- if variant.price < min_price -%}
+              {%- assign min_price = variant.price -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'coverage:' and tag contains 'Sqft'-%}
+            {%- assign sqft = tag | remove: 'coverage:' | remove: ' Sqft' | plus: 0 -%}
+            {%- assign per_sqft = price | divided_by: sqft -%}
+            {%- capture sqft_text -%}
+              <div>
+                <small>(<span class="price-per-sq-foot">{{per_sqft | money}} Price per sqft:</span>)</small>
+              </div>
+            {%- endcapture -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if product.type == 'Pool Mosaic' -%}
+          {%- assign per = 'each' -%}
+        {%- endif -%}
+
+        {%- assign compare_at_price = product.compare_at_price -%}
+        {%- assign price = product.price_max | times: 1.00 -%}
+        {%- assign price_varies = product.price_varies -%}
+        <div class="carousel-cell">
+          <a href="{{ product.url }}" >  
+            {%- if fixed_aspect_ratio -%}
+              <div class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+                <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+                    data-src="{{ img_url }}"
+                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- else -%}
+              {%- liquid
+                assign ratio = 1
+                if preview_image != blank
+                  assign ratio = preview_image.aspect_ratio
+                endif
+              -%}
+              <div style="height: 0; padding-bottom: {{ 100 | divided_by: ratio }}%;">
+                <img class="grid-product__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- endif -%}
+            <div> {{product.title}} </div>
+            <span class="product-price__price product-price__price-{{ product.id }} ">
+              {% if sq_ft %}
+                {% if customerDiscount %}
+                  {% comment %} B2BCustomer Discount original product price {% endcomment %}
+                  {% assign per_sq_ft = wholesalePriceTotal[0] | divided_by: sq_ft %}
+                                              
+                  <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                    <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one grid-product__price--savings">
+                    {%- render 'price' with per_sq_ft -%}
+                    per sq. ft.
+                    </span> 
+                    
+                  </span>
+                  {%- if on_sale -%}
+                    {% assign per_sq_ft = product.compare_at_price | divided_by: sq_ft %}
+                    <p>                           
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+
+                  {%- else -%}
+                    {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+                    <p>                        
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class=" wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+                  {%- endif -%}
+
+                {% else %}
+                  {% comment %} B2C Customer sq.ft. no discount {% endcomment %}
+                  {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+
+                  <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                    <span data-sq-ft-price="{{per_sq_ft | round}}" class="grid-product__price--current  wholesale-sqft-two  {% if on_sale %} grid-product__price--savings {% endif %} ">
+                    {%- render 'price' with per_sq_ft -%}
+                    per sq. ft.
+                    </span> 
+                  </span>
+                  {%- if on_sale -%}
+                    {% assign per_sq_ft = product.compare_at_price | divided_by: sq_ft %}
+
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                         {%- render 'price' with per_sq_ft -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+                {% endif %}
+              {% else %}
+                {% if customerDiscount %}
+                  {%- if product.price_varies -%}
+
+                    {% if customer.tags contains "wholesale" %}
+                        {% assign discountTotal = 0.25 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "vip" %}
+                        {% assign discountTotal = 0.20 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "trade" %}
+                        {% assign discountTotal = 0.15 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    <span class="grid-product__price--current  ">
+                      {%- render 'price-varies', price: wholesalePriceTotal[0] -%}
+                    </span>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+
+                    <span class="grid-product__price--current grid-product__price--savings">
+                      {%- render 'price', price: wholesalePriceTotal[0] -%}
+                    </span>
+                    {%- if on_sale -%}
+                      <p>
+                        <span class="grid-product__price--original ">
+                          {%- render 'price' with product.compare_at_price -%}
+                        </span>
+                      </p>
+                    {%- else -%}
+                        <p>
+                        <span class="grid-product__price--original ">
+                          {%- render 'price' with product.price -%}
+                        </span>
+                      </p>
+                    {%- endif -%}
+
+                  {%- endif -%}
+                  {%- if on_sale -%}
+
+                    {% if customer.tags contains "wholesale" %}
+                        {% assign discountTotal = 0.25 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "vip" %}
+                        {% assign discountTotal = 0.20 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "trade" %}
+                        {% assign discountTotal = 0.15 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {%- render 'price' with product.wholesalePriceTotal[0] -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {% else %}
+
+                  {%- if product.price_varies -%}
+                    <span class="grid-product__price--current ">
+                      {%- render 'price-varies', price: product.price_min -%}
+                    </span>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+                    <span class="grid-product__price--current  {% if on_sale %} grid-product__price--savings {% endif %}">
+                      {%- render 'price' with product.price -%}
+                    </span>
+                  {%- endif -%}
+                  
+                  {%- if on_sale -%}
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {%- render 'price' with product.compare_at_price -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {% endif %}
+
+
+
+              {% endif %}
+              {% comment %} {% if regular_prices > 1 %}From&nbsp; {% endif %}
+              <span id="ProductPrice-{{ product.id }}" {% if wholesale %}class="wholesale-pricing"{% endif %}>
+                {{ min_price | money  }}
+              </span>
+              {% if per %}<small>{{ per | downcase }}</small>{% endif %}
+            </span>
+            {{sqft_text}} {% endcomment %}
+          </a>  
+        </div>
+      {% endfor %}
+      <div class="carousel-cell view-all-cell">  
+        <a href="{{collections[section.settings.tab_collection_1].url}}">
+            {% comment %} {{img_url_tab}} {% endcomment %}
+  
+            {% comment %} <img class="feature-row__image" 
+            src="{{ section.settings.tabimage2 |img_url: '200x' }}" 
+            alt="{{ section.settings.tabimage2.alt }}"> {% endcomment %}
+          {%- assign img_url = section.settings.tabimage2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+ 
+         {%- if fixed_aspect_ratio -%}
+              <div class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+                <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+                    data-src="{{ img_url }}"
+                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- else -%}
+              {%- liquid
+                assign ratio = 1
+                if preview_image != blank
+                  assign ratio = preview_image.aspect_ratio
+                endif
+              -%}
+              <div style="height: 0; padding-bottom: {{ 100 | divided_by: ratio }}%;">
+                <img class="grid-product__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- endif -%}
+          {% comment %} <h2> View All </h2> {% endcomment %}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content tabs-list-2 hide" data-tab-content="2">
+    {% comment %} --> CRO: Price Display on Homepage Product Listings {% endcomment %}
+    <div class="main-carousel-two" data-flickity='{"pageDots": true, "autoPlay": 4500, "cellAlign": "left", "contain": true, "freeScroll": true, "wrapAround": false}'>
+      {% comment %} <-- CRO: Price Display on Homepage Product Listings {% endcomment %}
+      {% for product in collections[section.settings.tab_collection_2].products  limit: 9 %}
+        {%- liquid
+          assign fixed_aspect_ratio = false
+          unless settings.product_grid_image_size == 'natural'
+            assign fixed_aspect_ratio = true
+          endunless
+
+          assign on_sale = false
+            if product.compare_at_price > product.price
+            assign on_sale = true
+          endif
+
+          assign preview_image = product.featured_media.preview_image
+          assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        -%}
+        {%- assign compare_at_price = product.compare_at_price -%}
+        {%- assign price = product.price_max | times: 1.00 -%}
+        {%- assign price_varies = product.price_varies -%}
+        {%- assign money_price = price | money_with_currency -%}
+        {%- assign money_format = money_with_currency -%}
+        {%- assign min_price = price -%}
+        {%- assign productT = product.title -%}
+
+        {%- assign sq_ft = false -%}
+        {%- assign has_specs = false -%}
+
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'coverage:' and tag contains 'Sqft' -%}
+            {% assign sq_ft = tag | remove: 'coverage:' | remove: ' Sqft' | times: 1.00 %}
+            {% assign sq_ft_type = 'Sqft' %}
+          {%- endif -%}
+          {%- if tag contains 'sold by:' -%}
+            {%- assign per = tag | remove: 'sold by:' | prepend: 'per '  -%}
+          {%- endif -%}
+          {%- if product.type == 'Pool Mosaic' %}
+            {% assign per = 'each' %}
+          {%- endif -%}
+          {%- if tag contains ':' %}
+            {% assign spec = tag | split: ':' | first %}
+            {% assign has_specs = true %}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {% assign customerDiscount = false %}
+        {% assign discountTotal = 0 %}
+
+        {% if customer.tags contains "wholesale" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.25 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {% if customer.tags contains "vip" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.20 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {% if customer.tags contains "trade" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.15 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {%- for variant in product.variants -%}
+          {%- unless variant.title == 'Sample' -%}
+            {%- assign regular_prices = regular_prices | plus: 1 -%}
+            {%- if variant.price < min_price -%}
+              {%- assign min_price = variant.price -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'coverage:' and tag contains 'Sqft'-%}
+            {%- assign sqft = tag | remove: 'coverage:' | remove: ' Sqft' | plus: 0 -%}
+            {%- assign per_sqft = price | divided_by: sqft -%}
+            {%- capture sqft_text -%}
+              <div>
+                <small>(<span class="price-per-sq-foot">{{per_sqft | money}} Price per sqft:</span>)</small>
+              </div>
+            {%- endcapture -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if product.type == 'Pool Mosaic' -%}
+          {%- assign per = 'each' -%}
+        {%- endif -%}
+
+        {%- assign compare_at_price = product.compare_at_price -%}
+        {%- assign price = product.price_max | times: 1.00 -%}
+        {%- assign price_varies = product.price_varies -%}
+        <div class="carousel-cell">  
+          <a href="{{ product.url }}" > 
+            {%- if fixed_aspect_ratio -%}
+              <div class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+                <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+                    data-src="{{ img_url }}"
+                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- else -%}
+              {%- liquid
+                assign ratio = 1
+                if preview_image != blank
+                  assign ratio = preview_image.aspect_ratio
+                endif
+              -%}
+              <div style="height: 0; padding-bottom: {{ 100 | divided_by: ratio }}%;">
+                <img class="grid-product__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- endif -%}
+            <div> {{product.title}} </div>
+            <span class="product-price__price product-price__price-{{ product.id }}">
+              {% if sq_ft %}
+                {% if customerDiscount %}
+                  {% comment %} B2BCustomer Discount original product price {% endcomment %}
+                  {% assign per_sq_ft = wholesalePriceTotal[0] | divided_by: sq_ft %}
+                                              
+                  <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                    <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one grid-product__price--savings">
+                    {%- render 'price' with per_sq_ft -%}
+                    per sq. ft.
+                    </span> 
+                    
+                  </span>
+                  {%- if on_sale -%}
+                    {% assign per_sq_ft = product.compare_at_price | divided_by: sq_ft %}
+                    <p>                           
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+
+                  {%- else -%}
+                    {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+                    <p>                        
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class=" wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+                  {%- endif -%}
+
+                {% else %}
+                  {% comment %} B2C Customer sq.ft. no discount {% endcomment %}
+                  {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+
+                  <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                    <span data-sq-ft-price="{{per_sq_ft | round}}" class="grid-product__price--current  wholesale-sqft-two  {% if on_sale %} grid-product__price--savings {% endif %} ">
+                    {%- render 'price' with per_sq_ft -%}
+                    per sq. ft.
+                    </span> 
+                     
+                  </span>
+
+
+                  {%- if on_sale -%}
+                    {% assign per_sq_ft = product.compare_at_price | divided_by: sq_ft %}
+
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                         {%- render 'price' with per_sq_ft -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+              
+                {% endif %}
+
+
+              {% else %}
+
+                {% if customerDiscount %}
+
+
+         
+
+                  {%- if product.price_varies -%}
+
+                    {% if customer.tags contains "wholesale" %}
+                        {% assign discountTotal = 0.25 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "vip" %}
+                        {% assign discountTotal = 0.20 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "trade" %}
+                        {% assign discountTotal = 0.15 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    <span class="grid-product__price--current   ">
+                      {%- render 'price-varies', price: wholesalePriceTotal[0] -%}
+                    </span>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+
+                    <span class="grid-product__price--current grid-product__price--savings">
+                      {%- render 'price', price: wholesalePriceTotal[0] -%}
+                    </span>
+                    {%- if on_sale -%}
+                      <p>
+                        <span class="grid-product__price--original ">
+                          {%- render 'price' with product.compare_at_price -%}
+                        </span>
+                      </p>
+                    {%- else -%}
+                        <p>
+                        <span class="grid-product__price--original ">
+                          {%- render 'price' with product.price -%}
+                        </span>
+                      </p>
+                    {%- endif -%}
+
+                  {%- endif -%}
+
+
+                  {%- if on_sale -%}
+
+                    {% if customer.tags contains "wholesale" %}
+                        {% assign discountTotal = 0.25 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "vip" %}
+                        {% assign discountTotal = 0.20 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "trade" %}
+                        {% assign discountTotal = 0.15 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {%- render 'price' with product.wholesalePriceTotal[0] -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {% else %}
+
+                  {%- if product.price_varies -%}
+                    <span class="grid-product__price--current ">
+                      {%- render 'price-varies', price: product.price_min -%}
+                    </span>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+                    <span class="grid-product__price--current   {% if on_sale %} grid-product__price--savings {% endif %}">
+                      {%- render 'price' with product.price -%}
+                    </span>
+                  {%- endif -%}
+                  
+                  {%- if on_sale -%}
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {%- render 'price' with product.compare_at_price -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {% endif %}
+
+
+
+              {% endif %}
+          </a>  
+        </div>
+      {% endfor %}
+      <div class="carousel-cell view-all-cell">  
+        <a href="{{collections[section.settings.tab_collection_2].url}}">
+                   {%- assign img_url = section.settings.tabimage2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+ 
+         {%- if fixed_aspect_ratio -%}
+              <div class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+                <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+                    data-src="{{ img_url }}"
+                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- else -%}
+              {%- liquid
+                assign ratio = 1
+                if preview_image != blank
+                  assign ratio = preview_image.aspect_ratio
+                endif
+              -%}
+              <div style="height: 0; padding-bottom: {{ 100 | divided_by: ratio }}%;">
+                <img class="grid-product__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- endif -%}
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="tab-content tabs-list-3 hide" data-tab-content="3">
+    {% comment %} --> CRO: Price Display on Homepage Product Listings {% endcomment %}
+    <div class="main-carousel-three" data-flickity='{"pageDots": true, "autoPlay": 4500, "cellAlign": "left", "contain": true, "freeScroll": true, "wrapAround": false}'>
+      {% comment %} <-- CRO: Price Display on Homepage Product Listings {% endcomment %}
+      {% for product in collections[section.settings.tab_collection_3].products  limit: 9 %}
+        {%- liquid
+          assign fixed_aspect_ratio = false
+          unless settings.product_grid_image_size == 'natural'
+            assign fixed_aspect_ratio = true
+          endunless
+
+          assign on_sale = false
+            if product.compare_at_price > product.price
+            assign on_sale = true
+          endif
+
+          assign preview_image = product.featured_media.preview_image
+          assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        -%}
+        {%- assign compare_at_price = product.compare_at_price -%}
+        {%- assign price = product.price_max | times: 1.00 -%}
+        {%- assign price_varies = product.price_varies -%}
+        {%- assign money_price = price | money_with_currency -%}
+        {%- assign money_format = money_with_currency -%}
+        {%- assign min_price = price -%}
+        {%- assign productT = product.title -%}
+
+        {%- assign sq_ft = false -%}
+        {%- assign has_specs = false -%}
+
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'coverage:' and tag contains 'Sqft' -%}
+            {% assign sq_ft = tag | remove: 'coverage:' | remove: ' Sqft' | times: 1.00 %}
+            {% assign sq_ft_type = 'Sqft' %}
+          {%- endif -%}
+          {%- if tag contains 'sold by:' -%}
+            {%- assign per = tag | remove: 'sold by:' | prepend: 'per '  -%}
+          {%- endif -%}
+          {%- if product.type == 'Pool Mosaic' %}
+            {% assign per = 'each' %}
+          {%- endif -%}
+          {%- if tag contains ':' %}
+            {% assign spec = tag | split: ':' | first %}
+            {% assign has_specs = true %}
+          {%- endif -%}
+        {%- endfor -%}
+
+
+        {% assign customerDiscount = false %}
+        {% assign discountTotal = 0 %}
+
+        {% if customer.tags contains "wholesale" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.25 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {% if customer.tags contains "vip" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.20 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {% if customer.tags contains "trade" %}
+            {% assign customerDiscount = true %}
+            
+            {% assign discountTotal = 0.15 %}
+            {% assign wholesalePriceAmount = product.price_max | times: discountTotal %}
+            {% assign wholesalePriceTotal = product.price_max  | minus: wholesalePriceAmount | split: '.'%}
+        {% endif %}
+
+        {%- for variant in product.variants -%}
+          {%- unless variant.title == 'Sample' -%}
+            {%- assign regular_prices = regular_prices | plus: 1 -%}
+            {%- if variant.price < min_price -%}
+              {%- assign min_price = variant.price -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'coverage:' and tag contains 'Sqft'-%}
+            {%- assign sqft = tag | remove: 'coverage:' | remove: ' Sqft' | plus: 0 -%}
+            {%- assign per_sqft = price | divided_by: sqft -%}
+            {%- capture sqft_text -%}
+              <div>
+                <small>(<span class="price-per-sq-foot">{{per_sqft | money}} Price per sqft:</span>)</small>
+              </div>
+            {%- endcapture -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if product.type == 'Pool Mosaic' -%}
+          {%- assign per = 'each' -%}
+        {%- endif -%}
+
+        {%- assign compare_at_price = product.compare_at_price -%}
+        {%- assign price = product.price_max | times: 1.00 -%}
+        {%- assign price_varies = product.price_varies -%}
+        <div class="carousel-cell">   
+          <a href="{{ product.url }}" >       
+            {%- if fixed_aspect_ratio -%}
+              <div class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+                <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+                    data-src="{{ img_url }}"
+                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- else -%}
+              {%- liquid
+                assign ratio = 1
+                if preview_image != blank
+                  assign ratio = preview_image.aspect_ratio
+                endif
+              -%}
+              <div style="height: 0; padding-bottom: {{ 100 | divided_by: ratio }}%;">
+                <img class="grid-product__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- endif -%}
+            <div> {{product.title}} </div>
+              {% if sq_ft %}
+                {% if customerDiscount %}
+                  {% comment %} B2BCustomer Discount original product price {% endcomment %}
+                  {% assign per_sq_ft = wholesalePriceTotal[0] | divided_by: sq_ft %}
+                                              
+                  <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                    <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one grid-product__price--savings">
+                    {%- render 'price' with per_sq_ft -%}
+                    per sq. ft.
+                    </span> 
+                    
+                  </span>
+                  {%- if on_sale -%}
+                    {% assign per_sq_ft = product.compare_at_price | divided_by: sq_ft %}
+                    <p>                           
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class="wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+
+                  {%- else -%}
+                    {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+                    <p>                        
+                      <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                        <span data-sq-ft-price="{{per_sq_ft | round}}" class=" wholesale-sqft-one grid-product__price--original">
+                        {%- render 'price' with per_sq_ft -%}
+                        </span> 
+                      </span>
+                    </p>
+                  {%- endif -%}
+
+                {% else %}
+                  {% comment %} B2C Customer sq.ft. no discount {% endcomment %}
+                  {% assign per_sq_ft = product.price_max | divided_by: sq_ft %}
+
+                  <span {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                    <span data-sq-ft-price="{{per_sq_ft | round}}" class="grid-product__price--current  wholesale-sqft-two  {% if on_sale %} grid-product__price--savings {% endif %} ">
+                    {%- render 'price' with per_sq_ft -%}
+                    per sq. ft.
+                    </span> 
+                     
+                  </span>
+
+
+                  {%- if on_sale -%}
+                    {% assign per_sq_ft = product.compare_at_price | divided_by: sq_ft %}
+
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                         {%- render 'price' with per_sq_ft -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+              
+                {% endif %}
+
+
+              {% else %}
+
+                {% if customerDiscount %}
+
+
+         
+
+                  {%- if product.price_varies -%}
+
+                    {% if customer.tags contains "wholesale" %}
+                        {% assign discountTotal = 0.25 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "vip" %}
+                        {% assign discountTotal = 0.20 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "trade" %}
+                        {% assign discountTotal = 0.15 %}
+                        {% assign wholesalePriceAmount = product.price_min | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.price_min  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    <span class="grid-product__price--current grid-product__price--savings">
+                      {%- render 'price', price: wholesalePriceTotal[0] -%}
+                    </span>
+
+                    <p>
+                      <span class="grid-product__price--current grid-product__price--original">
+                        {%- render 'price', price: product.price_min -%}
+                      </span>
+                    </p>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+
+                    <span class="grid-product__price--current grid-product__price--savings">
+                      {%- render 'price', price: wholesalePriceTotal[0] -%}
+                    </span>
+                    {%- if on_sale -%}
+                      <p>
+                        <span class="grid-product__price--original ">
+                          {%- render 'price' with product.compare_at_price -%}
+                        </span>
+                      </p>
+                    {%- else -%}
+                        <p>
+                        <span class="grid-product__price--original ">
+                          {%- render 'price' with product.price -%}
+                        </span>
+                      </p>
+                    {%- endif -%}
+
+                  {%- endif -%}
+
+
+                  {%- if on_sale -%}
+
+                    {% if customer.tags contains "wholesale" %}
+                        {% assign discountTotal = 0.25 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "vip" %}
+                        {% assign discountTotal = 0.20 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    {% if customer.tags contains "trade" %}
+                        {% assign discountTotal = 0.15 %}
+                        {% assign wholesalePriceAmount = product.compare_at_price | times: discountTotal %}
+                        {% assign wholesalePriceTotal = product.compare_at_price  | minus: wholesalePriceAmount | split: '.'%}
+                    {% endif %}
+
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {%- render 'price' with product.wholesalePriceTotal[0] -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {% else %}
+
+                  {%- if product.price_varies -%}
+                    <span class="grid-product__price--current ">
+                      {%- render 'price', price: product.price_min -%}
+                    </span>
+                  {%- else -%}
+                    {%- if on_sale -%}
+                      <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                    {%- endif -%}
+                    <span class="grid-product__price--current   {% if on_sale %} grid-product__price--savings {% endif %}">
+                      {%- render 'price' with product.price -%}
+                    </span>
+                  {%- endif -%}
+                  
+                  {%- if on_sale -%}
+                    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                    <p>
+                      <span class="grid-product__price--original">
+                        {%- render 'price' with product.compare_at_price -%}
+                      </span>
+                    </p>
+                    {%- if settings.product_save_amount -%}
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                      {%- endif -%}
+                      {% comment %} <span class="grid-product__price--savings">
+                        {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                      </span> {% endcomment %}
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- assign product_variant = product.selected_or_first_available_variant -%}
+                  {%- if product_variant.unit_price_measurement -%}
+                    <div class="product__unit-price">
+                      {%- capture unit_price_base_unit -%}
+                        {%- if product_variant.unit_price_measurement -%}
+                          {%- if product_variant.unit_price_measurement.reference_value != 1 -%}
+                            {{ product_variant.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                          {{ product_variant.unit_price_measurement.reference_unit }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      {{ product_variant.unit_price | money }}/{{ unit_price_base_unit }}
+                    </div>
+                  {%- endif -%}
+                {% endif %}
+
+
+
+              {% endif %}
+
+          </a>
+        </div>
+      {% endfor %}
+      <div class="carousel-cell view-all-cell">  
+        <a href="{{collections[section.settings.tab_collection_3].url}}">
+                   {%- assign img_url = section.settings.tabimage2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+ 
+         {%- if fixed_aspect_ratio -%}
+              <div class="grid__image-ratio grid__image-ratio--{{ settings.product_grid_image_size }}">
+                <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %}"
+                    data-src="{{ img_url }}"
+                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- else -%}
+              {%- liquid
+                assign ratio = 1
+                if preview_image != blank
+                  assign ratio = preview_image.aspect_ratio
+                endif
+              -%}
+              <div style="height: 0; padding-bottom: {{ 100 | divided_by: ratio }}%;">
+                <img class="grid-product__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080]"
+                    data-aspectratio="{{ preview_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    width="{{ preview_image.width }}"
+                    height="{{ preview_image.height }}"
+                    alt="{{ preview_image.alt | escape }}">
+                <noscript>
+                  <img class="grid-product__image lazyloaded"
+                    src="{{ preview_image | img_url: '400x' }}"
+                    alt="{{ preview_image.alt | escape }}">
+                </noscript>
+              </div>
+            {%- endif -%}
+        </a>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+
+<script>
+  var carouselTwo = document.querySelector('.main-carousel-two');
+  var carouselThree = document.querySelector('.main-carousel-three');
+
+  document.addEventListener('click', function(event) {
+
+    const elTabButton = event.target.closest('.collections-tabs-item .tablinks');
+    if (!elTabButton) { return }
+
+    if (!!elTabButton) {
+      var elWrapper = elTabButton.closest('.featured-collection-tabs')
+      var tabIndex = elTabButton.dataset.tabIndex;
+
+      var elAllTabButtons = elWrapper.querySelectorAll('.collections-tabs-item .tablinks');
+      elAllTabButtons.forEach(function(el) {
+        el.classList.remove('active');
+      });
+      var elAllTabContents = elWrapper.querySelectorAll('.tab-content');
+      elAllTabContents.forEach(function(el) {
+        el.classList.add('hide');
+      });
+
+      var elMatchingTabContent = elWrapper.querySelector(`.tab-content[data-tab-content="${tabIndex}"]`);
+      elMatchingTabContent.classList.remove('hide');
+
+      elTabButton.classList.add('active');
+
+      if (tabIndex == '2') {
+        var flktyTwo = new Flickity( carouselTwo );
+        flktyTwo.resize();
+        flktyTwo.resize();
+      }
+
+      if (tabIndex == '3') {
+        var flktyThree = new Flickity( carouselThree );
+        flktyThree.resize();
+        flktyThree.resize();
+      }
+    }
+
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Featured collection tabs",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.featured-collection.settings.title.label",
+      "default": "Featured collection"
+    },
+    {
+      "type": "collection",
+      "id": "tab_collection_1",
+      "label": "Collection Tab #1"
+    },
+    {
+      "type": "text",
+      "id": "tabs_title_1",
+      "label": "Tab Title #1"
+    },
+    {
+      "type": "collection",
+      "id": "tab_collection_2",
+      "label": "Collection Tab #2"
+    },
+    {
+      "type": "text",
+      "id": "tabs_title_2",
+      "label": "Tab Title #2"
+    },
+    {
+      "type": "collection",
+      "id": "tab_collection_3",
+      "label": "Collection Tab #3"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_image",
+      "label": "view all image"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "tabimage2",
+      "label": "view all image #2"
+    },
+    {
+      "type": "text",
+      "id": "tabs_title_3",
+      "label": "Tab Title #3"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection tabs"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

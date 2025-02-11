@@ -1,0 +1,50 @@
+<script>
+  document.addEventListener('change', function(event) {
+    const elRadio = event.target.closest('input[type=radio][name=Size]');
+
+    if (!elRadio) { return }
+
+    if (!!elRadio) {
+      var elWrapper = elRadio.closest('.product-section');
+
+      var currentDiscount = elWrapper.querySelector('.product-block--price').dataset.discountRate;
+      var currentVariantPrice = elRadio.dataset.price;
+
+      var discountedPrice = Number(currentVariantPrice) - (Number(currentVariantPrice) * Number(currentDiscount));
+
+      var wholesalePrice = Math.round(discountedPrice) / 100;
+
+      var wholesalePriceString = String(wholesalePrice).split(".");
+      var wholesalePriceDollars = "$ " + wholesalePriceString[0];
+
+      var wholesalePriceCents = "0";
+      if (wholesalePriceString.length > 1) {
+        if (wholesalePriceString[1] < 10) {
+          wholesalePriceCents = wholesalePriceString[1] + "0";
+        } else {
+          wholesalePriceCents = wholesalePriceString[1];
+        }
+      } else {
+        wholesalePriceCents = "00";
+      }
+
+      var newWholesalePrice = wholesalePriceDollars + "<sup>" + wholesalePriceCents + "</sup>";
+
+      var regularPrice = Math.round(currentVariantPrice) / 100;
+      var regularPriceString = String(regularPrice).split(".");
+      var regularPriceDollars = "$ " + regularPriceString[0];
+
+      var regularPriceCents = "00";
+      if (regularPriceString.length > 1) {
+        regularPriceCents = regularPriceString[1];
+      }
+
+      var newRegularPrice = regularPriceDollars + "<sup>" + regularPriceCents + "</sup>";
+
+      setTimeout(() => {
+        elWrapper.querySelector('.wholesale-price').innerHTML = newWholesalePrice;
+        elWrapper.querySelector('.price-area').innerHTML = newRegularPrice;
+      }, 2);
+    }
+  });
+</script>

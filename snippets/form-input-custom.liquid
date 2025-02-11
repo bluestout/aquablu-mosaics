@@ -1,0 +1,26 @@
+{%- comment -%}{% render 'form-input', type:'text', name: 'Last Name', required: true, size: 'one-half' %}{%- endcomment -%}
+
+<div class="grid__item medium-up--{{ size }} one-whole anim-in">
+  <label class="" for="ContactForm{{name | replace: ' ','' }}">{{ name }}{% if required %}*{% endif %}</label>
+  
+  {%- case type -%}
+  
+  	{%- when 'select' -%}
+  
+  	  <select {% if required %}required{% endif %} {{name | replace: ' ','' }} name="contact[{{ name }}]">
+        <option value="">{{ name }}{% if required %}*{% endif %}</option>
+        {% for arr in array %}
+        <option value="{{arr}}">{{arr}}</option>
+        {% endfor %}
+      </select>	
+  
+  	{%- when 'textarea' -%}
+  
+  		<textarea {% if required %}required{% endif %} name="contact[{{ name }}]" id="ContactForm{{name | replace: ' ','' }}"></textarea>
+  
+  	{% else %}
+   
+  		<input class="{{class}}" {% if required %}required{% endif %} type="{{ type }}" name="contact[{{ name }}]" id="ContactForm{{name | replace: ' ','' }}" value="">
+  
+  {%- endcase -%}
+</div> 

@@ -1,0 +1,85 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<style>
+    .megamenu-area-resources .megamenu-area-container{
+        display: flex;
+    }
+    .megamenu-area-resources .megamenu-area-left{
+        flex-basis: 23%;
+        display: flex;
+        column-gap: 22%;
+        flex-direction: column;
+    }
+    .megamenu-area-resources .megamenu-area-menu-content{
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    {% comment %} .megamenu-area-resources .megamenu-area-divider{
+        width: 1px;
+        border-left: solid;
+        height: 180px;
+        margin-top: 7%;
+    } {% endcomment %}
+    .megamenu-area-resources .megamenu-area-right{
+        display: flex;
+        flex-basis: 75%;
+        padding-left: 0%;
+        column-gap: 5%;
+        flex-wrap: wrap;
+    }
+    .megamenu-area-resources .megamenu-area-right .mega-menu__image{
+        width: 30%;
+    }
+    .megamenu-area-resources .megamenu-area p.h3{
+        font-size: 14px;
+    }
+    .megamenu-area-resources .megamenu-area-menu-items li{
+        margin-bottom: 5px;
+    }
+    .megamenu-area-resources .megamenu-area-menu-items li a{
+        font-size: 17px;
+    }
+    .megamenu-area-resources.megamenu-area p.megamenu-text-overlay{
+        margin-top: 20px;
+    }
+  
+</style>
+  
+<div class="megamenu-area megamenu-area-resources">
+    <div class="megamenu-area-container page-width">  
+        <div class="megamenu-area-left"> 
+          {%- for link in menu_link.links -%}
+           <div class="megamenu-area-menu-content">          
+            <a href="{{ link.url }}" > <p class="h3">{{ link.title }} </p></a>
+              <ul class="megamenu-area-menu-items">
+                {%- for childlink in link.links -%}
+                  <li value="">
+                      <a href="{{ childlink.url }}"> {{ childlink.title }} </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endfor -%}
+        </div>
+        {% comment %} <div class="megamenu-area-divider"></div> {% endcomment %}
+         <div class="megamenu-area-right">
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link1 }}"> 
+                <img src="{{ menu_settings.image1 | img_url: '2x' }}" alt="{{ menu_settings.image1.alt | escape }}" width="{{ menu_settings.image1.width }}" height="{{ menu_settings.image1.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text1 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link2 }}"> 
+                <img src="{{ menu_settings.image2 | img_url: '2x' }}" alt="{{ menu_settings.image2.alt | escape }}" width="{{ menu_settings.image2.width }}" height="{{ menu_settings.image2.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text2 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+                <a href="{{ menu_settings.link3 }}"> 
+                  <img src="{{ menu_settings.image3 | img_url: '2x' }}" alt="{{ menu_settings.image3.alt | escape }}" width="{{ menu_settings.image3.width }}" height="{{ menu_settings.image3.height }}" loading="lazy">
+                  <p class="megamenu-text-overlay">{{menu_settings.text3 }}</p>
+                </a>
+              </div>
+         </div>
+    </div>     
+</div>

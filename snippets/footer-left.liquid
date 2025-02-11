@@ -1,0 +1,38 @@
+
+{% comment %} /*-->Header/Footer and 5k Reviews*/ {% endcomment %}
+<div class="left-area">
+  <div class="left-area-1">
+    {%- if block.settings.image_logo != blank -%}
+      <img src="{{ block.settings.image_logo | img_url: 'master' }}" loading="lazy" width="{{ block.settings.image_logo.width }}" height="{{ block.settings.image_logo.height }}" alt="{{ block.settings.image_logo.alt | default: shop.name }}">
+    {%- endif -%}
+  </div>
+
+  <div class="left-area-2">
+    {%- if block.settings.touch_label != blank -%}
+      <a class="touch_button small--hide" href="{{ block.settings.touch_link }}"> {{ block.settings.touch_label }} </a>
+    {%- endif -%}
+    {%- if block.settings.text_phone != blank -%}
+      <p class="text-phone"> {{ block.settings.text_phone }} </p>
+    {%- endif -%}
+    {%- if block.settings.text_support != blank -%}
+      <p class="text-support"> {{ block.settings.text_support }} </p>
+    {%- endif -%}
+    {%- if block.settings.text_open_time1 != blank -%}
+      <p class="text-open-time"> {{ block.settings.text_open_time1 }} </p>
+    {%- endif -%}
+    {%- if block.settings.text_open_time2 != blank -%}
+      <p class="text-open-time"> {{ block.settings.text_open_time2 }} </p>
+    {%- endif -%}
+    {%- if block.settings.touch_label != blank -%}
+      <div class="touch_button_wrapper">
+        <a class="touch_button medium-up--hide" href="{{ block.settings.touch_link }}"> {{ block.settings.touch_label }} </a>
+      </div>
+    {%- endif -%}
+    <div class="social-icons-wrapper medium-up--hide"> {% render 'social-icons' %} </div>
+  </div>
+
+</div>
+{% comment %} /*<--Header/Footer and 5k Reviews*/ {% endcomment %}
+
+ 
+

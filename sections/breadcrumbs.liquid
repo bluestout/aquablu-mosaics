@@ -1,0 +1,50 @@
+<!--Start Custom Breadcrumbs-->
+{% assign page_title = "" %}
+
+{% if template.name contains "index" %}
+  {% assign page_title = "Homepage" %}
+{% elsif template.name contains "article" %}
+  {% assign page_title = article.title %}
+{% elsif template.name contains "blog" %}
+  {% assign page_title = blog.title %}
+{% elsif template.name contains "collection" %}
+  {% assign page_title = collection.title %}
+{% elsif template.name contains "list-collections" %}
+  {% assign page_title = "Collections" %}
+{% elsif template.name contains "page" %}
+  {% assign page_title = page.title %}
+{% elsif template.name contains "product" %}
+  {% assign page_title = product.title %}
+{% elsif template.name contains "search" %}
+  {% assign page_title = "Search" %}
+{% elsif template.name contains "404" %}
+  {% assign page_title = "404 page" %}
+{% elsif template.name contains "cart" %}
+  {% assign page_title = "Cart" %}
+{% elsif template.name contains "customers" %}
+  {% assign page_title = "Account" %}
+{% elsif template.name contains "password" %}
+  {% assign page_title = "Password" %}
+{% endif %}
+
+{% style %}
+.history-breadcrumb{
+    padding: 20px 0px;
+    font-size: calc(var(--typeBaseSize) * .85);
+}
+.breadcrumb-slash{
+    opacity: 0.2;
+}
+.breadcrumb-item:not(.active):hover{
+    color: #50cbd9;
+}
+/* .breadcrumb-item.active, .breadcrumb-slash.active{
+    display: none;
+} */
+{% endstyle %}
+
+<div class="page-width" style="{% if template.name == "index" %}display: none;{% endif %}">
+    <nav class="history-breadcrumb" data-breadcrumb-label='{{ page_title }}' data-page-template='{{ template.name }}' data-page-suffix='{{ template.suffix }}'>
+    </nav>
+</div>
+<!--End Custom Breadcrumbs-->

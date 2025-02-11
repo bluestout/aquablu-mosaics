@@ -1,0 +1,173 @@
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+
+{%- comment -%}
+  This code is only needed if one of the blocks uses the tooltip feature
+{%- endcomment -%}
+{%- for block in section.blocks -%}
+  {%- if block.settings.tooltip -%}
+    <style>
+      .tooltip-collection{position:relative}.tooltip-collection .tooltiptext{visibility:hidden;background:rgba(0,0,0,.65);text-align:left;padding:5px 8px;color:#fff;position:absolute;top:15px;left:0;width:100%;z-index:1}.tooltiptext-icon{position:absolute;top:7px;right:4px;width:24px;height:24px;background:#fff;border-radius:100%;padding-top:0;line-height:23px}.tooltiptext-icon.active-tooltip + .tooltiptext{visibility:visible}@media (max-width:1024px){.tooltip-collection .tooltiptext{top:45px}}
+    </style>
+
+    <script>
+      document.addEventListener('click', event => {
+        var elSection = document.getElementById('shopify-section-{{section.id}}');
+        elSection.querySelectorAll('.active-tooltip').forEach(function(tooltip) {
+          tooltip.classList.remove('active-tooltip')
+        });
+
+        if (!!event.target.classList.contains('tooltiptext-icon')) {
+          event.preventDefault();
+          event.target.classList.add('active-tooltip');
+        }
+      });
+    </script>
+
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="page-width custom-collection-list {{ css_class }}">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header">
+      <h2 class="section-header__title text-center">{{ section.settings.title }}</h2>
+    </div>
+  {%- endif -%}
+
+  <div class="new-grid" data-view="6-3">
+    {%- liquid 
+      assign isEmpty = true
+      if section.blocks.size > 0
+        assign isEmpty = false
+      endif
+    -%}
+
+    {%- for block in section.blocks -%}
+      <div class="grid-item " {{ block.shopify_attributes }}>
+        <a href="{{ block.settings.url }}" class="collection-item  {% if block.settings.tooltip %} tooltip-collection {% endif %}">
+          <div class="collection-image-wrap collection-image--{{ settings.collection_grid_shape }}">
+            <div class="collection-image{% if using_collection_image %} collection-image--is-collection{% endif %} image-wrap">
+              {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img
+                class="lazyload"
+                src=""
+                data-src="{{ img_url }}"
+                data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                data-widths="[720, 900, 1080]"
+                data-sizes="auto"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.image.alt | escape }}">
+            </div>
+          </div>
+          {% if block.settings.tooltip %}
+            <span class="tooltiptext-icon"> i </span>
+            <span class="tooltiptext">{{block.settings.tooltip_text}} </span>
+          {% endif %}
+          <span class="collection-item__title">{{ block.settings.title }}</span>
+        </a>
+      </div>
+    {%- endfor -%}
+
+    {%- if isEmpty -%}
+      <div class="page-width">
+        <div class="rte">
+          {{ 'home_page.onboarding.no_content' | t }}
+        </div>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection List Custom",
+  "class": "index-section collection-list-custom",
+  "max_blocks": 18,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.featured-collections.settings.title.label",
+      "default": "Popular categories"
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.featured-collections.settings.divider.label",
+      "default": false
+    }, 
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "t:sections.featured-collections.blocks.collection.name",
+      "settings": [
+         {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.featured-collections.blocks.collection.settings.title.label",
+          "info": "t:sections.featured-collections.blocks.collection.settings.title.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "tooltip",
+          "label": "add tool tip",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "tooltip_text",
+          "label": "tooltip_text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection List Custom",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

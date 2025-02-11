@@ -1,0 +1,92 @@
+{%- liquid
+  assign hide_icon_labels = true
+  if nav_position == 'below'
+    assign hide_icon_labels = false
+  endif
+-%}
+
+{% comment %} --> Icons weight and sizing {% endcomment %}
+<style>
+  .mobile-nav-trigger .icon-hamburger-close{
+    display: none;
+  }
+  .mobile-nav-trigger.is-active .icon-hamburger{
+    display: none;
+  }
+  .mobile-nav-trigger.is-active .icon-hamburger-close{
+    display: block;
+  }
+ </style>
+{% comment %} <-- Icons weight and sizing {% endcomment %}
+
+<div class="site-nav">
+  {% comment %} <div class="site-nav__close-cart">
+    <button type="button" class="site-nav__link site-nav__link--icon js-close-header-cart">
+      <span>{{ 'general.accessibility.close' | t }}</span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"/></svg>
+    </button>
+  </div> {% endcomment %}
+  <div class="site-nav__icons">
+
+    <button type="button"
+      aria-controls="MobileNav"
+      class="site-nav__link site-nav__link--icon mobile-nav-trigger">
+      {% comment %} --> Icons weight and sizing {% endcomment %}
+      {% comment %} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 64 64"><path class="cls-1" d="M7 15h51">.</path><path class="cls-1" d="M7 32h43">.</path><path class="cls-1" d="M7 49h51">.</path></svg> {% endcomment %}
+      <svg style="vertical-align: middle;" aria-hidden="true" focusable="false" role="presentation" class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <line style="stroke-width: 1.5px;" x1="4.00024" y1="7.25" x2="28.0666" y2="7.25" stroke="white" stroke-width="1.5"/>
+        <line style="stroke-width: 1.5px;" x1="4.00024" y1="15.2721" x2="28.0666" y2="15.2721" stroke="white" stroke-width="1.5"/>
+        <line style="stroke-width: 1.5px;" x1="4.00024" y1="23.2943" x2="28.0666" y2="23.2943" stroke="white" stroke-width="1.5"/>
+      </svg>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon-hamburger-close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M26.1215 5.00001L5.82055 26.0303" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M5.82015 5.00001L26.1211 26.0303" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      {% comment %} <-- Icons weight and sizing {% endcomment %}
+      <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
+    </button>
+
+    {% comment %} {%- if shop.customer_accounts_enabled -%}
+      <a class="site-nav__link site-nav__link--icon small-med--hide" href="{{ routes.account_url }}">
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect width="27" height="27" fill="url(#pattern0)"/>
+        <defs>
+        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlink:href="#image0_631_3" transform="scale(0.0172414)"/>
+        </pattern>
+        <image id="image0_631_3" width="58" height="58" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAYAAADhu0ooAAAABHNCSVQICAgIfAhkiAAAAvJJREFUaEPtmsFOFEEQhplFDwRNhAMJMcT4ND6DMV65cBCOcIejJh5IuHowPoNPY9SDHjR7IMREZflnsrMpenu6q//q2Zndnb0B3VX/V391T08vxcYCP5PJ5DfS7UxTXhdF8XhR6Ys2EwFskhIf4K3paSVwBPB6Cv+oqQhtAGcFBeAFxJ9KAK1oT3G+YO7zlI4Ijc0G6grVArricsVx42YBdcTtA/KHxQnEG2H+/zoGW7R7nWURVM6VkDkEST05Y5sdrcXkhqyBc8U3geaseFNnIUe5S2+Xf7cUkwaFgHPkPrMK0CwdUdAxYOsDh2bqbIwFtDoMWKqcotTawgNoqNqLWJuh5yvTRZSj1jZKaVnf42YADVRwcFSzRpkWYttWnsKYvIOjg6PiIM+00FK2bhcnIzYntUatGwPjqvXZbQaF6Ido4X+M+JQ5XYK+hdATtpUYSMy5RVE3U+bWY2lHZfu2CQsnvyP+U2sOE+gi1qq1ZbM42rarOd+SzI66sPj5JdbRJ2Yd+d5UrC2bxVFUvLzWKL9Pmfuwh4nALf8rxPzIFpB21HfRjN/tQsgvKUYL3HRxnetCmwJ1km8C5rap7TwOfMPvDkLOuMVBvtcY/2HWhsSXUcmgKRsExv6EuD1lu72H/jehsSm53ThJoJZEnk2LukFkNahB2QRKN5OGMVpUoEzgJOXE4FRNSaDaHZTQTU1JOTVFQUXltgD6h1LU0iRoK9+aqkN+zIQgaGp7tMQTDKvVqAKNVasLQN9zO6SzEVRU6isCPOsaxvp8jYL23c26ALGNyQsq3DwC6GWf3XRBmzamIOiyuKlxdQ5Uu4v10eWQ9kbQZXMz5up6ggrr6WvFrlu6qX3vORrboruG0OQHwxbG3bi778qByvdeuc+sHygs/4tqPNC8CWhaqMsxYp2+gKufK6bYttylYDa3b0NaVdBDFOlKdudKgvo2pPUFRTXG7Nro2bwnwdbtmViznPpZKlv3GFHfmSP3K8AIoNW/294B2LXfSnqyIpwAAAAASUVORK5CYII="/>
+        </defs>
+        </svg>
+
+        <span class="site-nav__icon-label small--hide{% if hide_icon_labels %} icon__fallback-text{% endif %}">
+          {{ 'layout.customer.account' | t }}
+        </span>
+      </a>
+    {%- endif -%} {% endcomment %}
+    
+    {% comment %} --> Header Update {% endcomment %}
+    {% comment %} --> Add Wish List {% endcomment %}
+    {% comment %} <a class="icon-call" style="color: white; font-size: 26px;" href="tel:18009711442">
+      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.1005 14.4L17.1005 11.4C16.8005 11.1 16.5005 11 16.1005 11C15.7005 11 15.4005 11.1 15.1005 11.4L13.1005 13.4L7.10052 7.4L9.10052 5.4C9.70052 4.8 9.70052 3.9 9.10052 3.4L6.10052 0.4C5.80052 0.1 5.50052 0 5.10052 0C4.70052 0 4.40052 0.1 4.10052 0.4L1.10052 3.4C1.00052 3.5 0.200519 4.3 0.500519 6.2C0.900519 8.4 2.80052 11.2 6.00052 14.4C10.6005 19 13.5005 20 15.2005 20C16.4005 20 16.9005 19.5 17.0005 19.4L20.0005 16.4C20.3005 16.1 20.4005 15.8 20.4005 15.4C20.6005 15 20.4005 14.7 20.1005 14.4ZM16.1005 18.4C16.1005 18.4 13.7005 20 7.10052 13.4C0.300519 6.6 2.10052 4.4 2.10052 4.4L5.10052 1.4L8.10052 4.4L5.60052 6.9C5.30052 7.2 5.30052 7.6 5.60052 7.9L12.6005 14.9C12.9005 15.2 13.3005 15.2 13.6005 14.9L16.1005 12.4L19.1005 15.4L16.1005 18.4Z" fill="white"/>
+      </svg>
+
+    </a> {% endcomment %}
+    {% comment %} <-- Add Wish List> {% endcomment %}
+
+    <a href="{{ routes.search_url }}" class="site-nav__link site-nav__link--icon js-search-header js-search-header-icon js-no-transition">
+      {% comment %} --> Icons weight and sizing {% endcomment %}
+      {% comment %} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg> {% endcomment %}
+      <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M27 27L20.97 21M23.58 14.29C23.58 16.1274 23.0352 17.9235 22.0144 19.4512C20.9936 20.979 19.5427 22.1697 17.8451 22.8728C16.1476 23.576 14.2797 23.76 12.4776 23.4015C10.6755 23.043 9.02021 22.1583 7.72098 20.859C6.42175 19.5598 5.53697 17.9045 5.17851 16.1024C4.82005 14.3003 5.00402 12.4324 5.70716 10.7349C6.4103 9.03735 7.60102 7.58645 9.12876 6.56565C10.6565 5.54485 12.4526 5 14.29 5C15.51 5 16.718 5.24029 17.8451 5.70716C18.9722 6.17403 19.9964 6.85832 20.859 7.72098C21.7217 8.58363 22.406 9.60776 22.8728 10.7349C23.3397 11.862 23.58 13.07 23.58 14.29Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+      </svg>
+      {% comment %} <-- Icons weight and sizing {% endcomment %}
+      <span class="icon__fallback-text">{{ 'general.search.title' | t }}</span>
+    </a>
+    {% comment %} <-- Header Update {% endcomment %}
+
+
+  </div>
+
+
+</div>

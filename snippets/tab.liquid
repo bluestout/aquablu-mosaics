@@ -1,0 +1,75 @@
+{%- comment -%}
+  Parameters:
+    id - unique id
+    title - string
+    content - string or markup
+    force_open - boolean to set default state (currently unused, was only for Product Reviews tab)
+{%- endcomment -%}
+{%- liquid
+  assign output_tab = true
+  if title == blank and content == blank
+    assign output_tab = false
+  endif
+  if content contains 'Reviews'
+    assign output_tab = true
+  endif
+  
+  
+-%}
+
+  {% assign specs_exclude = linklists.product-specs-exclude-list.links | map: 'title' | join: ',' %}
+  {% assign pool_application = false %}
+  {% capture spec_tags %}
+    {% for tag in product.tags %}
+      {% if tag contains ':' %}  		
+        {% assign _tag = tag | split: ':' %}
+  		{% assign tag_match = _tag[0] | append: ':' %}
+  		{% if specs_exclude contains tag_match %}
+  		{% continue %}
+  		{% endif %}
+        <li>{{ _tag[0] | capitalize }}: {{ _tag[1] | capitalize }}</li>
+  		{% if tag == 'pool application:Yes' %}
+  			{% assign pool_application = true %}
+  		{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endcapture %}
+  
+
+
+{%- if output_tab -%}
+  <div class="collapsibles-wrapper">
+    <button type="button"
+      class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="Product-content-{{ id }}"
+      {% if force_open %}aria-expanded="true"{% endif %}>
+      {{ title }}
+      {%- render 'collapsible-icons' -%}
+    </button>
+    <div id="Product-content-{{ id }}"
+      class="collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}"
+      {% if force_open %}style="height: auto;"{% endif %}>
+      <div class="collapsible-content__inner rte">
+        {% assign tab_title = title %}
+        
+        {% if tab_title contains "Reviews"  %}
+           {%- comment -%}
+           <!-- This previously held the old trustspot review widget -->
+           <div id="tab-reviews__inner"></div>
+           {%- endcomment -%}
+
+
+        {% elsif tab_title contains "Specifications"  %}
+          <ul class="specs-list">
+            {{ spec_tags }}
+          </ul>
+
+        	{{ pool_application_text }}
+     
+        {% else %}
+          {{ content }}
+
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

@@ -1,0 +1,140 @@
+<script>
+  /* ==== Init ==== */
+  var selectors = {
+    sampleAtcBtn: '.js-sample-atc-button',
+    checkboxAverageCut: '.js-average-cut--input',
+    howMuchInput: '.js-how-much--input',
+    calculatorContainer: '.js-how-much-calculator'
+  };
+
+  /* ==== Listeners ==== */
+  document.addEventListener('click', function(event) {
+    const elSampleAtcBtn = event.target.closest(selectors.sampleAtcBtn);
+    if (!!elSampleAtcBtn) {
+      addItemToCartSample(elSampleAtcBtn.dataset.quickAdd);
+      return;
+    }
+  });
+
+  document.addEventListener('change', function(event) {
+    const elCheckboxAverageCut = event.target.closest(selectors.checkboxAverageCut);
+    if (!elCheckboxAverageCut) return;
+    if (!!elCheckboxAverageCut) {
+      let wrapper = document.getElementById(elCheckboxAverageCut.closest('.product-section').id);
+      calculateSquareFootage(wrapper);
+      return;
+    }
+  });
+
+  document.addEventListener('keyup', function(event) {
+    const elHowMuchInput = event.target.closest(selectors.howMuchInput);
+    if (!elHowMuchInput) return;
+    if (!!elHowMuchInput) {
+      let wrapper = document.getElementById(elHowMuchInput.closest('.product-section').id);
+      calculateSquareFootage(wrapper);
+      return;
+    }
+  });
+  
+  /* ==== Functions ==== */
+  function addItemToCartSample(sampleVariantId) {
+    //--> Max 2 Samples per SKU 
+    fetch('/cart.js', {
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'xmlhttprequest'
+      },
+      method: 'GET'
+    })
+    .then((response) => response.json())
+    .then(function(response) {
+      console.log(response);
+        var cartObj = response;
+        var isOverSamples = false;
+        cartObj?.items.forEach(item => {
+          if (item.id == sampleVariantId && item.quantity > 1){
+            isOverSamples =true;
+            console.log(item.id);
+            console.log(item.quantity);
+          }
+        });
+        if ( isOverSamples ){
+          var info = document.querySelector(".max2-samples-info");
+          info.style.display = 'flex';
+        }
+
+    }).catch(function(err) {
+      /* uh oh, we have error. */
+      console.error(err)
+    });
+    //<-- Max 2 Samples per SKU 
+    addData = {
+      "id": sampleVariantId,
+      "quantity": 1
+    }
+    
+    fetch('/cart/add.js', {
+      body: JSON.stringify(addData),
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'xmlhttprequest'
+      },
+      method: 'POST'
+    })
+    .then((response) => response.json())
+    .then(function(response) {
+      document.dispatchEvent(new CustomEvent('cart:build'));
+    }).catch(function(err) {
+      /* uh oh, we have error. */
+      console.error(err)
+    });
+  }
+
+  function calculateSquareFootage(wrapper) {
+    let elHowMuchInput = wrapper.querySelector(selectors.howMuchInput);
+    let elCalculatorContainer = wrapper.querySelector(selectors.calculatorContainer);
+    let elCheckboxAverageCut = wrapper.querySelector(selectors.checkboxAverageCut);
+
+    var input = parseInt(elHowMuchInput.value);
+    var per = parseFloat(elCalculatorContainer.dataset.sqFt);
+
+    var div = Math.ceil(input / per);
+    var kind = ' ' + elCalculatorContainer.dataset.kind;
+
+    if (elCheckboxAverageCut.checked == true) {
+      div = Math.ceil(div * 1.1);
+    }
+
+    if (isNaN(div)) {
+      wrapper.querySelector('.js-qty__num').value = 1;
+      wrapper.querySelector('.how-much--result').textContent = '1';
+      wrapper.querySelector('.total-sheets-num-amt').textContent = '1';
+      pluralToTextChange(1, wrapper);
+    } else {
+      pluralToTextChange(div, wrapper);
+      wrapper.querySelector('.js-qty__num').value = div;
+      wrapper.querySelector('.how-much--result').textContent = input;
+      wrapper.querySelector('.total-sheets-num-amt').textContent = div;
+    }
+  }
+
+  function pluralToTextChange(amt, wrapper){
+    {% comment %} --> PDP: Gift Card {% endcomment %}
+    if ( wrapper.querySelector('.qty-per') == null )
+      return;
+   {% comment %} <-- PDP: Gift Card {% endcomment %}
+    /* sheets */
+    var textToChange = wrapper.querySelector('.qty-per').textContent.trim();
+
+    if (amt == 1) {
+      var pluralTextToChange = textToChange.plural(true);
+    } else {
+      var pluralTextToChange = textToChange.plural();
+    }
+
+    wrapper.querySelector('.qty-per').textContent = pluralTextToChange;
+    wrapper.querySelector('.how-much-qty-per').textContent = pluralTextToChange;
+  }
+</script>

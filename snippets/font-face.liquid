@@ -1,0 +1,53 @@
+{%- comment -%}
+<!-- Original font loading using dynamic fonts from theme settings -->
+{%- assign header_font = settings.type_header_font_family -%}
+{%- assign base_font = settings.type_base_font_family -%}
+{%- assign base_font_bold = base_font | font_modify: 'weight', '600' -%}
+{%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
+{%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
+
+{%- style -%}
+  {{ header_font | font_face: font_display: 'swap' }}
+  {{ base_font | font_face: font_display: 'swap' }}
+
+  {{ base_font_bold | font_face: font_display: 'swap' }}
+  {{ base_font_italic | font_face: font_display: 'swap' }}
+  {{ base_font_bold_italic | font_face: font_display: 'swap' }}
+{%- endstyle -%}
+{%- endcomment -%}
+
+{%- comment -%}
+<!-- New font loading. The site only uses Futura -->
+<!-- Loading subset versions of Futura from assets folder will improve site speed by only loading the characters that the site actually uses -->
+<!-- Unminified and minified versions below -->
+
+<style>
+  @font-face {
+    font-family: "FuturaMedium";
+    src: url({{ 'futurapt-medium-subset.woff2' | asset_url}}) format("woff2"),
+      url({{ 'futurapt-medium-subset.woff' | asset_url}}) format("woff"),
+      url({{ 'futurapt-medium-subset.ttf' | asset_url}}) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "FuturaBook";
+    src: url({{ 'futurapt-book-subset.woff2' | asset_url}}) format("woff2"),
+      url({{ 'futurapt-book-subset.woff' | asset_url}}) format("woff"),
+      url({{ 'futurapt-book-subset.ttf' | asset_url}}) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "FuturaDemi";
+    src: url({{ 'futurapt-demi-subset.woff2' | asset_url}}) format("woff2"),
+      url({{ 'futurapt-demi-subset.woff' | asset_url}}) format("woff"),
+      url({{ 'futurapt-demi-subset.ttf' | asset_url}}) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+</style>
+{%- endcomment -%}
+<style>@font-face{font-family:FuturaMedium;src:url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-medium-subset.woff2) format("woff2"),url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-medium-subset.woff) format("woff"),url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-medium-subset.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:FuturaBook;src:url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-book-subset.woff2) format("woff2"),url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-book-subset.woff) format("woff"),url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-book-subset.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:FuturaDemi;src:url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-demi-subset.woff2) format("woff2"),url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-demi-subset.woff) format("woff"),url(//www.aquablumosaics.com/cdn/shop/t/129/assets/futurapt-demi-subset.ttf) format("truetype");font-weight:700;font-style:normal}</style>

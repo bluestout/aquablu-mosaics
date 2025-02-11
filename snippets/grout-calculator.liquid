@@ -1,0 +1,306 @@
+{% assign DEV_MODE = true %}
+
+<style>
+/* The Modal (background) */
+  .grout-form-modal-container { 
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 6; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 60px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    pointer-events: none;
+  }
+  .grout-adhesive--quick-row .results-btn-add-to-cart{
+    background: #152755;
+    margin: 0 14px;
+    font-size: 12px;
+    height: 40px;
+    color: white;
+  }
+
+  @media(max-width:768px){
+    .grout-form-modal-container  {
+      padding-top: 0;
+      top: 0;
+      z-index: 7; /* Sit on top */
+    }
+    .grout-calculator-container-main {
+      height: 100%;
+      position: fixed;
+      right: 0;
+    }
+ }
+</style>
+
+<div id="grout-form-modal" class="grout-form-modal-container">
+  <div class="grout-calculator">
+    <div class="grout-calculator-container">
+      <div class="grout-calculator-container-main" id="js-grout-calculator-container-main">
+        <div class="form-area">
+          <span class="grout-modal-close" id="js-grout-modal-close">X</span>
+          {% comment %}<h2>Grout / Adhesive Calculator</h2>{% endcomment %}
+          <div class="grid">
+            <div class="grid__item one-whole anim-in">
+              <label for="tile-length">Length of tile (inches)</label>
+              <input type="text" name="tile_length" id="tile-length" value="{% if DEV_MODE %}1{% endif %}">
+            </div>
+            <div class="grid__item one-whole anim-in">
+              <label for="tile-width">Width of tile (inches)</label>
+              <input type="text" name="tile_width" id="tile-width" value="{% if DEV_MODE %}1{% endif %}">
+            </div>
+            <div class="grid__item one-whole anim-in">
+              <label for="tile-depth">Tile Thickness</label>
+              <select id="tile-depth" name="tile_depth">
+                {% for i in (4..12) %}
+                {% assign mm = i | divided_by: 25.40  %}
+                <option data-value="{{i}}mm" value="{{ mm }}" {% if i == 8 %}selected="selected"{% endif %}>{{ i }}mm ({{ mm | round: 2 }} in)</option>
+                {% endfor %}
+              </select>
+            </div>
+            {% assign joint_widths = '1/16,1/8,3/16,1/4,3/8,1/2' | split: ',' %}
+            {% assign joint_values = '0.0625,0.125,0.1875,0.25,0.375,0.5' | split: ',' %}
+
+            <div class="grid__item one-whole anim-in">
+              <label for="joint-width">Joint Width (inches)</label>
+              <select id="joint-width" name="joint_width">
+                {% for jw in joint_widths %}
+                <option data-value="{{jw}}" value="{{joint_values[forloop.index0]}}" {% if jw == '1/8' %}selected="selected"{% endif %}>{{jw}}”</option>
+                {% endfor %}
+              </select>
+            </div>
+            
+            <div class="grid__item one-whole anim-in">
+              <label for="square-feet">Total Sq Ft of project</label>
+              <input type="text" name="square_feet" id="square-feet" value="{% if DEV_MODE %}100{% endif %}">
+            </div>
+            <div class="grid__item one-whole anim-in">
+              <button class="btn btn--primary modal-grout-calculator__submit" id="js-grout-calculator-submit-btn">Calculate</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-grout-calculator__results">          
+          {% assign product_title = product.title %}
+          <div class="flex">
+            <div class="one-half text-center">
+              <h4 class="text-center modal-grout-calculator__results--heading {% if product_title contains 'Adhesive' %} {% else %} active {% endif %}">
+                <a class="js-grout-calculator-heading" data-matching-content="modal-grout-calculator__results--grout">Grout</a>
+              </h4>
+            </div>
+            <div class="one-half text-center">
+              <h4 class="text-center modal-grout-calculator__results--heading {% if product_title contains 'Adhesive' %} active {% endif %} ">
+                <a class="js-grout-calculator-heading" data-matching-content="modal-grout-calculator__results--adhesive"><span class="small--hide">Setting </span>Adhesive</a>
+              </h4>
+            </div>
+          </div>
+
+
+
+          <div id="modal-grout-calculator__results--grout" class="modal-grout-calculator__results--content" style="{% if product_title contains 'Adhesive' %}  display: none; {% endif %}">
+            <div class="modal-grout-calculator__results-title">
+              {% assign default_grout_variant = 12671381700680 %}
+              {%- assign atc_grout_variant = 12671381700680 -%}
+              We recommend <span class="grout-calculator__grout-pounds-needed"></span>lbs of grout,
+              or <span class="grout-calculator__grout-pails-needed"></span> 5.5lb pails.
+            </div>
+            <div class="flex flex--space-between flex--align-center grout-adhesive--quick-row small--flex-wrap">
+              <div class="ajaxcart-item--quantity grout-qty grout-qty-value-1">
+                <div class="qty-step" data-variant-id="{{default_grout_variant}}">
+                  <a href="#" class="qty-step-btn upsell__qty-step-btn" data-qty-change="dec">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 64 64"><path class="cls-1" d="M55 32H9"/></svg>
+                    <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
+                  </a>
+                  <div class="qty-step-count bfx-minicart-product-qty">0</div>
+                  <a href="#" class="qty-step-btn upsell__qty-step-btn" data-qty-change="inc">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                      <span class="icon__fallback-text" aria-hidden="true">+</span>
+                  </a>
+                </div><!-- .qty-step -->
+              </div>
+              {%- if request.page_type == "product" and template.suffix == "grout" -%}
+                {%- assign atc_grout_variant = product.selected_or_first_available_variant.id -%}
+              {%- endif -%}
+
+              <button class="results-btn-add-to-cart" data-quick-add="{{atc_grout_variant}}">{{ 'products.product.add_to_cart' | t }}</button>
+              <a class="upsell-all-link" href="/collections/tile-grout">View All Grout Colors</a>
+            </div>
+          </div>
+
+          <div id="modal-grout-calculator__results--adhesive" class="modal-grout-calculator__results--content" style="{% if product_title contains 'Adhesive' %}  {% else %} display: none; {% endif %}">
+            <div class="modal-grout-calculator__results-title">
+              {% assign default_adhesive_variant = 12840157773896 %}
+              We recommend <span class="grout-calculator__adhesive-pounds-needed"></span>lbs of <a href="/products/litoelastic-11lb-pail-epoxy-poly-tile-adhesive"><u>Litoelastic Tile Adhesive</u></a>, 
+              or <span class="grout-calculator__adhesive-pails-needed"></span> 11lb pails.
+              <small>(based on 1/8" trowel)</small>
+            </div>
+            <div class="flex flex--space-between flex--align-center grout-adhesive--quick-row small--flex-wrap">
+              <div class="ajaxcart-item--quantity grout-qty grout-qty-value-2">
+                <div class="qty-step" data-variant-id="{{default_grout_variant}}">
+                  <a href="#" class="qty-step-btn upsell__qty-step-btn" data-qty-change="dec">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 64 64"><path class="cls-1" d="M55 32H9"/></svg>
+                    <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
+                  </a>
+                  <div class="qty-step-count bfx-minicart-product-qty">0</div>
+                  <a href="#" class="qty-step-btn upsell__qty-step-btn" data-qty-change="inc">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                      <span class="icon__fallback-text" aria-hidden="true">+</span>
+                  </a>
+                </div><!-- .qty-step -->
+              </div>
+              <button class="results-btn-add-to-cart" data-quick-add="{{default_adhesive_variant}}">{{ 'products.product.add_to_cart' | t }}</button>
+              <a class="upsell-all-link" href="/collections/tile-installation-products">View All Installation Products</a>
+            </div>
+          </div>
+          
+
+        </div>
+        <div class="grout-calculator-footer">
+          <p>Need help? <a href="/pages/contact-us"><u>Contact us</u></a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ================================================ *\
+    Grout Calculator Features
+  \* ================================================ */
+    /* ===== Init ===== */
+    var groutModal = document.getElementById("grout-form-modal");
+
+    /* ===== Modules ===== */
+      function calculateGrout(e,t,a,o,r){
+        var d=parseFloat(e),l=parseFloat(t),p=(25.4*d+25.4*l)/(25.4*d*(25.4*l))*(25.4*parseFloat(a))*(25.4*parseFloat(o))*1.55*2.2/10.76,s=1/p,n=p*r,c=Math.ceil(n/5.5);return{pound_per_sq_foot:p.toFixed(3),one_pound_covers:s.toFixed(2),pounds_needed:n.toFixed(2),products_needed:parseFloat(c)}
+      }
+      function calculateAdhesive(e){
+        parseFloat(e);
+        var t=.37*parseFloat(e),a=parseFloat(.32*t*3.124),o=Math.ceil(a/11),r=Math.ceil(a/22),d=!1,d=Math.min(o,r)==o?11:22;return{pounds_needed:a.toFixed(2),products_needed:{lbs_11:Math.ceil(a/11),lbs_22:Math.ceil(a/22)},preferred_product:d}
+      }
+      /* https://github.com/marlun78/number-to-words/blob/master/numberToWords.min.js */
+      !function(){ "use strict";var e="object"==typeof self&&self.self===self&&self||"object"==typeof global&&global.global===global&&global||this,t=9007199254740991;function f(e){return!("number"!=typeof e||e!=e||e===1/0||e===-1/0)}function l(e){return"number"==typeof e&&Math.abs(e)<=t}var n=/(hundred|thousand|(m|b|tr|quadr)illion)$/,r=/teen$/,o=/y$/,i=/(zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)$/,s={zero:"zeroth",one:"first",two:"second",three:"third",four:"fourth",five:"fifth",six:"sixth",seven:"seventh",eight:"eighth",nine:"ninth",ten:"tenth",eleven:"eleventh",twelve:"twelfth"};function h(e){return n.test(e)||r.test(e)?e+"th":o.test(e)?e.replace(o,"ieth"):i.test(e)?e.replace(i,a):e}function a(e,t){return s[t]}var u=10,d=100,p=1e3,v=1e6,b=1e9,y=1e12,c=1e15,g=9007199254740992,m=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"],w=["zero","ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];function x(e,t){var n,r=parseInt(e,10);if(!f(r))throw new TypeError("Not a finite number: "+e+" ("+typeof e+")");if(!l(r))throw new RangeError("Input is not a safe number, it’s either too large or too small.");return n=function e(t){var n,r,o=arguments[1];if(0===t)return o?o.join(" ").replace(/,$/,""):"zero";o||(o=[]);t<0&&(o.push("minus"),t=Math.abs(t));t<20?(n=0,r=m[t]):t<d?(n=t%u,r=w[Math.floor(t/u)],n&&(r+="-"+m[n],n=0)):t<p?(n=t%d,r=e(Math.floor(t/d))+" hundred"):t<v?(n=t%p,r=e(Math.floor(t/p))+" thousand,"):t<b?(n=t%v,r=e(Math.floor(t/v))+" million,"):t<y?(n=t%b,r=e(Math.floor(t/b))+" billion,"):t<c?(n=t%y,r=e(Math.floor(t/y))+" trillion,"):t<=g&&(n=t%c,r=e(Math.floor(t/c))+" quadrillion,");o.push(r);return e(n,o)}(r),t?h(n):n}var M={toOrdinal:function(e){var t=parseInt(e,10);if(!f(t))throw new TypeError("Not a finite number: "+e+" ("+typeof e+")");if(!l(t))throw new RangeError("Input is not a safe number, it’s either too large or too small.");var n=String(t),r=Math.abs(t%100),o=11<=r&&r<=13,i=n.charAt(n.length-1);return n+(o?"th":"1"===i?"st":"2"===i?"nd":"3"===i?"rd":"th")},toWords:x,toWordsOrdinal:function(e){return h(x(e))}};"undefined"!=typeof exports?("undefined"!=typeof module&&module.exports&&(exports=module.exports=M),exports.numberToWords=M):e.numberToWords=M}();  
+
+    /* ===== Click Listeners ===== */
+    document.addEventListener('click', function(event) {
+      const elGroutOpenBtn = event.target.closest('#grout-form-modal-btn');
+      if (!!elGroutOpenBtn) {
+        openGroutModal();
+        return;
+      }
+
+      const elGroutCloseBtn = event.target.closest('#js-grout-modal-close');
+      if (!!elGroutCloseBtn) {
+        closeGroutModal();
+        return;
+      }
+
+      const elGroutOpenBtnCartDrawer = event.target.closest('#js-grout-product__how-much-link');
+      if (!!elGroutOpenBtnCartDrawer) {
+        openGroutModal();
+        return;
+      }
+
+      const elGroutSubmitBtn = event.target.closest('#js-grout-calculator-submit-btn');
+      if (!!elGroutSubmitBtn) {
+        submitGroutCalculator();
+        return;
+      }
+
+      const elGroutAtcBtn = event.target.closest('.results-btn-add-to-cart');
+      if (!!elGroutAtcBtn) {
+        groutCalculatorAtc(elGroutAtcBtn);
+        return;
+      }
+
+      const elGroutResultsHeading = event.target.closest('.js-grout-calculator-heading');
+      if (!!elGroutResultsHeading) {
+        changeActiveGroutHeader(elGroutResultsHeading);
+        return;
+      }
+
+      /* if click outside grout modal, close the modal */
+      const elGroutContainerMain = event.target.closest('#js-grout-calculator-container-main');
+      if (!elGroutContainerMain) {
+        closeGroutModal();
+      }
+
+      const elDrawerCart = event.target.closest('#HeaderCart.is-active');
+      const elDrawerCartTrigger = event.target.closest('#HeaderCartTrigger');
+      if (!elDrawerCart && !elDrawerCartTrigger) {
+        document.dispatchEvent(new CustomEvent('CartDrawer:close'));
+      }
+
+    });
+
+    function openGroutModal() {
+      groutModal.style.display = 'block';
+    }
+
+    function closeGroutModal() {
+      groutModal.style.display = 'none';
+    }
+
+    function submitGroutCalculator() {
+      var inputs = ['#tile-length','#tile-width','#tile-depth','#joint-width','#square-feet'],
+          allSet = true;
+
+      for (let i = 0; i < inputs.length; i++) {
+        let elInput = document.querySelector(inputs[i]);
+        elInput.style.borderColor = '#0a469c';
+        if (elInput.value == '') {
+          allSet = false;
+          elInput.style.borderColor = 'red';
+        }
+      }
+      
+      if(allSet) {
+        document.querySelector('.modal-grout-calculator__results').style.display = 'block';
+        document.querySelector('.grout-calculator-footer').style.display = 'block';
+
+        let valueTileLength = document.querySelector('#tile-length').value;
+        let valueTileWidth = document.querySelector('#tile-width').value;
+        let valueTileDepth = document.querySelector('#tile-depth').value;
+        let valueJointWidth = document.querySelector('#joint-width').value;
+        let valueSquareFeet = document.querySelector('#square-feet').value;
+
+        var g = calculateGrout(valueTileLength,valueTileWidth,valueTileDepth,valueJointWidth,valueSquareFeet);
+        var a = calculateAdhesive(valueSquareFeet);
+
+        document.querySelector('.grout-calculator__grout-pounds-needed').textContent = g.pounds_needed;
+        document.querySelector('.grout-calculator__grout-pails-needed').textContent = numberToWords.toWords(g.products_needed);
+        document.querySelector('#modal-grout-calculator__results--grout .qty-step-count').textContent = g.products_needed;
+        
+        document.querySelector('.grout-calculator__adhesive-pounds-needed').textContent = a.pounds_needed;
+        document.querySelector('.grout-calculator__adhesive-pails-needed').textContent = numberToWords.toWords(a.products_needed.lbs_11);
+        document.querySelector('#modal-grout-calculator__results--adhesive .qty-step-count').textContent = a.products_needed.lbs_11;
+      }
+    }
+
+    function changeActiveGroutHeader(clickedHeader) {
+      let currentActiveHeading = document.querySelector('.modal-grout-calculator__results--heading.active');
+      if (!!currentActiveHeading) {
+        currentActiveHeading.classList.remove('active');
+      }
+      clickedHeader.parentElement.classList.add('active');
+      
+      document.getElementById('modal-grout-calculator__results--grout').style.display = 'none';
+      document.getElementById('modal-grout-calculator__results--adhesive').style.display = 'none';
+      document.getElementById(clickedHeader.dataset.matchingContent).style.display = 'block';
+    }
+
+    function groutCalculatorAtc(clickedAtcBtn) {
+      var productObj = {
+        "id": clickedAtcBtn.dataset.quickAdd, 
+        "quantity": Number(clickedAtcBtn.previousElementSibling.querySelector('.qty-step-count').textContent)
+      }
+
+      addItemToCart(productObj);
+    }    
+</script>
+

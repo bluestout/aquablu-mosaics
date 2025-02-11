@@ -1,0 +1,134 @@
+{%- assign show_announcement = false -%}
+{%- assign announcement_block_count = 0 -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'announcement' -%}
+    {%- assign show_announcement = true -%}
+    {%- assign announcement_block_count = announcement_block_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if show_announcement -%}
+  {%- style -%}
+    .announcement-slider__inner {
+      animation: slide 16s infinite forwards;
+      height: 23px; 
+    }
+    .announcement-slider__slide {
+      height: 23px;
+    }
+
+    {%- if announcement_block_count == 2 -%}
+      @keyframes slide {
+        0% {
+          transform: translateY(0px);
+        }
+        45% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-23px);
+        }
+        95% {
+          transform: translateY(-23px);
+        }
+        100% {
+          transform: translateY(-46px);
+        }
+      }
+    {%- endif -%}
+
+    {%- if announcement_block_count == 3 -%}
+      @keyframes slide {
+        0% {
+          transform: translateY(0px);
+        }
+        20% {
+          transform: translateY(0px);
+        }
+        25% {
+          transform: translateY(-23px);
+        }
+        45% {
+          transform: translateY(-23px);
+        }
+        50% {
+          transform: translateY(-46px);
+        }
+        70% {
+          transform: translateY(-46px);
+        }
+        75% {
+          transform: translateY(-69px);
+        }
+        100% {
+          transform: translateY(-69px);
+        }
+      }
+    {%- endif -%}
+  {%- endstyle -%}
+  <div class="toolbar__item toolbar__item--announcements">
+    <div class="announcement-bar{% if section.settings.announcement_center %} text-center{% endif %}">
+      <div class="slideshow-wrapper">
+        <div id="AnnouncementSlider" class="announcement-slider" data-block-count="{{ announcement_block_count }}">
+          <div class="announcement-slider__inner">
+            {%- assign slide_index = 0 -%}
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'announcement' -%}
+                <div
+                  id="AnnouncementSlide-{{ block.id }}"
+                  class="announcement-slider__slide"
+                  data-index="{{ slide_index }}"
+                  {{ block.shopify_attributes }}>
+                  <div class="announcement-slider__content">
+                    {%- if block.settings.richtext_mobile != blank -%}
+                      <div class="medium-up--hide">
+                        {{ block.settings.richtext_mobile }}
+                      </div>
+                      <div class="small--hide">
+                        {{ block.settings.richtext }}
+                      </div>
+                    {%- else -%}
+                      {{ block.settings.richtext }}
+                    {%- endif -%}
+                  </div>
+                </div>
+                {%- assign slide_index = slide_index | plus: 1 -%}
+              {%- endif -%}
+            {%- endfor -%}
+
+            <!-- To get a seamless animation, we add a copy of the first announcement at the end -->
+            {%- if announcement_block_count > 1 -%}
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'announcement' and forloop.first -%}
+                  <div
+                    id="AnnouncementSlide-{{ block.id }}"
+                    class="announcement-slider__slide"
+                    data-index="{{ slide_index }}"
+                    {{ block.shopify_attributes }}>
+                    <div class="announcement-slider__content">
+                      {%- if block.settings.richtext_mobile != blank -%}
+                        <div class="medium-up--hide">
+                          {{ block.settings.richtext_mobile }}
+                        </div>
+                        <div class="small--hide">
+                          {{ block.settings.richtext }}
+                        </div>
+                      {%- else -%}
+                        {{ block.settings.richtext }}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  {%- assign slide_index = slide_index | plus: 1 -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+            <!-- //To get a seamless animation, we add a copy of the first announcement at the end -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+

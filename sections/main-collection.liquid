@@ -1,0 +1,362 @@
+{%- if show_sidebar == false -%}
+  {%- comment -%}
+    Disable sidebar & filter features
+  {%- endcomment -%}
+  {%- style -%}
+    .collection-content .grid__item--sidebar {
+      display: none;
+    }
+    .collection-content .grid__item--content {
+      width: 100% !important;
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+<style>
+  {%- if collection.metafields.custom.sec_1_image == blank -%}
+    .collection-section-1 {
+      display: none;
+    }
+  {%- endif -%}
+  {%- if collection.metafields.custom.sec_2_image == blank -%}
+    .collection-section-2 {
+      display: none;
+    }
+  {%- endif -%}
+  {%- if collection.metafields.custom.sec_3_image_left == blank -%}
+    .collection-section-3 {
+      display: none;
+    }
+  {%- endif -%}
+  {%- if collection.metafields.custom.sec_4_image == blank -%}
+    .collection-section-4 {
+      display: none;
+    }
+  {%- endif -%}
+  .grid__item--sidebar {
+    display:none;
+  }
+  .grid__item--sidebar.active-sidebar {
+    display:block;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .grid__item--sidebar.active-sidebar #CollectionSidebar {
+    background-color: #f5f5f5
+  }
+  .excerpt-hidden {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  .excerpt-hidden:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100% );
+  }
+  .excerpt-visible {
+    height: auto;
+    overflow: auto;
+  }
+  @media only screen and (max-width:768px) {
+    .grid__item.medium-up--one-fifth.grid__item--sidebar.active-sidebar {
+      display: none;
+    }
+  }
+</style>
+
+{%- liquid
+  assign show_sidebar = true
+  assign total_tags = 0
+
+  if section.settings.enable_sidebar == false or collection.filters.size == 0
+    assign show_sidebar = false
+  endif
+-%}
+
+<div id="CollectionAjaxResult" class="collection-content" data-section-id="{{ section.id }}" data-section-type="collection-template" data-collection-template="true" >
+  <div id="CollectionAjaxContent">
+    <div class="page-width main-collection-area">
+      {%- liquid
+        assign paginate_by = 40
+
+        assign current_filter_size = 0
+        for filter in collection.filters
+          assign current_filter_size = current_filter_size | plus: filter.active_values.size
+        endfor
+      -%}
+
+        
+        <div class="grid">
+          <div class="grid__item medium-up--one-fifth grid__item--sidebar" id="js-grid-item-sidebar">
+            {% comment %} Fix filter action bug {% endcomment %} 
+            <div class="reset-button-area">
+            </div>
+            <div class="sidebar-area">
+              <p class="heading"> Filter<span class="close">&times;</span></p>
+              <hr>
+              
+              {%- render 'collection-grid-filters',
+                collection: collection,
+                enable_sidebar: section.settings.enable_sidebar,
+                enable_color_swatches: section.settings.enable_color_swatches,
+                tags_combine: section.settings.tags_combine,
+                enable_sort: section.settings.enable_sort,
+                collapse_filters: section.settings.collapse_filters
+              -%}
+             
+              <br>
+            </div>
+            {%- comment -%}
+            <div class="reset-button-area">
+              <svg id="reset-button" width="800px" height="800px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0 1 1 0 2.5 2.5)">
+                  <path d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"/>
+                  <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"/>
+                </g>
+              </svg>
+            </div>
+            {%- endcomment -%}
+          </div>
+          <div class="grid__item medium-up--one-whole grid__item--content">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+              {%- when 'collection_description' -%}
+                   
+                {%- assign description_length = collection.description | size -%}
+                {%- if collection.description != blank and current_filter_size == 0 -%}
+                  <div class="rte rte--collection-desc" {{ block.shopify_attributes }}>
+                    <div class="enlarge-text collection-content-area {% if description_length > 1400 %} excerpt-hidden  {% endif %}">
+                      {{ collection.description }}
+                    </div>
+               
+                    {%- if description_length > 1400 -%}
+                      <button class="js-show-more {{ collection.description | size}}">Show more</button>
+
+                      <script>
+                        var showMoreButton = document.querySelector('.js-show-more');
+                        if (!!showMoreButton) {
+                          showMoreButton.addEventListener('click', function() {
+                            if (showMoreButton.textContent == 'Show more') {
+                              document.querySelector('.collection-content-area').classList.remove('excerpt-hidden');
+                              document.querySelector('.collection-content-area').classList.add('excerpt-visible');
+                              showMoreButton.textContent = 'Show less';
+                            } else {
+                              document.querySelector('.collection-content-area').classList.remove('excerpt-visible');
+                              document.querySelector('.collection-content-area').classList.add('excerpt-hidden');
+                              showMoreButton.textContent = 'Show more';
+                            }
+                          });
+                        }
+                      </script>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              {%- when 'subcollections' -%}
+                {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
+                  <div class="subcollections-area" {{ block.shopify_attributes }}>
+                    {%- render 'subcollections' -%}
+                  </div>
+                {%- endif -%}
+              {%- when 'product_grid' -%}
+                <div class="collection-grid-area" {{ block.shopify_attributes }}>
+                  {%- paginate collection.products by paginate_by -%}
+                    {%- render 'collection-grid'
+                      collection: collection,
+                      items: collection.products,
+                      grid_style: block.settings.grid_style,
+                      quick_shop_enable: settings.quick_shop_enable
+                    -%}
+                  {%- endpaginate -%} 
+                
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+
+          
+        </div>         
+      
+    </div>
+  </div>
+
+  <script type="application/ldjson">
+    {
+      "@context": "http://schema.org",
+      "@type": "CollectionPage",
+      {% if collection.description != blank %}
+        "description": {{ collection.description | strip_html | json }},
+      {% endif %}
+      {%- if page_image -%}
+        {% assign image_size = page_image.width | append: 'x' %}
+        "image": {
+          "@type": "ImageObject",
+          "height": {{ page_image.height | json }},
+          "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+          "width": {{ page_image.width | json }}
+        },
+      {%- endif -%}
+      "name": {{ collection.title | json }}
+    }
+  </script>
+
+  <script>
+  /* ============================================================================== *\
+    # Custom Scripts
+  \* ============================================================================== */
+    /* ===== Init ===== */
+    var sidebarShow = localStorage.getItem("sidebarShow");
+
+    /* ===== Modules ===== */
+    function onLoad(){
+      if (sidebarShow == 'true') {
+        document.getElementById('js-grid-item-sidebar').classList.add('active-sidebar');
+      }
+    }
+
+    onLoad();
+
+    function openSidebar() {
+      localStorage.setItem("sidebarShow", "true"); /* Fix filter action bug */
+      document.getElementById('js-grid-item-sidebar').classList.add('active-sidebar');
+    }
+
+    function closeSidebar() {
+      localStorage.setItem("sidebarShow", "false"); /* Fix filter action bug */
+      document.getElementById('js-grid-item-sidebar').classList.remove('active-sidebar');
+    }
+
+    /* ===== Listener ===== */
+
+    document.addEventListener('click', function(event) {
+
+      /* --> Fix filter action bug */
+      const elSidebarBackground = event.target.closest('#js-grid-item-sidebar .reset-button-area');
+      if (!!elSidebarBackground) {
+        console.log("sidebar background click");
+        localStorage.setItem("sidebarShow", "false");
+        closeSidebar();
+        return;
+      }
+      /* <-- Fix filter action bug */
+
+      const elCloseSidebarBtn = event.target.closest('#js-grid-item-sidebar span.close');
+      if (!!elCloseSidebarBtn) {
+        localStorage.setItem("sidebarShow", "false");
+        closeSidebar();
+        return;
+      }
+
+      const elSidebarTag = event.target.closest('#js-grid-item-sidebar .tag-list li');
+      if (!!elSidebarTag) {
+        localStorage.setItem("sidebarShow", "true");
+        return;
+      }
+
+      const elSidebarTagRemove = event.target.closest('#js-grid-item-sidebar li.tag--remove');
+      if (!!elSidebarTagRemove) {
+        localStorage.setItem("sidebarShow", "true");
+        return;
+      }
+
+      const elDesktopOpenSidebar = event.target.closest('.desktop-collection-filter__btn');
+      if (!!elDesktopOpenSidebar) {
+        openSidebar();
+      }
+    });
+  </script>
+
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-collection.settings.header_filtering_and_sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sidebar",
+      "label": "t:sections.main-collection.settings.enable_sidebar.label",
+      "default": true,
+      "info": "t:sections.main-collection.settings.enable_sidebar.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "collapse_filters",
+      "label": "t:sections.main-collection.settings.collapse_filters.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_color_swatches",
+      "label": "t:sections.main-collection.settings.enable_color_swatches.label",
+      "info": "t:sections.main-collection.settings.enable_color_swatches.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sort",
+      "label": "t:sections.main-collection.settings.enable_sort.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_description",
+      "name": "t:sections.main-collection.blocks.collection_description.name",
+      "limit": 2
+    },
+    {
+      "type": "product_grid",
+      "name": "t:sections.main-collection.blocks.products.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "grid_style",
+          "label": "t:sections.main-collection.blocks.products.settings.grid_style.label",
+          "default": "small",
+          "options": [
+            {
+              "value": "large",
+              "label": "t:sections.main-collection.blocks.products.settings.grid_style.options.large.label"
+            },
+            {
+              "value": "small",
+              "label": "t:sections.main-collection.blocks.products.settings.grid_style.options.small.label"
+            },
+            {
+              "value": "list",
+              "label": "t:sections.main-collection.blocks.products.settings.grid_style.options.list.label"
+            }
+          ]
+        }
+      ],
+      "limit": 2
+    },
+    {
+      "type": "subcollections",
+      "name": "t:sections.main-collection.blocks.subcollections.name",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.main-collection.blocks.subcollections.settings.content"
+        }
+      ],
+      "limit": 2
+    }
+  ]
+}
+{% endschema %}

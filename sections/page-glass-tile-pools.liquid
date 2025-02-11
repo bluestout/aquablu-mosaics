@@ -1,0 +1,1517 @@
+<style>
+  /** Elements **/
+    /* Install Fonts */
+      @font-face {
+        font-family: "Montserrat SemiBold";
+        font-style: normal;
+        src: url({{ "Montserrat-SemiBold.woff" | asset_url }}) format("woff"),
+        url({{ "Montserrat-SemiBold.woff2" | asset_url }}) format("woff2"),
+        url({{ "Montserrat-SemiBold.eot" | asset_url }}) format("eot");
+      }
+      @font-face {
+        font-family: "Montserrat Medium";
+        font-style: normal;
+        src: url({{ "Montserrat-Medium.woff" | asset_url }}) format("woff"),
+        url({{ "Montserrat-Medium.woff2" | asset_url }}) format("woff2"),
+        url({{ "Montserrat-Medium.eot" | asset_url }}) format("eot");
+      }
+      @font-face {
+        font-family: "Montserrat Bold";
+        font-style: normal;
+        src: url({{ "Montserrat-Bold.woff" | asset_url }}) format("woff"),
+        url({{ "Montserrat-Bold.woff2" | asset_url }}) format("woff2"),
+        url({{ "Montserrat-Bold.eot" | asset_url }}) format("eot");
+      }
+      
+    /* Headings */
+      .section-1 h1 {
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        color: #FFFFFF;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-top:0;
+      }
+      .glass-tile-pool-template h2, .glass-tile-pool-template .h2 {
+        font-family: "Montserrat Medium";
+        font-weight: 600;
+        font-style: normal;
+        color: #FFFFFF;
+        letter-spacing: 0px;
+
+        }
+      .glass-tile-pool-template h3, .glass-tile-pool-template .h3 {
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 0px;
+        margin-top:15px;
+      }
+      .glass-tile-pool-template h4, .glass-tile-pool-template .h4 {
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        color: #FFFFFF;
+        letter-spacing: 0px;
+      }
+      .glass-tile-pool-template h5, .glass-tile-pool-template .h5 {
+        font-family: "Montserrat Medium";
+        font-weight: 600;
+        font-style: normal;
+        color: #262626;
+        letter-spacing: 0px;
+        margin: 0;
+      }
+      .glass-tile-pool-template h6, .glass-tile-pool-template .h6 {
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        font-size: 16px;
+        color: #0654AE;
+        line-height: 20px;
+      }
+
+      @media(min-width: 500px ){
+        .glass-tile-pool-template h2, .glass-tile-pool-template .h2 {
+          font-size: 40px;
+          line-height: 41px;
+        }
+        .glass-tile-pool-template h3, .glass-tile-pool-template .h3 {
+          font-size: 40px;
+          line-height: 49px;
+        }
+        .glass-tile-pool-template h4, .glass-tile-pool-template .h4 {
+          font-size: 35px;
+          line-height: 43px;
+        }
+        .glass-tile-pool-template h5, .glass-tile-pool-template .h5 {
+          font-size: 34px;
+          line-height: 42px;
+        }
+        .glass-tile-pool-template h6, .glass-tile-pool-template .h6 {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+
+      @media(min-width: 1023px ){
+        .glass-tile-pool-template h2, .glass-tile-pool-template .h2 {
+          font-size: 60px;
+          line-height: 73px;
+        }
+      }
+
+    /* GLOBAL */
+      .btn-yellow{
+        background: #ffdb62;
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        font-size: 30px;
+        border-radius:5px;
+        padding-bottom:8px;
+      }
+      @media (max-width: 1023px){
+        .top-mobile-hide{
+          display:none;
+        }
+      }
+      @media (min-width: 1024px){
+        .btn-yellow{
+          margin: unset;
+          padding-left: 50px;
+          padding-right: 50px;
+          max-width: max-content;
+          margin-top: 65px;
+        }
+
+        .grid-two{
+          display:grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-three{
+          display:grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 30px;
+        }
+
+
+
+      }
+    /* Contact Form */
+      .contact-form {
+        background: #000000c7 !important;
+        color: #FFF;
+      }
+      .contact-form form {
+        margin-top: -50px;
+      }
+      .contact-form h2 {
+        font-size: 20px;
+      }
+    /* Popup */
+      .section-1-form.contact-form {
+        width: 60%;
+        left: 8%;
+        z-index: 99;
+      }
+
+      
+      @media (min-width:1024px){
+        .section-1-form.contact-form {
+          width: 60%;
+          left: 14%;
+        }
+      }
+  /** Page Layout **/
+    /* Section 1 - Hero */  
+      .section-1 {
+        background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/23_GE_NATURE_BALI_BR_23_5d7bf556-6fe1-42e2-b4a0-03df39706172.png?v=1662646867);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 68px 30px;
+        text-align: center;
+      }
+      .section-1 p {
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-align: left;
+        max-width: 560px;
+      }
+
+
+      .section-1 .logo-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .section-1 .seen-on-tv {padding: 8px 0 34px 0;}
+      .section-1 .seen-on-tv span {
+        vertical-align: 25px;
+        padding: 0;
+        color: #FFFFFF;
+        margin:0;
+        font-family: 'Montserrat Bold';
+      }
+      .section-1 .seen-on-tv a img {
+        max-width: 68%;
+        display: inline-block;
+        background: white;
+        border-radius: 54%;
+      }
+      .section-1 .seen-on-tv a:nth-child(4) img {
+        background: black;
+      }
+      .section-1 .seen-on-tv {
+        font-size: 21px;
+        display:flex;
+      }
+      .section-1 .seen-on-tv  span{ 
+        min-width:200px;
+
+      }
+
+
+
+      .glass-tile-pool-template .section-1-form {
+        position: fixed;
+        top: 50px;
+      }
+      .section-1-form .contact-close-button {
+        text-align: right;
+      }
+      
+
+      @media(min-width: 500px ){
+        .section-1 h1 {
+          font-size: 69px;
+          line-height: 80px;
+        }
+      }
+      @media(min-width: 600px ){
+        .section-1 {padding: 90px 99px;}
+        .section-1 p {
+          font-size: 25px;
+          line-height: 30px;
+        }
+
+      }
+      @media(min-width:1024px ){
+        .section-1 {
+          display:grid;
+          grid-template-columns:1fr 1fr;
+          grid-column-gap: 10px;
+        }
+
+        
+        .section-1 .logo-box {
+          grid-gap: 42px;
+        }
+        .seen-on-tv {
+          margin-top: 107px;
+        }
+
+      .section-1 .seen-on-tv {
+        display:block;
+      }
+
+
+        .seen-on-tv span {
+          font-size: 44px;
+          margin-top: 40px;
+          margin-bottom: 20px;
+          
+        }
+        .section-1 h1 {
+          font-size: 60px;
+          line-height: 79px;
+        }
+        .section-1 {padding: 68px 30px;}
+        .section-1 p {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        .section-1 .bottom-medium-up-hide {
+          display:none;
+        }
+        .section-1 .seen-on-tv span {
+          display: block;
+          text-align: right;
+        }
+        .section-1 .seen-on-tv img{
+          width:100%;
+        }
+        .section-1 .seen-on-tv img {
+          max-width: 100%;
+          display: inline-block;
+        }
+      }
+      @media(min-width: 1600px ){
+        .section-1 h1 {
+          font-size: 65px;
+          line-height: 75px;
+        }
+        .section-1 {padding: 90px 99px;}
+        .section-1 p {
+          font-size: 25px;
+          line-height: 30px;
+        }
+      }
+
+    /* Section 2 - 3 Column */
+      .section-2 img {width:100%;}
+      .section-2 {
+        padding: 32px 32px 0 32px;
+        text-align: center;
+      }
+      .section-2 > div {
+        height: 250px;
+        margin-bottom: 25px;
+        overflow: hidden;
+      }
+      .section-2 > div > a {
+        position: relative;
+      }
+      .section-2 p.desktop-hover-text {
+        position: relative;
+        top: 220px;
+      }
+      .section-2 .image-link {
+        display: block;
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .section-2 .img-1 {
+        position: absolute;
+        top: 85px;
+        width: 100%;
+      }
+      .section-2 .dark-background {
+        width: 72%;
+        margin: auto;
+        background: rgb(0, 0, 0, 0.5);
+        padding: 9px 10px;
+        border: 3px solid rgb(255 255 255 / 60%);
+      }
+      .section-2 .dark-background  h3 {
+        color: #FFFFFF;
+        margin-bottom: 5px;
+      }
+      .section-2 .button-1,
+      .section-2 .button-2,
+      .section-2 .button-3{
+        position: relative;
+      }
+      .section-2 button.desktop-button {
+        background: #0000007d;
+        color: #FFF;
+        padding: 8px 30px;
+        display: block;
+        margin: auto;
+      }
+      .section-2 p.desktop-hover-text {
+        position: absolute;
+        top: 220px;
+        background: #00000070;
+        padding: 30px;
+        color: #FFF;
+        display: none;
+      }
+      
+      a#section2-button-1:hover + #section2-text-1,
+      #section2-text-1:hover {
+        display: block;
+      }
+      a#section2-button-2:hover + #section2-text-2,
+      #section2-text-2:hover {
+        display: block;
+      }
+      a#section2-button-3:hover + #section2-text-3,
+      #section2-text-3:hover {
+        display: block;
+      }
+
+      .section-2 .btn-box {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+      }
+      
+      @media (max-width:768px){
+
+      }
+
+
+      @media(min-width:500px ){
+        .section-2 > div {
+          height: 350px;
+        }
+        .section-2 .image-link{
+          height: 350px;
+        }
+      }
+
+      
+      @media(min-width:769px ){
+        .section-2 {
+          padding: 32px 55px;
+        }
+      }
+
+      @media(max-width:1023px){
+        .section-2 button.desktop-button{
+          display: none;
+        }
+      }
+      @media(min-width:1024px ){
+        .section-2 button.desktop-button {
+          display: block;
+          font-size: 21px;
+          font-family: 'Montserrat SemiBold';
+        }
+        .section-2 .image-link {
+          height: 788px;
+        }
+        .section-2 > div {
+          height: 788px;
+        }
+        .section-2 .dark-background {
+          width: 80%;
+          padding: 20px 0 0 0;
+        }
+        .section-2 h4 {
+          font-size: 35px;
+          line-height: 50px;
+        }
+        .section-2 .img-1 {
+          top: 19px;
+        }
+
+   
+      }
+
+
+    /* Section 3 - Icons with Text */
+      .section-3 {
+        padding: 0 32px;
+        text-align: center;
+      }
+      .section-3 h2 {
+        color: #0654AE;
+        text-align:center;
+      }
+      .section-3 .message {background: #F0F0EF;}
+      .section-3 .message h3 {
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: #707070;
+        text-align: left;
+      }
+      .section-3 .message p {
+        font-weight: 400;
+        font-size:17px!important;
+      }
+      .section-3 .message {
+         padding: 28px 22px 27px 23px;
+      }
+      .section-3 h3 {
+        text-transform: none!important;
+      }
+      .section-3 .six-icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+      }
+       .section-3 h2 {
+        color: #0654AE;
+      }
+      .section-3 .six-icons img{
+        max-width:90px;
+      }
+      .section-3 .six-icons > div:nth-child(2)  img{
+        max-width:88px;
+      }
+      .section-3 .six-icons > div:nth-child(3)  img{
+        max-width:95px;
+      }
+      .section-3 .six-icons > div:nth-child(6)  img{
+        max-width:82px;
+      }
+      @media (max-width: 475px) {
+        .section-3 .six-icons{
+          grid-template-columns: 1fr 1fr;
+        }
+
+    
+      }
+      @media (max-width: 1279px) and ( min-width: 1024px){
+        .section-3.grid-two{
+          display:block;
+        }
+      }
+      @media (min-width: 575px){
+        .section-3 .message p {
+          font-size: 24px;
+          line-height: 30px;
+          margin-bottom: 38px;
+
+        }
+
+   
+        .section-3 h2 {
+          font-size: 30px;
+          margin-left: 30px;
+        }
+
+      }
+
+      @media (min-width: 1024px){
+        .section-3 h2 {
+          text-align:left;
+        }
+      }
+      @media (min-width: 1280px){
+        .section-3 .message {
+          padding: 65px 38px 0 40px
+        }
+        .section-3.grid-two{
+          display:grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .section-3 h6 {
+          font-size: 10px;
+        }
+      }
+
+    /* Section 4 - CTA Slider */
+      .section-4 {
+        padding: 0;
+        text-align: center;
+      }
+      .section-4 .main-carousel.flickity-enabled.is-draggable {
+        height: 390px;
+        overflow:hidden;
+        
+      }
+      .section-4 .gallery {
+        width: 100%;
+        height: 390px;
+        margin-right: 10px;
+      }
+      .section-4 .gallery.carousel-cell.is-selected a {
+        position: relative;
+        top: 270px;
+        right: 150px;
+        color: white;
+        background: #000000;
+        padding: 6px 28px;
+        padding-top: 8px;
+        border: 0.5px solid #9e9e9e;
+        font-size: 12px;
+      }
+      
+      .section-4 button.flickity-button.flickity-prev-next-button.previous,
+      .section-4 button.flickity-button.flickity-prev-next-button.next {
+        background: transparent;
+      }
+      .section-4 svg.flickity-button-icon {
+        fill: #48A4FF;
+      }
+      .section-4 ol.flickity-page-dots li.dot {
+        background: #48A4FF;
+      }
+      .section-4 .flickity-page-dots{
+        bottom: 10px;
+      }
+      .section-4 .glass-tile-pool-template .section-4 h2 {
+        margin-bottom:15px;
+      }
+      .section-4 .gallery.carousel-cell.is-selected p {
+        position: relative;
+        top: 280px;
+        right: 50px;
+      }
+
+      @media(max-width:360px){
+        .section-4 .gallery.carousel-cell.is-selected p {
+          right: 0;
+        }
+      }
+      .section-4 .gallery p {
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF
+      }
+      .section-4 .gallery {
+        width: 100%;
+        height: 838px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: right;
+        background-repeat: no-repeat;
+      }
+
+      .section-4 .gallery:nth-child(1){
+        background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/4_GE-NATURE-AIR-FORCE-BR_26.jpg?v=1665609455);
+      }
+      .section-4 .gallery:nth-child(2){
+        background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/Bluestone_Pools._Perth_Western_Australia._BeGREEN_41x41_www.ctsupplies.com.au_3.jpg?v=1665610287);
+      }
+      .section-4 .gallery:nth-child(3){
+        background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/20_GE_503_VERDE_CARIBE_flipped.jpg?v=1665610608);
+      }
+      .glass-tile-pool-template .section-4 h2 {
+        margin-bottom: 10px;
+      }
+      @media (min-width: 769px){
+        .section-4 {
+          margin-top: 60px;
+          padding-top: 40px;
+          border-top: 1px solid #d1d1d1;
+        }
+        .section-4 .gallery {
+          height: 838px;
+        }
+
+        
+        .section-4 .gallery.carousel-cell.is-selected p {
+          top: 262px;
+          right: 70px;
+        }
+        .section-4 .gallery.carousel-cell.is-selected a {
+          top: 272px;
+        }
+      }
+
+      @media (min-width: 1440px){
+        .section-4 .main-carousel.flickity-enabled.is-draggable {
+          height: 600px;
+        }
+      }
+    /* Section 5 - 3 Image Promo */
+      .section-5 {
+        padding: 32px 40px;
+        text-align: center;
+      }
+      .section-5 h2 {
+        color: #262626 !important;
+        margin-bottom: 10px;
+      }
+      .section-5 h3 {
+        color: #FFFFFF;
+        margin:0;
+        font-size:60px;
+      }
+      .section-5 .features{
+        margin-bottom: 38px;
+      }
+      .section-5 .features a{
+        height: 360px;
+        background-size: cover;
+        display: block;
+        position: relative;
+      }
+      .section-5 .features a div{
+        position: absolute;
+        bottom: 15px;
+        left: 30px;
+      }
+      .section-5 .features a h2 {
+        color: white;
+      }
+      .section-5 .slider-title {
+        text-align: center;
+        margin-bottom:0;
+      }
+      .section-5 .divider {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-color: #B2B2B2;
+        margin-bottom: 26px;
+      }
+      @media(min-width:780px ){
+        .section-5 {
+          padding: 30px 55px 0 55px;
+          margin-top: 40px;
+          padding-top: 10px;
+        }
+      }
+      @media(min-width:1024px ){
+        .section-5 h2 {
+          text-align:left;
+          margin-bottom: 0;
+          color: black;
+          font-size: 40px;
+          line-height: 49px;
+        }
+        .section-5 .main-features {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-column-gap: 65px;
+        }
+        .section-5 .span-left {
+          grid-row-start: 1;
+          grid-row-end: span 2;
+        }
+        .section-5 .features.span-left a {
+          height: 100%;
+        }
+      }
+      @media(min-width: 1440px ){
+
+        .section-5 h3 {
+          font-size: 60px;
+          line-height: 73px;
+          margin-bottom:0;
+ 
+        }
+      }
+    /* Section 6 - Product Slider */
+      .section-6 {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .section-6 span:not("price-per-sq-foot"){
+        font-size: 24px;
+      }
+
+      
+
+      .section-6 .carousel-cell > div {
+        text-align: left;
+        margin: 50px 20px 0px 35px;
+        border: 0.2px solid #efefef;
+      }
+      .section-6 h2{
+        color:#262626 ;
+      }
+      .section-6 .carousel-cell > div > div {
+        padding: 10px 20px;
+      }
+      .section-6 button.flickity-button.flickity-prev-next-button.previous,
+      .section-6 button.flickity-button.flickity-prev-next-button.next {
+        background: transparent;
+      }
+      .section-6 .product-slider {
+        width: 90%;
+        margin: auto;
+      }
+      .section-6 h3{
+        font-size: 20px;
+        line-height: 29px;
+        text-transform: capitalize;
+      }
+      .section-6 .carousel-cell {
+        width: 100%;
+      }
+      .section-6 .product-info p {
+        color: #646464;
+        font-family: 'Montserrat Bold';
+      }
+      .section-6 .flickity-prev-next-button.previous {
+          left: -10px;
+      }
+      .section-6 .flickity-prev-next-button.next {
+          right: -19px;
+      }
+      @media(min-width:500px ){
+        .section-6 .carousel-cell {
+          width: 50%;
+        }
+        .section-6 .flickity-prev-next-button.previous {
+          left: -40px;
+        }
+        .section-6 .flickity-prev-next-button.next {
+          right: -40px;
+        }
+      }
+      
+      @media(min-width:1024px ){
+        
+        .section-6 h3 {
+          text-align:left;
+          margin-bottom: 0;
+          color: black;
+        }
+        .section-6 h2 {
+          text-align: left;
+          margin: 0 55px;
+          border-bottom: 1px solid #c9c9c9;
+        }
+      }
+      @media(min-width:1440px ){
+        .section-4 .main-carousel.flickity-enabled.is-draggabl,
+        .section-4 .gallery {
+          height: 600px;
+        }
+        .section-4 .gallery.carousel-cell.is-selected p {
+          top: 400px;
+          right: 80px;
+        }
+        .section-4 .gallery.carousel-cell.is-selected a {
+          top: 400px;
+          right: 180px;
+        }  
+        
+        .section-6 .carousel-cell {
+          width: 25%;
+        }
+      }
+
+
+    /* Section 7 - 2 columns with 2 rows */
+      .section-7 {
+        padding: 44px 40px;
+        text-align: center;
+        background: #D8F3FD;
+        position: relative;
+      }
+      .section-7 span:hover {
+        cursor: pointer;
+      }
+      .section-7 span {
+        display: block;
+        background-repeat: no-repeat;
+        height: 190px;
+        background-size: cover;
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .section-7 span div{
+        position: absolute;
+        width: 100%;
+        top: 4px;
+        padding: 20px;
+      }
+      .section-7 span div .h3{
+        padding: 20px;
+        border: 3px solid white;
+        margin-bottom: 0;
+        color: white;
+        margin-top: 25px;
+      }
+      .section-7 h4 {
+        font-family: "Montserrat Medium";
+        font-weight: 600;
+        font-style: normal;
+        font-size: 35px;
+        line-height: 43px;
+        color: #FFFFFF;
+        letter-spacing: 0px;
+      }
+      .section-7 .grid-two{
+        grid-column-gap:20px;
+      }
+      .section-7 .section-7-modal{
+        position: absolute;
+        top: 30px;
+        z-index: 2;
+        background: #ffffff;
+        padding: 30px;
+        width: 92%;
+      }
+      .section-7 .close-button {
+        text-align: right;
+        font-size: 20px;
+      }
+      .section-7 .section-7-modal h2 {
+        color: #000;
+        font-size: 20px;
+      }
+
+
+      @media (min-width: 500px){ 
+        .section-7 span {
+          height: 275px;
+        }
+
+        .section-7 span div .h3{ 
+          margin-top: 35px;
+        }
+      }
+
+      @media (min-width: 768px){
+        .section-7 {
+          padding: 44px 55px;
+        }
+        .section-7 span div .h3 {
+          padding: 20px;
+          border: 3px solid white;
+          margin-bottom: 0;
+          color: white;
+          margin-top: 5px;
+          height: 220px;
+          padding-top: 60px;
+        }
+      }
+
+    /* Section 8 - Text with Icons */ 
+      .section-8 {
+        padding:20px 30px;
+        text-align: center;
+      }
+
+
+      .section-8 .six-icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+      }
+      .section-8 h2 {
+        color: #0654AE;
+      }
+
+      .section-8 .six-icons .h6{
+        text-align: center;
+      }
+
+      .section-8 .six-icons img{
+        max-width:90px;
+      }
+      .section-8 .six-icons > div:nth-child(2) img{
+        max-width:57px;
+      }
+      .section-8 .six-icons > div:nth-child(3) img{
+        max-width:95px;
+      }
+      .section-8 .six-icons > div:nth-child(6) img{
+        max-width:55px;
+      }
+      
+      
+      @media (max-width: 475px) {
+        .section-8 .six-icons{
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      
+      .section-8-container {
+        background: #EFF5F7;
+        padding: 25px;
+      }
+      .section-8-container img {
+        width: 60px;
+      }
+      .section-8-container h2 {
+        margin-left: 10px;
+      }
+      
+      .section-8 .message {
+        order: -1;
+        background: #F0F0EF;
+      }
+
+      section-8 .message {background: #F0F0EF;}
+      .section-8 .message h3 {
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: #707070;
+        text-align: left;
+        text-transform: none!important;
+        }
+        .section-8 .message p {
+        font-weight: 400;
+        font-size:18px!important;
+        text-transform: none!important;
+      }
+      .section-8 h6 {
+        text-transform: none!important;
+      }
+      .section-8 a {
+        border: 1px solid #707070;
+        font-family: "Montserrat Bold";
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+        color: #FFFFFF;
+        background: #F4C732;
+        display: block;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+      }
+
+      .glass-tile-pool-template .section-8-form {
+        position: fixed;
+        top: 50px;
+      }
+      .section-8-form .contact-close-button {
+        text-align: right;
+      }
+
+      @media (max-width: 1279px) and ( min-width: 1024px){
+        .section-8.grid-two{
+          display:block;
+        }
+      }
+      @media (min-width: 780px){
+        .section-8 {
+          padding: 27px 54px 47px 54px;
+        }
+        .section-8 .message{
+          padding: 44px;
+        }
+
+      }
+      @media (min-width: 1024px){
+        .section-8 h3{
+          text-align:left;
+        }
+      }
+      @media (min-width: 1280px){
+        .section-8 a {
+          max-width: 90%;
+          margin: 20px auto 20px auto;
+          background: #F4C732;
+          color:#1051A1;
+        }
+        .section-8.grid-two{
+          display:grid;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    /* Section 9 - Video section */ 
+      .section-9 img {
+        width:100%
+      }
+
+      .home-section-9 .main-carousel {
+      }
+
+      .section-9 .banner iframe {
+        height: 360px;
+      }
+      @media (min-width: 1024px){
+        .section-9 .banner iframe {
+          height: 860px;
+        }
+      }
+
+
+</style>
+
+<div class="main glass-tile-pool-template">
+  <div class="section-1">
+    <div>
+      <h1>CREATE THE <br> ALL-GLASS TILE POOL OF YOUR DREAMS </h1>
+      <p> At AquaBlu, we pride ourselves on our ability to turn any pool into a true work of art. From stock selections and blends to custom artisan crafted designs, our team of experts will be able to bring your vision to life.</p>
+      <p>Contact us today for a free consultation and some free samples - we can't wait to help you!</p>
+      <a href="#" class="btn-yellow top-mobile-hide"> GET FREE TILE SAMPLES TODAY </a>
+       <p style="font-size:10px;text-align:center;"> REACH OUT TO OUR EXPERT TEAM ABOUT YOUR PROJECT | HASSLE FREE | NO OBLIGATION </p>
+     </div>
+     <div>
+      <div class="video">
+        <iframe width="100%" height="420" src="https://www.youtube.com/embed/4-QlXRzsAl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="seen-on-tv">
+        <span>AS SEEN ON…</span>
+        <div class="logo-box">
+          <a href="https://www.designingspaces.tv/emerging-trends-in-residential-design-innovative-tile-and-stone-solutions">
+           <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/logo-2.png">
+          </a>
+          <a href="https://www.poolmagazine.com/features/products/planning-the-ultimate-outdoor-area-for-entertaining">
+            <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/logo-3.png">
+          </a>
+          <a href="https://luxurypools.com/landscape-hardscape/how-to-create-a-backyard-oasis">
+              <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/logo-4.png">
+          </a>
+          <a href="https://www.elevatedmagazines.com/single-post/aquablu-mosaics-create-your-paradise">
+            <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/logo-1.png">
+          </a>
+
+          
+ 
+          
+
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn-yellow bottom-medium-up-hide"> GET FREE TILE SAMPLES TODAY </a>
+  
+  </div>
+  <div class="section-1-form contact-form" style="margin:80px;padding:40px;background-color:#b0c6db;display: none;">
+    <div class="contact-close-button">╳</div>
+    {% comment %} <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="hp-form" data-hs-cf-bound="true">
+      <input type="hidden" name="form_type" value="contact">
+      <input type="hidden" name="utf8" value="✓">
+      <h2 style="text-align:center;"> GET FIVE FREE SAMPLES</h2> 
+      <p>Kindly fill out the information below and one of our AquaPros will contact you within 24 to 48 hours to help you plan your pool paradise and claim your free samples!</p>
+      <div class="flex grid form-grid input-group">
+        <div class="grid__item medium-up--one-half one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormName">Name</label>
+          <input type="text" name="contact[name]" id="ContactFormName" required="" placeholder="Name*" value="">
+        </div>
+        <div class="grid__item medium-up--one-half one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormEmail">Email</label>
+          <input type="email" name="contact[email]" id="ContactFormEmail" required="" placeholder="Email*" value="" spellcheck="false" autocomplete="off" autocapitalize="off">
+        </div>
+        <div class="grid__item one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormPhone">Phone Number</label>
+          <input type="tel" name="contact[phone]" id="ContactFormPhone" required="" placeholder="Phone Number*" value="" pattern="[0-9\-]*">
+        </div>
+        <div class="grid__item anim-in">
+          <input hp-input="" name="birthday" type="text" placeholder="Birthday" value="">
+          <input type="submit" class="btn btn--primary" value="Submit">
+        </div>
+      </div>
+    </form> {% endcomment %}
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        region: "na1",
+        portalId: "21830690",
+        formId: "20d9f29d-c4fd-4359-80af-4681de4e2bd8",
+        version: "V2_PRERELEASE"
+      });
+    </script>
+  </div>
+  <div class="section-2 grid-three">
+    <div class="button-1">
+      <a id="section2-button-1" href="/collections/glass-pool-tile" class="image-link" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/es.png);">
+        <div class="img-1" >
+          <div class="dark-background">
+            <h2 class="h3"> STOCK COLORS <br/> & MIXES</h2>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="desktop-button">SHOP NOW</button>
+        </div>
+      </a>
+      <p id="section2-text-1" class="desktop-hover-text">Aquablu has a large selection of pool-rated, stock glass tiles on the web. Our team is passionate about helping you find the perfect mosaic glass tile for your project. We have a wide variety of colors, sizes, and shapes to choose from. With so many options, we have something for everyone. Browse our stock collection and find your dream tile today!</p>
+    </div>
+    <div class="button-2">
+      <a id="section2-button-2" href="/pages/custom-mosaics" class="image-link" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/nr.png);">
+        <div class="img-1" >
+          <div class="dark-background">
+            <h2 class="h3"> CUSTOM BLENDS <br/> & GRADIENTS</h2>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="desktop-button">SHOP NOW</button>
+        </div>
+      </a>
+      <p id="section2-text-2" class="desktop-hover-text">Aquablu Mosaics is excited to offer our custom glass mosaic program, which features artisan-made, luxury glass tiles. Whether you're looking for a specific mix of colors, or maybe a gradient design, we can turn your vision into reality. Our luxury mosaic tile manufacturers are made up of teams of skilled artisans that have years of experience creating beautiful pool-rated tile, and we're confident that we can create a one-of-a-kind design for your home or business.</p>
+    </div>
+    <div class="button-3">
+      <a id="section2-button-3" href="/pages/custom-mosaics" class="image-link" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/co.png);">
+        <div class="img-1" >
+          <div class="dark-background">
+            <h2 class="h3"> CUSTOM MADE <br/> MOSAICS</h2>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="desktop-button">SHOP NOW</button>
+        </div>
+      </a>
+      <p id="section2-text-3" class="desktop-hover-text"> A swimming pool is an ideal canvas for artistic expression, and inspiration can be found everywhere. Whatever you want - from vibrant tropical reef settings and aquatic imagery to contemporary art and abstract designs - we'll turn your ideas into a mosaic work of art. Contact us for a consultation and we'll recommend the best custom manufacturing approach for you so that you get exactly what you envision.</p>
+    </div>
+  </div>
+  <div class="section-3">
+    <div class="grid-two">
+      <div class="section-8-container">
+        <h2>WHY GLASS TILE?</h2>
+        <div class="six-icons">
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/RESISTANCE.png" />
+            <h3 class="h6">Weather Resistant</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/UNMATCHED.png" />
+            <h3 class="h6">Unmatched Brilliance & Shine</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/LONG_LASTING.png" />
+            <h3 class="h6">Longest Lasting Pool Finish</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/UNLIMITED.png" />
+            <h3 class="h6">Unlimited Designs</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/INCREASE.png" />
+            <h3 class="h6">Increases Property Value</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/WATER_ABSORBPTION.png" />
+            <h3 class="h6">Zero-Percent Water Absorption</h3>
+          </div>
+        </div>
+      </div>
+      <div class="message">
+        <h3> There are several benefits of choosing an all-glass tile pool over other types of swimming pool finishes. Glass tiles are non-porous and therefore resist staining and fading. They are also very easy to clean and maintain. Glass tiles add a luxurious look to any pool area and can increase the value of your home.</p>
+       <p> Another advantage of glass tile pools is that they are extremely durable. Glass tiles can last for decades with proper care and maintenance. When installed correctly, they have an indefinite lifespan! This makes glass mosaic tile perfect for residential applications in a pool or spa, as well as commercial applications.  Plus, glass is a 100% recyclable material, so you can feel good knowing you're making a safe choice for the environment.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section-4">
+    <h2 class="h5">BROWSE OUR GALLERY</h2>
+		<div class="main-carousel">
+			<div class="gallery carousel-cell">
+				<p>NATURE - AIR FORCE, 1” x 1”, Glass Tile</p>
+				<a href="https://www.aquablumosaics.com/collections/1-x-1-glass-mosaic-tile/products/nature-air-force-1x1-brick-glass-tile">SHOP NOW</a>
+			</div>
+			<div class="gallery carousel-cell">
+				<p>BLUE PLANET, 3/4” x 3/4”, Glass Tile</p>
+				<a href="https://www.aquablumosaics.com/collections/1-x-1-glass-mosaic-tile/products/blue-planet-blue-1-x-1">SHOP NOW</a>
+			</div>
+			<div class="gallery carousel-cell">
+				<p>FOG CARRIBBEAN GREEN, 1” x 1”, Glass Tile</p>
+				<a href="https://www.aquablumosaics.com/collections/1-x-1-glass-mosaic-tile/products/fog-caribbean-green-1-x-1">SHOP NOW</a>
+			</div>
+		</div>	
+  </div>
+  <div class="section-5">
+    <h2 class="h4">SHOP OUR FEATURED COLLECTIONS</h2>
+    <div class="divider"></div>
+    <div class="main-features">
+      <div class="features span-left">
+        <a href="/collections/glass-pool-tile" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/sect5-1.png);">
+          <div>
+            <h3>MIXED FORMAT</h3>
+          </div>
+        </a>
+      </div>
+      <div class="features">
+        <a href="/collections/glass-pool-tile?_=pf&pf_t_shape=shape%3ASmall_Square" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/wahoo_pool_sydney_australia7.png);">
+           <div>
+            <h3>SMALL FORMAT</h3>
+          </div> 
+        </a>
+      </div>
+      <div class="features">
+        <a href="/collections/1-x-1-glass-mosaic-tile" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/GlassTile_aquablumosaics.png);">
+          <div>
+            <h3>SQUARE FORMAT</h3>
+          </div> 
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="section-6">
+    <div class="slider-title">
+    	<h2 class="h3">SHOP OUR BEST SELLERS</h2>
+			<div class="divider"></div>
+    </div>
+    <div class="product-slider">
+      {% for product in collections["glass-pool-tile"].products limit: 10 %}
+        <div class="slide carousel-cell">
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/1205/7108/{{ product.images[0] }}" alt="">
+            <div class="product-info">
+              {% comment %} <img src="https://cdn.shopify.com/s/files/1/1205/7108/{{ product.images[0] }}" alt="stars"/> {% endcomment %}
+              <h3 class="product-title">{{ product.title }}</h3>
+              <p> {% include 'product-price' %}</p>
+            </div>
+          </div>
+        </div>
+
+
+      {% endfor %}
+    </div>
+  </div>
+  <div class="section-7">
+    <div class="section-7-main grid-two">
+      <div class="" style="backgorund-image">
+        <div>
+          <span class="modal-button modal-1" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/de-sol-santorini.png);">
+            <div>
+              <h2 class="h3">STARTING FROM<br/>SCRATCH</h2>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div class="" style="backgorund-image">
+        <div> 
+          <span class="modal-button modal-2" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/sec-7-2.png);">
+            <div>
+              <h2 class="h3">RECOMMENDED<br/>PRODUCTS</h2>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div class="" style="backgorund-image">
+        <div>
+          <span class="modal-button modal-3" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/pool_install_7_3.png);">
+            <div>
+              <h2 class="h3">INSTALLATION<br/>GUIDES</h2>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div class="" style="backgorund-image">
+        <div><a href="/blogs/news">
+          <span class="modal-3" style="background-image: url(https://cdn.shopify.com/s/files/1/1205/7108/files/sec_7_4.png);">
+            <div>
+              <h2 class="h3">LEARN MORE ON<br/>OUR BLOG</h2>
+            </div>
+          </span></a>
+        </div>
+      </div>
+    </div>
+    <div class="section-7-modal section-7-modal-a" style="display: none;">
+      <div class="close-button">╳</div>
+      <div class="view-1">
+        <h2>FOR NEW POOl CONSTRUCTION AND REMODELS </h2>
+        <p>AquaBlu works closely with today’s industry-leading professionals and offers the highest-performing products available to ensure a successful installation. Our all-tile pool installation guidelines and product recommendations follow procedures set forth by the TCNA (Tile Council of North America), and can be recommended for both new pools as well as pool remodels. If you are remodeling your pool we advise removing the existing plaster and tile, starting fresh from a clean concrete surface.
+        <br>It is important to note that not all pool builders or tile installers are experienced in finishing a concrete pool entirely in glass mosaic tile, and it is essential that installation is performed correctly and professionally the first time around. </p> 
+      </div>  
+    </div>
+    <div class="section-7-modal section-7-modal-b" style="display: none;">
+      <div class="close-button">╳</div>
+      <div class="view-1">
+        <h2>RECOMMENDED PRODUCTS</h2>
+        <h3 style="font-size:19px;"> 1) Primary Waterproofing </h3>
+          <p> Apply Basecrete Plus colloidal silicate / concrete densifier. This is an aqueous solution that penetrates the concrete shell, filling micro cracks and crevices to create a waterproof concrete structure when applied to saturation. If using a primary waterproofing product, it is recommended to pressure wash or clean the pool surface again to remove excess oils and silicate.</p>
+        <h3 style="font-size:19px;">  2) Mortar Bed Bond Coat </h3>
+          <p>Apply a single coat of Basecrete Bond Coat. This layer preps the surface for proper bonding of the mortar bed. Enjoy ease of application as this product may be rolled, sprayed or troweled.</p>
+        <h3 style="font-size:19px;"> 3) Approved Mortar Bed </h3>
+          <p>Apply Litokol Litoplan Smart leveling agent. This is a cement-based leveling layer, also known as brown coat, or float work. Mortar bed is applied to perfect the shell of the pool, making sure that it is level, plumb and ready for tile.</p>
+        <h3 style="font-size:19px;">4) Secondary Waterproofing </h3>
+         <p>Apply Basecrete Flexible Waterproofing Bondcoat or Litokol Aquamaster. Application of these products will ensure a leak-proof structure, which is especially important when protecting underlying structures. </p>    
+        <h3 style="font-size:19px;"> 5) Tile Bond Coat </h3>
+         <p>We recommend the following two tile adhesive products that may be utilized based on installer preferences and climatic conditions: Litokol K100 High-Performance Cementitious Tile Adhesive and Litokol Litoelastic EVO High-Performance Epoxy Tile Adhesive (preferred). Both products are pure white as to not alter the color of translucent, or semi translucent glass tiles. </p>
+         <p>They are highly flexible, allowing the tile to expand and contract with climatic changes, and are perfect for high stress areas. Enjoy additional waterproofing benefits, and efflorescence control when using Litoelastic due to its non-porous, water-repellent properties. </p>
+       <h3 style="font-size:19px;">  6) High-performance Epoxy Grout</h3>
+          <p>Choose from any of the Litokol high-performance, high-fashion epoxy-based grouts. For a more dramatic effect - consider adding lustrous Galaxy, Gold or Spotlight shimmer packs to enhance the overall finish. Benefits of Litokol epoxy grout include high bond and mechanical strength, crack resistance, stain resistance, UV resistance, water repellency, and flexibility.</p>
+       <p>  NOTE:
+          Procedure follows TCNA P602 and should be used in conjunction with EJ171, Movement Joints.
+          These are professional recommendations only; any variations of this guideline may be discussed with your installer.</p>
+
+       
+      </div>  
+    </div>
+    <div class="section-7-modal section-7-modal-c" style="display: none;">
+      <div class="close-button">╳</div>
+      <div class="view-1">
+        <h2>INSTALLATION GUIDES</h2>
+        <p> Our super friendly and knowledgable staff have tons of resources for installation help for glass tile, pool mosaics, epoxy grout and more. Reach out to them and receive links to helpful PDFs! </p>
+        <br> 
+    </div>
+  </div>
+  <div class="section-8">
+    <div class="section-8-main-container grid-two">
+      <div class="section-8-container">
+        <h2 class="h3">WHY AQUABLU?</h2>
+        <div class="six-icons">
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/Concierge_icon_1.png?v=1665599037" />
+            <h3 class="h6">Concierge service</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/Trade_Discounts_Icon_1.png?v=1665599037" />
+            <h3 class="h6">Trade Discounts</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/Luxury_High_performance_Icon_1.png?v=1665599037" />
+            <h3 class="h6">Luxury, high-performance products</h3>
+					</div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/Conservation_Icon_1.png?v=1665599037" />
+            <h3 class="h6">Ocean Conservation</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/Staff_Icon_2_1.png?v=1665599037" />
+            <h3 class="h6">Knowledgeable Staff</h3>
+          </div>
+          <div>
+            <img alt="img" src="https://cdn.shopify.com/s/files/1/1205/7108/files/One_stop_shop_icon_1.png?v=1665599037" />
+            <h3 class="h6">One-stop Shop</h3>
+          </div>
+        </div>
+      </div>
+      <div class="message">
+        <h3> At AquaBlu, we have one mission: to provide an exceptional online shopping experience for customers looking to renovate their pools and spas with all-glass tile. We offer the largest selection of mosaic glass tile, pool mosaics, and installation products available so you can create your ideal outdoor space.</p>
+        <p>Furthermore, we care about giving back. A portion of proceeds from every purchase goes towards conservation efforts like cleaning up our oceans and keeping wildlife safe. So don't wait any longer--contact us today! Our friendly staff are happy and ready to help you turn your vision into reality.
+        </p>
+      </div>
+    </div>
+    <a href="#" class="contact-cta">LET US HELP YOU PLAN YOUR POOL PARADISE</a>
+  </div>
+  <div class="section-8-form contact-form" style="margin:80px;padding:40px;background-color:#b0c6db;display: none;">
+    <div class="contact-close-button">╳</div>
+    {% comment %} <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="hp-form" data-hs-cf-bound="true">
+      <input type="hidden" name="form_type" value="contact">
+      <input type="hidden" name="utf8" value="✓">
+      <h2 style="text-align:center;"> LET US HELP YOU PLAN YOUR ALL GLASS TILE POOL PARADISE</h2> 
+      <div class="flex grid form-grid input-group">
+        <div class="grid__item medium-up--one-half one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormName">Name</label>
+          <input type="text" name="contact[name]" id="ContactFormName" required="" placeholder="Name*" value="">
+        </div>
+        <div class="grid__item medium-up--one-half one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormEmail">Email</label>
+          <input type="email" name="contact[email]" id="ContactFormEmail" required="" placeholder="Email*" value="" spellcheck="false" autocomplete="off" autocapitalize="off">
+        </div>
+        <div class="grid__item one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormPhone">Phone Number</label>
+          <input type="tel" name="contact[phone]" id="ContactFormPhone" required="" placeholder="Phone Number*" value="" pattern="[0-9\-]*">
+        </div>
+        <div class="grid__item one-whole anim-in">
+          <label class="visually-hidden" for="ContactFormMessage">Message</label>
+          <textarea rows="10" name="contact[body]" id="ContactFormMessage" required="" placeholder="Message*"></textarea>
+        </div>
+        <div class="grid__item anim-in">
+          <input hp-input="" name="birthday" type="text" placeholder="Birthday" value="">
+          <input type="submit" class="btn btn--primary" value="Submit">
+        </div>
+      </div>
+    </form> {% endcomment %}
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        region: "na1",
+        portalId: "21830690",
+        formId: "20d9f29d-c4fd-4359-80af-4681de4e2bd8",
+        version: "V2_PRERELEASE"
+      });
+    </script>
+  </div>
+  <div class="section-9">
+    <div class="banner">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/Group_316.png?v=1662067536"> {% endcomment %}
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/-ZCRN5NEvcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+
+<script src="{{ 'jquery.min.js' | asset_url }}"></script>
+
+<script>
+	$( document ).ready(function() {
+    /* === Modal Features === */
+      // Dynamic Modal
+        $( '.section-7-main .modal-1' ).on('click', function(){
+          $('.section-7-modal-a').show();
+        })
+        $( '.section-7-main .modal-2' ).on('click', function(){
+          $('.section-7-modal-b').show();
+        })
+        $( '.section-7-main .modal-3' ).on('click', function(){
+          $('.section-7-modal-c').show();
+        })
+
+        $( '.close-button' ).on('click', function(){
+          $('.section-7-modal-a').hide();
+          $('.section-7-modal-b').hide();
+          $('.section-7-modal-c').hide();
+        })
+
+      // Contact Form Modal
+        $( '.section-1 a.btn-yellow' ).on('click', function(){
+          $('.glass-tile-pool-template .section-1-form').show();
+        })
+
+        $( '.contact-close-button' ).on('click', function(){
+          $('.glass-tile-pool-template .section-1-form').hide();
+          $('.glass-tile-pool-template .section-8-form').hide();
+        })
+
+        $( '.section-8 .contact-cta' ).on('click', function(){
+          $('.glass-tile-pool-template .section-8-form').show();
+        })
+
+        
+
+    /* === Slider Features === */
+      // Hero Slider
+        // $('.main-carousel').flickity({
+        //   cellAlign: 'left',
+        //   contain: true,
+        //   wrapAround: true
+        // });
+
+      // Product Slider
+        // $('.product-slider').flickity({
+        //   cellAlign: 'left',
+        //   contain: true,
+        //   wrapAround: true,
+        //   groupCells: true,
+        //   groupCells: '50%',
+        //   pageDots: false
+        // });
+
+  });
+</script>
+
+<script>
+  var flkty = new Flickity( '#shopify-section-{{ section.id }} .main-carousel', {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: true
+  });
+  var flkty = new Flickity( '#shopify-section-{{ section.id }} .product-slider', {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: true,
+    groupCells: true,
+    groupCells: '50%',
+    pageDots: false
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section"
+}
+{% endschema %}

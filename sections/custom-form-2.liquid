@@ -1,0 +1,59 @@
+<style>
+  .custom-form{color:#000;padding:0;margin:0 7%}.custom-form-area{text-align:center}.custom-form textarea{width:100%}.custom-form h2{margin:50px 0}.custom-form input[type=email],.custom-form input[type=tel],.custom-form input[type=text]{text-align:left;background-color:#fff;border-color:gray;color:#000;opacity:1;margin:20px 2%;width:45%}.text-area,.text-center.field-letter label,.text-center.field-resume label{text-align:left}.custom-form input#FileUpload{width:250px}.custom-form fieldset.upload-field{background:#fff;border:none}.custom-form fieldset.upload-field input{border:none;color:#000}.custom-form button.custom-form-button{margin:60px auto;background:#55ccd9;border:none;border-radius:3px;padding:10px 30px;font-size:18px;color:#000}.text-center.field-letter,.text-center.field-resume{margin:20px 2%}::placeholder{text-align:left;color:#000;opacity:1}.custom-form input ::-webkit-input-placeholder{text-align:left;color:#fff;opacity:1}.custom-form input :-moz-placeholder{text-align:left;color:#fff;opacity:1}
+</style>
+
+<div class="page-width hero--padded custom-form">
+  {%- assign form_id = 'contact-' | append: section.id -%}
+  {%- form 'contact', id: form_id, class:"custom-form-area" -%}
+    {% comment %} <form class="custom-form-area"> {% endcomment %}
+
+    {%- if form.posted_successfully? -%}
+      <p class="note note--success">
+        {{ 'contact.form.post_success' | t }}
+      </p>
+    {%- endif -%}
+
+    {{ form.errors | default_errors }}
+
+    <div class="text-area">
+      <input type="text" id="name" name="contact[fname]" placeholder="First Name">
+      <input type="text" id="name" name="contact[lname]" placeholder="Last Name"><br><br>
+      <input type="email" id="email" name="contact[email]" placeholder="Email">
+      <input type="tel" id="phone" name="contact[phone]" placeholder="Phone Number"><br><br>
+      <input type="text" id="years" name="contact[years]" placeholder="Years Worked in Tile or Related">
+      <input type="text" id="salary" name="contact[salary]" placeholder="Expected Salary Range"><br><br>
+    </div>
+    
+    {% comment %} <div class="text-center field-letter">
+      <label for="letter">Cover Letter</label>
+      <fieldset class="upload-field">
+        <input type="file" id="FileUpload" name="file[cover-letter]" multiple="">
+      </fieldset>
+    </div>
+    <div class="text-center field-resume">
+      <label for="resume">Resume</label>
+      <fieldset class="upload-field">
+        <input type="file" id="FileUpload" name="file[resume]" multiple="">
+      </fieldset>
+    </div> {% endcomment %}
+      {% comment %} <input type="submit" class="custom-form-button" value="Submit"> {% endcomment %}
+        <button type="submit" class="btn custom-form-button">
+          Submit
+        </button>
+    </div>
+  {%- endform -%}
+	   
+  {% comment %} </form> {% endcomment %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Custom Form #2",
+  "presets": [
+    {
+      "name": "Custom Form #2"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,51 @@
+<style>
+	.custom-form{background:url('https://cdn.shopify.com/s/files/1/1205/7108/files/backround_image.jpg?v=1698173746') 0 0/cover no-repeat;color:#fff;padding:0;margin:0 7% 60px}.custom-form-area{background-color:#1a1a1aba;padding:60px 80px}.custom-form textarea{width:100%}.custom-form input[type=email],.custom-form input[type=tel],.custom-form input[type=text],.custom-form textarea{text-align:center;border-color:#fff;color:#fff;opacity:1}.custom-form input#FileUpload{width:300px}.custom-form fieldset.upload-field{background:#fff;border:none}.custom-form fieldset.upload-field input{border:none;color:#000}.custom-form fieldset.upload-field input[type=file]::file-selector-button{border:none;padding:0 16px;height:40px;margin-right:16px}.custom-form-checkbox{display:grid;justify-content:space-between;grid-template-columns:minmax(auto,400px) minmax(auto,400px);align-content:stretch}.custom-form button.custom-form-button{margin-top:30px;background:#55ccd9;border:none;border-radius:6px;padding:5px 40px;text-transform:uppercase;font-size:18px}::placeholder{text-align:center;color:#fff;opacity:1}.custom-form input ::-webkit-input-placeholder{text-align:center;color:#fff;opacity:1}.custom-form input :-moz-placeholder{text-align:center;color:#fff;opacity:1}
+</style>
+
+<div class="page-width hero--padded custom-form">
+
+	{%- assign form_id = 'contact-' | append: section.id -%}
+	{%- form 'contact', id: form_id, class: "custom-form-area"  -%}
+	
+
+        {%- if form.posted_successfully? -%}
+          <p class="note note--success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+        {%- endif -%}
+
+		{{ form.errors | default_errors }}
+
+		<div class="text-center">
+			<input type="text" id="name" name="contact[name]" autocapitalize="words" placeholder="What’s your name?" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+			<input type="email" id="email" name="contact[email]" autocorrect="off" autocapitalize="off" placeholder="Email" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+			<input type="tel" id="phone" name="contact[phone]" pattern="[0-9\-]*" placeholder="Phone Number" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+		</div>
+		<h2>What styles are you interested in?</h2>
+		<div class="custom-form-checkbox">
+			<label><input type="checkbox" name="contact[interested-in]" value="Traditional hand-made porcelain"> Traditional hand-made porcelain</label>
+			<label><input type="checkbox" name="contact[interested-in]" value="Premium hand-carved Venetian glass">  Premium hand-carved Venetian glass</label>
+			<label><input type="checkbox" name="contact[interested-in]" value="Custom printed glass tile"> Custom printed glass tile</label>
+			<label><input type="checkbox" name="contact[interested-in]" value="Waterjet cut graphics &amp; lettering">  Waterjet cut graphics &amp; lettering</label>
+			<label><input type="checkbox" name="contact[interested-in]" value="Glass pixel art mosaic murals">  Glass pixel art mosaic murals</label>
+			<label><input type="checkbox" name="contact[interested-in]" value="HD printed porcelain photo murals"> HD printed porcelain photo murals</label>
+			<label><input type="checkbox" name="contact[interested-in]" value="Custom blend &amp; gradient mosaics">  Custom blend &amp; gradient mosaics</label>
+			<label><input type="checkbox" name="contact[interested-in]" value="Custom grout &amp; color matching"> Custom grout &amp; color matching</label>
+		</div>
+		<div class="text-center field-tells-more">
+			<textarea name="contact[body]" rows="4" cols="80" placeholder="Tell us more">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+		</div>
+		<div class="text-center "> 
+			{% comment %} <h2>Upload a design, logo, or reference image</h2> {% endcomment %}
+		
+			{% comment %} <fieldset class="upload-field">
+				<input type="file" id="FileUpload" name="contact[file-reference]" multiple="">
+			</fieldset> {% endcomment %}
+			{% comment %} <input type="submit" class="custom-form-button" value="Submit"> {% endcomment %}
+			<button type="submit" class="custom-form-button">
+				Submit
+			</button>
+		</div>
+	{%- endform -%}
+	{% comment %} </form> {% endcomment %}
+</div>

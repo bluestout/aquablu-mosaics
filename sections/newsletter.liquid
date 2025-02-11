@@ -1,0 +1,130 @@
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+
+<div class="index-section newsletter-{{ section.id }} color-scheme-{{ section.settings.color_scheme }} {{ css_class }}">
+  <div class="page-width page-width--narrow text-center">
+    {%- for block in section.blocks -%}
+      <div class="theme-block" {{ block.shopify_attributes }}>
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+          {%- when 'title' -%}
+            {%- if block.settings.title != blank -%}
+              <p class="h2">{{ block.settings.title | escape }}</p>
+            {%- endif -%}
+          {%- when 'text' -%}
+            {%- if block.settings.text != blank -%}
+              <div class="rte" {{ block.shopify_attributes }}>
+                <div class="enlarge-text">
+                  {{ block.settings.text }}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- when 'form' -%}
+            {%- render 'newsletter-form', section_id: section.id, snippet_context: 'section' -%}
+          {%- when 'share_buttons' -%}
+            {%- render 'social-sharing' -%}
+        {%- endcase -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.newsletter.name",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "t:sections.newsletter.blocks.title.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.newsletter.blocks.title.settings.title.label",
+          "default": "Sign up and save"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.newsletter.blocks.text.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.newsletter.blocks.text.settings.text.label",
+          "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "name": "t:sections.newsletter.blocks.form.name",
+      "limit": 1
+    },
+    {
+      "type": "share_buttons",
+      "name": "t:sections.newsletter.blocks.share_buttons.name",
+      "limit": 1
+    }
+  ],
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter.settings.content"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:sections.newsletter.settings.color_scheme.label",
+      "default": "1",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.newsletter.settings.color_scheme.options.none.label"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.presets.email_signup.name",
+      "blocks": [
+        {
+          "type": "title"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

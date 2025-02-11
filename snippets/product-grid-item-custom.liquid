@@ -1,0 +1,29 @@
+{%- liquid
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+
+  assign product_tags = product.tags | join: ','
+  assign has_custom_label = false
+  assign custom_labels = ''
+  if product.metafields.theme.label and product.metafields.theme.label != blank
+    assign has_custom_label = true
+    assign custom_labels = product.metafields.theme.label.value
+  elsif product_tags contains '_label_'
+    for tag in product.tags
+      if tag contains '_label_'
+        assign tag_starts_with = tag | slice: 0
+        if tag_starts_with == '_'
+          assign has_custom_label = true
+          assign custom_label = tag | replace: '_label_', ''
+          assign custom_labels = custom_labels | append: custom_label | append: ','
+        endif
+      endif
+    endfor
+  endif
+-%}
+
+<div class="carousel-cell" data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}">
+	<div class="grid-product__title">{{ product.title }}</div>
+</div>

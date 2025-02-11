@@ -1,0 +1,148 @@
+{% comment %}--> Add Wish List {% endcomment %}
+<script defer>
+    function swymCallbackFn(swat){
+      // your API calls go here
+      document.addEventListener("swym:collections-loaded", function(){
+        console.log("swat.initializeActionButtons('body');------");
+        {% comment %} conosle.log(swat); {% endcomment %}
+        swat.initializeActionButtons("body");
+      });
+
+      document.addEventListener("swym:products-loaded", function(){
+        console.log("swat.initializeActionButtons('products');------");
+        {% comment %} conosle.log(swat); {% endcomment %}
+        swat.initializeActionButtons("body");
+      });
+
+      let event = 'sw:addedtocart';
+
+      // Define the event listener function
+      let listener = function(e) { 
+        var data = e.detail.d.productData;	
+        console.log("YAY! Added the product to cart", data);
+        // update button state here...
+        document.dispatchEvent(new CustomEvent('ajaxProduct:added', {
+          detail: {
+          }
+        }));
+      };
+
+      // Add listener for the 'addedtocart' event to the Swym Event Layer
+      swat.evtLayer.addEventListener(event, listener);
+    }
+    function renderWishlistHeader(swat) {
+      var spanElement = document.querySelector(".swym-hidden-counter");
+      var headerElements = document.querySelectorAll(".swym-wishlist");
+      if(swat && swat.renderWishlistCount){
+        swat.renderWishlistCount(spanElement, function(cnt, elem){
+          headerElements.forEach(function(hElement){
+            if(cnt == 0){
+              if(hElement.classList.contains("swym-added-header")){
+                hElement.classList.remove("swym-added-header");
+              }
+            }else{
+              if (!hElement.classList.contains("swym-added-header")) {
+                hElement.classList.add("swym-added-header");
+              }
+            }
+          })
+        });
+      }
+    }
+  
+    if(!window.SwymCallbacks){
+      window.SwymCallbacks = [];
+    }
+  
+    window.SwymCallbacks.push(renderWishlistHeader);
+    window.SwymCallbacks.push(swymCallbackFn);
+  </script>
+  <style>
+     a.swym-wishlist.swym-added-header i.icon.icon-swym-wishlist:after {
+      content: "\f004" !important;
+    } 
+  
+    /* hide the counter */
+    .swym-hidden-counter {
+      display: none;
+    }
+  a.swym-wishlist.header-item--wishlist svg path {
+      stroke: white;
+      stroke-width: 1.2px;
+      fill: none;
+  }
+  
+  a.swym-wishlist.header-item--wishlist:has(.swym-hidden-counter.show-badge) svg path {
+      fill: white !important;
+  }
+  .swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-delete-btn .swym-icon::before{
+    color: #000;
+    }
+    .swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-delete-btn{
+        background: #FFF;
+        border-radius: 50%;
+    }
+    .swym-ui-component .swym-wishlist-grid .swym-wishlist-item{
+        height: 100%;
+    }
+    #swym-custom-notification-content #swym-custom-image-container #swym-custom-image{
+      border-radius: 0%!important;
+    }
+    .swym-ui-component.swym-wishlist-page .swym-wishlist-container-title-bar{
+      padding: 20px;
+    }
+
+  @media only screen and (max-width: 900px) {
+    .swym-ui-component .swym-simple-wishlist-container .swym-wishlist-container-title-bar .swym-user-login-status{
+      right: 0px;
+    }
+    .swym-ui-component .swym-wishlist-detail-header .swym-action-container{
+      z-index: 5;
+    }
+    .swym-ui-component .swym-wishlist-detail-separator{
+      display: none!important;
+    }
+    #swym-wishlist-render-container .swym-ui-component .swym-wishlist-grid li{
+      width: 100%;
+      margin: 0;
+    }
+    .swym-ui-component .swym-wishlist-grid .swym-wishlist-image-wrapper{
+      max-height: max-content;
+    }
+    .swym-ui-component .swym-save-wishlist-modal .swym-save-wishlist-modal-dialog .swym-save-summary .swym-save-list-btn{
+      border: 1px solid;
+    }
+    .swym-ui-component .swym-clear-wishlist-modal .swym-clear-wishlist-modal-dialog .swym-cancel-clear-wishlist-btn{
+      border: 1px solid;
+    }
+    .swym-ui-component .swym-wishlist-product-detail-content .swym-wishlist-variants-container .swym-select select{
+      padding: 10px 30px 10px 12px;
+    }
+  }
+  @media only screen and (min-width: 900px) {
+    .swym-ui-component.swym-wishlist-page .swym-wishlist-detail .swym-action-bar{
+      padding: 0 20px;
+    }
+  }
+
+  </style>
+
+  {% comment %} {% if template.name == 'collection' %}
+    <script>    
+        document.addEventListener("DOMContentLoaded", (event) => {
+        console.log("dispatchEvent - swym-loaded-products");
+        document.dispatchEvent(new CustomEvent("swym:collections-loaded"));
+      });
+    </script>
+  {% endif %}
+  {% if template.name == 'product' %}
+    <script>    
+      document.addEventListener("DOMContentLoaded", (event) => {
+        console.log("dispatchEvent - swym-loaded-products");
+        document.dispatchEvent(new CustomEvent("swym:collections-loaded"));
+        {% comment %} document.dispatchEvent(new CustomEvent("swym:products-loaded")); {% endcomment %}
+      });
+    </script>
+  {% endif %} {% endcomment %}
+
+  {% comment %}<-- Add Wish List {% endcomment %}

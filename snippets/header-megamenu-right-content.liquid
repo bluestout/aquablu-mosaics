@@ -1,0 +1,110 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<div class="megamenu-area-menu-lists">          
+    <p class="h3">{{ link.title }} </p>
+    <div class="megamenu-area-menu-list menu-{{ link.title }}">
+        {%- for sub_link in link.links -%}
+            {% if link.title == "Color" %}
+                {% assign color_value = menu_settings.blue_color %}
+                {% if sub_link.title == "Blue" %}
+                    {% assign color_value = menu_settings.blue_color %}
+                {% elsif sub_link.title == "Green" %}
+                    {% assign color_value = menu_settings.green_color %}
+                {% elsif sub_link.title == "White" %}
+                    {% assign color_value = menu_settings.white_color %}
+                {% elsif sub_link.title == "Gray" %}
+                    {% assign color_value = menu_settings.gray_color %}
+                {% elsif sub_link.title == "Black" %}
+                    {% assign color_value = menu_settings.black_color %}
+                {% elsif sub_link.title == "Taupe" %}
+                    {% assign color_value = menu_settings.taupe_color %}
+                {% elsif sub_link.title == "Multicolor" %}
+                    {% assign color_value = menu_settings.multi_color %}
+                {% elsif sub_link.title == "Aqua" %}
+                    {% assign color_value = menu_settings.aqua_color %}
+                {% elsif sub_link.title == "Red" %}
+                    {% assign color_value = menu_settings.red_color %}
+                {% elsif sub_link.title == "Purple" %}
+                    {% assign color_value = menu_settings.purple_color %}
+                {% elsif sub_link.title == "Orange" %}
+                    {% assign color_value = menu_settings.orange_color %}
+                {% elsif sub_link.title == "Yellow" %}
+                    {% assign color_value = menu_settings.yellow_color %}
+                {% elsif sub_link.title == "Brown" %}
+                    {% assign color_value = menu_settings.brown_color %}
+                {% elsif sub_link.title == "Cream" %}
+                    {% assign color_value = menu_settings.cream_color %}
+                {% elsif sub_link.title == "Beige" %}
+                    {% assign color_value = menu_settings.beige_color %}
+                {% elsif sub_link.title == "Metallic" %}
+                    {% assign color_value = menu_settings.metallic_color %}
+                {% endif %}
+                <a class="color-item" href="{{ sub_link.url }}"> 
+                {% if sub_link.title == "Multicolor" %}
+                    {% if menu_settings.multicolor_icon != blank %}
+                        <img class="color-icon color-multicolor-icon" src="{{ menu_settings.multicolor_icon | img_url: '2x' }}" alt="{{ menu_settings.multicolor_icon.alt | escape }}" width="{{ menu_settings.multicolor_icon.width }}" height="{{ menu_settings.multicolor_icon.height }}" loading="lazy">
+                    {% else %}
+                        <div class="color-icon color-multicolor-icon" style="background-color:{{ color_value }}"></div>
+                    {% endif %}
+                {% else %}
+                    <div class="color-icon" style="background-color:{{ color_value }}"></div>
+                {% endif %}
+                <p>{{ sub_link.title }}</p>
+                </a>
+            {% endif %}
+            {% if link.title == "Shape" %}
+                {% assign shape_icon = menu_settings.square_icon %}
+                {% if sub_link.title == "Square" %}
+                    {% assign shape_icon = menu_settings.square_icon %}
+                {% elsif sub_link.title == "Fish Scale" %}
+                    {% assign shape_icon = menu_settings.fish_scale_icon %}
+                {% elsif sub_link.title == "Hexagon" %}
+                    {% assign shape_icon = menu_settings.hexagon_icon %}
+                {% elsif sub_link.title == "Penny Round" %}
+                    {% assign shape_icon = menu_settings.penny_round_icon %}
+                {% elsif sub_link.title == "Pebble" %}
+                    {% assign shape_icon = menu_settings.pebble_icon %}
+                {% elsif sub_link.title == "Mixed" %}
+                    {% assign shape_icon = menu_settings.mixed_icon %}
+                {% elsif sub_link.title == "Diamond" %}
+                    {% assign shape_icon = menu_settings.diamond_icon %}
+                {% elsif sub_link.title == "Herringbone" %}
+                    {% assign shape_icon = menu_settings.herringbone_icon %}
+                {% elsif sub_link.title == "Linear" %}
+                    {% assign shape_icon = menu_settings.linear_icon %}
+                {% elsif sub_link.title == "Rectangular" %}
+                    {% assign shape_icon = menu_settings.rectangular_icon %}
+                {% elsif sub_link.title == "Oval" %}
+                    {% assign shape_icon = menu_settings.oval_icon %}
+                {% elsif sub_link.title == "Arabesque" %}
+                    {% assign shape_icon = menu_settings.arabesque_icon %}
+                {% elsif sub_link.title == "Mosaic" %}
+                    {% assign shape_icon = menu_settings.mosaic_icon %}
+                {% elsif sub_link.title == "Subway" %}
+                    {% assign shape_icon = menu_settings.subway_icon %}
+                {% elsif sub_link.title == "Round" %}
+                    {% assign shape_icon = menu_settings.round_icon %}
+                {% elsif sub_link.title == "Triangular" %}
+                    {% assign shape_icon = menu_settings.triangular_icon %}
+                {% elsif sub_link.title == "Interlocking" %}
+                    {% assign shape_icon = menu_settings.interlocking_icon %}
+                {% elsif sub_link.title == "Square Stone" %}
+                    {% assign shape_icon = menu_settings.square_stone_icon %}
+                {% elsif sub_link.title == "Rectangle" %}
+                    {% assign shape_icon = menu_settings.rectangle_icon %}
+                {% endif %}
+                <a class="shape-item" href="{{ sub_link.url }}"> 
+                    <img class="shape-item-icon" src="{{ shape_icon | img_url: '2x' }}" alt="{{ shape_icon.alt | escape }}" width="50px" height="50px" loading="lazy">
+                    <p>{{ sub_link.title }}</p>
+                </a>
+                
+            {% endif %}
+            {% if link.title == "Styles" %}
+                
+                <a class="style-item" href="{{ sub_link.url }}"> 
+                    {{ sub_link.title }}
+                </a>
+                
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

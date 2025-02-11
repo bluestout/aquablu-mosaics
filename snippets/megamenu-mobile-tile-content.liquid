@@ -1,0 +1,208 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<style>
+    .slide-nav__sub-dropdown.mobile-tile-content-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding-left: 47px;
+      flex-direction: column;
+      max-height: 350px;
+      margin-bottom: 30px;
+    }
+    .slide-nav__sub-dropdown.mobile-tile-content-list.Shape{
+      display: flex;
+      max-height: 450px;
+      padding-left: 30px;
+    }
+    .slide-nav__sub-dropdown.mobile-tile-content-list.Styles{
+      max-height: unset;
+    }
+    .slide-nav__sub-dropdown.mobile-tile-content-list.Color.porcelain-tile{
+      max-height: 400px;
+    }
+    .mobile-tile-content-list .color-item{
+      display: flex;
+      gap: 10px;
+      width: 40%;
+    }
+    .mobile-tile-content-list .color-item .color-icon{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: solid 1px;
+    }
+    .mobile-tile-content-list .color-item p{
+    }
+    .mobile-tile-content-list .shape-item{
+      display: flex;
+      width: 48%;
+      height: 50px;
+      align-items: center;
+      gap: 10px;
+    }
+    .mobile-tile-content-list .shape-item .shape-item-icon{
+      width: 40px;
+    }
+    .mobile-tile-content-list .shape-item p{
+      /*font-size: 16px;
+      font-family: FuturaBook;*/
+    }
+    .mobile-tile-content-list .style-item{
+      width: 100%;
+  
+    }
+   </style>
+  <button type="button"
+      class="slide-nav__button js-toggle-submenu"
+      data-target="tier-3-{{ grand_child_link_id }}"
+      {% if link.active or link.child_active %}data-active="true"{% endif %}>
+      <span class="slide-nav__link slide-nav__sublist-link">
+        <span>{{ childlink.title }}</span>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+        <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+      </span>
+    </button>
+    <ul class="slide-nav__dropdown"
+      data-parent="tier-3-{{ grand_child_link_id }}"
+      data-level="3">
+      <li class="slide-nav__item_back">
+        <button type="button"
+          class="slide-nav__button js-toggle-submenu"
+          data-target="tier-2-{{ child_list_handle }}">
+          <span class="slide-nav__link slide-nav__link--back">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+            <a href="/pages/glass-mosaic-tile" class="slide-nav__link_title">
+             <span class="slide-back-link">{{ childlink.title }}</span>
+            </a>
+          </span>
+        </button>
+      </li>
+  
+      {% assign list_handle = childlink.title | handleize %}
+  
+      {%- for childlink in glass_menu.links -%}
+        {%- liquid
+          assign grand_child_list_handle = childlink.title | handleize
+          assign grand_child_link_id = grand_child_list_handle | append: forloop.index
+        -%}
+  
+        <div class="slide-nav_sub-heading featured-menu-multi open {{ list_handle }}" data-scope-id="{{ list_handle }}" data-content-id="{{ list_handle | append: grand_child_link_id }}">
+          <span class="slide-nav_sub-preicon"></span>
+          <span class="slide-nav_sub-title"> {{ childlink.title }}</span>
+          <svg class="slide-nav_sub-icon open-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+              <path d="M9.69189 5.73L5.19189 1.5L0.691895 5.73" stroke="black"/>
+          </svg>
+            <svg class="slide-nav_sub-icon close-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+              <path d="M9.69189 0.49998L5.19189 4.72998L0.691895 0.49998" stroke="black"/>
+            </svg>
+          </div>
+  
+        <ul id="{{ list_handle | append: grand_child_link_id }}" class="slide-nav__sub-dropdown featured-menu-content open-flex mobile-tile-content-list {{ childlink.title }} {{ list_handle }}" style="display:flex;">
+          {%- for sub_link in childlink.links -%}
+              {% if childlink.title == "Color" %}
+                  {% assign color_value = menu_settings.blue_color %}
+                  {% if sub_link.title == "Blue" %}
+                      {% assign color_value = menu_settings.blue_color %}
+                  {% elsif sub_link.title == "Green" %}
+                      {% assign color_value = menu_settings.green_color %}
+                  {% elsif sub_link.title == "White" %}
+                      {% assign color_value = menu_settings.white_color %}
+                  {% elsif sub_link.title == "Gray" %}
+                      {% assign color_value = menu_settings.gray_color %}
+                  {% elsif sub_link.title == "Black" %}
+                      {% assign color_value = menu_settings.black_color %}
+                  {% elsif sub_link.title == "Taupe" %}
+                      {% assign color_value = menu_settings.taupe_color %}
+                  {% elsif sub_link.title == "Multicolor" %}
+                      {% assign color_value = menu_settings.multi_color %}
+                  {% elsif sub_link.title == "Aqua" %}
+                      {% assign color_value = menu_settings.aqua_color %}
+                  {% elsif sub_link.title == "Red" %}
+                      {% assign color_value = menu_settings.red_color %}
+                  {% elsif sub_link.title == "Purple" %}
+                      {% assign color_value = menu_settings.purple_color %}
+                  {% elsif sub_link.title == "Orange" %}
+                      {% assign color_value = menu_settings.orange_color %}
+                  {% elsif sub_link.title == "Yellow" %}
+                      {% assign color_value = menu_settings.yellow_color %}
+                  {% elsif sub_link.title == "Brown" %}
+                      {% assign color_value = menu_settings.brown_color %}
+                  {% elsif sub_link.title == "Cream" %}
+                      {% assign color_value = menu_settings.cream_color %}
+                {% elsif sub_link.title == "Beige" %}
+                    {% assign color_value = menu_settings.beige_color %}
+                {% elsif sub_link.title == "Metallic" %}
+                    {% assign color_value = menu_settings.metallic_color %}
+                  {% endif %}
+                  <a class="color-item" href="{{ sub_link.url }}"> 
+                  {% if sub_link.title == "Multicolor" %}
+                    {% if menu_settings.multicolor_icon != blank %}
+                        <img class="color-icon color-multicolor-icon" src="{{ menu_settings.multicolor_icon | img_url: '2x' }}" alt="{{ menu_settings.multicolor_icon.alt | escape }}" width="{{ menu_settings.multicolor_icon.width }}" height="{{ menu_settings.multicolor_icon.height }}" loading="lazy">
+                    {% else %}
+                        <div class="color-icon color-multicolor-icon" style="background-color:{{ color_value }}"></div>
+                    {% endif %}
+                  {% else %}
+                      <div class="color-icon" style="background-color:{{ color_value }}"></div>
+                  {% endif %}
+                  <p>{{ sub_link.title }}</p>
+                  </a>
+              {% endif %}
+              {% if childlink.title == "Shape" %}
+                  {% assign shape_icon = menu_settings.square_icon %}
+                  {% if sub_link.title == "Square" %}
+                      {% assign shape_icon = menu_settings.square_icon %}
+                  {% elsif sub_link.title == "Fish Scale" %}
+                      {% assign shape_icon = menu_settings.fish_scale_icon %}
+                  {% elsif sub_link.title == "Hexagon" %}
+                      {% assign shape_icon = menu_settings.hexagon_icon %}
+                  {% elsif sub_link.title == "Penny Round" %}
+                      {% assign shape_icon = menu_settings.penny_round_icon %}
+                  {% elsif sub_link.title == "Pebble" %}
+                      {% assign shape_icon = menu_settings.pebble_icon %}
+                  {% elsif sub_link.title == "Mixed" %}
+                      {% assign shape_icon = menu_settings.mixed_icon %}
+                  {% elsif sub_link.title == "Diamond" %}
+                      {% assign shape_icon = menu_settings.diamond_icon %}
+                  {% elsif sub_link.title == "Herringbone" %}
+                      {% assign shape_icon = menu_settings.herringbone_icon %}
+                  {% elsif sub_link.title == "Linear" %}
+                      {% assign shape_icon = menu_settings.linear_icon %}
+                  {% elsif sub_link.title == "Rectangular" %}
+                      {% assign shape_icon = menu_settings.rectangular_icon %}
+                  {% elsif sub_link.title == "Oval" %}
+                      {% assign shape_icon = menu_settings.oval_icon %}
+                  {% elsif sub_link.title == "Arabesque" %}
+                      {% assign shape_icon = menu_settings.arabesque_icon %}
+                  {% elsif sub_link.title == "Mosaic" %}
+                      {% assign shape_icon = menu_settings.mosaic_icon %}
+                  {% elsif sub_link.title == "Subway" %}
+                      {% assign shape_icon = menu_settings.subway_icon %}
+                  {% elsif sub_link.title == "Round" %}
+                      {% assign shape_icon = menu_settings.round_icon %}
+                  {% elsif sub_link.title == "Triangular" %}
+                      {% assign shape_icon = menu_settings.triangular_icon %}
+                  {% elsif sub_link.title == "Interlocking" %}
+                      {% assign shape_icon = menu_settings.interlocking_icon %}
+                  {% elsif sub_link.title == "Square Stone" %}
+                      {% assign shape_icon = menu_settings.square_stone_icon %}
+                  {% elsif sub_link.title == "Rectangle" %}
+                      {% assign shape_icon = menu_settings.rectangle_icon %}
+                  {% endif %}
+                  <a class="shape-item" href="{{ sub_link.url }}"> 
+                      <img class="shape-item-icon" src="{{ shape_icon | img_url: '2x' }}" alt="{{ shape_icon.alt | escape }}" width="50px" height="50px" loading="lazy">
+                      <p>{{ sub_link.title }}</p>
+                  </a>
+                  
+              {% endif %}
+              {% if childlink.title == "Styles" %}
+                  
+                  <a class="style-item" href="{{ sub_link.url }}"> 
+                      {{ sub_link.title }}
+                  </a>
+                  
+              {% endif %}
+          {% endfor %}
+        </ul>       
+      {% endfor %}
+  
+    </ul>      

@@ -1,0 +1,29 @@
+{%- liquid
+  assign dark_search_bg = true
+  assign lightness = settings.color_header_search | color_brightness
+
+  if lightness > 100
+    assign dark_search_bg = false
+  endif
+-%}
+
+<form action="{{ routes.search_url }}" method="get" role="search"
+  class="site-header__search-form" data-dark="{{ dark_search_bg }}">
+  <input type="hidden" name="type" value="{{ settings.search_type }}">
+  <input type="hidden" name="options[prefix]" value="last">
+  <input type="search" name="q" value="{{ search.terms | escape | replace: '*', '' }}" placeholder="{{ 'general.search.placeholder' | t }}" class="site-header__search-input" aria-label="{{ 'general.search.placeholder' | t }}">
+  <button type="submit" class="text-link site-header__search-btn site-header__search-btn--submit">
+    {% comment %} --> Icons weight and sizing  {% endcomment %}
+    {% comment %} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg> {% endcomment %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <path d="M27 27L20.97 21M23.58 14.29C23.58 16.1274 23.0352 17.9235 22.0144 19.4512C20.9936 20.979 19.5427 22.1697 17.8451 22.8728C16.1476 23.576 14.2797 23.76 12.4776 23.4015C10.6755 23.043 9.02021 22.1583 7.72098 20.859C6.42175 19.5598 5.53697 17.9045 5.17851 16.1024C4.82005 14.3003 5.00402 12.4324 5.70716 10.7349C6.4103 9.03735 7.60102 7.58645 9.12876 6.56565C10.6565 5.54485 12.4526 5 14.29 5C15.51 5 16.718 5.24029 17.8451 5.70716C18.9722 6.17403 19.9964 6.85832 20.859 7.72098C21.7217 8.58363 22.406 9.60776 22.8728 10.7349C23.3397 11.862 23.58 13.07 23.58 14.29Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/>
+    </svg>
+     {% comment %} <-- Icons weight and sizing {% endcomment %}
+    <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+  </button>
+
+  <button type="button" class="text-link site-header__search-btn site-header__search-btn--cancel">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"/></svg>
+    <span class="icon__fallback-text">{{ 'general.accessibility.close' | t }}</span>
+  </button>
+</form>

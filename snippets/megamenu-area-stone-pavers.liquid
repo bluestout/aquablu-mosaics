@@ -1,0 +1,34 @@
+<style>
+  .aquablue-menu-grandchildlink{position:relative}.megamenu-area{position:absolute;top:-10px;left:146px;display:none}.stone .megamenu-area-1{grid-template-columns:200px max-content;width:580px}.megamenu-area.stone .megamenu-area-1-R{display:grid;grid-template-columns:max-content max-content;grid-gap:40px;justify-content:space-between}.megamenu-area-1 img{width:100%}.megamenu-area-1 ul{list-style-type:none;margin:0}.megamenu-area-1 h3{font-size:16px;font-weight:900;margin-bottom:10px}.megamenu-area-1 a{letter-spacing:.98px;font-size:14px}.two-col-list{display:grid;grid-template-columns:1fr 1fr}.grid-list-1-2{display:grid;grid-template-columns:1fr 2fr}  
+</style>
+
+<div class="megamenu-area stone fadeIn">
+  <div class="megamenu-area-1">
+    <div class="megamenu-area-1-L">
+      <p class="h2">SHOP BY</p>
+      <a class="shop-all-link" href="{{ section.settings.mm_stone_link1 }}"><b>{{ section.settings.mm_stone_text1 }}</b></a>
+      <div class="mega-menu__image">
+        <a href="{{ section.settings.mm_stone_link2 }}"> 
+          <img src="{{ section.settings.mm_stone_image | img_url: '2x' }}" alt="{{ section.settings.mm_stone_image.alt | escape }}" width="{{ section.settings.mm_stone_image.width }}" height="{{ section.settings.mm_stone_image.height }}" loading="lazy">
+          <p class="megamenu-text-overlay">{{ section.settings.mm_stone_text2 }}</p>
+        </a>
+      </div>
+    </div>
+     <div class="megamenu-area-1-R"> 
+      {%- for link in linklists.stone-tile-mm.links -%}
+        <div class="megamenu-area-1-1">          
+          <p class="h3"> {{ link.title }} </p>
+          <ul class="marg-bttm">
+            {%- for childlink in link.links -%}
+               <li value=""{%- if childlink.title == "View All >>" -%} class="mag-top-10" {%- endif -%}>
+                 {%- if childlink.title == "." -%} <p> {{ childlink.title }} </p> {%- else -%}
+                   <a href="{{ childlink.url }}"> {{ childlink.title }} </a>
+                 {%- endif -%}    
+               </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div> 
+</div>

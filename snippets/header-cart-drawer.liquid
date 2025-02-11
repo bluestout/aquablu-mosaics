@@ -1,0 +1,482 @@
+{%- assign product__object = false -%}
+
+{%- liquid
+  assign productObject1 = all_products["cornhole-luxury-outdoor-game"]
+  assign collectionCustom1 = productObject1.metafields.custom.collection.value.url
+  assign productObject2 = all_products["bianco-assoluto-evo100-tile-grout"]
+  assign collectionCustom2 = productObject1.metafields.custom.collection.value.url
+  assign productObject3 = all_products["green-epoxy-hard-rubber-float-tile-installation-product"]
+  assign collectionCustom3 = productObject1.metafields.custom.collection.value.url
+  assign productObject4 = all_products["ibiza-sun-lounger-modern-pool-lounge-chair"]
+  assign collectionCustom4 = productObject1.metafields.custom.collection.value.url
+  assign productObject5 = all_products["verano-9-umbrella-pool-and-patio-umbrella"]
+  assign collectionCustom5 = productObject1.metafields.custom.collection.value.url
+  assign productObject6 = all_products["ledge-lounger-laze-pillow-pool-accessory"]
+  assign collectionCustom6 = productObject1.metafields.custom.collection.value.url
+  assign productObject7 = all_products["kai-shelf-lounger-luxury-pool-lounge-chair"]
+  assign collectionCustom7 = productObject1.metafields.custom.collection.value.url
+-%}
+
+{% for item in cart.items %}
+  {% if item.product.metafields.custom.upsell.value %}
+    {%- assign product__object = item.product.metafields.custom.upsell.value -%}
+  {% endif %}
+  {%- assign productType = item.product.type -%} 
+{% endfor %}
+
+{% if product__object == false %}
+  {% case productType %}
+    {% when 'Pool Mosaic'  %}
+      {% assign product__object = all_products["kai-shelf-lounger-luxury-pool-lounge-chair"] %}
+    {% when 'Games'   %}
+      {% assign product__object = all_products["aquabar-floating-pool-bar"] %}
+    {% when 'Glass Tile' or 'Porcelain Tile' or 'Stone & Marble' or 'Subway Tile' or 'Ceramic Tile' or 'Terazzo Tile' or 'Zellige Tile' or 'Encaustic Tile' or 'Decorative Tile' or 'Mixed Materials Tile' or 'Pearl Shell Tile' %}
+      {% assign product__object = all_products["bianco-assoluto-evo100-tile-grout"] %}
+    {% when 'Artificial Grass' or 'Pool Floats' %}
+      {% assign product__object = all_products["cornhole-luxury-outdoor-game"] %}
+    {% when 'Pool Accessories' or 'Pool Care' %}
+      {% assign product__object = all_products["ledge-lounger-laze-pillow-pool-accessory"] %}
+    {% when 'Installation Product' %}
+      {% assign product__object = all_products["green-epoxy-hard-rubber-float-tile-installation-product"] %}
+    {% when 'Outdoor Paver' %}
+      {% assign product__object = all_products["ibiza-sun-lounger-modern-pool-lounge-chair"] %}
+    {% when 'Pebble Tile' %}
+      {% assign product__object = all_products["ice-2-x-6-glass-tile"] %}
+    {% when 'Fire & Water Products' %}
+      {% assign product__object = all_products["prism-hardscapes-moderno-2-fire-bowl-gas-fire-pit"] %}
+    {% when 'Umbrellas' %}
+      {% assign product__object = all_products["signature-chaise-deep-luxury-pool-lounge-chair"] %}
+    {% when 'Fire Pits' %}
+      {% assign product__object = all_products["the-outdoor-plus-maya-30-square-fire-and-water-bowl-powder-coated-metal-pool-feature"] %}
+    {% when 'Pool & Patio Furniture' %}
+      {% assign product__object = all_products["verano-9-umbrella-pool-and-patio-umbrella"] %}
+    {% else %}
+      {% assign product__object = all_products["verano-9-umbrella-pool-and-patio-umbrella"] %}
+  {% endcase %}
+{% endif %}
+
+{% if product__object %}
+  {%- assign product__url = product__object.url -%}
+  {%- assign product__img = product__object.featured_image | img_url  -%}
+  {%- assign product__name = product__object.title -%}
+  {%- assign product__id = product__object.id -%}
+  {%- assign product__variant__id = product__object.selected_or_first_available_variant.id -%}
+  {%- assign product__price = product__object.price | money  -%}
+  {% if product__object.metafields.custom.collection_url %}
+      {% assign collectionDetails = product__object.metafields.custom.collection_url %}
+      {% assign product__collection_object = collections[collectionDetails].url %}
+      {% assign product__collection_title = collections[collectionDetails].title %}
+      
+      {%- assign featured__collection = product__collection_object -%}
+
+  {% else %}
+    {%- assign featured__collection = "/collections/tile-grout" -%}
+  {% endif %}
+{% endif %}
+
+<form action="{{ routes.cart_url }}" method="post" novalidate data-location="header" class="cart__drawer-form">
+  <div class="cart__scrollable">
+    <div data-products></div>
+    {%- render 'cart-recommendations', location: 'drawer' -%}
+
+    {% if settings.cart_notes_enable %}
+      <div class="cart__item-row">
+        <label for="CartHeaderNote" class="add-note">
+          {{ 'cart.general.note' | t }}
+          <span class="note-icon note-icon--open" aria-hidden="true">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-pencil" viewBox="0 0 64 64"><defs><style>.cls-1,.cls-2{fill:none;stroke:#000;stroke-width:2px}.cls-1{stroke-miterlimit:10}</style></defs><path class="cls-1" d="M52 33.96V58H8V14h23.7"/><path class="cls-1" d="M18 47l13-5 24-24-8-8-24 24-5 13zM23 34l8 8"/><path id="svg_2" data-name="svg 2" class="cls-2" d="M47 10l1-1a5.44 5.44 0 0 1 7.82.18A5.52 5.52 0 0 1 56 17l-1 1"/></svg>
+          </span>
+          <span class="note-icon note-icon--close">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"/></svg>
+            <span class="icon__fallback-text">{{ 'general.accessibility.close' | t }}</span>
+          </span>
+        </label>
+        <textarea name="note" class="input-full cart__note hide" id="CartHeaderNote">{{ cart.note }}</textarea>
+      </div>
+    {% endif %}
+  </div>
+  {% if product__object == false %}
+    <div class="cart-upsell-area cart-upsell-area-default">
+    </div>
+  {% else %}
+    <div class="cart-upsell-area cart-upsell-area-default">
+    </div>
+    {% comment %} <div class="">
+      <div class="ajaxcart__upsells cart-upsell-area cart-upsell-area-custom">
+        <h3>We recommend adding: </h3>
+        <div class="ajaxcart__product anim-selector anim-in in-view">
+          <div class="grid grid--half-gutters flex">
+            <div class="grid__item one-fifth">
+              <a href="{{ product__url }}" class="ajaxcart__product-image">
+                <img src="{{ product__img }}" alt="{{ product__name }}">
+              </a>
+            </div>
+            <div class="grid__item four-fifths">
+              <div class="ajaxcart__product-name-wrapper">
+                <a href="{{ product__url }}" class="ajaxcart__product-name h4">{{ product__name }}</a>
+                <span class="product-price__price product-price__price-{{product__id}}">
+                  From&nbsp;
+                  <span id="ProductPrice-{{product__id}}">
+                    {{ product__price }}
+                  </span>
+                </span>
+                <div class="ajaxcart-item--quantity flex flex--align-center">
+                  <div class="qty-step" data-variant-id="{{product__variant__id}}">
+                    <a href="#" class="upsell__qty-step-btn" data-qty-change="dec">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="icon" viewBox="0 0 20 20"><path d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"></path></svg>
+                    </a>
+                    <div class="qty-step-count bfx-minicart-product-qty">1</div>
+                    <a href="#" class="upsell__qty-step-btn" data-qty-change="inc">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="icon" viewBox="0 0 20 20"><path d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"></path></svg>
+                    </a>
+                  </div>  
+                  {% if product__name contains "Grout" %}
+                    <span class="grout-product__how-much-link" id="js-grout-product__how-much-link" href="javascript:void(0);">How much do I need?</span>
+                  {% endif %}                </div>
+                <div class="flex flex--align-center upsell-buttons">
+                  <a href="javascript:void(0);" data-quick-add="{{ product__variant__id }}" class="btn btn--primary ajaxcart__upsell-add">
+                    <span class="">Add To Cart</span>
+                  </a>
+                  <a class="upsell-all-link" href="{{featured__collection}}">View More Colors</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> {% endcomment %}
+  {% endif %}
+  <div class="cart__footer">
+    <div class="cart__item-sub cart__item-row cart__item--subtotal">
+      <div>{{ 'cart.general.subtotal' | t }}</div>
+      <div data-subtotal>{{ cart.total_price | money }}</div>
+    </div>
+
+    <div data-discounts></div>
+
+    {% if settings.cart_terms_conditions_enable %}
+      <div class="cart__item-row cart__terms">
+        <input type="checkbox" id="CartTermsHeader" class="cart__terms-checkbox">
+        <label for="CartTermsHeader" class="text-label">
+          <small>
+            {% if settings.cart_terms_conditions_page != blank %}
+              {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
+            {% else %}
+              {{ 'cart.general.terms' | t }}
+            {% endif %}
+          </small>
+        </label>
+      </div>
+    {% endif %}
+
+    <div class="cart__item-row cart__checkout-wrapper payment-buttons">
+      <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
+        {{ 'cart.general.checkout' | t }}
+      </button> 
+
+      <a class="btn cart-drawer" href="{{ routes.cart_url }}">
+        <span class="site-nav__icon-label {% if hide_icon_labels %} icon__fallback-text{% endif %}">
+         View Cart
+        </span> 
+      </a>
+
+      {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+        <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+      {% endif %}
+    </div>
+
+    <div class="cart__item-row--footer text-center">
+      <small>{{ 'cart.general.shipping_at_checkout' | t }}</small>
+    </div>
+  </div>
+</form>
+
+<div class="site-header__cart-empty">{{ 'cart.general.empty' | t }}</div>
+
+<script>
+  /* ================================================ *\
+      Upsell Product Feature
+    \* ================================================ */
+  /* ===== Init ===== */
+  let activeUpsell = {
+    product__url: "url",
+    product__img: "image url",
+    product__name: "name",
+    product__id: "id",
+    product__variant__id: "v-id",
+    product__price: "30.99",
+    featured__collection: "/",
+    product__collection_title: "",
+    product_totalInventory: "",
+    product_available: ""
+  };
+
+  let choices = {
+    product1: {
+      product__url: '{{ productObject1.url }}',
+      product__img: '{{ productObject1.featured_image | img_url }}',
+      product__name: '{{ productObject1.title }}',
+      product__id: '{{ productObject1.id }}',
+      product__variant__id: '{{ productObject1.selected_or_first_available_variant.id }}',
+      product__price: '{{ productObject1.price | money  }}',
+      featured__collection: '/collections/outdoor-games',
+      product__collection_title: 'View Outdoor Games',
+      product_totalInventory: "{{productObject1.first_available_variant.inventory_quantity}}",
+      product_available: "{{productObject2.first_available_variant.available}}"
+    },
+    product2: {
+      product__url: '{{ productObject2.url }}',
+      product__img: '{{ productObject2.featured_image | img_url }}',
+      product__name: '{{ productObject2.title }}',
+      product__id: '{{ productObject2.id }}',
+      product__variant__id: '{{ productObject2.selected_or_first_available_variant.id }}',
+      product__price: '{{ productObject2.price | money  }}',
+      featured__collection: '/collections/tile-grout',
+      product__collection_title: 'View More Colors',
+      product_totalInventory: "{{productObject2.first_available_variant.inventory_quantity}}",
+      product_available: "{{productObject2.first_available_variant.available}}"
+
+    },
+    product3: {
+      product__url: '{{ productObject3.url }}',
+      product__img: '{{ productObject3.featured_image | img_url }}',
+      product__name: '{{ productObject3.title }}',
+      product__id: '{{ productObject3.id }}',
+      product__variant__id: '{{ productObject3.selected_or_first_available_variant.id }}',
+      product__price: '{{ productObject3.price | money  }}',
+      featured__collection: '/pages/installation',
+      product__collection_title: 'View All Installation Products',
+      product_totalInventory: "{{productObject3.first_available_variant.inventory_quantity}}",
+      product_available: "{{productObject2.first_available_variant.available}}"
+    },
+    product4: {
+      product__url: '{{ productObject4.url }}',
+      product__img: '{{ productObject4.featured_image | img_url }}',
+      product__name: '{{ productObject4.title }}',
+      product__id: '{{ productObject4.id }}',
+      product__variant__id: '{{ productObject4.selected_or_first_available_variant.id }}',
+      product__price: '{{ productObject4.price | money  }}',
+      featured__collection: '/pages/outdoor-living-products',
+      product__collection_title: 'View Outdoor Living Products',
+      product_totalInventory: "{{productObject4.first_available_variant.inventory_quantity}}",
+      product_available: "{{productObject2.first_available_variant.available}}"
+    },
+    product5: {
+      product__url: '{{ productObject5.url }}',
+      product__img: '{{ productObject5.featured_image | img_url }}',
+      product__name: "{{ productObject5.title }}",
+      product__id: '{{ productObject5.id }}',
+      product__variant__id: '{{ productObject5.selected_or_first_available_variant.id }}',
+      product__price: '{{ productObject5.price | money  }}',
+      featured__collection: '/pages/outdoor-living-products',
+      product__collection_title: 'View Outdoor Living Products',
+      product_totalInventory: "{{productObject5.first_available_variant.inventory_quantity}}",
+      product_available: "{{productObject2.first_available_variant.available}}"
+    },
+    product6: {
+      product__url: '{{ productObject6.url }}',
+      product__img: '{{ productObject6.featured_image | img_url }}',
+      product__name: '{{ productObject6.title }}',
+      product__id: '{{ productObject6.id }}',
+      product__variant__id: '{{ productObject6.selected_or_first_available_variant.id }}',
+      product__price: '{{ productObject6.price | money  }}',
+      featured__collection: '/pages/outdoor-living-products',
+      product__collection_title: 'View Outdoor Living Products',
+      product_totalInventory: "{{productObject6.first_available_variant.inventory_quantity}}",
+      product_available: "{{productObject2.first_available_variant.available}}"
+    },
+    product7: {
+      product__url: '{{ productObject7.url }}',
+      product__img: '{{ productObject7.featured_image | img_url }}',
+      product__name: '{{ productObject7.title }}',
+      product__id: '{{ productObject7.id }}',
+      product__variant__id: '{{ productObject7.selected_or_first_available_variant.id }}',
+      product__price: '{{ productObject7.price | money  }}',
+      featured__collection: '/pages/outdoor-living-products',
+      product__collection_title: 'View Outdoor Living Products',
+      product_totalInventory: "{{productObject7.first_available_variant.inventory_quantity}}",
+      product_available: "{{productObject2.first_available_variant.available}}"
+    }
+  }
+
+  /* ===== Modules ===== */
+  let groutToggle = "";
+
+  function printUpsellArea(productTypeCheck) {
+
+    let approvedGroutTypes = ["Ceramic Tile", "Glass Tile", "Porcelain Tile", "Stone Tile"];
+    if (approvedGroutTypes.find((str) => str === productTypeCheck)) {
+      groutToggle = '<span class="grout-product__how-much-link" id="js-grout-product__how-much-link" href="javascript:void(0);">How much do I need?</span>';
+    } else {
+      groutToggle = "";
+    }
+
+
+    document.querySelector('.cart-upsell-area-default').innerHTML = `<div class="ajaxcart__upsells cart-upsell-area cart-upsell-area-custom">
+      <h3>Discover More </h3>
+      <div class="ajaxcart__product anim-selector anim-in in-view">
+        <div class="grid grid--half-gutters flex">
+          <div class="grid__item one-fifth">
+            <a href=" ${activeUpsell.product__url}" class="ajaxcart__product-image">
+              <img src=" ${activeUpsell.product__img}" alt=" ${activeUpsell.product__name}">
+            </a>
+          </div>
+          <div class="grid__item four-fifths">
+            <div class="ajaxcart__product-name-wrapper ${activeUpsell.product_available} - ${activeUpsell.product_totalInventory}">
+              <a href=" ${activeUpsell.product__url}" class="ajaxcart__product-name h4"> ${activeUpsell.product__name}</a>
+              <span class="product-price__price product-price__price-${activeUpsell.product__id}">
+                From&nbsp;
+                <span id="ProductPrice-${activeUpsell.product__id}">
+                   ${activeUpsell.product__price}
+                </span>
+              </span>
+              
+              <div class="ajaxcart-item--quantity flex flex--align-center">
+                <div class="qty-step" data-variant-id="${activeUpsell.product__variant__id}">
+                  <a href="#" class="upsell__qty-step-btn" data-qty-change="dec">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="icon" viewBox="0 0 20 20"><path d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"></path></svg>
+                  </a>
+                  <div class="qty-step-count bfx-minicart-product-qty">1</div>
+                  <a href="#" class="upsell__qty-step-btn" data-qty-change="inc">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"></path></svg>
+                  </a>
+                </div>  
+               ${groutToggle}          
+              </div>
+              <div class="flex flex--align-center upsell-buttons">
+
+                <a href="javascript:void(0);" data-quick-add="${activeUpsell.product__variant__id}" class="btn btn--primary ajaxcart__upsell-add">
+                  <span class="">Add To Cart</span>
+                </a>
+                <a class="upsell-all-link" href="${activeUpsell.featured__collection}">${activeUpsell.product__collection_title}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function adjustUpsellProduct() {
+    let productTypeCheck = false;
+
+    var elFirstCartItem = document.querySelectorAll('.cart__items .cart__item')[0];
+    var productType = String(elFirstCartItem.querySelector('.cart-drawer-product-type').textContent.trim());
+
+    switch (productType) {
+      case 'Artificial Grass':
+      case 'Fire & Water Products':
+        activeUpsell = choices.product1;
+        break;
+      case 'Ceramic Tile':
+      case 'Glass Tile':
+      case 'Porcelain Tile':
+      case 'Stone Tile':
+        activeUpsell = choices.product2;
+        productTypeCheck = productType;
+        break;
+      case 'Installation Product':
+      case 'LVT':
+        activeUpsell = choices.product3;
+        break;
+      case 'Outdoor Paver':
+        activeUpsell = choices.product4;
+        break;
+      case 'Pool & Patio Furniture':
+        activeUpsell = choices.product5;
+        break;
+      case 'Pool Accessories':
+      case 'Pool Care':
+        activeUpsell = choices.product6;
+        break;
+      case 'Pool Mosaic':
+        activeUpsell = choices.product7;
+        break;
+      default:
+        activeUpsell = choices.product7;
+
+    }
+    printUpsellArea(productTypeCheck);
+  }
+
+
+
+
+  // Add to cart Function
+  function addItemToCart(productObj) {
+    fetch('/cart/add.js', {
+      body: JSON.stringify(productObj),
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'xmlhttprequest'
+      },
+      method: 'POST'
+    })
+    .then((response) => response.json())
+    .then(function(response) {
+      document.dispatchEvent(new CustomEvent('cart:build'));
+    }).catch(function(err) {
+      /* uh oh, we have error. */
+      console.error(err)
+    });
+  }
+
+  /* ===== Onload ===== */
+
+  document.addEventListener('click', event => {
+
+    /* Opening cart, adjust upsells based on first product type */
+    var elHeaderCartTrigger = event.target.closest('#HeaderCartTrigger');
+    if (!!elHeaderCartTrigger) {
+      var totalItems = parseInt(document.querySelector('.cart__items').dataset.count);
+      if (totalItems > 0) {
+        adjustUpsellProduct();
+      } 
+    }
+
+    var elQtyDecrease = event.target.closest('.upsell__qty-step-btn[data-qty-change="dec"]');
+    if (!!elQtyDecrease) {
+      var currentQty = Number(document.querySelector('.cart-upsell-area .qty-step-count').textContent);
+      var newValue = currentQty - 1;
+      document.querySelector('.cart-upsell-area .qty-step-count').textContent = newValue;
+    }
+
+    var elQtyIncrease = event.target.closest('.upsell__qty-step-btn[data-qty-change="inc"]');
+    if (!!elQtyIncrease) {
+      var currentQty = Number(document.querySelector('.cart-upsell-area .qty-step-count').textContent);
+      var newValue = currentQty + 1;
+      document.querySelector('.cart-upsell-area .qty-step-count').textContent = newValue;
+    }
+
+    var elUpsellAtcButton = event.target.closest('.cart-upsell-area .ajaxcart__upsell-add');
+    if (!!elUpsellAtcButton) {
+      addToCartUpsellProduct();
+    }
+  });
+
+  // printUpsellArea   
+  /* ===== Listener ===== */
+  document.addEventListener('ajaxProduct:added', function(evt) {
+    var totalItems = parseInt(document.querySelector('.cart__items').dataset.count);
+    if (totalItems > 0) {
+      adjustUpsellProduct();
+    }
+  });
+
+
+  // Add to cart - Onclick listener
+  function addToCartUpsellProduct() {
+    let upsellVariantId = document.querySelector('.cart-upsell-area .qty-step').dataset.variantId;
+    let upsellQty = document.querySelector('.cart-upsell-area .qty-step-count').textContent
+
+    var productObj = {
+      "id": upsellVariantId,
+      "quantity": Number(upsellQty),
+    }
+
+    setTimeout(() => {
+      addItemToCart(productObj);
+    }, 1000);
+  }
+</script>

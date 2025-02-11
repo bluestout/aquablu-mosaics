@@ -1,0 +1,141 @@
+{%- assign css_class = section.settings.css_class -%}
+
+{%- if section.settings.title != blank -%}
+  
+  <style>
+    @media only screen and (max-width:768px){.col-header-links .header-links-text h1{color:{{section.settings.title_color_mobile}};margin:0 20px 15px}}@media only screen and (min-width:769px){.col-header-links .header-links-text h1{color:{{section.settings.title_color}}}.col-header-links .header-links-text p{color:{{section.settings.text_color}}}}@media only screen and (min-width:768px){.header-links-right{background-color:{{section.settings.bg_color_right}}}}.header-text-links{display:none}.header-text-links>.metafield-rich_text_field>h2,.header-text-links>.metafield-rich_text_field>h3{display:none!important}@media screen and (min-width:769px){.header-text-links>.metafield-rich_text_field>h2,.header-text-links>.metafield-rich_text_field>h3{display:block!important}.header-mobile-title-links{display:none!important}.header-text-links{display:block}}
+  </style> 
+
+  <div class="index-section page-width {{ css_class }} col-header-links">
+    <div class="header-links-left" style="background-color: {{section.settings.bg_color}}">
+      {% comment %} <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/Screen_Shot_2023-09-28_at_10.04.49_AM.png?v=1695909909" alt="Collection Header Link Image"> {% endcomment %}
+      <div class="image-wrap small--hide" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+        {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img class="feature-row__image"
+          srcset="{{ section.settings.image | img_url: '1000x'}} 2x, {{ section.settings.image | img_url: '500x'}}"
+          src="{{ section.settings.image | img_url: '500x'}}"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          alt="{{ section.settings.image.alt }}">
+      </div>
+        <div class="image-wrap medium-up--hide" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image2.aspect_ratio }}%;">
+          {%- assign img_url2 = section.settings.image2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <img class="feature-row__image"
+            srcset="{%- if section.settings.image2.width >= 360 -%}{{ section.settings.image2 | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if section.settings.image2.width >= 540 -%}{{ section.settings.image2 | img_url: '540x' }} 540w,{%- endif -%}
+              {%- if section.settings.image2.width >= 768 -%}{{ section.settings.image2 | img_url: '768x' }} 768w,{%- endif -%}
+              {%- if section.settings.image2.width >= 1024 -%}{{ section.settings.image2 | img_url: '1024x' }} 1024w,{%- endif -%}
+              {%- if section.settings.image2.width >= 1280 -%}{{ section.settings.image2 | img_url: '1280x' }} 1280w,{%- endif -%}
+              {%- if section.settings.image2.width >= 1536 -%}{{ section.settings.image2 | img_url: '1536x' }} 1536w,{%- endif -%}
+              {{ section.settings.image2 | img_url: 'master' }} {{ section.settings.image2.width }}w"
+            src="{{ section.settings.image2 | img_url: '1536x' }}"
+            sizes="100vw"
+            width="{{ section.settings.image2.width }}"
+            height="{{ section.settings.image2.height }}"
+            alt="{{ section.settings.image2.alt }}">
+        </div>
+      <div class="header-links-text">
+        <h1>{{section.settings.title}}</h1>
+        <p>{{section.settings.custom_text}}</p>
+      </div>
+    </div>
+    <div class="header-links-right">
+      <div class="header-links-links" style="display:block!important;">
+        {% comment %} <h2 class="header-mobile-title-links">Related Links <em>⌵</em></h2> {% endcomment %}
+        <p class="header-mobile-title-links h2">Related Links <em>⌵</em></p> {% comment %} Product Titles on Collection Pages {% endcomment %}
+        {% comment %} 
+        <ul>
+          <li><a href="/">Patio Furniture ></a></li>
+          <li><a href="/">Pool Floats & Accessories ></a></li>
+          <li><a href="/">Fire & Water Features ></a></li>
+          <li><a href="/">Fire Pits, Bowls, % Tables ></a></li>
+        </ul> {% endcomment %}
+        {% comment %} --> Product Titles on Collection Pages {% endcomment %}
+        <div class="header-text-links">{{section.settings.rich_text | replace:"<h2>RELATED LINKS</h2>", "<p class='h2'>RELATED LINKS</p>"}}</div>
+        {% comment %} <-- Product Titles on Collection Pages {% endcomment %}
+        <p class="header-mobile-text-links">{{section.settings.custom_text}}</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var elCollectionHeaderLinks = document.querySelector('.header-mobile-title-links');
+    elCollectionHeaderLinks.addEventListener('click', function(el) {
+      document.querySelector('.header-text-links').classList.toggle('show');
+    });
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection Header Links",
+  "settings": [ 
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.text-and-image.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.text-and-image.settings.title.label",
+      "default": "Title"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#080707"
+    },
+    {
+      "type": "color",
+      "id": "title_color_mobile",
+      "label": "Title Color (Mobile)",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "custom_text",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#080707"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_right",
+      "label": "Right Area Background color",
+      "default": "#A6DBE2"
+    },
+    {
+      "type": "richtext",
+      "id": "rich_text",
+      "label": "Rich Text"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Header Links"
+    }
+  ]
+}
+{% endschema %}

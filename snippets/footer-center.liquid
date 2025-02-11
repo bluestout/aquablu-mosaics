@@ -1,0 +1,27 @@
+
+{% comment %} /*-->Header/Footer and 5k Reviews*/ {% endcomment %}
+<div class="center-area text-center">
+  <div class="center-area-1 small--hide">
+    <img src="{{ block.settings.image_logo | img_url: 'master' }}" loading="lazy" width="{{ block.settings.image_logo.width }}" height="{{ block.settings.image_logo.height }}" alt="{{ block.settings.image_logo.alt | default: shop.name }}">
+    {% if block.settings.link_top != blank %}
+      <a class="top-link" href="{{ block.settings.link_top }}"> {{ block.settings.text_top }} </a>
+    {% endif %}
+  </div>
+
+  <div class="center-area-2">
+    {% comment %} <div class="footer__title">
+      {{ block.settings.title }}
+    </div> {% endcomment %}
+    {% comment %} <div>
+      {{ block.settings.text_top }}
+    </div> {% endcomment %}
+      {% comment %} <br> {% endcomment %}
+    <div>
+      {{ block.settings.text_bottom }}
+    </div>
+    <div class="center-area-2-form">
+      {%- render 'newsletter-form', section_id: section.id -%}
+    </div>  
+  </div>
+</div>
+{% comment %} /*<--Header/Footer and 5k Reviews*/ {% endcomment %}

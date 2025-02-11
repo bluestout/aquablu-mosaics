@@ -1,0 +1,107 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<style>
+  .megamenu-area-pool-mosaics .megamenu-area-container{
+      display: flex;
+      height: auto;
+  }
+  .megamenu-area-pool-mosaics .megamenu-area-left{
+      flex-basis: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1%;
+      margin-top: -25px;
+      height: 480px;
+      {% comment %} column-gap: 22%; {% endcomment %}
+  }
+  .megamenu-area-pool-mosaics .megamenu-area-menu-content{
+    text-align: left;
+  }
+  .megamenu-area-pool-mosaics .megamenu-area-menu-icon{
+    align-self: center;
+    width: 15%;
+  }
+  .megamenu-area-pool-mosaics .megamenu-area-menu-icon img{
+    width: 80px;
+    height: 80px;
+  }
+  .megamenu-area-pool-mosaics .megamenu-area-menu-icon .icon-title{
+    font-family: FuturaBook;
+    font-size: 16px;
+  }
+  .megamenu-area-pool-mosaics .megamenu-area-divider{
+      width: 1px;
+      border-left: solid 1px #A5A5A5;
+      height: 180px;
+      margin-top: 7%;
+  }
+  .megamenu-area-pool-mosaics .megamenu-area-right{
+      display: flex;
+      flex-basis: 30%;
+      padding-left: 5%;
+      column-gap: 5%;
+  }
+
+</style>
+
+<div class="megamenu-area megamenu-area-pool-mosaics">
+  <div class="megamenu-area-container page-width">  
+      <div class="megamenu-area-left"> 
+        {%- for link in menu_link.links -%}
+         <div class="megamenu-area-menu-icon"> 
+          <a href="{{ link.url }}"> 
+            {% assign icon_image = menu_settings.icon_turtles %}
+            {% if link.title == "Turtles" %}
+              {% assign icon_image = menu_settings.icon_turtles %}
+            {% elsif link.title == "Sharks & Rays" %}
+              {% assign icon_image = menu_settings.icon_sharks_rays %}
+            {% elsif link.title == "Dolphins" %}
+              {% assign icon_image = menu_settings.icon_dolphins %}
+            {% elsif link.title == "Mermaids" %}
+              {% assign icon_image = menu_settings.icon_mermaids %}
+            {% elsif link.title == "Reef Scenes" %}
+              {% assign icon_image = menu_settings.icon_reef_scenes %}
+            {% elsif link.title == "Whales" %}
+              {% assign icon_image = menu_settings.icon_whales %}
+            {% elsif link.title == "Medallions" %}
+              {% assign icon_image = menu_settings.icon_medallions %}
+            {% elsif link.title == "Mandalas" %}
+              {% assign icon_image = menu_settings.icon_mandalas %}
+            {% elsif link.title == "Contemporary" %}
+              {% assign icon_image = menu_settings.icon_contemporary %}
+            {% elsif link.title == "Pool Party" %}
+              {% assign icon_image = menu_settings.icon_pool_party %}
+            {% elsif link.title == "Garden" %}
+              {% assign icon_image = menu_settings.icon_garden %}
+            {% elsif link.title == "Glow in the Dark" %}
+              {% assign icon_image = menu_settings.icon_glow_in_the_dark %}
+            {% elsif link.title == "Fusion Series" %}
+              {% assign icon_image = menu_settings.icon_fusion_series %}
+            {% elsif link.title == "Depth Markers" %}
+              {% assign icon_image = menu_settings.icon_depth_markers %}
+            {% elsif link.title == "Tribal" %}
+              {% assign icon_image = menu_settings.icon_tribal %}
+            {% elsif link.title == "Sea Life" %}
+              {% assign icon_image = menu_settings.icon_sea_life %}
+            {% elsif link.title == "Accents" %}
+              {% assign icon_image = menu_settings.icon_accents %}
+            {% elsif link.title == "Fish" %}
+              {% assign icon_image = menu_settings.icon_fish %}
+            {% endif %}
+
+            <img src="{{ icon_image | img_url: '2x' }}" alt="{{ icon_image.alt | escape }}" width="{{ icon_image.width }}" height="{{ icon_image.height }}">         
+            <p class="icon-title">{{- link.title -}} </p>
+          </a>
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="megamenu-area-divider"></div>
+       <div class="megamenu-area-right">
+          <div class="mega-menu__image">
+            <a href="{{ menu_settings.link1 }}"> 
+              <img src="{{ menu_settings.image1 | img_url: '2x' }}" alt="{{ menu_settings.image1.alt | escape }}" width="{{ menu_settings.image1.width }}" height="{{ menu_settings.image1.height }}" loading="lazy">
+              <p class="megamenu-text-overlay">{{menu_settings.text1 }}</p>
+            </a>
+          </div>
+       </div>
+  </div>     
+</div>
