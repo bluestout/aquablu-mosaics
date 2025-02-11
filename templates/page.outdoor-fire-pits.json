@@ -1,1 +1,869 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"c9537080-8b7e-4d11-abed-ffdf006443e9":{"type":"slideshow","blocks":{"hero_bk3xje":{"type":"hero","disabled":true,"settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":70,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/outdoor-fire-water-and-combination-features","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-left","image":"shopify:\/\/shop_images\/AquaBlu-SmoreSavings-Fire-Pit-Sale-HP-Hero_91c0b70b-760c-418c-9db6-d811b63dca9e.png","image_mobile":"shopify:\/\/shop_images\/AquaBlu-SmoreSavings-Sept2024-MB-2.png","overlay_opacity":0,"focal_point":"20% 50%"}},"hero_gaGhKc":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"PREMIUM OUTDOOR","title":"<p>GAS FIRE PITS & WATER FEATURES<\/p>","title_size":50,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/outdoor-fire-water-and-combination-features","link_text":"Shop All","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/AquaBlu-FirePit-Pool.jpg","overlay_opacity":10,"focal_point":"center center"}},"hero_d8ra7J":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"FREE SHIPPING ON ALL","title":"<p>FIRE PIT BOWLS & TABLES<\/p>","title_size":50,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/outdoor-fire-pits","link_text":"Shop All","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/AquaBlu-The-Outdoor-Plus-Sedona-Fire-Bowl.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["hero_bk3xje","hero_gaGhKc","hero_d8ra7J"],"settings":{"full_width":true,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":40,"space_above":false,"space_below":true,"mobile_size":20,"style":"dots","autoplay":true,"autoplay_speed":7,"css_class":"outdoor-living-section-1"}},"eed788d4-2138-4c64-806f-ed605a88c66b":{"type":"promo-grid","blocks":{"template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1":{"type":"advanced","settings":{"subheading":"","heading":"PATIO FIRE PITS, BOWLS, & TABLES","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/collections\/outdoor-fire-pits","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-Prism-Hardscapes-Manchester-Fire-Table.jpg","video_url":"","width":"33","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0":{"type":"advanced","settings":{"subheading":"","heading":"WATER FEATURES FOR POOLS","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/collections\/water-feature","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-The-Outdoor-Plus-Sedona-Water-Bowl-Planter.jpg","video_url":"","width":"33","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"advanced_xw6aAn":{"type":"advanced","settings":{"subheading":"","heading":"FIRE & WATER COMBO FEATURES","textarea":"","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/outdoor-fire-water-and-combination-features","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-PrismHardscapes-Lombard-P-Fire-Water-Bowl-Combo.jpg","video_url":"","width":"33","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1","template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0","advanced_xw6aAn"],"settings":{"full_width":false,"heading":"","gutter_size":28,"section_gutter_size":0,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":true,"css_class":"outdoor-living-section-7"}},"661f9c76-2a77-4cee-956f-e1e4ad6f1514":{"type":"featured-collection-carousel","settings":{"title":"GAS FIRE PITS - MADE IN U.S.A.","tab_collection_1":"outdoor-fire-pits","css_class":"feat-collection-carousel set-carousel-height outdoor-living-section-4"}},"logo_list_custom_2_9frKFc":{"type":"logo-list-custom-2","blocks":{"logo_image_ANpm6k":{"type":"logo_image","settings":{"logo_title":"Fire Tables","logo_text":"","link":""}},"logo_image_ADUXrY":{"type":"logo_image","settings":{"logo_title":"Fire Bowls","logo_text":"","link":""}},"logo_image_FPtVpV":{"type":"logo_image","settings":{"logo_title":"Water Bowls","logo_text":"","link":""}},"logo_image_PUeLJ3":{"type":"logo_image","settings":{"logo_title":"Fire \/ Water Bowls","logo_text":"","link":""}},"logo_image_CDdcCz":{"type":"logo_image","settings":{"logo_title":"Water Features \/ Scuppers","logo_text":"","link":""}}},"block_order":["logo_image_ANpm6k","logo_image_ADUXrY","logo_image_FPtVpV","logo_image_PUeLJ3","logo_image_CDdcCz"],"disabled":true,"settings":{"title":"","divider":false,"gutter_size":40,"space_above":false,"space_below":false,"css_class":"home-section-2 logo-list-set-height border-radius-active"}},"3f71f403-ed57-4fab-8942-662f92e1e6d8":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/AquaBlu-Prism-Hardscapes-Hampton-Fire-Table-Pool.jpg","video_url":"","image_width":690,"subtitle":"","title":"","text":"<h2><strong>Introducing: The Elements Collection<\/strong><\/h2><p>At AquaBlu, we've curated the best fire tables, fire bowls, and fire and water combo bowls to complement your pool area, creating a warm and inviting atmosphere for gatherings or relaxing evenings.<\/p><p>The Elements Collection showcases stunning pieces that blend three essential elements: wood, concrete, and metal. Each <a href=\"\/collections\/outdoor-fire-pits\" title=\"Outdoor Fire Pits\">gas fire pit<\/a> in this collection is built upon a robust, powder-coated metal frame, ensuring lasting durability. The centerpiece is crafted from strong yet sleek glass fiber reinforced concrete (GFRC), offering both beauty and resilience. Premium hardwood from South America adds a sophisticated final touch.<\/p><p>The combination of natural and industrial materials creates a design that is both captivating and timeless, making the Elements Collection a perfect addition to any outdoor space.<\/p><p><a href=\"\/collections\/outdoor-fire-pits\" title=\"Outdoor Fire Pits\">SHOP NOW &gt;&gt;<\/a><\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"right","color_scheme":"2","divider":false,"new_layout":true,"css_class":"outdoor-section-3 reduce-text-padding"}},"text_columns_JRhKJL":{"type":"text-columns","blocks":{"text_block_DwRd6c":{"type":"text_block","settings":{"enable_image":true,"image_width":450,"title":"Rectangular","text":"","button_label":"","button_link":""}},"text_block_CgYMHt":{"type":"text_block","settings":{"enable_image":true,"image_width":450,"title":"Round","text":"","button_label":"","button_link":""}},"text_block_NGPQAn":{"type":"text_block","settings":{"enable_image":true,"image_width":450,"title":"Square","text":"","button_label":"","button_link":""}}},"block_order":["text_block_DwRd6c","text_block_CgYMHt","text_block_NGPQAn"],"disabled":true,"settings":{"title":"SHOP BY SHAPE","text":"","align_text":"center","three_col_mobile":true,"divider":false,"color_scheme":"none","css_class":""}},"f7b49f3d-1c37-448e-888b-b38a40ba8033":{"type":"promo-grid","blocks":{"cf08d9d3-ebab-474a-a2cb-2c2319234186":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"FIRE PIT TABLES","cta_text1":"","cta_link1":"shopify:\/\/collections\/fire-pit-tables","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-Prism-Hardscapes-Piazza-Fire-Pit-Concrete-2.jpg","video_url":"","width":"33","height":380,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"508b2ef9-8e9b-46c2-8687-06ba44a6987c":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"FIRE BOWLS","cta_text1":"","cta_link1":"shopify:\/\/collections\/fire-bowls","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-The-Outdoor-Plus-Sedona-Fire-Bowl-hammered-copper_ba6eaa88-981e-47a2-b6a7-6a1d2f52e6eb.jpg","video_url":"","width":"33","height":380,"text_align":"vertical-bottom horizontal-center","focal_point":"top","color_accent":"#ffffff"}},"c1f897ee-1837-4848-9aca-e4aa45906d08":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"POOL SCUPPERS","cta_text1":"","cta_link1":"shopify:\/\/collections\/scuppers-outdoor-water-features","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-The-Outdoor-Plus-Radius-Scupper-Pool-Wall.jpg","video_url":"","width":"33","height":380,"text_align":"vertical-bottom horizontal-center","focal_point":"top","color_accent":"#ffffff"}}},"block_order":["cf08d9d3-ebab-474a-a2cb-2c2319234186","508b2ef9-8e9b-46c2-8687-06ba44a6987c","c1f897ee-1837-4848-9aca-e4aa45906d08"],"settings":{"full_width":false,"heading":"POPULAR CATEGORIES","gutter_size":20,"section_gutter_size":20,"space_above":true,"space_below":false,"two_column_mobile":false,"three_column_mobile":true,"css_class":"blue-bar-bottom blue-bar-overlay outdoor-living-section-2"}},"promo_grid_44tzbN":{"type":"promo-grid","blocks":{"advanced_w8R6JG":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"CONCRETE FIRE PITS","cta_text1":"","cta_link1":"shopify:\/\/collections\/concrete-fire-pits","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-Prism-Hardscapes-Sunflower-Fire-Bowl_db9c94b0-e73d-41fc-8d0f-0dff869dc986.jpg","video_url":"","width":"33","height":380,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"advanced_QpYxLr":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"METAL FIRE PITS","cta_text1":"","cta_link1":"shopify:\/\/collections\/metal-fire-pits","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-The-Outdoor-Plus-Fire-Pit-Wind-Guard.jpg","video_url":"","width":"33","height":380,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"advanced_DxCjUJ":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"FIRE ACCESSORIES","cta_text1":"","cta_link1":"shopify:\/\/collections\/fire-accessories","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/AquaBlu-Prism-Hardscapes-Blue-Fire-Glass_e7925b1e-723d-46c1-a180-7592777cfc40.jpg","video_url":"","width":"33","height":380,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["advanced_w8R6JG","advanced_QpYxLr","advanced_DxCjUJ"],"settings":{"full_width":false,"heading":"","gutter_size":25,"section_gutter_size":20,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":true,"css_class":"blue-bar-bottom blue-bar-overlay outdoor-living-section-2"}},"f6555d85-5c5a-489a-a525-e6f076bcdff8":{"type":"slideshow","blocks":{"template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":70,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/conservation","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-left","image":"shopify:\/\/shop_images\/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg","image_mobile":"shopify:\/\/shop_images\/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":6,"space_above":false,"space_below":true,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"320f2580-51bc-4eba-aa22-13b12a7ecccd":{"type":"featured-collection-carousel","settings":{"title":"FEATURED: CORONADO SERIES","tab_collection_1":"coronado-series-outdoor-fire-tables","css_class":"feat-collection-carousel set-carousel-height outdoor-living-section-8"}},"0588edea-afce-4615-b359-5845d141dd26":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/TupeloGoodsDeckChair_Patio_PoolShelfLoungeChair13.jpg","video_url":"","image_width":690,"subtitle":"","title":"","text":"<h2>Outdoor Chairs for Fire Pits<\/h2><p>Complete your backyard oasis with our selection of fire pit chairs! Combine comfort, durability, and style, creating the perfect outdoor seating experience. With sculptural elegance, they enhance any fire pit setting, making them more than just functional—they’re a statement of modern outdoor living.<\/p><p>Designed for ergonomic comfort, these chairs let you relax by the fire for hours. Their seamless, low-maintenance design means less upkeep and more enjoyment. Simply wipe them down, and they’re ready for your next gathering.<\/p><p>Perfect for a backyard retreat, lakeside escape, or modern patio, these outdoor chairs blend form and function effortlessly. Experience warmth, style, and longevity—season after season.<\/p><p><a href=\"https:\/\/www.aquablumosaics.com\/collections\/fire-pit-chairs\" target=\"_blank\" title=\"https:\/\/www.aquablumosaics.com\/collections\/fire-pit-chairs\">SHOP NOW &gt;&gt;<\/a><\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"left","color_scheme":"2","divider":false,"new_layout":true,"css_class":"outdoor-section-3 reduce-text-padding"}},"89a27308-d751-41d5-aa05-b0d2fadff296":{"type":"promo-grid","blocks":{"template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0":{"type":"advanced","settings":{"subheading":"UMBRELLAS","heading":"","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","video_url":"","width":"33","height":400,"text_align":"vertical-bottom horizontal-center","focal_point":"top","color_accent":"#ffffff"}},"template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1":{"type":"advanced","settings":{"subheading":"GARDEN WALLS","heading":"","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","video_url":"","width":"33","height":400,"text_align":"vertical-bottom horizontal-center","focal_point":"80% 0","color_accent":"#ffffff"}},"40a9acb2-ccdb-4ff2-b3db-7a240532735b":{"type":"advanced","settings":{"subheading":"GAMES","heading":"","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","video_url":"","width":"33","height":400,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0","template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1","40a9acb2-ccdb-4ff2-b3db-7a240532735b"],"disabled":true,"settings":{"full_width":false,"heading":"EXPLORE MORE","gutter_size":36,"section_gutter_size":40,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":true,"css_class":"blue-bar-overlay outdoor-living-section-6"}},"featured_collection_carousel_RKkbyN":{"type":"featured-collection-carousel","settings":{"title":"FIRE\/WATER COMBO FEATURES FOR POOLS","tab_collection_1":"fire-and-water-features","css_class":"feat-collection-carousel set-carousel-height outdoor-living-section-8"}},"28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/AquaBlu-The-Outdoor-Plus-Maya-Hammered-Copper-Fire-And-Water-Combo-Bowl-Pool.jpg","video_url":"","image_width":690,"subtitle":"","title":"","text":"<h2><strong>Fire & Water Features: Adding Dynamic Visual Appeal<\/strong><\/h2><p>Fire bowls with water that spills over into the pool offer a mesmerizing effect, as the flickering flames reflect on the water's surface, they add depth and drama to your outdoor design. The contrast between fire's warmth and light and water's cool, calming presence creates a dynamic visual that elevates the style and ambiance. This balance of opposing forces draws attention and creates a focal point for gatherings, making the pool area not just a place for swimming but also for relaxation and entertainment.<\/p><p>Fire features can extend the use of your pool area into the cooler months, offering warmth and comfort during evening gatherings. Meanwhile, water elements like fountains and cascades enhance the soothing sounds of nature, transforming your pool into a serene oasis. Together, these elements not only enhance the visual appeal of your outdoor space but also improve the usability of your pool year-round.<\/p><p><a href=\"\/collections\/fire-and-water-features\" title=\"Fire & Water Features\">SHOP NOW &gt;&gt;<\/a><\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"right","color_scheme":"2","divider":false,"new_layout":true,"css_class":"outdoor-section-3 reduce-text-padding"}},"featured_collection_carousel_NWLRLV":{"type":"featured-collection-carousel","settings":{"title":"POOL SCUPPERS","tab_collection_1":"scuppers-outdoor-water-features","css_class":"feat-collection-carousel set-carousel-height outdoor-living-section-4"}},"promo_grid_d6BYhN":{"type":"promo-grid","blocks":{"advanced_87HJGw":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"","cta_text1":"","cta_link1":"https:\/\/cdn.shopify.com\/s\/files\/1\/1205\/7108\/files\/PRISM_HARDSCAPES_Catalg_2024.pdf?v=1726851172","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/prism_hardscapes_catalog_2024_f9bff82f-40b7-435a-8105-e483ce6ea7c9.png","video_url":"","width":"50","height":500,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"advanced_e4wJcG":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/outdoor_plus_catalog_2024_45065a5c-61da-4c87-b221-6684080e45eb.png","video_url":"","width":"50","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["advanced_87HJGw","advanced_e4wJcG"],"settings":{"full_width":false,"heading":"DOWNLOAD THE FULL CATALOGS","gutter_size":30,"section_gutter_size":20,"space_above":false,"space_below":true,"two_column_mobile":true,"three_column_mobile":false,"css_class":"outdoor-living-section-7"}},"faq_xefyQK":{"type":"faq","blocks":{"question_wVdQHR":{"type":"question","settings":{"title":"Do I need a permit to install an outdoor fire pit?","text":"<p>Permit requirements for fire pits vary by location. Some municipalities may require a permit for wood-burning fire pits, especially in areas prone to wildfires. Gas fire pits may also have local regulations concerning installation, particularly for permanent fixtures that connect to a natural gas line. It’s important to check with your local city or county offices to ensure you’re in compliance with any local codes or restrictions.<\/p>"}},"question_bNJYhg":{"type":"question","settings":{"title":"What is the best material for a fire pit?","text":"<p>Fire pits can be made from various materials, each offering different benefits:<\/p><p><strong>Steel<\/strong>: Durable and weather-resistant, steel fire pits are popular for their modern appearance and ability to withstand high temperatures.<\/p><p><strong>Copper<\/strong>: Copper fire pits develop a patina over time, giving them a rustic, elegant look while remaining corrosion-resistant.<\/p><p><strong>Glass Fiber Reinforced Concrete<\/strong>: GFRC fire pits offer high durability, weather resistance, and design versatility, making them ideal for residential and commercial outdoor spaces.<\/p><p><strong>Cast iron<\/strong>: Known for its durability and ability to retain heat, cast iron fire pits are long-lasting and ideal for frequent use.<\/p><p>Choosing the right material depends on your design preferences, maintenance requirements, and climate.<\/p>"}},"question_JcnqVf":{"type":"question","settings":{"title":"What is a GFRC fire pit, and why is it a good choice?","text":"<p>A GFRC fire pit is made from Glass Fiber Reinforced Concrete, a lightweight yet durable material that combines concrete with fiberglass. This makes it stronger and more resistant to cracking than traditional concrete, while also being much lighter. GFRC fire pits are a great choice because they offer high durability, weather resistance, and design versatility, making them ideal for both residential and commercial outdoor spaces.<\/p>"}},"question_az6qBP":{"type":"question","settings":{"title":"How does GFRC compare to traditional concrete fire pits?","text":"<p>GFRC fire pits are more durable and lighter than traditional concrete fire pits due to the fiberglass reinforcement. GFRC is also more resistant to cracking, chipping, and weather-related wear, which makes it ideal for outdoor use in various climates. Additionally, GFRC can be molded into more intricate and varied designs, allowing for a broader range of aesthetic options.<\/p>"}},"question_wtXdqr":{"type":"question","settings":{"title":"How do I maintain a GFRC fire pit?","text":"<p>GFRC fire pits require minimal maintenance. To keep them looking their best, clean the surface with a mild soap and water solution periodically. If your GFRC fire pit is exposed to harsh weather conditions, it’s a good idea to use a weather-resistant cover when not in use. Over time, resealing the fire pit every couple of years can help maintain its appearance and protect against staining.<\/p>"}},"question_qgqhy9":{"type":"question","settings":{"title":"How far should a fire pit be from my home or other structures?","text":"<p>A fire pit should be placed at least 10-20 feet away from any structures, such as your home, garage, or fences, as well as overhanging trees. This helps reduce the risk of fire hazards and ensures proper ventilation. Always consult local fire safety guidelines for your specific area to ensure compliance.<\/p>"}},"question_xBNQWK":{"type":"question","settings":{"title":"How do I choose the right size fire pit for my outdoor space?","text":"<p>The size of your fire pit should be proportional to your outdoor space and its intended use. For small patios or balconies, compact or tabletop fire pits are ideal. For larger yards or entertainment areas, a fire pit with a diameter of 36-44 inches is generally recommended. It’s also important to consider seating arrangements around the fire pit, leaving enough space for guests to sit comfortably.<\/p>"}},"question_y9LXpd":{"type":"question","settings":{"title":"What are pool scuppers, and how do they enhance water features?","text":"<p>Scuppers are architectural elements that allow water to flow from one body of water, such as a raised wall or basin, into another, typically a swimming pool. They come in various styles, such as slot scuppers or wide mouth scuppers, and can be used to create elegant water flow effects. When paired with fire features, scuppers add a refined touch, enhancing the ambiance with the gentle sound of flowing water while providing a modern, sleek look.<\/p>"}},"question_Lc8hGH":{"type":"question","settings":{"title":"Are fire and water features safe to use around swimming pools?","text":"<p>Yes, fire and water features are generally safe to use around swimming pools when installed by professionals and maintained properly. Gas-powered fire features often include safety mechanisms like automatic shut-off valves to prevent accidental gas leaks. Additionally, the water elements help to create a buffer between the fire and surrounding areas. However, it’s important to follow all safety guidelines, keep flammable materials away, and supervise children when using fire features near pools.<\/p>"}},"question_dHBnAQ":{"type":"question","settings":{"title":"Are fire and water features expensive to install?","text":"<p>The cost of fire and water features varies depending on the complexity of the design, the materials used, and the size of the installation. Gas-powered fire features, custom scuppers, and elaborate waterfall structures may be more expensive than simpler designs. However, there are options at various price points, and many homeowners find that the aesthetic and entertainment value added to their outdoor space justifies the investment.<\/p>"}},"question_FMYeVM":{"type":"question","settings":{"title":"Can fire and water features be automated?","text":"<p>Yes, many modern fire and water features can be automated with pool control systems. You can control fire bowls, scuppers, fountains, and other features via smartphone apps, allowing you to adjust water flow or ignite the fire remotely. Automation adds convenience and helps integrate these features seamlessly into your pool experience.<\/p>"}},"question_AbQfeT":{"type":"question","settings":{"title":"Do fire and water features increase property value?","text":"<p>Yes, adding fire and water features to your pool area can increase your property value by enhancing the outdoor living space. These features create a luxurious, resort-like atmosphere, making your home more attractive to potential buyers. High-quality, well-maintained fire and water elements are often seen as premium upgrades that can justify a higher asking price.<\/p>"}},"question_kajiEF":{"type":"question","settings":{"title":"Can fire and water features be customized for any pool design?","text":"<p>Absolutely. Fire and water features, including scuppers, are highly customizable to fit any pool design, whether you prefer a modern, contemporary look or a more natural, organic aesthetic. You can choose from a variety of materials, sizes, shapes, and finishes to complement the architectural style of your home and landscaping. Customization ensures that your fire and water features blend seamlessly into your overall outdoor space.<\/p>"}}},"block_order":["question_wVdQHR","question_bNJYhg","question_JcnqVf","question_az6qBP","question_wtXdqr","question_qgqhy9","question_xBNQWK","question_y9LXpd","question_Lc8hGH","question_dHBnAQ","question_FMYeVM","question_AbQfeT","question_kajiEF"],"settings":{"title":"FAQs","css_class":""}}},"order":["main","c9537080-8b7e-4d11-abed-ffdf006443e9","eed788d4-2138-4c64-806f-ed605a88c66b","661f9c76-2a77-4cee-956f-e1e4ad6f1514","logo_list_custom_2_9frKFc","3f71f403-ed57-4fab-8942-662f92e1e6d8","text_columns_JRhKJL","f7b49f3d-1c37-448e-888b-b38a40ba8033","promo_grid_44tzbN","f6555d85-5c5a-489a-a525-e6f076bcdff8","320f2580-51bc-4eba-aa22-13b12a7ecccd","0588edea-afce-4615-b359-5845d141dd26","89a27308-d751-41d5-aa05-b0d2fadff296","featured_collection_carousel_RKkbyN","28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162","featured_collection_carousel_NWLRLV","promo_grid_d6BYhN","faq_xefyQK"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "c9537080-8b7e-4d11-abed-ffdf006443e9": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_bk3xje": {
+          "type": "hero",
+          "disabled": true,
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/outdoor-fire-water-and-combination-features",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/AquaBlu-SmoreSavings-Fire-Pit-Sale-HP-Hero_91c0b70b-760c-418c-9db6-d811b63dca9e.png",
+            "image_mobile": "shopify://shop_images/AquaBlu-SmoreSavings-Sept2024-MB-2.png",
+            "overlay_opacity": 0,
+            "focal_point": "20% 50%"
+          }
+        },
+        "hero_gaGhKc": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "PREMIUM OUTDOOR",
+            "title": "<p>GAS FIRE PITS & WATER FEATURES</p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/outdoor-fire-water-and-combination-features",
+            "link_text": "Shop All",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/AquaBlu-FirePit-Pool.jpg",
+            "overlay_opacity": 10,
+            "focal_point": "center center"
+          }
+        },
+        "hero_d8ra7J": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "FREE SHIPPING ON ALL",
+            "title": "<p>FIRE PIT BOWLS & TABLES</p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/outdoor-fire-pits",
+            "link_text": "Shop All",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/AquaBlu-The-Outdoor-Plus-Sedona-Fire-Bowl.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_bk3xje",
+        "hero_gaGhKc",
+        "hero_d8ra7J"
+      ],
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 20,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "outdoor-living-section-1"
+      }
+    },
+    "eed788d4-2138-4c64-806f-ed605a88c66b": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "PATIO FIRE PITS, BOWLS, & TABLES",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/outdoor-fire-pits",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-Prism-Hardscapes-Manchester-Fire-Table.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "WATER FEATURES FOR POOLS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/water-feature",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-The-Outdoor-Plus-Sedona-Water-Bowl-Planter.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_xw6aAn": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "FIRE & WATER COMBO FEATURES",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-fire-water-and-combination-features",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-PrismHardscapes-Lombard-P-Fire-Water-Bowl-Combo.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1",
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0",
+        "advanced_xw6aAn"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 28,
+        "section_gutter_size": 0,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": true,
+        "css_class": "outdoor-living-section-7"
+      }
+    },
+    "661f9c76-2a77-4cee-956f-e1e4ad6f1514": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "GAS FIRE PITS - MADE IN U.S.A.",
+        "tab_collection_1": "outdoor-fire-pits",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4"
+      }
+    },
+    "logo_list_custom_2_9frKFc": {
+      "type": "logo-list-custom-2",
+      "blocks": {
+        "logo_image_ANpm6k": {
+          "type": "logo_image",
+          "settings": {
+            "logo_title": "Fire Tables",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "logo_image_ADUXrY": {
+          "type": "logo_image",
+          "settings": {
+            "logo_title": "Fire Bowls",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "logo_image_FPtVpV": {
+          "type": "logo_image",
+          "settings": {
+            "logo_title": "Water Bowls",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "logo_image_PUeLJ3": {
+          "type": "logo_image",
+          "settings": {
+            "logo_title": "Fire / Water Bowls",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "logo_image_CDdcCz": {
+          "type": "logo_image",
+          "settings": {
+            "logo_title": "Water Features / Scuppers",
+            "logo_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_ANpm6k",
+        "logo_image_ADUXrY",
+        "logo_image_FPtVpV",
+        "logo_image_PUeLJ3",
+        "logo_image_CDdcCz"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "divider": false,
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": false,
+        "css_class": "home-section-2 logo-list-set-height border-radius-active"
+      }
+    },
+    "3f71f403-ed57-4fab-8942-662f92e1e6d8": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/AquaBlu-Prism-Hardscapes-Hampton-Fire-Table-Pool.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>Introducing: The Elements Collection</strong></h2><p>At AquaBlu, we've curated the best fire tables, fire bowls, and fire and water combo bowls to complement your pool area, creating a warm and inviting atmosphere for gatherings or relaxing evenings.</p><p>The Elements Collection showcases stunning pieces that blend three essential elements: wood, concrete, and metal. Each <a href=\"/collections/outdoor-fire-pits\" title=\"Outdoor Fire Pits\">gas fire pit</a> in this collection is built upon a robust, powder-coated metal frame, ensuring lasting durability. The centerpiece is crafted from strong yet sleek glass fiber reinforced concrete (GFRC), offering both beauty and resilience. Premium hardwood from South America adds a sophisticated final touch.</p><p>The combination of natural and industrial materials creates a design that is both captivating and timeless, making the Elements Collection a perfect addition to any outdoor space.</p><p><a href=\"/collections/outdoor-fire-pits\" title=\"Outdoor Fire Pits\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
+    "text_columns_JRhKJL": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_DwRd6c": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 450,
+            "title": "Rectangular",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CgYMHt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 450,
+            "title": "Round",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_NGPQAn": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 450,
+            "title": "Square",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_DwRd6c",
+        "text_block_CgYMHt",
+        "text_block_NGPQAn"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SHOP BY SHAPE",
+        "text": "",
+        "align_text": "center",
+        "three_col_mobile": true,
+        "divider": false,
+        "color_scheme": "none",
+        "css_class": ""
+      }
+    },
+    "f7b49f3d-1c37-448e-888b-b38a40ba8033": {
+      "type": "promo-grid",
+      "blocks": {
+        "cf08d9d3-ebab-474a-a2cb-2c2319234186": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "FIRE PIT TABLES",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/fire-pit-tables",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-Prism-Hardscapes-Piazza-Fire-Pit-Concrete-2.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 380,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "508b2ef9-8e9b-46c2-8687-06ba44a6987c": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "FIRE BOWLS",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/fire-bowls",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-The-Outdoor-Plus-Sedona-Fire-Bowl-hammered-copper_ba6eaa88-981e-47a2-b6a7-6a1d2f52e6eb.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 380,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "top",
+            "color_accent": "#ffffff"
+          }
+        },
+        "c1f897ee-1837-4848-9aca-e4aa45906d08": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "POOL SCUPPERS",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/scuppers-outdoor-water-features",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-The-Outdoor-Plus-Radius-Scupper-Pool-Wall.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 380,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "top",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "cf08d9d3-ebab-474a-a2cb-2c2319234186",
+        "508b2ef9-8e9b-46c2-8687-06ba44a6987c",
+        "c1f897ee-1837-4848-9aca-e4aa45906d08"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "POPULAR CATEGORIES",
+        "gutter_size": 20,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": false,
+        "two_column_mobile": false,
+        "three_column_mobile": true,
+        "css_class": "blue-bar-bottom blue-bar-overlay outdoor-living-section-2"
+      }
+    },
+    "promo_grid_44tzbN": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_w8R6JG": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "CONCRETE FIRE PITS",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/concrete-fire-pits",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-Prism-Hardscapes-Sunflower-Fire-Bowl_db9c94b0-e73d-41fc-8d0f-0dff869dc986.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 380,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_QpYxLr": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "METAL FIRE PITS",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/metal-fire-pits",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-The-Outdoor-Plus-Fire-Pit-Wind-Guard.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 380,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_DxCjUJ": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "FIRE ACCESSORIES",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/fire-accessories",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/AquaBlu-Prism-Hardscapes-Blue-Fire-Glass_e7925b1e-723d-46c1-a180-7592777cfc40.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 380,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_w8R6JG",
+        "advanced_QpYxLr",
+        "advanced_DxCjUJ"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 25,
+        "section_gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": true,
+        "css_class": "blue-bar-bottom blue-bar-overlay outdoor-living-section-2"
+      }
+    },
+    "f6555d85-5c5a-489a-a525-e6f076bcdff8": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/conservation",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
+            "image_mobile": "shopify://shop_images/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 6,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "320f2580-51bc-4eba-aa22-13b12a7ecccd": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "FEATURED: CORONADO SERIES",
+        "tab_collection_1": "coronado-series-outdoor-fire-tables",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8"
+      }
+    },
+    "0588edea-afce-4615-b359-5845d141dd26": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/TupeloGoodsDeckChair_Patio_PoolShelfLoungeChair13.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>Outdoor Chairs for Fire Pits</h2><p>Complete your backyard oasis with our selection of fire pit chairs! Combine comfort, durability, and style, creating the perfect outdoor seating experience. With sculptural elegance, they enhance any fire pit setting, making them more than just functional—they’re a statement of modern outdoor living.</p><p>Designed for ergonomic comfort, these chairs let you relax by the fire for hours. Their seamless, low-maintenance design means less upkeep and more enjoyment. Simply wipe them down, and they’re ready for your next gathering.</p><p>Perfect for a backyard retreat, lakeside escape, or modern patio, these outdoor chairs blend form and function effortlessly. Experience warmth, style, and longevity—season after season.</p><p><a href=\"https://www.aquablumosaics.com/collections/fire-pit-chairs\" target=\"_blank\" title=\"https://www.aquablumosaics.com/collections/fire-pit-chairs\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
+    "89a27308-d751-41d5-aa05-b0d2fadff296": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UMBRELLAS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "top",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "GARDEN WALLS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "80% 0",
+            "color_accent": "#ffffff"
+          }
+        },
+        "40a9acb2-ccdb-4ff2-b3db-7a240532735b": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "GAMES",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0",
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1",
+        "40a9acb2-ccdb-4ff2-b3db-7a240532735b"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "EXPLORE MORE",
+        "gutter_size": 36,
+        "section_gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": true,
+        "css_class": "blue-bar-overlay outdoor-living-section-6"
+      }
+    },
+    "featured_collection_carousel_RKkbyN": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "FIRE/WATER COMBO FEATURES FOR POOLS",
+        "tab_collection_1": "fire-and-water-features",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8"
+      }
+    },
+    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/AquaBlu-The-Outdoor-Plus-Maya-Hammered-Copper-Fire-And-Water-Combo-Bowl-Pool.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>Fire & Water Features: Adding Dynamic Visual Appeal</strong></h2><p>Fire bowls with water that spills over into the pool offer a mesmerizing effect, as the flickering flames reflect on the water's surface, they add depth and drama to your outdoor design. The contrast between fire's warmth and light and water's cool, calming presence creates a dynamic visual that elevates the style and ambiance. This balance of opposing forces draws attention and creates a focal point for gatherings, making the pool area not just a place for swimming but also for relaxation and entertainment.</p><p>Fire features can extend the use of your pool area into the cooler months, offering warmth and comfort during evening gatherings. Meanwhile, water elements like fountains and cascades enhance the soothing sounds of nature, transforming your pool into a serene oasis. Together, these elements not only enhance the visual appeal of your outdoor space but also improve the usability of your pool year-round.</p><p><a href=\"/collections/fire-and-water-features\" title=\"Fire & Water Features\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
+    "featured_collection_carousel_NWLRLV": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "POOL SCUPPERS",
+        "tab_collection_1": "scuppers-outdoor-water-features",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4"
+      }
+    },
+    "promo_grid_d6BYhN": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_87HJGw": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://cdn.shopify.com/s/files/1/1205/7108/files/PRISM_HARDSCAPES_Catalg_2024.pdf?v=1726851172",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/prism_hardscapes_catalog_2024_f9bff82f-40b7-435a-8105-e483ce6ea7c9.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_e4wJcG": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/outdoor_plus_catalog_2024_45065a5c-61da-4c87-b221-6684080e45eb.png",
+            "video_url": "",
+            "width": "50",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_87HJGw",
+        "advanced_e4wJcG"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "DOWNLOAD THE FULL CATALOGS",
+        "gutter_size": 30,
+        "section_gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": true,
+        "three_column_mobile": false,
+        "css_class": "outdoor-living-section-7"
+      }
+    },
+    "faq_xefyQK": {
+      "type": "faq",
+      "blocks": {
+        "question_wVdQHR": {
+          "type": "question",
+          "settings": {
+            "title": "Do I need a permit to install an outdoor fire pit?",
+            "text": "<p>Permit requirements for fire pits vary by location. Some municipalities may require a permit for wood-burning fire pits, especially in areas prone to wildfires. Gas fire pits may also have local regulations concerning installation, particularly for permanent fixtures that connect to a natural gas line. It’s important to check with your local city or county offices to ensure you’re in compliance with any local codes or restrictions.</p>"
+          }
+        },
+        "question_bNJYhg": {
+          "type": "question",
+          "settings": {
+            "title": "What is the best material for a fire pit?",
+            "text": "<p>Fire pits can be made from various materials, each offering different benefits:</p><p><strong>Steel</strong>: Durable and weather-resistant, steel fire pits are popular for their modern appearance and ability to withstand high temperatures.</p><p><strong>Copper</strong>: Copper fire pits develop a patina over time, giving them a rustic, elegant look while remaining corrosion-resistant.</p><p><strong>Glass Fiber Reinforced Concrete</strong>: GFRC fire pits offer high durability, weather resistance, and design versatility, making them ideal for residential and commercial outdoor spaces.</p><p><strong>Cast iron</strong>: Known for its durability and ability to retain heat, cast iron fire pits are long-lasting and ideal for frequent use.</p><p>Choosing the right material depends on your design preferences, maintenance requirements, and climate.</p>"
+          }
+        },
+        "question_JcnqVf": {
+          "type": "question",
+          "settings": {
+            "title": "What is a GFRC fire pit, and why is it a good choice?",
+            "text": "<p>A GFRC fire pit is made from Glass Fiber Reinforced Concrete, a lightweight yet durable material that combines concrete with fiberglass. This makes it stronger and more resistant to cracking than traditional concrete, while also being much lighter. GFRC fire pits are a great choice because they offer high durability, weather resistance, and design versatility, making them ideal for both residential and commercial outdoor spaces.</p>"
+          }
+        },
+        "question_az6qBP": {
+          "type": "question",
+          "settings": {
+            "title": "How does GFRC compare to traditional concrete fire pits?",
+            "text": "<p>GFRC fire pits are more durable and lighter than traditional concrete fire pits due to the fiberglass reinforcement. GFRC is also more resistant to cracking, chipping, and weather-related wear, which makes it ideal for outdoor use in various climates. Additionally, GFRC can be molded into more intricate and varied designs, allowing for a broader range of aesthetic options.</p>"
+          }
+        },
+        "question_wtXdqr": {
+          "type": "question",
+          "settings": {
+            "title": "How do I maintain a GFRC fire pit?",
+            "text": "<p>GFRC fire pits require minimal maintenance. To keep them looking their best, clean the surface with a mild soap and water solution periodically. If your GFRC fire pit is exposed to harsh weather conditions, it’s a good idea to use a weather-resistant cover when not in use. Over time, resealing the fire pit every couple of years can help maintain its appearance and protect against staining.</p>"
+          }
+        },
+        "question_qgqhy9": {
+          "type": "question",
+          "settings": {
+            "title": "How far should a fire pit be from my home or other structures?",
+            "text": "<p>A fire pit should be placed at least 10-20 feet away from any structures, such as your home, garage, or fences, as well as overhanging trees. This helps reduce the risk of fire hazards and ensures proper ventilation. Always consult local fire safety guidelines for your specific area to ensure compliance.</p>"
+          }
+        },
+        "question_xBNQWK": {
+          "type": "question",
+          "settings": {
+            "title": "How do I choose the right size fire pit for my outdoor space?",
+            "text": "<p>The size of your fire pit should be proportional to your outdoor space and its intended use. For small patios or balconies, compact or tabletop fire pits are ideal. For larger yards or entertainment areas, a fire pit with a diameter of 36-44 inches is generally recommended. It’s also important to consider seating arrangements around the fire pit, leaving enough space for guests to sit comfortably.</p>"
+          }
+        },
+        "question_y9LXpd": {
+          "type": "question",
+          "settings": {
+            "title": "What are pool scuppers, and how do they enhance water features?",
+            "text": "<p>Scuppers are architectural elements that allow water to flow from one body of water, such as a raised wall or basin, into another, typically a swimming pool. They come in various styles, such as slot scuppers or wide mouth scuppers, and can be used to create elegant water flow effects. When paired with fire features, scuppers add a refined touch, enhancing the ambiance with the gentle sound of flowing water while providing a modern, sleek look.</p>"
+          }
+        },
+        "question_Lc8hGH": {
+          "type": "question",
+          "settings": {
+            "title": "Are fire and water features safe to use around swimming pools?",
+            "text": "<p>Yes, fire and water features are generally safe to use around swimming pools when installed by professionals and maintained properly. Gas-powered fire features often include safety mechanisms like automatic shut-off valves to prevent accidental gas leaks. Additionally, the water elements help to create a buffer between the fire and surrounding areas. However, it’s important to follow all safety guidelines, keep flammable materials away, and supervise children when using fire features near pools.</p>"
+          }
+        },
+        "question_dHBnAQ": {
+          "type": "question",
+          "settings": {
+            "title": "Are fire and water features expensive to install?",
+            "text": "<p>The cost of fire and water features varies depending on the complexity of the design, the materials used, and the size of the installation. Gas-powered fire features, custom scuppers, and elaborate waterfall structures may be more expensive than simpler designs. However, there are options at various price points, and many homeowners find that the aesthetic and entertainment value added to their outdoor space justifies the investment.</p>"
+          }
+        },
+        "question_FMYeVM": {
+          "type": "question",
+          "settings": {
+            "title": "Can fire and water features be automated?",
+            "text": "<p>Yes, many modern fire and water features can be automated with pool control systems. You can control fire bowls, scuppers, fountains, and other features via smartphone apps, allowing you to adjust water flow or ignite the fire remotely. Automation adds convenience and helps integrate these features seamlessly into your pool experience.</p>"
+          }
+        },
+        "question_AbQfeT": {
+          "type": "question",
+          "settings": {
+            "title": "Do fire and water features increase property value?",
+            "text": "<p>Yes, adding fire and water features to your pool area can increase your property value by enhancing the outdoor living space. These features create a luxurious, resort-like atmosphere, making your home more attractive to potential buyers. High-quality, well-maintained fire and water elements are often seen as premium upgrades that can justify a higher asking price.</p>"
+          }
+        },
+        "question_kajiEF": {
+          "type": "question",
+          "settings": {
+            "title": "Can fire and water features be customized for any pool design?",
+            "text": "<p>Absolutely. Fire and water features, including scuppers, are highly customizable to fit any pool design, whether you prefer a modern, contemporary look or a more natural, organic aesthetic. You can choose from a variety of materials, sizes, shapes, and finishes to complement the architectural style of your home and landscaping. Customization ensures that your fire and water features blend seamlessly into your overall outdoor space.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_wVdQHR",
+        "question_bNJYhg",
+        "question_JcnqVf",
+        "question_az6qBP",
+        "question_wtXdqr",
+        "question_qgqhy9",
+        "question_xBNQWK",
+        "question_y9LXpd",
+        "question_Lc8hGH",
+        "question_dHBnAQ",
+        "question_FMYeVM",
+        "question_AbQfeT",
+        "question_kajiEF"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "css_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c9537080-8b7e-4d11-abed-ffdf006443e9",
+    "eed788d4-2138-4c64-806f-ed605a88c66b",
+    "661f9c76-2a77-4cee-956f-e1e4ad6f1514",
+    "logo_list_custom_2_9frKFc",
+    "3f71f403-ed57-4fab-8942-662f92e1e6d8",
+    "text_columns_JRhKJL",
+    "f7b49f3d-1c37-448e-888b-b38a40ba8033",
+    "promo_grid_44tzbN",
+    "f6555d85-5c5a-489a-a525-e6f076bcdff8",
+    "320f2580-51bc-4eba-aa22-13b12a7ecccd",
+    "0588edea-afce-4615-b359-5845d141dd26",
+    "89a27308-d751-41d5-aa05-b0d2fadff296",
+    "featured_collection_carousel_RKkbyN",
+    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162",
+    "featured_collection_carousel_NWLRLV",
+    "promo_grid_d6BYhN",
+    "faq_xefyQK"
+  ]
+}
