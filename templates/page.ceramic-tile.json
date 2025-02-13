@@ -190,7 +190,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_5_aa53642c-8142-4e3e-ada2-5dd89a8d9667.png",
+            "image": "shopify://shop_images/Untitled_design_12.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
@@ -201,7 +201,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/gray_stone.png",
+            "image": "shopify://shop_images/Untitled_design_7.png",
             "image_width": 130,
             "title": "Gray",
             "button_label": "",
@@ -212,7 +212,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/brown_stone.png",
+            "image": "shopify://shop_images/Untitled_design_8.png",
             "image_width": 130,
             "title": "Beige",
             "button_label": "",
@@ -223,7 +223,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/black_stone.png",
+            "image": "shopify://shop_images/Untitled_design_9.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
@@ -234,7 +234,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/blue_stone_tile.png",
+            "image": "shopify://shop_images/Untitled_design_11.png",
             "image_width": 130,
             "title": "Blue",
             "button_label": "",
@@ -247,7 +247,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/multicolor_stone.png",
             "image_width": 130,
-            "title": "Multicolor",
+            "title": "Aqua",
             "button_label": "",
             "button_link": "shopify://collections/multicolor-stone-tile"
           }
