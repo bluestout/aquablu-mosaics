@@ -219,6 +219,17 @@
             "button_link": "shopify://collections/beige-stone-tile"
           }
         },
+        "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_13.png",
+            "image_width": 130,
+            "title": "Aqua",
+            "button_label": "",
+            "button_link": "shopify://collections/multicolor-stone-tile"
+          }
+        },
         "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-1": {
           "type": "text_block",
           "settings": {
@@ -241,22 +252,11 @@
             "button_link": "shopify://collections/blue-stone-tile"
           }
         },
-        "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_13.png",
-            "image_width": 130,
-            "title": "Aqua",
-            "button_label": "",
-            "button_link": "shopify://collections/multicolor-stone-tile"
-          }
-        },
         "text_block_TDD3EG": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/allstonecolor.png",
+            "image": "shopify://shop_images/Untitled_design_15.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
@@ -269,9 +269,9 @@
         "3c328061-f674-4307-9990-8d7506fb4156",
         "70b8e1f4-2240-4fde-add2-bc86238ca4a8",
         "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-2",
+        "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-3",
         "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-1",
         "text_block_7hBTq6",
-        "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-3",
         "text_block_TDD3EG"
       ],
       "settings": {
