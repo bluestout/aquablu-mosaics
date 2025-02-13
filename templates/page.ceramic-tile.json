@@ -119,13 +119,13 @@
             "link": "shopify://collections/new-and-trending-stone-tile"
           }
         },
-        "logo_image_zUyQtN": {
+        "logo_image_kn8WQh": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Ceramic_Subway_Tile_84983cc9-ed93-419e-98c4-6b9d7cb25667.jpg",
-            "logo_title": "Subway Tile",
+            "image": "shopify://shop_images/Backsplash_Tile.jpg",
+            "logo_title": "Popular Backsplash",
             "logo_text": "",
-            "link": "shopify://collections/natural-stone-ledger-panels"
+            "link": "shopify://collections/new-and-trending-stone-tile"
           }
         },
         "logo_image_x4GYx7": {
@@ -137,13 +137,13 @@
             "link": "shopify://collections/pebble-tile"
           }
         },
-        "logo_image_kn8WQh": {
+        "logo_image_zUyQtN": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Backsplash_Tile.jpg",
-            "logo_title": "Popular Backsplash",
+            "image": "shopify://shop_images/Ceramic_Subway_Tile_84983cc9-ed93-419e-98c4-6b9d7cb25667.jpg",
+            "logo_title": "Subway Tile",
             "logo_text": "",
-            "link": "shopify://collections/new-and-trending-stone-tile"
+            "link": "shopify://collections/natural-stone-ledger-panels"
           }
         },
         "logo_image_QXm94A": {
@@ -158,9 +158,9 @@
       },
       "block_order": [
         "logo_image_3hq3z3",
-        "logo_image_zUyQtN",
-        "logo_image_x4GYx7",
         "logo_image_kn8WQh",
+        "logo_image_x4GYx7",
+        "logo_image_zUyQtN",
         "logo_image_QXm94A"
       ],
       "settings": {
