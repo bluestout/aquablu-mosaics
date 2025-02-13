@@ -179,7 +179,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/white_stone.png",
+            "image": "shopify://shop_images/Untitled_design_2.png",
             "image_width": 130,
             "title": "White",
             "button_label": "",
@@ -190,7 +190,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/green_stone.png",
+            "image": "shopify://shop_images/Untitled_design_5.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
