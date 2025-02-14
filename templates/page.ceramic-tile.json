@@ -524,6 +524,16 @@
     "featured_collections_custom_hGrGHg": {
       "type": "featured-collections-custom",
       "blocks": {
+        "collection_d3EVwq": {
+          "type": "collection",
+          "settings": {
+            "title": "COASTAL",
+            "image": "shopify://shop_images/Coastal_Ceramic_Tile.jpg",
+            "url": "shopify://collections/coastal-stone-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_NHfAbg": {
           "type": "collection",
           "settings": {
@@ -553,23 +563,13 @@
             "tooltip": false,
             "tooltip_text": ""
           }
-        },
-        "collection_d3EVwq": {
-          "type": "collection",
-          "settings": {
-            "title": "COASTAL",
-            "image": "shopify://shop_images/Coastal_Ceramic_Tile.jpg",
-            "url": "shopify://collections/coastal-stone-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
         }
       },
       "block_order": [
+        "collection_d3EVwq",
         "collection_NHfAbg",
         "collection_Cj4qkr",
-        "collection_BpHyYY",
-        "collection_d3EVwq"
+        "collection_BpHyYY"
       ],
       "settings": {
         "title": "BROWSE LOOKS",
