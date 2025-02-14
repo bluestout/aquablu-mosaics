@@ -323,6 +323,17 @@
             "button_link": "shopify://collections/herringbone-stone-tile"
           }
         },
+        "text_block_DXNLXw": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_36.png",
+            "image_width": 130,
+            "title": "Linear",
+            "button_label": "",
+            "button_link": "shopify://collections/linear-stone-tile"
+          }
+        },
         "text_block_VMUQhM": {
           "type": "text_block",
           "settings": {
@@ -343,17 +354,6 @@
             "title": "Rectangle",
             "button_label": "",
             "button_link": "shopify://collections/rectangle-stone-tile"
-          }
-        },
-        "text_block_DXNLXw": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_26.png",
-            "image_width": 130,
-            "title": "Linear",
-            "button_label": "",
-            "button_link": "shopify://collections/linear-stone-tile"
           }
         },
         "text_block_DDkJxJ": {
@@ -383,9 +383,9 @@
         "text_block_bXXBL4",
         "text_block_CBLpHA",
         "text_block_mVGeHG",
+        "text_block_DXNLXw",
         "text_block_VMUQhM",
         "text_block_XJwWeN",
-        "text_block_DXNLXw",
         "text_block_DDkJxJ",
         "text_block_jrJ7t8"
       ],
