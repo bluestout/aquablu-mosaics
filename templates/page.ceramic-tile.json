@@ -294,7 +294,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/squarestone.png",
+            "image": "shopify://shop_images/Untitled_design_25.png",
             "image_width": 130,
             "title": "Square",
             "button_label": "",
@@ -327,7 +327,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/linearstnetile.png",
+            "image": "shopify://shop_images/Untitled_design_26.png",
             "image_width": 130,
             "title": "Linear",
             "button_label": "",
@@ -338,7 +338,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/geometricstone.png",
+            "image": "shopify://shop_images/Untitled_design_27.png",
             "image_width": 130,
             "title": "Geometric",
             "button_label": "",
