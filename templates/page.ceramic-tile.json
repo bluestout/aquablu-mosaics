@@ -119,6 +119,15 @@
             "link": "shopify://collections/new-and-trending-stone-tile"
           }
         },
+        "logo_image_kn8WQh": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Popular_Backsplash_Ceramic_Tile.jpg",
+            "logo_title": "Popular Backsplash",
+            "logo_text": "",
+            "link": "shopify://collections/new-and-trending-stone-tile"
+          }
+        },
         "logo_image_rAVRjr": {
           "type": "logo_image",
           "settings": {
@@ -135,15 +144,6 @@
             "logo_title": "Zellige Look",
             "logo_text": "",
             "link": "shopify://collections/pebble-tile"
-          }
-        },
-        "logo_image_kn8WQh": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Popular_Backsplash_Ceramic_Tile.jpg",
-            "logo_title": "Popular Backsplash",
-            "logo_text": "",
-            "link": "shopify://collections/new-and-trending-stone-tile"
           }
         },
         "logo_image_zUyQtN": {
@@ -177,9 +177,9 @@
       },
       "block_order": [
         "logo_image_3hq3z3",
+        "logo_image_kn8WQh",
         "logo_image_rAVRjr",
         "logo_image_x4GYx7",
-        "logo_image_kn8WQh",
         "logo_image_zUyQtN",
         "logo_image_EbCcmb",
         "logo_image_QXm94A"
