@@ -301,17 +301,6 @@
             "button_link": "shopify://collections/stone-square-tiles"
           }
         },
-        "text_block_XJwWeN": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_29.png",
-            "image_width": 130,
-            "title": "Rectangle",
-            "button_label": "",
-            "button_link": "shopify://collections/rectangle-stone-tile"
-          }
-        },
         "text_block_CBLpHA": {
           "type": "text_block",
           "settings": {
@@ -356,11 +345,22 @@
             "button_link": "shopify://collections/arabesque-stone-tile"
           }
         },
+        "text_block_XJwWeN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_29.png",
+            "image_width": 130,
+            "title": "Rectangle",
+            "button_label": "",
+            "button_link": "shopify://collections/rectangle-stone-tile"
+          }
+        },
         "text_block_DDkJxJ": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_27.png",
+            "image": "shopify://shop_images/Untitled_design_35.png",
             "image_width": 130,
             "title": "Fish Scale",
             "button_label": "",
@@ -381,11 +381,11 @@
       },
       "block_order": [
         "text_block_bXXBL4",
-        "text_block_XJwWeN",
         "text_block_CBLpHA",
         "text_block_DXNLXw",
         "text_block_mVGeHG",
         "text_block_VMUQhM",
+        "text_block_XJwWeN",
         "text_block_DDkJxJ",
         "text_block_jrJ7t8"
       ],
