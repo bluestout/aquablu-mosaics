@@ -534,16 +534,6 @@
             "tooltip_text": ""
           }
         },
-        "collection_BpHyYY": {
-          "type": "collection",
-          "settings": {
-            "title": "MODERN",
-            "image": "shopify://shop_images/Modern_Ceramic_Tile_28a52ccd-2d39-4458-b39d-d77a9cd8d994.jpg",
-            "url": "shopify://collections/modern-stone-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_NHfAbg": {
           "type": "collection",
           "settings": {
@@ -563,13 +553,23 @@
             "tooltip": false,
             "tooltip_text": ""
           }
+        },
+        "collection_BpHyYY": {
+          "type": "collection",
+          "settings": {
+            "title": "MODERN",
+            "image": "shopify://shop_images/Modern_Ceramic_Tile_28a52ccd-2d39-4458-b39d-d77a9cd8d994.jpg",
+            "url": "shopify://collections/modern-stone-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
         }
       },
       "block_order": [
         "collection_d3EVwq",
-        "collection_BpHyYY",
         "collection_NHfAbg",
-        "collection_Cj4qkr"
+        "collection_Cj4qkr",
+        "collection_BpHyYY"
       ],
       "settings": {
         "title": "BROWSE LOOKS",
