@@ -349,7 +349,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/arabstone.png",
+            "image": "shopify://shop_images/Untitled_design_34.png",
             "image_width": 130,
             "title": "Arabesque",
             "button_label": "",
@@ -362,7 +362,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/roundstone.png",
             "image_width": 130,
-            "title": "Trim",
+            "title": "big shrug",
             "button_label": "",
             "button_link": "shopify://collections/round-mosaic-stone-tile"
           }
