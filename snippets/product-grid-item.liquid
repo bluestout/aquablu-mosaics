@@ -105,7 +105,7 @@
 {%- endunless -%}
 {% comment %} <-- Add Wish List {% endcomment %}
 
-<div class="grid-item grid-product {{ classes }} carousel-cell collection-here" data-product-varies="{{ product.price_varies }}" data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}">
+<div class="grid-item grid-product {{ classes }} carousel-cell collection-here product-card-page" data-product-varies="{{ product.price_varies }}" data-product-handle="{{ product.handle }}" data-product-url={{ product.url }} data-product-id="{{ product.id }}" data-current-page="{{ currentPage }}">
   <div class="grid-item__content">
 
     {%- unless no_actions -%}

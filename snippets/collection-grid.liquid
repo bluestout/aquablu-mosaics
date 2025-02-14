@@ -20,9 +20,16 @@
   for filter in filters
     assign current_filter_size = current_filter_size | plus: filter.active_values.size
   endfor
+
+  assign all_count = 0
+  if current_filter_size > 0
+    assign all_count = current_filter_size
+  else
+    assign all_count = count
+  endif
 %}
 
-<div class="collection-grid__wrapper"></div>
+<div class="collection-grid__wrapper">
 
   <div class="collection-filter">
     <div class="collection-filter__inner">
@@ -96,8 +103,9 @@
   {%- if items == blank -%}
     <div class="index-section">{{ 'collections.general.no_matches' | t }}</div>
   {%- endif -%}
-
-  <div
+  
+  {% comment %} --> Change Pagination to Infinite Scroll {% endcomment %}
+  {% comment %} <div
     class="new-grid product-grid collection-grid"
     data-view="{{ productGridView }}"
     data-scroll-to>
@@ -112,18 +120,236 @@
         {%- render 'search-grid-item', item: item -%}
       {%- endif -%}
     {%- endfor -%}
-
-    
+  </div> {% endcomment %}
+  <div
+    id="infinite-scroll-container"
+    class="new-grid product-grid collection-grid"
+    data-view="{{ productGridView }}"
+    data-scroll-to>
+    {%- for item in items -%}
+      {%- if item.object_type == 'product' -%}
+        {%- render 'product-grid-item', product: item -%}
+  
+        {%- if quick_shop_enable -%}
+          {%- render 'quick-shop-modal', product: item -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- render 'search-grid-item', item: item -%}
+      {%- endif -%}
+    {%- endfor -%}
   </div>
+
+  {% assign paginate_by = 40 %}
+  <div id="infinite-scroll-loader" style="display: block; text-align: center; padding: 20px;">
+    <div class="infinite-products-count--wrapper">
+      <span>Showing</span>
+      <span class="products-count--showing">
+        {%- if paginate_by < all_count -%}
+          {{- paginate_by -}}
+        {%- else -%}
+          {{- all_count -}}
+          <style>
+            .button-load-more{
+              display: none!important;
+            }
+          </style>
+        {%- endif -%}
+      </span>
+      <span style="margin-left:-5px;margin-right:-5px;">/</span>
+      <span>
+        {{- all_count -}}
+      </span>
+    </div>
+    <button class="button-load-more" >Load More</button>
+    {% comment %} https://cdn.shopify.com/s/files/1/1205/7108/files/ico.gif?v=1736269334 {% endcomment %}
+
+    {% comment %} <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/turtle-loading.gif"  width="95px" height="95px"> {% endcomment %}
+
+  </div>
+  {% comment %} <-- Change Pagination to Infinite Scroll {% endcomment %}
+
   {% comment %} <div class="collection-filter__item collection-filter__item--count small--hide herer3">
       {{ count_label | t: count: count }}
     </div> {% endcomment %}
    
 </div>
-{%- paginate collection.products by 40 -%}
+{% comment %} --> Change Pagination to Infinite Scroll {% endcomment %}
+<style>
+  #infinite-scroll-loader {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 45px;
+  }
+  .infinite-products-count--wrapper span {
+    color: #152755;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "FuturaMedium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 16px; /* 100% */
+  }  
+  {% comment %} .button-load-more:hover{
+    color:#55CCD9;
+  } {% endcomment %}
+  .button-load-more{
+    padding: 10px 60px;
+    border-radius: 6px;
+    background: #152755;
+    color: #FFF;
+    
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "FuturaBook";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 16px; /* 100% */
+    margin-top: 20px;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('infinite-scroll-container');
+    const loader = document.getElementById('infinite-scroll-loader');
+    let isLoading = false;
+    let currentPage = 1; // Initialize current page number
+    let nextPageUrl = null; // Starting with null, will update dynamically
+    let endOfPage = false;
+
+    const loadMoreContent = async () => {
+      console.log("start to load more products....");
+      const container = document.getElementById('infinite-scroll-container');
+      const loader = document.getElementById('infinite-scroll-loader');
+      const loaderButton = document.querySelector('.button-load-more');
+      if (isLoading||endOfPage) return;
+  
+      console.log("load more products.... currentPage = " + currentPage);
+
+      isLoading = true;
+      loader.style.display = 'block';
+  
+      try {
+        // Fetch the next page's content (adjust the endpoint as needed)
+        // Generate the next page URL based on the current URL and incrementing the page parameter
+        const currentUrl = new URL(window.location.href); // Get the current page URL
+        const params = new URLSearchParams(currentUrl.search); // Extract query parameters
+
+        // Update the 'page' parameter to the next page number
+        params.set('page', currentPage + 1); // Increment the page parameter
+
+        // Rebuild the new URL with the updated page number
+        nextPageUrl = `${currentUrl.origin}${currentUrl.pathname}?${params.toString()}`;
+
+        console.log("next page Url=" + nextPageUrl);
+
+        const response = await fetch(nextPageUrl);
+        if (!response.ok) throw new Error('Failed to load content');
+  
+        const data = await response.text();
+        
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = data;
+  
+        // Extract the new grid items
+        const newItems = tempDiv.querySelectorAll('.new-grid > *');
+        // Check if the response text is empty
+        if (newItems.length === 0) {
+          console.log('No more items to load, stopping further requests.');
+          loaderButton.style.display = 'none'; // Optionally hide the loader or show a message
+          endOfPage = true;
+          isLoading = false;
+          return; // Stop loading further content if no items are returned
+        }
+        newItems.forEach((item) => container.appendChild(item));
+  
+        currentPage++;
+
+        // Update showing count
+        var showing_product_count = document.querySelector('.products-count--showing');
+        var showing_count = {{ paginate_by }} * currentPage;
+        var products_count = {{ all_count }} * 1;
+        if ( showing_count < products_count )
+          showing_product_count.innerHTML = showing_count;
+        else {
+          showing_product_count.innerHTML = products_count;
+          endOfPage = true;
+          isLoading = false;
+          loaderButton.style.display = 'none'; // Optionally hide the loader or show a message
+        }
+      } catch (error) {
+        console.error('Error loading more content:', error);
+        loader.style.display = 'none';
+      } finally {
+        isLoading = false;
+        {% comment %} loader.style.display = 'none'; {% endcomment %}
+      }
+    };
+
+    document.querySelector('.button-load-more').addEventListener('click', function (event) {
+      event.preventDefault(); // Prevents the default link action
+      loadMoreContent();
+    });
+
+    document.addEventListener('filter:selected', () => {
+      console.log("filtering...");
+      isLoading = false;
+      currentPage = 1; // Initialize current page number
+      nextPageUrl = null; // Starting with null, will update dynamically
+      endOfPage = false;
+      
+    });
+
+    document.addEventListener('collection:reloaded', function(){
+      document.querySelector('.button-load-more').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevents the default link action
+        loadMoreContent();
+      });
+    });
+  
+    {% comment %} const handleScroll = () => {
+      const container = document.getElementById('infinite-scroll-container');
+      const loader = document.getElementById('infinite-scroll-loader');
+
+      const scroll = window.scrollY || window.pageYOffset; // Current scroll position
+      const loaderElement = loader;
+      const loaderOffset = loaderElement.offsetTop; // Get the offset position of the loader
+      const viewportHeight = window.innerHeight / 2; // Height of the viewport
+    
+      const loaderRect = loaderElement.getBoundingClientRect();
+      console.log('Loader position relative to viewport:', loaderRect.top, loaderRect.bottom);
+
+      if (loaderRect.top <= window.innerHeight * 2 && loaderRect.bottom > 0) {
+        console.log('Triggering loadMoreContent');
+        loadMoreContent(); // Trigger content loading when the loader reaches the bottom of the viewport
+      }
+
+      // Check if the loader has reached the bottom of the screen
+      {% comment %} if (loaderOffset - viewportHeight <= scroll && !isLoading) {
+        console.log('Triggering loadMoreContent');
+        loadMoreContent(); // Trigger content loading when the loader reaches the bottom of the viewport
+      } {% endcomment %}
+    };
+  
+    const debounce = (func, delay) => {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), delay);
+      };
+    };
+    
+    window.addEventListener('scroll', debounce(handleScroll, 200)); {% endcomment %}
+  });
+  
+</script>
+
+{% comment %} {%- paginate collection.products by 40 -%}
   {%- liquid
         if paginate.pages > 1
           render 'pagination', paginate: paginate
         endif
   -%}
-{%- endpaginate -%} 
+{%- endpaginate -%}  {% endcomment %}
+{% comment %} <-- Change Pagination to Infinite Scroll {% endcomment %}

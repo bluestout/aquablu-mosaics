@@ -3,7 +3,7 @@
   {%- assign fixed_aspect_ratio = true -%}
 {% endunless %}
 
-<div class="grid-item grid-article" data-style="{{ style }}">
+<div class="grid-item grid-article" data-style="{{ style }}" data-current-page="{{ currentPage }}">
   <div class="grid-article__image">
     {%- if article.empty? -%}
       <div class="image-wrap">
