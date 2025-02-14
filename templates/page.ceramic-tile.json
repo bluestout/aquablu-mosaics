@@ -155,15 +155,6 @@
             "link": "shopify://collections/natural-stone-ledger-panels"
           }
         },
-        "logo_image_QXm94A": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Popular-Grout-500-x-30-slider.jpg",
-            "logo_title": "Tile Grout",
-            "logo_text": "",
-            "link": "shopify://collections/tile-grout"
-          }
-        },
         "logo_image_EbCcmb": {
           "type": "logo_image",
           "disabled": true,
@@ -173,6 +164,15 @@
             "logo_text": "",
             "link": "shopify://collections/new-and-trending-stone-tile"
           }
+        },
+        "logo_image_QXm94A": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Popular-Grout-500-x-30-slider.jpg",
+            "logo_title": "Tile Grout",
+            "logo_text": "",
+            "link": "shopify://collections/tile-grout"
+          }
         }
       },
       "block_order": [
@@ -181,8 +181,8 @@
         "logo_image_x4GYx7",
         "logo_image_rAVRjr",
         "logo_image_zUyQtN",
-        "logo_image_QXm94A",
-        "logo_image_EbCcmb"
+        "logo_image_EbCcmb",
+        "logo_image_QXm94A"
       ],
       "settings": {
         "title": "",
