@@ -482,7 +482,7 @@
   <div class="tab-content tabs-list-2 hide" data-tab-content="2">
     {% comment %} --> CRO: Price Display on Homepage Product Listings {% endcomment %}
     <div class="main-carousel-two" data-flickity='{"pageDots": true, "autoPlay": 4500, "cellAlign": "left", "contain": true, "freeScroll": true, "wrapAround": false}'>
-      {% comment %} <-- CRO: Price Display on Homepage Product Listings {% endcomment %}
+    {% comment %} <-- CRO: Price Display on Homepage Product Listings {% endcomment %}
       {% for product in collections[section.settings.tab_collection_2].products  limit: 9 %}
         {%- liquid
           assign fixed_aspect_ratio = false
@@ -910,7 +910,7 @@
   <div class="tab-content tabs-list-3 hide" data-tab-content="3">
     {% comment %} --> CRO: Price Display on Homepage Product Listings {% endcomment %}
     <div class="main-carousel-three" data-flickity='{"pageDots": true, "autoPlay": 4500, "cellAlign": "left", "contain": true, "freeScroll": true, "wrapAround": false}'>
-      {% comment %} <-- CRO: Price Display on Homepage Product Listings {% endcomment %}
+    {% comment %} <-- CRO: Price Display on Homepage Product Listings {% endcomment %}
       {% for product in collections[section.settings.tab_collection_3].products  limit: 9 %}
         {%- liquid
           assign fixed_aspect_ratio = false

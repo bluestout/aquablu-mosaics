@@ -25,6 +25,21 @@
 <div class="collection-grid__wrapper"></div>
 
   <div class="collection-filter">
+    {% comment %}--> Sticky Filter {% endcomment %}
+    {% if section.settings.enable_horizontal_filter %}
+      {%- render 'collection-grid-sticky-filters',
+        collection: collection,
+        enable_sidebar: section.settings.enable_sidebar,
+        enable_color_swatches: section.settings.enable_color_swatches,
+        tags_combine: section.settings.tags_combine,
+        enable_sort: section.settings.enable_sort,
+        collapse_filters: section.settings.collapse_filters,
+        count_label: count_label,
+        count: count
+      -%}
+    {% endif %}
+    
+     {% comment %}<-- Sticky Filter {% endcomment %}
     <div class="collection-filter__inner">
       <div class="collection-filter__item collection-filter__item--drawer">
         <button
@@ -37,7 +52,12 @@
           {%- endif -%}
         </button>
         
-        <button
+        {% comment %}--> Sticky Filter {% endcomment %}
+        <div class="collection-filter__item--count medium-up--hide">
+          {{ count_label | t: count: count }}
+        </div> 
+         {% if section.settings.enable_horizontal_filter %}
+        {% comment %} <button
           type="button"
           class="desktop-collection-filter__btn text-link small--hide">
           <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64"><path d="M48 42h10">.</path><path d="M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5z"/><path d="M7 42h31">.</path><path d="M16 22H6">.</path><path d="M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"/><path d="M57 22H26">.</path></svg>
@@ -45,10 +65,55 @@
           {%- if current_filter_size > 0 -%}
             ({{ current_filter_size }})
           {%- endif -%}
-        </button>
-        <div class="collection-filter__item--count">
+        </button> {% endcomment %}
+        <div class="filter-item--count">
           {{ count_label | t: count: count }}
         </div> 
+        <div class="collection-sticky-filter_top-area collection-sticky-filter__active_tags small--hide">
+          
+          {%  assign has_active_filter = false %}
+          <ul class="no-bullets tag-list tag-list--active-tags">
+            {%- for filter in collection.filters -%}
+              {%- for filter_value in filter.active_values -%}
+                {%  assign has_active_filter = true %}
+                <li class="tag tag--remove">
+                  <a class="btn btn--small js-no-transition" href="{{ filter_value.url_to_remove }}">
+                    {{ filter_value.label | escape }}
+                  
+                  {% comment %} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"/></svg> {% endcomment %}
+                  <svg class="icon-tag-close" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                    <path d="M6.80507 1L1.2536 6.75093" stroke="#152755" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M1.25352 1L6.805 6.75093" stroke="#152755" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                  </a>
+                </li>
+              {%- endfor -%}
+            {%- endfor -%}
+          </ul> 
+          {% if collection.filters.size > 0 and has_active_filter %}
+            <button 
+              class="btn btn--small tag tag--remove-all btn--clear-all" 
+              onclick="location.href='{{ collection.url | escape }}';">
+              Clear all
+            </button>
+          {% endif %}
+        </div>
+         
+        {% else %}
+          <button
+            type="button"
+            class="desktop-collection-filter__btn text-link small--hide">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64"><path d="M48 42h10">.</path><path d="M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5z"/><path d="M7 42h31">.</path><path d="M16 22H6">.</path><path d="M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"/><path d="M57 22H26">.</path></svg>
+            {{ 'collections.filters.title_tags' | t }}
+            {%- if current_filter_size > 0 -%}
+              ({{ current_filter_size }})
+            {%- endif -%}
+          </button>
+          <div class="collection-filter__item--count">
+            {{ count_label | t: count: count }}
+          </div> 
+        {% endif %}
+        {% comment %}<-- Sticky Filter {% endcomment %}
       </div>
 
       
@@ -91,6 +156,32 @@
     <div class="collection-mobile-filters medium-up--hide">
       <div class="collection-mobile-filters__holder" id="CollectionInlineFilterWrap"></div>
     </div>
+    {% comment %}--> Sticky Filter {% endcomment %}
+    {% if section.settings.enable_horizontal_filter %}
+      {% comment %} <button
+        type="button"
+        class="desktop-collection-filter__btn text-link small--hide">
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64"><path d="M48 42h10">.</path><path d="M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5z"/><path d="M7 42h31">.</path><path d="M16 22H6">.</path><path d="M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"/><path d="M57 22H26">.</path></svg>
+        {{ 'collections.filters.title_tags' | t }}
+        {%- if current_filter_size > 0 -%}
+          ({{ current_filter_size }})
+        {%- endif -%}
+      </button> {% endcomment %}
+      
+      <form class="filter-form collection-sticky-filter-content small-hide">
+       {%- render 'collection-grid-sticky-filter-container',
+        collection: collection,
+        enable_sidebar: section.settings.enable_sidebar,
+        enable_color_swatches: section.settings.enable_color_swatches,
+        tags_combine: section.settings.tags_combine,
+        enable_sort: section.settings.enable_sort,
+        collapse_filters: section.settings.collapse_filters,
+        count_label: count_label,
+        count: count
+      -%}
+       </form>
+    {% endif %}
+    {% comment %}<-- Sticky Filter {% endcomment %}
   </div>
 
   {%- if items == blank -%}

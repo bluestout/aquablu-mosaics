@@ -1960,6 +1960,7 @@ if (theme.config.isTouch) {
       var el = evt.currentTarget;
       var isOpen = el.classList.contains(classes.open);
       var isTab = el.classList.contains(classes.tabs);
+      var isFilter = el.classList.contains('sticky-filter--button'); // sticky filter
       var moduleId = el.getAttribute('aria-controls');
       var container = document.getElementById(moduleId);
 
@@ -2005,6 +2006,32 @@ if (theme.config.isTouch) {
           setTransitionHeight(newModule, 0, true);
         });
       }
+
+      /*--> Sticky Filter*/
+      if ( isFilter ){
+        document.querySelectorAll('.collapsible-trigger-btn').forEach(el => {
+          var _moduleId = el.getAttribute('aria-controls');
+          //  console.log('moduleId:' + moduleId + " _moduleId:"+ _moduleId);
+          if ( moduleId != _moduleId ) {
+            el.classList.remove(classes.open);
+          }
+          else {
+            // console.log('moduleId:' + moduleId + " _moduleId:"+ _moduleId);
+          }
+        });
+        document.querySelectorAll('.collapsible-content').forEach(el => {
+          var _moduleId = el.getAttribute('data-id');
+          if ( moduleId != _moduleId ){
+            el.classList.remove(classes.open);
+            el.style.height = 0 + 'px';
+          }
+          else {
+            console.log('moduleId:' + moduleId + " _moduleId:"+ _moduleId);
+          }
+          
+        });
+      }
+      /*<-- Sticky Filter*/
 
       // If isAutoHeight, set the height to 0 just after setting the actual height
       // so the closing animation works nicely
@@ -3602,9 +3629,9 @@ if (theme.config.isTouch) {
       if (collapsedNavTrigger) {
         collapsedNavTrigger.on('click', function() {
           collapsedNavTrigger.classList.toggle('is-active');
-          // theme.utils.prepareTransition(bottomNav, function() {  /*-->Enhancing Navigation Menu with Visuals */
+          theme.utils.prepareTransition(bottomNav, function() {
             bottomNav.classList.toggle('is-active');
-          // });/*<--Enhancing Navigation Menu with Visuals */
+          });
         });
       }
 
@@ -3706,6 +3733,7 @@ if (theme.config.isTouch) {
     }
 
     function stickyHeaderScroll() {
+      // console.log("stickyEnabled: " + config.stickyEnabled, "forceStopSticky: " + config.forceStopSticky, "threshold: " + config.threshold);
       if (!config.stickyEnabled) {
         return;
       }
@@ -3724,13 +3752,14 @@ if (theme.config.isTouch) {
         }
 
         if (bottomNav) {
-          // theme.utils.prepareTransition(bottomNav);/*-->Enhancing Navigation Menu with Visuals */
+          theme.utils.prepareTransition(bottomNav);
         }
         if (bottomSearch) {
-          // theme.utils.prepareTransition(bottomSearch);/*-->Enhancing Navigation Menu with Visuals */
+          theme.utils.prepareTransition(bottomSearch);
         }
 
         config.stickyActive = true;
+        console.log("Active --- threshold: " + config.threshold + " scrollY: " + window.scrollY);
 
         wrapper.classList.add(classes.headerCompressed);
 
@@ -3745,13 +3774,14 @@ if (theme.config.isTouch) {
         }
 
         if (bottomNav) {
-          // theme.utils.prepareTransition(bottomNav);/*-->Enhancing Navigation Menu with Visuals */
+          theme.utils.prepareTransition(bottomNav);
         }
         if (bottomSearch) {
-          // theme.utils.prepareTransition(bottomSearch);/*-->Enhancing Navigation Menu with Visuals */
+          theme.utils.prepareTransition(bottomSearch);
         }
 
         config.stickyActive = false;
+        console.log("Deactive --- threshold: " + config.threshold + " scrollY: " + window.scrollY);
 
         // Update threshold in case page was loaded down the screen
         // config.threshold = wrapper.getBoundingClientRect().top;    // Fixing the turtle icon flickering issue - Icons weight and sizing
@@ -4202,7 +4232,7 @@ if (theme.config.isTouch) {
       });
 
       /*   // Header Update
-      // --> Mobile Search Placement      
+      // --> Mobile Search Placement   
       window.addEventListener("scroll", function(){ 
         if (window.scrollY < 100) {
           // detect to scroll top
@@ -4242,7 +4272,7 @@ if (theme.config.isTouch) {
         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
       // <-- Mobile Search Placement
-      */  // Header Update
+      */
 
     }
 
@@ -4275,6 +4305,7 @@ if (theme.config.isTouch) {
       // If close button is clicked, close as expected.
       // Otherwise, ignore clicks in search results, search form, or container elements
       if (evt && evt.target.closest) {
+        
         if (evt.target.closest(selectors.closeSearch)) {} else {
           if (evt.target.closest('.site-header__search-form')) {
             return;
@@ -4286,14 +4317,13 @@ if (theme.config.isTouch) {
             return;
           }
         }
-
+        
         // --> Header Update
         document.querySelector('.site-header__search-container').classList.remove('is-active');
         document.querySelector('.site-header__search-container').classList.add('hide');
         document.querySelector('.header-wrapper [data-nav="below"] .js-search-header').style.display = "block";
         document.querySelector(selectors.input).value = ""; /* Fix Search result issue */
         // <-- Header Update
-
       }
 
       // deselect any focused form elements
@@ -5915,7 +5945,7 @@ if (theme.config.isTouch) {
     function sizeDrawer() {
       var header = document.getElementById('HeaderWrapper').offsetHeight;
       var filters = document.querySelector(selectors.filterBar).offsetHeight;
-      var max = window.innerHeight - header - 20;   // Header Update
+      var max = window.innerHeight - header - filters;
       document.documentElement.style.setProperty('--maxFiltersHeight', `${max}px`);
     }
 
@@ -6247,9 +6277,11 @@ if (theme.config.isTouch) {
         if (!sidebarWrapper) {
           return;
         }
-        var filters = sidebarWrapper.querySelector(selectors.filters).cloneNode(true);
+        // var filters = sidebarWrapper.querySelector(selectors.filters).cloneNode(true);
+        var filters = document.querySelector('.filter-wrapper.mobile-filter').cloneNode(true); //Sticky Filter
 
         var inlineWrapper = document.querySelector(selectors.inlineWrapper);
+        // var inlineWrapper = document.querySelector('.filter-wrapper.mobile-filter');  //Sticky Filter
 
         inlineWrapper.innerHTML = '';
         inlineWrapper.append(filters);
@@ -6382,6 +6414,15 @@ if (theme.config.isTouch) {
             this.updateScroll(false);
             theme.reinitProductGridItem();
 
+            /* --> Sticky Filter */
+            // var flkty = new Flickity( '.sticky_filters_container', {
+            //   cellAlign: 'left',
+            //   contain: true,
+            //   groupCells: true,
+            //   pageDots: false
+            // });
+            /* <-- Sticky Filter */
+
             document.dispatchEvent(new CustomEvent('collection:reloaded'));
 
             isAnimating = false;
@@ -6455,7 +6496,7 @@ if (theme.config.isTouch) {
       ==============================================================================*/
       setFilterStickyPosition: function() {
         var headerHeight = document.querySelector('.site-header').offsetHeight - 1;
-        document.querySelector(selectors.filterBar).style.top = headerHeight + 'px';
+        // document.querySelector(selectors.filterBar).style.top = headerHeight + 'px'; // Sticky Filter
 
         // Also update top position of sticky sidebar
         var stickySidebar = document.querySelector('.grid__item--sidebar');
@@ -8279,7 +8320,7 @@ if (theme.config.isTouch) {
   // to account for changing mobile window heights
   theme.sizeDrawer = function() {
     var header = document.getElementById('HeaderWrapper').offsetHeight;
-    var max = window.innerHeight - header;
+    var max = window.innerHeight - header - 20;   // Header Update
     document.documentElement.style.setProperty('--maxDrawerHeight', `${max}px`);
   }
 

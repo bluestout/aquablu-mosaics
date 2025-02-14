@@ -100,6 +100,19 @@
 
         
         <div class="grid">
+          {% comment %} --> Sticky Filter {% endcomment %}
+          {% if section.settings.enable_horizontal_filter %}
+            {%- render 'collection-grid-sticky-mobile-filters',
+              collection: collection,
+              enable_sidebar: section.settings.enable_sidebar,
+              enable_color_swatches: section.settings.enable_color_swatches,
+              tags_combine: section.settings.tags_combine,
+              enable_sort: section.settings.enable_sort,
+              collapse_filters: section.settings.collapse_filters,
+            -%}
+          {% endif %}
+          {% comment %} <-- Sticky Filter {% endcomment %}
+          {% unless section.settings.enable_horizontal_filter %} {% comment %} Sticky Filter {% endcomment %}
           <div class="grid__item medium-up--one-fifth grid__item--sidebar" id="js-grid-item-sidebar">
             {% comment %} Fix filter action bug {% endcomment %} 
             <div class="reset-button-area">
@@ -130,6 +143,7 @@
             </div>
             {%- endcomment -%}
           </div>
+        {% endunless %}   {% comment %} Sticky Filter {% endcomment %}
           <div class="grid__item medium-up--one-whole grid__item--content">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
@@ -307,6 +321,12 @@
       "label": "t:sections.main-collection.settings.enable_sidebar.label",
       "default": true,
       "info": "t:sections.main-collection.settings.enable_sidebar.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_horizontal_filter",
+      "label": "Show horizontal filter",
+      "default": true
     },
     {
       "type": "checkbox",

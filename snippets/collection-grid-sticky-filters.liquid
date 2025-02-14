@@ -1,0 +1,623 @@
+{% comment %} Sticky Filter {% endcomment %}
+{% comment %}
+- collection: Liquid 'collection' or 'search' object
+- enable_sidebar: boolean
+- enable_color_swatches: boolean
+- tags_combine: boolean
+- enable_sort: boolean
+- collapse_filters: boolean
+{% endcomment %}
+
+{%- liquid
+    assign show_sidebar = true
+    assign total_tags = 0
+    assign show_price = false
+  
+    if enable_sidebar == false or collection.filters.size == 0
+      assign show_sidebar = false
+    endif
+    for filter in collection.filters
+      
+      if filter.label contains "Price Per"
+        assign show_price = true
+      endif 
+      
+    endfor  
+  -%}
+  {% style %}
+  .collection-filter:has(.collection-sticky-filter){
+    /* margin-bottom: 100px; */
+    top: 99px;
+    position: sticky;
+    background: #FFF;
+    z-index: 5;
+    padding-top: 3px;
+  }
+  .collection-filter.is-stuck:after{
+    content:"";
+  }
+  .collection-filter.is-stuck:before{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100%;
+    background: #BBE0EA;
+    z-index: -1;
+    top: 0;
+    left: calc(50% - 50vw);
+  }
+
+  .collection-sticky-filter_down-area{
+    display: flex;
+    align-items: center;
+  }
+  .collection-sticky-filter_top-area{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    border-bottom: solid 1px white;
+    width: 100%;
+    column-gap: 20px;
+  }
+
+  .collection-sticky-filter_top-area .no-bullets.tag-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .collection-filter__inner .filter-item--count{
+    padding: 0;
+    margin: 0;
+    color: #152755;
+    font-family: "FuturaBook";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: auto;
+    white-space: nowrap;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    margin-right: 35px;
+  }
+
+  .collection-sticky-filter__active_tags li.tag--remove{
+    display: flex;
+    position: relative;
+    margin: 0;
+    align-items: baseline;
+  }
+  .collection-sticky-filter__active_tags .tag-list--active-tags a.btn.btn--small.js-no-transition{
+    color: #152755;
+  }
+  .collection-sticky-filter__active_tags li.tag--remove a{
+    padding: 0;
+    margin: 0;
+    color: #152755;
+    font-family: "FuturaBook";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 242.857% */
+  }
+
+  .collection-sticky-filter__active_tags:not(:has(.tag--remove)) {
+    display: none;
+  }
+  .collection-sticky-filter__active_tags li.tag--remove .icon-tag-close{
+    margin-left: 5px;
+  }
+  .collection-sticky-filter__active_tags .tag--remove-all{
+    color: #152755;
+    font-family: "FuturaBook";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .collection-filter:has(.collection-sticky-filter){
+      top: 65px;
+    }
+  }
+  @media only screen and (max-width: 1150px) and (min-width:769px) {
+    .collection-filter:has(.collection-sticky-filter){
+      top: 65px;
+      
+    }
+  }
+
+  .collection-sticky-filter {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 35px;
+  }
+
+  .collection-sticky-filter:before{
+    content: "";
+    background: rgba(215, 215, 215, 0.42);
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 1px;
+  }
+
+  .collection-sticky-filter__label{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 450;
+    font-family: 'FuturaMedium';
+    display: none;
+  }
+
+  .collection-sticky-filter .collection-sticky-filter__item--count{
+    text-wrap: nowrap;
+    text-transform: capitalize;
+    
+    color: #152755;
+    font-family: "FuturaBook";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+  }
+  .collection-sticky-filter .sticky_filters_container{
+    display: flex;
+    width: 100%;
+    max-width: 1030px;
+    // margin-left: 15px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .collection-sticky-filter .flickity-viewport {
+    width: 50vw;
+    max-width: 900px;
+  }
+  .collection-sticky-filter .collection-sidebar__group{
+    overflow: visible;
+    width: max-content;
+    border-radius: 59px;
+    border: 1px solid #152755;
+    margin-right: 8px;
+  }
+  .collection-sticky-filter .collection-sidebar__group:has(.is-open){
+    border: 1px solid #152755;
+    background: #BBE0EA;
+  }
+  .collection-filter.is-stuck .collection-sticky-filter .collection-sidebar__group{
+    background: #FFF;
+  }
+  .collection-filter.is-stuck .collection-sticky-filter .collection-sidebar__group:has(.is-open){
+    border: 1px solid #152755;
+    background: #152755;
+  }
+  .collection-filter.is-stuck .collection-sticky-filter .collection-sidebar__group:has(.is-open) .collapsible-trigger__layout--inline>span{
+    color: #FFF;
+  }
+  .collection-filter.is-stuck .collection-sticky-filter .collection-sidebar__group:has(.is-open) .collapsible-trigger__layout--inline>span svg path{
+    stroke: #FFF;
+  }
+
+  .collection-sticky-filter .collection-sidebar__group:has(.is-open) .collapsible-trigger__layout--inline>span svg{
+    transform: rotate(180deg);
+  }
+
+  /* .collection-sticky-filter .filter-wrapper .collapsible-content--all{
+    height: auto!important;
+    position: absolute;
+    left:0;
+    width: 135%;
+    max-width: 1440px;
+  } */
+  .collection-sticky-filter .filter-wrapper .collapsible-content--all.is-open{
+    /* width: 100vw;
+    position: absolute; */
+  }
+  .collection-sticky-filter .collection-sidebar__group .collapsible-trigger-btn{
+    padding: 2px 10px;
+  }
+  .collection-sticky-filter .collapsible-content__inner{
+    padding: 0;
+    padding-top: 15px;
+  }
+  .collection-sticky-filter .collapsible-trigger__layout--inline>span{
+    text-wrap: nowrap;
+    font-size: 14px;
+    letter-spacing: 0px;
+    padding-right: 6px;
+    color: #152755;
+  }
+  .collection-sticky-filter .collapsible-trigger__layout--inline .collapsible-trigger__icon{
+    width: 10px;
+    height: 7px;
+    transform: translateY(-120%);
+  }
+  .collection-sticky-filter  .no-bullets.tag-list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .collection-sticky-filter label.tag__checkbox-wrapper.text-label{
+    text-wrap: nowrap;
+    padding: 10px 10px;
+    margin: 0;
+  }
+  
+  .sticky_filters_container > div {
+    width: max-content;
+  }
+  .collection-sidebar{
+    margin-bottom: 0;
+  }
+  .collection-sticky-filter .flickity-prev-next-button.next{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) -8.14%, #FFF 72.61%);
+    right: -10px;
+    padding: 0;
+  }
+  .collection-sticky-filter .flickity-prev-next-button.next .flickity-button-icon{
+    right: 0;
+    left: auto;
+    width: 10px;
+  }
+  .collection-sticky-filter .flickity-prev-next-button.next:hover{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) -8.14%, #FFF 72.61%);
+  }
+  .collection-sticky-filter .flickity-prev-next-button.previous{
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0.00) -8.14%, #FFF 72.61%);
+    left: -10px;
+    padding: 0;
+  }
+  .collection-sticky-filter .flickity-prev-next-button.previous .flickity-button-icon{
+    left: 0;
+    width: 10px;
+  }
+  .collection-sticky-filter .flickity-prev-next-button.previous:hover{
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0.00) -8.14%, #FFF 72.61%);
+  }
+  .collection-sticky-filter .flickity-prev-next-button:hover{
+    transform: translateY(-50%);
+  }
+  .collection-sticky-filter .flickity-prev-next-button{
+    width: 100px;
+    border-radius: 0;
+
+  }
+
+  .collection-sticky-filter-content .tag__checkbox:before{
+    width: 18px;
+    height: 18px;
+    border-color: #152755;
+    border-radius: 2px;
+  }
+
+  .collection-filter.is-stuck .collection-sticky-filter-content .tag__checkbox:before{
+    background: #FFF;
+  }
+
+  
+  .collection-sticky-filter-content .tag__checkbox:after{
+    width: 18px;
+    height: 18px;
+    left: 0;
+    
+  }
+  .collection-sticky-filter-content input:checked~.tag__checkbox:after{
+    background: url(https://cdn.shopify.com/s/files/1/1205/7108/files/icon-checked.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+  }
+
+  .collection-filter{
+    margin-bottom: 0;
+  }
+  .collection-filter__inner{
+    margin-bottom: 0;
+  }
+
+  .collection-filter.is-sticky .collection-sticky-filter:before{
+    display: none;
+  }
+
+  .collection-filter.is-sticky .collection-sticky-filter{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #F8F8F8;
+    box-shadow: 0px 4px 25.6px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .collection-filter.is-sticky div#CollectionSidebarFilterWrap{
+    background: none;
+  }
+
+  .collection-sticky-filter-content{
+    position: absolute!important;
+    top: 48px!important;
+    background: white!important;
+    width: 101%!important;
+  }
+
+  .collection-sticky-filter-content .collapsible-content__inner{
+    padding: 0!important;
+    padding-top: 10px!important;
+    /* margin-top: 15px; */
+    padding-bottom: 12px!important;
+    border-top: unset!important;
+  }
+  .collection-sticky-filter-content .no-bullets.tag-list{
+    display: flex!important;
+    flex-wrap: wrap!important;
+    column-gap: 55px!important;
+    margin-bottom: 0!important;
+    justify-content: center!important;
+  }
+  .collection-sticky-filter-content .no-bullets.tag-list li.tag{
+    width: unset!important;
+  }
+
+  {% endstyle %}
+  
+  {%- if enable_sidebar or enable_sort -%}
+    {%- assign location = 'CollectionSidebar' -%}
+    <div id="CollectionSidebar" class="collection-sticky-filter small--hide">
+      
+      <div class="collection-sticky-filter_down-area">
+        {% comment %} <div class="collection-sticky-filter__labels_wrapper">
+          <div class="collection-sticky-filter__label">Filters</div>
+          <div class="collection-sticky-filter__item--count">
+            {{ count_label | t: count: count }}
+          </div> 
+        </div> {% endcomment %}
+        <div class="collection-sidebar small--hide" id="CollectionSidebarFilterWrap">
+          <div class="filter-wrapper">
+            
+    
+            {%- liquid
+              assign sort_title = 'collections.sorting.title' | t
+              assign sort_by = collection.sort_by | default: collection.default_sort_by
+              assign sort_id = 'CollectionSidebarSort'
+            -%}
+            <div class="collection-sidebar__group collection-sidebar__group--sort medium-up--hide">
+              {%- render 'collection-sidebar-filter-trigger', location: location, title: sort_title, index: sort_id, collapsed_state: true -%}
+    
+              <div
+                data-id="{{ location }}-{{ sort_id }}"
+                class="collapsible-content collapsible-content--all">
+                <div class="collapsible-content__inner">
+                  <ul class="no-bullets tag-list">
+                    {%- if collection.sort_options -%}
+                      {% comment %} <div class="reset-button-area">
+                        <svg class="reset-button" width="800px" height="800px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                          <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0 1 1 0 2.5 2.5)">
+                            <path d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"/>
+                            <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"/>
+                          </g>
+                        </svg>
+                      </div>   {% endcomment %}
+                    {%- endif -%}  
+    
+                    {%- for option in collection.sort_options -%}
+                      <li class="tag{% if option.value == sort_by %} tag--active{% endif %}">
+                        <button type="button" data-value="{{ option.value }}" class="filter-sort">{{ option.name }}</button>
+                      </li>
+    
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </div>
+            </div>
+    
+            {%- if enable_sidebar -%}
+              {% comment %}  data-flickity='{"pageDots": false, "cellAlign": "left", "contain": true}' {% endcomment %}
+              {% comment %} <div class="sticky_filters_container" data-flickity='{"pageDots": false, "groupCells": true, "cellAlign": "left", "contain": true}'> {% endcomment %}
+              <div class="sticky_filters_container">
+                {%- for filter in collection.filters -%}
+    
+    
+                  {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
+                  {%- assign filter_index = forloop.index -%}
+                  {%- assign collapsed_state = section.settings.collapse_filters -%}
+    
+                  {% comment %} <div class="collection-sidebar__group--{{ filter_index }} {%- if show_price == true and filter.label == 'Price' -%} hide-filter {%- endif -%} "> {% endcomment %}
+                    <div class="collection-sidebar__group--{{ filter_index }} {%- if filter.label == 'Price' -%} hide-filter {%- endif -%} ">
+                      <div class="collection-sidebar__group">
+                        {%- if show_price != false -%}
+                          {%- if filter.label != "Price"  -%}             
+                            {%- render 'collection-sticky-filter-trigger',
+                              id: filter_id,
+                              location: location,
+                              title: filter.label,
+                              index: filter_index,
+                              collapsed_state: collapsed_state -%}
+                          {%- endif -%} 
+                        {%- else -%}   
+                          {%- render 'collection-sticky-filter-trigger',
+                            id: filter_id,
+                            location: location,
+                            title: filter.label,
+                            index: filter_index,
+                            collapsed_state: collapsed_state -%}
+                        {%- endif -%}   
+                        {% comment %}                       
+                        <div
+                          data-id="{{ location }}-{{ filter_index }}"
+                          data-collapsible-id="{{ filter_id }}"
+                          class="collapsible-content collapsible-content--all{% unless collapsed_state %} is-open{% endunless %}"
+                          {% unless collapsed_state %}style="height: auto;"{% endunless %}>
+                          <div class="collapsible-content__inner">
+                            {%- case filter.type -%}
+                              {%- when 'list' -%}
+    
+                                {%- liquid
+                                  assign is_color = false
+                                  assign swatch_file_extension = 'png'
+                                  if enable_color_swatches
+                                    assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+                                    assign downcased_label = filter.label | downcase
+                                    if downcased_label contains swatch_trigger
+                                      assign is_color = true
+                                    elsif swatch_trigger == 'color' and downcased_label contains 'colour'
+                                      assign is_color = true
+                                    endif
+                                  endif
+                                -%}
+    
+                                <ul class="no-bullets tag-list{% if tags_combine %} tag-list--checkboxes{% endif %}{% if is_color %} tag-list--swatches{% endif %}">
+                                  {%- assign tag_count = filter.values.size -%}
+                                  {%- for filter_value in filter.values -%}
+                                    {%- liquid
+                                      assign tag_count = tag_count | plus: 1
+                                      assign filter_value_index = forloop.index
+    
+                                      assign color_file_name = filter_value.label | handle | append: '.' | append: swatch_file_extension
+                                      assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                                      assign color_swatch_fallback = filter_value.label | split: ' ' | last | handle
+                                    -%}
+    
+                                    <li class="tag{% if filter_value.active %} tag--active{% endif %}{% if is_color %} tag--swatch{% endif %}{% if filter_value.count == 0%} hide{% endif %}">
+                                      <label class="tag__checkbox-wrapper text-label">
+                                        <input
+                                          type="checkbox"
+                                          class="tag__input"
+                                          name="{{ filter_value.param_name }}"
+                                          value="{{ filter_value.value }}"
+                                          {% if filter_value.active -%}checked{% endif %}>
+                                        {%- if is_color -%}
+                                          <span
+                                            class="color-swatch color-swatch--filter color-swatch--{{ filter_value.label | handle }}"
+                                            title="{{ filter_value.label }}"
+                                            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+                                          >
+                                            {{ filter_value.label }}
+                                          </span>
+                                          <span class="tag__text hide">{{ filter_value.label | escape }}</span>
+                                        {%- else -%}
+                                          <span class="tag__checkbox"></span>
+                                          <span>
+                                            <span class="tag__text">{{ filter_value.label | escape }}</span> ({{ filter_value.count }})
+                                          </span>
+                                        {%- endif -%}
+                                      </label>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+    
+                                {%- assign total_tags = total_tags | plus: tag_count -%}
+    
+                                {%- if tag_count == 0 -%}
+                                  {%- style -%}
+                                    .collection-sidebar__group--{{ filter_index }} { display: none; }
+                                  {%- endstyle -%}
+                                {%- endif -%}
+                            {%- endcase -%}
+                          </div>
+                        </div> 
+                        {% endcomment %}
+                        
+                      </div>
+                    </div>
+                {%- endfor -%}
+              {% comment %} </form> {% endcomment %}
+              </div>
+            {%- endif -%}
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    {%- style -%}
+      @media screen and (min-width: 769px) {
+        .collection-filter__item--drawer {
+          display: none;
+        }
+        .collection-filter__item--count {
+          text-align: left;
+        }
+        html[dir="rtl"] .collection-filter__item--count {
+          text-align: right;
+        }
+      }
+    {%- endstyle -%}
+  {%- endif -%}
+  
+  {%- liquid
+    if total_tags == 0
+      assign show_sidebar = false
+    endif
+  -%}
+  
+  {%- if show_sidebar == false -%}
+    {% comment %}
+      Disable sidebar & filter features
+    {% endcomment %}
+    {%- style -%}
+      .collection-content .grid__item--sidebar,
+      .search-content .grid__item--sidebar  {
+        display: none;
+      }
+      .collection-content .grid__item--content,
+      .search-content .grid__item--content {
+        width: 100% !important;
+      }
+      {%- if enable_sort == false -%}
+        .collection-filter__item--drawer {
+          display: none;
+        }
+      {%- endif -%}
+      .collection-filter__item--count {
+        text-align: left;
+      }
+      html[dir="rtl"] .collection-filter__item--count {
+        text-align: right;
+      }
+    {%- endstyle -%}
+  {%- endif -%}
+  
+  
+  {%- unless enable_sort -%}
+    {%- style -%}
+      .collection-filter__sort,
+      .collection-sidebar__group--sort {
+        display: none;
+      }
+    
+    {%- endstyle -%}
+  {%- endunless -%}
+  
+  <script>
+    
+    window.addEventListener('scroll', () => {
+      const stickyElement = document.querySelector('.collection-filter:has(.collection-sticky-filter)');
+      const stickyTop = stickyElement.getBoundingClientRect().top;
+    {% comment %} console.log("stickytop = " + stickyTop); {% endcomment %}
+
+      if (stickyTop < 100) {
+        stickyElement.classList.add('is-sticky');
+      } else {
+        stickyElement.classList.remove('is-sticky');
+      }
+
+    });
+
+    
+  </script>

@@ -1,96 +1,34 @@
-{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
 <style>
-  .megamenu-area-outdoor .megamenu-area-container{
-      display: flex;
-      height: 600px;  /* Fix individual mega menu container's height */
-  }
-  .megamenu-area-outdoor .megamenu-area-left{
-    flex-basis: 60%;
-    display: flex;
-    /* column-gap: 5%; */
-    row-gap: 10%;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .megamenu-area-outdoor .megamenu-area-menu-content{
-    text-align: left;
-    width: 30%;
-    height: 45%;
-  }
-  .megamenu-area-outdoor .megamenu-area-divider{
-      width: 1px;
-      border-left: solid 1px #A5A5A5;
-      height: 180px;
-      margin-top: 7%;
-      margin-left: -30px;
-  }
-  .megamenu-area-outdoor .megamenu-area-right{
-    display: flex;
-    flex-basis: 40%;
-    padding-left: 4%;
-    column-gap: 8%;
-    flex-wrap: wrap;
-  }
-  .megamenu-area-outdoor .megamenu-area-right .mega-menu__image{
-    width: 45%;
-  }
-  .megamenu-area-outdoor .megamenu-area p.h3{
-      font-size: 14px;
-  }
-  .megamenu-area-outdoor .megamenu-area-menu-items li{
-      margin-bottom: 5px;
-  }
-  .megamenu-area-outdoor .megamenu-area-menu-items li a{
-      font-size: 16px;
-  }
-  .megamenu-area-outdoor.megamenu-area p.megamenu-text-overlay{
-      margin-top: 10px;
-  }
- 
+  .aquablue-menu-grandchildlink{position:relative}.megamenu-area{position:absolute;top:-10px;left:146px;display:none}.megamenu-area-outdoor{top:36px!important;left:-400px!important}.megamenu-area-1{margin:auto;background:#f5f5f5;padding:25px 40px;grid-column-gap:40px;justify-content:space-between}.megamenu-area-1-R{display:grid;grid-template-columns:max-content max-content max-content;grid-gap:40px;justify-content:space-between}.megamenu-area-outdoor .megamenu-area-1{display:grid;grid-template-columns:200px max-content;width:920px}.megamenu-area-1 img{width:100%}.megamenu-area-1 ul{list-style-type:none;margin:0}.megamenu-area-1 h3{font-size:16px;font-weight:900;margin-bottom:10px}.megamenu-area-1 a{letter-spacing:.98px;font-size:14px}.shop-all-link{margin-bottom:28px}.megamenu-area-pool-entertainment{min-height:100px!important}@media (max-width:1145px){.megamenu-area-outdoor .megamenu-area-1{width:955px}.megamenu-area-outdoor{left:-478px!important}}.megamenu-area-1 p{color:#fff}
 </style>
 
-<div class="megamenu-area megamenu-area-outdoor">
-  <div class="megamenu-area-container page-width">  
-      <div class="megamenu-area-left"> 
-        {%- for link in menu_link.links -%}
-         <div class="megamenu-area-menu-content">          
-          <a href="{{ link.url }}" > <p class="h3">{{ link.title }} </p> </a>
-            <ul class="megamenu-area-menu-items">
-              {%- for childlink in link.links -%}
-                <li value="">
-                    <a href="{{ childlink.url }}"> {{ childlink.title }} </a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endfor -%}
-      </div>
-      <div class="megamenu-area-divider"></div>
-       <div class="megamenu-area-right">
-          <div class="mega-menu__image">
-            <a href="{{ menu_settings.link1 }}"> 
-              <img src="{{ menu_settings.image1 | img_url: '2x' }}" alt="{{ menu_settings.image1.alt | escape }}" width="{{ menu_settings.image1.width }}" height="{{ menu_settings.image1.height }}" loading="lazy">
-              <p class="megamenu-text-overlay">{{menu_settings.text1 }}</p>
-            </a>
-          </div>
-          <div class="mega-menu__image">
-            <a href="{{ menu_settings.link2 }}"> 
-              <img src="{{ menu_settings.image2 | img_url: '2x' }}" alt="{{ menu_settings.image2.alt | escape }}" width="{{ menu_settings.image2.width }}" height="{{ menu_settings.image2.height }}" loading="lazy">
-              <p class="megamenu-text-overlay">{{menu_settings.text2 }}</p>
-            </a>
-          </div>
-          <div class="mega-menu__image">
-            <a href="{{ menu_settings.link3 }}"> 
-              <img src="{{ menu_settings.image3 | img_url: '2x' }}" alt="{{ menu_settings.image3.alt | escape }}" width="{{ menu_settings.image3.width }}" height="{{ menu_settings.image3.height }}" loading="lazy">
-              <p class="megamenu-text-overlay">{{menu_settings.text3 }}</p>
-            </a>
-          </div>
-          <div class="mega-menu__image">
-            <a href="{{ menu_settings.link4 }}"> 
-              <img src="{{ menu_settings.image4 | img_url: '2x' }}" alt="{{ menu_settings.image4.alt | escape }}" width="{{ menu_settings.image4.width }}" height="{{ menu_settings.image4.height }}" loading="lazy">
-              <p class="megamenu-text-overlay">{{menu_settings.text4 }}</p>
-            </a>
-          </div>
+<div class="megamenu-area megamenu-area-outdoor fadeIn">
+    <div class="megamenu-area-1">  
+       <div class="megamenu-area-1-L">
+           <p class="h2">SHOP BY</p>
+        <a class="shop-all-link" href="{{ section.settings.mm_outdoor_link1 }}"><b>{{ section.settings.mm_outdoor_text1 }}</b></a>
+        <div class="mega-menu__image">
+          <a href="{{ section.settings.mm_outdoor_link2 }}"> 
+            <img src="{{ section.settings.mm_outdoor_image | img_url: '2x' }}" alt="{{ section.settings.mm_mosaics_image.alt | escape }}" width="{{ section.settings.mm_mosaics_image.width }}" height="{{ section.settings.mm_mosaics_image.height }}" loading="lazy">
+            <p class="megamenu-text-overlay">{{ section.settings.mm_outdoor_text2 }}</p>
+          </a>
+        </div>
        </div>
+      <div class="megamenu-area-1-R"> 
+        {%- for link in linklists.outdoor-living-mm.links -%}
+         <div class="megamenu-area-1-1">          
+          <p class="h3">{{ link.title }} </p>
+          <ul class="marg-bttm">
+            {%- for childlink in link.links -%}
+               <li value=""{%- if childlink.title == "View All >>" -%} class="mag-top-10" {%- endif -%}>
+                 {%- if childlink.title == "." -%} <p> {{ childlink.title }} </p> {%- else -%}
+                   <a href="{{ childlink.url }}"> {{ childlink.title }} </a>
+                 {%- endif -%}    
+               </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+    </div>
   </div>     
 </div>
