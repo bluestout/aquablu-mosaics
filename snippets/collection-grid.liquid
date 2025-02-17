@@ -238,8 +238,11 @@
       {%- endif -%}
     {%- endfor -%}
   </div>
-
-  {% assign paginate_by = collection_items %}
+  {%- if paginate.next -%}
+  {% assign paginate_by = collection_items | times: paginate.current_page %}
+  {% else %}
+  {% assign paginate_by = all_count %}
+  {% endif %}
   <div id="infinite-scroll-loader" style="display: block; text-align: center; padding: 20px;">
     <div class="infinite-products-count--wrapper">
       <span>Showing</span>
