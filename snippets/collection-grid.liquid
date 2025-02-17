@@ -1,19 +1,19 @@
 {% comment %}
-- collection: Liquid 'collection' or 'search' object
-- items: Paginated 'collection.products' or 'search.results' list. Cannot be pulled from the the 'collection' object passed in above
-- grid_style
-- quick_shop_enable
+  - collection: Liquid 'collection' or 'search' object
+  - items: Paginated 'collection.products' or 'search.results' list. Cannot be pulled from the the 'collection' object passed in above
+  - grid_style
+  - quick_shop_enable
 {% endcomment %}
 
 {% liquid
   if collection.products
-      assign count = collection.products_count
-      assign count_label = 'collections.general.items_with_count'
+    assign count = collection.products_count
+    assign count_label = 'collections.general.items_with_count'
   endif
 
   if collection.results
-      assign count = collection.results_count
-      assign count_label = 'general.search.result_count'
+    assign count = collection.results_count
+    assign count_label = 'general.search.result_count'
   endif
 
   assign current_filter_size = 0
@@ -29,25 +29,75 @@
   endif
 %}
 
-<div class="collection-grid__wrapper">
+{% comment %} --> Change Pagination to Infinite Scroll {% endcomment %}
+{%- style -%}
+  #infinite-scroll-loader {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 45px;
+  }
 
+  .infinite-products-count--wrapper span {
+    color: #152755;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'FuturaMedium';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 16px;
+  }
+
+  .button-load-more,
+  .button-previous-items {
+    padding: 10px 60px;
+    border-radius: 6px;
+    background: #152755;
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'FuturaBook';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+  .button-previous-items {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .button-load-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+{%- endstyle -%}
+
+<div class="collection-grid__wrapper">
   <div class="collection-filter">
     <div class="collection-filter__inner">
       <div class="collection-filter__item collection-filter__item--drawer">
         <button
           type="button"
-          class="collection-filter__btn text-link ">
-          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64"><path d="M48 42h10">.</path><path d="M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5z"/><path d="M7 42h31">.</path><path d="M16 22H6">.</path><path d="M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"/><path d="M57 22H26">.</path></svg>
-          {{ 'collections.filters.title_tags' | t }} 
+          class="collection-filter__btn text-link "
+        >
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64">
+            <path d="M48 42h10">.</path><path d="M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5z"/><path d="M7 42h31">.</path><path d="M16 22H6">.</path><path d="M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"/><path d="M57 22H26">.</path>
+          </svg>
+          {{ 'collections.filters.title_tags' | t }}
           {%- if current_filter_size > 0 -%}
             ({{ current_filter_size }})
           {%- endif -%}
         </button>
-        
+
         <button
           type="button"
-          class="desktop-collection-filter__btn text-link small--hide">
-          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64"><path d="M48 42h10">.</path><path d="M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5z"/><path d="M7 42h31">.</path><path d="M16 22H6">.</path><path d="M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"/><path d="M57 22H26">.</path></svg>
+          class="desktop-collection-filter__btn text-link small--hide"
+        >
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64">
+            <path d="M48 42h10">.</path><path d="M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5z"/><path d="M7 42h31">.</path><path d="M16 22H6">.</path><path d="M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"/><path d="M57 22H26">.</path>
+          </svg>
           {{ 'collections.filters.title_tags' | t }}
           {%- if current_filter_size > 0 -%}
             ({{ current_filter_size }})
@@ -55,42 +105,100 @@
         </button>
         <div class="collection-filter__item--count">
           {{ count_label | t: count: count }}
-        </div> 
+        </div>
       </div>
 
-      
       <div class="collection-filter__item collection-filter__item--right">
         {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
         <div class="collection-filter__sort small--hide">
           <label for="SortBy" class="hidden-label">{{ 'collections.sorting.title' | t }}</label>
           <select name="SortBy" id="SortBy" data-default-sortby="{{ collection.default_sort_by }}">
-            <option value="title-ascending"{% if sort_by == collection.default_sort_by %} selected="selected"{% endif %}>{{ 'collections.sorting.title' | t }}</option>
+            <option
+              value="title-ascending"
+              {% if sort_by == collection.default_sort_by %}
+                selected="selected"
+              {% endif %}
+            >
+              {{ 'collections.sorting.title' | t }}
+            </option>
             {%- for option in collection.sort_options -%}
-              <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+              <option
+                value="{{ option.value }}"
+                {% if option.value == sort_by %}
+                  selected="selected"
+                {% endif %}
+              >
+                {{ option.name }}
+              </option>
             {%- endfor -%}
           </select>
         </div>
 
         {%- liquid
-          assign productGridView = grid_style
+          assign product_grid_view = grid_style
           if cart.attributes.product_view != blank
-            assign productGridView = cart.attributes.product_view
+            assign product_grid_view = cart.attributes.product_view
           endif
         -%}
 
         <ul class="no-bullets inline-list text-right">
-          <li><button type="button" class="grid-view-btn{% if productGridView == 'large' %} is-active{% endif %}" data-view="large" title="{{ 'collections.general.large' | t }}">
-            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-view-large" viewBox="0 0 35 35"><path d="M0 0h35v35H0z"/></svg>
-            <span class="icon__fallback-text">{{ 'collections.general.large' | t }}</span>
-          </button></li>
-          <li><button type="button" class="grid-view-btn{% if productGridView == 'small' %} is-active{% endif %}" data-view="small" title="{{ 'collections.general.small' | t }}">
-            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-view-small" viewBox="0 0 35 35"><path d="M0 0h15v15H0zM20 0h15v15H20zM0 20h15v15H0zM20 20h15v15H20z"/></svg>
-            <span class="icon__fallback-text">{{ 'collections.general.small' | t }}</span>
-          </button></li>
-          <li><button type="button" class="grid-view-btn{% if productGridView == 'list' %} is-active{% endif %}" data-view="list" title="{{ 'collections.general.list' | t }}">
-            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-view-list" viewBox="0 0 35 35"><g id="Layer_2" data-name="Layer 2"><path d="M0 0h35v8H0zM0 13h35v8H0zM0 27h35v8H0z"/></g></svg>
-            <span class="icon__fallback-text">{{ 'collections.general.list' | t }}</span>
-          </button></li>
+          <li>
+            <button
+              type="button"
+              class="grid-view-btn{% if product_grid_view == 'large' %} is-active{% endif %}"
+              data-view="large"
+              title="{{ 'collections.general.large' | t }}"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-view-large"
+                viewBox="0 0 35 35"
+              >
+                <path d="M0 0h35v35H0z"/>
+              </svg>
+              <span class="icon__fallback-text">{{ 'collections.general.large' | t }}</span>
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="grid-view-btn{% if product_grid_view == 'small' %} is-active{% endif %}"
+              data-view="small"
+              title="{{ 'collections.general.small' | t }}"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-view-small"
+                viewBox="0 0 35 35"
+              >
+                <path d="M0 0h15v15H0zM20 0h15v15H20zM0 20h15v15H0zM20 20h15v15H20z"/>
+              </svg>
+              <span class="icon__fallback-text">{{ 'collections.general.small' | t }}</span>
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="grid-view-btn{% if product_grid_view == 'list' %} is-active{% endif %}"
+              data-view="list"
+              title="{{ 'collections.general.list' | t }}"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-view-list"
+                viewBox="0 0 35 35"
+              >
+                <g id="Layer_2" data-name="Layer 2"><path d="M0 0h35v8H0zM0 13h35v8H0zM0 27h35v8H0z"/></g>
+              </svg>
+              <span class="icon__fallback-text">{{ 'collections.general.list' | t }}</span>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -103,33 +211,25 @@
   {%- if items == blank -%}
     <div class="index-section">{{ 'collections.general.no_matches' | t }}</div>
   {%- endif -%}
-  
-  {% comment %} --> Change Pagination to Infinite Scroll {% endcomment %}
-  {% comment %} <div
-    class="new-grid product-grid collection-grid"
-    data-view="{{ productGridView }}"
-    data-scroll-to>
-    {%- for item in items -%}
-      {%- if item.object_type == 'product' -%}
-        {%- render 'product-grid-item', product: item -%}
 
-        {%- if quick_shop_enable -%}
-            {%- render 'quick-shop-modal', product: item -%}
-        {%- endif -%}
-      {%- else -%}
-        {%- render 'search-grid-item', item: item -%}
-      {%- endif -%}
-    {%- endfor -%}
-  </div> {% endcomment %}
+  {% if paginate.previous %}
+    <div id="previous-items-loader" style="display: block; text-align: center; padding: 20px;">
+      <button class="button-previous-items">Previous Items</button>
+    </div>
+  {%- endif -%}
+
   <div
     id="infinite-scroll-container"
     class="new-grid product-grid collection-grid"
-    data-view="{{ productGridView }}"
-    data-scroll-to>
+    data-view="{{ product_grid_view }}"
+    data-scroll-to
+  >
+    {% assign collection_items = 0 %}
     {%- for item in items -%}
+      {%- assign collection_items = collection_items | plus: 1 -%}
       {%- if item.object_type == 'product' -%}
-        {%- render 'product-grid-item', product: item -%}
-  
+        {%- render 'product-grid-item', product: item, currentPage: paginate.current_page -%}
+
         {%- if quick_shop_enable -%}
           {%- render 'quick-shop-modal', product: item -%}
         {%- endif -%}
@@ -139,7 +239,7 @@
     {%- endfor -%}
   </div>
 
-  {% assign paginate_by = 40 %}
+  {% assign paginate_by = collection_items %}
   <div id="infinite-scroll-loader" style="display: block; text-align: center; padding: 20px;">
     <div class="infinite-products-count--wrapper">
       <span>Showing</span>
@@ -148,11 +248,11 @@
           {{- paginate_by -}}
         {%- else -%}
           {{- all_count -}}
-          <style>
-            .button-load-more{
-              display: none!important;
+          {%- style -%}
+            .button-load-more {
+              display: none !important;
             }
-          </style>
+          {%- endstyle -%}
         {%- endif -%}
       </span>
       <span style="margin-left:-5px;margin-right:-5px;">/</span>
@@ -160,196 +260,225 @@
         {{- all_count -}}
       </span>
     </div>
-    <button class="button-load-more" >Load More</button>
-    {% comment %} https://cdn.shopify.com/s/files/1/1205/7108/files/ico.gif?v=1736269334 {% endcomment %}
-
-    {% comment %} <img src="https://cdn.shopify.com/s/files/1/1205/7108/files/turtle-loading.gif"  width="95px" height="95px"> {% endcomment %}
-
+    {% if paginate.next %}
+      <div class="button-load-wrapper">
+        <button class="button-load-more">Load More</button>
+      </div>
+    {% endif %}
   </div>
-  {% comment %} <-- Change Pagination to Infinite Scroll {% endcomment %}
-
-  {% comment %} <div class="collection-filter__item collection-filter__item--count small--hide herer3">
-      {{ count_label | t: count: count }}
-    </div> {% endcomment %}
-   
 </div>
+
 {% comment %} --> Change Pagination to Infinite Scroll {% endcomment %}
-<style>
-  #infinite-scroll-loader {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 45px;
-  }
-  .infinite-products-count--wrapper span {
-    color: #152755;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: "FuturaMedium";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 16px; /* 100% */
-  }  
-  {% comment %} .button-load-more:hover{
-    color:#55CCD9;
-  } {% endcomment %}
-  .button-load-more{
-    padding: 10px 60px;
-    border-radius: 6px;
-    background: #152755;
-    color: #FFF;
-    
-    leading-trim: both;
-    text-edge: cap;
-    font-family: "FuturaBook";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 16px; /* 100% */
-    margin-top: 20px;
-  }
-</style>
-<script>
+<script
+  type="text/javascript"
+>
   document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('infinite-scroll-container');
-    const loader = document.getElementById('infinite-scroll-loader');
-    let isLoading = false;
-    let currentPage = 1; // Initialize current page number
-    let nextPageUrl = null; // Starting with null, will update dynamically
-    let endOfPage = false;
+  const container = document.getElementById('infinite-scroll-container');
+  const loader = document.getElementById('infinite-scroll-loader');
+  const previousButton = document.querySelector('.button-previous-items');
+  const loadMoreButton = document.querySelector('.button-load-more');
+  let isLoading = false;
+  let nextPageUrl = null;
+  let endOfPage = false;
 
-    const loadMoreContent = async () => {
-      console.log("start to load more products....");
-      const container = document.getElementById('infinite-scroll-container');
-      const loader = document.getElementById('infinite-scroll-loader');
-      const loaderButton = document.querySelector('.button-load-more');
-      if (isLoading||endOfPage) return;
-  
-      console.log("load more products.... currentPage = " + currentPage);
+  // Get current page from URL if exists, otherwise fallback to paginate.current_page
+  let currentPage = getPageNumberFromUrl(window.location.href);
 
-      isLoading = true;
-      loader.style.display = 'block';
-  
-      try {
-        // Fetch the next page's content (adjust the endpoint as needed)
-        // Generate the next page URL based on the current URL and incrementing the page parameter
-        const currentUrl = new URL(window.location.href); // Get the current page URL
-        const params = new URLSearchParams(currentUrl.search); // Extract query parameters
+  // Scroll to the target product if it exists
+  const targetProductId = localStorage.getItem('targetProductId');
+  if (targetProductId) {
+    const targetElement = document.querySelector(`[data-product-id="${targetProductId}"]`);
+    if (targetElement) {
+      const scrollTarget = targetElement.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+    }
+    localStorage.removeItem('targetProductId');
+  }
 
-        // Update the 'page' parameter to the next page number
-        params.set('page', currentPage + 1); // Increment the page parameter
+  // Load previous content function
+  const loadPreviousContent = async () => {
+    if (isLoading || currentPage <= 1) return; // Don't load if already loading or on the first page
+    isLoading = true;
+    loader.style.display = 'block';
+    try {
+      const currentUrl = new URL(window.location.href);
+      const params = new URLSearchParams(currentUrl.search);
+      params.set('page', currentPage - 1);
+      const prevPageUrl = `${currentUrl.origin}${currentUrl.pathname}?${params.toString()}`;
 
-        // Rebuild the new URL with the updated page number
-        nextPageUrl = `${currentUrl.origin}${currentUrl.pathname}?${params.toString()}`;
+      const response = await fetch(prevPageUrl);
+      if (!response.ok) throw new Error('Failed to load previous content');
 
-        console.log("next page Url=" + nextPageUrl);
+      const data = await response.text();
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data;
 
-        const response = await fetch(nextPageUrl);
-        if (!response.ok) throw new Error('Failed to load content');
-  
-        const data = await response.text();
-        
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = data;
-  
-        // Extract the new grid items
-        const newItems = tempDiv.querySelectorAll('.new-grid > *');
-        // Check if the response text is empty
-        if (newItems.length === 0) {
-          console.log('No more items to load, stopping further requests.');
-          loaderButton.style.display = 'none'; // Optionally hide the loader or show a message
-          endOfPage = true;
-          isLoading = false;
-          return; // Stop loading further content if no items are returned
-        }
-        newItems.forEach((item) => container.appendChild(item));
-  
-        currentPage++;
-
-        // Update showing count
-        var showing_product_count = document.querySelector('.products-count--showing');
-        var showing_count = {{ paginate_by }} * currentPage;
-        var products_count = {{ all_count }} * 1;
-        if ( showing_count < products_count )
-          showing_product_count.innerHTML = showing_count;
-        else {
-          showing_product_count.innerHTML = products_count;
-          endOfPage = true;
-          isLoading = false;
-          loaderButton.style.display = 'none'; // Optionally hide the loader or show a message
-        }
-      } catch (error) {
-        console.error('Error loading more content:', error);
-        loader.style.display = 'none';
-      } finally {
+      const newItems = Array.from(tempDiv.querySelectorAll('.new-grid > *'));
+      if (newItems.length === 0 ) {
+        endOfPage = true;
         isLoading = false;
-        {% comment %} loader.style.display = 'none'; {% endcomment %}
+        loader.style.display = 'none';
+        return;
       }
-    };
+      const newCurrentPage = currentPage - 1;
+      if (newCurrentPage === 1){
+        previousButton.style.display = 'none';
+      }
 
-    document.querySelector('.button-load-more').addEventListener('click', function (event) {
-      event.preventDefault(); // Prevents the default link action
-      loadMoreContent();
-    });
+      // Reverse the order of the items before prepending
+      newItems.reverse().forEach((item) => container.prepend(item));
 
-    document.addEventListener('filter:selected', () => {
-      console.log("filtering...");
+      currentPage--;
+      updateProductCount();
+    } catch (error) {
+      console.error('Error loading previous content:', error);
+      loader.style.display = 'none';
+    } finally {
       isLoading = false;
-      currentPage = 1; // Initialize current page number
-      nextPageUrl = null; // Starting with null, will update dynamically
-      endOfPage = false;
-      
-    });
+    }
+  };
 
-    document.addEventListener('collection:reloaded', function(){
-      document.querySelector('.button-load-more').addEventListener('click', function (event) {
-        event.preventDefault(); // Prevents the default link action
+  // Load more content function
+  const loadMoreContent = async () => {
+    if (isLoading || endOfPage) return;
+    isLoading = true;
+    loader.style.display = 'block';
+    try {
+      const currentUrl = new URL(window.location.href);
+      const params = new URLSearchParams(currentUrl.search);
+
+      // Increment currentPage for the "Load More" button
+      params.set('page', currentPage + 1);
+      nextPageUrl = `${currentUrl.origin}${currentUrl.pathname}?${params.toString()}`;
+
+      const response = await fetch(nextPageUrl);
+      if (!response.ok) throw new Error('Failed to load content');
+
+      const data = await response.text();
+      
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data;
+      const newItems = tempDiv.querySelectorAll('.new-grid > *');
+
+      if (newItems.length === 0) {
+        loadMoreButton.style.display = 'none';
+        endOfPage = true;
+        isLoading = false;
+        return;
+      }
+
+      if (newItems.length < 40) {
+        loadMoreButton.style.display = 'none';
+        endOfPage = true;
+      } else {
+        loadMoreButton.style.display = 'block';
+      }
+
+      newItems.forEach((item) => container.appendChild(item));
+      currentPage++;
+      updateProductCount();
+      
+    } catch (error) {
+      console.error('Error loading more content:', error);
+      loader.style.display = 'none';
+    } finally {
+      isLoading = false;
+    }
+  };
+
+  // Update the product count on the page
+  const updateProductCount = () => {
+    const showingProductCount = document.querySelector('.products-count--showing');
+    const showingCount = {{ paginate_by }} * currentPage;
+    const productsCount = {{ all_count }} * 1;
+    if (showingCount < productsCount) {
+      showingProductCount.innerHTML = showingCount;
+    } else {
+      showingProductCount.innerHTML = productsCount;
+      endOfPage = true;
+      loadMoreButton.style.display = 'none';
+    }
+  };
+
+  // Update the page query parameter in the URL
+  const updatePageQueryParameter = (pageNumber) => {
+    const currentUrl = new URL(window.location.href);
+    const params = new URLSearchParams(currentUrl.search);
+    params.set('page', pageNumber);
+    window.history.pushState({}, '', `${currentUrl.pathname}?${params.toString()}`);
+  };
+
+  // Handle product card click event
+  const handleProductCardClick = (event) => {
+    const pageElement = event.currentTarget;
+    const pageNumber = pageElement.getAttribute('data-current-page');
+    if (pageNumber) {
+      updatePageQueryParameter(pageNumber);
+    }
+    const productId = pageElement.getAttribute('data-product-id');
+    localStorage.setItem('targetProductId', productId);
+  };
+
+  // Attach event listeners to all product cards
+  const attachProductCardListeners = () => {
+    const productCards = document.querySelectorAll('.product-card-page');
+    productCards.forEach((card) => {
+      card.removeEventListener('click', handleProductCardClick);
+      card.addEventListener('click', handleProductCardClick);
+    });
+  };
+  attachProductCardListeners();
+
+  // Listen for collection reload events
+  document.addEventListener('collection:reloaded', attachProductCardListeners);
+
+  // Event listener for the "Load More" button
+  if (loadMoreButton) {
+    loadMoreButton.addEventListener('click', async function (event) {
+      event.preventDefault();
+      await loadMoreContent();
+      attachProductCardListeners();
+    });
+  }
+
+  // Event listener for the "Previous" button
+  if (previousButton) {
+    previousButton.addEventListener('click', async function (event) {
+      event.preventDefault();
+      await loadPreviousContent();
+      attachProductCardListeners();
+    });
+  }
+
+  // Reset state when a new filter is selected
+  document.addEventListener('filter:selected', () => {
+    isLoading = false;
+    currentPage = {{ paginate.current_page }};
+    nextPageUrl = null;
+    endOfPage = false;
+  });
+
+  // Function to get page number from URL
+  function getPageNumberFromUrl(url) {
+    const urlParams = new URLSearchParams(new URL(url).search);
+    const page = urlParams.get('page');
+    return page ? parseInt(page) : {{ paginate.current_page }}; // Default to paginate.current_page if page param is not found
+  }
+
+  // Re-attach event listeners after collection is reloaded
+  document.addEventListener('collection:reloaded', function () {
+    if (loadMoreButton) {
+      loadMoreButton.addEventListener('click', function (event) {
+        event.preventDefault();
         loadMoreContent();
       });
-    });
-  
-    {% comment %} const handleScroll = () => {
-      const container = document.getElementById('infinite-scroll-container');
-      const loader = document.getElementById('infinite-scroll-loader');
-
-      const scroll = window.scrollY || window.pageYOffset; // Current scroll position
-      const loaderElement = loader;
-      const loaderOffset = loaderElement.offsetTop; // Get the offset position of the loader
-      const viewportHeight = window.innerHeight / 2; // Height of the viewport
-    
-      const loaderRect = loaderElement.getBoundingClientRect();
-      console.log('Loader position relative to viewport:', loaderRect.top, loaderRect.bottom);
-
-      if (loaderRect.top <= window.innerHeight * 2 && loaderRect.bottom > 0) {
-        console.log('Triggering loadMoreContent');
-        loadMoreContent(); // Trigger content loading when the loader reaches the bottom of the viewport
-      }
-
-      // Check if the loader has reached the bottom of the screen
-      {% comment %} if (loaderOffset - viewportHeight <= scroll && !isLoading) {
-        console.log('Triggering loadMoreContent');
-        loadMoreContent(); // Trigger content loading when the loader reaches the bottom of the viewport
-      } {% endcomment %}
-    };
-  
-    const debounce = (func, delay) => {
-      let timeout;
-      return (...args) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func(...args), delay);
-      };
-    };
-    
-    window.addEventListener('scroll', debounce(handleScroll, 200)); {% endcomment %}
+    }
+    if (previousButton) {
+      previousButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        loadPreviousContent();
+      });
+    }
   });
-  
+});
 </script>
-
-{% comment %} {%- paginate collection.products by 40 -%}
-  {%- liquid
-        if paginate.pages > 1
-          render 'pagination', paginate: paginate
-        endif
-  -%}
-{%- endpaginate -%}  {% endcomment %}
-{% comment %} <-- Change Pagination to Infinite Scroll {% endcomment %}
