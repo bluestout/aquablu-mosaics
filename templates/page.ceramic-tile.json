@@ -566,6 +566,26 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
+    "text_and_image_4mp9ak": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Large_format_ceramic_tile.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>CERAMIC TILE: STYLISH & TIMELESS</h2><p>Ceramic tile offers limitless design potential, making it a top choice for homeowners and designers alike. Renowned for its durability, versatility, and aesthetic appeal, ceramic tiles come in an array of patterns, textures, and colors to suit any style preference. Ideal for floors, walls, and backsplashes, ceramic tiles provide a functional yet stylish solution for kitchens, bathrooms, and living areas. Their easy maintenance and long-lasting durability make them a smart investment for both residential and commercial spaces. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding"
+      }
+    },
     "3930d554-8e8f-40af-afb4-674e223f7be3": {
       "type": "logo-list-custom-2",
       "blocks": {
@@ -910,6 +930,7 @@
     "9aaba6c3-23c4-45e0-8444-264dfe1ac0f6",
     "6c745880-3120-4518-8c5c-0dfe6b923672",
     "featured_collections_custom_hGrGHg",
+    "text_and_image_4mp9ak",
     "3930d554-8e8f-40af-afb4-674e223f7be3",
     "8a7ba316-159c-48fe-bc72-fc5d953a1ad3",
     "54531a36-eec5-4ca4-959d-814b9b3e31b6",
