@@ -23,6 +23,7 @@
       "blocks": {
         "slide_R3tWbP": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Tenjam_Flash_Sale.jpg",
             "heading": "IN-POOL FURNITURE SALE",
