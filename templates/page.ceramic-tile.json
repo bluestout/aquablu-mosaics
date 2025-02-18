@@ -85,12 +85,36 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_ECk7A3": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "RUSTIC APPEAL, MODERN DURABILITY",
+            "title": "<p>WOOD-LOOK TILE</p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/black-friday",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Wood_look_ceramic_tile.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
         "template--14551638900808__f21ed0a7-2cfa-45ca-9a5d-24083a207528-168148148025553fef-1",
         "hero_Yw4eFD",
-        "hero_H6xE8N"
+        "hero_H6xE8N",
+        "hero_ECk7A3"
       ],
       "settings": {
         "full_width": true,
