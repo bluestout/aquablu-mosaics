@@ -552,7 +552,7 @@
           "settings": {
             "title": "CLASSIC",
             "image": "shopify://shop_images/Classic_Ceramic_Tile.jpg",
-            "url": "shopify://collections/classic-stone-tile",
+            "url": "https://www.aquablumosaics.com/collections/classic-ceramic-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -562,7 +562,7 @@
           "settings": {
             "title": "TROPICAL",
             "image": "shopify://shop_images/Tropical_Ceramic_Tile.jpg",
-            "url": "shopify://collections/tropical-stone-tile",
+            "url": "https://www.aquablumosaics.com/collections/tropical-ceramic-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -572,7 +572,7 @@
           "settings": {
             "title": "MODERN",
             "image": "shopify://shop_images/Modern_Ceramic_Tile_28a52ccd-2d39-4458-b39d-d77a9cd8d994.jpg",
-            "url": "shopify://collections/modern-stone-tile",
+            "url": "https://www.aquablumosaics.com/collections/modern-ceramic-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
