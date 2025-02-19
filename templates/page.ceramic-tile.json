@@ -542,7 +542,7 @@
           "settings": {
             "title": "COASTAL",
             "image": "shopify://shop_images/Coastal_Ceramic_Tile.jpg",
-            "url": "shopify://collections/coastal-stone-tile",
+            "url": "https://www.aquablumosaics.com/collections/coastal-ceramic-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
