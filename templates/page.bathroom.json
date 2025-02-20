@@ -233,15 +233,6 @@
             "link": "shopify://collections/slip-resistant-glass-tile"
           }
         },
-        "logo_image_xPWX8C": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/neutral-bath.jpg",
-            "logo_title": "Neutrals",
-            "logo_text": "",
-            "link": "shopify://collections/neutral-tile"
-          }
-        },
         "logo_image_nPxaGQ": {
           "type": "logo_image",
           "settings": {
@@ -249,6 +240,15 @@
             "logo_title": "Tile Grout",
             "logo_text": "",
             "link": "shopify://collections/tile-grout"
+          }
+        },
+        "logo_image_xPWX8C": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/neutral-bath.jpg",
+            "logo_title": "Neutrals",
+            "logo_text": "",
+            "link": "shopify://collections/neutral-tile"
           }
         },
         "logo_image_3fb88b": {
@@ -274,8 +274,8 @@
         "logo_image_UNtMLD",
         "logo_image_CXYcm4",
         "logo_image_QPkGLg",
-        "logo_image_xPWX8C",
         "logo_image_nPxaGQ",
+        "logo_image_xPWX8C",
         "logo_image_3fb88b",
         "logo_image_fjWneV"
       ],
