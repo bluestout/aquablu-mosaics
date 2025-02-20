@@ -233,24 +233,6 @@
             "link": "shopify://collections/slip-resistant-glass-tile"
           }
         },
-        "logo_image_3fb88b": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/pennybath.jpg",
-            "logo_title": "Penny Round",
-            "logo_text": "",
-            "link": "shopify://collections/penny-round-tile"
-          }
-        },
-        "logo_image_fjWneV": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/bathnew2.jpg",
-            "logo_title": "3D Tiles",
-            "logo_text": "",
-            "link": "shopify://collections/3d-tile"
-          }
-        },
         "logo_image_xPWX8C": {
           "type": "logo_image",
           "settings": {
@@ -268,16 +250,34 @@
             "logo_text": "",
             "link": "shopify://collections/tile-grout"
           }
+        },
+        "logo_image_3fb88b": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/pennybath.jpg",
+            "logo_title": "Penny Round",
+            "logo_text": "",
+            "link": "shopify://collections/penny-round-tile"
+          }
+        },
+        "logo_image_fjWneV": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/bathnew2.jpg",
+            "logo_title": "3D Tiles",
+            "logo_text": "",
+            "link": "shopify://collections/3d-tile"
+          }
         }
       },
       "block_order": [
         "logo_image_UNtMLD",
         "logo_image_CXYcm4",
         "logo_image_QPkGLg",
-        "logo_image_3fb88b",
-        "logo_image_fjWneV",
         "logo_image_xPWX8C",
-        "logo_image_nPxaGQ"
+        "logo_image_nPxaGQ",
+        "logo_image_3fb88b",
+        "logo_image_fjWneV"
       ],
       "settings": {
         "title": "",
