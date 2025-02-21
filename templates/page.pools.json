@@ -40,6 +40,29 @@
             "focal_point": "center center"
           }
         },
+        "hero_c48UrN": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "IN-POOL & PATIO FURNITURE",
+            "title": "<p>TUPELO GOODS</p>",
+            "title_size": 45,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tupelo-goods-pool-patio-furniture",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Tupelo_Goods_Patio_Furniture.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "80% 50%"
+          }
+        },
         "hero_9bkUq3": {
           "type": "hero",
           "settings": {
@@ -108,38 +131,14 @@
             "overlay_opacity": 6,
             "focal_point": "bottom center"
           }
-        },
-        "hero_c48UrN": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "IN-POOL FURNITURE SALE",
-            "title": "<p>SAVE 25% ON THE LAYLO IN-POOL LOUNGER</p>",
-            "title_size": 45,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://products/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Outdoor_living_-_Tenjam_Flash_Sale.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "80% 50%"
-          }
         }
       },
       "block_order": [
         "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1",
+        "hero_c48UrN",
         "hero_9bkUq3",
         "hero_rnaAbw",
-        "hero_ApEPnK",
-        "hero_c48UrN"
+        "hero_ApEPnK"
       ],
       "settings": {
         "full_width": true,
