@@ -111,6 +111,7 @@
         },
         "hero_c48UrN": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
