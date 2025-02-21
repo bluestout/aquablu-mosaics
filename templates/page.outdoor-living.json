@@ -153,25 +153,6 @@
             "color_accent": "#ffffff"
           }
         },
-        "cc7ef8f9-2d71-4655-9546-2a8070b4ddbc": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "PATIO FURNITURE",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-patio-furniture",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Patio_Furniture_by_Tupelo_Goods_-_In-Pool_and_Outdoor_Furniture.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 480,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
         "c1f897ee-1837-4848-9aca-e4aa45906d08": {
           "type": "advanced",
           "settings": {
@@ -183,6 +164,25 @@
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Pavers_b877c7c5-fccf-4a7f-ad53-6c71d06a1ef6.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "cc7ef8f9-2d71-4655-9546-2a8070b4ddbc": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "PATIO FURNITURE",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-patio-furniture",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Patio_Furniture_by_Tupelo_Goods_35868814-ba5e-4dbc-bfbd-7cb61372b41b.jpg",
             "video_url": "",
             "width": "33",
             "height": 480,
@@ -308,8 +308,8 @@
       },
       "block_order": [
         "5272ec7b-785e-4877-a77f-b36a9bec7d18",
-        "cc7ef8f9-2d71-4655-9546-2a8070b4ddbc",
         "c1f897ee-1837-4848-9aca-e4aa45906d08",
+        "cc7ef8f9-2d71-4655-9546-2a8070b4ddbc",
         "7c470406-533e-4630-83f2-4bc4a1b6ccd3",
         "cf08d9d3-ebab-474a-a2cb-2c2319234186",
         "508b2ef9-8e9b-46c2-8687-06ba44a6987c",
