@@ -331,7 +331,7 @@
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
-        "layout": "right",
+        "layout": "left",
         "color_scheme": "2",
         "divider": false,
         "new_layout": true,
@@ -407,26 +407,6 @@
         "button_style": "primary",
         "align_text": "left",
         "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "outdoor-section-3 reduce-text-padding"
-      }
-    },
-    "0588edea-afce-4615-b359-5845d141dd26": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/fl.jpg",
-        "video_url": "",
-        "image_width": 690,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2><strong>FLOATING LUXURIES: EXPERIENCE RESORT-STYLE COMFORT AT HOME</strong></h2><p>Browse our amazing selection of resort-style pool floats, loungers, and accessories from Floating Luxuries. Each pool float is crafted from stain and fade resistant fabric, providing long-lasting comfort matched with a sophisticated design.</p><p>Stay cool and relaxed with the sleek, ergonomically designed Kai Shelf Lounger. Constructed of quality materials, engineered to fit the body, and designed with convenient built-in features, this Lounger ensures an unparalleled aquatic relaxation experience. You’ve worked hard to have a great swimming pool… it’s time to fill it with quality lounge chairs and accessories!</p><p><a href=\"/collections/floating-luxuries\" title=\"Floating Luxuries\">SHOP NOW &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
         "color_scheme": "2",
         "divider": false,
         "new_layout": true,
@@ -589,6 +569,26 @@
         "two_column_mobile": false,
         "three_column_mobile": false,
         "css_class": "outdoor-living-section-7"
+      }
+    },
+    "0588edea-afce-4615-b359-5845d141dd26": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/fl.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>FLOATING LUXURIES: EXPERIENCE RESORT-STYLE COMFORT AT HOME</strong></h2><p>Browse our amazing selection of resort-style pool floats, loungers, and accessories from Floating Luxuries. Each pool float is crafted from stain and fade resistant fabric, providing long-lasting comfort matched with a sophisticated design.</p><p>Stay cool and relaxed with the sleek, ergonomically designed Kai Shelf Lounger. Constructed of quality materials, engineered to fit the body, and designed with convenient built-in features, this Lounger ensures an unparalleled aquatic relaxation experience. You’ve worked hard to have a great swimming pool… it’s time to fill it with quality lounge chairs and accessories!</p><p><a href=\"/collections/floating-luxuries\" title=\"Floating Luxuries\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
       }
     },
     "28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82": {
