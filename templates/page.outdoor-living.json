@@ -40,6 +40,29 @@
             "focal_point": "center center"
           }
         },
+        "hero_zpagdq": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "Introducing",
+            "title": "<p>TUPELO GOODS FURNITURE</p>",
+            "title_size": 48,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tupelo-goods-pool-patio-furniture",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Tupelo_Goods_Outdoor_and_In-pool_Furniture.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        },
         "hero_7NFe6J": {
           "type": "hero",
           "settings": {
@@ -89,6 +112,7 @@
       },
       "block_order": [
         "template--14459271512136__c9537080-8b7e-4d11-abed-ffdf006443e9-1681757367c5027eed-1",
+        "hero_zpagdq",
         "hero_7NFe6J",
         "hero_EjwL7D"
       ],
