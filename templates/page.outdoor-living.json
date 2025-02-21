@@ -393,6 +393,26 @@
         "css_class": ""
       }
     },
+    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Tupelo_Goods_Feature_-_Outdoor_Living_Furniture.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>TUPELO GOODS: DURABLE, STYLISH, & EFFORTLESS OUTDOOR LIVING</strong></h2><p>Tupelo Goods designs stylish, durable, and low-maintenance outdoor furniture built to withstand the elements. Using marine-grade polyethylene and rotomolding technology, their products resist sun, rain, and chemicals, ensuring long-lasting beauty. Their one-piece, seamless designs require no assembly and are easy to clean with a hose or power wash.</p><p>From in-pool loungers and side tables to fire pit seating and outdoor games, Tupelo Goods blends modern aesthetics with effortless functionality. Their furniture is designed for comfort, stability, and versatility, making it ideal for residential, hospitality, and commercial spaces. </p><p>Proudly made in the USA, Tupelo Goods brings timeless design and durability to pools, patios, and outdoor spaces year-round.</p><p><a href=\"https://www.aquablumosaics.com/collections/tupelo-goods-pool-patio-furniture\" title=\"Tupelo Goods In-Pool & Patio Furniture\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
     "0588edea-afce-4615-b359-5845d141dd26": {
       "type": "text-and-image",
       "settings": {
@@ -571,26 +591,6 @@
         "css_class": "outdoor-living-section-7"
       }
     },
-    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/Tupelo_Goods_Feature_-_Outdoor_Living_Furniture.jpg",
-        "video_url": "",
-        "image_width": 690,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2><strong>TUPELO GOODS: DURABLE, STYLISH, & EFFORTLESS OUTDOOR LIVING</strong></h2><p>Tupelo Goods designs stylish, durable, and low-maintenance outdoor furniture built to withstand the elements. Using marine-grade polyethylene and rotomolding technology, their products resist sun, rain, and chemicals, ensuring long-lasting beauty. Their one-piece, seamless designs require no assembly and are easy to clean with a hose or power wash.</p><p>From in-pool loungers and side tables to fire pit seating and outdoor games, Tupelo Goods blends modern aesthetics with effortless functionality. Their furniture is designed for comfort, stability, and versatility, making it ideal for residential, hospitality, and commercial spaces. </p><p>Proudly made in the USA, Tupelo Goods brings timeless design and durability to pools, patios, and outdoor spaces year-round.</p><p><a href=\"https://www.aquablumosaics.com/collections/tupelo-goods-pool-patio-furniture\" title=\"Tupelo Goods In-Pool & Patio Furniture\">SHOP NOW &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "outdoor-section-3 reduce-text-padding"
-      }
-    },
     "28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82": {
       "type": "featured-collection",
       "disabled": true,
@@ -621,11 +621,11 @@
     "3f71f403-ed57-4fab-8942-662f92e1e6d8",
     "661f9c76-2a77-4cee-956f-e1e4ad6f1514",
     "f6555d85-5c5a-489a-a525-e6f076bcdff8",
-    "0588edea-afce-4615-b359-5845d141dd26",
+    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162",
     "89a27308-d751-41d5-aa05-b0d2fadff296",
     "advanced_content_GtJJEC",
     "eed788d4-2138-4c64-806f-ed605a88c66b",
-    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162",
+    "0588edea-afce-4615-b359-5845d141dd26",
     "28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82",
     "320f2580-51bc-4eba-aa22-13b12a7ecccd"
   ]
