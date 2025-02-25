@@ -88,7 +88,7 @@
               {% assign icon_image = menu_settings.icon_fish %}
             {% endif %}
 
-            <img src="{{ icon_image | img_url: '2x' }}" alt="{{ icon_image.alt | escape }}" width="{{ icon_image.width }}" height="{{ icon_image.height }}">         
+            <img src="{{ icon_image | img_url: '2x' }}" alt="{{ icon_image.alt | escape }}" width="{{ icon_image.width }}" height="{{ icon_image.height }}" loading="lazy">         
             <p class="icon-title">{{- link.title -}} </p>
           </a>
           </div>
