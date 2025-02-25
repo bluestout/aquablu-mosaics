@@ -21,6 +21,21 @@
     "slideshow_new_8zzw4R": {
       "type": "slideshow-new",
       "blocks": {
+        "slide_KTCdTA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hero-1-bring-paradise-home.jpg",
+            "heading": "Everything You Need To",
+            "heading_size": "h1",
+            "subheading": "BRING PARADISE HOME",
+            "button_label": "Read Customer Testimonials",
+            "link": "shopify://pages/reviews",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 10,
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_R3tWbP": {
           "type": "slide",
           "settings": {
@@ -48,21 +63,6 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "image_overlay_opacity": 20,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_KTCdTA": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/hero-1-bring-paradise-home.jpg",
-            "heading": "Everything You Need To",
-            "heading_size": "h1",
-            "subheading": "BRING PARADISE HOME",
-            "button_label": "Read Customer Testimonials",
-            "link": "shopify://pages/reviews",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 10,
             "text_alignment_mobile": "center"
           }
         },
@@ -98,9 +98,9 @@
         }
       },
       "block_order": [
+        "slide_KTCdTA",
         "slide_R3tWbP",
         "slide_k4tBKN",
-        "slide_KTCdTA",
         "slide_dDz9fW",
         "slide_jDt9WQ"
       ],
