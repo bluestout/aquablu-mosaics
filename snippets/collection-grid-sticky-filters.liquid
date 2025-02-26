@@ -441,9 +441,118 @@
     }
     .collapsible-content__inner {
       max-height: 320px;
-      overflow-y: scroll;
+      overflow-y: auto;
+    }
+    
+    .additional-filters-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .filter-wrapper .additional-filters-wrapper .collection-sidebar__group {
+      border: none;
+      width: 100%;
+    }
+
+    .filter-wrapper .additional-filters-wrapper .collection-sidebar__group:has(.is-open){
+      border: none;
+      background:none;
+    }
+
+    .filter-wrapper .additional-filters-wrapper .collapsible-content.collapsible-content--all{
+      position: unset;
+      background: unset;
+      width: 100%;
+    }
+
+    .filter-wrapper  .additional-filters-wrapper .single-filter-block{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 5px;
+    }
+
+    .filter-wrapper .additional-filters-wrapper .collapsible-content.collapsible-content--all .collapsible-content__inner {
+      height: unset!important;
+      width: 100%;
+      padding-top: 0px;
+    }
+    .additional-filters-wrapper .collapsible-content[style="height: auto;"] {
+      height: 0px!important;
+    }
+
+    .filter-wrapper .additional-filters-wrapper .collapsible-content__inner ul.no-bullets.tag-list {
+      margin-bottom: 0px;
+    }
+
+    .filter-wrapper .additional-filters-wrapper .collapsible-content.collapsible-content--all {
+      box-shadow: none;
+    }
+
+    .filter-wrapper .additional-filters-wrapper label.tag__checkbox-wrapper.text-label {
+      padding-left: 10px!important;
+    }
+
+    .additional-filters-wrapper {
+      position: absolute;
+      left: 0px;
+      background: white;
+      box-shadow: 0 10px 20px #00000017;
+      display: none;
+    }
+
+    .parent-additional-wrapper {
+      position: relative;
+      background: white;
+    }
+
+    .parent-additional-wrapper .additional-filters {
+      border:1px solid #152755;
+      border-radius: 50px;
+      font-size: 14px;
+      letter-spacing: 0px;
+      margin-bottom: 10px;
+      padding: 2px 10px;
+      display: flex;
+      cursor: pointer;
+    }
+
+    .additional-filters .collapsible-trigger__icon {
+      position: relative;
+      top: unset;
+      right: unset;
+      margin-left: 7px;
+      transform: unset;
+    }
+
+    details.parent-additional-wrapper[open] .additional-filters-wrapper {
+      display: block;
+      padding-top: 5px;
+    }
+
+    details.parent-additional-wrapper[open] .additional-filters .collapsible-trigger__icon {
+      transform: rotate(-180deg);
+      display: flex;
+      top: 3px;
+      left: -2px;
+    }
+
+    .additional-filters-wrapper .collection-sticky-filter .collection-sidebar__group .collapsible-trigger-btn {
+      width: 100%;
+    }
+
+    .additional-filters-wrapper .collapsible-trigger__layout{
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .additional-filters-wrapper .collapsible-trigger__layout.collapsible-trigger__layout--inline span {
+      font-size: 16px;
     }
   }
+
   {% endstyle %}
   
   
@@ -526,55 +635,106 @@
             </div>
                   
             {%- if enable_sidebar -%}
-              <div class="sticky_filters_container swiper">
-                <form class="filter-form swiper-wrapper">
+              <div class="sticky_filters_container">
+                <form class="filter-form">
                   {%- for filter in collection.filters -%}
-                  {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
-                  {%- assign filter_index = forloop.index -%}
-                  {%- assign collapsed_state = section.settings.collapse_filters -%}
-                  {%- unless filter.label == 'Price' -%}
-                    <div class="swiper-slide collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
-                      <div class="collection-sidebar__group">
-                        {%- if show_price != false -%}
-                          {%- if filter.label != "Price"  -%}             
+                    {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
+                    {%- assign filter_index = forloop.index -%}
+                    {%- assign collapsed_state = section.settings.collapse_filters -%}
+                    
+                    {%- if filter_index <= 6 -%}
+                      {%- unless filter.label == 'Price' -%}
+                        <div class="collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
+                          <div class="collection-sidebar__group">
+                            {%- if show_price != false -%}
+                  {%- if filter.label != "Price"  -%}             
+                    {%- render 'collection-sticky-filter-trigger',
+                      id: filter_id,
+                      location: location,
+                      title: filter.label,
+                      index: filter_index,
+                      collapsed_state: collapsed_state -%}
+                  {%- endif -%} 
+                            {%- else -%}   
+                              {%- render 'collection-sticky-filter-trigger',
+                                id: filter_id,
+                                location: location,
+                                title: filter.label,
+                                index: filter_index,
+                                collapsed_state: collapsed_state -%}
+                            {%- endif -%}
+                          </div>
+                          {% if section.settings.enable_horizontal_filter %}
+                            {%- render 'collection-grid-sticky-filter-container',
+                              collection: collection,
+                              enable_sidebar: section.settings.enable_sidebar,
+                              enable_color_swatches: section.settings.enable_color_swatches,
+                              tags_combine: section.settings.tags_combine,
+                              enable_sort: section.settings.enable_sort,
+                              collapse_filters: section.settings.collapse_filters,
+                              count_label: count_label,
+                              count: count,
+                              filter: filter,
+                              forloop: forloop
+                            -%}
+                          {% endif %}
+                        </div>
+                      {%- endunless -%}
+                    {%- else -%}
+
+                      {%- if filter_index == 7 -%}
+                        <details class="parent-additional-wrapper" onclick="event.stopPropagation()">
+                          <summary class="additional-filters-trigger">
+                            <span class="additional-filters">Show more {%- render 'collapsible-icons' -%}</span>
+                          </summary>
+                      {%- endif -%}
+                      {%- if filter_index == 7 -%}
+                        <div class="additional-filters-wrapper">
+                      {%- endif -%}
+                      <div class="collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
+                        <div class="collection-sidebar__group">
+                          {%- if show_price != false -%}
+                            {%- if filter.label != "Price"  -%}             
+                              {%- render 'collection-sticky-filter-trigger',
+                                id: filter_id,
+                                location: location,
+                                title: filter.label,
+                                index: filter_index,
+                                collapsed_state: collapsed_state -%}
+                            {%- endif -%} 
+                          {%- else -%}   
                             {%- render 'collection-sticky-filter-trigger',
                               id: filter_id,
                               location: location,
                               title: filter.label,
                               index: filter_index,
                               collapsed_state: collapsed_state -%}
-                          {%- endif -%} 
-                        {%- else -%}   
-                          {%- render 'collection-sticky-filter-trigger',
-                            id: filter_id,
-                            location: location,
-                            title: filter.label,
-                            index: filter_index,
-                            collapsed_state: collapsed_state -%}
-                        {%- endif -%}
+                          {%- endif -%}
+                        </div>
+                        {% if section.settings.enable_horizontal_filter %}
+                          {%- render 'collection-grid-sticky-filter-container',
+                            collection: collection,
+                            enable_sidebar: section.settings.enable_sidebar,
+                            enable_color_swatches: section.settings.enable_color_swatches,
+                            tags_combine: section.settings.tags_combine,
+                            enable_sort: section.settings.enable_sort,
+                            collapse_filters: section.settings.collapse_filters,
+                            count_label: count_label,
+                            count: count,
+                            filter: filter,
+                            forloop: forloop
+                          -%}
+                        {% endif %}
                       </div>
-                      {% if section.settings.enable_horizontal_filter %}
-                        
-                        {%- render 'collection-grid-sticky-filter-container',
-                          collection: collection,
-                          enable_sidebar: section.settings.enable_sidebar,
-                          enable_color_swatches: section.settings.enable_color_swatches,
-                          tags_combine: section.settings.tags_combine,
-                          enable_sort: section.settings.enable_sort,
-                          collapse_filters: section.settings.collapse_filters,
-                          count_label: count_label,
-                          count: count,
-                          filter: filter
-                          forloop: forloop
-                        -%}
-                      {% endif %}
-                    </div>
-                    {%- endunless -%}
+                      {%- if forloop.last -%}
+                          </div>
+                        </details>
+                      {%- endif -%}
+                    {%- endif -%}
                   {%- endfor -%}
                 </form>
               </div>
             {%- endif -%}
-    
           </div>
         </div>
       </div>

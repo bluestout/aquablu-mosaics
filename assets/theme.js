@@ -6375,7 +6375,7 @@ if (theme.config.isTouch) {
 
       onReplaceAjaxContent: function(newDom, section) {
         const openCollapsibleIds = this.fetchOpenCollasibleFilters();
-
+        
         openCollapsibleIds.forEach(selector => {
           newDom
             .querySelectorAll(`[data-collapsible-id=${selector}]`)
@@ -6399,6 +6399,10 @@ if (theme.config.isTouch) {
           });
         }
 
+        // Remove 'is-open' class from additional filters
+        document.querySelectorAll('.additional-filters-wrapper .is-open').forEach(el => {
+          el.classList.remove('is-open');
+        });
       },
 
       renderFromFormData: function(formData) {

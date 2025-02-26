@@ -201,7 +201,6 @@
   function handleDropdownClose(event) {
     if (window.innerWidth > 1150) {
       const isOutsideStickyParent = !event.target.closest('.single-filter-block');
-
       if (isOutsideStickyParent) {
         const openStickyButtons = document.querySelectorAll('.sticky-filter--button.is-open');
         const openCollapsibleContents = document.querySelectorAll('.collapsible-content.collapsible-content--all.is-open');
@@ -212,7 +211,15 @@
 
         openCollapsibleContents.forEach(content => {
           content.classList.remove('is-open');
+          content.style.height = '0px';
         });
+      }
+
+      const details = document.querySelectorAll('details');
+      if (details) {
+      details.forEach(function(detail) {
+        detail.removeAttribute('open');
+      });
       }
     }
   }
@@ -221,7 +228,5 @@
     document.addEventListener('click', handleDropdownClose);
     window.addEventListener('resize', handleDropdownClose);
   }
-
-  // Initialize event listeners
   setupEventListeners();
 </script>
