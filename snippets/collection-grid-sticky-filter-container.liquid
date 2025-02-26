@@ -78,7 +78,6 @@
 {%- if enable_sidebar or enable_sort -%}
 {%- assign location = 'CollectionSidebar' -%}
     {%- if enable_sidebar -%}
-        {%- for filter in collection.filters -%}
             {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
             {%- assign filter_index = forloop.index -%}
             {%- assign collapsed_state = section.settings.collapse_filters -%}
@@ -157,11 +156,6 @@
                     {%- endcase -%}
                   </div>
                 </div>
-                
-                {% comment %} container {% endcomment %}
-
-            
-        {%- endfor -%}
     {%- endif -%}
 {%- endif -%}
   

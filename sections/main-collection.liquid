@@ -74,6 +74,14 @@
     .grid__item.medium-up--one-fifth.grid__item--sidebar.active-sidebar {
       display: none;
     }
+    .page-width.rte.rte--collection-desc {
+      padding: 0px 17px;
+    }
+  }
+  @media only screen and (min-width:768px) {
+    .page-width.rte.rte--collection-desc {
+      padding: 0px 50px;
+    }
   }
 </style>
 
@@ -88,7 +96,7 @@
 
 <div id="CollectionAjaxResult" class="collection-content" data-section-id="{{ section.id }}" data-section-type="collection-template" data-collection-template="true" >
   <div id="CollectionAjaxContent">
-    <div class="page-width main-collection-area">
+    <div class="main-collection-area">
       {%- liquid
         assign paginate_by = 40
 
@@ -151,7 +159,7 @@
                    
                 {%- assign description_length = collection.description | size -%}
                 {%- if collection.description != blank and current_filter_size == 0 -%}
-                  <div class="rte rte--collection-desc" {{ block.shopify_attributes }}>
+                  <div class="page-width rte rte--collection-desc" {{ block.shopify_attributes }}>
                     <div class="enlarge-text collection-content-area {% if description_length > 1400 %} excerpt-hidden  {% endif %}">
                       {{ collection.description }}
                     </div>
