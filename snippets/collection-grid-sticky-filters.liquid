@@ -137,8 +137,14 @@
   }
   @media only screen and (max-width: 1150px) and (min-width:769px) {
     .collection-filter:has(.collection-sticky-filter){
-      top: 65px;
+      top: 75px;
       
+    }
+  }
+  
+  @media only screen and (max-width: 1150px) and (min-width:965px) {
+    .collection-filter:has(.collection-sticky-filter){
+      top: 65px;
     }
   }
 
@@ -149,8 +155,11 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 10px;
-    padding-bottom: 10px;
     flex-basis: 80%;
+  }
+
+  .sticky_filters_container form .single-filter-block {
+    margin-bottom: 10px;
   }
 
   /* .collection-sticky-filter:before{
@@ -517,21 +526,14 @@
             </div>
                   
             {%- if enable_sidebar -%}
-              {%- liquid
-                assign filter_count = collection.filters.size
-                assign show_more = false
-                if filter_count > 6
-                  assign show_more = true
-                endif
-              -%}
-              <div class="sticky_filters_container">
-                <form class="filter-form">
+              <div class="sticky_filters_container swiper">
+                <form class="filter-form swiper-wrapper">
                   {%- for filter in collection.filters -%}
                   {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
                   {%- assign filter_index = forloop.index -%}
                   {%- assign collapsed_state = section.settings.collapse_filters -%}
                   {%- unless filter.label == 'Price' -%}
-                    <div class="collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
+                    <div class="swiper-slide collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
                       <div class="collection-sidebar__group">
                         {%- if show_price != false -%}
                           {%- if filter.label != "Price"  -%}             
@@ -570,9 +572,6 @@
                     {%- endunless -%}
                   {%- endfor -%}
                 </form>
-                {% if show_more %}
-                  <button id="show-more-filters" class="btn">Show More +</button>
-                {% endif %}
               </div>
             {%- endif -%}
     
@@ -591,40 +590,3 @@
     
     {%- endstyle -%}
   {%- endunless -%}
-  
-  
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var showMoreButton = document.getElementById('show-more-filters');
-  var filtersContainer = document.querySelector('.sticky_filters_container');
-  var filters = filtersContainer.querySelectorAll('.single-filter-block');
-  var showMore = true;
-
-  if (showMoreButton) {
-    showMoreButton.addEventListener('click', function() {
-      if (showMore) {
-        filters.forEach(function(filter, index) {
-          if (index < 6) {
-            filter.classList.add('hidden-filter');
-          } else {
-            filter.classList.remove('hidden-filter');
-          }
-        });
-        this.textContent = 'Show Less -';
-      } else {
-        filters.forEach(function(filter, index) {
-          if (index < 6) {
-            filter.classList.remove('hidden-filter');
-          } else {
-            filter.classList.add('hidden-filter');
-          }
-        });
-        this.textContent = 'Show More +';
-      }
-      showMore = !showMore;
-    });
-  }
-});
-</script>
-  
-  
