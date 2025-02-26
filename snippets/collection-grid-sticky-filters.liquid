@@ -355,15 +355,6 @@
     background: white!important;
   }
 
-  .collapsible-content.collapsible-content--all {
-    box-shadow: 0 10px 20px #00000017
-  }
-
-  .collapsible-content__inner {
-    max-height: 320px;
-    overflow-y: scroll;
-  }
-
   .collapsible-content__inner ul.no-bullets.tag-list {
     display: flex;
     flex-direction: column;
@@ -400,18 +391,50 @@
     align-items: center;
     position: relative;
   }
-  .collapsible-content.collapsible-content--all {
-    position: absolute;
-    background: white;
-    top: 33px;
-    left: 0px;
-    z-index: 9;
-  }
 
-  .collection-sticky-filter .single-filter-block:last-child .collection-sidebar__group{
+  /* .collection-sticky-filter .single-filter-block:last-child .collection-sidebar__group{
     margin-right: 0;
+  } */
+
+  .hidden-filter {
+    display: none!important;
   }
 
+  button#show-more-filters {
+    color: black;
+    border: 1px solid black;
+    padding: 0px;
+    border-radius: 50px;
+    padding: 0px 10px;
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+
+  .collection-sidebar__group.is-open .collapsible-content.collapsible-content--all {
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
+    backface-visibility: visible;
+  }
+  
+  label.tag__checkbox-wrapper.text-label{
+    margin-bottom: 0px;
+  }
+
+  @media(min-width:1150px){
+    .collapsible-content.collapsible-content--all {
+      position: absolute;
+      background: white;
+      top: 33px;
+      left: 0px;
+      z-index: 9;
+      box-shadow: 0 10px 20px #00000017;
+    }
+    .collapsible-content__inner {
+      max-height: 320px;
+      overflow-y: scroll;
+    }
+  }
   {% endstyle %}
   
   
@@ -492,16 +515,23 @@
                 </div>
               </div>
             </div>
-    
+                  
             {%- if enable_sidebar -%}
+              {%- liquid
+                assign filter_count = collection.filters.size
+                assign show_more = false
+                if filter_count > 6
+                  assign show_more = true
+                endif
+              -%}
               <div class="sticky_filters_container">
                 <form class="filter-form">
                   {%- for filter in collection.filters -%}
                   {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
                   {%- assign filter_index = forloop.index -%}
                   {%- assign collapsed_state = section.settings.collapse_filters -%}
-                  {%- unless  filter.label == 'Price' -%}
-                    <div class="collection-sidebar__group--{{ filter_index }} single-filter-block">
+                  {%- unless filter.label == 'Price' -%}
+                    <div class="collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
                       <div class="collection-sidebar__group">
                         {%- if show_price != false -%}
                           {%- if filter.label != "Price"  -%}             
@@ -540,6 +570,9 @@
                     {%- endunless -%}
                   {%- endfor -%}
                 </form>
+                {% if show_more %}
+                  <button id="show-more-filters" class="btn">Show More +</button>
+                {% endif %}
               </div>
             {%- endif -%}
     
@@ -558,5 +591,40 @@
     
     {%- endstyle -%}
   {%- endunless -%}
+  
+  
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var showMoreButton = document.getElementById('show-more-filters');
+  var filtersContainer = document.querySelector('.sticky_filters_container');
+  var filters = filtersContainer.querySelectorAll('.single-filter-block');
+  var showMore = true;
+
+  if (showMoreButton) {
+    showMoreButton.addEventListener('click', function() {
+      if (showMore) {
+        filters.forEach(function(filter, index) {
+          if (index < 6) {
+            filter.classList.add('hidden-filter');
+          } else {
+            filter.classList.remove('hidden-filter');
+          }
+        });
+        this.textContent = 'Show Less -';
+      } else {
+        filters.forEach(function(filter, index) {
+          if (index < 6) {
+            filter.classList.remove('hidden-filter');
+          } else {
+            filter.classList.add('hidden-filter');
+          }
+        });
+        this.textContent = 'Show More +';
+      }
+      showMore = !showMore;
+    });
+  }
+});
+</script>
   
   
