@@ -83,7 +83,7 @@
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-3": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/tesoro.jpg",
+            "image": "shopify://shop_images/Pool_Tile_by_Tesoro.jpg",
             "logo_title": "Tesoro",
             "logo_text": "",
             "link": "shopify://collections/in-home-porcelain-tile-tesoro"
@@ -92,7 +92,7 @@
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-1": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/vidrepurtileandstone.jpg",
+            "image": "shopify://shop_images/Vidrepur_Glass_Tile_50eb8f21-9ccd-4de8-a76d-24e1b1bb7c21.jpg",
             "logo_title": "Vidrepur",
             "logo_text": "",
             "link": "shopify://collections/vidrepur"
@@ -441,7 +441,7 @@
             "cta_link1": "shopify://pages/pool-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/pooltileandstone.jpg",
+            "image": "shopify://shop_images/Pool_Tile_by_Vidrepur.jpg",
             "video_url": "",
             "width": "33",
             "height": 400,
@@ -460,7 +460,7 @@
             "cta_link1": "shopify://pages/bathroom-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/bathtileandstone.jpg",
+            "image": "shopify://shop_images/Bathroom_Tile_506be410-09b3-40a5-93e5-3c092c5bf1a6.jpg",
             "video_url": "",
             "width": "33",
             "height": 400,
@@ -479,7 +479,7 @@
             "cta_link1": "shopify://pages/kitchen-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/kitchentileandstone2.jpg",
+            "image": "shopify://shop_images/SinfoniaPianoArena_PorcelainKitchenandBathTilebyMSI7.jpg",
             "video_url": "",
             "width": "33",
             "height": 400,
