@@ -222,6 +222,7 @@
   {%- endif -%}
 </slideshow-component>
 
+<link rel="preload" href="{{ 'component-slider.js' | asset_url }}" as="script">
 <script src="{{ 'component-slider.js' | asset_url }}"></script>
 
 {%- if request.design_mode -%}

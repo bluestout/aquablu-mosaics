@@ -23,7 +23,7 @@
   {%- render 'font-face' -%}
   {%- render 'css-variables' -%}
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
-  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}" fetchpriority="high">
 
   {%- if shop.enabled_currencies.size > 1 -%}
     <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url }}">

@@ -4812,7 +4812,7 @@ form + .footer__social {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  padding: 5px 20px;
+  padding: 5px 10px;
   white-space: nowrap;
   color: var(--colorNavText);
 }

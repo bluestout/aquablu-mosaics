@@ -43,10 +43,14 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
   {% comment %} <div id="qab_placeholder"></div> {% endcomment %}
 <head>
-  {% unless is_admin_interface %}  
+  {%- if template contains 'index' -%}
+    {% unless is_admin_interface %}  
     {% render '__opt-theme-observer' %}  
-  {% endunless %}  
-  {% include '__opt-theme-headers' %}
+    {% endunless %}  
+    {% include '__opt-theme-headers' %}
+
+    {%- render '__cls' -%}
+  {%- endif -%}
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -78,8 +82,9 @@
 
   {%- render 'font-face' -%}
   {%- render 'css-variables' -%}
+  
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
-  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}">  
+  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}" fetchpriority="high">  
 
   {%- if shop.enabled_currencies.size > 1 -%}
     <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url }}">
@@ -387,7 +392,8 @@
   {% comment %}--> Add Wish List {% endcomment %}
   {% render 'swym-custom' %}
   {% comment %}<-- Add Wish List {% endcomment %}
-
-  {% render '__opt-theme-js' %}
+  {%- if template contains 'index' -%}
+    {% render '__opt-theme-js' %}
+  {%- endif -%}
 </body>
 </html>
