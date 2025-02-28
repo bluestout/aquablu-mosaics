@@ -28,7 +28,8 @@
         "@type": "Product",
         "sku": "{{ variant.sku }}",
         "gtin14": "{{ variant.id }}",{% if variant.featured_image %}
-        "image": "{{ variant.featured_image.src |  image_url: width: variant.featured_image.width }}",{% endif %}
+        "image": "{{ variant.featured_image.src |  image_url: width: variant.featured_image.width }}",{% else %}
+        "image": "{{ product.featured_image.src |  image_url: width: product.featured_image.width }}",{% endif %}
         "name": "{{ variant.title | replace: '"', '' }}",
         "offers": {
             "@type": "Offer",
