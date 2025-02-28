@@ -65,7 +65,16 @@
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-0": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/msitileandstone2.jpg",
+            "image": "shopify://shop_images/Dune_Tile.jpg",
+            "logo_title": "Dune",
+            "logo_text": "",
+            "link": "shopify://collections/dune-tile-kitchen-bathroom-pool-tile"
+          }
+        },
+        "logo_image_dT4b7K": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/MSI_Backsplash_Tile.jpg",
             "logo_title": "MSI",
             "logo_text": "",
             "link": "shopify://collections/msi"
@@ -128,6 +137,7 @@
       },
       "block_order": [
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-0",
+        "logo_image_dT4b7K",
         "c752c9f6-e54b-493e-a1f6-bd6b0f247b19",
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-3",
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-1",
