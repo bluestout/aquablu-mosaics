@@ -98,15 +98,6 @@
             "link": "shopify://collections/vidrepur"
           }
         },
-        "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-2": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/sicis-tile-and-home-2.jpg",
-            "logo_title": "SICIS",
-            "logo_text": "",
-            "link": "shopify://collections/sicis"
-          }
-        },
         "logo_image_dT4b7K": {
           "type": "logo_image",
           "settings": {
@@ -114,6 +105,15 @@
             "logo_title": "MSI",
             "logo_text": "",
             "link": "shopify://collections/msi"
+          }
+        },
+        "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/sicis-tile-and-home-2.jpg",
+            "logo_title": "SICIS",
+            "logo_text": "",
+            "link": "shopify://collections/sicis"
           }
         },
         "4c4a8dc5-8f65-4427-a8be-a2865616cda2": {
@@ -140,8 +140,8 @@
         "c752c9f6-e54b-493e-a1f6-bd6b0f247b19",
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-3",
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-1",
-        "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-2",
         "logo_image_dT4b7K",
+        "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-2",
         "4c4a8dc5-8f65-4427-a8be-a2865616cda2",
         "logo_image_3AHWVr"
       ],
