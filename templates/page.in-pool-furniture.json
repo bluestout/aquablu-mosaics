@@ -313,6 +313,15 @@
             "link": "shopify://collections/floating-luxuries"
           }
         },
+        "logo_image_RErCPA": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Tupelo_Good_In_Pool_Furniture.jpg",
+            "logo_title": "Tupelo Goods",
+            "logo_text": "",
+            "link": "shopify://collections/tupelo-goods-pool-patio-furniture"
+          }
+        },
         "logo_image_xda9Dp": {
           "type": "logo_image",
           "settings": {
@@ -320,24 +329,6 @@
             "logo_title": "Ledge Lounger",
             "logo_text": "",
             "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture"
-          }
-        },
-        "logo_image_Y8Jbwj": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/inpoolvondom.jpg",
-            "logo_title": "Vondom",
-            "logo_text": "",
-            "link": "shopify://collections/vondom"
-          }
-        },
-        "logo_image_PVz3eN": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/srr.jpg",
-            "logo_title": "Studio RedRock",
-            "logo_text": "",
-            "link": "shopify://collections/studio-redrock-pool-and-patio-furniture"
           }
         },
         "logo_image_mXRxyN": {
@@ -358,6 +349,24 @@
             "link": "shopify://collections/s-r-smith-in-pool-loungers-and-chairs"
           }
         },
+        "logo_image_Y8Jbwj": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Vondom_In_Pool_Furniture.jpg",
+            "logo_title": "Vondom",
+            "logo_text": "",
+            "link": "shopify://collections/vondom"
+          }
+        },
+        "logo_image_PVz3eN": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/srr.jpg",
+            "logo_title": "Studio RedRock",
+            "logo_text": "",
+            "link": "shopify://collections/studio-redrock-pool-and-patio-furniture"
+          }
+        },
         "logo_image_PKghyW": {
           "type": "logo_image",
           "settings": {
@@ -370,11 +379,12 @@
       },
       "block_order": [
         "logo_image_4zgBhc",
+        "logo_image_RErCPA",
         "logo_image_xda9Dp",
-        "logo_image_Y8Jbwj",
-        "logo_image_PVz3eN",
         "logo_image_mXRxyN",
         "logo_image_LrDC8m",
+        "logo_image_Y8Jbwj",
+        "logo_image_PVz3eN",
         "logo_image_PKghyW"
       ],
       "settings": {
