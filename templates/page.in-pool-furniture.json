@@ -750,6 +750,26 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
+    "text_and_image_dCpc4Y": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Tupelo_Goods_Feature_-_Outdoor_Living_Furniture.jpg",
+        "video_url": "",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>TUPELO GOODS: DURABLE & STYLISH OUTDOOR LIVING</strong></h2><p>Tupelo Goods designs stylish, durable, and low-maintenance outdoor furniture built to withstand the elements. Using marine-grade polyethylene and rotomolding technology, their products resist sun, rain, and chemicals, ensuring long-lasting beauty. Their one-piece, seamless designs require no assembly and are easy to clean with a hose or power wash.</p><p>From in-pool loungers and side tables to fire pit seating and outdoor games, Tupelo Goods blends modern aesthetics with effortless functionality. Their furniture is designed for comfort, stability, and versatility, making it ideal for residential, hospitality, and commercial spaces.</p>",
+        "button_label": "SHOP NOW",
+        "button_link": "https://www.aquablumosaics.com/collections/tupelo-goods-pool-patio-furniture",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding"
+      }
+    },
     "promo_grid_xXBH3t": {
       "type": "promo-grid",
       "blocks": {
@@ -997,6 +1017,7 @@
     "text_columns_dhNWqr",
     "slideshow_cXW89r",
     "featured_collections_custom_bDrUnC",
+    "text_and_image_dCpc4Y",
     "promo_grid_xXBH3t",
     "rich_text_yGwETe",
     "text_and_image_TE9FgV",
