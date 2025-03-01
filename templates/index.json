@@ -53,6 +53,7 @@
         },
         "slide_k4tBKN": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Valentines-Day-TOP-Sale.jpg",
             "heading": "VALENTINES DAY FIRE FEATURE SALE",
