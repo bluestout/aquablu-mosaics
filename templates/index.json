@@ -288,25 +288,6 @@
             "color_accent": "#ffffff"
           }
         },
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "BATH",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://pages/bathroom-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Bathroom_Tile_a2fbde9b-82d9-4f5b-b684-ee06ff327843.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
         "f89bc8b2-184c-4d40-9af0-dfe16313243d": {
           "type": "advanced",
           "settings": {
@@ -318,6 +299,25 @@
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Ceramic_Kitchen_Tile.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BATH",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/bathroom-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Bathroom_Tile_a2fbde9b-82d9-4f5b-b684-ee06ff327843.jpg",
             "video_url": "",
             "width": "50",
             "height": 340,
@@ -367,8 +367,8 @@
       },
       "block_order": [
         "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-0",
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1",
         "f89bc8b2-184c-4d40-9af0-dfe16313243d",
+        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1",
         "5588f136-9544-41ca-8d48-50bfaa4e0fe8",
         "60867fe7-1b72-46be-9c82-831703da72b4"
       ],
