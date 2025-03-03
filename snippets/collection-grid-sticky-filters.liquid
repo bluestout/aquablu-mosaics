@@ -646,19 +646,19 @@
                     {%- assign filter_index = forloop.index -%}
                     {%- assign collapsed_state = section.settings.collapse_filters -%}
                     
-                    {%- if filter_index <= 6 -%}
+                    {%- if filter_index <= 10 -%}
                       {%- unless filter.label == 'Price' -%}
                         <div class="collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
                           <div class="collection-sidebar__group">
                             {%- if show_price != false -%}
-                  {%- if filter.label != "Price"  -%}             
-                    {%- render 'collection-sticky-filter-trigger',
-                      id: filter_id,
-                      location: location,
-                      title: filter.label,
-                      index: filter_index,
-                      collapsed_state: collapsed_state -%}
-                  {%- endif -%} 
+                              {%- if filter.label != "Price"  -%}             
+                                {%- render 'collection-sticky-filter-trigger',
+                                  id: filter_id,
+                                  location: location,
+                                  title: filter.label,
+                                  index: filter_index,
+                                  collapsed_state: collapsed_state -%}
+                              {%- endif -%} 
                             {%- else -%}   
                               {%- render 'collection-sticky-filter-trigger',
                                 id: filter_id,
@@ -685,14 +685,13 @@
                         </div>
                       {%- endunless -%}
                     {%- else -%}
-
-                      {%- if filter_index == 7 -%}
+                      {%- if filter_index == 11 -%}
                         <details class="parent-additional-wrapper" onclick="event.stopPropagation()">
                           <summary class="additional-filters-trigger">
                             <span class="additional-filters">Show more {%- render 'collapsible-icons' -%}</span>
                           </summary>
                       {%- endif -%}
-                      {%- if filter_index == 7 -%}
+                      {%- if filter_index == 11 -%}
                         <div class="additional-filters-wrapper">
                       {%- endif -%}
                       <div class="collection-sidebar__group--{{ filter_index }} single-filter-block{% if show_more and filter_index > 6 %} hidden-filter{% endif %}">
@@ -754,3 +753,74 @@
     
     {%- endstyle -%}
   {%- endunless -%}
+
+
+  <script>
+let hasResizedBelow1500 = false;
+
+function moveFilterGroups() {
+  const filterForm = document.querySelector('.sticky_filters_container .filter-form');
+  const additionalWrapper = document.querySelector('.additional-filters-wrapper');
+  
+  // Check window width on DOMContentLoaded
+  if (window.innerWidth < 1500) {
+    const filterGroups = [
+      filterForm.querySelector('.collection-sidebar__group--8'),
+      filterForm.querySelector('.collection-sidebar__group--9'),
+      filterForm.querySelector('.collection-sidebar__group--10')
+    ];
+    filterGroups.forEach(group => {
+      if (group && !additionalWrapper.contains(group)) {
+        additionalWrapper.prepend(group);
+      }
+    });
+    hasResizedBelow1500 = true;  // Set the flag when window width is < 1500
+  } else {
+    hasResizedBelow1500 = false;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', moveFilterGroups);
+
+window.addEventListener('resize', function() {
+  const parentFilterWrapper = document.querySelector('.parent-additional-wrapper');
+  const filterForm = document.querySelector('.sticky_filters_container .filter-form');
+  const additionalWrapper = document.querySelector('.additional-filters-wrapper');
+  
+  if (window.innerWidth < 1500) {
+    if (!hasResizedBelow1500) {
+      const filterGroups = [
+        filterForm.querySelector('.collection-sidebar__group--8'),
+        filterForm.querySelector('.collection-sidebar__group--9'),
+        filterForm.querySelector('.collection-sidebar__group--10')
+      ];
+      console.log("Less then filterGroups", filterGroups);
+      filterGroups.forEach(group => {
+        if (group && !additionalWrapper.contains(group)) {
+          additionalWrapper.prepend(group);
+        }
+      });
+      hasResizedBelow1500 = true;
+    }
+  } else {
+    if (hasResizedBelow1500) {
+      const filterGroups = [
+        additionalWrapper.querySelector('.collection-sidebar__group--8'),
+        additionalWrapper.querySelector('.collection-sidebar__group--9'),
+        additionalWrapper.querySelector('.collection-sidebar__group--10')
+      ];
+      console.log("Greater then filterGroups", filterGroups);
+      filterGroups.forEach(group => {
+          filterForm.append(group);
+          console.log("Elements", group);
+      });
+
+      if (filterForm.lastElementChild !== parentFilterWrapper) {
+        filterForm.appendChild(parentFilterWrapper);
+      }
+
+      hasResizedBelow1500 = false;
+    }
+  }
+});
+</script>

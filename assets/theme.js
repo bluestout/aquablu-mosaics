@@ -6418,6 +6418,77 @@ if (theme.config.isTouch) {
             this.updateScroll(false);
             theme.reinitProductGridItem();
 
+            let hasResizedBelow1500 = false;
+
+            function moveFilterGroups() {
+              const filterForm = document.querySelector('.sticky_filters_container .filter-form');
+              const additionalWrapper = document.querySelector('.additional-filters-wrapper');
+
+              // Check window width on DOMContentLoaded
+              if (window.innerWidth < 1500) {
+                const filterGroups = [
+                  filterForm.querySelector('.collection-sidebar__group--8'),
+                  filterForm.querySelector('.collection-sidebar__group--9'),
+                  filterForm.querySelector('.collection-sidebar__group--10')
+                ];
+                filterGroups.forEach(group => {
+                  if (group && !additionalWrapper.contains(group)) {
+                    additionalWrapper.prepend(group);
+                  }
+                });
+                hasResizedBelow1500 = true;  // Set the flag when window width is < 1500
+              } else {
+                hasResizedBelow1500 = false;
+              }
+            }
+
+            moveFilterGroups();
+
+            window.addEventListener('resize', function () {
+              const parentFilterWrapper = document.querySelector('.parent-additional-wrapper');
+              const filterForm = document.querySelector('.sticky_filters_container .filter-form');
+              const additionalWrapper = document.querySelector('.additional-filters-wrapper');
+
+              if (window.innerWidth < 1500) {
+                if (!hasResizedBelow1500) {
+                  const filterGroups = [
+                    filterForm.querySelector('.collection-sidebar__group--8'),
+                    filterForm.querySelector('.collection-sidebar__group--9'),
+                    filterForm.querySelector('.collection-sidebar__group--10')
+                  ];
+                  console.log("Less then filterGroups", filterGroups);
+                  filterGroups.forEach(group => {
+                    if (group && !additionalWrapper.contains(group)) {
+                      additionalWrapper.prepend(group);
+                    }
+                  });
+                  hasResizedBelow1500 = true;
+                }
+              } else {
+                if (hasResizedBelow1500) {
+                  const filterGroups = [
+                    additionalWrapper.querySelector('.collection-sidebar__group--8'),
+                    additionalWrapper.querySelector('.collection-sidebar__group--9'),
+                    additionalWrapper.querySelector('.collection-sidebar__group--10')
+                  ];
+                  console.log("Greater then filterGroups", filterGroups);
+                  filterGroups.forEach(group => {
+                    if (!filterGroups.length > 0){
+                      filterForm.append(group);
+                    }
+                  });
+                  if (filterForm.lastElementChild !== parentFilterWrapper) {
+                    filterForm.appendChild(parentFilterWrapper);
+                  }
+                  hasResizedBelow1500 = false;
+                }
+              }
+            });
+
+            document.querySelectorAll('.additional-filters-wrapper .is-open')?.forEach(el => {
+              el.classList.remove('is-open');
+            });
+
             /* --> Sticky Filter */
             // var flkty = new Flickity( '.sticky_filters_container', {
             //   cellAlign: 'left',
