@@ -1,1 +1,732 @@
-{"sections":{"slideshow_pQakFB":{"type":"slideshow","blocks":{"hero_4WkMcQ":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"UNMATCHED DURABILITY & STYLE","title":"<p>VERSATILE HARDSCAPES<\/p>","title_size":50,"subheading":"","custom_text":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/porcpatiopavers.jpg","overlay_opacity":4,"focal_point":"center center"}},"hero_AqADGf":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"ELEVATE YOUR POOL","title":"<p>MODERN EDGE COPING<\/p>","title_size":40,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/modern-pool-coping","link_text":"Shop Now","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/inspire1.jpg","overlay_opacity":10,"focal_point":"center center"}},"hero_BCbHhw":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"STYLE & FUNCTIONALITY","title":"<p>QUARTZITE-LOOK PAVERS<\/p>","title_size":40,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/quartzite-look-porcelain-pavers-coping","link_text":"Shop Now","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/inspire5.jpg","overlay_opacity":8,"focal_point":"center center"}},"hero_bfc8eD":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"STYLISH, MODERN LIVING","title":"<p>CONCRETE-LOOK PORCELAIN PAVERS<\/p>","title_size":40,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/concrete-look-porcelain-pavers-coping","link_text":"Shop Now","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/pavers-inspire.jpg","overlay_opacity":0,"focal_point":"center center"}},"hero_kH3Kpz":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"SLEEK & BEAUTIFUL","title":"<p>TRAVERTINE-LOOK COPING<\/p>","title_size":40,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/travertine-look-porcelain-pavers-coping","link_text":"Shop Now","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/Travertine-look-coping.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["hero_4WkMcQ","hero_AqADGf","hero_BCbHhw","hero_bfc8eD","hero_kH3Kpz"],"settings":{"full_width":true,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":40,"space_above":false,"space_below":true,"mobile_size":20,"style":"dots","autoplay":true,"autoplay_speed":7,"css_class":""}},"main":{"type":"main-page","disabled":true,"settings":{}},"f179439e-be50-4d2b-a6be-a59ea9fbd72a":{"type":"featured-collections-custom","blocks":{"template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-0":{"type":"collection","settings":{"title":"WOOD","image":"shopify:\/\/shop_images\/wood.jpg","url":"shopify:\/\/collections\/wood-look-porcelain-pavers-and-coping","tooltip":false,"tooltip_text":""}},"template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-1":{"type":"collection","settings":{"title":"CONCRETE","image":"shopify:\/\/shop_images\/concrete.jpg","url":"shopify:\/\/collections\/concrete-look-porcelain-pavers-coping","tooltip":false,"tooltip_text":""}},"template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-2":{"type":"collection","settings":{"title":"LIMESTONE","image":"shopify:\/\/shop_images\/Cape_Cod_720x_ec7cb73f-c768-4583-9aa1-2e6c43c243cf.jpg","url":"shopify:\/\/collections\/limestone-look-porcelain-pavers-coping","tooltip":false,"tooltip_text":""}},"template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-3":{"type":"collection","settings":{"title":"MARBLE","image":"shopify:\/\/shop_images\/Naturale_Carrara_2_Outdoor_Porcelain_U_S__Porcelain_Pavers_jpg.jpg","url":"shopify:\/\/collections\/marble-look-porcelain-pavers-coping","tooltip":false,"tooltip_text":""}},"template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-4":{"type":"collection","settings":{"title":"QUARTZITE","image":"shopify:\/\/shop_images\/S9WS55U-HWS205-WEST-57TH-GRAY-24x24_720x_e320eda7-8901-408b-81ca-722cba60d2ff.jpg","url":"shopify:\/\/collections\/quartzite-look-porcelain-pavers-coping","tooltip":false,"tooltip_text":""}},"template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5":{"type":"collection","settings":{"title":"TERRAZZO","image":"shopify:\/\/shop_images\/terrazzo_porcelain_pavers.jpg","url":"shopify:\/\/collections\/terrazo-look-porcelain-pavers-coping","tooltip":false,"tooltip_text":""}},"22042cd3-4d60-424b-89f2-797b948262fb":{"type":"collection","settings":{"title":"TRAVERTINE","image":"shopify:\/\/shop_images\/S9TS01-HTS201-TRAVSTONE-BEIGE-24-x-24S9TS01-HTS201-TRAVSTONE-BEIGE-24-x-24_360x_2x_3665b158-df10-4f82-89a8-6863e11506db.png","url":"shopify:\/\/collections\/travertine-look-porcelain-pavers-coping","tooltip":false,"tooltip_text":""}},"41c69297-1243-45e8-a756-edd75d6d1494":{"type":"collection","settings":{"title":"SHOP ALL","image":"shopify:\/\/shop_images\/Monteverde2-HMN205-Gray-16_x48_360x_2x_62f7bd8b-92f2-48d4-a7d4-ab540f5dc02d.png","url":"shopify:\/\/collections\/outdoor-pavers-and-coping","tooltip":false,"tooltip_text":""}}},"block_order":["template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-0","template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-1","template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-2","template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-3","template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-4","template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5","22042cd3-4d60-424b-89f2-797b948262fb","41c69297-1243-45e8-a756-edd75d6d1494"],"settings":{"title":"SHOP BY LOOK","divider":false,"css_class":"exploring-pool-mosaic-grid"}},"56f31711-acbd-4fe8-8510-44d72e4826a6":{"type":"text-and-image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Capture1-1024x683_8f36d5c8-3c90-420b-9cd4-08888fc92f03.png","video_url":"","image_width":650,"subtitle":"","title":"","text":"<h2>WHAT ARE PORCELAIN PAVERS?<\/h2><p>Porcelain pavers are a type of paving stone that is made from porcelain clay. Porcelain pavers are available in a variety of colors and styles, so you can find the perfect option to complement your home’s exterior. Other benefits include:<\/p><ul><li>Resistant to staining and fading <\/li><li>Can be cut with a saw for perfect installation <\/li><li>Don’t need to be sealed <\/li><li>Wide range of looks including wood and natural stone<\/li><\/ul>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"left","color_scheme":"2","divider":false,"new_layout":true,"css_class":"reduce-text-padding"}},"dd55ec05-a69b-489b-aa4b-a94f69d5f8b8":{"type":"slideshow-image","blocks":{"template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-1":{"type":"image","disabled":true,"settings":{"link":"","image":"shopify:\/\/shop_images\/inspire4.jpg"}},"template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-2":{"type":"image","disabled":true,"settings":{"link":"","image":"shopify:\/\/shop_images\/inspire5.jpg"}},"e4e04f7c-6f08-4791-9e60-0878cf779d36":{"type":"image","disabled":true,"settings":{"link":"","image":"shopify:\/\/shop_images\/inspire1.jpg"}},"81d8c517-9ed4-48dd-a647-1887e796fbf8":{"type":"image","disabled":true,"settings":{"link":"","image":"shopify:\/\/shop_images\/inspire3.jpg"}},"67f83c15-7704-4919-877b-6e5976a55f7e":{"type":"image","disabled":true,"settings":{"link":"","image":"shopify:\/\/shop_images\/inspire6.jpg"}}},"block_order":["template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-1","template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-2","e4e04f7c-6f08-4791-9e60-0878cf779d36","81d8c517-9ed4-48dd-a647-1887e796fbf8","67f83c15-7704-4919-877b-6e5976a55f7e"],"disabled":true,"settings":{"full_width":false,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"2a0c0693-ee03-4c99-b070-f48f33ce54a8":{"type":"promo-grid","blocks":{"809b779c-3f45-4664-8029-41995faf6f1a":{"type":"advanced","settings":{"subheading":"","heading":"LEDGER PANELS","textarea":"","cta_text1":"SHOP NOW","cta_link1":"shopify:\/\/collections\/ledger-stone-tile","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/ledger.jpg","video_url":"","width":"50","height":400,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"d4da2746-8f85-4215-a3ad-52372c9c8f5b":{"type":"advanced","settings":{"subheading":"","heading":"FLAGSTONE PAVERS","textarea":"","cta_text1":"SHOP NOW","cta_link1":"shopify:\/\/collections\/flagstone-pavers-outdoor-stone-tile","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/flagstone1.jpg","video_url":"","width":"50","height":400,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["809b779c-3f45-4664-8029-41995faf6f1a","d4da2746-8f85-4215-a3ad-52372c9c8f5b"],"settings":{"full_width":false,"heading":"","gutter_size":20,"section_gutter_size":30,"space_above":true,"space_below":true,"two_column_mobile":true,"three_column_mobile":false,"css_class":"home-section-5"}},"79941ca3-0cb7-4860-bca5-d013efbba68b":{"type":"slideshow","blocks":{"template--14551638966344__79941ca3-0cb7-4860-bca5-d013efbba68b-hero-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":70,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/conservation","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-left","image":"shopify:\/\/shop_images\/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg","image_mobile":"shopify:\/\/shop_images\/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14551638966344__79941ca3-0cb7-4860-bca5-d013efbba68b-hero-1"],"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":3,"space_above":true,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"6c386a30-0e43-4a02-b4bf-28909ff07d77":{"type":"promo-grid","blocks":{"template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-0":{"type":"advanced","settings":{"subheading":"","heading":"SHOP U.S. PORCELAIN PAVERS","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/collections\/us-porcelain-tile-pavers-and-pool-coping","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/porcelain-pavers.jpg","video_url":"","width":"50","height":500,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-1":{"type":"advanced","settings":{"subheading":"","heading":"SHOP MODERN EDGE POOL COPING","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/collections\/modern-pool-coping","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/coping.jpg","video_url":"","width":"50","height":500,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-0","template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-1"],"disabled":true,"settings":{"full_width":false,"heading":"","gutter_size":29,"section_gutter_size":20,"space_above":false,"space_below":false,"two_column_mobile":false,"three_column_mobile":false,"css_class":""}},"f798ccf1-5f80-4f0a-aed1-357d4d35067a":{"type":"promo-grid","blocks":{"532ce8f1-f5d2-4d75-98de-cd513501cad7":{"type":"simple","settings":{"link":"shopify:\/\/collections\/outdoor-porcelain-pavers-and-coping","text":"PORCELAIN PAVERS","image":"shopify:\/\/shop_images\/outdoor_patio_pavers.jpg","width":"50","height":500}},"047cf53c-a1e4-4ab7-ae14-1e01ffd65e7e":{"type":"simple","settings":{"link":"shopify:\/\/collections\/modern-pool-coping","text":"MODERN POOL COPING","image":"shopify:\/\/shop_images\/coping.jpg","width":"50","height":500}}},"block_order":["532ce8f1-f5d2-4d75-98de-cd513501cad7","047cf53c-a1e4-4ab7-ae14-1e01ffd65e7e"],"settings":{"full_width":false,"heading":"","gutter_size":40,"section_gutter_size":30,"space_above":true,"space_below":true,"two_column_mobile":true,"three_column_mobile":false,"css_class":"home-section-10"}},"a35d99be-242a-415d-a51d-6696ed3e7252":{"type":"featured-collection","disabled":true,"settings":{"title":"BROWSE OUR MOST POPULAR","home_featured_products":"1-x-1-glass-mosaic-tile","count":4,"mobile_scrollable":true,"view_all":true,"divider":false,"css_class":""}},"bae3e2d5-8109-47ef-805f-0aac02c7a422":{"type":"featured-collection-carousel","disabled":true,"settings":{"title":"BROWSE OUR MOST POPULAR","tab_collection_1":"1-x-1-glass-mosaic-tile","css_class":"feat-collection-carousel set-carousel-height"}},"4a671b33-4a2e-48a2-a47d-26c42c9920e6":{"type":"slideshow","blocks":{"template--14551638966344__4a671b33-4a2e-48a2-a47d-26c42c9920e6-1681757367c5027eed-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"<h1>SHOP ALL PAVERS<\/h1>","title_size":48,"subheading":"","custom_text":"","link":"https:\/\/www.aquablumosaics.com\/pages\/outdoor-patio-pavers-and-hardscapes?_pos=1&_psq=pavers&_ss=e&_v=1.0","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/patiopavers.jpg","overlay_opacity":12,"focal_point":"center center"}}},"block_order":["template--14551638966344__4a671b33-4a2e-48a2-a47d-26c42c9920e6-1681757367c5027eed-1"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":true,"contact_popup":false,"desktop_size":-20,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"1d9ab1ee-1272-45ff-8455-85156dd4cbf1":{"type":"featured-collection","disabled":true,"settings":{"title":"RECENTLY VIEWED","home_featured_products":"bc-all","count":4,"mobile_scrollable":true,"view_all":true,"divider":false,"css_class":""}},"dfcad694-88f3-4380-ab9f-fd78aa929e8e":{"type":"featured-collection-carousel","settings":{"title":"2CM PAVERS","tab_collection_1":"2cm-outdoor-porcelain-pavers-and-coping","css_class":"feat-collection-carousel set-carousel-height"}},"faq_PfqNEz":{"type":"faq","blocks":{"question_3wjP7M":{"type":"question","settings":{"title":"What is hardscaping?","text":"<p>Hardscaping refers to the non-living elements of a landscape design, such as patio pavers, retaining walls, pathways, and outdoor structures like pergolas or fire pits. Hardscaping adds structure, functionality, and visual interest to outdoor spaces.<\/p>"}},"question_kyteqM":{"type":"question","settings":{"title":"What are the benefits of incorporating hardscapes into my landscape design?","text":"<p>Hardscaping can enhance the usability, aesthetics, and value of outdoor spaces by providing defined areas for entertaining, relaxing, and gardening, as well as improving drainage and reducing erosion.<\/p>"}},"question_TtaBEJ":{"type":"question","settings":{"title":"Can I mix different materials in my hardscape design?","text":"<p>Yes, mixing different materials in a hardscape design can create visual interest and complement the surrounding landscape. For example, combining stone pavers with gravel or wood accents can add texture and contrast to the design.<\/p>"}},"question_RUcga8":{"type":"question","settings":{"title":"How do I choose the right patio pavers for my outdoor space?","text":"<p>Consider factors such as the size and shape of the patio area, the desired design aesthetic, durability, maintenance requirements, and budget when choosing patio pavers. Popular options include porcelain pavers, brick pavers, and natural stone pavers.<\/p>"}},"question_tqP6Uk":{"type":"question","settings":{"title":"What are the benefits of using outdoor pavers?","text":"<p>Outdoor pavers offer several benefits, including durability, easy installation, versatility in design and color options, resistance to weathering and erosion, and ease of repair or replacement.<\/p>"}},"question_R3Jqqq":{"type":"question","settings":{"title":"How do I maintain outdoor pavers?","text":"<p>Regular maintenance of outdoor pavers involves sweeping or blowing away debris, washing with a mild detergent and water as needed, and sealing the pavers periodically to protect against stains and weathering.<\/p>"}},"question_XQNJGt":{"type":"question","settings":{"title":"Are outdoor pavers slippery when wet?","text":"<p>The slip resistance of outdoor pavers depends on factors such as the material, texture, and finish. Some pavers offer better traction when wet compared to smooth or polished surfaces.<\/p>"}},"question_RQHMic":{"type":"question","settings":{"title":"Can I use outdoor pavers around a pool?","text":"<p>Yes, outdoor pavers are a popular choice for pool decks and surrounding areas due to their durability, slip resistance, and ability to withstand exposure to water and chemicals. Proper installation and drainage are essential for safety and longevity.<\/p>"}},"question_4dYEUH":{"type":"question","settings":{"title":"How long do outdoor pavers last?","text":"<p>The lifespan of outdoor pavers varies depending on factors such as the material, quality of installation, maintenance practices, and exposure to environmental factors. With proper care, outdoor pavers can last for many years.<\/p>"}}},"block_order":["question_3wjP7M","question_kyteqM","question_TtaBEJ","question_RUcga8","question_tqP6Uk","question_R3Jqqq","question_XQNJGt","question_RQHMic","question_4dYEUH"],"settings":{"title":"FAQs","css_class":""}}},"order":["slideshow_pQakFB","main","f179439e-be50-4d2b-a6be-a59ea9fbd72a","56f31711-acbd-4fe8-8510-44d72e4826a6","dd55ec05-a69b-489b-aa4b-a94f69d5f8b8","2a0c0693-ee03-4c99-b070-f48f33ce54a8","79941ca3-0cb7-4860-bca5-d013efbba68b","6c386a30-0e43-4a02-b4bf-28909ff07d77","f798ccf1-5f80-4f0a-aed1-357d4d35067a","a35d99be-242a-415d-a51d-6696ed3e7252","bae3e2d5-8109-47ef-805f-0aac02c7a422","4a671b33-4a2e-48a2-a47d-26c42c9920e6","1d9ab1ee-1272-45ff-8455-85156dd4cbf1","dfcad694-88f3-4380-ab9f-fd78aa929e8e","faq_PfqNEz"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_pQakFB": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_4WkMcQ": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "UNMATCHED DURABILITY & STYLE",
+            "title": "<p>VERSATILE HARDSCAPES</p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Outdoor_Patio_Pavers_Hardscapes.jpg",
+            "overlay_opacity": 4,
+            "focal_point": "center center"
+          }
+        },
+        "hero_AqADGf": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "ELEVATE YOUR POOL",
+            "title": "<p>MODERN EDGE COPING</p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/modern-pool-coping",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/inspire1.jpg",
+            "overlay_opacity": 10,
+            "focal_point": "center center"
+          }
+        },
+        "hero_BCbHhw": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "STYLE & FUNCTIONALITY",
+            "title": "<p>QUARTZITE-LOOK PAVERS</p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/quartzite-look-porcelain-pavers-coping",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/inspire5.jpg",
+            "overlay_opacity": 8,
+            "focal_point": "center center"
+          }
+        },
+        "hero_bfc8eD": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "STYLISH, MODERN LIVING",
+            "title": "<p>CONCRETE-LOOK PORCELAIN PAVERS</p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/concrete-look-porcelain-pavers-coping",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/pavers-inspire.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
+        "hero_kH3Kpz": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "SLEEK & BEAUTIFUL",
+            "title": "<p>TRAVERTINE-LOOK COPING</p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/travertine-look-porcelain-pavers-coping",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Travertine-look-coping.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_4WkMcQ",
+        "hero_AqADGf",
+        "hero_BCbHhw",
+        "hero_bfc8eD",
+        "hero_kH3Kpz"
+      ],
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 20,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "f179439e-be50-4d2b-a6be-a59ea9fbd72a": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-0": {
+          "type": "collection",
+          "settings": {
+            "title": "WOOD",
+            "image": "shopify://shop_images/wood.jpg",
+            "url": "shopify://collections/wood-look-porcelain-pavers-and-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-1": {
+          "type": "collection",
+          "settings": {
+            "title": "CONCRETE",
+            "image": "shopify://shop_images/concrete.jpg",
+            "url": "shopify://collections/concrete-look-porcelain-pavers-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-2": {
+          "type": "collection",
+          "settings": {
+            "title": "LIMESTONE",
+            "image": "shopify://shop_images/Cape_Cod_720x_ec7cb73f-c768-4583-9aa1-2e6c43c243cf.jpg",
+            "url": "shopify://collections/limestone-look-porcelain-pavers-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-3": {
+          "type": "collection",
+          "settings": {
+            "title": "MARBLE",
+            "image": "shopify://shop_images/Naturale_Carrara_2_Outdoor_Porcelain_U_S__Porcelain_Pavers_jpg.jpg",
+            "url": "shopify://collections/marble-look-porcelain-pavers-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-4": {
+          "type": "collection",
+          "settings": {
+            "title": "QUARTZITE",
+            "image": "shopify://shop_images/S9WS55U-HWS205-WEST-57TH-GRAY-24x24_720x_e320eda7-8901-408b-81ca-722cba60d2ff.jpg",
+            "url": "shopify://collections/quartzite-look-porcelain-pavers-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5": {
+          "type": "collection",
+          "settings": {
+            "title": "TERRAZZO",
+            "image": "shopify://shop_images/terrazzo_porcelain_pavers.jpg",
+            "url": "shopify://collections/terrazo-look-porcelain-pavers-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "22042cd3-4d60-424b-89f2-797b948262fb": {
+          "type": "collection",
+          "settings": {
+            "title": "TRAVERTINE",
+            "image": "shopify://shop_images/S9TS01-HTS201-TRAVSTONE-BEIGE-24-x-24S9TS01-HTS201-TRAVSTONE-BEIGE-24-x-24_360x_2x_3665b158-df10-4f82-89a8-6863e11506db.png",
+            "url": "shopify://collections/travertine-look-porcelain-pavers-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "41c69297-1243-45e8-a756-edd75d6d1494": {
+          "type": "collection",
+          "settings": {
+            "title": "SHOP ALL",
+            "image": "shopify://shop_images/Monteverde2-HMN205-Gray-16_x48_360x_2x_62f7bd8b-92f2-48d4-a7d4-ab540f5dc02d.png",
+            "url": "shopify://collections/outdoor-pavers-and-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-0",
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-1",
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-2",
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-3",
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-4",
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5",
+        "22042cd3-4d60-424b-89f2-797b948262fb",
+        "41c69297-1243-45e8-a756-edd75d6d1494"
+      ],
+      "settings": {
+        "title": "SHOP BY LOOK",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
+    "56f31711-acbd-4fe8-8510-44d72e4826a6": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Capture1-1024x683_8f36d5c8-3c90-420b-9cd4-08888fc92f03.png",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>WHAT ARE PORCELAIN PAVERS?</h2><p>Porcelain pavers are a type of paving stone that is made from porcelain clay. Porcelain pavers are available in a variety of colors and styles, so you can find the perfect option to complement your home’s exterior. Other benefits include:</p><ul><li>Resistant to staining and fading </li><li>Can be cut with a saw for perfect installation </li><li>Don’t need to be sealed </li><li>Wide range of looks including wood and natural stone</li></ul>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding"
+      }
+    },
+    "dd55ec05-a69b-489b-aa4b-a94f69d5f8b8": {
+      "type": "slideshow-image",
+      "blocks": {
+        "template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/inspire4.jpg"
+          }
+        },
+        "template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/inspire5.jpg"
+          }
+        },
+        "e4e04f7c-6f08-4791-9e60-0878cf779d36": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/inspire1.jpg"
+          }
+        },
+        "81d8c517-9ed4-48dd-a647-1887e796fbf8": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/inspire3.jpg"
+          }
+        },
+        "67f83c15-7704-4919-877b-6e5976a55f7e": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/inspire6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-1",
+        "template--14551638966344__dd55ec05-a69b-489b-aa4b-a94f69d5f8b8-image-2",
+        "e4e04f7c-6f08-4791-9e60-0878cf779d36",
+        "81d8c517-9ed4-48dd-a647-1887e796fbf8",
+        "67f83c15-7704-4919-877b-6e5976a55f7e"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "2a0c0693-ee03-4c99-b070-f48f33ce54a8": {
+      "type": "promo-grid",
+      "blocks": {
+        "809b779c-3f45-4664-8029-41995faf6f1a": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "LEDGER PANELS",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/ledger-stone-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/ledger.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "d4da2746-8f85-4215-a3ad-52372c9c8f5b": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "FLAGSTONE PAVERS",
+            "textarea": "",
+            "cta_text1": "SHOP NOW",
+            "cta_link1": "shopify://collections/flagstone-pavers-outdoor-stone-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/flagstone1.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "809b779c-3f45-4664-8029-41995faf6f1a",
+        "d4da2746-8f85-4215-a3ad-52372c9c8f5b"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 20,
+        "section_gutter_size": 30,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": true,
+        "three_column_mobile": false,
+        "css_class": "home-section-5"
+      }
+    },
+    "79941ca3-0cb7-4860-bca5-d013efbba68b": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14551638966344__79941ca3-0cb7-4860-bca5-d013efbba68b-hero-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/conservation",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
+            "image_mobile": "shopify://shop_images/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14551638966344__79941ca3-0cb7-4860-bca5-d013efbba68b-hero-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 3,
+        "space_above": true,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "6c386a30-0e43-4a02-b4bf-28909ff07d77": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "SHOP U.S. PORCELAIN PAVERS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/us-porcelain-tile-pavers-and-pool-coping",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/porcelain-pavers.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "SHOP MODERN EDGE POOL COPING",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/modern-pool-coping",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/coping.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-0",
+        "template--14551638966344__6c386a30-0e43-4a02-b4bf-28909ff07d77-1681750404dc8fc8be-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 29,
+        "section_gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "f798ccf1-5f80-4f0a-aed1-357d4d35067a": {
+      "type": "promo-grid",
+      "blocks": {
+        "532ce8f1-f5d2-4d75-98de-cd513501cad7": {
+          "type": "simple",
+          "settings": {
+            "link": "shopify://collections/outdoor-porcelain-pavers-and-coping",
+            "text": "PORCELAIN PAVERS",
+            "image": "shopify://shop_images/outdoor_patio_pavers.jpg",
+            "width": "50",
+            "height": 500
+          }
+        },
+        "047cf53c-a1e4-4ab7-ae14-1e01ffd65e7e": {
+          "type": "simple",
+          "settings": {
+            "link": "shopify://collections/modern-pool-coping",
+            "text": "MODERN POOL COPING",
+            "image": "shopify://shop_images/coping.jpg",
+            "width": "50",
+            "height": 500
+          }
+        }
+      },
+      "block_order": [
+        "532ce8f1-f5d2-4d75-98de-cd513501cad7",
+        "047cf53c-a1e4-4ab7-ae14-1e01ffd65e7e"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 40,
+        "section_gutter_size": 30,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": true,
+        "three_column_mobile": false,
+        "css_class": "home-section-10"
+      }
+    },
+    "a35d99be-242a-415d-a51d-6696ed3e7252": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "BROWSE OUR MOST POPULAR",
+        "home_featured_products": "1-x-1-glass-mosaic-tile",
+        "count": 4,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "bae3e2d5-8109-47ef-805f-0aac02c7a422": {
+      "type": "featured-collection-carousel",
+      "disabled": true,
+      "settings": {
+        "title": "BROWSE OUR MOST POPULAR",
+        "tab_collection_1": "1-x-1-glass-mosaic-tile",
+        "css_class": "feat-collection-carousel set-carousel-height"
+      }
+    },
+    "4a671b33-4a2e-48a2-a47d-26c42c9920e6": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14551638966344__4a671b33-4a2e-48a2-a47d-26c42c9920e6-1681757367c5027eed-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "<h1>SHOP ALL PAVERS</h1>",
+            "title_size": 48,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes?_pos=1&_psq=pavers&_ss=e&_v=1.0",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/patiopavers.jpg",
+            "overlay_opacity": 12,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14551638966344__4a671b33-4a2e-48a2-a47d-26c42c9920e6-1681757367c5027eed-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": true,
+        "contact_popup": false,
+        "desktop_size": -20,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "1d9ab1ee-1272-45ff-8455-85156dd4cbf1": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "RECENTLY VIEWED",
+        "home_featured_products": "bc-all",
+        "count": 4,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "dfcad694-88f3-4380-ab9f-fd78aa929e8e": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "2CM PAVERS",
+        "tab_collection_1": "2cm-outdoor-porcelain-pavers-and-coping",
+        "css_class": "feat-collection-carousel set-carousel-height"
+      }
+    },
+    "faq_PfqNEz": {
+      "type": "faq",
+      "blocks": {
+        "question_3wjP7M": {
+          "type": "question",
+          "settings": {
+            "title": "What is hardscaping?",
+            "text": "<p>Hardscaping refers to the non-living elements of a landscape design, such as patio pavers, retaining walls, pathways, and outdoor structures like pergolas or fire pits. Hardscaping adds structure, functionality, and visual interest to outdoor spaces.</p>"
+          }
+        },
+        "question_kyteqM": {
+          "type": "question",
+          "settings": {
+            "title": "What are the benefits of incorporating hardscapes into my landscape design?",
+            "text": "<p>Hardscaping can enhance the usability, aesthetics, and value of outdoor spaces by providing defined areas for entertaining, relaxing, and gardening, as well as improving drainage and reducing erosion.</p>"
+          }
+        },
+        "question_TtaBEJ": {
+          "type": "question",
+          "settings": {
+            "title": "Can I mix different materials in my hardscape design?",
+            "text": "<p>Yes, mixing different materials in a hardscape design can create visual interest and complement the surrounding landscape. For example, combining stone pavers with gravel or wood accents can add texture and contrast to the design.</p>"
+          }
+        },
+        "question_RUcga8": {
+          "type": "question",
+          "settings": {
+            "title": "How do I choose the right patio pavers for my outdoor space?",
+            "text": "<p>Consider factors such as the size and shape of the patio area, the desired design aesthetic, durability, maintenance requirements, and budget when choosing patio pavers. Popular options include porcelain pavers, brick pavers, and natural stone pavers.</p>"
+          }
+        },
+        "question_tqP6Uk": {
+          "type": "question",
+          "settings": {
+            "title": "What are the benefits of using outdoor pavers?",
+            "text": "<p>Outdoor pavers offer several benefits, including durability, easy installation, versatility in design and color options, resistance to weathering and erosion, and ease of repair or replacement.</p>"
+          }
+        },
+        "question_R3Jqqq": {
+          "type": "question",
+          "settings": {
+            "title": "How do I maintain outdoor pavers?",
+            "text": "<p>Regular maintenance of outdoor pavers involves sweeping or blowing away debris, washing with a mild detergent and water as needed, and sealing the pavers periodically to protect against stains and weathering.</p>"
+          }
+        },
+        "question_XQNJGt": {
+          "type": "question",
+          "settings": {
+            "title": "Are outdoor pavers slippery when wet?",
+            "text": "<p>The slip resistance of outdoor pavers depends on factors such as the material, texture, and finish. Some pavers offer better traction when wet compared to smooth or polished surfaces.</p>"
+          }
+        },
+        "question_RQHMic": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use outdoor pavers around a pool?",
+            "text": "<p>Yes, outdoor pavers are a popular choice for pool decks and surrounding areas due to their durability, slip resistance, and ability to withstand exposure to water and chemicals. Proper installation and drainage are essential for safety and longevity.</p>"
+          }
+        },
+        "question_4dYEUH": {
+          "type": "question",
+          "settings": {
+            "title": "How long do outdoor pavers last?",
+            "text": "<p>The lifespan of outdoor pavers varies depending on factors such as the material, quality of installation, maintenance practices, and exposure to environmental factors. With proper care, outdoor pavers can last for many years.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_3wjP7M",
+        "question_kyteqM",
+        "question_TtaBEJ",
+        "question_RUcga8",
+        "question_tqP6Uk",
+        "question_R3Jqqq",
+        "question_XQNJGt",
+        "question_RQHMic",
+        "question_4dYEUH"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "css_class": ""
+      }
+    }
+  },
+  "order": [
+    "slideshow_pQakFB",
+    "main",
+    "f179439e-be50-4d2b-a6be-a59ea9fbd72a",
+    "56f31711-acbd-4fe8-8510-44d72e4826a6",
+    "dd55ec05-a69b-489b-aa4b-a94f69d5f8b8",
+    "2a0c0693-ee03-4c99-b070-f48f33ce54a8",
+    "79941ca3-0cb7-4860-bca5-d013efbba68b",
+    "6c386a30-0e43-4a02-b4bf-28909ff07d77",
+    "f798ccf1-5f80-4f0a-aed1-357d4d35067a",
+    "a35d99be-242a-415d-a51d-6696ed3e7252",
+    "bae3e2d5-8109-47ef-805f-0aac02c7a422",
+    "4a671b33-4a2e-48a2-a47d-26c42c9920e6",
+    "1d9ab1ee-1272-45ff-8455-85156dd4cbf1",
+    "dfcad694-88f3-4380-ab9f-fd78aa929e8e",
+    "faq_PfqNEz"
+  ]
+}
