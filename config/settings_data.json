@@ -377,13 +377,6 @@
       "toolbar": {
         "type": "toolbar",
         "blocks": {
-          "announcement_CcEFKt": {
-            "type": "announcement",
-            "settings": {
-              "richtext": "<p>AquaBlu Cares - Now donating to support Los Angeles wildfire relief.</p><p></p><p></p><p></p><p></p><p></p><p></p><p><a href=\"https://supportlafd.kindful.com/\" target=\"_blank\" title=\"https://supportlafd.kindful.com/\">Click Here to Donate</a></p><p></p>",
-              "richtext_mobile": ""
-            }
-          },
           "0b066516-effd-470b-ba3b-fc9f69d6c6ae": {
             "type": "announcement",
             "settings": {
@@ -400,7 +393,6 @@
           }
         },
         "block_order": [
-          "announcement_CcEFKt",
           "0b066516-effd-470b-ba3b-fc9f69d6c6ae",
           "042de2fe-f26a-4e7f-a161-ad5212c6531b"
         ],
