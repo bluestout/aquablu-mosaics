@@ -84,6 +84,7 @@
       "block_order": [
         "fd071408-c866-4ddb-8f32-3eb533a5e0c4"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 650,

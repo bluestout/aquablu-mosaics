@@ -16,22 +16,29 @@
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@type": "Product",
+    "@type": "ProductGroup",
     "name": {{ product.title | json }},
     "description": {{ product.description | strip_html | json }},
     "brand": {{ product.vendor | json }},
     "sku": {{ current_variant.sku | json }},
+    "ProductGroupID": "{{ product.id }}",
     "category": "{{ product.type | default: 'General' }}",
-    "offers": [
-      {%- for variant in product.variants -%}
-        {
-          "@type": "Offer",
-          "price": {{ variant.price | divided_by: 100.00 | json }},
-          "priceCurrency": {{ cart.currency.iso_code | json }},
-          "availability": "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-          "url": {{ shop.url | append: variant.url | json }}
-        }{% unless forloop.last %},{% endunless %}
-      {%- endfor -%}
+    "hasVariant": [{% for variant in product.variants %}
+      {
+        "@type": "Product",
+        "sku": "{{ variant.sku }}",
+        "gtin14": "{{ variant.id }}",{% if variant.featured_image %}
+        "image": "{{ variant.featured_image.src |  image_url: width: variant.featured_image.width }}",{% else %}
+        "image": "{{ product.featured_image.src |  image_url: width: product.featured_image.width }}",{% endif %}
+        "name": "{{ variant.title | replace: '"', '' }}",
+        "offers": {
+            "@type": "Offer",
+            "price": {{ variant.price | divided_by: 100.00 | json }},
+            "priceCurrency": {{ cart.currency.iso_code | json }},
+            "availability": "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+            "url": {{ shop.url | append: variant.url | json }}
+          }
+      }{% unless forloop.last %},{% endunless %}{% endfor %}
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
