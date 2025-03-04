@@ -4812,7 +4812,7 @@ form + .footer__social {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  padding: 5px 20px;
+  padding: 5px 10px;
   white-space: nowrap;
   color: var(--colorNavText);
 }
@@ -13680,6 +13680,8 @@ ul.collections-tabs {
     font-size: 14px;
   }
 }
+
+
 .custom-overflow .h3 {
   overflow-wrap: break-word;
 }
@@ -14888,8 +14890,7 @@ button.sample-button:hover {
   border-radius: 7px;
   background: #4BC5D4;
   padding: 8px 15px;
-
-  color: #FFF;
+  color: #242424;
   text-align: center;
   font-family: futurabook;
   font-size: 15px;

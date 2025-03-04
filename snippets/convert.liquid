@@ -173,9 +173,23 @@
     },
   });
 </script>
+{%- if template contains 'index' -%}
+ <!-- Preload critical script for index page -->
+  <link rel="preload" href="//cdn-4.convertexperiments.com/v1/js/10042572-10049736.js" as="script">
+  <script
+    type="text/javascript"
+    src="//cdn-4.convertexperiments.com/v1/js/10042572-10049736.js"
+    fetchpriority="high"
+  ></script>
+  <script 
+    src="https://cdn.shopify.com/s/javascripts/currencies.js"
+    fetchpriority="high"
+  ></script>
+{%- else -%}
 <script
   type="text/javascript"
   src="//cdn-4.convertexperiments.com/v1/js/10042572-10049736.js"
 ></script>
 <!-- end Convert Experiences code -->
 <script src="https://cdn.shopify.com/s/javascripts/currencies.js"></script>
+{% endif %}
