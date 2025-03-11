@@ -42,6 +42,7 @@
         },
         "hero_ECk7A3": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
