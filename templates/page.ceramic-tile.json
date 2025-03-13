@@ -42,7 +42,6 @@
         },
         "hero_ECk7A3": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -59,7 +58,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Wood_look_ceramic_tile.jpg",
+            "image": "shopify://shop_images/Wood_Look_Ceramic_Tile_d92dbcd4-a81d-4751-b6ff-7fc1a87ab8bd.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
