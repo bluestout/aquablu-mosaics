@@ -1,1 +1,959 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"a751ffce-4fd5-47b9-a26e-dd78d1f6a478":{"type":"slideshow","blocks":{"template--14459270725704__a751ffce-4fd5-47b9-a26e-dd78d1f6a478-16814930165ab7745e-0":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"UNLEASH YOUR IMAGINATION WITH","title":"<p>SWIMMING POOL MOSAICS<\/p>","title_size":50,"subheading":"","custom_text":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/poolmosaicshero.jpg","overlay_opacity":12,"focal_point":"20% 100%"}}},"block_order":["template--14459270725704__a751ffce-4fd5-47b9-a26e-dd78d1f6a478-16814930165ab7745e-0"],"settings":{"full_width":true,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":23,"space_above":false,"space_below":true,"mobile_size":20,"style":"dots","autoplay":true,"autoplay_speed":7,"css_class":""}},"rich_text_D8pgbz":{"type":"rich-text","blocks":{"text_LjtdnY":{"type":"text","settings":{"enlarge_text":true,"text":"<p>Are you looking to spruce up your pool or spa? Swimming pool mosaics are perfect for creating an enchanting outdoor oasis! From aquatic creatures such as turtles, rays, and dolphins to mandalas, medallions and more—there's something for everyone to truly make their backyard paradise one-of-a-kind.<\/p>"}}},"block_order":["text_LjtdnY"],"disabled":true,"settings":{"align_text":"center","narrow_column":false,"color_scheme":"none","divider":false,"css_class":""}},"text_columns_custom_aCaRDk":{"type":"text-columns-custom","blocks":{"text_block_ztKDaT":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/dolphins.png","image_width":90,"title":"Dolphins","button_label":"","button_link":"shopify:\/\/collections\/dolphin-pool-mosaics"}},"text_block_RMhbqc":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/turtles.png","image_width":90,"title":"Turtles","button_label":"","button_link":"shopify:\/\/collections\/turtle-pool-mosaics"}},"text_block_e8AWtp":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/fish.png","image_width":90,"title":"Fish","button_label":"","button_link":"shopify:\/\/collections\/fish-pool-mosaics"}},"text_block_tFwaK4":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/Mermaids.png","image_width":90,"title":"Mermaids","button_label":"","button_link":"shopify:\/\/collections\/mermaid-pool-mosaics"}},"text_block_4EbedK":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/Sea_Life.png","image_width":90,"title":"Sea Life","button_label":"","button_link":"shopify:\/\/collections\/sea-life"}},"text_block_YeT7VL":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/whales.png","image_width":90,"title":"Whales","button_label":"","button_link":"shopify:\/\/collections\/whale-pool-mosaics"}},"text_block_KfkGcj":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/pool_party.png","image_width":90,"title":"Pool Party","button_label":"","button_link":"shopify:\/\/collections\/pool-party-pool-mosaics"}},"text_block_hWKYDc":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/sharks.png","image_width":90,"title":"Sharks & Rays","button_label":"","button_link":"shopify:\/\/collections\/sharks-rays"}},"text_block_qKejyV":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/garden.png","image_width":90,"title":"Garden","button_label":"","button_link":"shopify:\/\/collections\/garden-geckos-pool-mosaics"}},"text_block_QYyWpz":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/tribal.png","image_width":90,"title":"Tribal","button_label":"","button_link":"shopify:\/\/collections\/tribal-and-contemporary"}},"text_block_z8DnCY":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/medallions.png","image_width":90,"title":"Medallions","button_label":"","button_link":"shopify:\/\/collections\/scrolls-and-medallions"}},"text_block_CnWrpC":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/reefs.png","image_width":90,"title":"Reef Scenes","button_label":"","button_link":"shopify:\/\/collections\/reef-scenes"}},"text_block_RxJNf9":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/glow2.png","image_width":90,"title":"Glow","button_label":"","button_link":"shopify:\/\/collections\/glow-in-the-dark-pool-mosaics"}},"text_block_MB4M46":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/mandalas.png","image_width":90,"title":"Mandalas","button_label":"","button_link":"shopify:\/\/collections\/mandala-series-pool-mosaics"}},"text_block_9XYxaV":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/contemporary.png","image_width":90,"title":"Contemporary","button_label":"","button_link":"shopify:\/\/collections\/contemporary-mosaics"}},"text_block_CdnhmF":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/accents.png","image_width":90,"title":"Accents","button_label":"","button_link":"shopify:\/\/collections\/accents-and-step-markers"}}},"block_order":["text_block_ztKDaT","text_block_RMhbqc","text_block_e8AWtp","text_block_tFwaK4","text_block_4EbedK","text_block_YeT7VL","text_block_KfkGcj","text_block_hWKYDc","text_block_qKejyV","text_block_QYyWpz","text_block_z8DnCY","text_block_CnWrpC","text_block_RxJNf9","text_block_MB4M46","text_block_9XYxaV","text_block_CdnhmF"],"settings":{"title":"SHOP BY TYPE","text":"","column_size":8,"align_text":"center","gutter_size":20,"space_above":false,"space_below":true,"divider":false,"color_scheme":"none","css_class":""}},"advanced_content_QjdeLM":{"type":"advanced-content","blocks":{"liquid_rwiiKp":{"type":"liquid","settings":{"code":"<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"6618068dfe560f3d506a2209\">\n<\/div>","width":"100%","alignment":"center"}}},"block_order":["liquid_rwiiKp"],"settings":{"full_width":false,"space_around":true,"css_class":""}},"859c7d00-c8f4-44b1-aaaf-429beee04b9d":{"type":"featured-collections-custom","blocks":{"template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-0":{"type":"collection","settings":{"title":"SCREEN-PRINTED","image":"shopify:\/\/shop_images\/screenprintedmosaics.jpg","url":"shopify:\/\/collections\/screen-printed","tooltip":true,"tooltip_text":"The screen-printing process starts with a high-resolution image, which is then transferred onto a mesh screen. The screen acts as a stencil, allowing the ink to pass through and create the desired design on the porcelain. The screen-printing technique ensures consistent quality and color accuracy across the entire mosaic, resulting in a seamless and visually appealing finish."}},"template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-3":{"type":"collection","settings":{"title":"HAND-PAINTED","image":"shopify:\/\/shop_images\/Handpaintedmosaics.jpg","url":"shopify:\/\/collections\/hand-painted","tooltip":true,"tooltip_text":"Unlike screen-printed mosaics, hand-painted designs involve skilled artisans meticulously painting intricate patterns or images directly onto the porcelain. Using specialized brushes and paint formulated to withstand pool conditions, the artist carefully applies the colors and details onto each individual tile. Hand-painted mosaics add a personal touch and enhances the overall aesthetic of any pool."}},"template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-1":{"type":"collection","settings":{"title":"GLASS","image":"shopify:\/\/shop_images\/glassmosaics.jpg","url":"shopify:\/\/collections\/glass-pool-mosaics","tooltip":true,"tooltip_text":"Glass pool mosaics are a stunning and elegant form of pool decoration that combines the beauty of glass with the artistry of mosaic designs. These mosaics are created by arranging small, colorful glass tiles in intricate patterns or images, resulting in a visually striking and luxurious addition to any swimming pool."}},"template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-2":{"type":"collection","settings":{"title":"GLOW IN THE DARK","image":"shopify:\/\/shop_images\/glow-in-the-dark_e8f9daf4-4c37-49c2-828d-26cea2045ed5.jpg","url":"shopify:\/\/collections\/glow-in-the-dark-pool-mosaics","tooltip":true,"tooltip_text":"Glow in the dark pool mosaics are a unique and enchanting decoration that add an element of magic and intrigue to any pool. Hand-made by professional artists, these resin-based pool mosaics look great during the day and light up the night. Plus, they’re durable enough to withstand all weather conditions."}}},"block_order":["template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-0","template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-3","template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-1","template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-2"],"settings":{"title":"SHOP BY STYLE","divider":false,"css_class":"exploring-pool-mosaic-grid"}},"0376f649-3d2b-4ab0-9882-b3aa8b3fbe71":{"type":"slideshow","blocks":{"template--14459271807048__0376f649-3d2b-4ab0-9882-b3aa8b3fbe71-hero-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":70,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/wholesale","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-left","image":"shopify:\/\/shop_images\/pro-banner.jpg","image_mobile":"shopify:\/\/shop_images\/mobile-pro-banner2.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14459271807048__0376f649-3d2b-4ab0-9882-b3aa8b3fbe71-hero-1"],"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":true,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"d7b6d4d0-1e42-4579-83f0-3d67a5ae341e":{"type":"promo-grid","blocks":{"db688d09-9582-4c0a-9d85-0839dd737ad8":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"TURTLES","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/turtles","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/turtles.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"20% 100%","color_accent":"#ffffff"}},"20a348c8-f0cc-4191-9c6b-fea050451c46":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"DOLPHINS","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/dolphins","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/dolphins.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"20% 0","color_accent":"#ffffff"}},"d3d0f5a3-60eb-4d47-b838-02ac507a8a9e":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"ACCENT & STEP MARKERS","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/accents-and-step-markers","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/accents.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"20% 50%","color_accent":"#ffffff"}},"de7630f4-824d-4f63-8d6a-9a8dc45c5d4b":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"MERMAIDS","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/mermaids","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/mermaids_8ece2bdc-6be4-4c2a-9af2-bae4b5403b8b.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"bottom","color_accent":"#ffffff"}},"a4af23de-6023-4fd4-ac27-266c0677033a":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"REEF SCENES","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/reef-scenes","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/fish.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"80% 100%","color_accent":"#ffffff"}},"fd32bc24-a66a-4a96-a17f-822647e2b1c2":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"TROPICAL FISH","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/tropical-fish","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/tropical-fish_a97b7c83-80e4-4288-9e86-033f58e21558.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"bottom","color_accent":"#ffffff"}}},"block_order":["db688d09-9582-4c0a-9d85-0839dd737ad8","20a348c8-f0cc-4191-9c6b-fea050451c46","d3d0f5a3-60eb-4d47-b838-02ac507a8a9e","de7630f4-824d-4f63-8d6a-9a8dc45c5d4b","a4af23de-6023-4fd4-ac27-266c0677033a","fd32bc24-a66a-4a96-a17f-822647e2b1c2"],"disabled":true,"settings":{"full_width":false,"heading":"BROWSE OUR MOST POPULAR COLLECTIONS","gutter_size":32,"section_gutter_size":20,"space_above":true,"space_below":false,"two_column_mobile":true,"three_column_mobile":false,"css_class":"blue-bar-bottom blue-bar-overlay"}},"ed39c7ef-4f63-4dab-92e2-1c218fe64b88":{"type":"promo-grid","blocks":{"template--14459270725704__ed39c7ef-4f63-4dab-92e2-1c218fe64b88-1681750404dc8fc8be-0":{"type":"advanced","settings":{"subheading":"SPECIAL ORDER","heading":"","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/collections\/special-order-mosaics","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/special-order.jpg","video_url":"","width":"33","height":460,"text_align":"vertical-bottom horizontal-center","focal_point":"80% 100%","color_accent":"#ffffff"}},"448b7990-3f54-40fd-889e-8045cdee5034":{"type":"advanced","settings":{"subheading":"GLOW MOSAICS","heading":"","textarea":"","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/glow-in-the-dark-pool-mosaics","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/glow_c1f3defd-d36d-4f3c-94f7-4f243797b64e.jpg","video_url":"","width":"33","height":460,"text_align":"vertical-bottom horizontal-center","focal_point":"top","color_accent":"#ffffff"}},"advanced_RE8F4F":{"type":"advanced","settings":{"subheading":"DEPTH MARKERS","heading":"","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/collections\/depth-and-safety-markers","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/depthmarkers.jpg","video_url":"","width":"33","height":460,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["template--14459270725704__ed39c7ef-4f63-4dab-92e2-1c218fe64b88-1681750404dc8fc8be-0","448b7990-3f54-40fd-889e-8045cdee5034","advanced_RE8F4F"],"settings":{"full_width":false,"heading":"DISCOVER MORE","gutter_size":20,"section_gutter_size":40,"space_above":true,"space_below":true,"two_column_mobile":false,"three_column_mobile":true,"css_class":"blue-bar-overlay"}},"d7d9bc93-9797-4d39-8efb-5210719b5d50":{"type":"slideshow","blocks":{"template--14459270725704__d7d9bc93-9797-4d39-8efb-5210719b5d50-16814930165ab7745e-1":{"type":"hero","settings":{"image_width":450,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"<p>SHOP ALL POOL MOSAICS<\/p>","title_size":40,"subheading":"","custom_text":"","link":"https:\/\/www.aquablumosaics.com\/collections\/pool-mosaics","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/shop-all_38b537b8-26ae-4857-9742-ae921800c665.jpg","overlay_opacity":26,"focal_point":"bottom center"}}},"block_order":["template--14459270725704__d7d9bc93-9797-4d39-8efb-5210719b5d50-16814930165ab7745e-1"],"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":-30,"gutter_size":20,"space_above":false,"space_below":true,"mobile_size":-10,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"6a3457c1-38d1-42b5-bdee-604504691977":{"type":"featured-collection-custom","settings":{"title":"OTHER FAVORITES","tab_collection_1":"glass-pool-mosaics","tabs_title_1":"Glass Mosaics","tab_collection_2":"pool-party-pool-mosaics","tabs_title_2":"Pool Party","tab_collection_3":"tribal-and-contemporary","tabimage2":"shopify:\/\/shop_images\/Group_26.png","tabs_title_3":"Tribal","css_class":"featured-collection-tabs"}},"bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe":{"type":"text-columns","blocks":{"template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-0":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/hand-carved.jpg","image_width":290,"title":"","text":"<p>Classic Hand-Made Porcelain<\/p>","button_label":"","button_link":""}},"template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-1":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/hand-cut-ven.jpg","image_width":290,"title":"","text":"<p>Premium Venetian Glass<\/p>","button_label":"","button_link":""}},"template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-2":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/printed-glass.jpg","image_width":290,"title":"","text":"<p>Printed Glass Tile Mosaics<\/p>","button_label":"","button_link":""}},"002d272f-df19-4a97-90ae-cdd86b59a5f5":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/graphics.jpg","image_width":290,"title":"","text":"<p>Waterjet Graphics & Logos<\/p>","button_label":"","button_link":""}}},"block_order":["template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-0","template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-1","template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-2","002d272f-df19-4a97-90ae-cdd86b59a5f5"],"disabled":true,"settings":{"title":"MOSAICS YOUR WAY","text":"<p><strong>Can’t find what you’re looking for? Learn more about our custom mosaic services today!<\/strong><\/p>","align_text":"center","three_col_mobile":false,"divider":false,"color_scheme":"none","css_class":"exploring-pool-mosaic section-8"}},"84315ff0-c2d0-4dc5-90e6-88261210a6c0":{"type":"featured-collections-custom","blocks":{"e9242a00-b455-4f48-8987-95e3bf3b0bd0":{"type":"collection","settings":{"title":"Hand-Made Porcelain","image":"shopify:\/\/shop_images\/hand-carved.jpg","url":"https:\/\/www.aquablumosaics.com\/collections\/pool-mosaics?_=pf&pf_t_style=style%3AScreen-Printed","tooltip":true,"tooltip_text":"Experience old world charm and charisma created through traditional methods by our skilled artisans. 100% hand crafted from premium porcelain, these mosaics are hand painted, kiln fired and then pre-assembled to a mesh mounting for easy installation. "}},"285f95d1-5bc8-4b84-a1ad-e832bb97234a":{"type":"collection","settings":{"title":"Premium Venetian Glass","image":"shopify:\/\/shop_images\/hand-cut-ven.jpg","url":"https:\/\/www.aquablumosaics.com\/collections\/pool-mosaics?_=pf&pf_t_style=style%3AHand-Painted","tooltip":true,"tooltip_text":"Hand-cut glass is the perfect medium to create ornate mosaics and murals for residential, commercial and submerged applications. They are frost proof and rated for pools, spas and outdoor environments. Durability exceeds standards for interior and residential use."}},"2db0b66d-926e-4ec0-b4dd-0fe28b0716fc":{"type":"collection","settings":{"title":"Printed Glass Mosaics","image":"shopify:\/\/shop_images\/printed-glass.jpg","url":"https:\/\/www.aquablumosaics.com\/collections\/pool-mosaics?_=pf&pf_t_style=style%3AGlass%20Mosaic","tooltip":true,"tooltip_text":"An exact replication to glass mosaic! Digital images are printed with a fine glaze to 1”x1” glass tile, and then kiln fired at high temperatures. This technique bakes the image into the tile creating a custom mosaic durable enough for swimming pools and outdoor environments. Also perfect for residential and commercial spaces such as accent walls and motif backsplashes."}},"27e5ba51-8e6c-4468-81bb-46dbf90f3bd4":{"type":"collection","settings":{"title":"Waterjet Graphics","image":"shopify:\/\/shop_images\/graphics.jpg","url":"shopify:\/\/collections\/glow-in-the-dark-pool-mosaics","tooltip":true,"tooltip_text":"A clean and modern look! Your logo or design is water jet cut from premium porcelain tile, kiln fired and assembled to a mesh backing for ease of installation. Screen-printing allows for an exact replica of your logo or artwork. These mosaics are made in the USA, frost proof, and rated for pools, spas and outdoor environments. A non-slip finish may also be applied."}}},"block_order":["e9242a00-b455-4f48-8987-95e3bf3b0bd0","285f95d1-5bc8-4b84-a1ad-e832bb97234a","2db0b66d-926e-4ec0-b4dd-0fe28b0716fc","27e5ba51-8e6c-4468-81bb-46dbf90f3bd4"],"settings":{"title":"MOSAICS YOUR WAY","divider":false,"css_class":"exploring-pool-mosaic-grid"}},"682ecd35-59c9-4ad8-9376-116e8e118783":{"type":"rich-text","blocks":{"68b3278f-e610-4107-a1b7-d975e6f44ef9":{"type":"button","settings":{"link":"https:\/\/www.aquablumosaics.com\/pages\/custom-mosaics","link_text":"EXPLORE CUSTOM MOSAIC DESIGN SERVICES"}}},"block_order":["68b3278f-e610-4107-a1b7-d975e6f44ef9"],"settings":{"align_text":"center","narrow_column":true,"color_scheme":"2","divider":false,"css_class":"exploring-pool-mosaic section-9  mosaic-section-9"}},"f961bf88-6411-4276-b9ff-60df6aee21e0":{"type":"promo-grid","blocks":{"f26f85f2-50fe-4f36-83b6-6b33cba48d16":{"type":"advanced","settings":{"subheading":"","heading":"LIGHT UP YOUR LIFE  WITH  GLOW IN THE DARK MOSAICS","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/collections\/element-glo","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/glow_mosaics.png","video_url":"","width":"100","height":400,"text_align":"vertical-bottom horizontal-right","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["f26f85f2-50fe-4f36-83b6-6b33cba48d16"],"disabled":true,"settings":{"full_width":false,"heading":"","gutter_size":20,"section_gutter_size":20,"space_above":true,"space_below":true,"two_column_mobile":false,"three_column_mobile":false,"css_class":""}},"faq_JULCpF":{"type":"faq","blocks":{"question_3VDHNp":{"type":"question","settings":{"title":"What are swimming pool mosaics?","text":"<p>Swimming pool mosaics are decorative mosaics made from glass, porcelain or other materials, designed to add visual interest or personality to your pool. There are countless styles of mosaics available, including marine life, floral patterns, geometric shapes, and custom designs. Whether you're looking to create a tropical paradise or promote your personal brand, there's a mosaic design to suit your style and preferences.<\/p>"}},"question_WwVmJF":{"type":"question","settings":{"title":"Can swimming pool mosaics be installed in any type of pool?","text":"<p>Pool mosaics are most suitable for use in concrete pools and installed prior to the pool finish, whether it is plastic, aggregate, or tile. Final installation should result in a smooth pool surface with no noticeable difference in thickness between the mosaics finish.<\/p>"}},"question_zPEAdB":{"type":"question","settings":{"title":"Can pool mosaics be customized to fit my pool's unique shape and size?","text":"<p>Yes, we offer a variety of custom design services, allowing you to create a mosaic that fits your pool's unique shape, size, and style. Whether you want to enlarge an existing design or incorporate your favorite design, the possibilities are endless.<\/p>"}},"question_WNiayF":{"type":"question","settings":{"title":"Are pool mosaics durable and easy to maintain?","text":"<p>Yes, swimming pool mosaics are made from durable materials such as glass, resins, or porcelain, making them resistant to fading and staining. Maintaining proper pool chemistry will ensure a long-lasting installation for years to come.<\/p>"}},"question_ymbBpt":{"type":"question","settings":{"title":"What is the difference between hand painted and screen printed pool mosaics?","text":"<p>Hand-painted pool mosaics are created by skilled artisans who paint each tile individually by hand. This labor-intensive process allows for intricate detailing and subtle variations in color and shading, resulting in a unique and artistic finish. Screen-printed pool mosaics are created using a stencil-based printing process, where a design is transferred onto the surface of the tiles using a screen and ink. In summary, hand-painted pool mosaics offer a unique and artisanal finish with intricate detailing and subtle variations in color, while screen-printed pool mosaics provide a more uniform and precise appearance at a more affordable price point. The choice between the two depends on factors such as budget, design preferences, and desired level of customization.<\/p>"}},"question_4xBahJ":{"type":"question","settings":{"title":"Do any of your mosaics glow in the dark?","text":"<p>Yes, we are proud suppliers of Element Glo pool mosaics. These captivating glow-in-the-dark mosaics harness the power of luminescence to transform your pool into a mesmerizing oasis after dark.<\/p>"}}},"block_order":["question_3VDHNp","question_WwVmJF","question_zPEAdB","question_WNiayF","question_ymbBpt","question_4xBahJ"],"settings":{"title":"FAQs","css_class":""}}},"order":["main","a751ffce-4fd5-47b9-a26e-dd78d1f6a478","rich_text_D8pgbz","text_columns_custom_aCaRDk","advanced_content_QjdeLM","859c7d00-c8f4-44b1-aaaf-429beee04b9d","0376f649-3d2b-4ab0-9882-b3aa8b3fbe71","d7b6d4d0-1e42-4579-83f0-3d67a5ae341e","ed39c7ef-4f63-4dab-92e2-1c218fe64b88","d7d9bc93-9797-4d39-8efb-5210719b5d50","6a3457c1-38d1-42b5-bdee-604504691977","bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe","84315ff0-c2d0-4dc5-90e6-88261210a6c0","682ecd35-59c9-4ad8-9376-116e8e118783","f961bf88-6411-4276-b9ff-60df6aee21e0","faq_JULCpF"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "a751ffce-4fd5-47b9-a26e-dd78d1f6a478": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459270725704__a751ffce-4fd5-47b9-a26e-dd78d1f6a478-16814930165ab7745e-0": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "UNLEASH YOUR IMAGINATION WITH",
+            "title": "<p>SWIMMING POOL MOSAICS</p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/poolmosaicshero.jpg",
+            "overlay_opacity": 12,
+            "focal_point": "20% 100%"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459270725704__a751ffce-4fd5-47b9-a26e-dd78d1f6a478-16814930165ab7745e-0"
+      ],
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 23,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 20,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "rich_text_D8pgbz": {
+      "type": "rich-text",
+      "blocks": {
+        "text_LjtdnY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Are you looking to spruce up your pool or spa? Swimming pool mosaics are perfect for creating an enchanting outdoor oasis! From aquatic creatures such as turtles, rays, and dolphins to mandalas, medallions and more—there's something for everyone to truly make their backyard paradise one-of-a-kind.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_LjtdnY"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "text_columns_custom_aCaRDk": {
+      "type": "text-columns-custom",
+      "blocks": {
+        "text_block_ztKDaT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/dolphins.png",
+            "image_width": 90,
+            "title": "Dolphins",
+            "button_label": "",
+            "button_link": "shopify://collections/dolphin-pool-mosaics"
+          }
+        },
+        "text_block_RMhbqc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/turtles.png",
+            "image_width": 90,
+            "title": "Turtles",
+            "button_label": "",
+            "button_link": "shopify://collections/turtle-pool-mosaics"
+          }
+        },
+        "text_block_e8AWtp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/fish.png",
+            "image_width": 90,
+            "title": "Fish",
+            "button_label": "",
+            "button_link": "shopify://collections/fish-pool-mosaics"
+          }
+        },
+        "text_block_tFwaK4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Mermaids.png",
+            "image_width": 90,
+            "title": "Mermaids",
+            "button_label": "",
+            "button_link": "shopify://collections/mermaid-pool-mosaics"
+          }
+        },
+        "text_block_4EbedK": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Sea_Life.png",
+            "image_width": 90,
+            "title": "Sea Life",
+            "button_label": "",
+            "button_link": "shopify://collections/sea-life"
+          }
+        },
+        "text_block_YeT7VL": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/whales.png",
+            "image_width": 90,
+            "title": "Whales",
+            "button_label": "",
+            "button_link": "shopify://collections/whale-pool-mosaics"
+          }
+        },
+        "text_block_KfkGcj": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/pool_party.png",
+            "image_width": 90,
+            "title": "Pool Party",
+            "button_label": "",
+            "button_link": "shopify://collections/pool-party-pool-mosaics"
+          }
+        },
+        "text_block_hWKYDc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/sharks.png",
+            "image_width": 90,
+            "title": "Sharks & Rays",
+            "button_label": "",
+            "button_link": "shopify://collections/sharks-rays"
+          }
+        },
+        "text_block_qKejyV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/garden.png",
+            "image_width": 90,
+            "title": "Garden",
+            "button_label": "",
+            "button_link": "shopify://collections/garden-geckos-pool-mosaics"
+          }
+        },
+        "text_block_QYyWpz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/tribal.png",
+            "image_width": 90,
+            "title": "Tribal",
+            "button_label": "",
+            "button_link": "shopify://collections/tribal-and-contemporary"
+          }
+        },
+        "text_block_z8DnCY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/medallions.png",
+            "image_width": 90,
+            "title": "Medallions",
+            "button_label": "",
+            "button_link": "shopify://collections/scrolls-and-medallions"
+          }
+        },
+        "text_block_CnWrpC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/reefs.png",
+            "image_width": 90,
+            "title": "Reef Scenes",
+            "button_label": "",
+            "button_link": "shopify://collections/reef-scenes"
+          }
+        },
+        "text_block_RxJNf9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/glow2.png",
+            "image_width": 90,
+            "title": "Glow",
+            "button_label": "",
+            "button_link": "shopify://collections/glow-in-the-dark-pool-mosaics"
+          }
+        },
+        "text_block_MB4M46": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/mandalas.png",
+            "image_width": 90,
+            "title": "Mandalas",
+            "button_label": "",
+            "button_link": "shopify://collections/mandala-series-pool-mosaics"
+          }
+        },
+        "text_block_9XYxaV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/contemporary.png",
+            "image_width": 90,
+            "title": "Contemporary",
+            "button_label": "",
+            "button_link": "shopify://collections/contemporary-mosaics"
+          }
+        },
+        "text_block_CdnhmF": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/accents.png",
+            "image_width": 90,
+            "title": "Accents",
+            "button_label": "",
+            "button_link": "shopify://collections/accents-and-step-markers"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_ztKDaT",
+        "text_block_RMhbqc",
+        "text_block_e8AWtp",
+        "text_block_tFwaK4",
+        "text_block_4EbedK",
+        "text_block_YeT7VL",
+        "text_block_KfkGcj",
+        "text_block_hWKYDc",
+        "text_block_qKejyV",
+        "text_block_QYyWpz",
+        "text_block_z8DnCY",
+        "text_block_CnWrpC",
+        "text_block_RxJNf9",
+        "text_block_MB4M46",
+        "text_block_9XYxaV",
+        "text_block_CdnhmF"
+      ],
+      "settings": {
+        "title": "SHOP BY TYPE",
+        "text": "",
+        "column_size": 8,
+        "align_text": "center",
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "divider": false,
+        "color_scheme": "none",
+        "css_class": ""
+      }
+    },
+    "advanced_content_QjdeLM": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_rwiiKp": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"6618068dfe560f3d506a2209\">\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_rwiiKp"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
+    "859c7d00-c8f4-44b1-aaaf-429beee04b9d": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-0": {
+          "type": "collection",
+          "settings": {
+            "title": "SCREEN-PRINTED",
+            "image": "shopify://shop_images/screenprintedmosaics.jpg",
+            "url": "shopify://collections/screen-printed",
+            "tooltip": true,
+            "tooltip_text": "The screen-printing process starts with a high-resolution image, which is then transferred onto a mesh screen. The screen acts as a stencil, allowing the ink to pass through and create the desired design on the porcelain. The screen-printing technique ensures consistent quality and color accuracy across the entire mosaic, resulting in a seamless and visually appealing finish."
+          }
+        },
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-3": {
+          "type": "collection",
+          "settings": {
+            "title": "HAND-PAINTED",
+            "image": "shopify://shop_images/Handpaintedmosaics.jpg",
+            "url": "shopify://collections/hand-painted",
+            "tooltip": true,
+            "tooltip_text": "Unlike screen-printed mosaics, hand-painted designs involve skilled artisans meticulously painting intricate patterns or images directly onto the porcelain. Using specialized brushes and paint formulated to withstand pool conditions, the artist carefully applies the colors and details onto each individual tile. Hand-painted mosaics add a personal touch and enhances the overall aesthetic of any pool."
+          }
+        },
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-1": {
+          "type": "collection",
+          "settings": {
+            "title": "GLASS",
+            "image": "shopify://shop_images/glassmosaics.jpg",
+            "url": "shopify://collections/glass-pool-mosaics",
+            "tooltip": true,
+            "tooltip_text": "Glass pool mosaics are a stunning and elegant form of pool decoration that combines the beauty of glass with the artistry of mosaic designs. These mosaics are created by arranging small, colorful glass tiles in intricate patterns or images, resulting in a visually striking and luxurious addition to any swimming pool."
+          }
+        },
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-2": {
+          "type": "collection",
+          "settings": {
+            "title": "GLOW IN THE DARK",
+            "image": "shopify://shop_images/glow-in-the-dark_e8f9daf4-4c37-49c2-828d-26cea2045ed5.jpg",
+            "url": "shopify://collections/glow-in-the-dark-pool-mosaics",
+            "tooltip": true,
+            "tooltip_text": "Glow in the dark pool mosaics are a unique and enchanting decoration that add an element of magic and intrigue to any pool. Hand-made by professional artists, these resin-based pool mosaics look great during the day and light up the night. Plus, they’re durable enough to withstand all weather conditions."
+          }
+        }
+      },
+      "block_order": [
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-0",
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-3",
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-1",
+        "template--14459270725704__859c7d00-c8f4-44b1-aaaf-429beee04b9d-168149482652c08ca4-2"
+      ],
+      "settings": {
+        "title": "SHOP BY STYLE",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
+    "0376f649-3d2b-4ab0-9882-b3aa8b3fbe71": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271807048__0376f649-3d2b-4ab0-9882-b3aa8b3fbe71-hero-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/wholesale",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271807048__0376f649-3d2b-4ab0-9882-b3aa8b3fbe71-hero-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "d7b6d4d0-1e42-4579-83f0-3d67a5ae341e": {
+      "type": "promo-grid",
+      "blocks": {
+        "db688d09-9582-4c0a-9d85-0839dd737ad8": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "TURTLES",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/turtles",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/turtles.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "20% 100%",
+            "color_accent": "#ffffff"
+          }
+        },
+        "20a348c8-f0cc-4191-9c6b-fea050451c46": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "DOLPHINS",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/dolphins",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/dolphins.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "20% 0",
+            "color_accent": "#ffffff"
+          }
+        },
+        "d3d0f5a3-60eb-4d47-b838-02ac507a8a9e": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "ACCENT & STEP MARKERS",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/accents-and-step-markers",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/accents.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "20% 50%",
+            "color_accent": "#ffffff"
+          }
+        },
+        "de7630f4-824d-4f63-8d6a-9a8dc45c5d4b": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "MERMAIDS",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/mermaids",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/mermaids_8ece2bdc-6be4-4c2a-9af2-bae4b5403b8b.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        },
+        "a4af23de-6023-4fd4-ac27-266c0677033a": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "REEF SCENES",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/reef-scenes",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/fish.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "80% 100%",
+            "color_accent": "#ffffff"
+          }
+        },
+        "fd32bc24-a66a-4a96-a17f-822647e2b1c2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "TROPICAL FISH",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/tropical-fish",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/tropical-fish_a97b7c83-80e4-4288-9e86-033f58e21558.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "db688d09-9582-4c0a-9d85-0839dd737ad8",
+        "20a348c8-f0cc-4191-9c6b-fea050451c46",
+        "d3d0f5a3-60eb-4d47-b838-02ac507a8a9e",
+        "de7630f4-824d-4f63-8d6a-9a8dc45c5d4b",
+        "a4af23de-6023-4fd4-ac27-266c0677033a",
+        "fd32bc24-a66a-4a96-a17f-822647e2b1c2"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "BROWSE OUR MOST POPULAR COLLECTIONS",
+        "gutter_size": 32,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": false,
+        "two_column_mobile": true,
+        "three_column_mobile": false,
+        "css_class": "blue-bar-bottom blue-bar-overlay"
+      }
+    },
+    "ed39c7ef-4f63-4dab-92e2-1c218fe64b88": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14459270725704__ed39c7ef-4f63-4dab-92e2-1c218fe64b88-1681750404dc8fc8be-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "SPECIAL ORDER",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/special-order-mosaics",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/special-order.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 460,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "80% 100%",
+            "color_accent": "#ffffff"
+          }
+        },
+        "448b7990-3f54-40fd-889e-8045cdee5034": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "GLOW MOSAICS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/glow-in-the-dark-pool-mosaics",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/glow_c1f3defd-d36d-4f3c-94f7-4f243797b64e.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 460,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "top",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_RE8F4F": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "DEPTH MARKERS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/depth-and-safety-markers",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/depthmarkers.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 460,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459270725704__ed39c7ef-4f63-4dab-92e2-1c218fe64b88-1681750404dc8fc8be-0",
+        "448b7990-3f54-40fd-889e-8045cdee5034",
+        "advanced_RE8F4F"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "DISCOVER MORE",
+        "gutter_size": 20,
+        "section_gutter_size": 40,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": true,
+        "css_class": "blue-bar-overlay"
+      }
+    },
+    "d7d9bc93-9797-4d39-8efb-5210719b5d50": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459270725704__d7d9bc93-9797-4d39-8efb-5210719b5d50-16814930165ab7745e-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 450,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "<p>SHOP ALL POOL MOSAICS</p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/collections/pool-mosaics",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/shop-all_38b537b8-26ae-4857-9742-ae921800c665.jpg",
+            "overlay_opacity": 26,
+            "focal_point": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459270725704__d7d9bc93-9797-4d39-8efb-5210719b5d50-16814930165ab7745e-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": -30,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": -10,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "6a3457c1-38d1-42b5-bdee-604504691977": {
+      "type": "featured-collection-custom",
+      "settings": {
+        "title": "OTHER FAVORITES",
+        "tab_collection_1": "glass-pool-mosaics",
+        "tabs_title_1": "Glass Mosaics",
+        "tab_collection_2": "pool-party-pool-mosaics",
+        "tabs_title_2": "Pool Party",
+        "tab_collection_3": "tribal-and-contemporary",
+        "tabimage2": "shopify://shop_images/Group_26.png",
+        "tabs_title_3": "Tribal",
+        "css_class": "featured-collection-tabs"
+      }
+    },
+    "bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe": {
+      "type": "text-columns",
+      "blocks": {
+        "template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/hand-carved.jpg",
+            "image_width": 290,
+            "title": "",
+            "text": "<p>Classic Hand-Made Porcelain</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/hand-cut-ven.jpg",
+            "image_width": 290,
+            "title": "",
+            "text": "<p>Premium Venetian Glass</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/printed-glass.jpg",
+            "image_width": 290,
+            "title": "",
+            "text": "<p>Printed Glass Tile Mosaics</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "002d272f-df19-4a97-90ae-cdd86b59a5f5": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/graphics.jpg",
+            "image_width": 290,
+            "title": "",
+            "text": "<p>Waterjet Graphics & Logos</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-0",
+        "template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-1",
+        "template--14459271807048__bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe-168546964855b8b7c4-2",
+        "002d272f-df19-4a97-90ae-cdd86b59a5f5"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "MOSAICS YOUR WAY",
+        "text": "<p><strong>Can’t find what you’re looking for? Learn more about our custom mosaic services today!</strong></p>",
+        "align_text": "center",
+        "three_col_mobile": false,
+        "divider": false,
+        "color_scheme": "none",
+        "css_class": "exploring-pool-mosaic section-8"
+      }
+    },
+    "84315ff0-c2d0-4dc5-90e6-88261210a6c0": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "e9242a00-b455-4f48-8987-95e3bf3b0bd0": {
+          "type": "collection",
+          "settings": {
+            "title": "Hand-Made Porcelain",
+            "image": "shopify://shop_images/hand-carved.jpg",
+            "url": "https://www.aquablumosaics.com/collections/pool-mosaics?_=pf&pf_t_style=style%3AScreen-Printed",
+            "tooltip": true,
+            "tooltip_text": "Experience old world charm and charisma created through traditional methods by our skilled artisans. 100% hand crafted from premium porcelain, these mosaics are hand painted, kiln fired and then pre-assembled to a mesh mounting for easy installation. "
+          }
+        },
+        "285f95d1-5bc8-4b84-a1ad-e832bb97234a": {
+          "type": "collection",
+          "settings": {
+            "title": "Premium Venetian Glass",
+            "image": "shopify://shop_images/hand-cut-ven.jpg",
+            "url": "https://www.aquablumosaics.com/collections/pool-mosaics?_=pf&pf_t_style=style%3AHand-Painted",
+            "tooltip": true,
+            "tooltip_text": "Hand-cut glass is the perfect medium to create ornate mosaics and murals for residential, commercial and submerged applications. They are frost proof and rated for pools, spas and outdoor environments. Durability exceeds standards for interior and residential use."
+          }
+        },
+        "2db0b66d-926e-4ec0-b4dd-0fe28b0716fc": {
+          "type": "collection",
+          "settings": {
+            "title": "Printed Glass Mosaics",
+            "image": "shopify://shop_images/printed-glass.jpg",
+            "url": "https://www.aquablumosaics.com/collections/pool-mosaics?_=pf&pf_t_style=style%3AGlass%20Mosaic",
+            "tooltip": true,
+            "tooltip_text": "An exact replication to glass mosaic! Digital images are printed with a fine glaze to 1”x1” glass tile, and then kiln fired at high temperatures. This technique bakes the image into the tile creating a custom mosaic durable enough for swimming pools and outdoor environments. Also perfect for residential and commercial spaces such as accent walls and motif backsplashes."
+          }
+        },
+        "27e5ba51-8e6c-4468-81bb-46dbf90f3bd4": {
+          "type": "collection",
+          "settings": {
+            "title": "Waterjet Graphics",
+            "image": "shopify://shop_images/graphics.jpg",
+            "url": "shopify://collections/glow-in-the-dark-pool-mosaics",
+            "tooltip": true,
+            "tooltip_text": "A clean and modern look! Your logo or design is water jet cut from premium porcelain tile, kiln fired and assembled to a mesh backing for ease of installation. Screen-printing allows for an exact replica of your logo or artwork. These mosaics are made in the USA, frost proof, and rated for pools, spas and outdoor environments. A non-slip finish may also be applied."
+          }
+        }
+      },
+      "block_order": [
+        "e9242a00-b455-4f48-8987-95e3bf3b0bd0",
+        "285f95d1-5bc8-4b84-a1ad-e832bb97234a",
+        "2db0b66d-926e-4ec0-b4dd-0fe28b0716fc",
+        "27e5ba51-8e6c-4468-81bb-46dbf90f3bd4"
+      ],
+      "settings": {
+        "title": "MOSAICS YOUR WAY",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
+    "682ecd35-59c9-4ad8-9376-116e8e118783": {
+      "type": "rich-text",
+      "blocks": {
+        "68b3278f-e610-4107-a1b7-d975e6f44ef9": {
+          "type": "button",
+          "settings": {
+            "link": "https://www.aquablumosaics.com/pages/custom-mosaics",
+            "link_text": "EXPLORE CUSTOM MOSAIC DESIGN SERVICES"
+          }
+        }
+      },
+      "block_order": [
+        "68b3278f-e610-4107-a1b7-d975e6f44ef9"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "2",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic section-9  mosaic-section-9"
+      }
+    },
+    "f961bf88-6411-4276-b9ff-60df6aee21e0": {
+      "type": "promo-grid",
+      "blocks": {
+        "f26f85f2-50fe-4f36-83b6-6b33cba48d16": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "LIGHT UP YOUR LIFE  WITH  GLOW IN THE DARK MOSAICS",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/element-glo",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/glow_mosaics.png",
+            "video_url": "",
+            "width": "100",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-right",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "f26f85f2-50fe-4f36-83b6-6b33cba48d16"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 20,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "faq_JULCpF": {
+      "type": "faq",
+      "blocks": {
+        "question_3VDHNp": {
+          "type": "question",
+          "settings": {
+            "title": "What are swimming pool mosaics?",
+            "text": "<p>Swimming pool mosaics are decorative mosaics made from glass, porcelain or other materials, designed to add visual interest or personality to your pool. There are countless styles of mosaics available, including marine life, floral patterns, geometric shapes, and custom designs. Whether you're looking to create a tropical paradise or promote your personal brand, there's a mosaic design to suit your style and preferences.</p>"
+          }
+        },
+        "question_WwVmJF": {
+          "type": "question",
+          "settings": {
+            "title": "Can swimming pool mosaics be installed in any type of pool?",
+            "text": "<p>Pool mosaics are most suitable for use in concrete pools and installed prior to the pool finish, whether it is plastic, aggregate, or tile. Final installation should result in a smooth pool surface with no noticeable difference in thickness between the mosaics finish.</p>"
+          }
+        },
+        "question_zPEAdB": {
+          "type": "question",
+          "settings": {
+            "title": "Can pool mosaics be customized to fit my pool's unique shape and size?",
+            "text": "<p>Yes, we offer a variety of custom design services, allowing you to create a mosaic that fits your pool's unique shape, size, and style. Whether you want to enlarge an existing design or incorporate your favorite design, the possibilities are endless.</p>"
+          }
+        },
+        "question_WNiayF": {
+          "type": "question",
+          "settings": {
+            "title": "Are pool mosaics durable and easy to maintain?",
+            "text": "<p>Yes, swimming pool mosaics are made from durable materials such as glass, resins, or porcelain, making them resistant to fading and staining. Maintaining proper pool chemistry will ensure a long-lasting installation for years to come.</p>"
+          }
+        },
+        "question_ymbBpt": {
+          "type": "question",
+          "settings": {
+            "title": "What is the difference between hand painted and screen printed pool mosaics?",
+            "text": "<p>Hand-painted pool mosaics are created by skilled artisans who paint each tile individually by hand. This labor-intensive process allows for intricate detailing and subtle variations in color and shading, resulting in a unique and artistic finish. Screen-printed pool mosaics are created using a stencil-based printing process, where a design is transferred onto the surface of the tiles using a screen and ink. In summary, hand-painted pool mosaics offer a unique and artisanal finish with intricate detailing and subtle variations in color, while screen-printed pool mosaics provide a more uniform and precise appearance at a more affordable price point. The choice between the two depends on factors such as budget, design preferences, and desired level of customization.</p>"
+          }
+        },
+        "question_4xBahJ": {
+          "type": "question",
+          "settings": {
+            "title": "Do any of your mosaics glow in the dark?",
+            "text": "<p>Yes, we are proud suppliers of Element Glo pool mosaics. These captivating glow-in-the-dark mosaics harness the power of luminescence to transform your pool into a mesmerizing oasis after dark.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_3VDHNp",
+        "question_WwVmJF",
+        "question_zPEAdB",
+        "question_WNiayF",
+        "question_ymbBpt",
+        "question_4xBahJ"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "css_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a751ffce-4fd5-47b9-a26e-dd78d1f6a478",
+    "rich_text_D8pgbz",
+    "text_columns_custom_aCaRDk",
+    "advanced_content_QjdeLM",
+    "859c7d00-c8f4-44b1-aaaf-429beee04b9d",
+    "0376f649-3d2b-4ab0-9882-b3aa8b3fbe71",
+    "d7b6d4d0-1e42-4579-83f0-3d67a5ae341e",
+    "ed39c7ef-4f63-4dab-92e2-1c218fe64b88",
+    "d7d9bc93-9797-4d39-8efb-5210719b5d50",
+    "6a3457c1-38d1-42b5-bdee-604504691977",
+    "bf55dad4-8b27-4e3b-9fa8-e3d1452ffebe",
+    "84315ff0-c2d0-4dc5-90e6-88261210a6c0",
+    "682ecd35-59c9-4ad8-9376-116e8e118783",
+    "f961bf88-6411-4276-b9ff-60df6aee21e0",
+    "faq_JULCpF"
+  ]
+}
