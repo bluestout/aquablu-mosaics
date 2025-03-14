@@ -510,8 +510,8 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/pro-banner.jpg",
-            "image_mobile": "shopify://shop_images/mobile-pro-banner2.jpg",
+            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
