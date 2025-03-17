@@ -65,16 +65,16 @@
         "fd071408-c866-4ddb-8f32-3eb533a5e0c4": {
           "type": "slide",
           "settings": {
-            "top_subheading": "VALENTINES DAY FIRE SALE",
-            "title": "Save up to $300",
+            "top_subheading": "AQUABLU SPRING SALE",
+            "title": "Save up to 15%",
             "title_size": 59,
-            "subheading": "on select powder coated metal fire features from the Coronado, Unity, Maya, Sedona, and Cazo collections",
-            "link": "shopify://pages/outdoor-gas-fire-pits-and-water-features",
+            "subheading": "on tile, up to 10% on porcelain pavers, and FREE SHIPPING on all pool & outdoor furniture!",
+            "link": "shopify://collections/tile-and-stone",
             "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/valentines-day-2025-top--website.jpg",
+            "image": "shopify://shop_images/Spring_Sale_2025_Social_3.png",
             "indent_image": true,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -84,7 +84,6 @@
       "block_order": [
         "fd071408-c866-4ddb-8f32-3eb533a5e0c4"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 650,
@@ -92,6 +91,68 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "rich_text_RHYPJN": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bqyQgY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h4>Springs Sale Terms & Conditions</h4><p><strong>Sale Period: </strong>The S'more Savings Event at AquaBlu Mosaics is valid from March 17th, 2025, to March 23rd, 2025. During this time, customers can enjoy savings of up to 15% on all tile and stone and swimming pool mosaics*, up to 10% on porcelain patio pavers and coping, and free shipping on all pool and outdoor furniture. <strong>Exclusions:</strong> Custom Mosaics Inc. swimming pool mosaics are not eligible for this promotion. <strong>Discounted Products: </strong>Items in the Sale and Clearance collection are not eligible for this discount. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all Spring Sale purchases. Please review our return policy for more information. <strong>Promo Codes: </strong>Discounts are applied automatically at checkout. <strong>Customer Support:</strong> If you have any questions or concerns regarding our Spring Sale, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. AquaBlu Mosaics is excited to offer our Spring Sale discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect products to <strong>Bring Paradise Home</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bqyQgY"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "e6a70224-a8f2-43f9-abc4-a556bf27c901": {
+      "type": "rich-text",
+      "blocks": {
+        "button_qYbn8G": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
+            "link_text": "SHOP NOW"
+          }
+        },
+        "heading_FKCYNG": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Don't delay, the sale ends at midnight, December 2nd!"
+          }
+        },
+        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Disclaimer:</strong> The Ledge Lounger flash sale is valid until 11:59pm (EST) on March 23rd, 2025. The discounts are applicable to all No code is required. Discounts will be automatically applied at check out. For assistance regarding the flash sale, please contact customer service.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "button_qYbn8G",
+        "heading_FKCYNG",
+        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
         "css_class": ""
       }
     },
@@ -321,44 +382,6 @@
         "css_class": ""
       }
     },
-    "e6a70224-a8f2-43f9-abc4-a556bf27c901": {
-      "type": "rich-text",
-      "blocks": {
-        "button_qYbn8G": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
-            "link_text": "SHOP NOW"
-          }
-        },
-        "heading_FKCYNG": {
-          "type": "heading",
-          "settings": {
-            "title": "Don't delay, the sale ends at midnight, December 2nd!"
-          }
-        },
-        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p><strong>Disclaimer:</strong> The Ledge Lounger flash sale is valid until 11:59pm (EST) on December 2nd, 2024, and is applicable to all products within the collection. No code is required. Discounts will be automatically applied at check out. For assistance regarding the flash sale, please contact customer service.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "button_qYbn8G",
-        "heading_FKCYNG",
-        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": false,
-        "color_scheme": "2",
-        "divider": false,
-        "css_class": ""
-      }
-    },
     "slideshow_eiQn9r": {
       "type": "slideshow",
       "blocks": {
@@ -499,29 +522,6 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "rich_text_RHYPJN": {
-      "type": "rich-text",
-      "blocks": {
-        "text_bqyQgY": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": false,
-            "text": "<h4>S'more Savings Event Terms & Conditions</h4><p><strong>Sale Period: </strong>The S'more Savings Event at AquaBlu Mosaics is valid from September 22nd, 2024, to October 31st, 2024. During this time, customers can enjoy savings of up to $1000 on all fire and fire and water combination products. <strong>Discounted Products:</strong> Please note that the discounts apply only to fire and fire and water features. All other products and product categories are excluded from this sale. Items in the Sale and Clearance collection are not eligible for this discount. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all S'more Savings Event purchases. Please review our return policy for more information. <strong>Promo Codes: </strong>Discounts are applied automatically at checkout. <strong>Customer Support:</strong> If you have any questions or concerns regarding our S'more Savings Event, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. AquaBlu Mosaics<br/>is excited to offer our S'more Savings Event discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect products to <strong>Bring Paradise Home</strong>.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_bqyQgY"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "left",
-        "narrow_column": false,
-        "color_scheme": "none",
-        "divider": false,
         "css_class": ""
       }
     },
@@ -917,17 +917,17 @@
     "main",
     "a92b5673-5ac8-4e2e-a61a-78fb827cbc99",
     "75796859-40c8-48ac-9d2d-974e31ca28cb",
+    "rich_text_RHYPJN",
+    "e6a70224-a8f2-43f9-abc4-a556bf27c901",
     "slideshow_zMdP6B",
     "slideshow_mWYVFP",
     "promo_grid_fUPm7f",
     "slideshow_split_TqemLq",
     "promo_grid_7rAh4V",
     "promo_grid_gaM8ta",
-    "e6a70224-a8f2-43f9-abc4-a556bf27c901",
     "slideshow_eiQn9r",
     "promo_grid_C9gXY9",
     "slideshow_DVYz9f",
-    "rich_text_RHYPJN",
     "bd85e6e4-b781-4387-bae8-ea26dfc7794b",
     "promo_grid_9BMxYC",
     "dfeb65e9-cf11-4448-9765-2c6d3e775231",
