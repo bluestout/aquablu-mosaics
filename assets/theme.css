@@ -4715,6 +4715,10 @@ form + .footer__social {
   flex: 0 1 auto;
 }
 
+.additional-filters-trigger::-webkit-details-marker {
+    display: none;
+}
+
 .section-header__title {
   margin-bottom: 0;
   text-align: center; /*Sticky filter*/
