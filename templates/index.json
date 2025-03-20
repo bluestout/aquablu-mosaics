@@ -54,12 +54,12 @@
         "slide_R3tWbP": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Tupelo_Hero_3.png",
-            "heading": "INTRODUCING",
+            "image": "shopify://shop_images/Woosah-Sale.jpg",
+            "heading": "SPRING FURNITURE SALE",
             "heading_size": "h1",
-            "subheading": "TUPELO GOODS POOL & OUTDOOR FURNITURE",
+            "subheading": "SAVE 10% ON THE WOOSAH CHAIR",
             "button_label": "Shop Now",
-            "link": "https://www.aquablumosaics.com/collections/tupelo-goods-pool-patio-furniture",
+            "link": "shopify://products/woosah-chair-with-tall-base-set-of-two-luxury-pool-chair",
             "box_align": "middle-center",
             "text_alignment": "center",
             "image_overlay_opacity": 10,
