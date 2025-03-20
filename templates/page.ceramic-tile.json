@@ -40,6 +40,29 @@
             "focal_point": "center center"
           }
         },
+        "hero_ECk7A3": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "RUSTIC APPEAL, MODERN DURABILITY",
+            "title": "<p>WOOD-LOOK TILE</p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/collections/wood-look-ceramic-tile",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Wood_Look_Ceramic_Tile_f37da72a-0a38-438c-a5c3-7387a42bf66f.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
         "hero_Yw4eFD": {
           "type": "hero",
           "settings": {
@@ -48,11 +71,11 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "top_subheading": "STYLISH & PRACTICAL",
-            "title": "<p>OUTDOOR KITCHEN TILE</p>",
+            "title": "<p>OUTDOOR KITCHEN FAVORITES</p>",
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/ceramic-outdoor-kitchen-tile",
             "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
@@ -75,13 +98,13 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/3d-ceramic-tile",
             "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/3D_Ceramic_Tile.jpg",
+            "image": "shopify://shop_images/Three_Dimensional_Ceramic_Tile.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -89,6 +112,7 @@
       },
       "block_order": [
         "template--14551638900808__f21ed0a7-2cfa-45ca-9a5d-24083a207528-168148148025553fef-1",
+        "hero_ECk7A3",
         "hero_Yw4eFD",
         "hero_H6xE8N"
       ],
@@ -113,37 +137,28 @@
         "logo_image_3hq3z3": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Ceramic_Trending_Tile.jpg",
+            "image": "shopify://shop_images/New_and_Trending_Ceramic_Tile_c360c4d6-8abb-465f-990d-8f8875c8fb0a.jpg",
             "logo_title": "New & Trending",
             "logo_text": "",
-            "link": "shopify://collections/new-and-trending-stone-tile"
+            "link": "https://www.aquablumosaics.com/collections/new-and-trending-ceramic-tile"
           }
         },
         "logo_image_kn8WQh": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Backsplash_Tile.jpg",
-            "logo_title": "Popular Backsplash",
+            "image": "shopify://shop_images/Popular_Backsplash_Tile_-_Ceramic_Tile.jpg",
+            "logo_title": "Backsplash Tile",
             "logo_text": "",
-            "link": "shopify://collections/new-and-trending-stone-tile"
+            "link": "https://www.aquablumosaics.com/collections/ceramic-backsplash-tile"
           }
         },
         "logo_image_x4GYx7": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Zellige_Look_Ceramic_Tile.jpg",
+            "image": "shopify://shop_images/Zellige_Look_Ceramic_Tile_170f7535-6b5c-40ec-9872-3edf0d1f0bc0.jpg",
             "logo_title": "Zellige Look",
             "logo_text": "",
-            "link": "shopify://collections/pebble-tile"
-          }
-        },
-        "logo_image_zUyQtN": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Ceramic_Subway_Tile_84983cc9-ed93-419e-98c4-6b9d7cb25667.jpg",
-            "logo_title": "Subway Tile",
-            "logo_text": "",
-            "link": "shopify://collections/natural-stone-ledger-panels"
+            "link": "https://www.aquablumosaics.com/collections/ceramic-zellige-look-tile"
           }
         },
         "logo_image_QXm94A": {
@@ -154,14 +169,33 @@
             "logo_text": "",
             "link": "shopify://collections/tile-grout"
           }
+        },
+        "logo_image_zUyQtN": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Subway_Ceramic_Tile.jpg",
+            "logo_title": "Subway Tile",
+            "logo_text": "",
+            "link": "shopify://collections/ceramic-subway-tile"
+          }
+        },
+        "logo_image_rAVRjr": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Pattern_Ceramic_Tile_1d9e36d4-7a1f-4872-9e51-d5064b02efce.jpg",
+            "logo_title": "Pattern Tile",
+            "logo_text": "",
+            "link": "https://www.aquablumosaics.com/collections/ceramic-pattern-tile"
+          }
         }
       },
       "block_order": [
         "logo_image_3hq3z3",
         "logo_image_kn8WQh",
         "logo_image_x4GYx7",
+        "logo_image_QXm94A",
         "logo_image_zUyQtN",
-        "logo_image_QXm94A"
+        "logo_image_rAVRjr"
       ],
       "settings": {
         "title": "",
@@ -183,29 +217,29 @@
             "image_width": 130,
             "title": "White",
             "button_label": "",
-            "button_link": "shopify://collections/white-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/white-ceramic-tile"
           }
         },
         "3c328061-f674-4307-9990-8d7506fb4156": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_12.png",
+            "image": "shopify://shop_images/Untitled_design_17.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
-            "button_link": "shopify://collections/green-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/green-ceramic-tile"
           }
         },
         "70b8e1f4-2240-4fde-add2-bc86238ca4a8": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_7.png",
+            "image": "shopify://shop_images/Untitled_design_16.png",
             "image_width": 130,
             "title": "Gray",
             "button_label": "",
-            "button_link": "shopify://collections/gray-natural-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/gray-ceramic-tile"
           }
         },
         "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-2": {
@@ -216,51 +250,51 @@
             "image_width": 130,
             "title": "Beige",
             "button_label": "",
-            "button_link": "shopify://collections/beige-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/beige-ceramic-tile"
           }
         },
         "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-3": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_13.png",
+            "image": "shopify://shop_images/Untitled_design_18.png",
             "image_width": 130,
             "title": "Aqua",
             "button_label": "",
-            "button_link": "shopify://collections/multicolor-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/aqua-ceramic-tile"
           }
         },
         "template--14551638900808__87139836-87e1-4475-9940-bbe03d717e72-text_block-1": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_9.png",
+            "image": "shopify://shop_images/Untitled_design_19.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
-            "button_link": "shopify://collections/black-natural-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/black-ceramic-tile"
           }
         },
         "text_block_7hBTq6": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_11.png",
+            "image": "shopify://shop_images/Untitled_design_20.png",
             "image_width": 130,
             "title": "Blue",
             "button_label": "",
-            "button_link": "shopify://collections/blue-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/blue-ceramic-tile"
           }
         },
         "text_block_TDD3EG": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_15.png",
+            "image": "shopify://shop_images/Untitled_design_21.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
-            "button_link": "shopify://collections/stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/shop-all-ceramic-tile"
           }
         }
       },
@@ -294,99 +328,99 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/squarestone.png",
+            "image": "shopify://shop_images/Untitled_design_33.png",
             "image_width": 130,
             "title": "Square",
             "button_label": "",
-            "button_link": "shopify://collections/stone-square-tiles"
-          }
-        },
-        "text_block_XJwWeN": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/rectanglestone.png",
-            "image_width": 130,
-            "title": "Rectangle",
-            "button_label": "",
-            "button_link": "shopify://collections/rectangle-stone-tile"
-          }
-        },
-        "text_block_DDkJxJ": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/roundstone.png",
-            "image_width": 130,
-            "title": "Round",
-            "button_label": "",
-            "button_link": "shopify://collections/round-mosaic-stone-tile"
-          }
-        },
-        "text_block_DXNLXw": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/linearstnetile.png",
-            "image_width": 130,
-            "title": "Linear",
-            "button_label": "",
-            "button_link": "shopify://collections/linear-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/square-ceramic-tile"
           }
         },
         "text_block_CBLpHA": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/geometricstone.png",
+            "image": "shopify://shop_images/Untitled_design_27.png",
             "image_width": 130,
-            "title": "Geometric",
+            "title": "Hexagon",
             "button_label": "",
-            "button_link": "shopify://collections/geometric-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/hexagon-ceramic-tile"
           }
         },
         "text_block_mVGeHG": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/stoneherringbone.png",
+            "image": "shopify://shop_images/Untitled_design_37.png",
             "image_width": 130,
-            "title": "Herringbone",
+            "title": "Picket",
             "button_label": "",
-            "button_link": "shopify://collections/herringbone-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/picket-ceramic-tile"
           }
         },
         "text_block_VMUQhM": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/arabstone.png",
+            "image": "shopify://shop_images/Untitled_design_34.png",
             "image_width": 130,
             "title": "Arabesque",
             "button_label": "",
-            "button_link": "shopify://collections/arabesque-stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/arabesque-ceramic-tile"
+          }
+        },
+        "text_block_XJwWeN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_29.png",
+            "image_width": 130,
+            "title": "Rectangle",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/collections/rectangle-ceramic-tile"
+          }
+        },
+        "text_block_DDkJxJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_35.png",
+            "image_width": 130,
+            "title": "Fish Scale",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/collections/fish-scale-ceramic-tile"
+          }
+        },
+        "text_block_DXNLXw": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_36.png",
+            "image_width": 130,
+            "title": "Linear",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/collections/linear-ceramic-tile"
           }
         },
         "text_block_jrJ7t8": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/all_stone_shapes.png",
+            "image": "shopify://shop_images/Untitled_design_32.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
-            "button_link": "shopify://collections/stone-tile"
+            "button_link": "https://www.aquablumosaics.com/collections/shop-all-ceramic-tile"
           }
         }
       },
       "block_order": [
         "text_block_bXXBL4",
-        "text_block_XJwWeN",
-        "text_block_DDkJxJ",
-        "text_block_DXNLXw",
         "text_block_CBLpHA",
         "text_block_mVGeHG",
         "text_block_VMUQhM",
+        "text_block_XJwWeN",
+        "text_block_DDkJxJ",
+        "text_block_DXNLXw",
         "text_block_jrJ7t8"
       ],
       "settings": {
@@ -412,7 +446,7 @@
             "heading": "",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify://collections/kitchen-stone-tile",
+            "cta_link1": "https://www.aquablumosaics.com/collections/ceramic-kitchen-tile",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Kitchen_Backsplash_Tile_-_Ceramic.jpg",
@@ -431,7 +465,7 @@
             "heading": "",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify://collections/bathroom-stone-tile",
+            "cta_link1": "https://www.aquablumosaics.com/collections/ceramic-bathroom-tile",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Ceramic_Bathroom_Tile_2.jpg",
@@ -450,7 +484,7 @@
             "heading": "",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify://collections/outdoor-stone-tile",
+            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-ceramic-tile",
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Outdoor_Ceramic_Tile.jpg",
@@ -490,7 +524,7 @@
         "title": "",
         "text": "<h2>CERAMIC TILE: STYLISH & TIMELESS</h2><p>Ceramic tile offers limitless design potential, making it a top choice for homeowners and designers alike. Renowned for its durability, versatility, and aesthetic appeal, ceramic tiles come in an array of patterns, textures, and colors to suit any style preference. Ideal for floors, walls, and backsplashes, ceramic tiles provide a functional yet stylish solution for kitchens, bathrooms, and living areas. Their easy maintenance and long-lasting durability make them a smart investment for both residential and commercial spaces. </p>",
         "button_label": "",
-        "button_link": "",
+        "button_link": "https://www.aquablumosaics.com/collections/shop-all-ceramic-tile",
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
@@ -503,12 +537,22 @@
     "featured_collections_custom_hGrGHg": {
       "type": "featured-collections-custom",
       "blocks": {
+        "collection_d3EVwq": {
+          "type": "collection",
+          "settings": {
+            "title": "COASTAL",
+            "image": "shopify://shop_images/Coastal_Ceramic_Tile.jpg",
+            "url": "https://www.aquablumosaics.com/collections/coastal-ceramic-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_NHfAbg": {
           "type": "collection",
           "settings": {
             "title": "CLASSIC",
             "image": "shopify://shop_images/Classic_Ceramic_Tile.jpg",
-            "url": "shopify://collections/classic-stone-tile",
+            "url": "https://www.aquablumosaics.com/collections/classic-ceramic-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -518,7 +562,7 @@
           "settings": {
             "title": "TROPICAL",
             "image": "shopify://shop_images/Tropical_Ceramic_Tile.jpg",
-            "url": "shopify://collections/tropical-stone-tile",
+            "url": "https://www.aquablumosaics.com/collections/tropical-ceramic-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -528,32 +572,42 @@
           "settings": {
             "title": "MODERN",
             "image": "shopify://shop_images/Modern_Ceramic_Tile_28a52ccd-2d39-4458-b39d-d77a9cd8d994.jpg",
-            "url": "shopify://collections/modern-stone-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_d3EVwq": {
-          "type": "collection",
-          "settings": {
-            "title": "COASTAL",
-            "image": "shopify://shop_images/Coastal_Ceramic_Tile.jpg",
-            "url": "shopify://collections/coastal-stone-tile",
+            "url": "https://www.aquablumosaics.com/collections/modern-ceramic-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
         }
       },
       "block_order": [
+        "collection_d3EVwq",
         "collection_NHfAbg",
         "collection_Cj4qkr",
-        "collection_BpHyYY",
-        "collection_d3EVwq"
+        "collection_BpHyYY"
       ],
       "settings": {
         "title": "BROWSE LOOKS",
         "divider": false,
         "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
+    "text_and_image_4mp9ak": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Large_Format_Ceramic_Tile_ef54fb4e-9c7d-40be-95dc-f8e46898831f.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>LARGE FORMAT TILES: SEAMLESS BEAUTY FOR ANY SPACE</h2><p>Large format ceramic tiles are a stylish and practical choice for kitchens, bathrooms, and living spaces. With their sleek, expansive design, they create a modern, open feel while minimizing grout lines for a cleaner, more seamless look. These tiles are durable, easy to maintain, and resistant to moisture, stains, and scratches, making them ideal for high-traffic and wet areas. Available in various colors, textures, and finishes, large format ceramic tiles are a versatile option for any home design style.</p>",
+        "button_label": "Shop Now",
+        "button_link": "https://www.aquablumosaics.com/collections/large-format-ceramic-tile",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding"
       }
     },
     "3930d554-8e8f-40af-afb4-674e223f7be3": {
@@ -837,43 +891,43 @@
         "question_jKX3YA": {
           "type": "question",
           "settings": {
-            "title": "Where can I install stone tile?",
-            "text": "<p>Stone tile is an excellent choice for bathroom and shower floors, and adds a spa-like ambiance to the room. It can make a stunning first impression in your entryway or foyer, or used to enhance outdoor living areas such as patios, decks, and pool surrounds. Furthermore, natural stone tile can be used as an accent or to create a beautiful and dramatic fireplace surround, adding texture and visual interest to your living spas.</p>"
+            "title": "What is ceramic tile best used for?",
+            "text": "<p>Ceramic tile is a durable, versatile option for kitchens, bathrooms, and outdoor areas. It resists stains, heat, and moisture, making it ideal for floors, backsplashes, and showers. With various styles and easy maintenance, ceramic tile offers both beauty and practicality for any space.</p>"
           }
         },
         "question_LkWFid": {
           "type": "question",
           "settings": {
-            "title": "What types of natural stone are commonly used home renovations?",
-            "text": "<p>Natural stone tiles can be crafted from various materials such as marble, granite, travertine, slate, limestone, and more. Each type offers distinct colors, patterns, and characteristics to suit different design preferences and functional needs.</p>"
+            "title": "How is ceramic tile made?",
+            "text": "<p>Ceramic tile is made from natural clay, shaped and dried before being fired in a kiln at high temperatures. A glaze may be applied for color and protection. The firing process hardens the tile, making it durable and water-resistant. The tiles are then cut, polished, and ready for installation.</p>"
           }
         },
         "question_zjzwRK": {
           "type": "question",
           "settings": {
-            "title": "Is it necessary to seal natural stone tile?",
-            "text": "<p>Yes, depending on the material, sealing stone tile is often recommended to protect it from stains, moisture, and other damage. While some types of natural stone are more porous than others, all can benefit from sealing to prolong their beauty and longevity. Sealing frequency may vary depending on factors such as the type of stone, location, and level of use.</p>"
+            "title": "Is it necessary to seal ceramic tile?",
+            "text": "<p>Sealing ceramic tile is usually unnecessary because most ceramic tiles have a protective glaze. However, grout lines should always be sealed to prevent staining and moisture damage if using cementatious grout. For unglazed or textured ceramic tiles, sealing may help protect against stains and wear, especially in high-traffic or outdoor areas.</p>"
           }
         },
         "question_TfBXDN": {
           "type": "question",
           "settings": {
-            "title": "How do I maintain natural stone tile?",
-            "text": "<p>Regular cleaning with a pH-neutral cleaner and a soft mop or cloth is recommended to maintain the beauty of natural stone tile. Avoid acidic or abrasive cleaners, as they can damage the surface. Sealing the tile periodically can also help protect it from stains and moisture.</p>"
+            "title": "How do I maintain ceramic tile?",
+            "text": "<p>To maintain ceramic tile, clean it regularly with warm water and a mild detergent. Avoid harsh chemicals that could damage the glaze. If using cementitious grout, seal grout lines periodically to prevent stains. </p>"
           }
         },
         "question_bDi6gG": {
           "type": "question",
           "settings": {
-            "title": "Can natural stone tile be used in outdoor settings?",
-            "text": "<p>Yes, natural stone is sourced from outdoor environments, therefore, it's suitable for outdoor applications such as patios, walkways, and pool decks. However, it's important to choose a stone that is appropriate for the specific climate and environmental conditions of your area to ensure durability and longevity.</p>"
+            "title": "Can ceramic  tile be used in outdoor settings?",
+            "text": "<p>Yes, ceramic tile can be used outdoors, but it's important to choose tiles specifically rated for outdoor use. Always check the product page specifications to confirm the tile's suitability for outdoor settings, as certain tiles are designed to withstand temperature changes, moisture, and other environmental factors.</p>"
           }
         },
         "question_9dgHiQ": {
           "type": "question",
           "settings": {
-            "title": "Are natural stone tiles suitable for high-traffic areas?",
-            "text": "<p>Natural stone tiles are known for their durability and can withstand heavy foot traffic when properly installed and maintained. However, some types of stone may be more prone to scratching or etching than others, so it's essential to choose a stone that is suitable for the intended use and to seal it regularly for added protection.</p>"
+            "title": "What are the benefits of ceramic tile vs. porcelain tile?",
+            "text": "<p>Ceramic tile is a durable and long-lasting option, resistant to water and heavy foot traffic. It’s also a great choice for DIYers, as it’s easier to cut than porcelain. With its softer composition, ceramic tile can be easily cut with a basic tile cutter, making it perfect for use in various rooms throughout the home.</p>"
           }
         }
       },
@@ -900,6 +954,7 @@
     "9aaba6c3-23c4-45e0-8444-264dfe1ac0f6",
     "6c745880-3120-4518-8c5c-0dfe6b923672",
     "featured_collections_custom_hGrGHg",
+    "text_and_image_4mp9ak",
     "3930d554-8e8f-40af-afb4-674e223f7be3",
     "8a7ba316-159c-48fe-bc72-fc5d953a1ad3",
     "54531a36-eec5-4ca4-959d-814b9b3e31b6",

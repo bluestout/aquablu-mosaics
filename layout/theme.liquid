@@ -1,8 +1,57 @@
+{% comment %}   
+  This code is setting a variable named "speedupkernel" to the value "true".   
+  It's then checking if the hostname of the request contains certain strings 
+  such as 'myshopify.com', 'gempages.net' or 'shopifypreview.com', and sets 
+  the variable 'is_admin_interface' to either "true" or "false".  
+  It also checks for specific paths in the request like '/cart' and '/checkout' 
+  which will set is_admin_interface to "true". Finally, if the request.path 
+  contains the string 'page', it sets the speedupkernel variable back to false.   
+{% endcomment %}  
+  
+{%- assign speedupkernel = true -%}  
+{%- assign is_admin_interface = false -%}  
+  
+{%- if speedupkernel -%}  
+  {%- if request.host contains 'myshopify.com' -%}  
+    {%- assign is_admin_interface = true -%}  
+  {%- else -%}  
+    {%- assign is_admin_interface = false -%}  
+  {%- endif -%}  
+  
+  {%- if request.host contains 'shopifypreview.com' -%}  
+    {%- assign is_admin_interface = false -%}  
+  {%- endif -%}  
+  
+  {%- if request.host contains 'gempages.net' -%}  
+    {%- assign is_admin_interface = true -%}  
+  {%- endif -%}  
+  
+  {%- if request.path contains 'cart' -%}  
+    {%- assign is_admin_interface = true -%}  
+  {%- endif -%}  
+  
+  {%- if request.path contains 'checkout' -%}  
+    {%- assign is_admin_interface = true -%}  
+  {%- endif -%}  
+  
+  {%- if request.path contains 'page' -%}  
+    {%- assign speedupkernel = false -%}    
+  {%- endif -%}  
+{%- endif -%}
+
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
   {% comment %} <div id="qab_placeholder"></div> {% endcomment %}
 <head>
-  
+  {%- if template contains 'index' -%}
+    {% unless is_admin_interface %}  
+    {% render '__opt-theme-observer' %}  
+    {% endunless %}  
+    {% include '__opt-theme-headers' %}
+
+    {%- render '__cls' -%}
+  {%- endif -%}
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -33,8 +82,9 @@
 
   {%- render 'font-face' -%}
   {%- render 'css-variables' -%}
+  
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
-  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}">  
+  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}" fetchpriority="high">  
 
   {%- if shop.enabled_currencies.size > 1 -%}
     <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url }}">
@@ -342,5 +392,8 @@
   {% comment %}--> Add Wish List {% endcomment %}
   {% render 'swym-custom' %}
   {% comment %}<-- Add Wish List {% endcomment %}
+  {%- if template contains 'index' -%}
+    {% render '__opt-theme-js' %}
+  {%- endif -%}
 </body>
 </html>

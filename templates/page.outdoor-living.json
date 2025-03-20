@@ -1,1 +1,656 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"c9537080-8b7e-4d11-abed-ffdf006443e9":{"type":"slideshow","blocks":{"template--14459271512136__c9537080-8b7e-4d11-abed-ffdf006443e9-1681757367c5027eed-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"MAKE WAVES WITH","title":"<p>OUTDOOR LIVING PRODUCTS<\/p><p><\/p>","title_size":50,"subheading":"","custom_text":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/Outdoor_Living_Hero.jpg","overlay_opacity":12,"focal_point":"center center"}},"hero_7NFe6J":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"DISCOVER THE NEW","title":"<p>LAYLO POOL LOUNGER<\/p>","title_size":48,"subheading":"","custom_text":"","link":"shopify:\/\/products\/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair","link_text":"Shop Now","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/Outdoor_living_-_Tenjam_Flash_Sale.jpg","overlay_opacity":0,"focal_point":"bottom center"}},"hero_EjwL7D":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"EXPLORE OUTDOOR","title":"<p>FIRE & WATER FEATURES<\/p>","title_size":48,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/outdoor-gas-fire-pits-and-water-features","link_text":"Shop Now","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/aquablu-outdoor-living-outdoor-fire-and-water-features.jpg","overlay_opacity":0,"focal_point":"20% 100%"}}},"block_order":["template--14459271512136__c9537080-8b7e-4d11-abed-ffdf006443e9-1681757367c5027eed-1","hero_7NFe6J","hero_EjwL7D"],"settings":{"full_width":true,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":40,"space_above":false,"space_below":true,"mobile_size":20,"style":"dots","autoplay":true,"autoplay_speed":7,"css_class":"outdoor-living-section-1"}},"f7b49f3d-1c37-448e-888b-b38a40ba8033":{"type":"promo-grid","blocks":{"5272ec7b-785e-4877-a77f-b36a9bec7d18":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"IN-POOL FURNITURE","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/in-pool-furniture","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/in-pool-furniture.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"cc7ef8f9-2d71-4655-9546-2a8070b4ddbc":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"PATIO FURNITURE","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/outdoor-patio-furniture","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Patio-Furniture.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"c1f897ee-1837-4848-9aca-e4aa45906d08":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"PATIO PAVERS","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/pages\/outdoor-patio-pavers-and-hardscapes","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Pavers_b877c7c5-fccf-4a7f-ad53-6c71d06a1ef6.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"7c470406-533e-4630-83f2-4bc4a1b6ccd3":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"FIRE PITS","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/outdoor-fire-pits","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Fire-Pits.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"cf08d9d3-ebab-474a-a2cb-2c2319234186":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"ARTIFICIAL TURF","cta_text1":"","cta_link1":"shopify:\/\/collections\/artificial-grass-top-turf-products","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Turf_fa6b6c35-00d7-4dcc-9a60-c3e214197098.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"508b2ef9-8e9b-46c2-8687-06ba44a6987c":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"FIRE & WATER FEATURES","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/fire-and-water-features","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Outdoor_Fire_Water_Features.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"20% 100%","color_accent":"#ffffff"}},"0fd4b0d0-cc26-43db-af44-6c6f286a7226":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"POOL CARE","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/robotic-pool-cleaners","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Arial-Robotic-Pool-Skiimmer-by-Solar-Breeze---Lifestyle_-Poloside_2_ac11e39a-0077-45d4-871e-c3d50c6ac456.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"efaaad38-5abf-4e8e-ad40-06ecddcab8b3":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"FLOATS & CADDY’S","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/luxury-pool-floats-and-accessories","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Floats.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"64bdd82d-c4c7-44e7-b476-f13964ae0e61":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"ENTERTAINMENT","cta_text1":"","cta_link1":"shopify:\/\/collections\/outdoor-games","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/pool-entertainment.jpg","video_url":"","width":"33","height":480,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["5272ec7b-785e-4877-a77f-b36a9bec7d18","cc7ef8f9-2d71-4655-9546-2a8070b4ddbc","c1f897ee-1837-4848-9aca-e4aa45906d08","7c470406-533e-4630-83f2-4bc4a1b6ccd3","cf08d9d3-ebab-474a-a2cb-2c2319234186","508b2ef9-8e9b-46c2-8687-06ba44a6987c","0fd4b0d0-cc26-43db-af44-6c6f286a7226","efaaad38-5abf-4e8e-ad40-06ecddcab8b3","64bdd82d-c4c7-44e7-b476-f13964ae0e61"],"settings":{"full_width":false,"heading":"DISCOVER THE POSSIBILITIES","gutter_size":25,"section_gutter_size":20,"space_above":true,"space_below":true,"two_column_mobile":true,"three_column_mobile":false,"css_class":"blue-bar-bottom blue-bar-overlay outdoor-living-section-2"}},"c4b52c04-7da6-471a-a2ab-d6fc4ec66c84":{"type":"featured-collection","disabled":true,"settings":{"title":"SHOP OUR BEST SELLING POOL LOUNGERS","home_featured_products":"in-pool-furniture","count":4,"mobile_scrollable":true,"view_all":true,"divider":false,"css_class":""}},"3f71f403-ed57-4fab-8942-662f92e1e6d8":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/Outdoor_Porcelain_Pavers.jpg","video_url":"","image_width":690,"subtitle":"","title":"","text":"<h2><strong>TRANSFORM YOUR PATIO WITH PORCELAIN PAVERS<\/strong><\/h2><p>Stylish patio pavers are the ultimate enhancement for your outdoor living space. Our curated collection of pavers offer durability and functionality while also adding an element of style to your patio. The diverse range of colors, shapes, and patterns allows you to create a personalized outdoor oasis. <\/p><p>Whether you're looking to create a welcoming space for entertaining, a serene retreat for relaxation, or an extension of your indoor living area, stylish patio pavers transform your backyard into a haven of beauty and functionality. Don't miss the opportunity to elevate your outdoor experience and increase the value of your home with these versatile, stylish pavers.<\/p><p><a href=\"https:\/\/www.aquablumosaics.com\/pages\/outdoor-patio-pavers-and-hardscapes\" title=\"https:\/\/www.aquablumosaics.com\/pages\/outdoor-patio-pavers-and-hardscapes\">SHOP NOW &gt;&gt;<\/a><\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"right","color_scheme":"2","divider":false,"new_layout":true,"css_class":"outdoor-section-3 reduce-text-padding"}},"661f9c76-2a77-4cee-956f-e1e4ad6f1514":{"type":"featured-collection-carousel","settings":{"title":"BEST SELLING LOUNGERS","tab_collection_1":"best-selling-loungers","css_class":"feat-collection-carousel set-carousel-height outdoor-living-section-4"}},"f6555d85-5c5a-489a-a525-e6f076bcdff8":{"type":"slideshow","blocks":{"template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":70,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/conservation","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-left","image":"shopify:\/\/shop_images\/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg","image_mobile":"shopify:\/\/shop_images\/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":6,"space_above":false,"space_below":true,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"0588edea-afce-4615-b359-5845d141dd26":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/fl.jpg","video_url":"","image_width":690,"subtitle":"","title":"","text":"<h2><strong>FLOATING LUXURIES: EXPERIENCE RESORT-STYLE COMFORT AT HOME<\/strong><\/h2><p>Browse our amazing selection of resort-style pool floats, loungers, and accessories from Floating Luxuries. Each pool float is crafted from stain and fade resistant fabric, providing long-lasting comfort matched with a sophisticated design.<\/p><p>Stay cool and relaxed with the sleek, ergonomically designed Kai Shelf Lounger. Constructed of quality materials, engineered to fit the body, and designed with convenient built-in features, this Lounger ensures an unparalleled aquatic relaxation experience. You’ve worked hard to have a great swimming pool… it’s time to fill it with quality lounge chairs and accessories!<\/p><p><a href=\"\/collections\/floating-luxuries\" title=\"Floating Luxuries\">SHOP NOW &gt;&gt;<\/a><\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"left","color_scheme":"2","divider":false,"new_layout":true,"css_class":"outdoor-section-3 reduce-text-padding"}},"89a27308-d751-41d5-aa05-b0d2fadff296":{"type":"promo-grid","blocks":{"template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0":{"type":"advanced","settings":{"subheading":"UMBRELLAS","heading":"","textarea":"","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/outdoor-umbrellas-for-pool-and-patio","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Umbrellas.jpg","video_url":"","width":"33","height":400,"text_align":"vertical-bottom horizontal-center","focal_point":"top","color_accent":"#ffffff"}},"template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1":{"type":"advanced","settings":{"subheading":"GARDEN WALLS","heading":"","textarea":"","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/artificial-garden-wall-plant-wall-panels","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Paradise-Garden-Wall-Lifestyle_2_720x_7db10fe6-a6f4-46cc-85d3-030c548aeff3.jpg","video_url":"","width":"33","height":400,"text_align":"vertical-bottom horizontal-center","focal_point":"80% 0","color_accent":"#ffffff"}},"40a9acb2-ccdb-4ff2-b3db-7a240532735b":{"type":"advanced","settings":{"subheading":"GAMES","heading":"","textarea":"","cta_text1":"","cta_link1":"https:\/\/www.aquablumosaics.com\/collections\/outdoor-games","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/outdoor_games.jpg","video_url":"","width":"33","height":400,"text_align":"vertical-bottom horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0","template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1","40a9acb2-ccdb-4ff2-b3db-7a240532735b"],"settings":{"full_width":false,"heading":"EXPLORE MORE","gutter_size":36,"section_gutter_size":40,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":true,"css_class":"blue-bar-overlay outdoor-living-section-6"}},"advanced_content_GtJJEC":{"type":"advanced-content","blocks":{"liquid_aPJCcd":{"type":"liquid","settings":{"code":"<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"66357bae14eb510025c3cac8\">\n<\/div>","width":"100%","alignment":"center"}}},"block_order":["liquid_aPJCcd"],"settings":{"full_width":false,"space_around":true,"css_class":""}},"eed788d4-2138-4c64-806f-ed605a88c66b":{"type":"promo-grid","blocks":{"template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0":{"type":"advanced","settings":{"subheading":"","heading":"FIRE & WATER FEATURES","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Fire-and-water_30fc3ee6-e93b-4204-ad2d-d3c1a9afc8c3.jpg","video_url":"","width":"50","height":700,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1":{"type":"advanced","settings":{"subheading":"","heading":"FIRE PITS, BOWLS, & TABLES","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/fire-features_097461c8-4d60-4fbe-bede-41b7930ebb51.jpg","video_url":"","width":"50","height":700,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0","template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1"],"disabled":true,"settings":{"full_width":false,"heading":"","gutter_size":28,"section_gutter_size":20,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":false,"css_class":"outdoor-living-section-7"}},"28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/vondom_ce02ce7d-bd94-4846-8da4-d115db9a35da.jpg","video_url":"","image_width":690,"subtitle":"","title":"","text":"<h2><strong>VONDOM: THE FUTURE OF PATIO FURNITURE<\/strong><\/h2><p>Looking to create a high-end, luxurious outdoor space? Vondom has got you covered. Vondom specializes in both indoor and outdoor furniture, with a particular focus on luxury patio and pool furniture. All the pieces are made with the highest quality materials and feature designs from some of the world’s most renowned designers. This unique and modern furniture is perfect for anyone who wants to add an elegant to their outdoor space.<\/p><p>Vondom prides themselves on their research and innovation. Their award-winning products are made using precision technology and sustainable practices. Respect for the environment is in their DNA, and they challenge the status quo while creating unique, forward-thinking products.<\/p><p><a href=\"\/collections\/vondom\" title=\"Vondom\">SHOP NOW &gt;&gt;<\/a><\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"right","color_scheme":"2","divider":false,"new_layout":true,"css_class":"outdoor-section-3 reduce-text-padding"}},"28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82":{"type":"featured-collection","disabled":true,"settings":{"title":"RECENTLY VIEWED","home_featured_products":"bc-all","count":4,"mobile_scrollable":true,"view_all":true,"divider":false,"css_class":""}},"320f2580-51bc-4eba-aa22-13b12a7ecccd":{"type":"featured-collection-carousel","settings":{"title":"SHOP OUR STAFF FAVORITES","tab_collection_1":"best-in-pool-furniture-staff-picks","css_class":"feat-collection-carousel set-carousel-height outdoor-living-section-8"}}},"order":["main","c9537080-8b7e-4d11-abed-ffdf006443e9","f7b49f3d-1c37-448e-888b-b38a40ba8033","c4b52c04-7da6-471a-a2ab-d6fc4ec66c84","3f71f403-ed57-4fab-8942-662f92e1e6d8","661f9c76-2a77-4cee-956f-e1e4ad6f1514","f6555d85-5c5a-489a-a525-e6f076bcdff8","0588edea-afce-4615-b359-5845d141dd26","89a27308-d751-41d5-aa05-b0d2fadff296","advanced_content_GtJJEC","eed788d4-2138-4c64-806f-ed605a88c66b","28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162","28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82","320f2580-51bc-4eba-aa22-13b12a7ecccd"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "c9537080-8b7e-4d11-abed-ffdf006443e9": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271512136__c9537080-8b7e-4d11-abed-ffdf006443e9-1681757367c5027eed-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "MAKE WAVES WITH",
+            "title": "<p>OUTDOOR LIVING PRODUCTS</p><p></p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Outdoor_Living_Products_Hero_2.jpg",
+            "overlay_opacity": 12,
+            "focal_point": "center center"
+          }
+        },
+        "hero_zpagdq": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "Patio & Pool Furniture",
+            "title": "<p>TUPELO GOODS</p>",
+            "title_size": 48,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tupelo-goods-pool-patio-furniture",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Tupelo_Goods_Outdoor_and_In-pool_Furniture.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        },
+        "hero_EjwL7D": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "EXPLORE OUTDOOR",
+            "title": "<p>FIRE & WATER FEATURES</p>",
+            "title_size": 48,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/outdoor-gas-fire-pits-and-water-features",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/aquablu-outdoor-living-outdoor-fire-and-water-features.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "20% 100%"
+          }
+        },
+        "hero_7NFe6J": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "DISCOVER THE NEW",
+            "title": "<p>LAYLO POOL LOUNGER</p>",
+            "title_size": 48,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://products/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Outdoor_living_-_Tenjam_Flash_Sale.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271512136__c9537080-8b7e-4d11-abed-ffdf006443e9-1681757367c5027eed-1",
+        "hero_zpagdq",
+        "hero_EjwL7D",
+        "hero_7NFe6J"
+      ],
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 20,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "outdoor-living-section-1"
+      }
+    },
+    "f7b49f3d-1c37-448e-888b-b38a40ba8033": {
+      "type": "promo-grid",
+      "blocks": {
+        "5272ec7b-785e-4877-a77f-b36a9bec7d18": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "IN-POOL FURNITURE",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/in-pool-furniture",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/in-pool-furniture.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "c1f897ee-1837-4848-9aca-e4aa45906d08": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "PATIO PAVERS",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/OUTDOOR_PAVERS_AND_COPING.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "cc7ef8f9-2d71-4655-9546-2a8070b4ddbc": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "PATIO FURNITURE",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-patio-furniture",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Patio_Furniture_by_Tupelo_Goods_35868814-ba5e-4dbc-bfbd-7cb61372b41b.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "7c470406-533e-4630-83f2-4bc4a1b6ccd3": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "FIRE PITS",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-fire-pits",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/outdoor_fire_pits.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "cf08d9d3-ebab-474a-a2cb-2c2319234186": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "ARTIFICIAL TURF",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/artificial-grass-top-turf-products",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Turf_fa6b6c35-00d7-4dcc-9a60-c3e214197098.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "508b2ef9-8e9b-46c2-8687-06ba44a6987c": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "FIRE & WATER FEATURES",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/fire-and-water-features",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Outdoor_Fire_Water_Features.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "20% 100%",
+            "color_accent": "#ffffff"
+          }
+        },
+        "0fd4b0d0-cc26-43db-af44-6c6f286a7226": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "POOL CARE",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/robotic-pool-cleaners",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Arial-Robotic-Pool-Skiimmer-by-Solar-Breeze---Lifestyle_-Poloside_2_ac11e39a-0077-45d4-871e-c3d50c6ac456.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "efaaad38-5abf-4e8e-ad40-06ecddcab8b3": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "FLOATS & CADDY’S",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/luxury-pool-floats-and-accessories",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Floats.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "64bdd82d-c4c7-44e7-b476-f13964ae0e61": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "ENTERTAINMENT",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/outdoor-games",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/pool-entertainment.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "5272ec7b-785e-4877-a77f-b36a9bec7d18",
+        "c1f897ee-1837-4848-9aca-e4aa45906d08",
+        "cc7ef8f9-2d71-4655-9546-2a8070b4ddbc",
+        "7c470406-533e-4630-83f2-4bc4a1b6ccd3",
+        "cf08d9d3-ebab-474a-a2cb-2c2319234186",
+        "508b2ef9-8e9b-46c2-8687-06ba44a6987c",
+        "0fd4b0d0-cc26-43db-af44-6c6f286a7226",
+        "efaaad38-5abf-4e8e-ad40-06ecddcab8b3",
+        "64bdd82d-c4c7-44e7-b476-f13964ae0e61"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "DISCOVER THE POSSIBILITIES",
+        "gutter_size": 25,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": true,
+        "three_column_mobile": false,
+        "css_class": "blue-bar-bottom blue-bar-overlay outdoor-living-section-2"
+      }
+    },
+    "c4b52c04-7da6-471a-a2ab-d6fc4ec66c84": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "SHOP OUR BEST SELLING POOL LOUNGERS",
+        "home_featured_products": "in-pool-furniture",
+        "count": 4,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "3f71f403-ed57-4fab-8942-662f92e1e6d8": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Outdoor_Porcelain_Pavers.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>TRANSFORM YOUR PATIO WITH PORCELAIN PAVERS</strong></h2><p>Stylish patio pavers are the ultimate enhancement for your outdoor living space. Our curated collection of pavers offer durability and functionality while also adding an element of style to your patio. The diverse range of colors, shapes, and patterns allows you to create a personalized outdoor oasis. </p><p>Whether you're looking to create a welcoming space for entertaining, a serene retreat for relaxation, or an extension of your indoor living area, stylish patio pavers transform your backyard into a haven of beauty and functionality. Don't miss the opportunity to elevate your outdoor experience and increase the value of your home with these versatile, stylish pavers.</p><p><a href=\"https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes\" title=\"https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
+    "661f9c76-2a77-4cee-956f-e1e4ad6f1514": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "BEST SELLING LOUNGERS",
+        "tab_collection_1": "best-selling-loungers",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4"
+      }
+    },
+    "f6555d85-5c5a-489a-a525-e6f076bcdff8": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/conservation",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
+            "image_mobile": "shopify://shop_images/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 6,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Tupelo_Goods_Feature_-_Outdoor_Living_Furniture.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>TUPELO GOODS: DURABLE, STYLISH, & EFFORTLESS OUTDOOR LIVING</strong></h2><p>Tupelo Goods designs stylish, durable, and low-maintenance outdoor furniture built to withstand the elements. Using marine-grade polyethylene and rotomolding technology, their products resist sun, rain, and chemicals, ensuring long-lasting beauty. Their one-piece, seamless designs require no assembly and are easy to clean with a hose or power wash.</p><p>From in-pool loungers and side tables to fire pit seating and outdoor games, Tupelo Goods blends modern aesthetics with effortless functionality. Their furniture is designed for comfort, stability, and versatility, making it ideal for residential, hospitality, and commercial spaces. </p><p>Proudly made in the USA, Tupelo Goods brings timeless design and durability to pools, patios, and outdoor spaces year-round.</p><p><a href=\"https://www.aquablumosaics.com/collections/tupelo-goods-pool-patio-furniture\" title=\"Tupelo Goods In-Pool & Patio Furniture\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
+    "89a27308-d751-41d5-aa05-b0d2fadff296": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "UMBRELLAS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-umbrellas-for-pool-and-patio",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Umbrellas.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "top",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "GARDEN WALLS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/artificial-garden-wall-plant-wall-panels",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Paradise-Garden-Wall-Lifestyle_2_720x_7db10fe6-a6f4-46cc-85d3-030c548aeff3.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "80% 0",
+            "color_accent": "#ffffff"
+          }
+        },
+        "40a9acb2-ccdb-4ff2-b3db-7a240532735b": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "GAMES",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/outdoor-games",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/outdoor_games.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-0",
+        "template--14459271512136__89a27308-d751-41d5-aa05-b0d2fadff296-1681750404dc8fc8be-1",
+        "40a9acb2-ccdb-4ff2-b3db-7a240532735b"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "EXPLORE MORE",
+        "gutter_size": 36,
+        "section_gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": true,
+        "css_class": "blue-bar-overlay outdoor-living-section-6"
+      }
+    },
+    "advanced_content_GtJJEC": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_aPJCcd": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"66357bae14eb510025c3cac8\">\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_aPJCcd"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
+    "eed788d4-2138-4c64-806f-ed605a88c66b": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "FIRE & WATER FEATURES",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Fire-and-water_30fc3ee6-e93b-4204-ad2d-d3c1a9afc8c3.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 700,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "FIRE PITS, BOWLS, & TABLES",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/fire-features_097461c8-4d60-4fbe-bede-41b7930ebb51.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 700,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-0",
+        "template--14459271512136__eed788d4-2138-4c64-806f-ed605a88c66b-1681824809c4e174d6-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 28,
+        "section_gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": "outdoor-living-section-7"
+      }
+    },
+    "0588edea-afce-4615-b359-5845d141dd26": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/fl.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>FLOATING LUXURIES: EXPERIENCE RESORT-STYLE COMFORT AT HOME</strong></h2><p>Browse our amazing selection of resort-style pool floats, loungers, and accessories from Floating Luxuries. Each pool float is crafted from stain and fade resistant fabric, providing long-lasting comfort matched with a sophisticated design.</p><p>Stay cool and relaxed with the sleek, ergonomically designed Kai Shelf Lounger. Constructed of quality materials, engineered to fit the body, and designed with convenient built-in features, this Lounger ensures an unparalleled aquatic relaxation experience. You’ve worked hard to have a great swimming pool… it’s time to fill it with quality lounge chairs and accessories!</p><p><a href=\"/collections/floating-luxuries\" title=\"Floating Luxuries\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
+    "28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "RECENTLY VIEWED",
+        "home_featured_products": "bc-all",
+        "count": 4,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "320f2580-51bc-4eba-aa22-13b12a7ecccd": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "SHOP OUR STAFF FAVORITES",
+        "tab_collection_1": "best-in-pool-furniture-staff-picks",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c9537080-8b7e-4d11-abed-ffdf006443e9",
+    "f7b49f3d-1c37-448e-888b-b38a40ba8033",
+    "c4b52c04-7da6-471a-a2ab-d6fc4ec66c84",
+    "3f71f403-ed57-4fab-8942-662f92e1e6d8",
+    "661f9c76-2a77-4cee-956f-e1e4ad6f1514",
+    "f6555d85-5c5a-489a-a525-e6f076bcdff8",
+    "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162",
+    "89a27308-d751-41d5-aa05-b0d2fadff296",
+    "advanced_content_GtJJEC",
+    "eed788d4-2138-4c64-806f-ed605a88c66b",
+    "0588edea-afce-4615-b359-5845d141dd26",
+    "28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82",
+    "320f2580-51bc-4eba-aa22-13b12a7ecccd"
+  ]
+}

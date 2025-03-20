@@ -21,36 +21,6 @@
     "slideshow_new_8zzw4R": {
       "type": "slideshow-new",
       "blocks": {
-        "slide_R3tWbP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Tenjam_Flash_Sale.jpg",
-            "heading": "IN-POOL FURNITURE SALE",
-            "heading_size": "h1",
-            "subheading": "SAVE 25% ON THE LAYLO LOUNGERS!",
-            "button_label": "Shop Now",
-            "link": "shopify://products/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 10,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_k4tBKN": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Valentines-Day-TOP-Sale.jpg",
-            "heading": "VALENTINES DAY FIRE FEATURE SALE",
-            "heading_size": "h1",
-            "subheading": "SAVE UP TO $300 ON SELECT POWDER COATED FIRE FEATURES",
-            "button_label": "Shop Now",
-            "link": "https://www.aquablumosaics.com/collections/fire-pit-valentines-day-sale",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 20,
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_KTCdTA": {
           "type": "slide",
           "settings": {
@@ -66,10 +36,40 @@
             "text_alignment_mobile": "center"
           }
         },
+        "slide_k4tBKN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/AquaBlu-Spring-Sale-2025-HP-Hero.jpg",
+            "heading": "SPRING INTO STYLE",
+            "heading_size": "h1",
+            "subheading": "SAVE UP TO 15% ON TILE, HARDSCAPES, & MORE!",
+            "button_label": "Learn More",
+            "link": "https://www.aquablumosaics.com/collections/fire-pit-valentines-day-sale",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 20,
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_R3tWbP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Tupelo_Hero_3.png",
+            "heading": "INTRODUCING",
+            "heading_size": "h1",
+            "subheading": "TUPELO GOODS POOL & OUTDOOR FURNITURE",
+            "button_label": "Shop Now",
+            "link": "https://www.aquablumosaics.com/collections/tupelo-goods-pool-patio-furniture",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 10,
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_dDz9fW": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/hero-2-glass-tile-pools.jpg",
+            "image": "shopify://shop_images/All_Glass_Tile_Pools_-_Homepage.jpg",
             "heading": "Take a Dive Into",
             "heading_size": "h1",
             "subheading": "GLASS TILE POOLS",
@@ -98,9 +98,9 @@
         }
       },
       "block_order": [
-        "slide_R3tWbP",
-        "slide_k4tBKN",
         "slide_KTCdTA",
+        "slide_k4tBKN",
+        "slide_R3tWbP",
         "slide_dDz9fW",
         "slide_jDt9WQ"
       ],
@@ -152,6 +152,15 @@
             "link": "shopify://pages/swimming-pool-mosaics"
           }
         },
+        "logo_image_8kjGPB": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Zellige_Look_Tile.jpg",
+            "logo_title": "Zellige-Look Tile",
+            "logo_text": "",
+            "link": "shopify://collections/zellige-look-tile"
+          }
+        },
         "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-1": {
           "type": "logo_image",
           "settings": {
@@ -194,6 +203,7 @@
         "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-2",
         "logo_image_ULyJm3",
         "05fe7af3-3df9-45e7-8c9c-750c5162dfd0",
+        "logo_image_8kjGPB",
         "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-1",
         "344f1b72-076c-4940-aac3-49dbdfe5ed33",
         "80fbd045-b12c-4c9e-b103-856fb964c6e2",
@@ -268,29 +278,10 @@
             "cta_link1": "shopify://pages/pool-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/poolshomepage4.jpg",
+            "image": "shopify://shop_images/Pool_Products_Homepage.jpg",
             "video_url": "",
             "width": "50",
             "height": 700,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "BATH",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://pages/bathroom-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Porcelain_Bathroom_Tile_f1ace623-1346-4ac8-8f2d-634cd408e4ea.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 340,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "#ffffff"
@@ -306,7 +297,26 @@
             "cta_link1": "shopify://pages/kitchen-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/kitchenhome_e2c25863-2212-436b-8865-76e54111f450.jpg",
+            "image": "shopify://shop_images/Ceramic_Kitchen_Tile.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BATH",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/bathroom-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Bathroom_Tile_a2fbde9b-82d9-4f5b-b684-ee06ff327843.jpg",
             "video_url": "",
             "width": "50",
             "height": 340,
@@ -356,8 +366,8 @@
       },
       "block_order": [
         "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-0",
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1",
         "f89bc8b2-184c-4d40-9af0-dfe16313243d",
+        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1",
         "5588f136-9544-41ca-8d48-50bfaa4e0fe8",
         "60867fe7-1b72-46be-9c82-831703da72b4"
       ],
@@ -499,8 +509,8 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/pro-banner.jpg",
-            "image_mobile": "shopify://shop_images/mobile-pro-banner2.jpg",
+            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }

@@ -1,34 +1,143 @@
 <style>
-  .aquablue-menu-grandchildlink{position:relative}.megamenu-area{position:absolute;top:-10px;left:146px;display:none}.pool-mosaics .megamenu-area{top:36px;left:0}.megamenu-pool-mosaics .megamenu-area-1{display:grid;grid-template-columns:200px max-content;width:860px;margin:auto;background:#f5f5f5;padding:25px 40px;grid-column-gap:40px}.megamenu-area-1-R{display:grid;grid-template-columns:max-content max-content max-content;grid-gap:40px;justify-content:space-between}.megamenu-area-1 img{width:100%}.megamenu-area-1 ul{list-style-type:none;margin:0}.megamenu-area-1 h3{font-size:16px;font-weight:900;margin-bottom:10px}.megamenu-area-1 a{letter-spacing:.98px;font-size:14px}.shop-all-link{margin-bottom:28px}@media (max-width:1145px){.megamenu-pool-mosaics .megamenu-area-1{width:955px}.pool-mosaics .megamenu-pool-mosaics{left:-168px!important}}.megamenu-area-1-4 p{color:#fff}
+  .aquablue-menu-grandchildlink {
+    position: relative;
+  }
+  .megamenu-area {
+    position: absolute;
+    top: -10px;
+    left: 146px;
+    display: none;
+  }
+  .pool-mosaics .megamenu-area {
+    top: 36px;
+    left: 0;
+  }
+  .megamenu-pool-mosaics .megamenu-area-1 {
+    display: grid;
+    grid-template-columns: 200px max-content;
+    width: 860px;
+    margin: auto;
+    background: #f5f5f5;
+    padding: 25px 40px;
+    grid-column-gap: 40px;
+  }
+  .megamenu-area-1-R {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-gap: 40px;
+    justify-content: space-between;
+  }
+  .megamenu-area-1 img {
+    width: 100%;
+  }
+  .megamenu-area-1 ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  .megamenu-area-1 h3 {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .megamenu-area-1 a {
+    letter-spacing: 0.98px;
+    font-size: 14px;
+  }
+  .shop-all-link {
+    margin-bottom: 28px;
+  }
+  @media (max-width: 1145px) {
+    .megamenu-pool-mosaics .megamenu-area-1 {
+      width: 955px;
+    }
+    .pool-mosaics .megamenu-pool-mosaics {
+      left: -168px !important;
+    }
+  }
+  .megamenu-area-1-4 p {
+    color: #fff;
+  }
 </style>
 
-<div class="megamenu-area megamenu-pool-mosaics fadeIn">
-  <div class="megamenu-area-1">
-    <div class="megamenu-area-1-L">
-      <p class="h2">SHOP BY</p>
-      <a class="shop-all-link" href="{{ section.settings.mm_mosaics_link1 }}"><b>{{ section.settings.mm_mosaics_text1 }}</b></a>
-      <div class="mega-menu__image">
-        <a href="{{ section.settings.mm_mosaics_link2 }}"> 
-          <img src="{{ section.settings.mm_mosaics_image | img_url: '2x' }}" alt="{{ section.settings.mm_mosaics_image.alt | escape }}" width="{{ section.settings.mm_mosaics_image.width }}" height="{{ section.settings.mm_mosaics_image.height }}" loading="lazy">
-          <p class="megamenu-text-overlay">{{ section.settings.mm_mosaics_text2 }}</p>
-        </a>
-      </div>
-    </div>
-    <div class="megamenu-area-1-R"> 
-      {%- for link in linklists.pool-mosaics-mm.links -%}
-        <div class="megamenu-area-1-1">          
-          <p class="h3">{{ link.title }} </p>
-          <ul class="marg-bttm">
-            {%- for childlink in link.links -%}
-               <li value=""{%- if childlink.title == "View All >>" -%} class="mag-top-10" {%- endif -%}>
-                  {%- if childlink.title == "." -%} <p> {{ childlink.title }} </p> {%- else -%}
-                   <a href="{{ childlink.url }}"> {{ childlink.title }} </a>
-                 {%- endif -%}    
-               </li>
-            {%- endfor -%}
-          </ul>
+<div class="megamenu-area megamenu-area-pool-mosaics">
+  <div class="megamenu-area-container page-width">
+    <div class="megamenu-area-left">
+      {%- for link in menu_link.links -%}
+        <div class="megamenu-area-menu-icon">
+          <a href="{{ link.url }}">
+            {% assign icon_image = menu_settings.icon_turtles %}
+            {% if link.title == 'Turtles' %}
+              {% assign icon_image = menu_settings.icon_turtles %}
+            {% elsif link.title == 'Sharks & Rays' %}
+              {% assign icon_image = menu_settings.icon_sharks_rays %}
+            {% elsif link.title == 'Dolphins' %}
+              {% assign icon_image = menu_settings.icon_dolphins %}
+            {% elsif link.title == 'Mermaids' %}
+              {% assign icon_image = menu_settings.icon_mermaids %}
+            {% elsif link.title == 'Reef Scenes' %}
+              {% assign icon_image = menu_settings.icon_reef_scenes %}
+            {% elsif link.title == 'Whales' %}
+              {% assign icon_image = menu_settings.icon_whales %}
+            {% elsif link.title == 'Medallions' %}
+              {% assign icon_image = menu_settings.icon_medallions %}
+            {% elsif link.title == 'Mandalas' %}
+              {% assign icon_image = menu_settings.icon_mandalas %}
+            {% elsif link.title == 'Contemporary' %}
+              {% assign icon_image = menu_settings.icon_contemporary %}
+            {% elsif link.title == 'Pool Party' %}
+              {% assign icon_image = menu_settings.icon_pool_party %}
+            {% elsif link.title == 'Garden' %}
+              {% assign icon_image = menu_settings.icon_garden %}
+            {% elsif link.title == 'Glow in the Dark' %}
+              {% assign icon_image = menu_settings.icon_glow_in_the_dark %}
+            {% elsif link.title == 'Fusion Series' %}
+              {% assign icon_image = menu_settings.icon_fusion_series %}
+            {% elsif link.title == 'Depth Markers' %}
+              {% assign icon_image = menu_settings.icon_depth_markers %}
+            {% elsif link.title == 'Tribal' %}
+              {% assign icon_image = menu_settings.icon_tribal %}
+            {% elsif link.title == 'Sea Life' %}
+              {% assign icon_image = menu_settings.icon_sea_life %}
+            {% elsif link.title == 'Accents' %}
+              {% assign icon_image = menu_settings.icon_accents %}
+            {% elsif link.title == 'Fish' %}
+              {% assign icon_image = menu_settings.icon_fish %}
+            {% endif %}
+
+            <img
+              src="{{ icon_image | img_url: '2x' }}"
+              alt="{{ icon_image.alt | escape }}"
+              width="{{ icon_image.width }}"
+              height="{{ icon_image.height }}"
+              loading="lazy"
+            >
+            <p class="icon-title">{{- link.title -}}</p>
+          </a>
         </div>
       {%- endfor -%}
     </div>
-  </div> 
+  </div>
+  <div class="megamenu-area-1-R">
+    {%- for link in linklists['pool-mosaics-mm'].links -%}
+      <div class="megamenu-area-1-1">
+        <p class="h3">{{ link.title }}</p>
+        <ul class="marg-bttm">
+          {%- for childlink in link.links -%}
+            <li
+              value=""
+              {%- if childlink.title == 'View All >>' -%}
+                class="mag-top-10"
+              {%- endif -%}
+            >
+              {%- if childlink.title == '.' -%}
+                <p>{{ childlink.title }}</p>
+              {%- else -%}
+                <a href="{{ childlink.url }}"> {{ childlink.title }} </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endfor -%}
+  </div>
 </div>

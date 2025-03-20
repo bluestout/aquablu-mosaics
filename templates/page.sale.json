@@ -1,1 +1,942 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"a92b5673-5ac8-4e2e-a61a-78fb827cbc99":{"type":"slideshow","blocks":{"template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"<p>SALES & PROMOTIONS<\/p>","title_size":50,"subheading":"","custom_text":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/Sales_and_Promotions.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1"],"settings":{"full_width":true,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":true,"mobile_size":20,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"75796859-40c8-48ac-9d2d-974e31ca28cb":{"type":"slideshow-split","blocks":{"fd071408-c866-4ddb-8f32-3eb533a5e0c4":{"type":"slide","settings":{"top_subheading":"VALENTINES DAY FIRE SALE","title":"Save up to $300","title_size":59,"subheading":"on select powder coated metal fire features from the Coronado, Unity, Maya, Sedona, and Cazo collections","link":"shopify:\/\/pages\/outdoor-gas-fire-pits-and-water-features","link_text":"Shop Now","link_2":"","link_text_2":"","text_position":"right","image":"shopify:\/\/shop_images\/valentines-day-2025-top--website.jpg","indent_image":true,"focal_point":"center center","color_scheme":"2"}}},"block_order":["fd071408-c866-4ddb-8f32-3eb533a5e0c4"],"settings":{"full_width":true,"height":650,"height_mobile":450,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"slideshow_zMdP6B":{"type":"slideshow","blocks":{"hero_7EqCAk":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":50,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/black-friday","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-right","image":"shopify:\/\/shop_images\/ABM-BF-2024-Promo.png","image_mobile":"shopify:\/\/shop_images\/ABM-BF-2024-PROMO-MB.png","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["hero_7EqCAk"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"slideshow_mWYVFP":{"type":"slideshow","blocks":{"hero_YXEbfg":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":50,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/swimming-pool-mosaics","link_text":"SHOP NOW","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-left","image":"shopify:\/\/shop_images\/mosmonsale.png","image_mobile":"shopify:\/\/shop_images\/tenjambfemail.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["hero_YXEbfg"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"promo_grid_fUPm7f":{"type":"promo-grid","blocks":{"product_8fWJPX":{"type":"product","settings":{"product":"kai-shelf-lounger-luxury-pool-lounge-chair","subheading":"SAVE","heading":"20% ON ARTISTRY IN MOSAICS & ELEMENT GLO!","textarea":"USE CODE: MOSAICMONDAY","link_label":"","label":"","enable_price":false,"width":"100","color_scheme":"2"}}},"block_order":["product_8fWJPX"],"disabled":true,"settings":{"full_width":false,"heading":"","gutter_size":33,"section_gutter_size":40,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":false,"css_class":""}},"slideshow_split_TqemLq":{"type":"slideshow-split","blocks":{"slide_HYjtLz":{"type":"slide","settings":{"top_subheading":"USE CODE 'MOSAICMONDAY' AT CHECKOUT","title":"Save 20% on Artisty in Mosaics & Element Glo Pool Mosaics!","title_size":40,"subheading":"","link":"shopify:\/\/collections\/artistry-in-mosaics-pool-mosaics","link_text":"Shop Artistry in Mosaics","link_2":"shopify:\/\/collections\/element-glo","link_text_2":"Shop Element Glo","text_position":"left","image":"shopify:\/\/shop_images\/mosmon2.png","indent_image":true,"focal_point":"center center","color_scheme":"2"}}},"block_order":["slide_HYjtLz"],"disabled":true,"settings":{"full_width":true,"height":650,"height_mobile":450,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"promo_grid_7rAh4V":{"type":"promo-grid","blocks":{"sale_collection_qpiYYY":{"type":"sale_collection","settings":{"sale_collection":"artistry-in-mosaics-pool-mosaics","top_text":"SAVE","middle_text":"20% off","bottom_text":"CODE: MOSAICMONDAY","width":"100","color_scheme":"2"}}},"block_order":["sale_collection_qpiYYY"],"disabled":true,"settings":{"full_width":false,"heading":"","gutter_size":33,"section_gutter_size":40,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":false,"css_class":""}},"promo_grid_gaM8ta":{"type":"promo-grid","blocks":{"sale_collection_nV8PTm":{"type":"sale_collection","settings":{"sale_collection":"ledge-lounger-outdoor-pool-and-patio-furniture","top_text":"SAVE","middle_text":"20% off","bottom_text":"ALL LEDGE LOUNGER FURNITURE","width":"100","color_scheme":"2"}}},"block_order":["sale_collection_nV8PTm"],"disabled":true,"settings":{"full_width":true,"heading":"LEDGE LOUNGER FLASH SALE","gutter_size":0,"section_gutter_size":40,"space_above":true,"space_below":false,"two_column_mobile":false,"three_column_mobile":false,"css_class":""}},"e6a70224-a8f2-43f9-abc4-a556bf27c901":{"type":"rich-text","blocks":{"button_qYbn8G":{"type":"button","settings":{"link":"shopify:\/\/collections\/ledge-lounger-outdoor-pool-and-patio-furniture","link_text":"SHOP NOW"}},"heading_FKCYNG":{"type":"heading","settings":{"title":"Don't delay, the sale ends at midnight, December 2nd!"}},"template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1":{"type":"text","settings":{"enlarge_text":true,"text":"<p><strong>Disclaimer:<\/strong> The Ledge Lounger flash sale is valid until 11:59pm (EST) on December 2nd, 2024, and is applicable to all products within the collection. No code is required. Discounts will be automatically applied at check out. For assistance regarding the flash sale, please contact customer service.<\/p>"}}},"block_order":["button_qYbn8G","heading_FKCYNG","template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1"],"disabled":true,"settings":{"align_text":"center","narrow_column":false,"color_scheme":"2","divider":false,"css_class":""}},"slideshow_eiQn9r":{"type":"slideshow","blocks":{"hero_nxee3Y":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":50,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/tenjam","link_text":"SHOP NOW","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-right","image":"shopify:\/\/shop_images\/tenjambfsale.png","image_mobile":"shopify:\/\/shop_images\/tenjambfemail.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["hero_nxee3Y"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"promo_grid_C9gXY9":{"type":"promo-grid","blocks":{"product_QNDhrE":{"type":"product","settings":{"product":"laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair","subheading":"SAVE","heading":"25% ON THE LAYLO POOL LOUNGER","textarea":"*Discount applied at checkout","link_label":"SHOP NOW","label":"","enable_price":false,"width":"100","color_scheme":"2"}},"product_qNd8n8":{"type":"product","disabled":true,"settings":{"product":"tenjam-shayz-in-pool-lounger","subheading":"SAVE","heading":"10% ON ALL TENJAM FURNITURE","textarea":"USE CODE: BFTENJAM10","link_label":"","label":"","enable_price":false,"width":"50","color_scheme":"2"}}},"block_order":["product_QNDhrE","product_qNd8n8"],"settings":{"full_width":false,"heading":"","gutter_size":33,"section_gutter_size":40,"space_above":false,"space_below":true,"two_column_mobile":false,"three_column_mobile":false,"css_class":""}},"slideshow_DVYz9f":{"type":"slideshow","blocks":{"hero_KpNMiy":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":50,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/outdoor-fire-water-and-combination-features","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-right","image":"shopify:\/\/shop_images\/AquaBlu-SmoreSavings-Fire-Pit-Sale-LP-Hero_914ce857-b023-463a-b534-3a4e5fd0acd6.png","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["hero_KpNMiy"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"rich_text_RHYPJN":{"type":"rich-text","blocks":{"text_bqyQgY":{"type":"text","settings":{"enlarge_text":false,"text":"<h4>S'more Savings Event Terms & Conditions<\/h4><p><strong>Sale Period: <\/strong>The S'more Savings Event at AquaBlu Mosaics is valid from September 22nd, 2024, to October 31st, 2024. During this time, customers can enjoy savings of up to $1000 on all fire and fire and water combination products. <strong>Discounted Products:<\/strong> Please note that the discounts apply only to fire and fire and water features. All other products and product categories are excluded from this sale. Items in the Sale and Clearance collection are not eligible for this discount. <strong>Discounts and Promotions:<\/strong> Discounts and promotions are subject to product availability and may vary. <strong>Limited Stock:<\/strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:<\/strong> The standard AquaBlu Mosaics return and exchange policy applies to all S'more Savings Event purchases. Please review our return policy for more information. <strong>Promo Codes: <\/strong>Discounts are applied automatically at checkout. <strong>Customer Support:<\/strong> If you have any questions or concerns regarding our S'more Savings Event, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. AquaBlu Mosaics<br\/>is excited to offer our S'more Savings Event discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect products to <strong>Bring Paradise Home<\/strong>.<\/p>"}}},"block_order":["text_bqyQgY"],"disabled":true,"settings":{"align_text":"left","narrow_column":false,"color_scheme":"none","divider":false,"css_class":""}},"bd85e6e4-b781-4387-bae8-ea26dfc7794b":{"type":"slideshow","blocks":{"template--14668641665096__bd85e6e4-b781-4387-bae8-ea26dfc7794b-hero-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"","title_size":70,"subheading":"","custom_text":"","link":"shopify:\/\/collections\/clearance-discounted-tile-furniture-outdoor-accessories","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-right","image":"shopify:\/\/shop_images\/ledgesummerbanner_958dff37-f6a6-46d0-b9bf-fb874518318c.png","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14668641665096__bd85e6e4-b781-4387-bae8-ea26dfc7794b-hero-1"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"promo_grid_9BMxYC":{"type":"promo-grid","blocks":{"advanced_b7eVUt":{"type":"advanced","settings":{"subheading":"","heading":"","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/4th_of_july_3.png","video_url":"","width":"100","height":800,"text_align":"vertical-center horizontal-center","focal_point":"bottom","color_accent":"#ffffff"}},"advanced_9Uwdzf":{"type":"advanced","disabled":true,"settings":{"subheading":"","heading":"","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Kai_Deep_f192ea9e-ac68-4841-980a-f2bf1fa62160.png","video_url":"","width":"33","height":500,"text_align":"vertical-center horizontal-center","focal_point":"bottom","color_accent":"#ffffff"}},"advanced_GBrzY3":{"type":"advanced","disabled":true,"settings":{"subheading":"","heading":"","textarea":"","cta_text1":"","cta_link1":"","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Kai_Lounger_cc1a3b1a-adad-4e29-846c-49718b9c7349.png","video_url":"","width":"33","height":500,"text_align":"vertical-center horizontal-center","focal_point":"bottom","color_accent":"#ffffff"}}},"block_order":["advanced_b7eVUt","advanced_9Uwdzf","advanced_GBrzY3"],"disabled":true,"settings":{"full_width":false,"heading":"SAVE BIG THIS HOLIDAY!","gutter_size":20,"section_gutter_size":20,"space_above":true,"space_below":true,"two_column_mobile":false,"three_column_mobile":false,"css_class":""}},"dfeb65e9-cf11-4448-9765-2c6d3e775231":{"type":"slideshow","blocks":{"template--14668641665096__dfeb65e9-cf11-4448-9765-2c6d3e775231-hero-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"","title":"","title_size":70,"subheading":"","custom_text":"","link":"shopify:\/\/pages\/samples","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-bottom horizontal-left","image":"shopify:\/\/shop_images\/Samples-banner-1.jpg","image_mobile":"shopify:\/\/shop_images\/samples-mobile_1687826e-1b07-4853-b056-ca85e0685048.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14668641665096__dfeb65e9-cf11-4448-9765-2c6d3e775231-hero-1"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":0,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"advanced_content_kaLtHe":{"type":"advanced-content","blocks":{"liquid_TULCmF":{"type":"liquid","disabled":true,"settings":{"code":"<center><h2 style=\"margin-bottom:2;\"> SAVE 10% ON THE SHAYZ LOUNGERS & RISERS<\/h2><h3 style=\"margin:0; padding-top:;\"> <font color=\"#8cc86e\">USE CODE 'SHAYZ10' AT CHECKOUT<\/h3><p style=\"margin:2; padding-top:2;\"><\/font><p>Save now on the White, White Granite, and Gray Granite Shayz Lounger and Risers! Don't delay, the sale ends on 10.2.24!<\/p><\/center>","width":"50%","alignment":"center"}},"image_aMGaLK":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/AquaBlu-Shayz-End-Of-Summer-Sale.png","link":"shopify:\/\/products\/tenjam-shayz-in-pool-lounger","width":"50%","alignment":"center"}}},"block_order":["liquid_TULCmF","image_aMGaLK"],"disabled":true,"settings":{"full_width":false,"space_around":true,"css_class":""}},"778611a2-9115-4aca-900f-1c2064f03579":{"type":"slideshow-split","blocks":{"c4a003b4-7e78-40ed-a691-2f444a0fb1b7":{"type":"slide","settings":{"top_subheading":"USE CODE 'SHAYZ10' AT CHECKOUT","title":"Save 10% on the Shayz Lounger and Risers","title_size":40,"subheading":"Save now on the White, White Granite, and Gray Granite Shayz Lounger and Risers! Don't delay, the sale ends on 10.2.24!","link":"shopify:\/\/products\/tenjam-shayz-in-pool-lounger","link_text":"Shop Now","link_2":"","link_text_2":"","text_position":"left","image":"shopify:\/\/shop_images\/Tenjam_Summer_Sale.png","indent_image":true,"focal_point":"center center","color_scheme":"2"}}},"block_order":["c4a003b4-7e78-40ed-a691-2f444a0fb1b7"],"disabled":true,"settings":{"full_width":true,"height":650,"height_mobile":450,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"slideshow_split_pQfydK":{"type":"slideshow-split","blocks":{"slide_JDPYyy":{"type":"slide","settings":{"top_subheading":"USE CODE 'SHADESAVE' AT CHECKOUT","title":"Save 50% on the Perfect Umbrella","title_size":40,"subheading":"Spend $1000 on in-pool and patio furniture and get one bluSHADES umbrella HALF OFF!","link":"https:\/\/www.aquablumosaics.com\/collections\/pool-and-patio-outdoor-furniture","link_text":"Shop Pool & Patio Furniture","link_2":"shopify:\/\/collections\/blushades-pool-and-patio-umbrellas","link_text_2":"Find The Perfect Umbrella","text_position":"right","image":"shopify:\/\/shop_images\/umbrella.jpg","indent_image":true,"focal_point":"center center","color_scheme":"2"}}},"block_order":["slide_JDPYyy"],"settings":{"full_width":true,"height":650,"height_mobile":450,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"slideshow_split_3AUTRr":{"type":"slideshow-split","blocks":{"slide_KUc3m6":{"type":"slide","settings":{"top_subheading":"USE CODE 'INSTALL20' AT CHECKOUT","title":"Save 20% on Installation Materials","title_size":40,"subheading":"Spend $750 on tile and stone products and get 20% off tile grout, adhesives, waterproofing, and tools!","link":"shopify:\/\/pages\/tile-and-stone","link_text":"Shop All Tile & Stone","link_2":"shopify:\/\/pages\/installation","link_text_2":"Browse All Installation","text_position":"left","image":"shopify:\/\/shop_images\/install20.jpg","indent_image":true,"focal_point":"center center","color_scheme":"2"}}},"block_order":["slide_KUc3m6"],"settings":{"full_width":true,"height":650,"height_mobile":450,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":""}},"04e68109-2078-419d-82cc-f5e0b128ccea":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/joinclubblu.jpg","video_url":"","image_width":700,"subtitle":"","title":"","text":"<h1>Looking to save more?<\/h1><p>Join ClubBlu for exclusive promos and savings only available to members!<\/p><p>Plus, stay up to date on tile trends for your home and outdoor space, new brand and product additions to the AquaBlu catalog, and find inspiration for your next project!<\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"right","color_scheme":"2","divider":false,"new_layout":false,"css_class":"bath-section-8"}},"99e0f1b0-4941-4132-9a64-a1becadfeb62":{"type":"newsletter","blocks":{"template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-title-1":{"type":"title","settings":{"title":"Sign Up Today!"}},"template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-form-1":{"type":"form","settings":{}}},"block_order":["template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-title-1","template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-form-1"],"settings":{"color_scheme":"2"}},"250ca572-c602-47ec-89af-1e37d80bc33f":{"type":"rich-text","blocks":{"template--14668641665096__250ca572-c602-47ec-89af-1e37d80bc33f-heading-1":{"type":"heading","settings":{"title":"UPCOMING SALES"}},"5d8ce4d7-ea1d-461a-a62b-e98bf16db762":{"type":"text","disabled":true,"settings":{"enlarge_text":true,"text":"<p>Stay tuned for our next upcoming sale!<\/p>"}}},"block_order":["template--14668641665096__250ca572-c602-47ec-89af-1e37d80bc33f-heading-1","5d8ce4d7-ea1d-461a-a62b-e98bf16db762"],"disabled":true,"settings":{"align_text":"center","narrow_column":true,"color_scheme":"none","divider":false,"css_class":""}}},"order":["main","a92b5673-5ac8-4e2e-a61a-78fb827cbc99","75796859-40c8-48ac-9d2d-974e31ca28cb","slideshow_zMdP6B","slideshow_mWYVFP","promo_grid_fUPm7f","slideshow_split_TqemLq","promo_grid_7rAh4V","promo_grid_gaM8ta","e6a70224-a8f2-43f9-abc4-a556bf27c901","slideshow_eiQn9r","promo_grid_C9gXY9","slideshow_DVYz9f","rich_text_RHYPJN","bd85e6e4-b781-4387-bae8-ea26dfc7794b","promo_grid_9BMxYC","dfeb65e9-cf11-4448-9765-2c6d3e775231","advanced_content_kaLtHe","778611a2-9115-4aca-900f-1c2064f03579","slideshow_split_pQfydK","slideshow_split_3AUTRr","04e68109-2078-419d-82cc-f5e0b128ccea","99e0f1b0-4941-4132-9a64-a1becadfeb62","250ca572-c602-47ec-89af-1e37d80bc33f"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "a92b5673-5ac8-4e2e-a61a-78fb827cbc99": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "<p>SALES & PROMOTIONS</p>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Sales_and_Promotions.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1"
+      ],
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 20,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "75796859-40c8-48ac-9d2d-974e31ca28cb": {
+      "type": "slideshow-split",
+      "blocks": {
+        "fd071408-c866-4ddb-8f32-3eb533a5e0c4": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "AQUABLU SPRING SALE",
+            "title": "Save up to 15%",
+            "title_size": 59,
+            "subheading": "on tile, up to 10% on porcelain pavers, and FREE SHIPPING on all pool & outdoor furniture!",
+            "link": "shopify://collections/tile-and-stone",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Spring_Sale_2025_Social_3.png",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "fd071408-c866-4ddb-8f32-3eb533a5e0c4"
+      ],
+      "settings": {
+        "full_width": true,
+        "height": 650,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "rich_text_RHYPJN": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bqyQgY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h4>Springs Sale Terms & Conditions</h4><p><strong>Sale Period: </strong>The S'more Savings Event at AquaBlu Mosaics is valid from March 17th, 2025, to March 23rd, 2025. During this time, customers can enjoy savings of up to 15% on all tile and stone and swimming pool mosaics*, up to 10% on porcelain patio pavers and coping, and free shipping on all pool and outdoor furniture. <strong>Exclusions:</strong> Custom Mosaics Inc. swimming pool mosaics are not eligible for this promotion. <strong>Discounted Products: </strong>Items in the Sale and Clearance collection are not eligible for this discount. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all Spring Sale purchases. Please review our return policy for more information. <strong>Promo Codes: </strong>Discounts are applied automatically at checkout. <strong>Customer Support:</strong> If you have any questions or concerns regarding our Spring Sale, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. AquaBlu Mosaics is excited to offer our Spring Sale discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect products to <strong>Bring Paradise Home</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bqyQgY"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "e6a70224-a8f2-43f9-abc4-a556bf27c901": {
+      "type": "rich-text",
+      "blocks": {
+        "button_qYbn8G": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
+            "link_text": "SHOP NOW"
+          }
+        },
+        "heading_FKCYNG": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Don't delay, the sale ends at midnight, December 2nd!"
+          }
+        },
+        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Disclaimer:</strong> The Ledge Lounger flash sale is valid until 11:59pm (EST) on March 23rd, 2025. The discounts are applicable to all No code is required. Discounts will be automatically applied at check out. For assistance regarding the flash sale, please contact customer service.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "button_qYbn8G",
+        "heading_FKCYNG",
+        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "slideshow_zMdP6B": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_7EqCAk": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/black-friday",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/ABM-BF-2024-Promo.png",
+            "image_mobile": "shopify://shop_images/ABM-BF-2024-PROMO-MB.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_7EqCAk"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "slideshow_mWYVFP": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_YXEbfg": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/swimming-pool-mosaics",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/mosmonsale.png",
+            "image_mobile": "shopify://shop_images/tenjambfemail.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_YXEbfg"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "promo_grid_fUPm7f": {
+      "type": "promo-grid",
+      "blocks": {
+        "product_8fWJPX": {
+          "type": "product",
+          "settings": {
+            "product": "kai-shelf-lounger-luxury-pool-lounge-chair",
+            "subheading": "SAVE",
+            "heading": "20% ON ARTISTRY IN MOSAICS & ELEMENT GLO!",
+            "textarea": "USE CODE: MOSAICMONDAY",
+            "link_label": "",
+            "label": "",
+            "enable_price": false,
+            "width": "100",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "product_8fWJPX"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 33,
+        "section_gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "slideshow_split_TqemLq": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_HYjtLz": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'MOSAICMONDAY' AT CHECKOUT",
+            "title": "Save 20% on Artisty in Mosaics & Element Glo Pool Mosaics!",
+            "title_size": 40,
+            "subheading": "",
+            "link": "shopify://collections/artistry-in-mosaics-pool-mosaics",
+            "link_text": "Shop Artistry in Mosaics",
+            "link_2": "shopify://collections/element-glo",
+            "link_text_2": "Shop Element Glo",
+            "text_position": "left",
+            "image": "shopify://shop_images/mosmon2.png",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_HYjtLz"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "height": 650,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "promo_grid_7rAh4V": {
+      "type": "promo-grid",
+      "blocks": {
+        "sale_collection_qpiYYY": {
+          "type": "sale_collection",
+          "settings": {
+            "sale_collection": "artistry-in-mosaics-pool-mosaics",
+            "top_text": "SAVE",
+            "middle_text": "20% off",
+            "bottom_text": "CODE: MOSAICMONDAY",
+            "width": "100",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "sale_collection_qpiYYY"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 33,
+        "section_gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "promo_grid_gaM8ta": {
+      "type": "promo-grid",
+      "blocks": {
+        "sale_collection_nV8PTm": {
+          "type": "sale_collection",
+          "settings": {
+            "sale_collection": "ledge-lounger-outdoor-pool-and-patio-furniture",
+            "top_text": "SAVE",
+            "middle_text": "20% off",
+            "bottom_text": "ALL LEDGE LOUNGER FURNITURE",
+            "width": "100",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "sale_collection_nV8PTm"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "heading": "LEDGE LOUNGER FLASH SALE",
+        "gutter_size": 0,
+        "section_gutter_size": 40,
+        "space_above": true,
+        "space_below": false,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "slideshow_eiQn9r": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_nxee3Y": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tenjam",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/tenjambfsale.png",
+            "image_mobile": "shopify://shop_images/tenjambfemail.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_nxee3Y"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "promo_grid_C9gXY9": {
+      "type": "promo-grid",
+      "blocks": {
+        "product_QNDhrE": {
+          "type": "product",
+          "settings": {
+            "product": "laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
+            "subheading": "SAVE",
+            "heading": "25% ON THE LAYLO POOL LOUNGER",
+            "textarea": "*Discount applied at checkout",
+            "link_label": "SHOP NOW",
+            "label": "",
+            "enable_price": false,
+            "width": "100",
+            "color_scheme": "2"
+          }
+        },
+        "product_qNd8n8": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "tenjam-shayz-in-pool-lounger",
+            "subheading": "SAVE",
+            "heading": "10% ON ALL TENJAM FURNITURE",
+            "textarea": "USE CODE: BFTENJAM10",
+            "link_label": "",
+            "label": "",
+            "enable_price": false,
+            "width": "50",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "product_QNDhrE",
+        "product_qNd8n8"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 33,
+        "section_gutter_size": 40,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "slideshow_DVYz9f": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_KpNMiy": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/outdoor-fire-water-and-combination-features",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/AquaBlu-SmoreSavings-Fire-Pit-Sale-LP-Hero_914ce857-b023-463a-b534-3a4e5fd0acd6.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_KpNMiy"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "bd85e6e4-b781-4387-bae8-ea26dfc7794b": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14668641665096__bd85e6e4-b781-4387-bae8-ea26dfc7794b-hero-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/ledgesummerbanner_958dff37-f6a6-46d0-b9bf-fb874518318c.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14668641665096__bd85e6e4-b781-4387-bae8-ea26dfc7794b-hero-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "promo_grid_9BMxYC": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_b7eVUt": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/4th_of_july_3.png",
+            "video_url": "",
+            "width": "100",
+            "height": 800,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_9Uwdzf": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Kai_Deep_f192ea9e-ac68-4841-980a-f2bf1fa62160.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_GBrzY3": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Kai_Lounger_cc1a3b1a-adad-4e29-846c-49718b9c7349.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_b7eVUt",
+        "advanced_9Uwdzf",
+        "advanced_GBrzY3"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "heading": "SAVE BIG THIS HOLIDAY!",
+        "gutter_size": 20,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "dfeb65e9-cf11-4448-9765-2c6d3e775231": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14668641665096__dfeb65e9-cf11-4448-9765-2c6d3e775231-hero-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/samples",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Samples-banner-1.jpg",
+            "image_mobile": "shopify://shop_images/samples-mobile_1687826e-1b07-4853-b056-ca85e0685048.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14668641665096__dfeb65e9-cf11-4448-9765-2c6d3e775231-hero-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "advanced_content_kaLtHe": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_TULCmF": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "<center><h2 style=\"margin-bottom:2;\"> SAVE 10% ON THE SHAYZ LOUNGERS & RISERS</h2><h3 style=\"margin:0; padding-top:;\"> <font color=\"#8cc86e\">USE CODE 'SHAYZ10' AT CHECKOUT</h3><p style=\"margin:2; padding-top:2;\"></font><p>Save now on the White, White Granite, and Gray Granite Shayz Lounger and Risers! Don't delay, the sale ends on 10.2.24!</p></center>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "image_aMGaLK": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/AquaBlu-Shayz-End-Of-Summer-Sale.png",
+            "link": "shopify://products/tenjam-shayz-in-pool-lounger",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_TULCmF",
+        "image_aMGaLK"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
+    "778611a2-9115-4aca-900f-1c2064f03579": {
+      "type": "slideshow-split",
+      "blocks": {
+        "c4a003b4-7e78-40ed-a691-2f444a0fb1b7": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'SHAYZ10' AT CHECKOUT",
+            "title": "Save 10% on the Shayz Lounger and Risers",
+            "title_size": 40,
+            "subheading": "Save now on the White, White Granite, and Gray Granite Shayz Lounger and Risers! Don't delay, the sale ends on 10.2.24!",
+            "link": "shopify://products/tenjam-shayz-in-pool-lounger",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Tenjam_Summer_Sale.png",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "c4a003b4-7e78-40ed-a691-2f444a0fb1b7"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "height": 650,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "slideshow_split_pQfydK": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_JDPYyy": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'SHADESAVE' AT CHECKOUT",
+            "title": "Save 50% on the Perfect Umbrella",
+            "title_size": 40,
+            "subheading": "Spend $1000 on in-pool and patio furniture and get one bluSHADES umbrella HALF OFF!",
+            "link": "https://www.aquablumosaics.com/collections/pool-and-patio-outdoor-furniture",
+            "link_text": "Shop Pool & Patio Furniture",
+            "link_2": "shopify://collections/blushades-pool-and-patio-umbrellas",
+            "link_text_2": "Find The Perfect Umbrella",
+            "text_position": "right",
+            "image": "shopify://shop_images/umbrella.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_JDPYyy"
+      ],
+      "settings": {
+        "full_width": true,
+        "height": 650,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "slideshow_split_3AUTRr": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_KUc3m6": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'INSTALL20' AT CHECKOUT",
+            "title": "Save 20% on Installation Materials",
+            "title_size": 40,
+            "subheading": "Spend $750 on tile and stone products and get 20% off tile grout, adhesives, waterproofing, and tools!",
+            "link": "shopify://pages/tile-and-stone",
+            "link_text": "Shop All Tile & Stone",
+            "link_2": "shopify://pages/installation",
+            "link_text_2": "Browse All Installation",
+            "text_position": "left",
+            "image": "shopify://shop_images/install20.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_KUc3m6"
+      ],
+      "settings": {
+        "full_width": true,
+        "height": 650,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "04e68109-2078-419d-82cc-f5e0b128ccea": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/joinclubblu.jpg",
+        "video_url": "",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "",
+        "text": "<h1>Looking to save more?</h1><p>Join ClubBlu for exclusive promos and savings only available to members!</p><p>Plus, stay up to date on tile trends for your home and outdoor space, new brand and product additions to the AquaBlu catalog, and find inspiration for your next project!</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": false,
+        "css_class": "bath-section-8"
+      }
+    },
+    "99e0f1b0-4941-4132-9a64-a1becadfeb62": {
+      "type": "newsletter",
+      "blocks": {
+        "template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Sign Up Today!"
+          }
+        },
+        "template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-form-1": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-title-1",
+        "template--14668641665096__99e0f1b0-4941-4132-9a64-a1becadfeb62-form-1"
+      ],
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "250ca572-c602-47ec-89af-1e37d80bc33f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14668641665096__250ca572-c602-47ec-89af-1e37d80bc33f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "UPCOMING SALES"
+          }
+        },
+        "5d8ce4d7-ea1d-461a-a62b-e98bf16db762": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Stay tuned for our next upcoming sale!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14668641665096__250ca572-c602-47ec-89af-1e37d80bc33f-heading-1",
+        "5d8ce4d7-ea1d-461a-a62b-e98bf16db762"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a92b5673-5ac8-4e2e-a61a-78fb827cbc99",
+    "75796859-40c8-48ac-9d2d-974e31ca28cb",
+    "rich_text_RHYPJN",
+    "e6a70224-a8f2-43f9-abc4-a556bf27c901",
+    "slideshow_zMdP6B",
+    "slideshow_mWYVFP",
+    "promo_grid_fUPm7f",
+    "slideshow_split_TqemLq",
+    "promo_grid_7rAh4V",
+    "promo_grid_gaM8ta",
+    "slideshow_eiQn9r",
+    "promo_grid_C9gXY9",
+    "slideshow_DVYz9f",
+    "bd85e6e4-b781-4387-bae8-ea26dfc7794b",
+    "promo_grid_9BMxYC",
+    "dfeb65e9-cf11-4448-9765-2c6d3e775231",
+    "advanced_content_kaLtHe",
+    "778611a2-9115-4aca-900f-1c2064f03579",
+    "slideshow_split_pQfydK",
+    "slideshow_split_3AUTRr",
+    "04e68109-2078-419d-82cc-f5e0b128ccea",
+    "99e0f1b0-4941-4132-9a64-a1becadfeb62",
+    "250ca572-c602-47ec-89af-1e37d80bc33f"
+  ]
+}

@@ -1,0 +1,168 @@
+<script>  
+  
+(function () {  
+  var windowWidth, loaded = false, lazyLoadByPx = 200;  
+  
+  // Initialize lazy loading  
+  function init() {  
+    if (!loaded) {  
+      loaded = true;  
+      lazyLoadImg();  
+      lazyLoadBackground();  
+      lazyLoadCss();  
+      lazyLoadScripts();  
+    }  
+  }  
+  
+  // Insert an element after a reference element  
+  function insertAfter(newNode, referenceNode) {  
+    try {  
+      referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);  
+    } catch (error) {  
+      console.log(error);  
+    }  
+  }  
+  
+  // Lazy load images  
+  function lazyLoadImg() {  
+    let images = document.querySelectorAll("img.opt_lazy");  
+    let windowHeight = window.innerHeight;  
+  
+    for (let i = 0; i < images.length; i++) {  
+      let rect = images[i].getBoundingClientRect();  
+      if (rect.top !== 0 && rect.top - windowHeight < lazyLoadByPx) {  
+        let src = windowWidth < 600  
+          ? (images[i].dataset.mobsrc === undefined ? images[i].getAttribute("data-src")  
+            : images[i].dataset.mobsrc) : images[i].dataset.src === undefined ? images[i].getAttribute("data-src") : images[i].dataset.src;  
+  
+        let srcset = images[i].getAttribute("data-srcset");  
+  
+        if (src !== null && src !== "") {  
+          images[i].src = src;  
+        }  
+        if (srcset !== null && srcset !== "") {  
+          images[i].srcset = srcset;  
+        }  
+        images[i].classList.remove("opt_lazy");  
+      }  
+    }  
+  }  
+  
+  // Lazy load background images  
+  function lazyLoadBackground() {  
+    let lazyBackgrounds = document.querySelectorAll(".opt_bg_lazy");  
+    lazyBackgrounds.forEach(function (element) {  
+      let lazybg = windowWidth < 600  
+        ? (element.dataset.mobstyle === undefined ? element.dataset.bg : element.dataset.mobstyle)  
+        : element.dataset.bg === undefined ? element.dataset.bg : element.dataset.bg;  
+  
+      if (lazybg !== null && lazybg !== "") {  
+        element.style.backgroundImage = lazybg;  
+      }  
+      element.classList.remove("opt_bg_lazy");  
+    });  
+  }  
+  
+  // Lazy load CSS  
+  function lazyLoadCss() {  
+    let links = document.querySelectorAll("link[data-href]");  
+    for (let i = 0; i < links.length; i++) {  
+      let newLink = document.createElement("link");  
+      newLink.href = links[i].getAttribute("data-href");  
+      newLink.rel = "stylesheet";  
+      delete links[i].dataset.href;  
+      links[i].parentNode.insertBefore(newLink, links[i]);  
+      links[i].parentNode.removeChild(links[i]);  
+    }  
+  }  
+  
+  // Load external JS from a script element  
+  function loadRemoteScript(scriptElement) {  
+    let newScript = document.createElement("script");  
+    if (scriptElement.attributes !== undefined) {  
+      for (let i = 0, attribute; i < scriptElement.attributes.length; i++) {  
+        attribute = scriptElement.attributes[i];  
+        if (attribute.name !== "type" && attribute.nodeName !== "data-src") {  
+          newScript.setAttribute(attribute.name, attribute.value);  
+        }  
+      }  
+    }  
+    newScript.src = scriptElement.getAttribute("data-src");  
+    insertAfter(newScript, scriptElement);  
+    delete scriptElement.dataset.src;  
+    delete scriptElement.type;  
+    scriptElement.parentNode.removeChild(scriptElement);  
+    return newScript;  
+  }  
+  
+  // Load inline JS from a single script element  
+  function loadInlineScript(scriptElement) {  
+  
+    let newScript = document.createElement("script");  
+    for (let i = 0; i < scriptElement.attributes.length; i++) {  
+      let attribute = scriptElement.attributes[i];  
+      if (attribute.name !== "type") {  
+        newScript.setAttribute(attribute.name, attribute.value);  
+      }  
+    }  
+    newScript.innerHTML = scriptElement.innerHTML;  
+    insertAfter(newScript, scriptElement);  
+    scriptElement.parentNode.removeChild(scriptElement);  
+  }  
+  
+  // Lazy load scripts  
+  function lazyLoadScripts() {  
+    let scripts = document.querySelectorAll("script[type=noscript-s]");  
+    if (scripts.length < 1) {  
+      setTimeout(() => {  
+        let event = new Event("wnw_load");  
+        window.dispatchEvent(event);  
+      }, 200);  
+      return;  
+    }  
+    if (scripts[0].getAttribute("data-src") !== null) {  
+      let loadedScript = loadRemoteScript(scripts[0]);  
+      loadedScript.onload = function () {  
+        lazyLoadScripts();  
+      };  
+      loadedScript.onerror = function () {  
+        lazyLoadScripts();  
+      };  
+    } else {  
+      loadInlineScript(scripts[0]);  
+      lazyLoadScripts();  
+    }  
+  }  
+  
+	if(!window.isBot){
+	
+	  // Initialize on DOMContentLoaded  
+	  document.addEventListener("DOMContentLoaded", function () {  
+	    windowWidth = screen.width;  
+	    window.addEventListener("scroll", function () {  
+	      lazyLoadImg();  
+	      init();  
+	    });  
+	    window.addEventListener("mousemove", function () {  
+	      lazyLoadImg();  
+	      init();  
+	    });  
+	    //lazyLoadImg();  
+	    window.addEventListener("touchstart", function () {  
+	      lazyLoadImg();  
+	      init();  
+	    });  
+	  });  
+	  
+	  // Initialize on window load  
+	  window.addEventListener('load', function () {  
+	    console.log('Load FIRE');  
+	    setTimeout(() => {  
+	      init();  
+	    }, 6000);  
+	  });
+  }  
+    
+})();  
+    
+</script>
