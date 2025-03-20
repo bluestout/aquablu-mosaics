@@ -3629,9 +3629,9 @@ if (theme.config.isTouch) {
       if (collapsedNavTrigger) {
         collapsedNavTrigger.on('click', function() {
           collapsedNavTrigger.classList.toggle('is-active');
-          theme.utils.prepareTransition(bottomNav, function() {
+          // theme.utils.prepareTransition(bottomNav, function() {  /*-->Enhancing Navigation Menu with Visuals */
             bottomNav.classList.toggle('is-active');
-          });
+          // });/*<--Enhancing Navigation Menu with Visuals */
         });
       }
 
@@ -3733,7 +3733,6 @@ if (theme.config.isTouch) {
     }
 
     function stickyHeaderScroll() {
-      // console.log("stickyEnabled: " + config.stickyEnabled, "forceStopSticky: " + config.forceStopSticky, "threshold: " + config.threshold);
       if (!config.stickyEnabled) {
         return;
       }
@@ -3752,14 +3751,13 @@ if (theme.config.isTouch) {
         }
 
         if (bottomNav) {
-          theme.utils.prepareTransition(bottomNav);
+          // theme.utils.prepareTransition(bottomNav);/*-->Enhancing Navigation Menu with Visuals */
         }
         if (bottomSearch) {
-          theme.utils.prepareTransition(bottomSearch);
+          // theme.utils.prepareTransition(bottomSearch);/*-->Enhancing Navigation Menu with Visuals */
         }
 
         config.stickyActive = true;
-        console.log("Active --- threshold: " + config.threshold + " scrollY: " + window.scrollY);
 
         wrapper.classList.add(classes.headerCompressed);
 
@@ -3774,14 +3772,13 @@ if (theme.config.isTouch) {
         }
 
         if (bottomNav) {
-          theme.utils.prepareTransition(bottomNav);
+          // theme.utils.prepareTransition(bottomNav);/*-->Enhancing Navigation Menu with Visuals */
         }
         if (bottomSearch) {
-          theme.utils.prepareTransition(bottomSearch);
+          // theme.utils.prepareTransition(bottomSearch);/*-->Enhancing Navigation Menu with Visuals */
         }
 
         config.stickyActive = false;
-        console.log("Deactive --- threshold: " + config.threshold + " scrollY: " + window.scrollY);
 
         // Update threshold in case page was loaded down the screen
         // config.threshold = wrapper.getBoundingClientRect().top;    // Fixing the turtle icon flickering issue - Icons weight and sizing
@@ -4232,7 +4229,7 @@ if (theme.config.isTouch) {
       });
 
       /*   // Header Update
-      // --> Mobile Search Placement   
+      // --> Mobile Search Placement      
       window.addEventListener("scroll", function(){ 
         if (window.scrollY < 100) {
           // detect to scroll top
@@ -4272,7 +4269,7 @@ if (theme.config.isTouch) {
         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
       // <-- Mobile Search Placement
-      */
+      */  // Header Update
 
     }
 
@@ -4305,7 +4302,6 @@ if (theme.config.isTouch) {
       // If close button is clicked, close as expected.
       // Otherwise, ignore clicks in search results, search form, or container elements
       if (evt && evt.target.closest) {
-        
         if (evt.target.closest(selectors.closeSearch)) {} else {
           if (evt.target.closest('.site-header__search-form')) {
             return;
@@ -4317,13 +4313,14 @@ if (theme.config.isTouch) {
             return;
           }
         }
-        
+
         // --> Header Update
         document.querySelector('.site-header__search-container').classList.remove('is-active');
         document.querySelector('.site-header__search-container').classList.add('hide');
         document.querySelector('.header-wrapper [data-nav="below"] .js-search-header').style.display = "block";
         document.querySelector(selectors.input).value = ""; /* Fix Search result issue */
         // <-- Header Update
+
       }
 
       // deselect any focused form elements
@@ -5945,7 +5942,7 @@ if (theme.config.isTouch) {
     function sizeDrawer() {
       var header = document.getElementById('HeaderWrapper').offsetHeight;
       var filters = document.querySelector(selectors.filterBar).offsetHeight;
-      var max = window.innerHeight - header - filters;
+      var max = window.innerHeight - header - 20;   // Header Update
       document.documentElement.style.setProperty('--maxFiltersHeight', `${max}px`);
     }
 
@@ -6375,7 +6372,7 @@ if (theme.config.isTouch) {
 
       onReplaceAjaxContent: function(newDom, section) {
         const openCollapsibleIds = this.fetchOpenCollasibleFilters();
-        
+
         openCollapsibleIds.forEach(selector => {
           newDom
             .querySelectorAll(`[data-collapsible-id=${selector}]`)
@@ -8395,7 +8392,7 @@ if (theme.config.isTouch) {
   // to account for changing mobile window heights
   theme.sizeDrawer = function() {
     var header = document.getElementById('HeaderWrapper').offsetHeight;
-    var max = window.innerHeight - header - 20;   // Header Update
+    var max = window.innerHeight - header;
     document.documentElement.style.setProperty('--maxDrawerHeight', `${max}px`);
   }
 
