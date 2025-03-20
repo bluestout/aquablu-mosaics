@@ -134,7 +134,10 @@
 
             {%- if nav_position == 'beside' -%}
               <div class="header-item header-item--navigation{% if section.settings.main_menu_alignment == 'left-center' %} text-center{% endif %}">
-                {%- render 'header-desktop-nav', main_menu: main_menu, nav_position: nav_position, show_mega_products: section.settings.mega_products -%}
+                {% comment %} --> Enhancing Navigation Menu with Visuals {% endcomment %}
+                {% comment %} {%- render 'header-desktop-nav', main_menu: main_menu, nav_position: nav_position, show_mega_products: section.settings.mega_products -%} {% endcomment %}
+                {%- render 'header-desktop-megamenu', main_menu: main_menu, nav_position: nav_position, show_mega_products: section.settings.mega_products -%}
+                {% comment %} <-- Enhancing Navigation Menu with Visuals {% endcomment %}
               </div>
             {%- endif -%}
 
@@ -162,7 +165,6 @@
                       <path d="M19 14V8.5C19 6.567 17.433 5 15.5 5V5C13.567 5 12 6.567 12 8.5V14" stroke="white" stroke-width="1.5"/>
                     </svg>
                     {% comment %} <-- Icons weight and sizing {% endcomment %}
-
 
                   {%- else -%}
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-bag" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="cls-1" d="M24.23 18c0-7.75 3.92-14 8.75-14s8.74 6.29 8.74 14M14.74 18h36.51l3.59 36.73h-43.7z"/></svg>
@@ -211,11 +213,14 @@
         <div class="site-header__element site-header__element--sub is-active" data-type="nav">  
           {% comment %} <div class="page-width{% if logo_alignment == 'center' %} text-center{% endif %}"> {% endcomment %}
           <div class="page-width">
-            {%- render 'header-desktop-nav', main_menu: main_menu, nav_position: nav_position, show_mega_products: section.settings.mega_products -%}
+            {% comment %} --> Enhancing Navigation Menu with Visuals {% endcomment %}
+            {% comment %} {%- render 'header-desktop-nav', main_menu: main_menu, nav_position: nav_position, show_mega_products: section.settings.mega_products -%} {% endcomment %}
+            {%- render 'header-desktop-megamenu', main_menu: main_menu, nav_position: nav_position, show_mega_products: section.settings.mega_products -%}
+            {% comment %} <-- Enhancing Navigation Menu with Visuals {% endcomment %}
           </div>
         </div>
 
-        <div class="site-header__element site-header__element--sub" data-type="search">
+        <div class="site-header__element site-header__element--sub hide" data-type="search">
           <div class="page-width small--hide medium-down--hide medium-up-large--hide">
             {%- render 'header-search' -%}
           </div>
@@ -232,7 +237,10 @@
 
           <div class="site-header__drawer site-header__mobile-nav medium-up-large--hide" id="MobileNav">
             <div class="site-header__drawer-animate">
-              {%- render 'header-mobile-nav', main_menu: main_menu -%}
+              {% comment %} --> Enhancing Navigation Menu with Visuals {% endcomment %}
+              {% comment %} {%- render 'header-mobile-nav', main_menu: main_menu -%} {% endcomment %}
+              {%- render 'header-mobile-megamenu', main_menu: main_menu -%}
+              {% comment %} <-- Enhancing Navigation Menu with Visuals {% endcomment %}
               
               {% comment %} {%- if section.settings.header_footer_menu -%}
                 <div id="MobileNavFooter"></div>
@@ -284,6 +292,22 @@
   </div>
 </div>
 
+{% comment %} --> Enhancing Navigation Menu with Visuals {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const triggerElements = document.querySelectorAll('.site-nav__item.site-nav__expanded-item.site-nav--is-megamenu');
+    const selectSort = document.getElementById('SortBy');
+  
+    triggerElements.forEach(function(triggerElement) {
+      triggerElement.addEventListener('mouseover', function() {
+        selectSort.blur(); // Blur the select element to close the options
+      });
+    });
+  });
+</script>
+{% comment %} <-- Enhancing Navigation Menu with Visuals {% endcomment %}
+
+{% comment %} Enhancing Navigation Menu with Visuals - Updated schema blocks for mega menu {% endcomment %}
 {% comment %} /*-->Header/Footer and 5k Reviews*/ {% endcomment %}
 {% schema %}
 {
@@ -363,162 +387,7 @@
       "label": "t:sections.header.settings.sticky_collection.label",
       "info": "t:sections.header.settings.sticky_collection.info",
       "default": false
-    },
-        {
-      "type": "header",
-      "content": "Mega Menu Glass Tile"
-    },
-    {
-      "type": "text",
-      "id": "mm_glass_text1",
-      "label": "Glass Tile #1 text",
-      "default": "SHOP ALL"
-    },
-    {
-      "type": "url",
-      "id": "mm_glass_link1",
-      "label": "Glass Tile #1 link"
-    },
-    {
-      "type": "text",
-      "id": "mm_glass_text2",
-      "label": "Glass Tile #2 text",
-      "default": "Popular trends"
-    },
-    {
-      "type": "url",
-      "id": "mm_glass_link2",
-      "label": "Glass Tile #2 link"
-    },
-    {
-      "type": "image_picker",
-      "id": "mm_glass_image",
-      "label": "Glass Tile image"
-    },
-    {
-      "type": "header",
-      "content": "Mega Menu Porcelain Tile"
-    },
-    {
-      "type": "text",
-      "id": "mm_porcelain_text1",
-      "label": "Porcelain Tile #1 text",
-      "default": "SHOP ALL"
-    },
-    {
-      "type": "url",
-      "id": "mm_porcelain_link1",
-      "label": "Porcelain Tile #1 link"
-    },
-    {
-      "type": "text",
-      "id": "mm_porcelain_text2",
-      "label": "Porcelain Tile #2 text",
-      "default": "Popular trends"
-    },
-    {
-      "type": "url",
-      "id": "mm_porcelain_link2",
-      "label": "Porcelain Tile #2 link"
-    },
-    {
-      "type": "image_picker",
-      "id": "mm_porcelain_image",
-      "label": "Porcelain Tile image"
-    },
-    {
-      "type": "header",
-      "content": "Mega Menu Stone Tile"
-    },
-    {
-      "type": "text",
-      "id": "mm_stone_text1",
-      "label": "Stone Tile #1 text",
-      "default": "SHOP ALL"
-    },
-    {
-      "type": "url",
-      "id": "mm_stone_link1",
-      "label": "Stone Tile #1 link"
-    },
-    {
-      "type": "text",
-      "id": "mm_stone_text2",
-      "label": "Stone Tile #2 text",
-      "default": "Popular trends"
-    },
-    {
-      "type": "url",
-      "id": "mm_stone_link2",
-      "label": "Stone Tile #2 link"
-    },
-    {
-      "type": "image_picker",
-      "id": "mm_stone_image",
-      "label": "Stone Tile image"
-    },
-    {
-      "type": "header",
-      "content": "Mega Menu Pool Mosaics"
-    },
-    {
-      "type": "text",
-      "id": "mm_mosaics_text1",
-      "label": "Pool Mosaics #1 text",
-      "default": "SHOP ALL"
-    },
-    {
-      "type": "url",
-      "id": "mm_mosaics_link1",
-      "label": "Pool Mosaics #1 link"
-    },
-    {
-      "type": "text",
-      "id": "mm_mosaics_text2",
-      "label": "Pool Mosaics #2 text",
-      "default": "Popular trends"
-    },
-    {
-      "type": "url",
-      "id": "mm_mosaics_link2",
-      "label": "Pool Mosaics #2 link"
-    },
-    {
-      "type": "image_picker",
-      "id": "mm_mosaics_image",
-      "label": "Pool Mosaics image"
-    },
-    {
-      "type": "header",
-      "content": "Mega Menu Outdoor Living"
-    },
-    {
-      "type": "text",
-      "id": "mm_outdoor_text1",
-      "label": "Outdoor Living #1 text",
-      "default": "SHOP ALL"
-    },
-    {
-      "type": "url",
-      "id": "mm_outdoor_link1",
-      "label": "Outdoor Living #1 link"
-    },
-    {
-      "type": "text",
-      "id": "mm_outdoor_text2",
-      "label": "Outdoor Living #2 text",
-      "default": "Popular trends"
-    },
-    {
-      "type": "url",
-      "id": "mm_outdoor_link2",
-      "label": "Outdoor Living #2 link"
-    },
-    {
-      "type": "image_picker",
-      "id": "mm_outdoor_image",
-      "label": "Outdoor Living image"
-    }       
+    }      
   ],
   "blocks": [
     {
@@ -557,6 +426,916 @@
           "step": 10,
           "unit": "px",
           "info": "t:sections.header.blocks.logo.settings.mobile_logo_width.info"
+        }
+      ]
+    },
+    {
+      "type": "mega_menu_pool_spa",
+      "name": "Mega menu-Pool & Spa",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of Pool & Spa Mega Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text1",
+          "default": "RESIDENTIAL"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link1"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text2",
+          "default": "COMMERCIAL"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link2"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image3"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Text3",
+          "default": "ALL-GLASS TILE POOLS"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link3"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image4"
+        },
+        {
+          "type": "text",
+          "id": "text4",
+          "label": "Text4",
+          "default": "SPAS & SAUNAS"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Link4"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Image5"
+        },
+        {
+          "type": "text",
+          "id": "text5",
+          "label": "Text5",
+          "default": "CUSTOM BLENDS"
+        },
+        {
+          "type": "url",
+          "id": "link5",
+          "label": "Link5"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image6",
+          "label": "Image6"
+        },
+        {
+          "type": "text",
+          "id": "text6",
+          "label": "Text6",
+          "default": "BESPOKE MOSAICS"
+        },
+        {
+          "type": "url",
+          "id": "link6",
+          "label": "Link6"
+        }
+
+      ]
+    },
+    {
+      "type": "mega_menu_kitchen",
+      "name": "Mega menu-Kitchen & Bath",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of Kitchen & Bath Mega Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text1",
+          "default": "FEATURED COLLECTION/PRODUCT"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text2",
+          "default": "FEATURED COLLECTION/PRODUCT"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link2"
+        },
+      ]
+    },
+    {
+      "type": "mega_menu_pool_mosaics",
+      "name": "Mega menu-Pool Mosaics",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of Pool Mosaics Mega Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text1",
+          "default": "SHOP ALL POOL MOSAICS"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link1"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "icon_turtles",
+          "label": "Turtles Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_sharks_rays",
+          "label": "Sharks & Rays Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_dolphins",
+          "label": "Dolphins Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_mermaids",
+          "label": "Mermaids Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_reef_scenes",
+          "label": "Reef Scenes Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_whales",
+          "label": "Whales Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_medallions",
+          "label": "Medallions Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_mandalas",
+          "label": "Mandalas Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_contemporary",
+          "label": "Contemporary Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_pool_party",
+          "label": "Pool Party Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_garden",
+          "label": "Garden Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_glow_in_the_dark",
+          "label": "Glow in the Dark Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_fusion_series",
+          "label": "Fusion Series Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_depth_markers",
+          "label": "Depth Markers Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_tribal",
+          "label": "Tribal Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_sea_life",
+          "label": "Sea Life Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_accents",
+          "label": "Accents Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_fish",
+          "label": "Fish Icon"
+        }
+        
+      ]
+    },
+    {
+      "type": "mega_menu_turf",
+      "name": "Megamenu-Turf&hardscapes",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of HARDSCAPES Mega Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text1",
+          "default": "CONCRETE"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text2",
+          "default": "WOOD-LOOK"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image3"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Text3",
+          "default": "TERRAZO"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image4"
+        },
+        {
+          "type": "text",
+          "id": "text4",
+          "label": "Text4",
+          "default": "MARBLE"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Link4"
+        },
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Image5"
+        },
+        {
+          "type": "text",
+          "id": "text5",
+          "label": "Text5",
+          "default": "TRAVERTINE"
+        },
+        {
+          "type": "url",
+          "id": "link5",
+          "label": "Link5"
+        },
+        {
+          "type": "image_picker",
+          "id": "image6",
+          "label": "Image6"
+        },
+        {
+          "type": "text",
+          "id": "text6",
+          "label": "Text6",
+          "default": "QUARTZITE"
+        },
+        {
+          "type": "url",
+          "id": "link6",
+          "label": "Link6"
+        },
+        {
+          "type": "image_picker",
+          "id": "image7",
+          "label": "Image7"
+        },
+        {
+          "type": "text",
+          "id": "text7",
+          "label": "Text7",
+          "default": "LIMESTONE"
+        },
+        {
+          "type": "url",
+          "id": "link7",
+          "label": "Link7"
+        },
+        {
+          "type": "image_picker",
+          "id": "image8",
+          "label": "Image8"
+        },
+        {
+          "type": "text",
+          "id": "text8",
+          "label": "Text8",
+          "default": "ARTIFICIAL TURF"
+        },
+        {
+          "type": "url",
+          "id": "link8",
+          "label": "Link8"
+        }
+      ]
+    },
+    {
+      "type": "mega_menu_outdoor",
+      "name": "Megamenu-Outdoor Living",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of Outdoor Living Mega Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text1",
+          "default": "Feature"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text2",
+          "default": "Feature"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image3"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Text3",
+          "default": "Feature"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image4"
+        },
+        {
+          "type": "text",
+          "id": "text4",
+          "label": "Text4",
+          "default": "Feature"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Link4"
+        }
+      ]
+    },
+    {
+      "type": "mega_menu_tile_finder",
+      "name": "Megamenu-Tile Finder",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of Tile Finder Mega Menu"
+        },
+        {
+          "type": "text",
+          "id": "shopall_text1",
+          "label": "GLASS TILE Shop All Button",
+          "default": "Shop All"
+        },
+        {
+          "type": "url",
+          "id": "shopall_link1",
+          "label": "GLASS TILE Shop All Link"
+        },
+        {
+          "type": "text",
+          "id": "shopall_text2",
+          "label": "PORCELAIN TILE Shop All Button",
+          "default": "Shop All"
+        },
+        {
+          "type": "url",
+          "id": "shopall_link2",
+          "label": "PORCELAIN TILE Shop All Link"
+        },
+        {
+          "type": "text",
+          "id": "shopall_text3",
+          "label": "NATURAL STONE TILE Shop All Button",
+          "default": "Shop All"
+        },
+        {
+          "type": "url",
+          "id": "shopall_link3",
+          "label": "NATURAL STONE TILE Shop All Link"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "blue_color",
+          "label": "Blue Color",
+          "default": "#1937AE"
+        },
+        {
+          "type": "color",
+          "id": "green_color",
+          "label": "Green Color",
+          "default": "#A2CB82"
+        },
+        {
+          "type": "color",
+          "id": "white_color",
+          "label": "White Color",
+          "default": "#FFF"
+        },
+        {
+          "type": "color",
+          "id": "gray_color",
+          "label": "Gray Color",
+          "default": "#9C9C9C"
+        },
+        {
+          "type": "color",
+          "id": "black_color",
+          "label": "Black Color",
+          "default": "#000"
+        },
+        {
+          "type": "color",
+          "id": "taupe_color",
+          "label": "Taupe Color",
+          "default": "#CABBD5"
+        },
+        {
+          "type": "color",
+          "id": "multi_color",
+          "label": "Multi Color",
+          "default": "#55CCD9"
+        },
+        {
+          "type": "image_picker",
+          "id": "multicolor_icon",
+          "label": "Multicolor Icon"
+        },
+        {
+          "type": "color",
+          "id": "aqua_color",
+          "label": "Aqua Color",
+          "default": "#55CCD9"
+        },
+        {
+          "type": "color",
+          "id": "red_color",
+          "label": "Red Color",
+          "default": "#D80817"
+        },
+        {
+          "type": "color",
+          "id": "purple_color",
+          "label": "Purple Color",
+          "default": "#743BCA"
+        },
+        {
+          "type": "color",
+          "id": "orange_color",
+          "label": "Orange Color",
+          "default": "#F19C23"
+        },
+        {
+          "type": "color",
+          "id": "yellow_color",
+          "label": "Yellow Color",
+          "default": "#FFEA59"
+        },
+        {
+          "type": "color",
+          "id": "brown_color",
+          "label": "Brown Color",
+          "default": "#6A4327"
+        },
+        {
+          "type": "color",
+          "id": "beige_color",
+          "label": "Beige Color",
+          "default": "#6A4327"
+        },
+        {
+          "type": "color",
+          "id": "metallic_color",
+          "label": "Metallic Color",
+          "default": "#6A4327"
+        },
+        {
+          "type": "color",
+          "id": "cream_color",
+          "label": "Cream Color",
+          "default": "#FFE0CB"
+        },
+        {
+          "type": "header",
+          "content": "Shapes"
+        },
+        {
+          "type": "image_picker",
+          "id": "square_icon",
+          "label": "Square Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "fish_scale_icon",
+          "label": "Fish Scale Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "hexagon_icon",
+          "label": "Hexagon Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "penny_round_icon",
+          "label": "Penny Round Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "pebble_icon",
+          "label": "Pebble Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "mixed_icon",
+          "label": "Mixed Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "diamond_icon",
+          "label": "Diamond Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "herringbone_icon",
+          "label": "Herringbone Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "linear_icon",
+          "label": "Linear Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "rectangular_icon",
+          "label": "Rectangular Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "oval_icon",
+          "label": "Oval Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "mosaic_icon",
+          "label": "Mosaic Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "subway_icon",
+          "label": "Subway Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "round_icon",
+          "label": "Round Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "triangular_icon",
+          "label": "Triangular Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "interlocking_icon",
+          "label": "Interlocking Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "square_stone_icon",
+          "label": "Square Stone Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "rectangle_icon",
+          "label": "Rectangle Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "arabesque_icon",
+          "label": "Arabesque Icon"
+        }
+      ]
+    },
+    {
+      "type": "mega_menu_installation",
+      "name": "Mega menu-INSTALLATION",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of INSTALLATION Mega Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text1",
+          "default": "CLASSIC"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link1"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text2",
+          "default": "GLAMOUR"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link2"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image3"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Text3",
+          "default": "JEWEL"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link3"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image4"
+        },
+        {
+          "type": "text",
+          "id": "text4",
+          "label": "Text4",
+          "default": "CRYSTAL"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Link4"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Image5"
+        },
+        {
+          "type": "text",
+          "id": "text5",
+          "label": "Text5",
+          "default": "METALLIC"
+        },
+        {
+          "type": "url",
+          "id": "link5",
+          "label": "Link5"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image6",
+          "label": "Image6"
+        },
+        {
+          "type": "text",
+          "id": "text6",
+          "label": "Text6",
+          "default": "GLOW IN THE DARK"
+        },
+        {
+          "type": "url",
+          "id": "link6",
+          "label": "Link6"
+        }
+      ]
+    },
+    {
+      "type": "mega_menu_resources",
+      "name": "Mega menu-Resources",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content of Resources Mega Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text1",
+          "default": "AQUAPRO TRADE NETWORK"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link1"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text2",
+          "default": "5+ SAMPLES SHIP FEE!"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link2"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image3"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Text3",
+          "default": "INSPIRATION GALLERY"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link3"
         }
       ]
     }

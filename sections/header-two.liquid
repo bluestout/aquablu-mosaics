@@ -155,7 +155,10 @@
 
           <div class="site-header__drawer site-header__mobile-nav medium-up--hide" id="MobileNav">
             <div class="site-header__drawer-animate">
-              {%- render 'header-mobile-nav', main_menu: main_menu -%}
+              {% comment %} --> Enhancing Navigation Menu with Visuals {% endcomment %}
+              {% comment %} {%- render 'header-mobile-nav', main_menu: main_menu -%} {% endcomment %}
+              {%- render 'header-mobile-megamenu', main_menu: main_menu -%}
+              {% comment %} <-- Enhancing Navigation Menu with Visuals {% endcomment %}
               {%- if section.settings.header_footer_menu -%}
                 <div id="MobileNavFooter"></div>
               {%- endif -%}

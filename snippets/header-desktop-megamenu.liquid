@@ -1,0 +1,92 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<style>
+    {% comment %} .aquablue-menu{position:absolute;right:-800px;top:0;width:800px;background:#fff;display:none}.aquablue-menu-active{display:block}.marg-bttm-40{margin-bottom:40px!important}.shop-all-link{margin-bottom:28px;display:block}li.aquablue-menu-grandchildlink.aquablue-menu-grandchildlink-1:hover .megamenu-area,li.aquablue-menu-grandchildlink.aquablue-menu-grandchildlink-2:hover .megamenu-area,li.aquablue-menu-grandchildlink.aquablue-menu-grandchildlink-3:hover .megamenu-area,li.site-nav__item.site-nav__expanded-item.out-door-menu:hover .megamenu-area,li.site-nav__item.site-nav__expanded-item.pool-mosaics:hover .megamenu-area{display:block!important} {% endcomment %}
+     .site-nav__item.sale-item a{
+      color: #55CCD9;
+      font-family: "FuturaDemi";
+    }
+    .site-nav__item.sale-item a:hover{
+      color: #55CCD9;
+    }
+    .site-navigation--below {
+      display: flex;
+      justify-content: space-between;
+    }
+    .megamenu-area{
+      background: white;
+    }
+    .site-nav__link{
+      font-size: 15px;
+    }
+
+    @media only screen and (max-width: 1350px) {
+      .site-nav__link{
+        font-size: 13px;
+      }
+    }
+
+  </style>
+  
+  {%- liquid
+    unless limit
+      assign limit = main_menu.links.size
+    endunless
+    unless offset
+      assign offset = 0
+    endunless
+  -%}
+  
+  <ul class="site-nav site-navigation site-navigation--{{ nav_position }} small-med--hide" role="navigation">
+    {%- for link in main_menu.links limit: limit offset: offset -%}
+      {%- liquid
+        assign has_dropdown = false
+        assign is_megamenu = false
+        if link.levels > 0
+            assign is_megamenu = true
+        endif
+      -%}
+      <li class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %} 
+          {%- if link.title == 'Outdoor Living' -%} out-door-menu {%- endif -%}
+          {%- if link.title == 'SALE' -%} sale-item {%- endif -%}"
+          {% if has_dropdown %}aria-haspopup="true"{% endif %}>
+  
+        <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}">
+          {{ link.title }}
+        </a>
+
+        {%- if link.title == "POOL & SPA" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_pool_spa' | first %}
+            {% render 'megamenu-area-pool-spa', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        {%- if link.title == "KITCHEN & BATH" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_kitchen' | first %}
+            {% render 'megamenu-area-kitchen-bath', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        {%- if link.title == "POOL MOSAICS" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_pool_mosaics' | first %}
+            {% render 'megamenu-area-pool-mosaics', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        {%- if link.title == "HARDSCAPES" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_turf' | first %}
+            {% render 'megamenu-area-turf-hardscapes', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        {%- if link.title == "OUTDOOR LIVING" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_outdoor' | first %}
+          {% render 'megamenu-area-outdoor', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        {%- if link.title == "TILE FINDER" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_tile_finder' | first %}
+            {% render 'megamenu-area-tile-finder', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        {%- if link.title == "INSTALLATION" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_installation' | first %}
+            {% render 'megamenu-area-installation', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        {%- if link.title == "RESOURCES" -%}
+            {% assign menu_block = section.blocks | where: 'type', 'mega_menu_resources' | first %}
+            {% render 'megamenu-area-resources', menu_link:link, menu_settings: menu_block.settings %}
+        {%- endif -%}
+        
+      </li>
+    {%- endfor -%}
+  </ul>

@@ -1,0 +1,115 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+
+<ul
+    class="slide-nav__dropdown"
+    data-parent="tier-2-{{ child_list_handle }}"
+    data-level="2">
+    <li class="slide-nav__item_back">
+      <button type="button"
+        class="slide-nav__button js-toggle-submenu ">
+        <span class="slide-nav__link slide-nav__link--back">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+          <a href="{{ link.url }}" class="slide-nav__link_title">
+          <span class="slide-back-link">{{ link.title }}</span>
+          </a>
+        </span>
+      </button>
+    </li>
+
+    {%- for childlink in link.links -%}
+      {%- liquid
+        assign grand_child_list_handle = childlink.title | handleize
+        assign grand_child_link_id = grand_child_list_handle | append: forloop.index
+      -%}
+
+      <div class="slide-nav_sub-heading {% if forloop.index == 1 %} open {% else %} close {% endif %}" data-content-id="{{ grand_child_link_id }}">
+        <span class="slide-nav_sub-preicon"></span>
+        <span class="slide-nav_sub-title"> {{ childlink.title }}</span>
+        <svg class="slide-nav_sub-icon open-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+            <path d="M9.69189 5.73L5.19189 1.5L0.691895 5.73" stroke="black"/>
+        </svg>
+          <svg class="slide-nav_sub-icon close-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+            <path d="M9.69189 0.49998L5.19189 4.72998L0.691895 0.49998" stroke="black"/>
+          </svg>
+        </div>
+      <ul id="{{ grand_child_link_id }}" class="slide-nav__sub-dropdown" style="display:{% if forloop.index == 1 %} block {% else %} none {% endif %}">
+        {%- for sublink in childlink.links -%}
+            <li class="slide-nav__sub-item">
+                <a href="{{sublink.url}}" class="slide-nav__link_title">
+                    <span class="slide-nav__sub-item-title">{{ sublink.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+      </ul>       
+    {% endfor %}
+
+    {% comment %} Featured menu item {% endcomment %}
+    {%- liquid
+        assign grand_child_list_handle = link.title | handleize
+        assign childlink_size = link.links.size | plus: 1
+        assign grand_child_link_id = grand_child_list_handle | append: childlink_size
+    -%}
+    <div class="slide-nav_sub-heading featured-menu-item  open" data-content-id="{{ grand_child_link_id }}">
+        <span class="slide-nav_sub-preicon"></span>
+        <span class="slide-nav_sub-title">Featured</span>
+        <svg class="slide-nav_sub-icon open-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+            <path d="M9.69189 5.73L5.19189 1.5L0.691895 5.73" stroke="black"/>
+        </svg>
+          <svg class="slide-nav_sub-icon close-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+            <path d="M9.69189 0.49998L5.19189 4.72998L0.691895 0.49998" stroke="black"/>
+        </svg>
+    </div>
+    <ul id="{{ grand_child_link_id }}" class="slide-nav__sub-dropdown featured-menu-content" style="display:block;">
+        <div class="megamenu-mobile-featured-item-container featured-turf-container">
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link1 }}"> 
+                <img src="{{ menu_settings.image1 | img_url: 'master' }}" alt="{{ menu_settings.image1.alt | escape }}" width="{{ menu_settings.image1.width }}" height="{{ menu_settings.image1.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text1 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link2 }}"> 
+                <img src="{{ menu_settings.image2 | img_url: 'master' }}" alt="{{ menu_settings.image2.alt | escape }}" width="{{ menu_settings.image2.width }}" height="{{ menu_settings.image2.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text2 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link3 }}"> 
+                <img src="{{ menu_settings.image3 | img_url: 'master' }}" alt="{{ menu_settings.image3.alt | escape }}" width="{{ menu_settings.image3.width }}" height="{{ menu_settings.image3.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text3 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link4 }}"> 
+                <img src="{{ menu_settings.image4 | img_url: 'master' }}" alt="{{ menu_settings.image4.alt | escape }}" width="{{ menu_settings.image4.width }}" height="{{ menu_settings.image4.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text4 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link5 }}"> 
+                <img src="{{ menu_settings.image5 | img_url: 'master' }}" alt="{{ menu_settings.image5.alt | escape }}" width="{{ menu_settings.image5.width }}" height="{{ menu_settings.image5.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text5 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link6 }}"> 
+                <img src="{{ menu_settings.image6 | img_url: 'master' }}" alt="{{ menu_settings.image6.alt | escape }}" width="{{ menu_settings.image6.width }}" height="{{ menu_settings.image6.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text6 }}</p>
+              </a>
+            </div>
+            <div class="mega-menu__image">
+                <a href="{{ menu_settings.link7 }}"> 
+                  <img src="{{ menu_settings.image7 | img_url: 'master' }}" alt="{{ menu_settings.image7.alt | escape }}" width="{{ menu_settings.image7.width }}" height="{{ menu_settings.image7.height }}" loading="lazy">
+                  <p class="megamenu-text-overlay">{{menu_settings.text7 }}</p>
+                </a>
+              </div>
+              <div class="mega-menu__image">
+                <a href="{{ menu_settings.link8 }}"> 
+                  <img src="{{ menu_settings.image8 | img_url: 'master' }}" alt="{{ menu_settings.image8.alt | escape }}" width="{{ menu_settings.image8.width }}" height="{{ menu_settings.image8.height }}" loading="lazy">
+                  <p class="megamenu-text-overlay">{{menu_settings.text8 }}</p>
+                </a>
+              </div>
+         </div>
+    </ul>       
+
+  </ul>

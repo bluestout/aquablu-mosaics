@@ -378,7 +378,7 @@
     "contact-form": {
       "name": "Formulaire de contact",
       "settings": {
-        "content": "Toutes les soumissions sont envoyées à l'adresse e-mail du client de votre magasin. [En savoir plus](https://help.shopify.com/en/manual/using-themes/change-the-layout/add-contact-form#view-contact-form-submissions).",
+        "content": "Toutes les soumissions sont envoyées à l'adresse e-mail du client de votre magasin. [En savoir plus](https:\/\/help.shopify.com\/en\/manual\/using-themes\/change-the-layout\/add-contact-form#view-contact-form-submissions).",
         "title": {
           "label": "Titre"
         },
@@ -529,7 +529,7 @@
           "label": "Afficher l'UGS"
         },
         "header_media": "Support multimédia",
-        "content": "En savoir plus sur les [types de médias](https://help.shopify.com/en/manual/products/product-media)",
+        "content": "En savoir plus sur les [types de médias](https:\/\/help.shopify.com\/en\/manual\/products\/product-media)",
         "image_position": {
           "label": "Position",
           "options": {
@@ -708,7 +708,7 @@
         "header_newsletter": "Bulletin d'information",
         "show_newsletter": {
           "label": "Afficher l'inscription au bulletin d'information",
-          "info": "Les clients qui s'inscrivent verront leur adresse e-mail ajoutée à la [liste des clients] qui acceptent le marketing (/admin/customers?query=&accepts_marketing=1)."
+          "info": "Les clients qui s'inscrivent verront leur adresse e-mail ajoutée à la [liste des clients] qui acceptent le marketing (\/admin\/customers?query=&accepts_marketing=1)."
         },
         "newsletter_richtext": {
           "label": "Texte"
@@ -737,11 +737,11 @@
             },
             "show_locale_selector": {
               "label": "Afficher le sélecteur de langue",
-              "info": "Pour ajouter une langue, allez à vos [paramètres de langue.](/admin/settings/languages)"
+              "info": "Pour ajouter une langue, allez à vos [paramètres de langue.](\/admin\/settings\/languages)"
             },
             "show_currency_selector": {
               "label": "Afficher le sélecteur de devise",
-              "info": "Pour ajouter une devise, accédez à vos [paramètres de devise](/admin/settings/payments)."
+              "info": "Pour ajouter une devise, accédez à vos [paramètres de devise](\/admin\/settings\/payments)."
             },
             "show_currency_flags": {
               "label": "Afficher les drapeaux des devises"
@@ -825,7 +825,7 @@
         },
         "mega_products": {
           "label": "Afficher le premier produit dans les méga-menus",
-          "info": "[En savoir plus](https://archetypethemes.co/blogs/expanse/how-do-i-create-a-mega-menu)"
+          "info": "[En savoir plus](https:\/\/archetypethemes.co\/blogs\/expanse\/how-do-i-create-a-mega-menu)"
         },
         "header_sticky": {
           "label": "Activer l'en-tête collé",
@@ -915,7 +915,7 @@
         },
         "video_url": {
           "label": "Lien vers une vidéo d'arrière-plan",
-          "info": "Prend en charge YouTube, .MP4 et Vimeo. Toutes les fonctionnalités ne sont pas prises en charge par Vimeo. [En savoir plus](https://archetypethemes.co/blogs/expanse/how-do-i-add-background-videos)"
+          "info": "Prend en charge YouTube, .MP4 et Vimeo. Toutes les fonctionnalités ne sont pas prises en charge par Vimeo. [En savoir plus](https:\/\/archetypethemes.co\/blogs\/expanse\/how-do-i-add-background-videos)"
         },
         "overlay_opacity": {
           "label": "Protection du texte",
@@ -1031,14 +1031,14 @@
         "header_filtering_and_sorting": "Filtrage et tri",
         "enable_sidebar": {
           "label": "Activer le filtre",
-          "info": "Permettez à vos clients de filtrer les collections et les résultats de recherche en fonction de la disponibilité des produits, du prix, de la couleur, etc. [Personnalisez les filtres](/admin/menus)"
+          "info": "Permettez à vos clients de filtrer les collections et les résultats de recherche en fonction de la disponibilité des produits, du prix, de la couleur, etc. [Personnalisez les filtres](\/admin\/menus)"
         },
         "collapse_filters": {
           "label": "Réduire les filtres"
         },
         "enable_color_swatches": {
           "label": "Activer les échantillons de couleur",
-          "info": "[Voir les instructions de configuration](https://archetypethemes.co/blogs/expanse/how-do-i-set-up-color-swatches)"
+          "info": "[Voir les instructions de configuration](https:\/\/archetypethemes.co\/blogs\/expanse\/how-do-i-set-up-color-swatches)"
         },
         "enable_sort": {
           "label": "Afficher les options de tri"
@@ -1070,7 +1070,7 @@
         "subcollections": {
           "name": "Sous-collections",
           "settings": {
-            "content": "Les liens vers les collections de votre menu apparaîtront ici. [En savoir plus](https://archetypethemes.co/blogs/expanse/how-do-i-create-subcollections)"
+            "content": "Les liens vers les collections de votre menu apparaîtront ici. [En savoir plus](https:\/\/archetypethemes.co\/blogs\/expanse\/how-do-i-create-subcollections)"
           }
         }
       }
@@ -1088,7 +1088,7 @@
           "label": "Afficher l'UGS"
         },
         "header_media": "Support multimédia",
-        "content": "En savoir plus sur les [types de médias](https://help.shopify.com/en/manual/products/product-media)",
+        "content": "En savoir plus sur les [types de médias](https:\/\/help.shopify.com\/en\/manual\/products\/product-media)",
         "image_position": {
           "label": "Position",
           "options": {
@@ -1182,14 +1182,14 @@
         "header_filtering_and_sorting": "Filtrage et tri",
         "enable_sidebar": {
           "label": "Activer le filtre",
-          "info": "Permettez à vos clients de filtrer les collections et les résultats de recherche en fonction de la disponibilité des produits, du prix, de la couleur, etc. [Personnalisez les filtres](/admin/menus)"
+          "info": "Permettez à vos clients de filtrer les collections et les résultats de recherche en fonction de la disponibilité des produits, du prix, de la couleur, etc. [Personnalisez les filtres](\/admin\/menus)"
         },
         "collapse_filters": {
           "label": "Réduire les filtres"
         },
         "enable_color_swatches": {
           "label": "Activer les échantillons de couleur",
-          "info": "[Voir les instructions de configuration](https://archetypethemes.co/blogs/expanse/how-do-i-set-up-color-swatches)"
+          "info": "[Voir les instructions de configuration](https:\/\/archetypethemes.co\/blogs\/expanse\/how-do-i-set-up-color-swatches)"
         },
         "enable_sort": {
           "label": "Afficher les options de tri"
@@ -1225,7 +1225,7 @@
         },
         "api_key": {
           "label": "Clé API Google Maps",
-          "info": "Vous devez [enregistrer une clé API Google Maps](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) pour afficher la carte."
+          "info": "Vous devez [enregistrer une clé API Google Maps](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/map-section-api-key) pour afficher la carte."
         },
         "show_button": {
           "label": "Afficher le bouton « Obtenir un itinéraire »."
@@ -1319,7 +1319,7 @@
         },
         "popup_image": {
           "label": "Image",
-          "info": "N'apparaît pas sur les téléphones mobiles afin de respecter les [directives interstitielles de Google] (https://developers.google.com/search/blog/2016/08/helping-users-easily-access-content-on) pour un meilleur référencement."
+          "info": "N'apparaît pas sur les téléphones mobiles afin de respecter les [directives interstitielles de Google] (https:\/\/developers.google.com\/search\/blog\/2016\/08\/helping-users-easily-access-content-on) pour un meilleur référencement."
         },
         "image_position": {
           "label": "Position de l'image",
@@ -1336,7 +1336,7 @@
           "label": "Texte"
         },
         "header_newsletter": "Bulletin d'information",
-        "content": "Les clients qui s'inscrivent verront leur adresse e-mail ajoutée à la [liste des clients] qui acceptent le marketing (/admin/customers?query=&accepts_marketing=1).",
+        "content": "Les clients qui s'inscrivent verront leur adresse e-mail ajoutée à la [liste des clients] qui acceptent le marketing (\/admin\/customers?query=&accepts_marketing=1).",
         "enable_newsletter": {
           "label": "Activer le bulletin d'information"
         },
@@ -1388,7 +1388,7 @@
         }
       },
       "settings": {
-        "content": "Les clients qui s'inscrivent verront leur adresse e-mail ajoutée à la [liste des clients] qui acceptent le marketing (/admin/customers?query=&accepts_marketing=1).",
+        "content": "Les clients qui s'inscrivent verront leur adresse e-mail ajoutée à la [liste des clients] qui acceptent le marketing (\/admin\/customers?query=&accepts_marketing=1).",
         "color_scheme": {
           "label": "Combinaison de couleurs",
           "options": {
@@ -1412,11 +1412,11 @@
         },
         "show_password_message": {
           "label": "Afficher le message de mot de passe",
-          "info": "Message défini dans vos [préférences de boutique en ligne](/admin/online_store/preferences)"
+          "info": "Message défini dans vos [préférences de boutique en ligne](\/admin\/online_store\/preferences)"
         },
         "text": {
           "label": "Texte",
-          "info": "[Informez vos visiteurs d'une remise pour le jour du lancement](https://www.shopify.com/blog/15514000-14-ways-to-use-offers-coupons-discounts-and-deals-to-drive-revenue-and-customer-loyalty)"
+          "info": "[Informez vos visiteurs d'une remise pour le jour du lancement](https:\/\/www.shopify.com\/blog\/15514000-14-ways-to-use-offers-coupons-discounts-and-deals-to-drive-revenue-and-customer-loyalty)"
         },
         "header_newsletter": "Bulletin d'information",
         "newsletter_enable": {
@@ -1507,7 +1507,7 @@
         "contact_form": {
           "name": "Formulaire de contact",
           "settings": {
-            "content": "Toutes les soumissions sont envoyées à l'adresse e-mail du client de votre magasin. [En savoir plus](https://help.shopify.com/en/manual/using-themes/change-the-layout/add-contact-form#view-contact-form-submissions).",
+            "content": "Toutes les soumissions sont envoyées à l'adresse e-mail du client de votre magasin. [En savoir plus](https:\/\/help.shopify.com\/en\/manual\/using-themes\/change-the-layout\/add-contact-form#view-contact-form-submissions).",
             "title": {
               "label": "Titre"
             },
@@ -1530,7 +1530,7 @@
     "product-recommendations": {
       "name": "Recommandations de produits",
       "settings": {
-        "content": "Les recommandations dynamiques utilisent les informations sur les commandes et les produits pour changer et s'améliorer au fil du temps. [En savoir plus](https://help.shopify.com/en/themes/development/recommended-products)",
+        "content": "Les recommandations dynamiques utilisent les informations sur les commandes et les produits pour changer et s'améliorer au fil du temps. [En savoir plus](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)",
         "product_recommendations_heading": {
           "label": "Titre"
         }
@@ -2444,11 +2444,11 @@
         "toolbar_social": {
           "label": "Afficher les icônes sociales"
         },
-        "header_language_selector": "Pour ajouter une langue, allez à vos [paramètres de langue.](/admin/settings/languages)",
+        "header_language_selector": "Pour ajouter une langue, allez à vos [paramètres de langue.](\/admin\/settings\/languages)",
         "show_locale_selector": {
           "label": "Afficher le sélecteur de langue"
         },
-        "header_currency_selector": "Pour ajouter une devise, accédez à vos [paramètres de devise](/admin/settings/payments).",
+        "header_currency_selector": "Pour ajouter une devise, accédez à vos [paramètres de devise](\/admin\/settings\/payments).",
         "show_currency_selector": {
           "label": "Afficher le sélecteur de devise"
         },
@@ -2891,7 +2891,7 @@
           "label": "Espace pour l'image"
         },
         "header_product_reviews": "Avis produit",
-        "content": "Ajoutez des avis en activant le paramètre ci-dessous, en installant  [l'application Shopify Product Reviews](https://apps.shopify.com/product-reviews) et en suivant notre [guide d'installation](https://archetypethemes.co/blogs/support/installing-shopifys-product-reviews-app).",
+        "content": "Ajoutez des avis en activant le paramètre ci-dessous, en installant  [l'application Shopify Product Reviews](https:\/\/apps.shopify.com\/product-reviews) et en suivant notre [guide d'installation](https:\/\/archetypethemes.co\/blogs\/support\/installing-shopifys-product-reviews-app).",
         "enable_product_reviews": {
           "label": "Activer les avis sur les produits"
         }
@@ -2973,43 +2973,43 @@
         "header_accounts": "Comptes",
         "social_facebook_link": {
           "label": "Facebook",
-          "info": "https://www.facebook.com/shopify"
+          "info": "https:\/\/www.facebook.com\/shopify"
         },
         "social_twitter_link": {
           "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "info": "https:\/\/twitter.com\/shopify"
         },
         "social_pinterest_link": {
           "label": "Pinterest",
-          "info": "https://www.pinterest.com/shopify"
+          "info": "https:\/\/www.pinterest.com\/shopify"
         },
         "social_instagram_link": {
           "label": "Instagram",
-          "info": "https://instagram.com/shopify"
+          "info": "https:\/\/instagram.com\/shopify"
         },
         "social_snapchat_link": {
           "label": "Snapchat",
-          "info": "https://www.snapchat.com/add/shopify"
+          "info": "https:\/\/www.snapchat.com\/add\/shopify"
         },
         "social_tiktok_link": {
           "label": "TikTok",
-          "info": "https://www.tiktok.com/@shopify"
+          "info": "https:\/\/www.tiktok.com\/@shopify"
         },
         "social_tumblr_link": {
           "label": "Tumblr",
-          "info": "http://shopify.tumblr.com"
+          "info": "http:\/\/shopify.tumblr.com"
         },
         "social_linkedin_link": {
           "label": "LinkedIn",
-          "info": "https://www.linkedin.com/in/shopify"
+          "info": "https:\/\/www.linkedin.com\/in\/shopify"
         },
         "social_youtube_link": {
           "label": "YouTube",
-          "info": "https://www.youtube.com/user/shopify"
+          "info": "https:\/\/www.youtube.com\/user\/shopify"
         },
         "social_vimeo_link": {
           "label": "Vimeo",
-          "info": "https://vimeo.com/shopify"
+          "info": "https:\/\/vimeo.com\/shopify"
         },
         "header_sharing_options": "Options de partage",
         "share_facebook": {
@@ -3062,7 +3062,7 @@
         "header_predictive_search": "Recherche prédictive",
         "predictive_search_enabled": {
           "label": "Activer la recherche prédictive",
-          "info": "Résultats de la recherche en direct. Pas disponible dans toutes les langues. [En savoir plus](https://help.shopify.com/en/themes/development/search/predictive-search#general-requirements-and-limitations)"
+          "info": "Résultats de la recherche en direct. Pas disponible dans toutes les langues. [En savoir plus](https:\/\/help.shopify.com\/en\/themes\/development\/search\/predictive-search#general-requirements-and-limitations)"
         },
         "predictive_image_size": {
           "label": "Rapport d'aspect de l'image du produit",
@@ -3096,7 +3096,7 @@
     "general": {
       "404": {
         "title": "404 Page non trouvée",
-        "subtext_html": "<p>La page que vous recherchiez n'existe pas. </p><p><a href='{{ url }}'>Continuer à acheter</a></p>>"
+        "subtext_html": "<p>La page que vous recherchiez n'existe pas. <\/p><p><a href='{{ url }}'>Continuer à acheter<\/a><\/p>>"
       },
       "accessibility": {
         "skip_to_content": "Ignorer et passer au contenu",
@@ -3119,7 +3119,7 @@
         "login_form_submit": "Saisir",
         "signup_form_email_label": "E-mail",
         "signup_form_success": "Nous vous enverrons un e-mail dès que nous ouvrirons !",
-        "admin_link_html": "Propriétaire de magasin ? <a href=\"/admin\" class=\"text-link\">Connectez-vous ici</a>",
+        "admin_link_html": "Propriétaire de magasin ? <a href=\"\/admin\" class=\"text-link\">Connectez-vous ici<\/a>",
         "password_link": "Mot de passe",
         "powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
       },
@@ -3178,8 +3178,8 @@
         "get_directions": "Obtenir un itinéraire",
         "address_error": "Erreur dans la recherche de cette adresse",
         "address_no_results": "Aucun résultat pour cette adresse",
-        "address_query_limit_html": "Vous avez dépassé la limite d'utilisation de l'API Google. Envisagez de passer à un <a href=\"https://developers.google.com/maps/premium/usage-limits\">Plan Premium</a>.",
-        "auth_error_html": "Un problème est survenu lors de l'authentification de votre compte Google Maps. Créez et activez les autorisations <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">JavaScript API</a> et <a href=\"https://developers.google.com/maps/documentation/geocoding/get-api-key\">Geocoding API</a> de votre application."
+        "address_query_limit_html": "Vous avez dépassé la limite d'utilisation de l'API Google. Envisagez de passer à un <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Plan Premium<\/a>.",
+        "auth_error_html": "Un problème est survenu lors de l'authentification de votre compte Google Maps. Créez et activez les autorisations <a href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key\">JavaScript API<\/a> et <a href=\"https:\/\/developers.google.com\/maps\/documentation\/geocoding\/get-api-key\">Geocoding API<\/a> de votre application."
       },
       "slideshow": {
         "play_slideshow": "Lire le diaporama",
@@ -3230,7 +3230,7 @@
         "reduce_quantity": "Réduire la quantité d'articles d'une unité",
         "increase_quantity": "Augmenter la quantité d'articles d'une unité",
         "terms": "J'accepte les conditions générales",
-        "terms_html": "J'accepte les <a href='{{ url }}' target='_blank'>conditions générales</a>",
+        "terms_html": "J'accepte les <a href='{{ url }}' target='_blank'>conditions générales<\/a>",
         "terms_confirm": "Vous devez accepter les conditions générales de vente pour passer à la caisse.",
         "recommended_title": "S'accorde parfaitement avec"
       },
@@ -3303,7 +3303,7 @@
         "city": "Ville",
         "country": "Pays",
         "province": "Province",
-        "zip": "Code postal/Zip",
+        "zip": "Code postal\/Zip",
         "phone": "Téléphone",
         "set_default": "Définir comme adresse par défaut",
         "add": "Ajouter l'adresse",
@@ -3415,7 +3415,7 @@
         "sale": "Vente",
         "sale_price": "Prix soldé",
         "regular_price": "Prix habituel",
-        "from_text_html": "<span>à partir de</span> {{ price }}",
+        "from_text_html": "<span>à partir de<\/span> {{ price }}",
         "quick_shop": "Boutique rapide",
         "more_from_html": "En savoir plus à partir de {{ link }}",
         "recent_products": "Produits récemment consultés",
@@ -3434,7 +3434,7 @@
         "add_to_cart": "Ajouter au panier",
         "preorder": "Pré-commande",
         "include_taxes": "Taxes incluses.",
-        "shipping_policy_html": "<a href='{{ link }}'>Envoi</a> calculé à la caisse.",
+        "shipping_policy_html": "<a href='{{ link }}'>Envoi<\/a> calculé à la caisse.",
         "will_not_ship_until": "Prêt à être expédié {{ date }}",
         "will_be_in_stock_after": "De retour en stock {{ date }}",
         "waiting_for_stock": "Inventaire en cours de livraison",
@@ -3448,8 +3448,8 @@
         "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
         "pick_up_available": "Service de retrait disponible",
         "pick_up_currently_unavailable": "Enlèvement actuellement indisponible",
-        "pick_up_available_at_html": "Enlèvement disponible à <strong>{{ location_name }}</strong>",
-        "pick_up_unavailable_at_html": "Retrait actuellement non disponible à <strong>{{ localisation_name }}</strong>"
+        "pick_up_available_at_html": "Enlèvement disponible à <strong>{{ location_name }}<\/strong>",
+        "pick_up_unavailable_at_html": "Retrait actuellement non disponible à <strong>{{ localisation_name }}<\/strong>"
       }
     },
     "gift_cards": {
@@ -3503,7 +3503,7 @@
         },
         "color_swatches": {
           "label": "Activer les échantillons de couleur",
-          "info": "Le type doit être défini sur « Boutons ». [Apprenez à mettre en place des échantillons](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)"
+          "info": "Le type doit être défini sur « Boutons ». [Apprenez à mettre en place des échantillons](https:\/\/archetypethemes.co\/blogs\/impulse\/how-do-i-set-up-color-swatches)"
         }
       }
     },
@@ -3520,11 +3520,11 @@
       "settings": {
         "show_dynamic_checkout": {
           "label": "Affichez le bouton de paiement dynamique",
-          "info": "Permet aux clients de régler leurs achats directement en utilisant un mode de paiement familier. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+          "info": "Permet aux clients de régler leurs achats directement en utilisant un mode de paiement familier. [En savoir plus](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
         },
         "surface_pickup_enable": {
           "label": "Activer la fonction de disponibilité de la collecte",
-          "info": "Apprenez à installer cette fonction [ici](https://help.shopify.com/en/manual/shipping/setting-up-and-managing-your-shipping/local-methods/local-pickup)"
+          "info": "Apprenez à installer cette fonction [ici](https:\/\/help.shopify.com\/en\/manual\/shipping\/setting-up-and-managing-your-shipping\/local-methods\/local-pickup)"
         }
       }
     },
@@ -3536,7 +3536,7 @@
         },
         "inventory_transfers_enable": {
           "label": "Affichez l'avis de transfert de stock",
-          "info": "Apprenez à créer des transferts de stock [ici](https://help.shopify.com/en/manual/products/inventory/transfers/create-transfer)"
+          "info": "Apprenez à créer des transferts de stock [ici](https:\/\/help.shopify.com\/en\/manual\/products\/inventory\/transfers\/create-transfer)"
         }
       }
     },
@@ -3631,7 +3631,7 @@
     "contact_form": {
       "name": "Formulaire de contact",
       "settings": {
-        "content": "Toutes les soumissions sont envoyées à l'adresse e-mail du client de votre magasin. [En savoir plus](https://help.shopify.com/en/manual/using-themes/change-the-layout/add-contact-form#view-contact-form-submissions).",
+        "content": "Toutes les soumissions sont envoyées à l'adresse e-mail du client de votre magasin. [En savoir plus](https:\/\/help.shopify.com\/en\/manual\/using-themes\/change-the-layout\/add-contact-form#view-contact-form-submissions).",
         "title": {
           "label": "Titre"
         },

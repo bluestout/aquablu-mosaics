@@ -1,0 +1,120 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<style>
+    .slide-nav-pool-mosaics-top{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0px;
+        justify-content: space-between;
+        gap: 5px;
+        row-gap: 15px;
+    }
+    .slide-nav-pool-mosaics-top .megamenu-moible-menu-icon{
+        width: 32%;
+    }
+    .slide-nav-pool-mosaics-top .megamenu-moible-menu-icon a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .slide-nav-pool-mosaics-top .megamenu-moible-menu-icon img{
+        width: 70px;
+        height: 70px;
+    }
+    .slide-nav-pool-mosaics-top .megamenu-moible-menu-icon img{
+        text-align: center;
+    }
+    .megamenu-mobile-featured-item-container.featured-pool-masics-container .mega-menu__image{
+        width: 100%;
+        max-width: 100%;
+    }
+</style>
+<ul
+    class="slide-nav__dropdown"
+    data-parent="tier-2-{{ child_list_handle }}"
+    data-level="2">
+    <li class="slide-nav__item_back">
+      <button type="button"
+        class="slide-nav__button js-toggle-submenu ">
+        <span class="slide-nav__link slide-nav__link--back">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"/></svg>
+          <a href="{{ link.url }}" class="slide-nav__link_title">
+          <span class="slide-back-link">{{ link.title }}</span>
+          </a>
+        </span>
+      </button>
+    </li>
+    <div class="slide-nav-pool-mosaics-top">
+        {%- for childlink in link.links -%}
+        {%- liquid
+            assign grand_child_list_handle = childlink.title | handleize
+            assign grand_child_link_id = grand_child_list_handle | append: forloop.index
+        -%}
+        
+            <div class="megamenu-moible-menu-icon"> 
+                <a href="{{ childlink.url }}"> 
+                    {% assign icon_image = menu_settings.icon_turtles %}
+                    {% if childlink.title == "Turtles" %}
+                    {% assign icon_image = menu_settings.icon_turtles %}
+                    {% elsif childlink.title == "Sharks & Rays" %}
+                    {% assign icon_image = menu_settings.icon_sharks_rays %}
+                    {% elsif childlink.title == "Dolphins" %}
+                    {% assign icon_image = menu_settings.icon_dolphins %}
+                    {% elsif childlink.title == "Mermaids" %}
+                    {% assign icon_image = menu_settings.icon_mermaids %}
+                    {% elsif childlink.title == "Reef Scenes" %}
+                    {% assign icon_image = menu_settings.icon_reef_scenes %}
+                    {% elsif childlink.title == "Whales" %}
+                    {% assign icon_image = menu_settings.icon_whales %}
+                    {% elsif childlink.title == "Medallions" %}
+                    {% assign icon_image = menu_settings.icon_medallions %}
+                    {% elsif childlink.title == "Mandalas" %}
+                    {% assign icon_image = menu_settings.icon_mandalas %}
+                    {% elsif childlink.title == "Contemporary" %}
+                    {% assign icon_image = menu_settings.icon_contemporary %}
+                    {% elsif childlink.title == "Pool Party" %}
+                    {% assign icon_image = menu_settings.icon_pool_party %}
+                    {% elsif childlink.title == "Garden" %}
+                    {% assign icon_image = menu_settings.icon_garden %}
+                    {% elsif childlink.title == "Glow in the Dark" %}
+                    {% assign icon_image = menu_settings.icon_glow_in_the_dark %}
+                    {% elsif childlink.title == "Fusion Series" %}
+                    {% assign icon_image = menu_settings.icon_fusion_series %}
+                    {% elsif childlink.title == "Depth Markers" %}
+                    {% assign icon_image = menu_settings.icon_depth_markers %}
+                    {% elsif childlink.title == "Tribal" %}
+                    {% assign icon_image = menu_settings.icon_tribal %}
+                    {% elsif childlink.title == "Sea Life" %}
+                    {% assign icon_image = menu_settings.icon_sea_life %}
+                    {% elsif childlink.title == "Accents" %}
+                    {% assign icon_image = menu_settings.icon_accents %}
+                    {% elsif childlink.title == "Fish" %}
+                    {% assign icon_image = menu_settings.icon_fish %}
+                    {% endif %}
+
+                    <img src="{{ icon_image | img_url: 'master' }}" alt="{{ icon_image.alt | escape }}" width="{{ icon_image.width }}" height="{{ icon_image.height }}" loading="lazy">         
+                    <p class="icon-title">{{- childlink.title -}} </p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% comment %} Featured menu item {% endcomment %}
+    {%- liquid
+        assign grand_child_list_handle = link.title | handleize
+        assign childlink_size = link.links.size | plus: 1
+        assign grand_child_link_id = grand_child_list_handle | append: childlink_size
+    -%}
+    <ul id="{{ grand_child_link_id }}" class="slide-nav__sub-dropdown featured-menu-content" style="display:block;">
+        <div class="megamenu-mobile-featured-item-container featured-pool-masics-container">
+            <div class="mega-menu__image">
+              <a href="{{ menu_settings.link1 }}"> 
+                <img src="{{ menu_settings.image1 | img_url: 'master' }}" alt="{{ menu_settings.image1.alt | escape }}" width="{{ menu_settings.image1.width }}" height="{{ menu_settings.image1.height }}" loading="lazy">
+                <p class="megamenu-text-overlay">{{menu_settings.text1 }}</p>
+              </a>
+            </div>
+         </div>
+    </ul>       
+
+  </ul>
+
+ 

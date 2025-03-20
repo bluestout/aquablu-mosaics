@@ -1,0 +1,246 @@
+{% comment %} Enhancing Navigation Menu with Visuals {% endcomment %}
+<style>
+    .slide-nav__item_back{
+        margin-bottom: 20px;
+    }
+    .slide-nav__link--back{
+        padding: 5px 20px;
+        justify-content: center;
+        background: #F3F3F3;
+    }
+    .slide-nav__link--back .icon{
+        position: absolute;
+        left: 10px;
+        margin-left: 10px;
+    }
+    .slide-back-link{
+        font-size: 18px;
+    }
+    .slide-nav_sub-heading{
+        position: relative;
+        padding: 0 23px;
+        display: flex;
+        /* border-left: solid; */
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .slide-nav_sub-preicon{
+        width: 2px;
+        height: 15px;
+        background: #55CCD9;
+        pointer-events: none;
+    }
+    .slide-nav_sub-icon {
+        margin-right: 10px;
+        margin-left: auto;
+        pointer-events: none;
+    }
+    .slide-nav_sub-heading.open .slide-nav_sub-icon.close-icon{
+        display: none;
+    }
+    .slide-nav_sub-heading.open .slide-nav_sub-icon.open-icon{
+        display: block;
+    }
+    .slide-nav_sub-heading.close .slide-nav_sub-icon.close-icon{
+        display: block;
+    }
+    .slide-nav_sub-heading.close .slide-nav_sub-icon.open-icon{
+        display: none;
+    }
+    .slide-nav_sub-title{
+        padding: 0 8px;
+        font-size: 16px;
+        font-family: FuturaMedium;
+        pointer-events: none;
+        text-transform: uppercase;
+    }
+    .slide-nav__sub-dropdown{
+        margin: 0;
+        padding: 0 33px;
+    }
+    .slide-nav__sub-item{
+        margin-bottom: 16px;
+    }
+    .slide-nav__sub-item-title{
+        font-size: 14px;
+    }
+    .megamenu-mobile-featured-item-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    .megamenu-mobile-featured-item-container .mega-menu__image{
+        width: 48%;
+        margin-bottom: 15px;
+    }
+    .megamenu-mobile-featured-item-container .mega-menu__image .megamenu-text-overlay{
+        text-align: center;
+        font-size: 14px;
+    }
+    .slide-nav__item.SALE a span{
+      color: #55CCD9;
+      }
+    .featured-menu-content{
+      padding: 0 20px;
+      }
+  </style>
+  <div class="slide-nav__wrapper" data-level="1">
+      <ul class="slide-nav">
+        {%- for link in main_menu.links -%}
+          {%- liquid
+            assign link_index = forloop.index
+            assign child_list_handle = link.title | handleize | append: link_index
+          -%}
+    
+          <li class="slide-nav__item {{link.title}}"> 
+            {%- if link.levels > 0 -%}
+              <button type="button"
+                class="slide-nav__button js-toggle-submenu"
+                data-target="tier-2-{{ child_list_handle }}"
+                {% if link.active or link.child_active %}data-active="true"{% endif %}>
+                <span class="slide-nav__link">
+                  <span class="slide-level-two">{{ link.title }}</span>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                  <span class="icon__fallback-text">{{ 'general.drawers.expand_submenu' | t }}</span>
+                </span>
+              </button>
+    
+                  {%- if link.title == "POOL & SPA" -%}
+                      {% assign menu_block = section.blocks | where: 'type', 'mega_menu_pool_spa' | first %}
+                      {% render 'megamenu-mobile-pool-spa', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+                  {%- endif -%}
+                  {%- if link.title == "KITCHEN & BATH" -%}
+                    {% assign menu_block = section.blocks | where: 'type', 'mega_menu_kitchen' | first %}
+                    {% render 'megamenu-mobile-kitchen-bath', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+                  {%- endif -%}
+                  {%- if link.title == "POOL MOSAICS" -%}
+                    {% assign menu_block = section.blocks | where: 'type', 'mega_menu_pool_mosaics' | first %}
+                    {% render 'megamenu-mobile-pool-mosaics', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+                  {%- endif -%}
+                  {%- if link.title == "HARDSCAPES" -%}
+                      {% assign menu_block = section.blocks | where: 'type', 'mega_menu_turf' | first %}
+                      {% render 'megamenu-mobile-turf-hardscapes', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+                    {%- endif -%}
+                  {%- if link.title == "OUTDOOR LIVING" -%}
+                      {% assign menu_block = section.blocks | where: 'type', 'mega_menu_outdoor' | first %}
+                      {% render 'megamenu-mobile-outdoor', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+                  {%- endif -%}
+  
+                  {%- if link.title == "TILE FINDER" -%}
+                      {% assign menu_block = section.blocks | where: 'type', 'mega_menu_tile_finder' | first %}
+                      {% render 'megamenu-mobile-tile-finder', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+  
+                  {%- endif -%}
+                  {%- if link.title == "INSTALLATION" -%}
+                      {% assign menu_block = section.blocks | where: 'type', 'mega_menu_installation' | first %}
+                      {% render 'megamenu-mobile-installation', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+                  {%- endif -%}
+                  {%- if link.title == "RESOURCES" -%}
+                      {% assign menu_block = section.blocks | where: 'type', 'mega_menu_resources' | first %}
+                      {% render 'megamenu-mobile-resources', link:link, menu_settings: menu_block.settings, child_list_handle: child_list_handle %}
+                    {%- endif -%}
+  
+              {% else %}
+                  <a href="{{ link.url }}" class="slide-nav__link">
+                      <span class="slide-level-two">{{ link.title | escape }}</span>
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+                  </a>
+              {% endif %}
+          </li>
+        {%- endfor -%}   
+      </ul>
+  </div>
+    <div class="mobile-menu">
+      <ul class="slide-nav">
+        <li class="slide-nav__item">
+          <a href="https://www.aquablumosaics.com/account/" class="slide-nav__link"><span class="slide-level-two" > My Account </span>  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg></a>
+        </li>
+        <li class="slide-nav__item">
+    
+          <a href="https://www.aquablumosaics.com/pages/wholesale" class="slide-nav__link"><span class="slide-level-two" > AquaPRO Sign Up </span> <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg></a>
+        </li>
+      
+        {% comment %} --> Header Update {% endcomment %}
+        <li class="slide-nav__item nav-call-item">
+            <a class="slide-nav__link" href="tel:18009711442">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px">
+                <path d="M20.1005 14.4L17.1005 11.4C16.8005 11.1 16.5005 11 16.1005 11C15.7005 11 15.4005 11.1 15.1005 11.4L13.1005 13.4L7.10052 7.4L9.10052 5.4C9.70052 4.8 9.70052 3.9 9.10052 3.4L6.10052 0.4C5.80052 0.1 5.50052 0 5.10052 0C4.70052 0 4.40052 0.1 4.10052 0.4L1.10052 3.4C1.00052 3.5 0.200519 4.3 0.500519 6.2C0.900519 8.4 2.80052 11.2 6.00052 14.4C10.6005 19 13.5005 20 15.2005 20C16.4005 20 16.9005 19.5 17.0005 19.4L20.0005 16.4C20.3005 16.1 20.4005 15.8 20.4005 15.4C20.6005 15 20.4005 14.7 20.1005 14.4ZM16.1005 18.4C16.1005 18.4 13.7005 20 7.10052 13.4C0.300519 6.6 2.10052 4.4 2.10052 4.4L5.10052 1.4L8.10052 4.4L5.60052 6.9C5.30052 7.2 5.30052 7.6 5.60052 7.9L12.6005 14.9C12.9005 15.2 13.3005 15.2 13.6005 14.9L16.1005 12.4L19.1005 15.4L16.1005 18.4Z" fill="black"/>
+            </svg>
+            <span class="slide-level-two"> (800) 971-1442 </span>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg>
+            </a>
+        </li>
+      {% comment %} <-- Header Update {% endcomment %}
+
+        {% comment %} <li class="slide-nav__item">
+    
+          <a href="/" class="slide-nav__link"><span> ClubBlu Sign Up </span> <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"/></svg></a>
+        </li> {% endcomment %}
+      </ul>
+    </div> 
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+          
+          const menuButtons = document.querySelectorAll(".slide-nav_sub-heading");
+          const menuContents = document.querySelectorAll(".slide-nav__sub-dropdown");
+  
+          menuButtons.forEach((btn) => {
+              btn.addEventListener("click", (e) => {
+                  if ( e.target.classList.contains("featured-menu-item"))
+                      return;
+  
+                  var scope_id = e.target.getAttribute('data-scope-id');
+  
+                  // Remove 'active' class from all buttons
+                  menuButtons.forEach((f) => { 
+                      if ( f != e.target && !f.classList.contains("featured-menu-multi") ) {
+                          f.classList.remove('open');
+                          f.classList.add('close');
+                      }
+                  });
+  
+                  // Hide all menu contents
+                  menuContents.forEach((f) => { 
+                      if ( !f.classList.contains("featured-menu-content") ) {
+                          f.style.display = 'none'; 
+                      }
+                  });
+                  
+                  // Get the content ID from the data attribute
+                  var content_id = e.target.getAttribute('data-content-id');
+                  var content_el = document.querySelector("#" + content_id);
+  
+                  {% comment %} console.log("id= " + content_id);
+                  console.log("el= ", content_el); {% endcomment %}
+  
+                  // Show the corresponding content
+                  if (content_el) {
+                      content_el.style.display = content_el.classList.contains('open-flex') ? 'flex' : 'block';
+                  }
+  
+                  // Add 'active' class to the hovered button
+                  console.log(e.target.classList);
+                  
+                  if ( e.target.classList.contains("open") ) {
+                      e.target.classList.remove("open");
+                      e.target.classList.add("close");
+                      if (content_el) {
+                          content_el.style.display = 'none';
+                      }
+                  }
+                  else{
+                      e.target.classList.remove("close");
+                      e.target.classList.add("open");
+                      if (content_el) {
+                          content_el.style.display = content_el.classList.contains('open-flex') ? 'flex' : 'block';
+                      }
+                  }
+                      
+                  
+              });
+          });
+  
+      });
+    </script>
