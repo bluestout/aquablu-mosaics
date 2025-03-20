@@ -14949,6 +14949,14 @@ span.collection-link {
     height: 95px;
   }
 }
+
+@media (max-width: 395px) {
+  .grid-item.grid-product.carousel-cell.collection-here {
+    min-width: 169px;
+  }
+}
+
+
 @media (max-width: 768px) and (min-width: 575px) {
   .product-single__vendor-sku {
     display: grid;
