@@ -57,7 +57,7 @@
           <div class="new-grid product-grid scrollable-grid--small" data-view="scrollable">
             {%- for product in related_collection.products -%}
              
-              {% if product.title == "Route Package Protection" %}
+              {% if product.title == "Route Package Protection" or product.vendor == "SavedBy"%}
                 {% assign product_collection = product.collections.last %}
                 {% assign product_last =  product_collection.products.last %}
                 
