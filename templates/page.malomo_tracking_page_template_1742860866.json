@@ -1,0 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "block_order": [
+        "malomo_shipment_tracker",
+        "image"
+      ],
+      "blocks": {
+        "image": {
+          "settings": {},
+          "type": "image"
+        },
+        "malomo_shipment_tracker": {
+          "settings": {
+            "publishable_api_key": "pk_d4ad715d4eb1b44c648c90299495eb4e"
+          },
+          "type": "shopify://apps/malomo-order-tracking/blocks/shipment-tracker/5cb158a1-dc52-4d21-aac7-e017083c11e2"
+        }
+      },
+      "settings": {},
+      "type": "malomo_order_tracking"
+    }
+  }
+}
