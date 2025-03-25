@@ -36,21 +36,6 @@
             "text_alignment_mobile": "center"
           }
         },
-        "slide_k4tBKN": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/AquaBlu-Spring-Sale-2025-HP-Hero.jpg",
-            "heading": "SPRING INTO STYLE",
-            "heading_size": "h1",
-            "subheading": "SAVE UP TO 15% ON TILE, HARDSCAPES, & MORE!",
-            "button_label": "Learn More",
-            "link": "https://www.aquablumosaics.com/collections/fire-pit-valentines-day-sale",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 20,
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_R3tWbP": {
           "type": "slide",
           "settings": {
@@ -99,7 +84,6 @@
       },
       "block_order": [
         "slide_KTCdTA",
-        "slide_k4tBKN",
         "slide_R3tWbP",
         "slide_dDz9fW",
         "slide_jDt9WQ"
