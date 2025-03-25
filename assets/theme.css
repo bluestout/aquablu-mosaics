@@ -15754,16 +15754,6 @@ label.tag__checkbox-wrapper {
 
 
 
-/* --> Custom Answerbase widget customization : Collection Page FAQ HTML Formatting */
-.category-faq .questions-list {
-    max-height: 500px;
-    overflow-y: auto;
-    overflow-x:hidden;
-}
-
-.category-faq .questions-list .item .cell {
-    margin-left: 0.59999rem;
-}
 
 .insta-label {
   text-align: center;
