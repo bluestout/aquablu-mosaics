@@ -29,26 +29,17 @@
             "button_capitalization": "capitalize",
             "button_height": 48,
             "button_text_color": "#1c1d1d",
-            "input_background_color": "#FFFFFF",
-            "input_border_color": "#DDDDDD",
+            "input_background_color": "#ffffff",
+            "input_border_color": "#dddddd",
             "input_border_radius": 3,
             "input_border_width": 1,
             "input_height": 42,
             "corso_shop_id": ""
           }
-        },
-        "image": {
-          "type": "image",
-          "settings": {
-            "image_horizontal_alignment": "center",
-            "image_link_url": "",
-            "image_width": ""
-          }
         }
       },
       "block_order": [
-        "malomo_shipment_tracker",
-        "image"
+        "malomo_shipment_tracker"
       ],
       "settings": {
         "background_image_enabled": true,
@@ -56,10 +47,10 @@
         "background_repeat": "no-repeat",
         "background_size": "cover",
         "mobile_image": "shopify://shop_images/Boutique_Series_Porcelain_Tile_Artistry_in_Mosaics.jpg",
-        "background_color": "transparent",
+        "background_color": "rgba(0,0,0,0)",
         "height": "",
         "padding": "20",
-        "header_background_color": "transparent",
+        "header_background_color": "rgba(0,0,0,0)",
         "header_font": "sans-serif",
         "header_font_size": "40",
         "header_horizontal_alignment": "center",
