@@ -43,7 +43,7 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
   {% comment %} <div id="qab_placeholder"></div> {% endcomment %}
 <head>
-  {%- if template contains 'index' -%}
+  {%- if template contains 'index' or template contains 'collection' -%}
     {% unless is_admin_interface %}  
     {% render '__opt-theme-observer' %}  
     {% endunless %}  
@@ -392,7 +392,7 @@
   {% comment %}--> Add Wish List {% endcomment %}
   {% render 'swym-custom' %}
   {% comment %}<-- Add Wish List {% endcomment %}
-  {%- if template contains 'index' -%}
+  {%- if template contains 'index' or template contains 'collection' -%}
     {% render '__opt-theme-js' %}
   {%- endif -%}
 </body>
