@@ -16,7 +16,8 @@
           src="{{ section.settings.image | img_url: '500x'}}"
           width="{{ section.settings.image.width }}"
           height="{{ section.settings.image.height }}"
-          alt="{{ section.settings.image.alt }}">
+          alt="{{ section.settings.image.alt }}"
+          fetchpriority="high" loading="eager">
       </div>
         <div class="image-wrap medium-up--hide" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image2.aspect_ratio }}%;">
           {%- assign img_url2 = section.settings.image2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
@@ -32,7 +33,8 @@
             sizes="100vw"
             width="{{ section.settings.image2.width }}"
             height="{{ section.settings.image2.height }}"
-            alt="{{ section.settings.image2.alt }}">
+            alt="{{ section.settings.image2.alt }}"
+            fetchpriority="high" loading="eager">
         </div>
       <div class="header-links-text">
         <h1>{{section.settings.title}}</h1>
