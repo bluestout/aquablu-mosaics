@@ -16,7 +16,6 @@
     },
     "hero_video_cmBq3h": {
       "type": "hero-video",
-      "disabled": true,
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -27,9 +26,9 @@
         "link": "",
         "color_accent": "#fff",
         "text_align": "vertical-center horizontal-center",
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/44a44d3383104711b5d51eb897d37358.mp4",
-        "overlay_opacity": 30,
-        "height": 510,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/60c8a32f0f2941f7a30576dd80ea1eec.mp4",
+        "overlay_opacity": 20,
+        "height": 500,
         "height_mobile": 300,
         "css_class": ""
       }
@@ -306,6 +305,7 @@
         "hero_XRY3iG",
         "hero_qNKAdz"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "full_width_mobile": false,
