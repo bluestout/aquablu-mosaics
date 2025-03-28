@@ -16,6 +16,7 @@
     },
     "hero_video_cmBq3h": {
       "type": "hero-video",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -305,7 +306,6 @@
         "hero_XRY3iG",
         "hero_qNKAdz"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "full_width_mobile": false,
