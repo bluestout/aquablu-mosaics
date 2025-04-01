@@ -636,11 +636,6 @@
         "disabled": false,
         "settings": {}
       },
-      "4388101675464981650": {
-        "type": "shopify://apps/kedra-shield-website-security/blocks/shield/ceea2cd7-3e8d-4c9f-bd14-570614cf0bb8",
-        "disabled": false,
-        "settings": {}
-      },
       "11567226959186545843": {
         "type": "shopify://apps/savedby-package-protection/blocks/savedby-storefront-widget/6d4bce9c-696c-4f95-8a15-0cc2b2b9e839",
         "disabled": false,

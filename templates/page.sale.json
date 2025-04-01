@@ -64,6 +64,7 @@
       "blocks": {
         "fd071408-c866-4ddb-8f32-3eb533a5e0c4": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "AQUABLU SPRING SALE",
             "title": "Save up to 15%",
@@ -84,6 +85,7 @@
       "block_order": [
         "fd071408-c866-4ddb-8f32-3eb533a5e0c4"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 650,
@@ -99,6 +101,7 @@
       "blocks": {
         "text_bqyQgY": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "enlarge_text": false,
             "text": "<h4>Springs Sale Terms & Conditions</h4><p><strong>Sale Period: </strong>The S'more Savings Event at AquaBlu Mosaics is valid from March 17th, 2025, to March 23rd, 2025. During this time, customers can enjoy savings of up to 15% on all tile and stone and swimming pool mosaics*, up to 10% on porcelain patio pavers and coping, and free shipping on all pool and outdoor furniture. <strong>Exclusions:</strong> Custom Mosaics Inc. swimming pool mosaics are not eligible for this promotion. <strong>Discounted Products: </strong>Items in the Sale and Clearance collection are not eligible for this discount. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all Spring Sale purchases. Please review our return policy for more information. <strong>Promo Codes: </strong>Discounts are applied automatically at checkout. <strong>Customer Support:</strong> If you have any questions or concerns regarding our Spring Sale, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. AquaBlu Mosaics is excited to offer our Spring Sale discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect products to <strong>Bring Paradise Home</strong>.</p>"
@@ -108,6 +111,7 @@
       "block_order": [
         "text_bqyQgY"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "left",
         "narrow_column": false,
