@@ -6275,7 +6275,12 @@ if (theme.config.isTouch) {
           return;
         }
         // var filters = sidebarWrapper.querySelector(selectors.filters).cloneNode(true);
-        var filters = document.querySelector('.filter-wrapper.mobile-filter').cloneNode(true); //Sticky Filter
+        var filters;
+        if (window.location.pathname.includes('/collections/')) {
+          filters = document.querySelector('.filter-wrapper.mobile-filter').cloneNode(true); //Sticky Filter
+        } else {
+          filters = sidebarWrapper.querySelector(selectors.filters).cloneNode(true);
+        }
 
         var inlineWrapper = document.querySelector(selectors.inlineWrapper);
         // var inlineWrapper = document.querySelector('.filter-wrapper.mobile-filter');  //Sticky Filter

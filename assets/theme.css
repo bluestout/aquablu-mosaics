@@ -7208,8 +7208,15 @@ input[type="image"] {
 }
 
   .collection-filter__sort select#SortBy {
-    max-width: 110px;
-    min-width: 110px;
+    max-width: 157px;
+    min-width: 157px;
+  }
+
+  @media only screen and (max-width: 959px) {
+    .collection-filter__sort select#SortBy {
+      max-width: 179px;
+      min-width: 179px;
+    }
   }
 
   .active-filters-wrapper {
