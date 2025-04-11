@@ -1071,21 +1071,11 @@
             "tooltip_text": ""
           }
         },
-        "collection_XRNTWc": {
-          "type": "collection",
-          "settings": {
-            "title": "MODERN",
-            "image": "shopify://shop_images/Currents_Anchor_8_x_8_Porcelain_Tile_Kitchen_Bath_Pool_Tile.jpg",
-            "url": "shopify://collections/modern-bathroom-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_ygHQBD": {
           "type": "collection",
           "settings": {
             "title": "COASTAL",
-            "image": "shopify://shop_images/coastal-bathroom-tile.jpg",
+            "image": "shopify://shop_images/AlteaThistleBlue_3_x6_CeramicTile_Zellige-LookTile.3psd.jpg",
             "url": "shopify://collections/coastal-bathroom-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -1095,8 +1085,18 @@
           "type": "collection",
           "settings": {
             "title": "TROPICAL",
-            "image": "shopify://shop_images/newbath12.jpg",
+            "image": "shopify://shop_images/AlteaMatcha_4_x4_CeramicTile_Zellige-LookTile.2.jpg",
             "url": "shopify://collections/tropical-bathroom-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_XRNTWc": {
+          "type": "collection",
+          "settings": {
+            "title": "MODERN",
+            "image": "shopify://shop_images/Currents_Kelp_8_x_8_Porcelain_Tile_Kitchen_Bath_Pool_Tile.jpg",
+            "url": "shopify://collections/modern-bathroom-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -1104,9 +1104,9 @@
       },
       "block_order": [
         "collection_rqWk7n",
-        "collection_XRNTWc",
         "collection_ygHQBD",
-        "collection_crQ6tw"
+        "collection_crQ6tw",
+        "collection_XRNTWc"
       ],
       "settings": {
         "title": "SHOP BY LOOK",
