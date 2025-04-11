@@ -317,6 +317,25 @@
             "color_accent": "#ffffff"
           }
         },
+        "abf45e2d-0e36-47f6-bbba-f151066d7de0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Landscape",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/artificial-grass-top-turf-products",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Beton_Blanco_24_x_24_2CM_Porcelain_Paver_by_MSI_LPAVNBETBLA2424_3.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
         "afff2e6a-9dc7-4139-8884-59f383bdb8d9": {
           "type": "advanced",
           "settings": {
@@ -336,25 +355,6 @@
             "color_accent": "#ffffff"
           }
         },
-        "abf45e2d-0e36-47f6-bbba-f151066d7de0": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Landscape",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/artificial-grass-top-turf-products",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/artificial_grass.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
         "40f13ac4-db41-4d36-9ceb-699e468fa2c1": {
           "type": "advanced",
           "settings": {
@@ -365,7 +365,7 @@
             "cta_link1": "shopify://pages/outdoor-living-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/patio-furniture_d851d452-0be8-4184-856c-655a7fdbe2ea.jpg",
+            "image": "shopify://shop_images/Outdoor_Living_AquaPro.jpg",
             "video_url": "",
             "width": "33",
             "height": 400,
@@ -379,8 +379,8 @@
         "3311b349-de65-4db9-851c-683d6e859a94",
         "57db2215-18d3-4208-a944-ab237846a315",
         "ca3e2b54-5ffc-421d-b579-e5163bd3cbd9",
-        "afff2e6a-9dc7-4139-8884-59f383bdb8d9",
         "abf45e2d-0e36-47f6-bbba-f151066d7de0",
+        "afff2e6a-9dc7-4139-8884-59f383bdb8d9",
         "40f13ac4-db41-4d36-9ceb-699e468fa2c1"
       ],
       "settings": {
