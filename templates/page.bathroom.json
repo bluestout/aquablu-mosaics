@@ -1071,22 +1071,22 @@
             "tooltip_text": ""
           }
         },
-        "collection_crQ6tw": {
-          "type": "collection",
-          "settings": {
-            "title": "TROPICAL",
-            "image": "shopify://shop_images/AlteaMatcha_4_x4_CeramicTile_Zellige-LookTile.2.jpg",
-            "url": "shopify://collections/tropical-bathroom-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_rqWk7n": {
           "type": "collection",
           "settings": {
             "title": "CLASSIC",
             "image": "shopify://shop_images/newbath13.jpg",
             "url": "shopify://collections/classic-bathroom-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_crQ6tw": {
+          "type": "collection",
+          "settings": {
+            "title": "TROPICAL",
+            "image": "shopify://shop_images/AlteaMatcha_4_x4_CeramicTile_Zellige-LookTile.3.jpg",
+            "url": "shopify://collections/tropical-bathroom-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -1104,8 +1104,8 @@
       },
       "block_order": [
         "collection_ygHQBD",
-        "collection_crQ6tw",
         "collection_rqWk7n",
+        "collection_crQ6tw",
         "collection_XRNTWc"
       ],
       "settings": {
