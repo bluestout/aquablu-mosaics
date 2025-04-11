@@ -276,32 +276,18 @@
 <!--Start Technical SEO Fixes - pr_prod_strat bug Code-->
 <script type="text/javascript">
   (function(){
-    // Standardize URLs by removing all parameters and enforcing trailing slash if not file
-    var currentUrl = window.location.href;
-    var urlParts = currentUrl.split('?');
-    var cleanUrl = urlParts[0];
-    
-    // Add trailing slash if URL doesn't have one and isn't a file
-    if (!cleanUrl.endsWith('/') && !cleanUrl.match(/\.[a-zA-Z0-9]{2,4}$/)) {
-      cleanUrl += '/';
-    }
-    
-    // Only redirect if the URL is different
-    if (currentUrl !== cleanUrl && !currentUrl.includes('wpm@')) {
-      window.location.replace(cleanUrl);
-    }
-    
-    // Keep existing parameter cleanup code
-    if (window.location.href.includes('?pr_prod_strat=')){
+    if ( window.location.href.includes('?pr_prod_strat=')){
       console.log("full url: " + window.location.href);
       var resURLs = window.location.href.split("?pr_prod_strat=");
       let url = resURLs[0];
+      {% comment %} let result = url.replace(window.location.host, ""); {% endcomment %}
       window.location.replace(url);
     }
     if ( window.location.href.includes('?_pos=')){
       console.log("full url: " + window.location.href);
       var resURLs = window.location.href.split("?_pos=");
       let url = resURLs[0];
+      {% comment %} let result = url.replace(window.location.host, ""); {% endcomment %}
       window.location.replace(url);
     }
     if ( window.location.href.includes('wpm@')){
