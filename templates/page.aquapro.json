@@ -270,26 +270,7 @@
             "cta_link1": "shopify://pages/pool-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/all-glass-tile-pools-pool-page.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "57db2215-18d3-4208-a944-ab237846a315": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Kitchen",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://pages/kitchen-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/kitchen_24b93a5f-966c-46c3-89ee-881d9cdc2625.jpg",
+            "image": "shopify://shop_images/Oasis_Blue_1_x_1_1.5_x_1.5_Glass_Tile_Glass_Pool_Spa_Kitchen_Tile.jpg",
             "video_url": "",
             "width": "33",
             "height": 400,
@@ -308,7 +289,26 @@
             "cta_link1": "shopify://pages/bathroom-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/bathroom1.jpg",
+            "image": "shopify://shop_images/Stella_Perla_2_x_10_Ceramic_Tile_Bathroom_Kitchen_Tile_4.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "57db2215-18d3-4208-a944-ab237846a315": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Kitchen",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/kitchen-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Stella_Oceano_2_x_10_Ceramic_Tile_Bathroom_Kitchen_Tile_9.jpg",
             "video_url": "",
             "width": "33",
             "height": 400,
@@ -377,8 +377,8 @@
       },
       "block_order": [
         "3311b349-de65-4db9-851c-683d6e859a94",
-        "57db2215-18d3-4208-a944-ab237846a315",
         "ca3e2b54-5ffc-421d-b579-e5163bd3cbd9",
+        "57db2215-18d3-4208-a944-ab237846a315",
         "abf45e2d-0e36-47f6-bbba-f151066d7de0",
         "afff2e6a-9dc7-4139-8884-59f383bdb8d9",
         "40f13ac4-db41-4d36-9ceb-699e468fa2c1"
