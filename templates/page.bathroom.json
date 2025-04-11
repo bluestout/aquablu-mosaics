@@ -1061,16 +1061,6 @@
     "featured_collections_custom_3DaeXn": {
       "type": "featured-collections-custom",
       "blocks": {
-        "collection_rqWk7n": {
-          "type": "collection",
-          "settings": {
-            "title": "CLASSIC",
-            "image": "shopify://shop_images/newbath13.jpg",
-            "url": "shopify://collections/classic-bathroom-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_ygHQBD": {
           "type": "collection",
           "settings": {
@@ -1091,6 +1081,16 @@
             "tooltip_text": ""
           }
         },
+        "collection_rqWk7n": {
+          "type": "collection",
+          "settings": {
+            "title": "CLASSIC",
+            "image": "shopify://shop_images/newbath13.jpg",
+            "url": "shopify://collections/classic-bathroom-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_XRNTWc": {
           "type": "collection",
           "settings": {
@@ -1103,9 +1103,9 @@
         }
       },
       "block_order": [
-        "collection_rqWk7n",
         "collection_ygHQBD",
         "collection_crQ6tw",
+        "collection_rqWk7n",
         "collection_XRNTWc"
       ],
       "settings": {
