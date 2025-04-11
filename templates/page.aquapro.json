@@ -36,8 +36,8 @@
             "link_text_2": "DOWNLOAD PDF",
             "color_accent": "#55ccd9",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/pro-hero.jpg",
-            "overlay_opacity": 46,
+            "image": "shopify://shop_images/AquaPro_Trade_Network_Hero.jpg",
+            "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
