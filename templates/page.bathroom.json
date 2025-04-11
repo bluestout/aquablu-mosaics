@@ -838,25 +838,6 @@
     "promo_grid_RqaJFg": {
       "type": "promo-grid",
       "blocks": {
-        "advanced_TWGw6p": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "SHOWER WALL",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/shower-wall-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/StellaBiscotti_2_x10_CeramicTile_Bathroom_KitchenTile8.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 440,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
         "advanced_aVUFQz": {
           "type": "advanced",
           "settings": {
@@ -868,6 +849,25 @@
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Bathroom_Floor_Tile.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 440,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_TWGw6p": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "SHOWER WALL",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/shower-wall-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/StellaBiscotti_2_x10_CeramicTile_Bathroom_KitchenTile8.jpg",
             "video_url": "",
             "width": "33",
             "height": 440,
@@ -897,8 +897,8 @@
         }
       },
       "block_order": [
-        "advanced_TWGw6p",
         "advanced_aVUFQz",
+        "advanced_TWGw6p",
         "advanced_FzQnnV"
       ],
       "settings": {
