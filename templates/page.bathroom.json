@@ -860,14 +860,14 @@
         "advanced_aVUFQz": {
           "type": "advanced",
           "settings": {
-            "subheading": "BATHROOM FLOOR",
+            "subheading": "FLOOR",
             "heading": "",
             "textarea": "",
             "cta_text1": "",
             "cta_link1": "shopify://collections/shower-floor-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Bathroom_Shower_Floor_Tile.jpg",
+            "image": "shopify://shop_images/Bathroom_Floor_Tile.jpg",
             "video_url": "",
             "width": "33",
             "height": 440,
