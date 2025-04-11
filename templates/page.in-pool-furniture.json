@@ -27,8 +27,8 @@
         "color_accent": "#ffffff",
         "text_align": "vertical-center horizontal-center",
         "video_url": "https://cdn.shopify.com/videos/c/o/v/60c8a32f0f2941f7a30576dd80ea1eec.mp4",
-        "overlay_opacity": 20,
-        "height": 500,
+        "overlay_opacity": 0,
+        "height": 515,
         "height_mobile": 300,
         "css_class": ""
       }
