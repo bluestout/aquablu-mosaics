@@ -12594,12 +12594,19 @@ h4.modal-grout-calculator__results--heading.active {
   background: #152755;
   color: white;
 }
-h4.modal-grout-calculator__results--heading.active a {
+h4.modal-grout-calculator__results--heading.active a,
+h4.modal-grout-calculator__results--heading.active button {
   color: white;
 }
-h4.modal-grout-calculator__results--heading a {
-  display: block;
+h4.modal-grout-calculator__results--heading a,
+h4.modal-grout-calculator__results--heading button {
+  /*display: block;*/
   cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: var(--typeHeaderSpacing);
+  line-height: 50px;
 }
 
 .grout-adhesive--quick-row a.btn.btn--primary {
