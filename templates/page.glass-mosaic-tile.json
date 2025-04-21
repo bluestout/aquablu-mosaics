@@ -655,6 +655,16 @@
     "featured_collections_custom_qwqA3J": {
       "type": "featured-collections-custom",
       "blocks": {
+        "collection_FXVEBK": {
+          "type": "collection",
+          "settings": {
+            "title": "TROPICAL",
+            "image": "shopify://shop_images/Tropical_Glass_Tile.jpg",
+            "url": "shopify://collections/tropical-glass-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_eKmQ3q": {
           "type": "collection",
           "settings": {
@@ -684,23 +694,13 @@
             "tooltip": false,
             "tooltip_text": ""
           }
-        },
-        "collection_FXVEBK": {
-          "type": "collection",
-          "settings": {
-            "title": "TROPICAL",
-            "image": "shopify://shop_images/Tropical_Glass_Tile.jpg",
-            "url": "shopify://collections/tropical-glass-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
         }
       },
       "block_order": [
+        "collection_FXVEBK",
         "collection_eKmQ3q",
         "collection_DgcLN6",
-        "collection_FwfQ8L",
-        "collection_FXVEBK"
+        "collection_FwfQ8L"
       ],
       "settings": {
         "title": "BROWSE LOOKS",
