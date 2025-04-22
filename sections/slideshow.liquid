@@ -331,11 +331,19 @@
                             {%- endunless -%}
                             {%- unless block.settings.title == blank -%}
                               {%- if collection.metafield.custom.sec_1_heading != 'none' -%}
-                                <h1 class="hero__title">
+                                {% if forloop.first %}
+                                  <h1 class="hero__title">
+                                {% else %}
+                                  <h2 class="hero__title">
+                                {% endif %}
                                   <div class="hero__animation-contents">
                                   {{ block.settings.title | newline_to_br }}
                                   </div>
-                                </h1>
+                                {% if forloop.first %}
+                                  </h1>
+                                {% else %}
+                                  </h2>
+                                {% endif %}
                               {%- else -%}
                                 <h2 class="h1 hero__title">
                                   <div class="hero__animation-contents">

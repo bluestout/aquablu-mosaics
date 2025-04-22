@@ -147,7 +147,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   font-size: 1.1em;
   color: white;
 }
-.banner__subheading > h1 {
+.banner__subheading > h2 {
   font-family: var(--typeHeaderPrimary),var(--typeHeaderFallback);
   text-shadow: 0 3px 7px rgba(0,0,0,.15);
   margin-top: 0;
