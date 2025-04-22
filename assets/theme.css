@@ -6408,6 +6408,10 @@ input[type="image"] {
 @media only screen and (min-width: 769px) {
 }
 
+.hidden.result-sqft {
+  display: none;
+}
+
 .product-block {
   margin-bottom: 30px;
 }
