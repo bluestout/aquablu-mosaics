@@ -173,7 +173,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   .banner__heading {
     margin-bottom: 15px;
   }
-  .banner__subheading > h1 {
+  .banner__subheading > h2 {
     font-size: 38.4px;
     margin-bottom: 15px;
   }
@@ -182,7 +182,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .banner__subheading > h1 {
+  .banner__subheading > h2 {
     font-size: 48px;
   }
 }
