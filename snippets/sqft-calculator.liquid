@@ -96,10 +96,17 @@
     let elHowMuchInput = wrapper.querySelector(selectors.howMuchInput);
     let elCalculatorContainer = wrapper.querySelector(selectors.calculatorContainer);
     let elCheckboxAverageCut = wrapper.querySelector(selectors.checkboxAverageCut);
-
+    let resultSqft = wrapper.querySelector('.result-sqft');
+    
     var input = parseInt(elHowMuchInput.value);
     var per = parseFloat(elCalculatorContainer.dataset.sqFt);
 
+    // Calculate the displayed square footage value with 10% increase if checkbox is checked
+    var displayInput = input;
+    if (elCheckboxAverageCut.checked == true) {
+      displayInput = Math.round(input * 1.1 * 100) / 100;
+    }
+    
     var div = Math.ceil(input / per);
     var kind = ' ' + elCalculatorContainer.dataset.kind;
 
@@ -115,8 +122,13 @@
     } else {
       pluralToTextChange(div, wrapper);
       wrapper.querySelector('.js-qty__num').value = div;
-      wrapper.querySelector('.how-much--result').textContent = input;
+      wrapper.querySelector('.how-much--result').textContent = displayInput;
       wrapper.querySelector('.total-sheets-num-amt').textContent = div;
+    }
+    if (elHowMuchInput.value.trim() === '') {
+      resultSqft.classList.add('hidden');
+    } else {
+      resultSqft.classList.remove('hidden');
     }
   }
 

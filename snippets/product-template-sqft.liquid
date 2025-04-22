@@ -750,14 +750,14 @@
                       <div id="how-much-calculator" class="js-how-much-calculator" data-sq-ft="{{sq_ft}}" data-kind="{{per | remove: 'per '}}">
                         <div class="how-much-container">
                           <label for="properties[sqft]">How much do I need?</label>
-                          <input class="how-much--input custom-property js-how-much--input" data-custom-property id="properties[sqft]" name="properties[Project Sqft]" type="number" value="">
+                          <input class="how-much--input custom-property js-how-much--input" data-custom-property id="properties[sqft]" name="properties[Project Sqft]" type="number" value="" min="0">
                           <span> sq. ft. </span>
                         </div>
                         <div>
                           <input class="average-cut--input js-average-cut--input custom-property" data-custom-property id="propertiesAverage" name="properties[Average cuts]" type="checkbox" value="">
-                          <span> Add 10% average for cuts and waste (recommended)</span>
+                          <span> Add 10% overage for cuts and waste (recommended)</span>
                         </div>
-                        <div class="result-sqft"> <span class="how-much--result">{{sq_ft | round}}</span><span> sq. ft.  | </span> <span class="total-sheets-num"> <span class="total-sheets-num-amt">{{sq_ft | round}}</span>&nbsp;<span class="how-much-qty-per">{{per | remove: 'per' | downcase | strip}}</span></span></div>
+                        <div class="result-sqft hidden"> <span class="how-much--result">{{sq_ft | round}}</span><span> sq. ft.  | </span> <span class="total-sheets-num"> <span class="total-sheets-num-amt">{{sq_ft | round}}</span>&nbsp;<span class="how-much-qty-per">{{per | remove: 'per' | downcase | strip}}</span></span></div>
                       </div>
                       <div class="product-block" {{ block.shopify_attributes }}>
                         {%- unless product.has_only_default_variant -%}
