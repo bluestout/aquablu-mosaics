@@ -716,16 +716,6 @@
     "featured_collections_custom_Vqcena": {
       "type": "featured-collections-custom",
       "blocks": {
-        "collection_cQYJjf": {
-          "type": "collection",
-          "settings": {
-            "title": "GLASS",
-            "image": "shopify://shop_images/Glass_Kitchen_Tile_5be6a7ee-3d53-4fb6-b50f-9f669112c19c.jpg",
-            "url": "shopify://collections/classic-kitchen-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_NUjnB3": {
           "type": "collection",
           "settings": {
@@ -736,12 +726,12 @@
             "tooltip_text": ""
           }
         },
-        "collection_QByYeV": {
+        "collection_cQYJjf": {
           "type": "collection",
           "settings": {
-            "title": "CERAMIC",
-            "image": "shopify://shop_images/Ceramic_Kitchen_Tile_57c78ab6-06b4-443d-a428-e4e4896d6dc0.jpg",
-            "url": "shopify://collections/coastal-kitchen-tile",
+            "title": "GLASS",
+            "image": "shopify://shop_images/Glass_Kitchen_Tile_5be6a7ee-3d53-4fb6-b50f-9f669112c19c.jpg",
+            "url": "shopify://collections/classic-kitchen-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -755,13 +745,23 @@
             "tooltip": false,
             "tooltip_text": ""
           }
+        },
+        "collection_QByYeV": {
+          "type": "collection",
+          "settings": {
+            "title": "CERAMIC",
+            "image": "shopify://shop_images/Ceramic_Kitchen_Tile_57c78ab6-06b4-443d-a428-e4e4896d6dc0.jpg",
+            "url": "shopify://collections/coastal-kitchen-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
         }
       },
       "block_order": [
-        "collection_cQYJjf",
         "collection_NUjnB3",
-        "collection_QByYeV",
-        "collection_HiWDHU"
+        "collection_cQYJjf",
+        "collection_HiWDHU",
+        "collection_QByYeV"
       ],
       "disabled": true,
       "settings": {
