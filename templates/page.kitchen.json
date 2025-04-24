@@ -713,6 +713,63 @@
         "css_class": "kitchen-section-5"
       }
     },
+    "featured_collections_custom_Vqcena": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "collection_cQYJjf": {
+          "type": "collection",
+          "settings": {
+            "title": "GLASS",
+            "image": "shopify://shop_images/Glass_Kitchen_Tile_5be6a7ee-3d53-4fb6-b50f-9f669112c19c.jpg",
+            "url": "shopify://collections/classic-kitchen-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_NUjnB3": {
+          "type": "collection",
+          "settings": {
+            "title": "PORCELAIN",
+            "image": "shopify://shop_images/Porcelain_Kitchen_Tile_7f07d930-22a2-4dd8-a497-4d90322468c6.jpg",
+            "url": "shopify://collections/modern-kitchen-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_QByYeV": {
+          "type": "collection",
+          "settings": {
+            "title": "CERAMIC",
+            "image": "shopify://shop_images/Ceramic_Kitchen_Tile_57c78ab6-06b4-443d-a428-e4e4896d6dc0.jpg",
+            "url": "shopify://collections/coastal-kitchen-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_HiWDHU": {
+          "type": "collection",
+          "settings": {
+            "title": "NATURAL STONE",
+            "image": "shopify://shop_images/newkitch22.jpg",
+            "url": "shopify://collections/tropical-kitchen-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_cQYJjf",
+        "collection_NUjnB3",
+        "collection_QByYeV",
+        "collection_HiWDHU"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SHOP BY MATERIAL",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
     "advanced_content_ydayMU": {
       "type": "advanced-content",
       "blocks": {
@@ -878,6 +935,7 @@
         "template--14565132894280__c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0-16838134561dbfa07c-1",
         "template--14565132894280__c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0-16838134561dbfa07c-0"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "SHOP BY MATERIAL",
@@ -1388,6 +1446,7 @@
     "e40a6c21-2689-414a-8ac0-4d8da8bf09e9",
     "080fad8f-f5c3-4c32-af1e-6dbfe50c1553",
     "b633a650-6d99-4346-9bfd-0202d828e489",
+    "featured_collections_custom_Vqcena",
     "advanced_content_ydayMU",
     "promo_grid_JaBjbC",
     "c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0",
