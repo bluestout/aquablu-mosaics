@@ -10,6 +10,7 @@
 {
   "order": [
     "main",
+    "faq_tBm3Ve",
     "featured_collection_LbDRTD"
   ],
   "sections": {
@@ -64,6 +65,58 @@
         "malomo_border_style": "none",
         "malomo_border_width": "0",
         "malomo_padding": "40"
+      }
+    },
+    "faq_tBm3Ve": {
+      "type": "faq",
+      "blocks": {
+        "question_Dix88Y": {
+          "type": "question",
+          "settings": {
+            "title": "When will my tracking information be available?",
+            "text": "<p>Because AquaBlu offers a wide range of products including tile and stone, pool mosaics, outdoor and in-pool furniture, fire pits and more, lead times may vary. The best lead time estimates will come from the<strong> </strong>Shipping & Delivery tab on the individual product pages. </p>"
+          }
+        },
+        "question_QWPzfE": {
+          "type": "question",
+          "settings": {
+            "title": "Why do I have multiple shipments/tracking numbers?",
+            "text": "<p>Your order may have products shipping direct from multiple manufacturer warehouses, or your order may be packaged into multiple boxes to avoid damage in transit.</p>"
+          }
+        },
+        "question_XtCxCL": {
+          "type": "question",
+          "settings": {
+            "title": "Why does my package show delivered before it has arrived?",
+            "text": "<p>If your order is showing as Delivered but you do not see it, please allow 24 hours before reporting the shipment as lost. While most packages will ship directly through the freight carrier with the tracking you have received from AquaBlu, some shipments may require final-mile delivery and have additional tracking information.</p>"
+          }
+        },
+        "question_nfLYCM": {
+          "type": "question",
+          "settings": {
+            "title": "How do I file a claim for a lost or damaged package?",
+            "text": "<p>For packages insured with SavedBy Package Protection, a claim can be <a href=\"https://savedby.io/file-a-claim\" target=\"_blank\">filed here.</a></p><p>For orders received damaged, customer must notify AquaBlu Mosaics within five (5) days of receipt of shipment in order to be eligible for a replacement, return, or refund. Please e-mail <a href=\"mailto:custom@aquablumosaics.com\">custom@aquablumosaics.com</a> for complete instructions.<br/><br/><br/><br/></p>"
+          }
+        },
+        "question_URY7AW": {
+          "type": "question",
+          "settings": {
+            "title": "How do I request a return for excess material?",
+            "text": "<p>We highly recommend customers keep additional material on hand in case of future repairs or renovations, as dye lot variance may make matching new material to your project very difficult.<br/><br/>If you would like to proceed with requesting a return, please see our <a href=\"https://www.aquablumosaics.com/pages/shipping-returns\" target=\"_blank\" title=\"https://www.aquablumosaics.com/pages/shipping-returns\">Return Policy here.</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_Dix88Y",
+        "question_QWPzfE",
+        "question_XtCxCL",
+        "question_nfLYCM",
+        "question_URY7AW"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "title": "Shipping FAQs",
+        "css_class": ""
       }
     },
     "featured_collection_LbDRTD": {
