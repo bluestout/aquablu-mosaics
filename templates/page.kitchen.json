@@ -328,7 +328,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Blue_Glass_1be0f871-beee-4d61-a9c8-5f1cb4b1d3eb.png",
+            "image": "shopify://shop_images/Blue_ceramic_tile.png",
             "image_width": 130,
             "title": "Blue",
             "button_label": "",
@@ -339,7 +339,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Gray_Glass_c2d192cd-8a0f-40f2-b584-6b73b8a54295.png",
+            "image": "shopify://shop_images/Gray_ceramic_tile.png",
             "image_width": 130,
             "title": "Gray",
             "button_label": "",
@@ -350,7 +350,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/beige_tile.png",
+            "image": "shopify://shop_images/Beige_ceramic_tile.png",
             "image_width": 130,
             "title": "Beige",
             "button_label": "",
@@ -361,11 +361,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/RedGlassTile.png",
+            "image": "shopify://shop_images/Aqua_ceramic_tile.png",
             "image_width": 130,
-            "title": "Red",
+            "title": "Aqua",
             "button_label": "",
-            "button_link": "shopify://collections/red-kitchen-tile"
+            "button_link": "shopify://collections/aqua-kitchen-tile"
           }
         },
         "text_block_T6dQUw": {
