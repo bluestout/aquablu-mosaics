@@ -428,28 +428,6 @@
             "button_link": "shopify://collections/rectangle-kitchen-tile"
           }
         },
-        "text_block_iPp3R6": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/geometric_tile.png",
-            "image_width": 130,
-            "title": "Geometric",
-            "button_label": "",
-            "button_link": "shopify://collections/geometric-kitchen-tile"
-          }
-        },
-        "text_block_XtYVzb": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/herringbone_tile.png",
-            "image_width": 130,
-            "title": "Herringbone",
-            "button_label": "",
-            "button_link": "shopify://collections/herringbone-kitchen-tile"
-          }
-        },
         "text_block_F4J7pM": {
           "type": "text_block",
           "settings": {
@@ -472,6 +450,17 @@
             "button_link": "shopify://collections/fish-scale-kitchen-tile"
           }
         },
+        "text_block_iPp3R6": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/geometric_tile.png",
+            "image_width": 130,
+            "title": "Geometric",
+            "button_label": "",
+            "button_link": "shopify://collections/geometric-kitchen-tile"
+          }
+        },
         "text_block_QkwFCK": {
           "type": "text_block",
           "settings": {
@@ -481,6 +470,17 @@
             "title": "Arabesque",
             "button_label": "",
             "button_link": "shopify://collections/arabesque-kitchen-tile"
+          }
+        },
+        "text_block_XtYVzb": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/herringbone_tile.png",
+            "image_width": 130,
+            "title": "Herringbone",
+            "button_label": "",
+            "button_link": "shopify://collections/herringbone-kitchen-tile"
           }
         },
         "text_block_EC4UaD": {
@@ -498,11 +498,11 @@
       "block_order": [
         "text_block_BRWn6P",
         "text_block_L8ePKL",
-        "text_block_iPp3R6",
-        "text_block_XtYVzb",
         "text_block_F4J7pM",
         "text_block_Ttqe38",
+        "text_block_iPp3R6",
         "text_block_QkwFCK",
+        "text_block_XtYVzb",
         "text_block_EC4UaD"
       ],
       "settings": {
