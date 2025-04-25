@@ -947,6 +947,26 @@
         "css_class": "home-section-5"
       }
     },
+    "082f9334-4edc-41f1-9b71-457895ebafcd": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Ceramic_Tile_for_Kitchens_by_MSI.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>THE ART OF CERAMIC: BEAUTY BUILT TO LAST</h2><p>Discover the perfect balance of style and durability with our newest selection of ceramic tile. Designed to elevate everyday living, these tiles offer timeless beauty, easy maintenance, and long-lasting performance for kitchen backsplashes and floors. From sleek neutrals to bold patterns, our selection of ceramic tiles provide endless design possibilities. With ceramic tile, everyday moments feel effortlessly elevated. Explore surfaces that are as practical as they are beautiful - made to last, designed to inspire.</p><p></p><p><a href=\"/pages/ceramic-tile\" target=\"_blank\" title=\"Ceramic Tile\">SHOP ALL CERAMIC NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "kitchen-section-8"
+      }
+    },
     "69ec96c9-61dc-4bd5-96fd-8de3a63529e0": {
       "type": "promo-grid",
       "blocks": {
@@ -1031,26 +1051,6 @@
         "css_class": "kitchen-section-2"
       }
     },
-    "text_and_image_bUkKV6": {
-      "type": "text-and-image",
-      "disabled": true,
-      "name": "t:sections.text-and-image.presets.image_with_text.name",
-      "settings": {
-        "image_width": 300,
-        "subtitle": "",
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "color_scheme": "1",
-        "divider": false,
-        "new_layout": false,
-        "css_class": ""
-      }
-    },
     "featured_collections_custom_6V96Xg": {
       "type": "featured-collections-custom",
       "blocks": {
@@ -1105,27 +1105,6 @@
         "title": "SHOP BY LOOK",
         "divider": false,
         "css_class": "exploring-pool-mosaic-grid"
-      }
-    },
-    "082f9334-4edc-41f1-9b71-457895ebafcd": {
-      "type": "text-and-image",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/flooringkitchen.jpg",
-        "video_url": "",
-        "image_width": 690,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>KITCHEN FLOORING FAVORITES</h2><p>Elevate your kitchen with stylish flooring. It's more than just a practical choice; it's a design statement that sets the tone for your culinary space. Choose from timeless wood-look styles, sleek tiles, or trendy patterns to match your unique style. With the right flooring, your kitchen becomes a harmonious blend of fashion and function.</p><p></p><p><a href=\"/collections/flooring-favorites\" target=\"_blank\" title=\"Flooring Favorites\">SHOP FLOORING NOW &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "kitchen-section-8"
       }
     },
     "01ec02a9-bf26-4b11-a300-318756216181": {
@@ -1206,7 +1185,7 @@
             "link_text": "Optional button",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#fff",
+            "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "overlay_opacity": 0,
             "focal_point": "center center"
@@ -1446,12 +1425,11 @@
     "advanced_content_ydayMU",
     "promo_grid_JaBjbC",
     "c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0",
+    "082f9334-4edc-41f1-9b71-457895ebafcd",
     "69ec96c9-61dc-4bd5-96fd-8de3a63529e0",
     "078d7994-9b94-493b-b19b-faed523655c1",
     "65298214-fb00-4bb2-a5d7-2e399917a15f",
-    "text_and_image_bUkKV6",
     "featured_collections_custom_6V96Xg",
-    "082f9334-4edc-41f1-9b71-457895ebafcd",
     "01ec02a9-bf26-4b11-a300-318756216181",
     "3ebae419-d203-4d98-a256-f12c011db2db",
     "df6005d9-5f8f-4db5-83cb-6c05ebcc570b",
