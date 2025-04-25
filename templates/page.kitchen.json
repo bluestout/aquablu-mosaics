@@ -868,85 +868,6 @@
         "css_class": "blue-bar-overlay"
       }
     },
-    "c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_dapb4j": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "PORCELAIN",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/porcelain-kitchen-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/SinfoniaPianoArena_PorcelainKitchenandBathTilebyMSI7.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "template--14565132894280__c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0-16838134561dbfa07c-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "GLASS",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/glass-kitchen-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/PYTHON_HOPI_INSTALL_1.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "template--14565132894280__c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0-16838134561dbfa07c-0": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "STONE",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/kitchen-stone-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Natural_Stone_Kitchen_Backsplash_Tile.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "advanced_dapb4j",
-        "template--14565132894280__c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0-16838134561dbfa07c-1",
-        "template--14565132894280__c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0-16838134561dbfa07c-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "heading": "SHOP BY MATERIAL",
-        "gutter_size": 20,
-        "section_gutter_size": 40,
-        "space_above": true,
-        "space_below": true,
-        "two_column_mobile": false,
-        "three_column_mobile": true,
-        "css_class": "home-section-5"
-      }
-    },
     "082f9334-4edc-41f1-9b71-457895ebafcd": {
       "type": "text-and-image",
       "settings": {
@@ -1424,7 +1345,6 @@
     "featured_collections_custom_Vqcena",
     "advanced_content_ydayMU",
     "promo_grid_JaBjbC",
-    "c70dcd1d-3edb-43b2-b4f4-0d401eb2d2b0",
     "082f9334-4edc-41f1-9b71-457895ebafcd",
     "69ec96c9-61dc-4bd5-96fd-8de3a63529e0",
     "078d7994-9b94-493b-b19b-faed523655c1",
