@@ -1031,49 +1031,23 @@
         "css_class": "kitchen-section-2"
       }
     },
-    "59e5b0d0-7d36-48aa-875f-a6a0beef2dd8": {
-      "type": "slideshow",
-      "blocks": {
-        "7fccd22e-0c7c-4217-8ba0-d2a74e25baf7": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/conservation",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
-            "image_mobile": "shopify://shop_images/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "7fccd22e-0c7c-4217-8ba0-d2a74e25baf7"
-      ],
+    "text_and_image_bUkKV6": {
+      "type": "text-and-image",
+      "disabled": true,
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 30,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
+        "image_width": 300,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "1",
+        "divider": false,
+        "new_layout": false,
         "css_class": ""
       }
     },
@@ -1216,6 +1190,28 @@
     "3ebae419-d203-4d98-a256-f12c011db2db": {
       "type": "slideshow",
       "blocks": {
+        "hero_XPzaLJ": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "",
+            "title": "<p>Overlaid Hero Slide</p>",
+            "title_size": 70,
+            "subheading": "And optional subtext",
+            "custom_text": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-bottom horizontal-left",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
         "template--14565132894280__3ebae419-d203-4d98-a256-f12c011db2db-168425414418ba19ac-0": {
           "type": "hero",
           "settings": {
@@ -1241,6 +1237,7 @@
         }
       },
       "block_order": [
+        "hero_XPzaLJ",
         "template--14565132894280__3ebae419-d203-4d98-a256-f12c011db2db-168425414418ba19ac-0"
       ],
       "disabled": true,
@@ -1452,7 +1449,7 @@
     "69ec96c9-61dc-4bd5-96fd-8de3a63529e0",
     "078d7994-9b94-493b-b19b-faed523655c1",
     "65298214-fb00-4bb2-a5d7-2e399917a15f",
-    "59e5b0d0-7d36-48aa-875f-a6a0beef2dd8",
+    "text_and_image_bUkKV6",
     "featured_collections_custom_6V96Xg",
     "082f9334-4edc-41f1-9b71-457895ebafcd",
     "01ec02a9-bf26-4b11-a300-318756216181",
