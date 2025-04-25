@@ -295,7 +295,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/While_Glass.png",
+            "image": "shopify://shop_images/White_ceramic_tile.png",
             "image_width": 130,
             "title": "White",
             "button_label": "",
@@ -306,7 +306,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Black_Glass_38983260-e886-491b-a817-324effd44349.png",
+            "image": "shopify://shop_images/Black_ceramic_tile.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
@@ -317,7 +317,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Green_Glass.png",
+            "image": "shopify://shop_images/Green_ceramic_tile.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
