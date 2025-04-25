@@ -726,6 +726,16 @@
             "tooltip_text": ""
           }
         },
+        "collection_QByYeV": {
+          "type": "collection",
+          "settings": {
+            "title": "CERAMIC",
+            "image": "shopify://shop_images/MSI_Kitchen_Backsplash_Tile.jpg",
+            "url": "shopify://pages/ceramic-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_cQYJjf": {
           "type": "collection",
           "settings": {
@@ -745,23 +755,13 @@
             "tooltip": false,
             "tooltip_text": ""
           }
-        },
-        "collection_QByYeV": {
-          "type": "collection",
-          "settings": {
-            "title": "CERAMIC",
-            "image": "shopify://shop_images/MSI_Kitchen_Backsplash_Tile.jpg",
-            "url": "shopify://pages/ceramic-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
         }
       },
       "block_order": [
         "collection_NUjnB3",
+        "collection_QByYeV",
         "collection_cQYJjf",
-        "collection_HiWDHU",
-        "collection_QByYeV"
+        "collection_HiWDHU"
       ],
       "settings": {
         "title": "SHOP BY MATERIAL",
