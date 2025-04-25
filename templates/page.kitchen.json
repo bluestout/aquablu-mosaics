@@ -1081,32 +1081,22 @@
     "featured_collections_custom_6V96Xg": {
       "type": "featured-collections-custom",
       "blocks": {
-        "collection_6HMWDt": {
-          "type": "collection",
-          "settings": {
-            "title": "CLASSIC",
-            "image": "shopify://shop_images/newkitch.jpg",
-            "url": "shopify://collections/classic-kitchen-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_CCmeDg": {
-          "type": "collection",
-          "settings": {
-            "title": "MODERN",
-            "image": "shopify://shop_images/Modern_Kitchen_Tile.jpg",
-            "url": "shopify://collections/modern-kitchen-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_Nkbxrq": {
           "type": "collection",
           "settings": {
             "title": "COASTAL",
             "image": "shopify://shop_images/Coastal_Kitchen_Tile.jpg",
             "url": "shopify://collections/coastal-kitchen-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_6HMWDt": {
+          "type": "collection",
+          "settings": {
+            "title": "CLASSIC",
+            "image": "shopify://shop_images/newkitch.jpg",
+            "url": "shopify://collections/classic-kitchen-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -1120,13 +1110,23 @@
             "tooltip": false,
             "tooltip_text": ""
           }
+        },
+        "collection_CCmeDg": {
+          "type": "collection",
+          "settings": {
+            "title": "MODERN",
+            "image": "shopify://shop_images/Modern_Kitchen_Tile.jpg",
+            "url": "shopify://collections/modern-kitchen-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
         }
       },
       "block_order": [
-        "collection_6HMWDt",
-        "collection_CCmeDg",
         "collection_Nkbxrq",
-        "collection_JWDFC8"
+        "collection_6HMWDt",
+        "collection_JWDFC8",
+        "collection_CCmeDg"
       ],
       "settings": {
         "title": "SHOP BY LOOK",
