@@ -421,7 +421,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_14.jpg",
+            "image": "shopify://shop_images/Geometric_Kitchen_Tile_2.jpg",
             "image_width": 130,
             "title": "Geometric",
             "button_label": "",
@@ -432,7 +432,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_10.jpg",
+            "image": "shopify://shop_images/Fishscale_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Fish Scale",
             "button_label": "",
@@ -443,7 +443,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_15.jpg",
+            "image": "shopify://shop_images/Fishscale_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Arabesque",
             "button_label": "",
@@ -454,7 +454,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_17.jpg",
+            "image": "shopify://shop_images/Square_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Square",
             "button_label": "",
@@ -465,7 +465,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_18.jpg",
+            "image": "shopify://shop_images/Rectangle_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Rectangle",
             "button_label": "",
