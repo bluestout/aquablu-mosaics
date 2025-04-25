@@ -295,7 +295,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Green_Glass.png",
+            "image": "shopify://shop_images/Green_ceramic_tile.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
@@ -306,7 +306,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Gray_Glass_c2d192cd-8a0f-40f2-b584-6b73b8a54295.png",
+            "image": "shopify://shop_images/Gray_ceramic_tile.png",
             "image_width": 130,
             "title": "Gray",
             "button_label": "",
@@ -317,7 +317,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Blue_Glass_1be0f871-beee-4d61-a9c8-5f1cb4b1d3eb.png",
+            "image": "shopify://shop_images/Blue_ceramic_tile.png",
             "image_width": 130,
             "title": "Blue",
             "button_label": "",
@@ -328,7 +328,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Black_Glass_38983260-e886-491b-a817-324effd44349.png",
+            "image": "shopify://shop_images/Black_ceramic_tile.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
@@ -339,7 +339,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/While_Glass.png",
+            "image": "shopify://shop_images/White_ceramic_tile.png",
             "image_width": 130,
             "title": "White",
             "button_label": "",
@@ -350,7 +350,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/beige_tile_ce39da7b-6304-49ae-b52d-2fd37b275fef.png",
+            "image": "shopify://shop_images/Beige_ceramic_tile.png",
             "image_width": 130,
             "title": "Beige",
             "button_label": "",
@@ -361,7 +361,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/RedGlassTile.png",
+            "image": "shopify://shop_images/Aqua_ceramic_tile.png",
             "image_width": 130,
             "title": "Red",
             "button_label": "",
@@ -372,7 +372,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/viewallglass.png",
+            "image": "shopify://shop_images/Patterned_ceramic_tile.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
@@ -421,7 +421,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/kitchenbathrectangle.png",
+            "image": "shopify://shop_images/Rectangle_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Rectangle",
             "button_label": "",
@@ -432,7 +432,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/geometric_tile.png",
+            "image": "shopify://shop_images/Geometric_Kitchen_Tile_2.jpg",
             "image_width": 130,
             "title": "Geometric",
             "button_label": "",
@@ -454,7 +454,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/fish_scale.png",
+            "image": "shopify://shop_images/Fishscale_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Fish Scale",
             "button_label": "",
@@ -465,7 +465,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/arkitchbath.png",
+            "image": "shopify://shop_images/Arabesque_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Arabesque",
             "button_label": "",
@@ -476,7 +476,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/squareshop.png",
+            "image": "shopify://shop_images/Square_Kitchen_Tile.jpg",
             "image_width": 130,
             "title": "Square",
             "button_label": "",
@@ -487,7 +487,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/viewallbathshapes_3394e4fb-d5c8-4633-bab1-3f64029da7fe.png",
+            "image": "shopify://shop_images/Pattern_ceramic_tile.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
@@ -829,6 +829,7 @@
       "block_order": [
         "liquid_HaBCUB"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
