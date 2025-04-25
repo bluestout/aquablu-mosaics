@@ -215,15 +215,6 @@
             "link": "shopify://collections/new-and-trending-kitchen-tile"
           }
         },
-        "logo_image_iPmecx": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Fluted_Kitchen_Backsplash_Tile.jpg",
-            "logo_title": "Kitchen Backsplash Tile",
-            "logo_text": "",
-            "link": "shopify://collections/kitchen-backsplash-tile"
-          }
-        },
         "logo_image_VtcGrV": {
           "type": "logo_image",
           "settings": {
@@ -231,6 +222,15 @@
             "logo_title": "Zellige-Look Tile",
             "logo_text": "",
             "link": "shopify://collections/zellige-look-tile"
+          }
+        },
+        "logo_image_iPmecx": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Fluted_Kitchen_Backsplash_Tile.jpg",
+            "logo_title": "Kitchen Backsplash Tile",
+            "logo_text": "",
+            "link": "shopify://collections/kitchen-backsplash-tile"
           }
         },
         "logo_image_YYrf4J": {
@@ -272,8 +272,8 @@
       },
       "block_order": [
         "logo_image_3qJA4U",
-        "logo_image_iPmecx",
         "logo_image_VtcGrV",
+        "logo_image_iPmecx",
         "logo_image_YYrf4J",
         "logo_image_KwhiEY",
         "logo_image_FkMTDw",
