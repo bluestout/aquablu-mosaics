@@ -417,17 +417,6 @@
             "button_link": "shopify://collections/round-kitchen-tile"
           }
         },
-        "text_block_L8ePKL": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/kitchenbathrectangle.png",
-            "image_width": 130,
-            "title": "Rectangle",
-            "button_label": "",
-            "button_link": "shopify://collections/rectangle-kitchen-tile"
-          }
-        },
         "text_block_iPp3R6": {
           "type": "text_block",
           "settings": {
@@ -472,6 +461,17 @@
             "button_link": "shopify://collections/square-kitchen-tile"
           }
         },
+        "text_block_L8ePKL": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_18.jpg",
+            "image_width": 130,
+            "title": "Rectangle",
+            "button_label": "",
+            "button_link": "shopify://collections/rectangle-kitchen-tile"
+          }
+        },
         "text_block_XtYVzb": {
           "type": "text_block",
           "settings": {
@@ -497,11 +497,11 @@
       },
       "block_order": [
         "text_block_BRWn6P",
-        "text_block_L8ePKL",
         "text_block_iPp3R6",
         "text_block_Ttqe38",
         "text_block_QkwFCK",
         "text_block_F4J7pM",
+        "text_block_L8ePKL",
         "text_block_XtYVzb",
         "text_block_EC4UaD"
       ],
