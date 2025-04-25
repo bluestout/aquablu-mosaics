@@ -1095,7 +1095,7 @@
           "type": "collection",
           "settings": {
             "title": "MODERN",
-            "image": "shopify://shop_images/newkitchmod.jpg",
+            "image": "shopify://shop_images/Modern_Kitchen_Tile.jpg",
             "url": "shopify://collections/modern-kitchen-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -1105,7 +1105,7 @@
           "type": "collection",
           "settings": {
             "title": "COASTAL",
-            "image": "shopify://shop_images/newkitch223.jpg",
+            "image": "shopify://shop_images/Coastal_Kitchen_Tile.jpg",
             "url": "shopify://collections/coastal-kitchen-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -1115,7 +1115,7 @@
           "type": "collection",
           "settings": {
             "title": "TROPICAL",
-            "image": "shopify://shop_images/newkitch22.jpg",
+            "image": "shopify://shop_images/Ceramic_Kitchen_Tile_by_MSI.jpg",
             "url": "shopify://collections/tropical-kitchen-tile",
             "tooltip": false,
             "tooltip_text": ""
