@@ -836,6 +836,62 @@
         "css_class": ""
       }
     },
+    "featured_collections_custom_tXNdQN": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "collection_QACQYx": {
+          "type": "collection",
+          "settings": {
+            "title": "CERAMIC",
+            "image": "shopify://shop_images/Ceramic_Tile_Bathroom.jpg",
+            "url": "https://www.aquablumosaics.com/collections/ceramic-bathroom-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_mwLhCt": {
+          "type": "collection",
+          "settings": {
+            "title": "PORCELAIN",
+            "image": "shopify://shop_images/Porcelain_Bathroom_Wall_Tile.jpg",
+            "url": "https://www.aquablumosaics.com/collections/porcelain-bathroom-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_mLa8nG": {
+          "type": "collection",
+          "settings": {
+            "title": "GLASS",
+            "image": "shopify://shop_images/Glass_Bathroom_Tile_by_Vidrepur.jpg",
+            "url": "https://www.aquablumosaics.com/collections/glass-bathroom-tiles",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_bg96Tt": {
+          "type": "collection",
+          "settings": {
+            "title": "STONE",
+            "image": "shopify://shop_images/Natural_Stone_Bathroom_Tile_f4cab3ae-8385-4acd-9f1d-aa728951cbc3.jpg",
+            "url": "https://www.aquablumosaics.com/collections/bathroom-stone-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_QACQYx",
+        "collection_mwLhCt",
+        "collection_mLa8nG",
+        "collection_bg96Tt"
+      ],
+      "settings": {
+        "title": "SHOP BY MATERIAL",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
     "promo_grid_RqaJFg": {
       "type": "promo-grid",
       "blocks": {
@@ -914,118 +970,15 @@
         "css_class": "blue-bar-overlay"
       }
     },
-    "featured_collections_custom_tXNdQN": {
-      "type": "featured-collections-custom",
-      "blocks": {
-        "collection_QACQYx": {
-          "type": "collection",
-          "settings": {
-            "title": "CERAMIC",
-            "image": "shopify://shop_images/Ceramic_Tile_Bathroom.jpg",
-            "url": "https://www.aquablumosaics.com/collections/ceramic-bathroom-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_mwLhCt": {
-          "type": "collection",
-          "settings": {
-            "title": "PORCELAIN",
-            "image": "shopify://shop_images/Porcelain_Bathroom_Wall_Tile.jpg",
-            "url": "https://www.aquablumosaics.com/collections/porcelain-bathroom-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_mLa8nG": {
-          "type": "collection",
-          "settings": {
-            "title": "GLASS",
-            "image": "shopify://shop_images/Glass_Bathroom_Tile_by_Vidrepur.jpg",
-            "url": "https://www.aquablumosaics.com/collections/glass-bathroom-tiles",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_bg96Tt": {
-          "type": "collection",
-          "settings": {
-            "title": "STONE",
-            "image": "shopify://shop_images/Natural_Stone_Bathroom_Tile_f4cab3ae-8385-4acd-9f1d-aa728951cbc3.jpg",
-            "url": "https://www.aquablumosaics.com/collections/bathroom-stone-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_QACQYx",
-        "collection_mwLhCt",
-        "collection_mLa8nG",
-        "collection_bg96Tt"
-      ],
-      "settings": {
-        "title": "SHOP BY MATERIAL",
-        "divider": false,
-        "css_class": "exploring-pool-mosaic-grid"
-      }
-    },
-    "b0260aa0-ad8a-49a4-a8e4-3afa13dd199b": {
-      "type": "slideshow",
-      "blocks": {
-        "20faeb2a-6027-4dd4-8015-e429e82e11af": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/conservation",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
-            "image_mobile": "shopify://shop_images/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "20faeb2a-6027-4dd4-8015-e429e82e11af"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 40,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "0d909433-0909-429c-86cc-588ca215f068": {
       "type": "text-and-image",
-      "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/Bathroom_tiles.jpg",
+        "image": "shopify://shop_images/Lanse_Series_Ceramic_Tile_for_Kitchens_Bathrooms_and_Walls.jpg",
         "video_url": "",
         "image_width": 690,
         "subtitle": "",
         "title": "",
-        "text": "<h2>ACCENT WALLS & BACKSPLASHES</h2><p>An easy way to create a luxuries, resort style feel in your bathroom is to not only tile your sinks backsplash, but to tile your bathroom walls. This creates an elegant, clean look and provides an easy to clean surface all around. Contact us for assistance in finding your perfect tile and creating your little piece of heaven!</p>",
+        "text": "<h2>CERAMIC TILE:</h2><p>An easy way to create a luxuries, resort style feel in your bathroom is to not only tile your sinks backsplash, but to tile your bathroom walls. This creates an elegant, clean look and provides an easy to clean surface all around. Contact us for assistance in finding your perfect tile and creating your little piece of heaven!</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -1074,7 +1027,7 @@
           "type": "collection",
           "settings": {
             "title": "MODERN",
-            "image": "shopify://shop_images/Currents_Kelp_8_x_8_Porcelain_Tile_Kitchen_Bath_Pool_Tile.jpg",
+            "image": "shopify://shop_images/DymoStatuaryWavyWhite_12_x24_CeramicTile_BacksplashTile.jpg",
             "url": "shopify://collections/modern-bathroom-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -1275,9 +1228,8 @@
     "068db4f3-ad3d-473e-ad0b-85335d634734",
     "dea94801-e262-4688-903f-5251dc2f193b",
     "advanced_content_LU6Jt9",
-    "promo_grid_RqaJFg",
     "featured_collections_custom_tXNdQN",
-    "b0260aa0-ad8a-49a4-a8e4-3afa13dd199b",
+    "promo_grid_RqaJFg",
     "0d909433-0909-429c-86cc-588ca215f068",
     "featured_collections_custom_3DaeXn",
     "cd43655b-0754-4426-a7e9-6d01556caab3",
