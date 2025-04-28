@@ -970,85 +970,6 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
-    "promo_grid_YQ874B": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_HFkpmb": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "GLASS",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/glass-bathroom-tiles",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Glass_bathroom_tile_homepage.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_zEx94T": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "PORCELAIN",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/porcelain-bathroom-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Hex_Crystal_Green_Hexagon_Porcelain_Tile_Fujiwa_Pool_Tile.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_6dT7F6": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "STONE",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/bathroom-stone-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/stonebath2.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "advanced_HFkpmb",
-        "advanced_zEx94T",
-        "advanced_6dT7F6"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "heading": "SHOP BY MATERIAL",
-        "gutter_size": 20,
-        "section_gutter_size": 40,
-        "space_above": true,
-        "space_below": true,
-        "two_column_mobile": false,
-        "three_column_mobile": true,
-        "css_class": "home-section-5"
-      }
-    },
     "b0260aa0-ad8a-49a4-a8e4-3afa13dd199b": {
       "type": "slideshow",
       "blocks": {
@@ -1356,7 +1277,6 @@
     "advanced_content_LU6Jt9",
     "promo_grid_RqaJFg",
     "featured_collections_custom_tXNdQN",
-    "promo_grid_YQ874B",
     "b0260aa0-ad8a-49a4-a8e4-3afa13dd199b",
     "0d909433-0909-429c-86cc-588ca215f068",
     "featured_collections_custom_3DaeXn",
