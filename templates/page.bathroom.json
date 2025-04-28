@@ -914,6 +914,62 @@
         "css_class": "blue-bar-overlay"
       }
     },
+    "featured_collections_custom_tXNdQN": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "collection_QACQYx": {
+          "type": "collection",
+          "settings": {
+            "title": "CERAMIC",
+            "image": "shopify://shop_images/Ceramic_Tile_Bathroom.jpg",
+            "url": "https://www.aquablumosaics.com/collections/ceramic-bathroom-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_mwLhCt": {
+          "type": "collection",
+          "settings": {
+            "title": "PORCELAIN",
+            "image": "shopify://shop_images/Porcelain_Bathroom_Tile_2.jpg",
+            "url": "https://www.aquablumosaics.com/collections/porcelain-bathroom-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_mLa8nG": {
+          "type": "collection",
+          "settings": {
+            "title": "GLASS",
+            "image": "shopify://shop_images/Glass_Tile_for_the_Bathroom.jpg",
+            "url": "https://www.aquablumosaics.com/collections/glass-bathroom-tiles",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_bg96Tt": {
+          "type": "collection",
+          "settings": {
+            "title": "STONE",
+            "image": "shopify://shop_images/Natural_Stone_Bathroom_Tile_f4cab3ae-8385-4acd-9f1d-aa728951cbc3.jpg",
+            "url": "https://www.aquablumosaics.com/collections/bathroom-stone-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_QACQYx",
+        "collection_mwLhCt",
+        "collection_mLa8nG",
+        "collection_bg96Tt"
+      ],
+      "settings": {
+        "title": "SHOP BY MATERIAL",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
     "promo_grid_YQ874B": {
       "type": "promo-grid",
       "blocks": {
@@ -980,6 +1036,7 @@
         "advanced_zEx94T",
         "advanced_6dT7F6"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "SHOP BY MATERIAL",
@@ -1298,6 +1355,7 @@
     "dea94801-e262-4688-903f-5251dc2f193b",
     "advanced_content_LU6Jt9",
     "promo_grid_RqaJFg",
+    "featured_collections_custom_tXNdQN",
     "promo_grid_YQ874B",
     "b0260aa0-ad8a-49a4-a8e4-3afa13dd199b",
     "0d909433-0909-429c-86cc-588ca215f068",
