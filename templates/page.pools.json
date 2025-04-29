@@ -732,8 +732,8 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
-            "image_mobile": "shopify://shop_images/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg",
+            "image": "shopify://shop_images/Conservation_Banner.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
