@@ -123,15 +123,6 @@
             "link": "shopify://collections/natural-stone-ledger-panels"
           }
         },
-        "logo_image_aWzq8m": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Natural_stone_flooring.jpg",
-            "logo_title": "Stone Flooring",
-            "logo_text": "",
-            "link": "shopify://collections/stone-tile-flooring"
-          }
-        },
         "logo_image_x4GYx7": {
           "type": "logo_image",
           "settings": {
@@ -140,6 +131,15 @@
             "logo_text": "",
             "link": "shopify://collections/pebble-tile"
           }
+        },
+        "logo_image_aWzq8m": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Natural_stone_flooring.jpg",
+            "logo_title": "Stone Flooring",
+            "logo_text": "",
+            "link": "shopify://collections/stone-tile-flooring"
+          }
         }
       },
       "block_order": [
@@ -147,8 +147,8 @@
         "logo_image_dUqpG4",
         "logo_image_QXm94A",
         "logo_image_zUyQtN",
-        "logo_image_aWzq8m",
-        "logo_image_x4GYx7"
+        "logo_image_x4GYx7",
+        "logo_image_aWzq8m"
       ],
       "settings": {
         "title": "",
