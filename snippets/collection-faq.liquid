@@ -1,0 +1,155 @@
+{%- style -%}
+  /* FAQ Section Container Styles */
+  .faq-section__container {
+    padding: 20px 50px;
+  }
+
+  /* FAQ Item Styles */
+  .faq-item {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .faq-item__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-family: 'FuturaMedium';
+  }
+
+  .faq-item__title {
+    margin: 18px 0;
+    font-size: 18px;
+  }
+
+  .faq-item__content {
+    padding-bottom: 20px;
+  }
+
+  /* FAQ Icon Styles */
+  .faq-item__icon::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(45deg);
+    margin-right: 8px;
+  }
+
+  .faq-item[open] .faq-item__icon::before {
+    transform: rotate(225deg);
+    position: relative;
+    top: 5px;
+  }
+
+  /* FAQ Header Styles */
+  .faq-section__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  .faq-section__subtitle {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .faq-section__content {
+    margin-top: 30px;
+  }
+
+  /* Description Styles */
+  .faq-section__description {
+    margin-bottom: 0;
+  }
+
+  .faq-section__description--collapsed {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .faq-section__read-more {
+    font-family: 'Futura', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .faq-section__container.page-width{
+    max-width: 1200px;
+  }
+
+  @media (max-width: 768px) {
+    .faq-section__container {
+      padding: 0px 17px;
+    }
+    .faq-section__subtitle {
+      font-size: 18px;
+    }
+    .faq-section__description {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .faq-section__subtitle {
+      color: #152755;
+    }
+  }
+
+  /* Staging theme styles */
+  .collection-description-wrapper [data-h2],
+  .collection-description-wrapper [data-p] {
+    display: none;
+  }
+{%- endstyle -%}
+
+<div class="collection-description-wrapper">
+  {{ collection.description }}
+</div>
+
+<script type="text/javascript">
+  /**
+   * FAQ Description Toggle Functionality
+   * Handles the show/hide behavior for the description text
+   */
+  document.addEventListener('DOMContentLoaded', function () {
+    const description = document.getElementById('faqDescription');
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const collectionFaqElement = document.querySelector('.faq-section');
+
+    if (collectionFaqElement) {
+      collectionFaqElement.style.display = 'flex';
+    }
+
+    if (description && readMoreBtn) {
+      readMoreBtn.addEventListener('click', function () {
+        if (description.classList.contains('faq-section__description--collapsed')) {
+          description.classList.remove('faq-section__description--collapsed');
+          readMoreBtn.textContent = 'Read less';
+        } else {
+          description.classList.add('faq-section__description--collapsed');
+          readMoreBtn.textContent = 'Read more';
+        }
+      });
+    }
+    
+    // Ensure accordions can be open simultaneously by stopping event propagation
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        // This prevents any parent handlers from affecting other accordions
+        e.stopPropagation();
+      });
+    });
+  });
+</script>
