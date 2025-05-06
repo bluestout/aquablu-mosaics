@@ -422,7 +422,7 @@
         "collection_W6UyBX": {
           "type": "collection",
           "settings": {
-            "title": "MODERN STYLE",
+            "title": "LOUNGERS",
             "image": "shopify://shop_images/moderninpool_37819fa4-78cc-4280-9f15-392ca8946ff1.jpg",
             "url": "shopify://collections/modern-pool-furniture",
             "tooltip": false,
@@ -432,7 +432,7 @@
         "collection_NUrAAW": {
           "type": "collection",
           "settings": {
-            "title": "CLASSIC STYLE",
+            "title": "CHAIRS",
             "image": "shopify://shop_images/classicinpool.jpg",
             "url": "shopify://collections/classic-pool-furniture",
             "tooltip": false,
@@ -442,7 +442,7 @@
         "collection_fybBcw": {
           "type": "collection",
           "settings": {
-            "title": "ECO-FRIENDLY",
+            "title": "TABLES",
             "image": "shopify://shop_images/ecofriendlyinpool.jpg",
             "url": "shopify://collections/recyclable-eco-friendly-products",
             "tooltip": false,
@@ -450,6 +450,46 @@
           }
         },
         "collection_zghnye": {
+          "type": "collection",
+          "settings": {
+            "title": "UMBRELLAS",
+            "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
+            "url": "shopify://collections/in-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_Cd6jjm": {
+          "type": "collection",
+          "settings": {
+            "title": "BARSTOOLS",
+            "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
+            "url": "shopify://collections/in-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_BYdqJQ": {
+          "type": "collection",
+          "settings": {
+            "title": "BENCHES",
+            "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
+            "url": "shopify://collections/in-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_Q8jWbR": {
+          "type": "collection",
+          "settings": {
+            "title": "BUNDLES",
+            "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
+            "url": "shopify://collections/in-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_inxikh": {
           "type": "collection",
           "settings": {
             "title": "SHOP ALL",
@@ -464,7 +504,11 @@
         "collection_W6UyBX",
         "collection_NUrAAW",
         "collection_fybBcw",
-        "collection_zghnye"
+        "collection_zghnye",
+        "collection_Cd6jjm",
+        "collection_BYdqJQ",
+        "collection_Q8jWbR",
+        "collection_inxikh"
       ],
       "disabled": true,
       "settings": {
