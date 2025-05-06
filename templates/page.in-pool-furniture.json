@@ -469,22 +469,22 @@
             "tooltip_text": ""
           }
         },
-        "collection_Q8jWbR": {
-          "type": "collection",
-          "settings": {
-            "title": "BUNDLES",
-            "image": "shopify://shop_images/In-Pool_Chairs_e69bc938-81ca-44bb-980b-b2c72e085e87.jpg",
-            "url": "shopify://collections/in-pool-furniture",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_BYdqJQ": {
           "type": "collection",
           "settings": {
             "title": "DAYBEDS",
             "image": "shopify://shop_images/In-Pool_Daybeds.jpg",
             "url": "https://www.aquablumosaics.com/collections/in-pool-daybeds",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_Q8jWbR": {
+          "type": "collection",
+          "settings": {
+            "title": "BUNDLES",
+            "image": "shopify://shop_images/In-Pool_Bundles.jpg",
+            "url": "shopify://collections/in-pool-furniture",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -506,8 +506,8 @@
         "collection_fybBcw",
         "collection_zghnye",
         "collection_Cd6jjm",
-        "collection_Q8jWbR",
         "collection_BYdqJQ",
+        "collection_Q8jWbR",
         "collection_inxikh"
       ],
       "disabled": true,
