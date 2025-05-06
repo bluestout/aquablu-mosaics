@@ -429,16 +429,6 @@
             "tooltip_text": ""
           }
         },
-        "collection_fybBcw": {
-          "type": "collection",
-          "settings": {
-            "title": "TABLES",
-            "image": "shopify://shop_images/In-Pool_Tables_2.jpg",
-            "url": "shopify://collections/recyclable-eco-friendly-products",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_NUrAAW": {
           "type": "collection",
           "settings": {
@@ -449,11 +439,21 @@
             "tooltip_text": ""
           }
         },
+        "collection_fybBcw": {
+          "type": "collection",
+          "settings": {
+            "title": "TABLES",
+            "image": "shopify://shop_images/In-Pool_Tables_2.jpg",
+            "url": "shopify://collections/recyclable-eco-friendly-products",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_zghnye": {
           "type": "collection",
           "settings": {
             "title": "UMBRELLAS",
-            "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
+            "image": "shopify://shop_images/In-Pool_Umbrellas.jpg",
             "url": "shopify://collections/in-pool-furniture",
             "tooltip": false,
             "tooltip_text": ""
@@ -502,8 +502,8 @@
       },
       "block_order": [
         "collection_W6UyBX",
-        "collection_fybBcw",
         "collection_NUrAAW",
+        "collection_fybBcw",
         "collection_zghnye",
         "collection_Cd6jjm",
         "collection_BYdqJQ",
