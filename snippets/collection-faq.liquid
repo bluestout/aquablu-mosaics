@@ -1,10 +1,5 @@
 {%- style -%}
   /* FAQ Section Container Styles */
-
-  .collection-description-wrapper {
-    padding: 0px 20px;
-  }
-  
   .faq-section__container {
     padding: 20px 50px;
   }
@@ -26,7 +21,7 @@
   }
 
   .faq-item__title {
-    margin: 18px 0;
+    margin: 0px 0;
     font-size: 18px;
   }
 
@@ -64,7 +59,7 @@
   }
 
   .faq-section__content {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   /* Description Styles */
@@ -92,6 +87,20 @@
   .faq-section__container.page-width{
     max-width: 1200px;
   }
+  
+  /* Content Format Styles */
+  .faq-content p, .faq-description p {
+    /* margin-bottom: 15px; */
+  }
+  
+  .faq-content ul, .faq-description ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .faq-content ul li, .faq-description ul li {
+    margin-bottom: 8px;
+  }
 
   @media (max-width: 768px) {
     .faq-section__container {
@@ -110,17 +119,46 @@
       color: #152755;
     }
   }
-
-  /* Staging theme styles */
-  .collection-description-wrapper [data-h2],
-  .collection-description-wrapper [data-p] {
-    display: none;
-  }
 {%- endstyle -%}
 
-<div class="collection-description-wrapper">
-  {{ collection.description }}
-</div>
+{% if collection.description != blank %}
+  <div class="faq-section" style="display: none;">
+    <div class="faq-section__container page-width">
+      <div class="faq-description">
+        {% assign intro_content = collection.description | split: '<h3' | first | strip %}
+        {% if intro_content != blank %}
+        <div id="faqDescription" class="faq-section__description faq-section__description--collapsed">
+          {{ intro_content }}
+        </div>
+        <button id="readMoreBtn" class="faq-section__read-more" style="display: none;">Read more</button>
+        {% endif %}
+      </div>
+      <div class="faq-section__content">
+        {% assign headings = collection.description | split: '<h3' %}
+        {% for heading in headings offset: 1 %}
+          {% assign heading_parts = heading | split: '</h3>' %}
+          {% assign title = heading_parts[0] | split: '>' | last | strip %}
+          {% assign content = heading_parts[1] | strip %}
+          
+          {% if title != blank and content != blank %}
+            {% if forloop.first %}
+              <h2>FAQ</h2>
+            {% endif %}
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <span class="faq-item__title">{{ title }}</span>
+                <span class="faq-item__icon"></span>
+              </summary>
+              <div class="faq-item__content faq-content">
+                {{ content }}
+              </div>
+            </details>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
 
 <script type="text/javascript">
   /**
@@ -137,6 +175,13 @@
     }
 
     if (description && readMoreBtn) {
+      // Check if content is actually overflowing and needs "Read more" button
+      const isOverflowing = description.scrollHeight > description.clientHeight;
+      
+      if (isOverflowing) {
+        readMoreBtn.style.display = 'block';
+      }
+      
       readMoreBtn.addEventListener('click', function () {
         if (description.classList.contains('faq-section__description--collapsed')) {
           description.classList.remove('faq-section__description--collapsed');
