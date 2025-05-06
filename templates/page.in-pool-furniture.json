@@ -744,61 +744,6 @@
         "css_class": "reduce-text-padding"
       }
     },
-    "text_columns_dhNWqr": {
-      "type": "text-columns",
-      "blocks": {
-        "text_block_RqxLYN": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/shallowinpoolround.png",
-            "image_width": 450,
-            "title": "0\" - 9\"",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/in-pool-furniture-9-water-depth"
-          }
-        },
-        "text_block_UA8MAd": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/midinpool.png",
-            "image_width": 450,
-            "title": "10\" - 12\"",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/in-pool-furniture-12-water-depth"
-          }
-        },
-        "text_block_g9MjP9": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/deepwaterround.png",
-            "image_width": 450,
-            "title": "13\" & Up",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/in-pool-furniture-13-and-up-water-depth"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_RqxLYN",
-        "text_block_UA8MAd",
-        "text_block_g9MjP9"
-      ],
-      "settings": {
-        "title": "SHOP BY WATER DEPTH",
-        "text": "",
-        "align_text": "center",
-        "three_col_mobile": true,
-        "divider": false,
-        "color_scheme": "none",
-        "css_class": ""
-      }
-    },
     "slideshow_cXW89r": {
       "type": "slideshow",
       "blocks": {
@@ -979,6 +924,61 @@
         "css_class": ""
       }
     },
+    "text_columns_dhNWqr": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_RqxLYN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/shallowinpoolround.png",
+            "image_width": 450,
+            "title": "0\" - 9\"",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/in-pool-furniture-9-water-depth"
+          }
+        },
+        "text_block_UA8MAd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/midinpool.png",
+            "image_width": 450,
+            "title": "10\" - 12\"",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/in-pool-furniture-12-water-depth"
+          }
+        },
+        "text_block_g9MjP9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/deepwaterround.png",
+            "image_width": 450,
+            "title": "13\" & Up",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/in-pool-furniture-13-and-up-water-depth"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_RqxLYN",
+        "text_block_UA8MAd",
+        "text_block_g9MjP9"
+      ],
+      "settings": {
+        "title": "SHOP BY WATER DEPTH",
+        "text": "",
+        "align_text": "center",
+        "three_col_mobile": true,
+        "divider": false,
+        "color_scheme": "none",
+        "css_class": ""
+      }
+    },
     "rich_text_yGwETe": {
       "type": "rich-text",
       "blocks": {
@@ -1149,9 +1149,9 @@
     "text_columns_custom_xpbabN",
     "text_columns_custom_mNmpg6",
     "text_and_image_dCpc4Y",
-    "text_columns_dhNWqr",
     "slideshow_cXW89r",
     "featured_collections_custom_bDrUnC",
+    "text_columns_dhNWqr",
     "promo_grid_xXBH3t",
     "rich_text_yGwETe",
     "text_and_image_TE9FgV",
