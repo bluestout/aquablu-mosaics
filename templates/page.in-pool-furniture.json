@@ -484,7 +484,7 @@
           "settings": {
             "title": "DAYBEDS",
             "image": "shopify://shop_images/In-Pool_Daybeds.jpg",
-            "url": "shopify://collections/in-pool-furniture",
+            "url": "https://www.aquablumosaics.com/collections/in-pool-daybeds",
             "tooltip": false,
             "tooltip_text": ""
           }
