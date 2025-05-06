@@ -510,7 +510,6 @@
         "collection_Q8jWbR",
         "collection_inxikh"
       ],
-      "disabled": true,
       "settings": {
         "title": "SHOP BY TYPE",
         "divider": false,
@@ -619,6 +618,7 @@
         "text_block_8iPnC7",
         "text_block_KVBCWW"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "<h2>SHOP BY TYPE</h2>",
