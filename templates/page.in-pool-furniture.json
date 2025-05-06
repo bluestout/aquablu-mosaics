@@ -881,9 +881,9 @@
         "collection_HGCaaC": {
           "type": "collection",
           "settings": {
-            "title": "SHOP ALL",
+            "title": "MADE IN AMERICA",
             "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
-            "url": "shopify://collections/in-pool-furniture",
+            "url": "shopify://collections/made-in-america-products",
             "tooltip": false,
             "tooltip_text": ""
           }
