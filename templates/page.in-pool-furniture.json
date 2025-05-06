@@ -469,6 +469,16 @@
             "tooltip_text": ""
           }
         },
+        "collection_Q8jWbR": {
+          "type": "collection",
+          "settings": {
+            "title": "BUNDLES",
+            "image": "shopify://shop_images/In-Pool_Chairs_e69bc938-81ca-44bb-980b-b2c72e085e87.jpg",
+            "url": "shopify://collections/in-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_BYdqJQ": {
           "type": "collection",
           "settings": {
@@ -479,21 +489,11 @@
             "tooltip_text": ""
           }
         },
-        "collection_Q8jWbR": {
-          "type": "collection",
-          "settings": {
-            "title": "BUNDLES",
-            "image": "shopify://shop_images/In-Pool_Furniture_Bundles_6a698ebf-3211-43d7-b0cf-7a4423870645.jpg",
-            "url": "shopify://collections/in-pool-furniture",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_inxikh": {
           "type": "collection",
           "settings": {
             "title": "SHOP ALL",
-            "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
+            "image": "shopify://shop_images/In-Pool_Chairs_2.jpg",
             "url": "shopify://collections/in-pool-furniture",
             "tooltip": false,
             "tooltip_text": ""
@@ -506,8 +506,8 @@
         "collection_NUrAAW",
         "collection_zghnye",
         "collection_Cd6jjm",
-        "collection_BYdqJQ",
         "collection_Q8jWbR",
+        "collection_BYdqJQ",
         "collection_inxikh"
       ],
       "disabled": true,
