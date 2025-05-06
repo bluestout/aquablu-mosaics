@@ -416,6 +416,63 @@
         "css_class": "logo-list-set-height rounded-corners"
       }
     },
+    "featured_collections_custom_9rAKTw": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "collection_W6UyBX": {
+          "type": "collection",
+          "settings": {
+            "title": "MODERN STYLE",
+            "image": "shopify://shop_images/moderninpool_37819fa4-78cc-4280-9f15-392ca8946ff1.jpg",
+            "url": "shopify://collections/modern-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_NUrAAW": {
+          "type": "collection",
+          "settings": {
+            "title": "CLASSIC STYLE",
+            "image": "shopify://shop_images/classicinpool.jpg",
+            "url": "shopify://collections/classic-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_fybBcw": {
+          "type": "collection",
+          "settings": {
+            "title": "ECO-FRIENDLY",
+            "image": "shopify://shop_images/ecofriendlyinpool.jpg",
+            "url": "shopify://collections/recyclable-eco-friendly-products",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_zghnye": {
+          "type": "collection",
+          "settings": {
+            "title": "SHOP ALL",
+            "image": "shopify://shop_images/Shop_All_In_Pool_Furniture.jpg",
+            "url": "shopify://collections/in-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_W6UyBX",
+        "collection_NUrAAW",
+        "collection_fybBcw",
+        "collection_zghnye"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SHOP BY TYPE",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
+      }
+    },
     "text_columns_custom_xpbabN": {
       "type": "text-columns-custom",
       "blocks": {
@@ -1044,6 +1101,7 @@
     "slideshow_kKwnX8",
     "slideshow_X6jry3",
     "logo_list_custom_2_eqV3fh",
+    "featured_collections_custom_9rAKTw",
     "text_columns_custom_xpbabN",
     "text_columns_custom_mNmpg6",
     "text_and_image_dCpc4Y",
