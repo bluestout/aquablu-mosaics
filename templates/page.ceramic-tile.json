@@ -726,6 +726,38 @@
         "title": "FAQs",
         "css_class": ""
       }
+    },
+    "1746647296e00b6d0c": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_QJUdpH": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 24433,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "left",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_QJUdpH"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
     }
   },
   "order": [
@@ -739,6 +771,7 @@
     "featured_collections_custom_hGrGHg",
     "text_and_image_4mp9ak",
     "550ddbb7-ee52-483b-a4b0-5d9a42344053",
-    "faq_PUnpPf"
+    "faq_PUnpPf",
+    "1746647296e00b6d0c"
   ]
 }
