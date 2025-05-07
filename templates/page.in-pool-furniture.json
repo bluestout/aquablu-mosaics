@@ -473,8 +473,8 @@
           "type": "collection",
           "settings": {
             "title": "DAYBEDS",
-            "image": "shopify://shop_images/In-Pool_Daybeds.jpg",
-            "url": "https://www.aquablumosaics.com/collections/in-pool-daybeds",
+            "image": "shopify://shop_images/In-Pool_Benches.jpg",
+            "url": "shopify://collections/in-pool-benches",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -846,6 +846,61 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
+    "text_columns_dhNWqr": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_RqxLYN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/shallowinpoolround.png",
+            "image_width": 450,
+            "title": "0\" - 9\"",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/in-pool-furniture-9-water-depth"
+          }
+        },
+        "text_block_UA8MAd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/midinpool.png",
+            "image_width": 450,
+            "title": "10\" - 12\"",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/in-pool-furniture-12-water-depth"
+          }
+        },
+        "text_block_g9MjP9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/deepwaterround.png",
+            "image_width": 450,
+            "title": "13\" & Up",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/in-pool-furniture-13-and-up-water-depth"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_RqxLYN",
+        "text_block_UA8MAd",
+        "text_block_g9MjP9"
+      ],
+      "settings": {
+        "title": "SHOP BY WATER DEPTH",
+        "text": "",
+        "align_text": "center",
+        "three_col_mobile": true,
+        "divider": false,
+        "color_scheme": "none",
+        "css_class": ""
+      }
+    },
     "promo_grid_xXBH3t": {
       "type": "promo-grid",
       "blocks": {
@@ -921,61 +976,6 @@
         "space_below": true,
         "two_column_mobile": false,
         "three_column_mobile": true,
-        "css_class": ""
-      }
-    },
-    "text_columns_dhNWqr": {
-      "type": "text-columns",
-      "blocks": {
-        "text_block_RqxLYN": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/shallowinpoolround.png",
-            "image_width": 450,
-            "title": "0\" - 9\"",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/in-pool-furniture-9-water-depth"
-          }
-        },
-        "text_block_UA8MAd": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/midinpool.png",
-            "image_width": 450,
-            "title": "10\" - 12\"",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/in-pool-furniture-12-water-depth"
-          }
-        },
-        "text_block_g9MjP9": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/deepwaterround.png",
-            "image_width": 450,
-            "title": "13\" & Up",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/in-pool-furniture-13-and-up-water-depth"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_RqxLYN",
-        "text_block_UA8MAd",
-        "text_block_g9MjP9"
-      ],
-      "settings": {
-        "title": "SHOP BY WATER DEPTH",
-        "text": "",
-        "align_text": "center",
-        "three_col_mobile": true,
-        "divider": false,
-        "color_scheme": "none",
         "css_class": ""
       }
     },
