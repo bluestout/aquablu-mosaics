@@ -664,6 +664,11 @@
           "customJS": "SavedBy.checkoutText = (text) => {\n   return text.replace(\"CHECKOUT\", \"Check out\");\n}",
           "isDevMode": false
         }
+      },
+      "7520711097648287086": {
+        "type": "shopify://apps/lookfy-gallery/blocks/app-embed/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
