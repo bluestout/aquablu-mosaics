@@ -721,7 +721,7 @@
           "settings": {
             "title": "PORCELAIN",
             "image": "shopify://shop_images/Porcelain_Kitchen_Tile_7f07d930-22a2-4dd8-a497-4d90322468c6.jpg",
-            "url": "shopify://collections/modern-kitchen-tile",
+            "url": "https://www.aquablumosaics.com/collections/porcelain-kitchen-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -731,7 +731,7 @@
           "settings": {
             "title": "CERAMIC",
             "image": "shopify://shop_images/MSI_Kitchen_Backsplash_Tile.jpg",
-            "url": "shopify://pages/ceramic-tile",
+            "url": "https://www.aquablumosaics.com/collections/ceramic-kitchen-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
