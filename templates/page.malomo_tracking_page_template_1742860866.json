@@ -11,7 +11,8 @@
   "order": [
     "main",
     "faq_tBm3Ve",
-    "featured_collection_LbDRTD"
+    "featured_collection_LbDRTD",
+    "contact_form_JQWcAg"
   ],
   "sections": {
     "main": {
@@ -128,6 +129,19 @@
         "mobile_scrollable": true,
         "view_all": true,
         "divider": false,
+        "css_class": ""
+      }
+    },
+    "contact_form_JQWcAg": {
+      "type": "contact-form",
+      "custom_css": [],
+      "name": "t:sections.contact-form.presets.contact_form.name",
+      "settings": {
+        "title": "Need Help?",
+        "text": "<p>Reach out to our Customer Support team below and let us know how we can assist!</p>",
+        "show_phone": true,
+        "narrow_column": true,
+        "color_scheme": "none",
         "css_class": ""
       }
     }
