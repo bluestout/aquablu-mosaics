@@ -1,0 +1,37 @@
+{% assign headings = collection.description | split: '<h3' %}
+{% assign has_faqs = false %}
+{% for heading in headings offset: 1 %}
+  {% assign heading_parts = heading | split: '</h3>' %}
+  {% assign title = heading_parts[0] | split: '>' | last | strip %}
+  {% assign content = heading_parts[1] | strip %}
+  {% if title != blank and content != blank %}
+    {% assign has_faqs = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if has_faqs %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for heading in headings offset: 1 -%}
+          {%- assign heading_parts = heading | split: '</h3>' -%}
+          {%- assign title = heading_parts[0] | split: '>' | last | strip -%}
+          {%- assign content = heading_parts[1] | strip -%}
+          {%- if title != blank and content != blank -%}
+            {
+              "@type": "Question",
+              "name": {{ title | json }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ content | strip_html | strip | json }}
+              }
+            }{%- unless forloop.last -%},{%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{% endif %}
