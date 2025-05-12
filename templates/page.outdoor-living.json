@@ -630,10 +630,44 @@
     },
     "320f2580-51bc-4eba-aa22-13b12a7ecccd": {
       "type": "featured-collection-carousel",
+      "disabled": true,
       "settings": {
         "title": "SHOP OUR STAFF FAVORITES",
         "tab_collection_1": "best-in-pool-furniture-staff-picks",
         "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8"
+      }
+    },
+    "17470768591d435a27": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_xFpGw3": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "disabled": true,
+          "settings": {
+            "gallery_id": 24653,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_xFpGw3"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
       }
     }
   },
@@ -651,6 +685,7 @@
     "eed788d4-2138-4c64-806f-ed605a88c66b",
     "0588edea-afce-4615-b359-5845d141dd26",
     "28960f77-fff8-4cb6-bc3d-ab9c9dc6ba82",
-    "320f2580-51bc-4eba-aa22-13b12a7ecccd"
+    "320f2580-51bc-4eba-aa22-13b12a7ecccd",
+    "17470768591d435a27"
   ]
 }
