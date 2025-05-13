@@ -232,175 +232,6 @@
         "css_class": "blue-bar-overlay"
       }
     },
-    "d868585d-845b-44bb-8e19-a090db690fa6": {
-      "type": "promo-grid-three-col",
-      "blocks": {
-        "template--14631698071624__d868585d-845b-44bb-8e19-a090db690fa6-advanced-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "FLOORING FAVORITES",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/flooring-favorites",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/LivingstyleBeigePorcelainTilebyMSI_24_x24_Tile6.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 360,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "bottom",
-            "color_accent": "#ffffff"
-          }
-        },
-        "b6e7c780-e95c-4305-85fc-d45d66f30fd5": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "TRENDING NOW",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/top-tile-picks",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/VillageCoral_4_x12_CeramicTile_Kitchen_BathroomWallTile9.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 360,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "3bab68c6-285e-4a8f-9ba7-67ba58c32de0": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "LEDGER STONE",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/natural-stone-ledger-panels",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/natural-stone-ledger.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 360,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "1152ef03-eaf9-4fa7-8b1b-7ffc4c2e0eaf": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "3D TILE",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/glass-fish-scale-mosaic-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Silver_Iridescent_3D_Tile.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 360,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "20% 50%",
-            "color_accent": "#ffffff"
-          }
-        },
-        "27148cf6-5dab-4e3b-9fa5-859c9164164c": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "BACKSPLASH TILE",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/kitchen-backsplash-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Stella_Oceano_2_x_10_Ceramic_Tile_Bathroom_Kitchen_Tile_9.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 360,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "template--14631698071624__d868585d-845b-44bb-8e19-a090db690fa6-advanced-1",
-        "b6e7c780-e95c-4305-85fc-d45d66f30fd5",
-        "3bab68c6-285e-4a8f-9ba7-67ba58c32de0",
-        "1152ef03-eaf9-4fa7-8b1b-7ffc4c2e0eaf",
-        "27148cf6-5dab-4e3b-9fa5-859c9164164c"
-      ],
-      "settings": {
-        "full_width": false,
-        "heading": "YOUR TILE JOURNEY STARTS HERE",
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": true,
-        "css_class": "home-section-3 blue-bar-overlay grid-column-stack"
-      }
-    },
-    "d8362269-4f29-4723-8b07-4389d5871865": {
-      "type": "slideshow",
-      "blocks": {
-        "243b8f41-96ff-422f-8814-b283a61382c5": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "<h2>SHOP ALL TILE &gt;&gt;</h2>",
-            "title_size": 50,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/tile-and-stone",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/shop-all_788f7640-54b8-4890-952d-99aa6bd24888.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "bottom center"
-          }
-        }
-      },
-      "block_order": [
-        "243b8f41-96ff-422f-8814-b283a61382c5"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": -10,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "0e7d7f53-6767-4573-a9fe-e8c892fead94": {
-      "type": "featured-collection-carousel",
-      "settings": {
-        "title": "TRENDING GLASS TILE",
-        "tab_collection_1": "new-and-trending-glass-tile",
-        "css_class": "collection-landing-section-8 set-carousel-height feat-collection-carousel"
-      }
-    },
     "02dd8652-1722-4300-84dd-8cb2dd09b297": {
       "type": "slideshow",
       "blocks": {
@@ -522,6 +353,175 @@
         "space_below": true,
         "two_column_mobile": false,
         "three_column_mobile": true,
+        "css_class": ""
+      }
+    },
+    "d868585d-845b-44bb-8e19-a090db690fa6": {
+      "type": "promo-grid-three-col",
+      "blocks": {
+        "template--14631698071624__d868585d-845b-44bb-8e19-a090db690fa6-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "FLOORING FAVORITES",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/flooring-favorites",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/LivingstyleBeigePorcelainTilebyMSI_24_x24_Tile6.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 360,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        },
+        "b6e7c780-e95c-4305-85fc-d45d66f30fd5": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "TRENDING NOW",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/top-tile-picks",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/VillageCoral_4_x12_CeramicTile_Kitchen_BathroomWallTile9.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 360,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "3bab68c6-285e-4a8f-9ba7-67ba58c32de0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "LEDGER STONE",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/natural-stone-ledger-panels",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/natural-stone-ledger.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 360,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "1152ef03-eaf9-4fa7-8b1b-7ffc4c2e0eaf": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "3D TILE",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/glass-fish-scale-mosaic-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Silver_Iridescent_3D_Tile.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 360,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "20% 50%",
+            "color_accent": "#ffffff"
+          }
+        },
+        "27148cf6-5dab-4e3b-9fa5-859c9164164c": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BACKSPLASH TILE",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/kitchen-backsplash-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Stella_Oceano_2_x_10_Ceramic_Tile_Bathroom_Kitchen_Tile_9.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 360,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--14631698071624__d868585d-845b-44bb-8e19-a090db690fa6-advanced-1",
+        "b6e7c780-e95c-4305-85fc-d45d66f30fd5",
+        "3bab68c6-285e-4a8f-9ba7-67ba58c32de0",
+        "1152ef03-eaf9-4fa7-8b1b-7ffc4c2e0eaf",
+        "27148cf6-5dab-4e3b-9fa5-859c9164164c"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "POPULAR COLLECTIONS",
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "css_class": "home-section-3 blue-bar-overlay grid-column-stack"
+      }
+    },
+    "0e7d7f53-6767-4573-a9fe-e8c892fead94": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "TRENDING GLASS TILE",
+        "tab_collection_1": "new-and-trending-glass-tile",
+        "css_class": "collection-landing-section-8 set-carousel-height feat-collection-carousel"
+      }
+    },
+    "d8362269-4f29-4723-8b07-4389d5871865": {
+      "type": "slideshow",
+      "blocks": {
+        "243b8f41-96ff-422f-8814-b283a61382c5": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "<h2>SHOP ALL TILE &gt;&gt;</h2>",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tile-and-stone",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/shop-all_788f7640-54b8-4890-952d-99aa6bd24888.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "243b8f41-96ff-422f-8814-b283a61382c5"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": -10,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
         "css_class": ""
       }
     },
@@ -692,11 +692,11 @@
     "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31",
     "3dc6dc2d-eca0-4c56-acf5-b4f2aa539329",
-    "d868585d-845b-44bb-8e19-a090db690fa6",
-    "d8362269-4f29-4723-8b07-4389d5871865",
-    "0e7d7f53-6767-4573-a9fe-e8c892fead94",
     "02dd8652-1722-4300-84dd-8cb2dd09b297",
     "d13d19b2-43c1-49fa-a419-51f21fe3d6d8",
+    "d868585d-845b-44bb-8e19-a090db690fa6",
+    "0e7d7f53-6767-4573-a9fe-e8c892fead94",
+    "d8362269-4f29-4723-8b07-4389d5871865",
     "a14841c9-8b7d-48b9-963f-0a46ac413ac3",
     "2f03e8f7-81c4-4e92-b693-857ce0499f7e",
     "5964f7cf-fc27-4f34-a14b-fcb57dc6d81d",
