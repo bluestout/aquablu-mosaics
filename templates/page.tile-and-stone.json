@@ -232,52 +232,6 @@
         "css_class": "blue-bar-overlay"
       }
     },
-    "62deb4ea-72fa-472c-9ec1-e141ee183d6c": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 50,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/tile-grout",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/shop-grout.jpg",
-            "image_mobile": "shopify://shop_images/groutmobile.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "d868585d-845b-44bb-8e19-a090db690fa6": {
       "type": "promo-grid-three-col",
       "blocks": {
@@ -291,7 +245,7 @@
             "cta_link1": "shopify://collections/flooring-favorites",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Trastevere_8_x8_PorcelainTile_PatternTilebyMSI7.jpg",
+            "image": "shopify://shop_images/LivingstyleBeigePorcelainTilebyMSI_24_x24_Tile6.jpg",
             "video_url": "",
             "width": "50",
             "height": 360,
@@ -439,6 +393,14 @@
         "css_class": ""
       }
     },
+    "0e7d7f53-6767-4573-a9fe-e8c892fead94": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "TRENDING GLASS TILE",
+        "tab_collection_1": "new-and-trending-glass-tile",
+        "css_class": "collection-landing-section-8 set-carousel-height feat-collection-carousel"
+      }
+    },
     "02dd8652-1722-4300-84dd-8cb2dd09b297": {
       "type": "slideshow",
       "blocks": {
@@ -563,14 +525,6 @@
         "css_class": ""
       }
     },
-    "0e7d7f53-6767-4573-a9fe-e8c892fead94": {
-      "type": "featured-collection-carousel",
-      "settings": {
-        "title": "TRENDING GLASS TILE",
-        "tab_collection_1": "new-and-trending-glass-tile",
-        "css_class": "collection-landing-section-8 set-carousel-height feat-collection-carousel"
-      }
-    },
     "a14841c9-8b7d-48b9-963f-0a46ac413ac3": {
       "type": "featured-collection",
       "disabled": true,
@@ -651,6 +605,52 @@
         "two_column_mobile": false,
         "three_column_mobile": false,
         "css_class": "home-section-10"
+      }
+    },
+    "62deb4ea-72fa-472c-9ec1-e141ee183d6c": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tile-grout",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/shop-grout.jpg",
+            "image_mobile": "shopify://shop_images/groutmobile.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
       }
     }
   },
