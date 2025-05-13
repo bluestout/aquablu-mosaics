@@ -279,6 +279,52 @@
         "css_class": ""
       }
     },
+    "02dd8652-1722-4300-84dd-8cb2dd09b297": {
+      "type": "slideshow",
+      "blocks": {
+        "c7d19bb2-8c98-4136-96ac-8f5316226369": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/conservation",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Conservation_Banner.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "c7d19bb2-8c98-4136-96ac-8f5316226369"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "d13d19b2-43c1-49fa-a419-51f21fe3d6d8": {
       "type": "promo-grid",
       "blocks": {
@@ -608,52 +654,6 @@
         "css_class": "home-section-10"
       }
     },
-    "02dd8652-1722-4300-84dd-8cb2dd09b297": {
-      "type": "slideshow",
-      "blocks": {
-        "c7d19bb2-8c98-4136-96ac-8f5316226369": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 50,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/conservation",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Conservation_Banner.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "c7d19bb2-8c98-4136-96ac-8f5316226369"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "17471641620772c0b0": {
       "type": "apps",
       "blocks": {
@@ -680,7 +680,6 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_8MbgJN"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
