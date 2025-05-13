@@ -80,6 +80,15 @@
             "link": "shopify://collections/trend-glass-mosaic-tile"
           }
         },
+        "logo_image_3AHWVr": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/murrinetileandstone2.jpg",
+            "logo_title": "Murrine Mosaics",
+            "logo_text": "",
+            "link": "shopify://collections/murrine-mosaics-glass-mosaic-tile"
+          }
+        },
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-3": {
           "type": "logo_image",
           "settings": {
@@ -124,26 +133,17 @@
             "logo_text": "",
             "link": "shopify://collections/artistry-in-mosaics-glass-tile-blends"
           }
-        },
-        "logo_image_3AHWVr": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/murrinetileandstone2.jpg",
-            "logo_title": "Murrine Mosaics",
-            "logo_text": "",
-            "link": "shopify://collections/murrine-mosaics-glass-mosaic-tile"
-          }
         }
       },
       "block_order": [
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-0",
         "c752c9f6-e54b-493e-a1f6-bd6b0f247b19",
+        "logo_image_3AHWVr",
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-3",
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-1",
         "logo_image_dT4b7K",
         "template--14459271807048__8c05ddf4-ccbd-4661-9ce8-763093fbaa31-168139693779db269b-2",
-        "4c4a8dc5-8f65-4427-a8be-a2865616cda2",
-        "logo_image_3AHWVr"
+        "4c4a8dc5-8f65-4427-a8be-a2865616cda2"
       ],
       "settings": {
         "title": "BROWSE TOP BRANDS",
