@@ -232,10 +232,10 @@
         "css_class": "blue-bar-overlay"
       }
     },
-    "02dd8652-1722-4300-84dd-8cb2dd09b297": {
+    "62deb4ea-72fa-472c-9ec1-e141ee183d6c": {
       "type": "slideshow",
       "blocks": {
-        "c7d19bb2-8c98-4136-96ac-8f5316226369": {
+        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1": {
           "type": "hero",
           "settings": {
             "image_width": 650,
@@ -247,30 +247,31 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/conservation",
+            "link": "shopify://collections/tile-grout",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Conservation_Banner.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
+            "image": "shopify://shop_images/shop-grout.jpg",
+            "image_mobile": "shopify://shop_images/groutmobile.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "c7d19bb2-8c98-4136-96ac-8f5316226369"
+        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 20,
-        "space_above": false,
-        "space_below": true,
+        "space_above": true,
+        "space_below": false,
         "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
@@ -607,10 +608,10 @@
         "css_class": "home-section-10"
       }
     },
-    "62deb4ea-72fa-472c-9ec1-e141ee183d6c": {
+    "02dd8652-1722-4300-84dd-8cb2dd09b297": {
       "type": "slideshow",
       "blocks": {
-        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1": {
+        "c7d19bb2-8c98-4136-96ac-8f5316226369": {
           "type": "hero",
           "settings": {
             "image_width": 650,
@@ -622,21 +623,21 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://collections/tile-grout",
+            "link": "shopify://pages/conservation",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/shop-grout.jpg",
-            "image_mobile": "shopify://shop_images/groutmobile.jpg",
+            "image": "shopify://shop_images/Conservation_Banner.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "template--14459271807048__62deb4ea-72fa-472c-9ec1-e141ee183d6c-168130994261edee2f-1"
+        "c7d19bb2-8c98-4136-96ac-8f5316226369"
       ],
       "settings": {
         "full_width": false,
@@ -644,8 +645,8 @@
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 20,
-        "space_above": true,
-        "space_below": false,
+        "space_above": false,
+        "space_below": true,
         "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
@@ -692,6 +693,7 @@
     "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31",
     "3dc6dc2d-eca0-4c56-acf5-b4f2aa539329",
+    "62deb4ea-72fa-472c-9ec1-e141ee183d6c",
     "02dd8652-1722-4300-84dd-8cb2dd09b297",
     "d13d19b2-43c1-49fa-a419-51f21fe3d6d8",
     "d868585d-845b-44bb-8e19-a090db690fa6",
@@ -700,7 +702,6 @@
     "a14841c9-8b7d-48b9-963f-0a46ac413ac3",
     "2f03e8f7-81c4-4e92-b693-857ce0499f7e",
     "5964f7cf-fc27-4f34-a14b-fcb57dc6d81d",
-    "62deb4ea-72fa-472c-9ec1-e141ee183d6c",
     "17471641620772c0b0"
   ]
 }
