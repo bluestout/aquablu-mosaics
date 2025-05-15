@@ -690,6 +690,51 @@
         "css_class": "aquapro-section-7"
       }
     },
+    "slideshow_8p9Ujd": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_EHbfnd": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "",
+            "title": "<p>Overlaid Hero Slide</p>",
+            "title_size": 70,
+            "subheading": "And optional subtext",
+            "custom_text": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_EHbfnd"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 30,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "aquapro-section-1"
+      }
+    },
     "557edd84-07d0-400f-8e97-6b43fe33e417": {
       "type": "text-columns",
       "blocks": {
@@ -904,6 +949,7 @@
     "c942c84b-e003-4a25-b7d2-7bbf8540a7ba",
     "6b4f7b64-8a1c-4458-9603-6e3ba5674470",
     "28f0875e-60d7-4a75-8f30-ae1b9a267557",
+    "slideshow_8p9Ujd",
     "557edd84-07d0-400f-8e97-6b43fe33e417",
     "01e8330d-fb95-45c6-b60d-f3b6f506d6df"
   ]
