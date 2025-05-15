@@ -217,6 +217,7 @@
         "715d072f-6af4-4019-a328-2b70143074f3": {
           "type": "hero",
           "settings": {
+            "image_above_header": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
             "image_width": 650,
             "html_embed": "",
             "html_embed_two": "",
@@ -232,8 +233,6 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/VP_Sale_2024_1_e88cbbd7-ddc7-48cb-96ec-33d77bfc5121.jpg",
-            "image_mobile": "shopify://shop_images/VP_Sale_2024_1_e88cbbd7-ddc7-48cb-96ec-33d77bfc5121.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
