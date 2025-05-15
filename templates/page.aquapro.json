@@ -706,11 +706,13 @@
             "subheading": "And optional subtext",
             "custom_text": "",
             "link": "",
-            "link_text": "Optional button",
+            "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
