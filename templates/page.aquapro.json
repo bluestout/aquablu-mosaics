@@ -211,51 +211,6 @@
         "css_class": "logo-list-set-height  border-radius-active aquapro-section-3"
       }
     },
-    "3eb10705-9353-4305-96ad-bdc01d63b12a": {
-      "type": "slideshow",
-      "blocks": {
-        "715d072f-6af4-4019-a328-2b70143074f3": {
-          "type": "hero",
-          "settings": {
-            "image_above_header": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/conservation",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "715d072f-6af4-4019-a328-2b70143074f3"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "aquapro-section-3"
-      }
-    },
     "02420eb2-8278-4ba0-9812-e30739c11004": {
       "type": "promo-grid",
       "blocks": {
@@ -942,7 +897,6 @@
     "7d022773-3460-4eb2-af2e-beac532f8ae9",
     "3f212183-3ae0-4fab-b50f-157f64bc43b7",
     "a271f570-8bbd-4bd1-bae8-b78549f755ec",
-    "3eb10705-9353-4305-96ad-bdc01d63b12a",
     "02420eb2-8278-4ba0-9812-e30739c11004",
     "a0221dfd-a009-4ffc-96db-9f14737552da",
     "1695739605531b635e",
