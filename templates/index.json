@@ -11,6 +11,7 @@
   "sections": {
     "173162359649190d6e": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
@@ -22,6 +23,7 @@
       "blocks": {
         "slide_dDz9fW": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_15.jpg",
             "heading": "",
