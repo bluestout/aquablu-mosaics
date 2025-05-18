@@ -17,29 +17,6 @@
     "cd00939b-df2f-4b67-b04c-4d5a2f1044c0": {
       "type": "slideshow",
       "blocks": {
-        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "<p>TILE AND STONE</p>",
-            "title_size": 50,
-            "subheading": "FOR EVERY PART OF YOUR HOME",
-            "custom_text": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Tile_Stone_Landing_Page_Hero.jpg",
-            "overlay_opacity": 4,
-            "focal_point": "center center"
-          }
-        },
         "hero_bCazze": {
           "type": "hero",
           "settings": {
@@ -63,11 +40,34 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "<p>TILE AND STONE</p>",
+            "title_size": 50,
+            "subheading": "FOR EVERY PART OF YOUR HOME",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Tile_Stone_Landing_Page_Hero.jpg",
+            "overlay_opacity": 4,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1",
-        "hero_bCazze"
+        "hero_bCazze",
+        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1"
       ],
       "settings": {
         "full_width": true,
