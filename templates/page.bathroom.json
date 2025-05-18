@@ -17,6 +17,30 @@
     "4b14a52d-a335-4150-a686-c3bde3e48acd": {
       "type": "slideshow",
       "blocks": {
+        "template--14565132828744__4b14a52d-a335-4150-a686-c3bde3e48acd-hero-2": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 45,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/current-sales-promos",
+            "link_text": "Learn More",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_24.jpg",
+            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_24.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "20% 50%"
+          }
+        },
         "e8056708-d445-43ba-b4fa-363d1bf1ac11": {
           "type": "hero",
           "settings": {
@@ -108,38 +132,14 @@
             "overlay_opacity": 6,
             "focal_point": "center center"
           }
-        },
-        "template--14565132828744__4b14a52d-a335-4150-a686-c3bde3e48acd-hero-2": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 45,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/current-sales-promos",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_24.jpg",
-            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_24.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "20% 50%"
-          }
         }
       },
       "block_order": [
+        "template--14565132828744__4b14a52d-a335-4150-a686-c3bde3e48acd-hero-2",
         "e8056708-d445-43ba-b4fa-363d1bf1ac11",
         "template--14565132828744__4b14a52d-a335-4150-a686-c3bde3e48acd-hero-1",
         "4891c120-3ed4-4e7e-af50-776bc75f4433",
-        "152be608-421e-4e74-899a-2fe306f5bc8c",
-        "template--14565132828744__4b14a52d-a335-4150-a686-c3bde3e48acd-hero-2"
+        "152be608-421e-4e74-899a-2fe306f5bc8c"
       ],
       "settings": {
         "full_width": true,
