@@ -17,6 +17,30 @@
     "slideshow_KNKNYA": {
       "type": "slideshow",
       "blocks": {
+        "hero_RHW9Hr": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/current-sales-promos",
+            "link_text": "Learn More",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
+            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "20% 50%"
+          }
+        },
         "hero_xh83zf": {
           "type": "hero",
           "settings": {
@@ -108,39 +132,14 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
-        },
-        "hero_RHW9Hr": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/blogs/news/the-best-blue-pool-tile-trends-of-2024",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Best_blue_pool_tile_dt.jpg",
-            "image_mobile": "shopify://shop_images/Coastal_tile_pool_mobile_1.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "20% 50%"
-          }
         }
       },
       "block_order": [
+        "hero_RHW9Hr",
         "hero_xh83zf",
         "hero_AfRhJx",
         "hero_tDGezb",
-        "hero_rENQHF",
-        "hero_RHW9Hr"
+        "hero_rENQHF"
       ],
       "settings": {
         "full_width": true,
