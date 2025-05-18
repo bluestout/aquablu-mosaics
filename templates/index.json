@@ -11,7 +11,6 @@
   "sections": {
     "173162359649190d6e": {
       "type": "apps",
-      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
@@ -21,6 +20,21 @@
     "slideshow_new_8zzw4R": {
       "type": "slideshow-new",
       "blocks": {
+        "slide_dDz9fW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_15.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Learn More",
+            "link": "shopify://pages/all-glass-tile-pool",
+            "box_align": "bottom-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 10,
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_KTCdTA": {
           "type": "slide",
           "settings": {
@@ -66,22 +80,6 @@
             "text_alignment_mobile": "center"
           }
         },
-        "slide_dDz9fW": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/All_Glass_Tile_Pools_-_Homepage.jpg",
-            "heading": "Take a Dive Into",
-            "heading_size": "h1",
-            "subheading": "GLASS TILE POOLS",
-            "button_label": "Explore the Benefits",
-            "link": "shopify://pages/all-glass-tile-pool",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 10,
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_jDt9WQ": {
           "type": "slide",
           "settings": {
@@ -99,10 +97,10 @@
         }
       },
       "block_order": [
+        "slide_dDz9fW",
         "slide_KTCdTA",
         "slide_W6J3Yp",
         "slide_R3tWbP",
-        "slide_dDz9fW",
         "slide_jDt9WQ"
       ],
       "settings": {
