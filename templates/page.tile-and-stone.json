@@ -39,10 +39,35 @@
             "overlay_opacity": 4,
             "focal_point": "center center"
           }
+        },
+        "hero_bCazze": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/current-sales-promos",
+            "link_text": "Learn More",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
+            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1"
+        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1",
+        "hero_bCazze"
       ],
       "settings": {
         "full_width": true,
@@ -53,7 +78,7 @@
         "space_above": false,
         "space_below": true,
         "mobile_size": 20,
-        "style": "arrows",
+        "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
