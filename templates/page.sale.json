@@ -96,30 +96,6 @@
         "css_class": ""
       }
     },
-    "rich_text_RHYPJN": {
-      "type": "rich-text",
-      "blocks": {
-        "text_bqyQgY": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "enlarge_text": false,
-            "text": "<h4>Springs Sale Terms & Conditions</h4><p><strong>Sale Period: </strong>The S'more Savings Event at AquaBlu Mosaics is valid from March 17th, 2025, to March 23rd, 2025. During this time, customers can enjoy savings of up to 15% on all tile and stone and swimming pool mosaics*, up to 10% on porcelain patio pavers and coping, and free shipping on all pool and outdoor furniture. <strong>Exclusions:</strong> Custom Mosaics Inc. swimming pool mosaics are not eligible for this promotion. <strong>Discounted Products: </strong>Items in the Sale and Clearance collection are not eligible for this discount. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all Spring Sale purchases. Please review our return policy for more information. <strong>Promo Codes: </strong>Discounts are applied automatically at checkout. <strong>Customer Support:</strong> If you have any questions or concerns regarding our Spring Sale, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. AquaBlu Mosaics is excited to offer our Spring Sale discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect products to <strong>Bring Paradise Home</strong>.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_bqyQgY"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "left",
-        "narrow_column": false,
-        "color_scheme": "none",
-        "divider": false,
-        "css_class": ""
-      }
-    },
     "e6a70224-a8f2-43f9-abc4-a556bf27c901": {
       "type": "rich-text",
       "blocks": {
@@ -212,6 +188,7 @@
       "blocks": {
         "hero_YXEbfg": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -779,6 +756,63 @@
         "slide_JDPYyy": {
           "type": "slide",
           "settings": {
+            "top_subheading": "Soak Up The Savings",
+            "title": "Memorial Day Sale",
+            "title_size": 40,
+            "subheading": "Enjoy 15% off tile, stone, pool mosaics, and installation materials with code MEMORIALDAY15. Get 10% off hardscapes and turf with code MEMORIALDAY10. Plus, receive FREE shipping on all fire and water features, as well as all in-pool and patio furniture (no code needed). \nSome exclusions apply; see terms below for details:",
+            "link": "shopify://collections/aquablu-all-products",
+            "link_text": "Shop Promo-Eligible Products",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_21.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_JDPYyy"
+      ],
+      "settings": {
+        "full_width": true,
+        "height": 650,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "rich_text_RHYPJN": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bqyQgY": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h4>Memorial Day Sale Terms & Conditions</h4><p><strong>Sale Period: </strong>The Memorial Day Sales Event at AquaBlu Mosaics is valid from May 18th, 2025, to May 31st, 2025. During this time, customers can enjoy savings of up to 15% on all tile and stone, swimming pool mosaics*, and installation materials. Up to 10% on porcelain patio pavers, porcelain coping, aritifical turf. Free shipping is available for all pool furniture, outdoor furniture, and fire/water products. <strong>Exclusions:</strong> Custom Mosaics Inc. swimming pool mosaics are not eligible for this promotion. Studio RedRock products are not eligible for this promotion. <strong>Discounted Products: </strong>Items in the Sale and Clearance collection are not eligible for this discount. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all Spring Sale purchases. Please review our return policy for more information. <strong>Customer Support:</strong> If you have any questions or concerns regarding our Memorial Day Sale, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. AquaBlu Mosaics is excited to offer our Memorial Day Sale discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect products to <strong>Bring Paradise Home</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bqyQgY"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "slideshow_split_yT6kCR": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_xtA8Ar": {
+          "type": "slide",
+          "settings": {
             "top_subheading": "USE CODE 'SHADESAVE' AT CHECKOUT",
             "title": "Save 50% on the Perfect Umbrella",
             "title_size": 40,
@@ -796,7 +830,7 @@
         }
       },
       "block_order": [
-        "slide_JDPYyy"
+        "slide_xtA8Ar"
       ],
       "settings": {
         "full_width": true,
@@ -921,7 +955,6 @@
     "main",
     "a92b5673-5ac8-4e2e-a61a-78fb827cbc99",
     "75796859-40c8-48ac-9d2d-974e31ca28cb",
-    "rich_text_RHYPJN",
     "e6a70224-a8f2-43f9-abc4-a556bf27c901",
     "slideshow_zMdP6B",
     "slideshow_mWYVFP",
@@ -938,6 +971,8 @@
     "advanced_content_kaLtHe",
     "778611a2-9115-4aca-900f-1c2064f03579",
     "slideshow_split_pQfydK",
+    "rich_text_RHYPJN",
+    "slideshow_split_yT6kCR",
     "slideshow_split_3AUTRr",
     "04e68109-2078-419d-82cc-f5e0b128ccea",
     "99e0f1b0-4941-4132-9a64-a1becadfeb62",
