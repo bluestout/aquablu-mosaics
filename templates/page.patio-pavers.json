@@ -12,6 +12,29 @@
     "slideshow_pQakFB": {
       "type": "slideshow",
       "blocks": {
+        "hero_BCbHhw": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/current-sales-promos",
+            "link_text": "Learn More",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_30.jpg",
+            "overlay_opacity": 8,
+            "focal_point": "center center"
+          }
+        },
         "hero_4WkMcQ": {
           "type": "hero",
           "settings": {
@@ -55,29 +78,6 @@
             "text_align": "vertical-center horizontal-center",
             "image": "shopify://shop_images/inspire1.jpg",
             "overlay_opacity": 10,
-            "focal_point": "center center"
-          }
-        },
-        "hero_BCbHhw": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "STYLE & FUNCTIONALITY",
-            "title": "<p>QUARTZITE-LOOK PAVERS</p>",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/quartzite-look-porcelain-pavers-coping",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/inspire5.jpg",
-            "overlay_opacity": 8,
             "focal_point": "center center"
           }
         },
@@ -129,9 +129,9 @@
         }
       },
       "block_order": [
+        "hero_BCbHhw",
         "hero_4WkMcQ",
         "hero_AqADGf",
-        "hero_BCbHhw",
         "hero_bfc8eD",
         "hero_kH3Kpz"
       ],
