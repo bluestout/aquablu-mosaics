@@ -111,7 +111,6 @@
         },
         "template--14565132828744__4b14a52d-a335-4150-a686-c3bde3e48acd-hero-2": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -122,14 +121,14 @@
             "title_size": 45,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/blogs/news/fall-into-luxury-enhance-your-home-with-warm-and-inviting-tile-designs",
+            "link": "shopify://pages/current-sales-promos",
             "link_text": "Learn More",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Aquablu-Fall-Into-Luxury-Tile-Home-Upgrades-dt.jpg",
-            "image_mobile": "shopify://shop_images/Aquablu-Fall-Into-Luxury-Tile-Home-Upgrades-MB.jpg",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_24.jpg",
+            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_24.jpg",
             "overlay_opacity": 0,
             "focal_point": "20% 50%"
           }
