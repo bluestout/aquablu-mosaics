@@ -19,24 +19,23 @@
       "blocks": {
         "hero_Yw4eFD": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
-            "top_subheading": "BRING HOME THE SAVINGS",
-            "title": "<p>BLACK FRIDAY DEALS</p>",
+            "top_subheading": "",
+            "title": "",
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/black-friday",
-            "link_text": "Shop Now",
+            "link": "https://www.aquablumosaics.com/pages/memorial-day-sale",
+            "link_text": "LEARN MORE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/stonebf2.png",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_23.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
