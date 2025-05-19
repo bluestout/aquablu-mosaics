@@ -36,7 +36,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
             "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_31.jpg",
-            "image_mobile": "shopify://shop_images/memday24mobile.png",
+            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_31.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -102,7 +102,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
             "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_33.jpg",
-            "image_mobile": "shopify://shop_images/memdaycodemobile.png",
+            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_33.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
