@@ -192,19 +192,19 @@
         "advanced_BTwABp": {
           "type": "advanced",
           "settings": {
-            "subheading": "Code: COSMY100",
-            "heading": "",
+            "subheading": "15% OFF POOL MOSAICS",
+            "heading": "CODE:MEMORIALDAY15",
             "textarea": "",
             "cta_text1": "",
-            "cta_link1": "shopify://collections/robotic-pool-cleaners",
+            "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/cosmy100_5f2850ee-a56c-462c-8fca-de252c71b72d.png",
+            "image": "shopify://shop_images/Joyful-Soul-Mandala_-Custom-Mosaics-_AquaBlu-Mosaics.jpg",
             "video_url": "",
             "width": "33",
             "height": 500,
             "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "20% 0",
+            "focal_point": "center",
             "color_accent": "#ffffff"
           }
         }
