@@ -65,24 +65,23 @@
       "blocks": {
         "hero_XLwyq4": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
-            "top_subheading": "BRING THE SAVINGS HOME",
-            "title": "<p>BLACK FRIDAY DEALS</p>",
+            "top_subheading": "",
+            "title": "",
             "title_size": 48,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/black-friday",
-            "link_text": "Shop Now",
+            "link": "shopify://pages/memorial-day-sale",
+            "link_text": "LEARN MORE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/bfglass_bb9e711f-a5e3-4ae1-b2ef-3d2dcc0e8bce.png",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_37.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
