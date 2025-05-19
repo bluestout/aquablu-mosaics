@@ -68,7 +68,7 @@
         "image_width": 500,
         "subtitle": "",
         "title": "",
-        "text": "<h2>CELEBRATE AND SAVE</h2><p>This Memorial Day, dive into the summer season with our exclusive AquaBlu Memorial Day Sale! As we remember and honor those who have served, we're bringing you unbeatable deals on everything from elegant tile selections to enchanting pool mosaics, alongside luxurious pool and outdoor furniture. Whether you're looking to create a serene backyard retreat or transform your outdoor entertaining space, our extensive collection has something for every taste and budget. Don't miss this opportunity to transform your home into a personal paradise with high-quality products designed to bring beauty and comfort to your home and outdoor living areas. </p><p>Take advantage of our <strong>15% SITE WIDE</strong> discount or one of our bonus offers today and make this summer unforgettable!</p>",
+        "text": "<h2>CELEBRATE AND SAVE</h2><p>This Memorial Day, dive into the summer season with our exclusive AquaBlu Memorial Day Sale! As we remember and honor those who have served, we're bringing you unbeatable deals on everything from elegant tile selections to enchanting pool mosaics, alongside luxurious pool and outdoor furniture. Whether you're looking to create a serene backyard retreat or transform your outdoor entertaining space, our extensive collection has something for every taste and budget. Don't miss this opportunity to transform your home into a personal paradise with high-quality products designed to bring beauty and comfort to your home and outdoor living areas. </p><p>Take advantage of our tile, pavers, pool mosaics, and installation materials discounts or one of our bonus offers today and make this summer unforgettable!</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -292,6 +292,7 @@
         "advanced_zG4YKx",
         "advanced_39p7XE"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "",
