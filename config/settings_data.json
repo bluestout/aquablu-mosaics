@@ -669,6 +669,11 @@
         "type": "shopify://apps/lookfy-gallery/blocks/app-embed/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
         "disabled": false,
         "settings": {}
+      },
+      "5099416060181051451": {
+        "type": "shopify://apps/interlinks/blocks/app-embed/d91ba15e-f408-4d77-bec4-18d567dd889f",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
