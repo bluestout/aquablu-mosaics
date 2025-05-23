@@ -601,6 +601,7 @@
           "type": "collection",
           "settings": {
             "title": "FIRE PITS",
+            "image": "shopify://shop_images/outdoor_fire_pits.jpg",
             "url": "shopify://collections/outdoor-fire-pits",
             "tooltip": false,
             "tooltip_text": ""
