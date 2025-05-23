@@ -561,7 +561,7 @@
           "type": "collection",
           "settings": {
             "title": "BACKSPLASHES",
-            "image": "shopify://shop_images/Folk_Pearl_7_x_16_Porcelain_Tile_Kitchen_Backsplash_Bathroom_Tile_5.jpg",
+            "image": "shopify://shop_images/folk-pearl-7-x-16-porcelain-tile-920485.jpg",
             "url": "shopify://collections/kitchen-backsplash-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -571,7 +571,6 @@
           "type": "collection",
           "settings": {
             "title": "STONE BATHROOM",
-            "image": "shopify://shop_images/Carrara_White_2_Hexagon_Mosaic_Stone_Tile_for_Kitchen_and_Bath.jpg",
             "url": "https://www.aquablumosaics.com/collections/bathroom-stone-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -601,7 +600,6 @@
           "type": "collection",
           "settings": {
             "title": "FIRE PITS",
-            "image": "shopify://shop_images/Manchester_Fire_Pit_by_the_Outdoor_Plus_3.jpg",
             "url": "shopify://collections/outdoor-fire-pits",
             "tooltip": false,
             "tooltip_text": ""
@@ -790,7 +788,6 @@
           "settings": {
             "link": "shopify://pages/shop-porcelain-tile",
             "text": "PORCELAIN",
-            "image": "shopify://shop_images/Verdigris_6_x_6_Porcelain_Tile_Artistry_in_Mosaics.jpg",
             "width": "33",
             "height": 440
           }
