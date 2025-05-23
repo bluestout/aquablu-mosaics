@@ -59,88 +59,12 @@
         "css_class": ""
       }
     },
-    "75796859-40c8-48ac-9d2d-974e31ca28cb": {
-      "type": "slideshow-split",
-      "blocks": {
-        "fd071408-c866-4ddb-8f32-3eb533a5e0c4": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "AQUABLU SPRING SALE",
-            "title": "Save up to 15%",
-            "title_size": 59,
-            "subheading": "on tile, up to 10% on porcelain pavers, and FREE SHIPPING on all pool & outdoor furniture!",
-            "link": "shopify://collections/tile-and-stone",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Spring_Sale_2025_Social_3.png",
-            "indent_image": true,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        }
-      },
-      "block_order": [
-        "fd071408-c866-4ddb-8f32-3eb533a5e0c4"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "height": 650,
-        "height_mobile": 450,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "e6a70224-a8f2-43f9-abc4-a556bf27c901": {
-      "type": "rich-text",
-      "blocks": {
-        "button_qYbn8G": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
-            "link_text": "SHOP NOW"
-          }
-        },
-        "heading_FKCYNG": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "title": "Don't delay, the sale ends at midnight, December 2nd!"
-          }
-        },
-        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p><strong>Disclaimer:</strong> The Ledge Lounger flash sale is valid until 11:59pm (EST) on March 23rd, 2025. The discounts are applicable to all No code is required. Discounts will be automatically applied at check out. For assistance regarding the flash sale, please contact customer service.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "button_qYbn8G",
-        "heading_FKCYNG",
-        "template--14668641665096__e6a70224-a8f2-43f9-abc4-a556bf27c901-text-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": false,
-        "color_scheme": "2",
-        "divider": false,
-        "css_class": ""
-      }
-    },
     "slideshow_zMdP6B": {
       "type": "slideshow",
       "blocks": {
         "hero_7EqCAk": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -888,8 +812,6 @@
   "order": [
     "main",
     "a92b5673-5ac8-4e2e-a61a-78fb827cbc99",
-    "75796859-40c8-48ac-9d2d-974e31ca28cb",
-    "e6a70224-a8f2-43f9-abc4-a556bf27c901",
     "slideshow_zMdP6B",
     "slideshow_split_TqemLq",
     "promo_grid_7rAh4V",
