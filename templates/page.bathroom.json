@@ -1015,6 +1015,7 @@
           "type": "collection",
           "settings": {
             "title": "TROPICAL",
+            "image": "shopify://shop_images/Tropical_Ceramic_Tile_2.jpg",
             "url": "shopify://collections/tropical-bathroom-tile",
             "tooltip": false,
             "tooltip_text": ""
