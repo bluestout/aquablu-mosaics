@@ -24,9 +24,9 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
-            "top_subheading": "",
+            "top_subheading": "Indulge in Timeless Style for Less",
             "title": "<p>SALES & PROMOTIONS</p>",
-            "title_size": 50,
+            "title_size": 47,
             "subheading": "",
             "custom_text": "",
             "link": "",
@@ -35,7 +35,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Sales_and_Promotions.jpg",
+            "image": "shopify://shop_images/Sales_Promotions_Home_page.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
