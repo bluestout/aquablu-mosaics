@@ -903,7 +903,7 @@
             "cta_link1": "shopify://collections/shower-floor-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Natural_Stone_Bathroom_Floor_Tile.jpg",
+            "image": "shopify://shop_images/Hip_Hop_Camel_6_x_16_Porcelain_Tile_Kitchen_Backsplash_Bathroom_Tile.4.jpg",
             "video_url": "",
             "width": "33",
             "height": 440,
@@ -922,7 +922,7 @@
             "cta_link1": "shopify://collections/shower-wall-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/StellaBiscotti_2_x10_CeramicTile_Bathroom_KitchenTile8.jpg",
+            "image": "shopify://shop_images/Shower_Wall_Tile_408051ef-5023-4444-8b26-7f012754d91b.jpg",
             "video_url": "",
             "width": "33",
             "height": 440,
@@ -941,7 +941,7 @@
             "cta_link1": "shopify://collections/shop-all-bathroom-wall-and-floor-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Old_Savannah_Berilo_2_x_10_Ceramic_Tile_Kitchen_Backsplash_Tile_2.jpg",
+            "image": "shopify://shop_images/Bathroom_Tile_Homepage.jpg",
             "video_url": "",
             "width": "33",
             "height": 440,
@@ -1015,7 +1015,6 @@
           "type": "collection",
           "settings": {
             "title": "TROPICAL",
-            "image": "shopify://shop_images/AlteaMatcha_4_x4_CeramicTile_Zellige-LookTile.3.jpg",
             "url": "shopify://collections/tropical-bathroom-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -1025,7 +1024,6 @@
           "type": "collection",
           "settings": {
             "title": "MODERN",
-            "image": "shopify://shop_images/DymoStatuaryWavyWhite_12_x24_CeramicTile_BacksplashTile.jpg",
             "url": "shopify://collections/modern-bathroom-tile",
             "tooltip": false,
             "tooltip_text": ""
