@@ -793,16 +793,6 @@
     "featured_collections_custom_bDrUnC": {
       "type": "featured-collections-custom",
       "blocks": {
-        "collection_Vqe4NK": {
-          "type": "collection",
-          "settings": {
-            "title": "MODERN STYLE",
-            "image": "shopify://shop_images/Vondom-Surf-Sun-Lounger_2.jpg",
-            "url": "shopify://collections/modern-pool-furniture",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_8xAHJG": {
           "type": "collection",
           "settings": {
@@ -832,13 +822,23 @@
             "tooltip": false,
             "tooltip_text": ""
           }
+        },
+        "collection_Vqe4NK": {
+          "type": "collection",
+          "settings": {
+            "title": "MODERN STYLE",
+            "image": "shopify://shop_images/TenjamOutdoorFurniture_RippleWideTableWithUmbrellaHole.jpg",
+            "url": "shopify://collections/modern-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
         }
       },
       "block_order": [
-        "collection_Vqe4NK",
         "collection_8xAHJG",
         "collection_98KAgg",
-        "collection_HGCaaC"
+        "collection_HGCaaC",
+        "collection_Vqe4NK"
       ],
       "settings": {
         "title": "BROWSE",
