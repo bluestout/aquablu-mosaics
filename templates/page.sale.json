@@ -710,14 +710,14 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/swimming-pool-mosaics",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
             "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/mosmonsale.png",
-            "image_mobile": "shopify://shop_images/tenjambfemail.jpg",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/Shop_All_Sale_Discounted_Tile_3.jpg",
+            "image_mobile": "shopify://shop_images/Shop_All_Sale_Discounted_Tile_4.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -726,7 +726,6 @@
       "block_order": [
         "hero_YXEbfg"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
