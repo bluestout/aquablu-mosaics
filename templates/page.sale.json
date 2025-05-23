@@ -183,53 +183,6 @@
         "css_class": ""
       }
     },
-    "slideshow_mWYVFP": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_YXEbfg": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 50,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/swimming-pool-mosaics",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/mosmonsale.png",
-            "image_mobile": "shopify://shop_images/tenjambfemail.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_YXEbfg"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "slideshow_split_TqemLq": {
       "type": "slideshow-split",
       "blocks": {
@@ -742,6 +695,53 @@
         "css_class": ""
       }
     },
+    "slideshow_mWYVFP": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_YXEbfg": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/swimming-pool-mosaics",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/mosmonsale.png",
+            "image_mobile": "shopify://shop_images/tenjambfemail.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_YXEbfg"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "slideshow_split_yT6kCR": {
       "type": "slideshow-split",
       "blocks": {
@@ -892,7 +892,6 @@
     "75796859-40c8-48ac-9d2d-974e31ca28cb",
     "e6a70224-a8f2-43f9-abc4-a556bf27c901",
     "slideshow_zMdP6B",
-    "slideshow_mWYVFP",
     "slideshow_split_TqemLq",
     "promo_grid_7rAh4V",
     "slideshow_eiQn9r",
@@ -905,6 +904,7 @@
     "778611a2-9115-4aca-900f-1c2064f03579",
     "slideshow_split_pQfydK",
     "rich_text_RHYPJN",
+    "slideshow_mWYVFP",
     "slideshow_split_yT6kCR",
     "slideshow_split_3AUTRr",
     "04e68109-2078-419d-82cc-f5e0b128ccea",
