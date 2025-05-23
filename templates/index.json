@@ -790,6 +790,7 @@
           "settings": {
             "link": "shopify://pages/shop-porcelain-tile",
             "text": "PORCELAIN",
+            "image": "shopify://shop_images/verdigris-field-6-x-6-porcelain-tile-751467.jpg",
             "width": "33",
             "height": 440
           }
