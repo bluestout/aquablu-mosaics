@@ -188,7 +188,6 @@
       "blocks": {
         "hero_YXEbfg": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -228,40 +227,6 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "promo_grid_fUPm7f": {
-      "type": "promo-grid",
-      "blocks": {
-        "product_8fWJPX": {
-          "type": "product",
-          "settings": {
-            "product": "kai-shelf-lounger-luxury-pool-lounge-chair",
-            "subheading": "SAVE",
-            "heading": "20% ON ARTISTRY IN MOSAICS & ELEMENT GLO!",
-            "textarea": "USE CODE: MOSAICMONDAY",
-            "link_label": "",
-            "label": "",
-            "enable_price": false,
-            "width": "100",
-            "color_scheme": "2"
-          }
-        }
-      },
-      "block_order": [
-        "product_8fWJPX"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "heading": "",
-        "gutter_size": 33,
-        "section_gutter_size": 40,
-        "space_above": false,
-        "space_below": true,
-        "two_column_mobile": false,
-        "three_column_mobile": false,
         "css_class": ""
       }
     },
@@ -557,6 +522,7 @@
       "blocks": {
         "advanced_b7eVUt": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "heading": "",
@@ -958,7 +924,6 @@
     "e6a70224-a8f2-43f9-abc4-a556bf27c901",
     "slideshow_zMdP6B",
     "slideshow_mWYVFP",
-    "promo_grid_fUPm7f",
     "slideshow_split_TqemLq",
     "promo_grid_7rAh4V",
     "promo_grid_gaM8ta",
