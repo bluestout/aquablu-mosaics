@@ -297,37 +297,6 @@
         "css_class": ""
       }
     },
-    "promo_grid_gaM8ta": {
-      "type": "promo-grid",
-      "blocks": {
-        "sale_collection_nV8PTm": {
-          "type": "sale_collection",
-          "settings": {
-            "sale_collection": "ledge-lounger-outdoor-pool-and-patio-furniture",
-            "top_text": "SAVE",
-            "middle_text": "20% off",
-            "bottom_text": "ALL LEDGE LOUNGER FURNITURE",
-            "width": "100",
-            "color_scheme": "2"
-          }
-        }
-      },
-      "block_order": [
-        "sale_collection_nV8PTm"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "heading": "LEDGE LOUNGER FLASH SALE",
-        "gutter_size": 0,
-        "section_gutter_size": 40,
-        "space_above": true,
-        "space_below": false,
-        "two_column_mobile": false,
-        "three_column_mobile": false,
-        "css_class": ""
-      }
-    },
     "slideshow_eiQn9r": {
       "type": "slideshow",
       "blocks": {
@@ -926,7 +895,6 @@
     "slideshow_mWYVFP",
     "slideshow_split_TqemLq",
     "promo_grid_7rAh4V",
-    "promo_grid_gaM8ta",
     "slideshow_eiQn9r",
     "promo_grid_C9gXY9",
     "slideshow_DVYz9f",
