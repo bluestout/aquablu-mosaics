@@ -674,6 +674,11 @@
         "type": "shopify://apps/interlinks/blocks/app-embed/d91ba15e-f408-4d77-bec4-18d567dd889f",
         "disabled": false,
         "settings": {}
+      },
+      "15154131639906026026": {
+        "type": "shopify://apps/tinyseo/blocks/broken-link-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
