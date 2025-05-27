@@ -1,1 +1,454 @@
-{"sections":{"256f45b6-7a26-489a-8b71-68f5b31646f2":{"type":"slideshow","blocks":{"template--14459271479368__256f45b6-7a26-489a-8b71-68f5b31646f2-168381328892e35a88-0":{"type":"hero","settings":{"image_above_header":"shopify:\/\/shop_images\/Group_4_1.png","image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"","title":"<h2>Enjoy exclusive benefits and discounts<\/h2>","title_size":100,"subheading":"","custom_text":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"#ffffff","text_align":"vertical-center horizontal-right","image":"shopify:\/\/shop_images\/AdobeStock_157169027_2x_5aaf8e05-4eb7-49c8-87cf-814c4425dc39.png","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14459271479368__256f45b6-7a26-489a-8b71-68f5b31646f2-168381328892e35a88-0"],"settings":{"full_width":true,"full_width_mobile":false,"contact_popup":false,"desktop_size":0,"gutter_size":20,"space_above":false,"space_below":false,"mobile_size":50,"style":"arrows","autoplay":true,"autoplay_speed":7,"css_class":"club-section-1"}},"main":{"type":"main-page","disabled":true,"settings":{}},"63261b41-295b-4344-b403-4852c20b5c37":{"type":"text-columns","blocks":{"template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-0":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/free_sign_up_2-01_2x_0661d97d-4cd7-48f2-ade0-26e5a401827a.png","image_width":160,"title":"","text":"<h3><strong>FREE <\/strong><\/h3><h3><strong>TO JOIN<\/strong><\/h3>","button_label":"","button_link":""}},"template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-1":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/ClubBlu_Icon_Mockups-02_2x_66fb9c56-d16c-444c-9792-aa521ce6cf15.png","image_width":160,"title":"","text":"<h3><strong>$100 SIGN<\/strong><\/h3><h3> <strong>UP BONUS<\/strong><\/h3>","button_label":"","button_link":""}},"template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-2":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/ClubBlu_Icon_Mockups-03_2x_e63425b3-5c6f-4ad0-b2b6-6e193ae7c871.png","image_width":160,"title":"","text":"<h3><strong>EXCLUSIVE<\/strong><\/h3><h3><strong> DISCOUNTS<\/strong><\/h3>","button_label":"","button_link":""}},"b071e22b-5d68-4776-a1fc-de677d89e80a":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/ClubBlu_Icon_Mockups-04_2x_cd25cc59-9f98-4ddd-b6df-045948216aae.png","image_width":160,"title":"","text":"<h3><strong>CONTESTS, <\/strong><\/h3><h3><strong>GIVEAWAYS & PRIZES<\/strong><\/h3>","button_label":"","button_link":""}}},"block_order":["template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-0","template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-1","template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-2","b071e22b-5d68-4776-a1fc-de677d89e80a"],"settings":{"title":"PERKS YOU CAN’T IGNORE","text":"","align_text":"center","divider":false,"color_scheme":"2","css_class":"club-section-2"}},"0e75b05d-f36f-4317-817c-622f73f1d254":{"type":"rich-text","blocks":{"d54c99ff-9db7-49a9-a44b-294fcce1ddc7":{"type":"button","settings":{"link":"#shopify-section-template--14459271479368__f01ecec4-a117-4f68-b8f9-e7d04b835e9a","link_text":"SIGN UP NOW"}}},"block_order":["d54c99ff-9db7-49a9-a44b-294fcce1ddc7"],"settings":{"align_text":"center","narrow_column":false,"color_scheme":"2","divider":false,"css_class":"club-section-3"}},"9f2495e2-509c-4aa6-9b08-6b07b710c9ad":{"type":"promo-grid","blocks":{"e5652aed-abfa-4846-bbfa-20530c80a65e":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg","link":"","width":"100"}}},"block_order":["e5652aed-abfa-4846-bbfa-20530c80a65e"],"settings":{"full_width":false,"heading":"","gutter_size":20,"space_above":false,"space_below":false,"two_column_mobile":false,"css_class":"club-section-4"}},"d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c":{"type":"promo-grid-three-col","blocks":{"template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-0":{"type":"advanced","settings":{"subheading":"POOLS","heading":"","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/pages\/pool-products","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Pools_8726cb31-cd74-4039-b105-a35f1c15b32b.jpg","video_url":"","width":"50","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#b2dbe6"}},"template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-1":{"type":"advanced","settings":{"subheading":"BATH","heading":"","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/pages\/bathroom-tile","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Bath_f8920032-1785-4414-a152-0e4736781601.jpg","video_url":"","width":"50","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#b2dbe6"}},"c9165955-aa79-478d-b1ae-b2820c7bda2c":{"type":"advanced","settings":{"subheading":"KITCHEN","heading":"","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/pages\/kitchen-tile","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Kitchen_508965e1-01cd-4904-8cde-fdc9e5f238d5.jpg","video_url":"","width":"100","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#b2dbe6"}},"3b04e3b5-8ca7-4dfe-a52d-e7973b711f9b":{"type":"advanced","settings":{"subheading":"OUTDOOR","heading":"","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/pages\/outdoor-living-products","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/outdoor_8112dbbc-0369-42e6-bd79-91cbdc38df62.jpg","video_url":"","width":"50","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#b2dbe6"}},"be6812de-fea9-416c-98de-0033bbb15ac4":{"type":"advanced","settings":{"subheading":"TURF & PAVERS","heading":"","textarea":"","cta_text1":"","cta_link1":"shopify:\/\/pages\/outdoor-patio-pavers-and-hardscapes","cta_text2":"","cta_link2":"","image":"shopify:\/\/shop_images\/Turf_fa6b6c35-00d7-4dcc-9a60-c3e214197098.jpg","video_url":"","width":"50","height":340,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#b2dbe6"}}},"block_order":["template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-0","template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-1","c9165955-aa79-478d-b1ae-b2820c7bda2c","3b04e3b5-8ca7-4dfe-a52d-e7973b711f9b","be6812de-fea9-416c-98de-0033bbb15ac4"],"settings":{"full_width":false,"heading":"Browse By Application","gutter_size":20,"space_above":true,"space_below":true,"css_class":"blue-bar-overlay club-section-5 grid-column-stack"}},"f01ecec4-a117-4f68-b8f9-e7d04b835e9a":{"type":"slideshow","blocks":{"template--14459271479368__f01ecec4-a117-4f68-b8f9-e7d04b835e9a-16843466425cfe8d16-0":{"type":"hero","settings":{"image_width":260,"html_embed":"<form>\n<input type=\"text\" id=\"name\" name=\"name\" value=\"What’s your name?\" size=\"95\"><br><br>\n<input type=\"email\" id=\"email\" name=\"email\" value=\"Email\" size=\"95\">\n<br><br>\n<input type=\"tel\" id=\"phone\" name=\"phone\" value=\"Phone Number\" size=\"95\">\n<h2>How can AquaBlu help you?<\/h2>\n <label><input type=\"checkbox\" value=\"pool tile or mosaic\"> Find my dream pool tile or mosaic<\/label>\n  <label><input type=\"checkbox\" value=\"tile for my kitchen and bath\"> Discover amazing tile for my kitchen and bath<\/label>\n<label><input type=\"checkbox\" value=\"Decorate or furnish my pool and patio\"> Decorate or furnish my pool and patio<\/label>\n<h2>Do you have a pool?<\/h2>\n<label><input type=\"radio\" id=\"yes\" name=\"poolm\" value=\"yes\"> Yes I do!<\/label><label><input type=\"radio\" id=\"no\" name=\"pool\" value=\"no\">  Unfortunately, no.<\/label>\n<label><input type=\"radio\" id=\"not yet\" name=\"pool\" value=\"not yet\">  Not yet, we’re building one soon.<\/label>\n<h2>Are you a pool builder or contractor?<br>Sign up for our AquaPRO Trade Network here &gt;&gt;<\/h2>\n<\/form>","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"","title":"<h2><\/h2><h1><\/h1><h2> <\/h2><h2> <\/h2><h2><\/h2><p><\/p><p><\/p>","title_size":40,"subheading":"","custom_text":"","link":"","link_text":"JOIN NOW","link_2":"","link_text_2":"","color_accent":"#55ccd9","text_align":"vertical-center horizontal-left","image":"shopify:\/\/shop_images\/AdobeStock_175184522_copy.jpg","overlay_opacity":26,"focal_point":"center center"}}},"block_order":["template--14459271479368__f01ecec4-a117-4f68-b8f9-e7d04b835e9a-16843466425cfe8d16-0"],"disabled":true,"settings":{"full_width":false,"full_width_mobile":false,"contact_popup":false,"desktop_size":20,"gutter_size":20,"space_above":false,"space_below":true,"mobile_size":90,"style":"arrows","autoplay":false,"autoplay_speed":7,"css_class":"club-section-6"}},"7de9e490-097b-4544-b444-ee3df4e4d42f":{"type":"custom-form-clubblu","settings":{}},"b1f8b509-0429-4b5b-9b05-3355ec1f053d":{"type":"rich-text","blocks":{"template--14459271479368__b1f8b509-0429-4b5b-9b05-3355ec1f053d-1684348416a7eae846-1":{"type":"text","settings":{"enlarge_text":false,"text":"<h6>We use email, texts and targeted online advertising to send you product and services updates, promotional offers and other marketing communications based on the information we collect about you, such as your email address, general location, and purchase and website browsing history. We process your personal data as stated in our Privacy Policy &lcub;<a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">https:\/\/www.aquablumosaics.com\/pages\/privacy-policy<\/a>&rcub;. You may withdraw your consent or manage your preferences at any time by clicking the unsubscribe link at the bottom of any of our marketing emails, or by emailing us at &lcub;<a href=\"\/pages\/contact-us\" target=\"_blank\" title=\"Contact Us\">support@aquablumosaics.com<\/a>&rcub;.<\/h6>"}}},"block_order":["template--14459271479368__b1f8b509-0429-4b5b-9b05-3355ec1f053d-1684348416a7eae846-1"],"settings":{"align_text":"left","narrow_column":false,"color_scheme":"none","divider":false,"css_class":"club-section-7"}},"53ff060d-fead-47b0-8f57-8ec2355f4eb0":{"type":"testimonials","blocks":{"template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-0":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p><a href=\"https:\/\/www.aquablumosaics.com\" target=\"_blank\" title=\"https:\/\/www.aquablumosaics.com\">“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”<\/a><\/p>","author":"- John Smith","author_info":"Tampa, Florida"}},"template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-1":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p>“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”<\/p>","author":"- John Smith","author_info":"Tampa, Florida"}},"template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-2":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p>“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”<\/p>","author":"- John Smith","author_info":"Tampa, Florida"}},"6472c7e9-b123-4e41-9c26-52120e6d6806":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>","author":"Author's name","author_info":"Los Angeles, CA"}}},"block_order":["template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-0","template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-1","template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-2","6472c7e9-b123-4e41-9c26-52120e6d6806"],"settings":{"title":"","align_text":"center","round_images":true,"color_scheme":"none","css_class":"club-section-8"}},"4d2f728c-fc5b-4d3a-9e15-c56ff56b2727":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/pool-oasis.jpg","video_url":"","image_width":600,"subtitle":"","title":"OUR STORY","text":"<p>From humble beginnings, AquaBlu Mosaics has grown into something special. Inspired by their love of the ocean and all things aquatic, two brothers set off to create an online store where anyone could shop for all things needed to build the home and outdoor paradise of their dreams; all from the comfort of their homes. <\/p><p>We strive to consistently set ourselves apart in the industry by not only offering a multitude of eco-friendly products, but also supporting many charitable causes. Built on strong family values and a commitment to the local community and environment, we maintain honest, sustainable business practices to change the status quo in the industry.<\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"left","color_scheme":"none","divider":false,"new_layout":true,"css_class":"club-section-9"}}},"order":["256f45b6-7a26-489a-8b71-68f5b31646f2","main","63261b41-295b-4344-b403-4852c20b5c37","0e75b05d-f36f-4317-817c-622f73f1d254","9f2495e2-509c-4aa6-9b08-6b07b710c9ad","d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c","f01ecec4-a117-4f68-b8f9-e7d04b835e9a","7de9e490-097b-4544-b444-ee3df4e4d42f","b1f8b509-0429-4b5b-9b05-3355ec1f053d","53ff060d-fead-47b0-8f57-8ec2355f4eb0","4d2f728c-fc5b-4d3a-9e15-c56ff56b2727"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "256f45b6-7a26-489a-8b71-68f5b31646f2": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271479368__256f45b6-7a26-489a-8b71-68f5b31646f2-168381328892e35a88-0": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "",
+            "title": "<h2>Enjoy exclusive benefits and discounts</h2>",
+            "title_size": 100,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Join_ClubBlu_1.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271479368__256f45b6-7a26-489a-8b71-68f5b31646f2-168381328892e35a88-0"
+      ],
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 50,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "club-section-1"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "63261b41-295b-4344-b403-4852c20b5c37": {
+      "type": "text-columns",
+      "blocks": {
+        "template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/free_sign_up_2-01_2x_0661d97d-4cd7-48f2-ade0-26e5a401827a.png",
+            "image_width": 160,
+            "title": "",
+            "text": "<h3><strong>FREE </strong></h3><h3><strong>TO JOIN</strong></h3>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/ClubBlu_Icon_Mockups-02_2x_66fb9c56-d16c-444c-9792-aa521ce6cf15.png",
+            "image_width": 160,
+            "title": "",
+            "text": "<h3><strong>$100 SIGN</strong></h3><h3> <strong>UP BONUS</strong></h3>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/ClubBlu_Icon_Mockups-03_2x_e63425b3-5c6f-4ad0-b2b6-6e193ae7c871.png",
+            "image_width": 160,
+            "title": "",
+            "text": "<h3><strong>EXCLUSIVE</strong></h3><h3><strong> DISCOUNTS</strong></h3>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "b071e22b-5d68-4776-a1fc-de677d89e80a": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/ClubBlu_Icon_Mockups-04_2x_cd25cc59-9f98-4ddd-b6df-045948216aae.png",
+            "image_width": 160,
+            "title": "",
+            "text": "<h3><strong>CONTESTS, </strong></h3><h3><strong>GIVEAWAYS & PRIZES</strong></h3>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-0",
+        "template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-1",
+        "template--14459271479368__63261b41-295b-4344-b403-4852c20b5c37-16838134005f48c5e2-2",
+        "b071e22b-5d68-4776-a1fc-de677d89e80a"
+      ],
+      "settings": {
+        "title": "PERKS YOU CAN’T IGNORE",
+        "text": "",
+        "align_text": "center",
+        "three_col_mobile": false,
+        "divider": false,
+        "color_scheme": "2",
+        "css_class": "club-section-2"
+      }
+    },
+    "0e75b05d-f36f-4317-817c-622f73f1d254": {
+      "type": "rich-text",
+      "blocks": {
+        "d54c99ff-9db7-49a9-a44b-294fcce1ddc7": {
+          "type": "button",
+          "settings": {
+            "link": "#shopify-section-template--14459271479368__f01ecec4-a117-4f68-b8f9-e7d04b835e9a",
+            "link_text": "SIGN UP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "d54c99ff-9db7-49a9-a44b-294fcce1ddc7"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "2",
+        "divider": false,
+        "css_class": "club-section-3"
+      }
+    },
+    "9f2495e2-509c-4aa6-9b08-6b07b710c9ad": {
+      "type": "promo-grid",
+      "blocks": {
+        "e5652aed-abfa-4846-bbfa-20530c80a65e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "e5652aed-abfa-4846-bbfa-20530c80a65e"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 20,
+        "section_gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": "club-section-4"
+      }
+    },
+    "d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c": {
+      "type": "promo-grid-three-col",
+      "blocks": {
+        "template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "POOLS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/pool-products",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Pools_8726cb31-cd74-4039-b105-a35f1c15b32b.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#b2dbe6"
+          }
+        },
+        "template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "BATH",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/bathroom-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Bath_f8920032-1785-4414-a152-0e4736781601.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#b2dbe6"
+          }
+        },
+        "c9165955-aa79-478d-b1ae-b2820c7bda2c": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "KITCHEN",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/kitchen-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Kitchen_508965e1-01cd-4904-8cde-fdc9e5f238d5.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#b2dbe6"
+          }
+        },
+        "3b04e3b5-8ca7-4dfe-a52d-e7973b711f9b": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "OUTDOOR",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/outdoor-living-products",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/outdoor_8112dbbc-0369-42e6-bd79-91cbdc38df62.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#b2dbe6"
+          }
+        },
+        "be6812de-fea9-416c-98de-0033bbb15ac4": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "TURF & PAVERS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://pages/outdoor-patio-pavers-and-hardscapes",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Turf_fa6b6c35-00d7-4dcc-9a60-c3e214197098.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 340,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#b2dbe6"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-0",
+        "template--14459271479368__d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c-1683813545d9ed08f8-1",
+        "c9165955-aa79-478d-b1ae-b2820c7bda2c",
+        "3b04e3b5-8ca7-4dfe-a52d-e7973b711f9b",
+        "be6812de-fea9-416c-98de-0033bbb15ac4"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "Browse By Application",
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "css_class": "blue-bar-overlay club-section-5 grid-column-stack"
+      }
+    },
+    "f01ecec4-a117-4f68-b8f9-e7d04b835e9a": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271479368__f01ecec4-a117-4f68-b8f9-e7d04b835e9a-16843466425cfe8d16-0": {
+          "type": "hero",
+          "settings": {
+            "image_width": 260,
+            "html_embed": "<form>\n<input type=\"text\" id=\"name\" name=\"name\" value=\"What’s your name?\" size=\"95\"><br><br>\n<input type=\"email\" id=\"email\" name=\"email\" value=\"Email\" size=\"95\">\n<br><br>\n<input type=\"tel\" id=\"phone\" name=\"phone\" value=\"Phone Number\" size=\"95\">\n<h2>How can AquaBlu help you?</h2>\n <label><input type=\"checkbox\" value=\"pool tile or mosaic\"> Find my dream pool tile or mosaic</label>\n  <label><input type=\"checkbox\" value=\"tile for my kitchen and bath\"> Discover amazing tile for my kitchen and bath</label>\n<label><input type=\"checkbox\" value=\"Decorate or furnish my pool and patio\"> Decorate or furnish my pool and patio</label>\n<h2>Do you have a pool?</h2>\n<label><input type=\"radio\" id=\"yes\" name=\"poolm\" value=\"yes\"> Yes I do!</label><label><input type=\"radio\" id=\"no\" name=\"pool\" value=\"no\">  Unfortunately, no.</label>\n<label><input type=\"radio\" id=\"not yet\" name=\"pool\" value=\"not yet\">  Not yet, we’re building one soon.</label>\n<h2>Are you a pool builder or contractor?<br>Sign up for our AquaPRO Trade Network here &gt;&gt;</h2>\n</form>",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "",
+            "title": "<h2></h2><h1></h1><h2> </h2><h2> </h2><h2></h2><p></p><p></p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "JOIN NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#55ccd9",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/AdobeStock_175184522_copy.jpg",
+            "overlay_opacity": 26,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271479368__f01ecec4-a117-4f68-b8f9-e7d04b835e9a-16843466425cfe8d16-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 20,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 90,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7,
+        "css_class": "club-section-6"
+      }
+    },
+    "7de9e490-097b-4544-b444-ee3df4e4d42f": {
+      "type": "custom-form-clubblu",
+      "settings": {}
+    },
+    "b1f8b509-0429-4b5b-9b05-3355ec1f053d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14459271479368__b1f8b509-0429-4b5b-9b05-3355ec1f053d-1684348416a7eae846-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h6>We use email, texts and targeted online advertising to send you product and services updates, promotional offers and other marketing communications based on the information we collect about you, such as your email address, general location, and purchase and website browsing history. We process your personal data as stated in our Privacy Policy &lcub;<a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">https://www.aquablumosaics.com/pages/privacy-policy</a>&rcub;. You may withdraw your consent or manage your preferences at any time by clicking the unsubscribe link at the bottom of any of our marketing emails, or by emailing us at &lcub;<a href=\"/pages/contact-us\" target=\"_blank\" title=\"Contact Us\">support@aquablumosaics.com</a>&rcub;.</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271479368__b1f8b509-0429-4b5b-9b05-3355ec1f053d-1684348416a7eae846-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": "club-section-7"
+      }
+    },
+    "53ff060d-fead-47b0-8f57-8ec2355f4eb0": {
+      "type": "testimonials",
+      "blocks": {
+        "template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p><a href=\"https://www.aquablumosaics.com\" target=\"_blank\" title=\"https://www.aquablumosaics.com\">“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”</a></p>",
+            "author": "- John Smith",
+            "author_info": "Tampa, Florida"
+          }
+        },
+        "template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”</p>",
+            "author": "- John Smith",
+            "author_info": "Tampa, Florida"
+          }
+        },
+        "template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”</p>",
+            "author": "- John Smith",
+            "author_info": "Tampa, Florida"
+          }
+        },
+        "6472c7e9-b123-4e41-9c26-52120e6d6806": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-0",
+        "template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-1",
+        "template--14459271479368__53ff060d-fead-47b0-8f57-8ec2355f4eb0-1683813617667ea8a6-2",
+        "6472c7e9-b123-4e41-9c26-52120e6d6806"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "round_images": true,
+        "color_scheme": "none",
+        "css_class": "club-section-8"
+      }
+    },
+    "4d2f728c-fc5b-4d3a-9e15-c56ff56b2727": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/pool-oasis.jpg",
+        "video_url": "",
+        "image_width": 600,
+        "subtitle": "",
+        "title": "OUR STORY",
+        "text": "<p>From humble beginnings, AquaBlu Mosaics has grown into something special. Inspired by their love of the ocean and all things aquatic, two brothers set off to create an online store where anyone could shop for all things needed to build the home and outdoor paradise of their dreams; all from the comfort of their homes. </p><p>We strive to consistently set ourselves apart in the industry by not only offering a multitude of eco-friendly products, but also supporting many charitable causes. Built on strong family values and a commitment to the local community and environment, we maintain honest, sustainable business practices to change the status quo in the industry.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "club-section-9"
+      }
+    }
+  },
+  "order": [
+    "256f45b6-7a26-489a-8b71-68f5b31646f2",
+    "main",
+    "63261b41-295b-4344-b403-4852c20b5c37",
+    "0e75b05d-f36f-4317-817c-622f73f1d254",
+    "9f2495e2-509c-4aa6-9b08-6b07b710c9ad",
+    "d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c",
+    "f01ecec4-a117-4f68-b8f9-e7d04b835e9a",
+    "7de9e490-097b-4544-b444-ee3df4e4d42f",
+    "b1f8b509-0429-4b5b-9b05-3355ec1f053d",
+    "53ff060d-fead-47b0-8f57-8ec2355f4eb0",
+    "4d2f728c-fc5b-4d3a-9e15-c56ff56b2727"
+  ]
+}
