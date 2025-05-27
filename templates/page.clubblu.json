@@ -398,8 +398,8 @@
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
+            "testimonial": "<p>\"The samples we received helped us make the perfect decision. Once we ordered, everything arrived packaged securely and on time. The quality of the glass mosaic tile is unmatched. I wouldn’t shop anywhere else for tile again!\"</p>",
+            "author": "Natalie Cheng",
             "author_info": "Los Angeles, CA"
           }
         }
