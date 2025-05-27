@@ -42,6 +42,7 @@
         },
         "hero_FjA6fU": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -65,7 +66,6 @@
         },
         "hero_zpagdq": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
