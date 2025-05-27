@@ -20,7 +20,7 @@
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
             "top_subheading": "",
-            "title": "<h2>Enjoy exclusive benefits and discounts</h2>",
+            "title": "",
             "title_size": 100,
             "subheading": "",
             "custom_text": "",
@@ -30,7 +30,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Join_ClubBlu_1.jpg",
+            "image": "shopify://shop_images/Join_ClubBlu_4.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
