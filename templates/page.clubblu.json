@@ -371,7 +371,7 @@
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p><a href=\"https://www.aquablumosaics.com\" target=\"_blank\" title=\"https://www.aquablumosaics.com\">“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”</a></p>",
+            "testimonial": "<p>“AquaBlu is great! Quick and easy shopping and fast delivery. Will definitely recommend!”</p>",
             "author": "- John Ashton",
             "author_info": "Tampa, Florida"
           }
