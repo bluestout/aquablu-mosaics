@@ -53,6 +53,7 @@
         },
         "slide_W6J3Yp": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_6.jpg",
             "heading": "",
