@@ -177,10 +177,6 @@
         "css_class": "club-section-4"
       }
     },
-    "7de9e490-097b-4544-b444-ee3df4e4d42f": {
-      "type": "custom-form-clubblu",
-      "settings": {}
-    },
     "d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c": {
       "type": "promo-grid-three-col",
       "blocks": {
@@ -342,6 +338,10 @@
         "css_class": "club-section-6"
       }
     },
+    "7de9e490-097b-4544-b444-ee3df4e4d42f": {
+      "type": "custom-form-clubblu",
+      "settings": {}
+    },
     "b1f8b509-0429-4b5b-9b05-3355ec1f053d": {
       "type": "rich-text",
       "blocks": {
@@ -445,9 +445,9 @@
     "63261b41-295b-4344-b403-4852c20b5c37",
     "0e75b05d-f36f-4317-817c-622f73f1d254",
     "9f2495e2-509c-4aa6-9b08-6b07b710c9ad",
-    "7de9e490-097b-4544-b444-ee3df4e4d42f",
     "d84186b5-2ee7-4d2b-92e4-ebc65d3a9d3c",
     "f01ecec4-a117-4f68-b8f9-e7d04b835e9a",
+    "7de9e490-097b-4544-b444-ee3df4e4d42f",
     "b1f8b509-0429-4b5b-9b05-3355ec1f053d",
     "53ff060d-fead-47b0-8f57-8ec2355f4eb0",
     "4d2f728c-fc5b-4d3a-9e15-c56ff56b2727"
