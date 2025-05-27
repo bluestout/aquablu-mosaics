@@ -155,7 +155,7 @@
         "e5652aed-abfa-4846-bbfa-20530c80a65e": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
+            "image": "shopify://shop_images/Conservation_Banner.jpg",
             "link": "",
             "width": "100"
           }
@@ -189,7 +189,7 @@
             "cta_link1": "shopify://pages/pool-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Pools_8726cb31-cd74-4039-b105-a35f1c15b32b.jpg",
+            "image": "shopify://shop_images/In-Pool_Floats.jpg",
             "video_url": "",
             "width": "50",
             "height": 340,
@@ -208,7 +208,7 @@
             "cta_link1": "shopify://pages/bathroom-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Bath_f8920032-1785-4414-a152-0e4736781601.jpg",
+            "image": "shopify://shop_images/gems-caraibi-bathroom-0798-alt-01.jpg",
             "video_url": "",
             "width": "50",
             "height": 340,
@@ -227,7 +227,7 @@
             "cta_link1": "shopify://pages/kitchen-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Kitchen_508965e1-01cd-4904-8cde-fdc9e5f238d5.jpg",
+            "image": "shopify://shop_images/MSICeramicTile_RENZOJADEPICKETT_NRENJADPICK2.5X13_Renzo.jpg",
             "video_url": "",
             "width": "100",
             "height": 340,
@@ -239,19 +239,19 @@
         "3b04e3b5-8ca7-4dfe-a52d-e7973b711f9b": {
           "type": "advanced",
           "settings": {
-            "subheading": "OUTDOOR",
+            "subheading": "OUTDOOR LIVING",
             "heading": "",
             "textarea": "",
             "cta_text1": "",
             "cta_link1": "shopify://pages/outdoor-living-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/outdoor_8112dbbc-0369-42e6-bd79-91cbdc38df62.jpg",
+            "image": "shopify://shop_images/tupelo-goods-deck-chair-pool-patio-lounge-chair-922331.jpg",
             "video_url": "",
             "width": "50",
             "height": 340,
             "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
+            "focal_point": "20% 50%",
             "color_accent": "#b2dbe6"
           }
         },
