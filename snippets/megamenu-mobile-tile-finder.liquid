@@ -37,5 +37,17 @@
       </li>
     {% endfor %}
 
+    {%- liquid
+      assign ceramic_title = "Ceramic Tile"
+      assign ceramic_url = "/pages/ceramic-tile"
+      assign ceramic_grand_child_list_handle = ceramic_title | handleize
+      assign ceramic_grand_child_link_id = ceramic_grand_child_list_handle | append: link_index
+      assign ceramic_child_list_handle = "ceramic-tiles"
+    -%}
+
+    <li class="slide-nav__item Ceramic Tile">
+          {% render 'megamenu-mobile-tile-content', grand_child_link_id: ceramic_grand_child_link_id, child_list_handle: ceramic_child_list_handle, childlink_title: ceramic_title, childlink_url: ceramic_url, glass_menu: linklists["ceramic-tiles"], menu_settings: menu_settings %}     
+      </li>
+
     <li class="slide-nav__emtpy-item" style="height:100px;"> </li>
   </ul>

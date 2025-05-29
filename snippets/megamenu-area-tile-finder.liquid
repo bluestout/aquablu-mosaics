@@ -79,6 +79,17 @@
         gap: 5%;
         height: 430px;
     }
+
+    .megamenu-area-tile-finder .megamenu-area-right-content .megamenu-area-menu-list.menu-Featured{
+        gap: 4%;
+        height: 430px;
+    }
+
+    .megamenu-area-tile-finder .megamenu-area-right-content .megamenu-area-menu-list.menu-Application{
+        gap: 5%;
+        height: 430px;
+    }
+
     .megamenu-area-tile-finder .megamenu-area-right-content .megamenu-area-menu-lists .color-item{
         display: flex;
         gap: 10px;
@@ -119,16 +130,21 @@
 <div class="megamenu-area megamenu-area-tile-finder">
     <div class="megamenu-area-container page-width">  
         <div class="megamenu-area-left"> 
-          {%- for link in menu_link.links -%}
-           <div class="megamenu-area-menu-item-button {% if forloop.index ==1 %}active{% endif %}" data-content-id="megamenu-area-right-content-{{- forloop.index -}}">    
+            {%- for link in menu_link.links -%}
+            <div class="megamenu-area-menu-item-button {% if forloop.index ==1 %}active{% endif %}" data-content-id="megamenu-area-right-content-{{- forloop.index -}}">    
                 <a href="{{ link.url }}" >    
                 <p class="h3">{{ link.title }} </p>
               </a>
             </div>
           {%- endfor -%}
+          <div class="megamenu-area-menu-item-button" data-content-id="megamenu-area-right-content-4">    
+                <a href="/pages/ceramic-tile" >    
+                <p class="h3">Ceramic Tile </p>
+              </a>
+            </div>
         </div>
         <div class="megamenu-area-divider"></div>
-         <div class="megamenu-area-right">
+        <div class="megamenu-area-right">
             <div id="megamenu-area-right-content-1" class="megamenu-area-right-content megamenu-area-right-glass-tile">
                 {%- for link in linklists["glass-tilebs"].links -%}
                     {% render "header-megamenu-right-content", link: link, menu_settings: menu_settings %}
@@ -162,8 +178,18 @@
                     </a>
                 </div>
             </div>
-            
-         </div>
+            <div id="megamenu-area-right-content-4" class="megamenu-area-right-content megamenu-area-right-ceramic-tile" style="display:none;">
+                {%- for link in linklists["ceramic-tiles"].links -%}
+                    {% render "header-megamenu-right-content", link: link, menu_settings: menu_settings %}
+                {%- endfor -%}
+
+                <div class="megamenu-area-shop-all-button">
+                    <a class="shop-all-button-label" href="{{ menu_settings.shopall_link4 }}">
+                        {{ menu_settings.shopall_text4 }}
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>     
 </div>
 
