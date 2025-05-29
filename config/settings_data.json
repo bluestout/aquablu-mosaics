@@ -233,6 +233,8 @@
               "shopall_link2": "shopify://collections/porcelain-tile",
               "shopall_text3": "Shop All",
               "shopall_link3": "shopify://collections/stone-tile",
+              "shopall_text4": "Shop All",
+              "shopall_link4": "https://www.aquablumosaics.com/collections/shop-all-ceramic-tile",
               "blue_color": "#1937ae",
               "green_color": "#a2cb82",
               "white_color": "#ffffff",
@@ -268,7 +270,8 @@
               "interlocking_icon": "shopify://shop_images/linear_icon_outline.png",
               "square_stone_icon": "shopify://shop_images/Square_Icon_outline.png",
               "rectangle_icon": "shopify://shop_images/Rectangle_Icon_outline.png",
-              "arabesque_icon": "shopify://shop_images/arabesque_icon_outline.png"
+              "arabesque_icon": "shopify://shop_images/arabesque_icon_outline.png",
+              "picket_icon": "shopify://shop_images/Picket.png"
             }
           },
           "mega_menu_installation_JzPQbp": {
