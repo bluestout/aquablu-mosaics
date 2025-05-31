@@ -19,6 +19,7 @@
       "blocks": {
         "hero_MGqigU": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
