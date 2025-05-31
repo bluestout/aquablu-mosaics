@@ -19,6 +19,7 @@
       "blocks": {
         "hero_RHW9Hr": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
