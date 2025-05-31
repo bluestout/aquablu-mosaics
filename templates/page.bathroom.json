@@ -19,6 +19,7 @@
       "blocks": {
         "template--14565132828744__4b14a52d-a335-4150-a686-c3bde3e48acd-hero-2": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
