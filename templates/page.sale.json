@@ -675,6 +675,7 @@
       "block_order": [
         "hero_gjPXJL"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
