@@ -422,6 +422,17 @@
             "button_link": "shopify://collections/rectangle-glass-tile"
           }
         },
+        "text_block_7YR9wz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_11_4d38555f-93cd-4ccd-8775-795f9ed46058.png",
+            "image_width": 130,
+            "title": "Mixed",
+            "button_label": "",
+            "button_link": "shopify://collections/mixed-glass-mosaic-tile"
+          }
+        },
         "text_block_Awfyz3": {
           "type": "text_block",
           "settings": {
@@ -466,17 +477,6 @@
             "button_link": "shopify://collections/glass-fish-scale-mosaic-tile"
           }
         },
-        "text_block_7YR9wz": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_6.png",
-            "image_width": 130,
-            "title": "Mixed",
-            "button_label": "",
-            "button_link": "shopify://collections/mixed-glass-mosaic-tile"
-          }
-        },
         "text_block_J9Vg7w": {
           "type": "text_block",
           "settings": {
@@ -492,11 +492,11 @@
       "block_order": [
         "text_block_CDKx4y",
         "text_block_jVJNAc",
+        "text_block_7YR9wz",
         "text_block_Awfyz3",
         "text_block_ndRc7F",
         "text_block_Bc4cT6",
         "text_block_CwqXk8",
-        "text_block_7YR9wz",
         "text_block_J9Vg7w"
       ],
       "custom_css": [],
