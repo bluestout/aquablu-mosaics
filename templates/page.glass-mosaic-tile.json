@@ -315,17 +315,6 @@
             "button_link": "shopify://collections/gray-glass-tile"
           }
         },
-        "text_block_QfK3ft": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_7.png",
-            "image_width": 130,
-            "title": "Beige",
-            "button_label": "",
-            "button_link": "shopify://collections/beige-mosaic-glass-tile"
-          }
-        },
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-1": {
           "type": "text_block",
           "settings": {
@@ -337,11 +326,22 @@
             "button_link": "shopify://collections/white-glass-tile"
           }
         },
+        "text_block_QfK3ft": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_7.png",
+            "image_width": 130,
+            "title": "Beige",
+            "button_label": "",
+            "button_link": "shopify://collections/beige-mosaic-glass-tile"
+          }
+        },
         "a9edb576-94cb-4f35-819d-52bd2889b276": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Black_Glass_38983260-e886-491b-a817-324effd44349.png",
+            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_8.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
@@ -375,8 +375,8 @@
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-2",
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-3",
         "34ac3dbe-dabc-40ec-a9c2-15fe798d9c99",
-        "text_block_QfK3ft",
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-1",
+        "text_block_QfK3ft",
         "a9edb576-94cb-4f35-819d-52bd2889b276",
         "a136e68f-7d78-4d0a-8e16-d683d79e4e3d",
         "text_block_WUhiC8"
