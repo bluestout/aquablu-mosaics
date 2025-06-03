@@ -304,17 +304,6 @@
             "button_link": "shopify://collections/green-glass-tile"
           }
         },
-        "34ac3dbe-dabc-40ec-a9c2-15fe798d9c99": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Gray_Glass_c2d192cd-8a0f-40f2-b584-6b73b8a54295.png",
-            "image_width": 130,
-            "title": "Gray",
-            "button_label": "",
-            "button_link": "shopify://collections/gray-glass-tile"
-          }
-        },
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-1": {
           "type": "text_block",
           "settings": {
@@ -337,6 +326,17 @@
             "button_link": "shopify://collections/beige-mosaic-glass-tile"
           }
         },
+        "34ac3dbe-dabc-40ec-a9c2-15fe798d9c99": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_10.png",
+            "image_width": 130,
+            "title": "Gray",
+            "button_label": "",
+            "button_link": "shopify://collections/gray-glass-tile"
+          }
+        },
         "a9edb576-94cb-4f35-819d-52bd2889b276": {
           "type": "text_block",
           "settings": {
@@ -348,38 +348,38 @@
             "button_link": "shopify://collections/black-glass-tile"
           }
         },
-        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_6.png",
-            "image_width": 130,
-            "title": "Multicolor",
-            "button_label": "",
-            "button_link": "shopify://collections/multicolor-glass-tile"
-          }
-        },
         "text_block_WUhiC8": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/viewallglass.png",
             "image_width": 130,
+            "title": "Multicolor",
+            "button_label": "",
+            "button_link": "shopify://collections/multicolor-glass-tile"
+          }
+        },
+        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_6.png",
+            "image_width": 130,
             "title": "View All",
             "button_label": "",
-            "button_link": "shopify://collections/glass-tile"
+            "button_link": "shopify://collections/multicolor-glass-tile"
           }
         }
       },
       "block_order": [
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-2",
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-3",
-        "34ac3dbe-dabc-40ec-a9c2-15fe798d9c99",
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-1",
         "text_block_QfK3ft",
+        "34ac3dbe-dabc-40ec-a9c2-15fe798d9c99",
         "a9edb576-94cb-4f35-819d-52bd2889b276",
-        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d",
-        "text_block_WUhiC8"
+        "text_block_WUhiC8",
+        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d"
       ],
       "custom_css": [
         "h2 {margin-top: 20px;}"
