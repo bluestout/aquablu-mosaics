@@ -286,7 +286,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces.png",
+            "image": "shopify://shop_images/Blue_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Blue",
             "button_label": "",
@@ -297,7 +297,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_3.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
@@ -319,7 +318,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_7.png",
             "image_width": 130,
             "title": "Beige",
             "button_label": "",
@@ -330,7 +328,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_10.png",
             "image_width": 130,
             "title": "Gray",
             "button_label": "",
@@ -341,7 +338,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_8.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
@@ -363,7 +359,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_6.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
@@ -404,7 +399,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_2_d6e09d1f-031b-4fd5-9bfc-6a804b670117.png",
             "image_width": 130,
             "title": "Square",
             "button_label": "",
@@ -415,7 +409,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_3.png",
             "image_width": 130,
             "title": "Rectangle",
             "button_label": "",
@@ -426,7 +419,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_11_4d38555f-93cd-4ccd-8775-795f9ed46058.png",
             "image_width": 130,
             "title": "Mixed",
             "button_label": "",
@@ -437,7 +429,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_9_f14ec186-5bb4-43b4-8251-2f63ffa67054.png",
             "image_width": 130,
             "title": "Round",
             "button_label": "",
@@ -481,7 +472,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_8_1165a5ce-4a64-4ec5-a566-bf8ea51148b2.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
