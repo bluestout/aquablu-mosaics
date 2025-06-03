@@ -422,6 +422,17 @@
             "button_link": "shopify://collections/rectangle-glass-tile"
           }
         },
+        "text_block_CwqXk8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/fish_scale.png",
+            "image_width": 130,
+            "title": "Fish Scale",
+            "button_label": "",
+            "button_link": "shopify://collections/glass-fish-scale-mosaic-tile"
+          }
+        },
         "text_block_Bc4cT6": {
           "type": "text_block",
           "settings": {
@@ -433,15 +444,15 @@
             "button_link": "shopify://collections/geometric-glass-tile"
           }
         },
-        "text_block_CwqXk8": {
+        "text_block_Awfyz3": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/fish_scale.png",
+            "image": "shopify://shop_images/Untitled_design_7_71dad8f3-42d2-4e89-9f4d-cfb07c4028ec.png",
             "image_width": 130,
-            "title": "Fish Scale",
+            "title": "Round",
             "button_label": "",
-            "button_link": "shopify://collections/glass-fish-scale-mosaic-tile"
+            "button_link": "shopify://collections/round-glass-penny-tiles"
           }
         },
         "text_block_ndRc7F": {
@@ -466,17 +477,6 @@
             "button_link": "shopify://collections/mixed-glass-mosaic-tile"
           }
         },
-        "text_block_Awfyz3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Untitled_design_4_79e7ec4e-7b1a-4bb4-a1ee-cfc41ff0e406.png",
-            "image_width": 130,
-            "title": "Round",
-            "button_label": "",
-            "button_link": "shopify://collections/round-glass-penny-tiles"
-          }
-        },
         "text_block_J9Vg7w": {
           "type": "text_block",
           "settings": {
@@ -492,11 +492,11 @@
       "block_order": [
         "text_block_CDKx4y",
         "text_block_jVJNAc",
-        "text_block_Bc4cT6",
         "text_block_CwqXk8",
+        "text_block_Bc4cT6",
+        "text_block_Awfyz3",
         "text_block_ndRc7F",
         "text_block_7YR9wz",
-        "text_block_Awfyz3",
         "text_block_J9Vg7w"
       ],
       "custom_css": [],
