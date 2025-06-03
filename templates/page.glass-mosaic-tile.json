@@ -297,7 +297,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Green_Glass.png",
+            "image": "shopify://shop_images/Porcelain_Trim_Tile_The_Finishing_Touch_for_Pools_Outdoor_Spaces_1.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
@@ -326,17 +326,6 @@
             "button_link": "shopify://collections/beige-mosaic-glass-tile"
           }
         },
-        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/RedGlassTile.png",
-            "image_width": 130,
-            "title": "Red",
-            "button_label": "",
-            "button_link": "shopify://collections/red-glass-tile"
-          }
-        },
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-1": {
           "type": "text_block",
           "settings": {
@@ -359,6 +348,17 @@
             "button_link": "shopify://collections/black-glass-tile"
           }
         },
+        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/RedGlassTile.png",
+            "image_width": 130,
+            "title": "Red",
+            "button_label": "",
+            "button_link": "shopify://collections/red-glass-tile"
+          }
+        },
         "text_block_WUhiC8": {
           "type": "text_block",
           "settings": {
@@ -376,9 +376,9 @@
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-3",
         "34ac3dbe-dabc-40ec-a9c2-15fe798d9c99",
         "text_block_QfK3ft",
-        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d",
         "template--14459270725704__134ebd64-785a-4b27-876c-bf3928cf40da-text_block-1",
         "a9edb576-94cb-4f35-819d-52bd2889b276",
+        "a136e68f-7d78-4d0a-8e16-d683d79e4e3d",
         "text_block_WUhiC8"
       ],
       "custom_css": [
