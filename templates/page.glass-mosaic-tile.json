@@ -404,6 +404,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Square_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Square",
             "button_label": "",
@@ -414,6 +415,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Rectangle_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Rectangle",
             "button_label": "",
