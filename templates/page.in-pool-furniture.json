@@ -438,7 +438,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
             "image": "shopify://shop_images/Laylo_Flash_Sale_2.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
+            "image_mobile": "shopify://shop_images/Laylo_Flash_Sale_2.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -447,6 +447,7 @@
       "block_order": [
         "hero_tQBpWw"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
