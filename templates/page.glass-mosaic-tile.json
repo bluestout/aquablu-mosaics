@@ -426,6 +426,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Mixed_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Mixed",
             "button_label": "",
@@ -436,6 +437,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Round_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Round",
             "button_label": "",
@@ -479,6 +481,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/View_All_Glass_Tile.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
