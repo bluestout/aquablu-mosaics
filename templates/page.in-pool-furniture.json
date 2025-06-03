@@ -412,7 +412,7 @@
         "divider": false,
         "gutter_size": 40,
         "space_above": true,
-        "space_below": true,
+        "space_below": false,
         "css_class": "logo-list-set-height rounded-corners"
       }
     },
