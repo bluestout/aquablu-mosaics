@@ -416,6 +416,52 @@
         "css_class": "logo-list-set-height rounded-corners"
       }
     },
+    "slideshow_4L9jrJ": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_tQBpWw": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://products/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Laylo_Flash_Sale_2.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_tQBpWw"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "featured_collections_custom_9rAKTw": {
       "type": "featured-collections-custom",
       "blocks": {
@@ -1145,6 +1191,7 @@
     "slideshow_kKwnX8",
     "slideshow_X6jry3",
     "logo_list_custom_2_eqV3fh",
+    "slideshow_4L9jrJ",
     "featured_collections_custom_9rAKTw",
     "text_columns_custom_xpbabN",
     "text_columns_custom_mNmpg6",
