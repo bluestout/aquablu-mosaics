@@ -444,17 +444,6 @@
             "button_link": "shopify://collections/glass-fish-scale-mosaic-tile"
           }
         },
-        "text_block_Awfyz3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/round_tile.png",
-            "image_width": 130,
-            "title": "Round",
-            "button_label": "",
-            "button_link": "shopify://collections/round-glass-penny-tiles"
-          }
-        },
         "text_block_ndRc7F": {
           "type": "text_block",
           "settings": {
@@ -477,6 +466,17 @@
             "button_link": "shopify://collections/mixed-glass-mosaic-tile"
           }
         },
+        "text_block_Awfyz3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Untitled_design_5_d85f6fd0-c2d0-4086-a0c0-466f03136ca7.png",
+            "image_width": 130,
+            "title": "Round",
+            "button_label": "",
+            "button_link": "shopify://collections/round-glass-penny-tiles"
+          }
+        },
         "text_block_J9Vg7w": {
           "type": "text_block",
           "settings": {
@@ -494,9 +494,9 @@
         "text_block_jVJNAc",
         "text_block_Bc4cT6",
         "text_block_CwqXk8",
-        "text_block_Awfyz3",
         "text_block_ndRc7F",
         "text_block_7YR9wz",
+        "text_block_Awfyz3",
         "text_block_J9Vg7w"
       ],
       "custom_css": [],
