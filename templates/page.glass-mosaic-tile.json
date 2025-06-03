@@ -422,28 +422,6 @@
             "button_link": "shopify://collections/rectangle-glass-tile"
           }
         },
-        "text_block_ndRc7F": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/herringbone_tile.png",
-            "image_width": 130,
-            "title": "Herringbone",
-            "button_label": "",
-            "button_link": "shopify://collections/glass-herringbone-tile"
-          }
-        },
-        "text_block_Awfyz3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/round_tile.png",
-            "image_width": 130,
-            "title": "Round",
-            "button_label": "",
-            "button_link": "shopify://collections/round-glass-penny-tiles"
-          }
-        },
         "text_block_Bc4cT6": {
           "type": "text_block",
           "settings": {
@@ -464,6 +442,28 @@
             "title": "Fish Scale",
             "button_label": "",
             "button_link": "shopify://collections/glass-fish-scale-mosaic-tile"
+          }
+        },
+        "text_block_Awfyz3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/round_tile.png",
+            "image_width": 130,
+            "title": "Round",
+            "button_label": "",
+            "button_link": "shopify://collections/round-glass-penny-tiles"
+          }
+        },
+        "text_block_ndRc7F": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/herringbone_tile.png",
+            "image_width": 130,
+            "title": "Herringbone",
+            "button_label": "",
+            "button_link": "shopify://collections/glass-herringbone-tile"
           }
         },
         "text_block_7YR9wz": {
@@ -492,10 +492,10 @@
       "block_order": [
         "text_block_CDKx4y",
         "text_block_jVJNAc",
-        "text_block_ndRc7F",
-        "text_block_Awfyz3",
         "text_block_Bc4cT6",
         "text_block_CwqXk8",
+        "text_block_Awfyz3",
+        "text_block_ndRc7F",
         "text_block_7YR9wz",
         "text_block_J9Vg7w"
       ],
