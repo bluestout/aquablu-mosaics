@@ -297,6 +297,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Green_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Green",
             "button_label": "",
@@ -318,6 +319,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Beige_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Beige",
             "button_label": "",
@@ -328,6 +330,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Gray_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Gray",
             "button_label": "",
@@ -338,6 +341,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Black_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
