@@ -23,13 +23,12 @@
       "blocks": {
         "slide_dDz9fW": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_1.jpg",
+            "image": "shopify://shop_images/Flash_Sale_Homepage_Hero_2.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
-            "button_label": "Learn More",
+            "button_label": "",
             "link": "https://www.aquablumosaics.com/pages/memorial-day-sale",
             "box_align": "bottom-center",
             "text_alignment": "center",
