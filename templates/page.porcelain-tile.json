@@ -254,28 +254,6 @@
             "button_link": "shopify://collections/green-porcelain-tile"
           }
         },
-        "18d7ce4e-e669-4d87-a1ce-2a94914bdbb1": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Gray.png",
-            "image_width": 130,
-            "title": "Gray",
-            "button_label": "",
-            "button_link": "shopify://collections/gray-porcelain-tile"
-          }
-        },
-        "4926361f-b729-4dba-9968-b9efd68459f7": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/black.png",
-            "image_width": 130,
-            "title": "Black",
-            "button_label": "",
-            "button_link": "shopify://collections/black-porcelain-tile"
-          }
-        },
         "ad1662b6-6a5d-47dc-9e20-38047836d660": {
           "type": "text_block",
           "settings": {
@@ -298,11 +276,33 @@
             "button_link": "shopify://collections/beige-porcelain-tile"
           }
         },
+        "4926361f-b729-4dba-9968-b9efd68459f7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/black.png",
+            "image_width": 130,
+            "title": "Black",
+            "button_label": "",
+            "button_link": "shopify://collections/black-porcelain-tile"
+          }
+        },
+        "18d7ce4e-e669-4d87-a1ce-2a94914bdbb1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Gray.png",
+            "image_width": 130,
+            "title": "Gray",
+            "button_label": "",
+            "button_link": "shopify://collections/gray-porcelain-tile"
+          }
+        },
         "text_block_U9DYNX": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Brown_porcelain_Tile.png",
+            "image": "shopify://shop_images/Brown_porcelain_Tile_1.png",
             "image_width": 130,
             "title": "Brown",
             "button_label": "",
@@ -324,10 +324,10 @@
       "block_order": [
         "1e061387-e208-4742-be6a-dde505ae75ce",
         "2f429537-1702-4a6a-a2a3-1ca18fba5a2a",
-        "18d7ce4e-e669-4d87-a1ce-2a94914bdbb1",
-        "4926361f-b729-4dba-9968-b9efd68459f7",
         "ad1662b6-6a5d-47dc-9e20-38047836d660",
         "272f709f-5a60-436a-9a93-e500755ba19e",
+        "4926361f-b729-4dba-9968-b9efd68459f7",
+        "18d7ce4e-e669-4d87-a1ce-2a94914bdbb1",
         "text_block_U9DYNX",
         "text_block_A8gbct"
       ],
