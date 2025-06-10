@@ -59,7 +59,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/porchero222_65bd5f90-c709-4892-a43b-ec3c306dacb6.jpg",
+            "image": "shopify://shop_images/Porcelain_Hero_2.jpg",
             "overlay_opacity": 6,
             "focal_point": "top center"
           }
@@ -89,6 +89,7 @@
         },
         "hero_VEbTDN": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
