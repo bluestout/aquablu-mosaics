@@ -247,7 +247,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/blue.png",
+            "image": "shopify://shop_images/Blue_porcelain_Tile.png",
             "image_width": 130,
             "title": "Blue",
             "button_label": "",
