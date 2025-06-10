@@ -570,6 +570,16 @@
             "tooltip_text": ""
           }
         },
+        "collection_gEyXha": {
+          "type": "collection",
+          "settings": {
+            "title": "TROPICAL",
+            "image": "shopify://shop_images/glee-gaida-6-x-6-porcelain-tile-677416.jpg",
+            "url": "shopify://collections/tropical-porcelain-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_Dk7xrA": {
           "type": "collection",
           "settings": {
@@ -589,23 +599,13 @@
             "tooltip": false,
             "tooltip_text": ""
           }
-        },
-        "collection_gEyXha": {
-          "type": "collection",
-          "settings": {
-            "title": "TROPICAL",
-            "image": "shopify://shop_images/Tropical_Porcelain_Tile_93fbf239-d5ae-47b7-952f-843a5763090b.jpg",
-            "url": "shopify://collections/tropical-porcelain-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
         }
       },
       "block_order": [
         "collection_iMgDt6",
+        "collection_gEyXha",
         "collection_Dk7xrA",
-        "collection_pwBDE9",
-        "collection_gEyXha"
+        "collection_pwBDE9"
       ],
       "settings": {
         "title": "BROWSE LOOKS",
