@@ -380,17 +380,6 @@
             "button_link": "shopify://collections/porcelain-hexagon-tile"
           }
         },
-        "33f5c8e5-d411-4591-9abc-fe5c5ad50779": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/diamondporcelain.png",
-            "image_width": 130,
-            "title": "Diamond",
-            "button_label": "",
-            "button_link": "shopify://collections/diamond-porcelain-tile"
-          }
-        },
         "62df9c37-e88d-47e1-b630-14ef673aff11": {
           "type": "text_block",
           "settings": {
@@ -424,6 +413,17 @@
             "button_link": "shopify://collections/mixed-porcelain-mosaic-tile"
           }
         },
+        "33f5c8e5-d411-4591-9abc-fe5c5ad50779": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Diamond_porcelain_Tile.png",
+            "image_width": 130,
+            "title": "Diamond",
+            "button_label": "",
+            "button_link": "shopify://collections/diamond-porcelain-tile"
+          }
+        },
         "text_block_xLRWyt": {
           "type": "text_block",
           "settings": {
@@ -440,10 +440,10 @@
         "375e04e8-dc47-4d47-8da8-59cc4556d34e",
         "277d39d1-5573-4c01-86c3-21e6c4381569",
         "75429736-4f5d-406b-a554-82becfde27c6",
-        "33f5c8e5-d411-4591-9abc-fe5c5ad50779",
         "62df9c37-e88d-47e1-b630-14ef673aff11",
         "2738eff9-90f1-42f8-ada7-2be3ce3e47e2",
         "text_block_AX9zTB",
+        "33f5c8e5-d411-4591-9abc-fe5c5ad50779",
         "text_block_xLRWyt"
       ],
       "settings": {
