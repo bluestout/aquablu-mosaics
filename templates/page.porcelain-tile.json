@@ -232,17 +232,6 @@
     "af26c9c7-2b03-47b8-9194-c6e7a2ef546c": {
       "type": "text-columns-custom",
       "blocks": {
-        "ad1662b6-6a5d-47dc-9e20-38047836d660": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/white.png",
-            "image_width": 130,
-            "title": "White",
-            "button_label": "",
-            "button_link": "shopify://collections/white-porcelain-tile"
-          }
-        },
         "1e061387-e208-4742-be6a-dde505ae75ce": {
           "type": "text_block",
           "settings": {
@@ -263,28 +252,6 @@
             "title": "Green",
             "button_label": "",
             "button_link": "shopify://collections/green-porcelain-tile"
-          }
-        },
-        "text_block_U9DYNX": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Brown_porcelain_Tile.png",
-            "image_width": 130,
-            "title": "Brown",
-            "button_label": "",
-            "button_link": "shopify://collections/brown-porcelain-tile"
-          }
-        },
-        "272f709f-5a60-436a-9a93-e500755ba19e": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/cream.png",
-            "image_width": 130,
-            "title": "Beige",
-            "button_label": "",
-            "button_link": "shopify://collections/beige-porcelain-tile"
           }
         },
         "18d7ce4e-e669-4d87-a1ce-2a94914bdbb1": {
@@ -309,11 +276,44 @@
             "button_link": "shopify://collections/black-porcelain-tile"
           }
         },
+        "ad1662b6-6a5d-47dc-9e20-38047836d660": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/white.png",
+            "image_width": 130,
+            "title": "White",
+            "button_label": "",
+            "button_link": "shopify://collections/white-porcelain-tile"
+          }
+        },
+        "272f709f-5a60-436a-9a93-e500755ba19e": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/cream.png",
+            "image_width": 130,
+            "title": "Beige",
+            "button_label": "",
+            "button_link": "shopify://collections/beige-porcelain-tile"
+          }
+        },
+        "text_block_U9DYNX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Brown_porcelain_Tile.png",
+            "image_width": 130,
+            "title": "Brown",
+            "button_label": "",
+            "button_link": "shopify://collections/brown-porcelain-tile"
+          }
+        },
         "text_block_A8gbct": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/viewallporcelain.png",
+            "image": "shopify://shop_images/Shop_All_porcelain_Tile.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
@@ -322,13 +322,13 @@
         }
       },
       "block_order": [
-        "ad1662b6-6a5d-47dc-9e20-38047836d660",
         "1e061387-e208-4742-be6a-dde505ae75ce",
         "2f429537-1702-4a6a-a2a3-1ca18fba5a2a",
-        "text_block_U9DYNX",
-        "272f709f-5a60-436a-9a93-e500755ba19e",
         "18d7ce4e-e669-4d87-a1ce-2a94914bdbb1",
         "4926361f-b729-4dba-9968-b9efd68459f7",
+        "ad1662b6-6a5d-47dc-9e20-38047836d660",
+        "272f709f-5a60-436a-9a93-e500755ba19e",
+        "text_block_U9DYNX",
         "text_block_A8gbct"
       ],
       "settings": {
