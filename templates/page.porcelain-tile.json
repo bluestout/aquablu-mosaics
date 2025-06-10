@@ -417,11 +417,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/mixedporcelain.png",
+            "image": "shopify://shop_images/Penny_Round_porcelain_Tile.png",
             "image_width": 130,
-            "title": "Mixed",
+            "title": "Round",
             "button_label": "",
-            "button_link": "shopify://collections/mixed-porcelain-mosaic-tile"
+            "button_link": "shopify://collections/porcelain-penny-round-tile"
           }
         },
         "text_block_xLRWyt": {
