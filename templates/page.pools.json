@@ -470,32 +470,12 @@
     "featured_collections_custom_LwiJEf": {
       "type": "featured-collections-custom",
       "blocks": {
-        "collection_qhG4UW": {
+        "collection_WMJ7Bt": {
           "type": "collection",
           "settings": {
-            "title": "FLOATS",
-            "image": "shopify://shop_images/Outdoor_Pool_Floats.jpg",
-            "url": "shopify://collections/luxury-pool-floats-and-pool-noodles",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_RNLLMp": {
-          "type": "collection",
-          "settings": {
-            "title": "STEP MARKERS",
-            "image": "shopify://shop_images/Swimming_Pool_Step_Markers.jpg",
-            "url": "shopify://collections/accents-and-step-markers",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_QndThq": {
-          "type": "collection",
-          "settings": {
-            "title": "TURF",
-            "image": "shopify://shop_images/Artificial_Turf_for_Pool_Surrounds.jpg",
-            "url": "shopify://collections/artificial-grass-top-turf-products",
+            "title": "PAVERS & COPING",
+            "image": "shopify://shop_images/Pavers_and_Coping_019432e8-8875-4bee-9c43-0b1a6624b223.jpg",
+            "url": "shopify://collections/outdoor-pavers-and-coping",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -510,12 +490,42 @@
             "tooltip_text": ""
           }
         },
+        "collection_QndThq": {
+          "type": "collection",
+          "settings": {
+            "title": "TURF",
+            "image": "shopify://shop_images/Artificial_Turf_for_Pool_Surrounds.jpg",
+            "url": "shopify://collections/artificial-grass-top-turf-products",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_RNLLMp": {
+          "type": "collection",
+          "settings": {
+            "title": "STEP MARKERS",
+            "image": "shopify://shop_images/Swimming_Pool_Step_Markers.jpg",
+            "url": "shopify://collections/accents-and-step-markers",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "collection_wfr9Pw": {
           "type": "collection",
           "settings": {
             "title": "TRIM TILE",
             "image": "shopify://shop_images/Trim_Tile_for_Swimming_Pools.jpg",
             "url": "shopify://collections/pool-trim-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_VeLipX": {
+          "type": "collection",
+          "settings": {
+            "title": "DEPTH MARKERS",
+            "image": "shopify://shop_images/depthprod_fe5cdc58-d4a9-44db-be6c-d3f4fb44a98e.jpg",
+            "url": "shopify://collections/depth-and-safety-markers",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -530,36 +540,26 @@
             "tooltip_text": ""
           }
         },
-        "collection_WMJ7Bt": {
+        "collection_qhG4UW": {
           "type": "collection",
           "settings": {
-            "title": "PAVERS & COPING",
-            "image": "shopify://shop_images/Pavers_and_Coping_019432e8-8875-4bee-9c43-0b1a6624b223.jpg",
-            "url": "shopify://collections/outdoor-pavers-and-coping",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_VeLipX": {
-          "type": "collection",
-          "settings": {
-            "title": "DEPTH MARKERS",
-            "image": "shopify://shop_images/depthprod_fe5cdc58-d4a9-44db-be6c-d3f4fb44a98e.jpg",
-            "url": "shopify://collections/depth-and-safety-markers",
+            "title": "FLOATS",
+            "image": "shopify://shop_images/Outdoor_Pool_Floats.jpg",
+            "url": "shopify://collections/luxury-pool-floats-and-pool-noodles",
             "tooltip": false,
             "tooltip_text": ""
           }
         }
       },
       "block_order": [
-        "collection_qhG4UW",
-        "collection_RNLLMp",
-        "collection_QndThq",
-        "collection_adPK6C",
-        "collection_wfr9Pw",
-        "collection_9hdhng",
         "collection_WMJ7Bt",
-        "collection_VeLipX"
+        "collection_adPK6C",
+        "collection_QndThq",
+        "collection_RNLLMp",
+        "collection_wfr9Pw",
+        "collection_VeLipX",
+        "collection_9hdhng",
+        "collection_qhG4UW"
       ],
       "settings": {
         "title": "EXPLORE MORE",
