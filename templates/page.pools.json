@@ -503,22 +503,22 @@
             "tooltip_text": ""
           }
         },
-        "collection_9hdhng": {
-          "type": "collection",
-          "settings": {
-            "title": "GAMES",
-            "image": "shopify://shop_images/poolgames.jpg",
-            "url": "shopify://collections/outdoor-games",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "collection_qhG4UW": {
           "type": "collection",
           "settings": {
             "title": "FLOATS",
             "image": "shopify://shop_images/Outdoor_Pool_Floats.jpg",
             "url": "shopify://collections/luxury-pool-floats-and-pool-noodles",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_9hdhng": {
+          "type": "collection",
+          "settings": {
+            "title": "GAMES",
+            "image": "shopify://shop_images/poolgames.jpg",
+            "url": "shopify://collections/outdoor-games",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -531,8 +531,8 @@
         "collection_RNLLMp",
         "collection_wfr9Pw",
         "collection_VeLipX",
-        "collection_9hdhng",
-        "collection_qhG4UW"
+        "collection_qhG4UW",
+        "collection_9hdhng"
       ],
       "settings": {
         "title": "EXPLORE MORE",
