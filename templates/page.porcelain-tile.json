@@ -156,6 +156,7 @@
         },
         "logo_image_LF74cG": {
           "type": "logo_image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/porcelain1x1.jpg",
             "logo_title": "1\" x 1\" Porcelain Tile",
