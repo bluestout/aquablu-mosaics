@@ -19,24 +19,23 @@
       "blocks": {
         "hero_8n3Aqc": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
+            "top_subheading": "Brick looks. Porcelain strength.",
+            "title": "<p>BRICKSTONE SERIES</p>",
             "title_size": 45,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/memorial-day-sale",
-            "link_text": "LEARN MORE",
+            "link": "https://www.aquablumosaics.com/collections/msi-brickstone-series-brick-look-porcelain-tile",
+            "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_28.jpg",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/Brickstone_series_porcelain_tile.jpg",
             "overlay_opacity": 4,
             "focal_point": "center center"
           }
