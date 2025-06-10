@@ -406,7 +406,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Diamond_porcelain_Tile.png",
+            "image": "shopify://shop_images/Diamond_porcelain_Tile_1.png",
             "image_width": 130,
             "title": "Diamond",
             "button_label": "",
