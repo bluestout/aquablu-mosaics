@@ -145,6 +145,15 @@
             "link": "shopify://collections/new-and-trending-porcelain-tile"
           }
         },
+        "84602fc2-1df3-4df9-846c-b93f531d1245": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Porcelain_Waterline_Tile.jpg",
+            "logo_title": "Waterline Tile",
+            "logo_text": "",
+            "link": "shopify://collections/6x6-pool-waterline-tile"
+          }
+        },
         "logo_image_LF74cG": {
           "type": "logo_image",
           "settings": {
@@ -161,15 +170,6 @@
             "logo_title": "Patterned Tile",
             "logo_text": "",
             "link": "shopify://collections/patterned-porcelain-tile"
-          }
-        },
-        "84602fc2-1df3-4df9-846c-b93f531d1245": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Porcelain_Waterline_Tile.jpg",
-            "logo_title": "Waterline Tile",
-            "logo_text": "",
-            "link": "shopify://collections/6x6-pool-waterline-tile"
           }
         },
         "169d8af3-81b6-49c1-bc6b-35b81ea133c3": {
@@ -211,9 +211,9 @@
       },
       "block_order": [
         "logo_image_QzJFp6",
+        "84602fc2-1df3-4df9-846c-b93f531d1245",
         "logo_image_LF74cG",
         "template--14551638868040__72a08518-21a4-438f-a7fb-4a1eb35b2e91-168139693779db269b-0",
-        "84602fc2-1df3-4df9-846c-b93f531d1245",
         "169d8af3-81b6-49c1-bc6b-35b81ea133c3",
         "1ce26b21-60a7-4a43-9961-569683b1fee6",
         "c7463d42-3e3e-49cb-89e6-52d0a7f412ab",
