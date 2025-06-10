@@ -17,29 +17,6 @@
     "cf944a42-813d-4747-a042-3ee4590c930c": {
       "type": "slideshow",
       "blocks": {
-        "hero_8n3Aqc": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "Brick looks. Porcelain strength.",
-            "title": "<p>BRICKSTONE SERIES</p>",
-            "title_size": 45,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/msi-brickstone-series-brick-look-porcelain-tile",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-center",
-            "image": "shopify://shop_images/Brickstone_series_porcelain_tile.jpg",
-            "overlay_opacity": 4,
-            "focal_point": "center center"
-          }
-        },
         "template--14551638868040__cf944a42-813d-4747-a042-3ee4590c930c-1681393773f7e6b65f-1": {
           "type": "hero",
           "settings": {
@@ -70,18 +47,41 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
-            "top_subheading": "ELEVATE YOUR HOME",
-            "title": "<p>PORCELAIN FLOOR TILE</p>",
+            "top_subheading": "Rustic feel, modern strength.",
+            "title": "<p>WOOD LOOK TILE</p>",
             "title_size": 45,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://collections/porcelain-flooring-tile",
+            "link": "shopify://collections/wood-look-porcelain-tile",
             "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/porcelainhero.jpg",
+            "image": "shopify://shop_images/Wood_look_porcelain_tile_c48e4594-7cca-4d70-985e-c1a3b9abd169.jpg",
+            "overlay_opacity": 4,
+            "focal_point": "center center"
+          }
+        },
+        "hero_8n3Aqc": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "Brick looks. Porcelain strength.",
+            "title": "<p>BRICKSTONE SERIES</p>",
+            "title_size": 45,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/collections/msi-brickstone-series-brick-look-porcelain-tile",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/Brickstone_series_porcelain_tile.jpg",
             "overlay_opacity": 4,
             "focal_point": "center center"
           }
@@ -113,9 +113,9 @@
         }
       },
       "block_order": [
-        "hero_8n3Aqc",
         "template--14551638868040__cf944a42-813d-4747-a042-3ee4590c930c-1681393773f7e6b65f-1",
         "hero_CgUdGh",
+        "hero_8n3Aqc",
         "hero_VEbTDN"
       ],
       "settings": {
