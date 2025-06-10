@@ -354,6 +354,52 @@
         "css_class": ""
       }
     },
+    "slideshow_97riEr": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_EXPf9a": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#f5f5f5",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_EXPf9a"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 23,
+        "space_above": true,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "6aba6d4d-7ea2-4075-a201-041564b8219d": {
       "type": "slideshow",
       "blocks": {
@@ -873,6 +919,7 @@
     "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
     "3dc6dc2d-eca0-4c56-acf5-b4f2aa539329",
     "text_columns_custom_VdCiNC",
+    "slideshow_97riEr",
     "6aba6d4d-7ea2-4075-a201-041564b8219d",
     "69af82dc-9d1d-4fb5-9ee7-4c2d818ab72f",
     "featured_collections_custom_LwiJEf",
