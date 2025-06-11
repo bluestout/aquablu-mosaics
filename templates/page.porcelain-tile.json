@@ -428,7 +428,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/viewallporcshapes.png",
+            "image": "shopify://shop_images/Shop_All_porcelain_Tile_1.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
