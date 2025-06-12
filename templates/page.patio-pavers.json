@@ -714,14 +714,13 @@
     },
     "text_and_image_8BxHDT": {
       "type": "text-and-image",
-      "disabled": true,
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/cordova-lablanca-arterra-pavers-hardscape-0572.jpg",
+        "image": "shopify://shop_images/Outdoor_Flooring_Solutions.jpg",
         "image_width": 600,
         "subtitle": "",
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "title": "",
+        "text": "<h2><strong>Why Porcelain Pavers Are the Ideal Choice for Outdoor Flooring</strong></h2><p>Porcelain pavers are the ultimate outdoor flooring solution, combining unmatched durability with sophisticated style. Engineered to withstand harsh weather, heavy foot traffic, and UV exposure, these dense, non-porous tiles resist stains, fading, and moisture damage without the need for sealing. Available in a wide variety of textures and finishes - including wood, stone, and concrete looks - porcelain pavers offer endless design versatility for patios, pool decks, walkways, rooftops, and outdoor kitchens. Low maintenance and built to last, porcelain pavers elevate outdoor spaces with lasting beauty and performance.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -741,6 +740,7 @@
     "56f31711-acbd-4fe8-8510-44d72e4826a6",
     "dd55ec05-a69b-489b-aa4b-a94f69d5f8b8",
     "2a0c0693-ee03-4c99-b070-f48f33ce54a8",
+    "text_and_image_8BxHDT",
     "79941ca3-0cb7-4860-bca5-d013efbba68b",
     "6c386a30-0e43-4a02-b4bf-28909ff07d77",
     "f798ccf1-5f80-4f0a-aed1-357d4d35067a",
@@ -749,7 +749,6 @@
     "4a671b33-4a2e-48a2-a47d-26c42c9920e6",
     "1d9ab1ee-1272-45ff-8455-85156dd4cbf1",
     "dfcad694-88f3-4380-ab9f-fd78aa929e8e",
-    "faq_PfqNEz",
-    "text_and_image_8BxHDT"
+    "faq_PfqNEz"
   ]
 }
