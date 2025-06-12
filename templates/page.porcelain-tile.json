@@ -182,15 +182,6 @@
             "link": "shopify://collections/zellige-look-tile"
           }
         },
-        "1ce26b21-60a7-4a43-9961-569683b1fee6": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Porcelain_Floor_Tile_0bd2b760-810f-4ec6-94f8-35d238d87f1f.jpg",
-            "logo_title": "Porcelain Flooring",
-            "logo_text": "",
-            "link": "shopify://collections/porcelain-flooring-tile"
-          }
-        },
         "01e153b2-f34c-4e2c-9eca-91cd8345d3fd": {
           "type": "logo_image",
           "settings": {
@@ -198,6 +189,15 @@
             "logo_title": "Ledger Stone",
             "logo_text": "",
             "link": "shopify://collections/porcelain-ledger-tile"
+          }
+        },
+        "1ce26b21-60a7-4a43-9961-569683b1fee6": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Porcelain_Floor_Tile_0bd2b760-810f-4ec6-94f8-35d238d87f1f.jpg",
+            "logo_title": "Porcelain Flooring",
+            "logo_text": "",
+            "link": "shopify://collections/porcelain-flooring-tile"
           }
         },
         "169d8af3-81b6-49c1-bc6b-35b81ea133c3": {
@@ -216,8 +216,8 @@
         "logo_image_LF74cG",
         "template--14551638868040__72a08518-21a4-438f-a7fb-4a1eb35b2e91-168139693779db269b-0",
         "c7463d42-3e3e-49cb-89e6-52d0a7f412ab",
-        "1ce26b21-60a7-4a43-9961-569683b1fee6",
         "01e153b2-f34c-4e2c-9eca-91cd8345d3fd",
+        "1ce26b21-60a7-4a43-9961-569683b1fee6",
         "169d8af3-81b6-49c1-bc6b-35b81ea133c3"
       ],
       "settings": {
