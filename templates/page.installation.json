@@ -163,6 +163,26 @@
         "css_class": "blue-bar-overlay"
       }
     },
+    "56368651-0c21-4b28-bd1f-b0c00be438b1": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/starlikeevo.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>STARLIKE EVO EPOXY TILE GROUT BY LITOKOL</h2><p>Starlike EVO is a high-performance tile grout made from epoxy resins and hardeners. More durable and waterproof than traditional grouts - Starlike EVO has an unmatched ability to resist mold in wet areas like bathrooms, pools and spas. Plus, its UV and stain-resistant, offering minimal maintenance. As part of the ZHERORISK program, it's the most eco-friendly option on the market! This means it has ultra-low VOC emissions, no strong odors, it's non-corrosive, non-toxic, and more importantly, non-hazardous for the planet.</p><p><a href=\"https://www.aquablumosaics.com/blogs/news/4-reasons-you-should-choose-epoxy-grout\" title=\"4 reasons you should choose epoxy grout\">LEARN 4 REASONS TO CHOOSE EPOXY GROUT &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding installation-section-3"
+      }
+    },
     "d3fe0a0f-013c-4d40-9309-d4baecc864c3": {
       "type": "slideshow",
       "blocks": {
@@ -200,33 +220,13 @@
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 40,
-        "space_above": true,
+        "space_above": false,
         "space_below": false,
         "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
-      }
-    },
-    "56368651-0c21-4b28-bd1f-b0c00be438b1": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/starlikeevo.jpg",
-        "video_url": "",
-        "image_width": 650,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>STARLIKE EVO EPOXY TILE GROUT BY LITOKOL</h2><p>Starlike EVO is a high-performance tile grout made from epoxy resins and hardeners. More durable and waterproof than traditional grouts - Starlike EVO has an unmatched ability to resist mold in wet areas like bathrooms, pools and spas. Plus, its UV and stain-resistant, offering minimal maintenance. As part of the ZHERORISK program, it's the most eco-friendly option on the market! This means it has ultra-low VOC emissions, no strong odors, it's non-corrosive, non-toxic, and more importantly, non-hazardous for the planet.</p><p><a href=\"https://www.aquablumosaics.com/blogs/news/4-reasons-you-should-choose-epoxy-grout\" title=\"4 reasons you should choose epoxy grout\">LEARN 4 REASONS TO CHOOSE EPOXY GROUT &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "reduce-text-padding installation-section-3"
       }
     },
     "264fc5f0-3022-4d72-b899-fdc874180e4a": {
@@ -569,8 +569,8 @@
     "main",
     "4ff181e0-4ba1-491c-8145-dff4a3c7fa3d",
     "e867cf6b-359c-4cb8-849a-adfd3525e57b",
-    "d3fe0a0f-013c-4d40-9309-d4baecc864c3",
     "56368651-0c21-4b28-bd1f-b0c00be438b1",
+    "d3fe0a0f-013c-4d40-9309-d4baecc864c3",
     "264fc5f0-3022-4d72-b899-fdc874180e4a",
     "7489cb07-5b08-4fb1-bdaa-a6dc2096ee68",
     "6d0cea02-9928-4082-a0d8-a074b9bb7017",
