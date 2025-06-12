@@ -711,6 +711,27 @@
         "title": "FAQs",
         "css_class": ""
       }
+    },
+    "text_and_image_8BxHDT": {
+      "type": "text-and-image",
+      "disabled": true,
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/cordova-lablanca-arterra-pavers-hardscape-0572.jpg",
+        "image_width": 600,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
+      }
     }
   },
   "order": [
@@ -728,6 +749,7 @@
     "4a671b33-4a2e-48a2-a47d-26c42c9920e6",
     "1d9ab1ee-1272-45ff-8455-85156dd4cbf1",
     "dfcad694-88f3-4380-ab9f-fd78aa929e8e",
-    "faq_PfqNEz"
+    "faq_PfqNEz",
+    "text_and_image_8BxHDT"
   ]
 }
