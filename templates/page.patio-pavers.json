@@ -209,22 +209,22 @@
             "tooltip_text": ""
           }
         },
-        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5": {
-          "type": "collection",
-          "settings": {
-            "title": "TERRAZZO",
-            "image": "shopify://shop_images/Terrazzo_Look_Porcelain_Pavers.jpg",
-            "url": "shopify://collections/terrazo-look-porcelain-pavers-coping",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
         "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-4": {
           "type": "collection",
           "settings": {
             "title": "QUARTZITE",
             "image": "shopify://shop_images/Quartzite_Porcelain_pavers.jpg",
             "url": "shopify://collections/quartzite-look-porcelain-pavers-coping",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5": {
+          "type": "collection",
+          "settings": {
+            "title": "TERRAZZO",
+            "image": "shopify://shop_images/Terrazzo_Look_Porcelain_Pavers.jpg",
+            "url": "shopify://collections/terrazo-look-porcelain-pavers-coping",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -246,8 +246,8 @@
         "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-2",
         "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-3",
         "22042cd3-4d60-424b-89f2-797b948262fb",
-        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5",
         "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-4",
+        "template--14551638966344__f179439e-be50-4d2b-a6be-a59ea9fbd72a-1681760000db161d24-5",
         "41c69297-1243-45e8-a756-edd75d6d1494"
       ],
       "settings": {
