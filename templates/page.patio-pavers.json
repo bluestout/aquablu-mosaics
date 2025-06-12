@@ -277,6 +277,26 @@
         "css_class": "reduce-text-padding"
       }
     },
+    "text_and_image_8BxHDT": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Outdoor_Flooring_Solutions.jpg",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>PORCELAIN PAVERS: THE PERFECT OUTDOOR FLOORING SOLUTION</h2><p>Porcelain pavers are the ultimate outdoor flooring solution, combining unmatched durability with sophisticated style. Engineered to withstand harsh weather, heavy foot traffic, and UV exposure, these dense, non-porous tiles resist stains, fading, and moisture damage without the need for sealing. Available in a wide variety of textures and finishes - including wood, stone, and concrete looks - porcelain pavers offer endless design versatility for patios, pool decks, walkways, rooftops, and outdoor kitchens. Low maintenance and built to last, porcelain pavers elevate outdoor spaces with lasting beauty and performance.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding"
+      }
+    },
     "dd55ec05-a69b-489b-aa4b-a94f69d5f8b8": {
       "type": "slideshow-image",
       "blocks": {
@@ -393,26 +413,6 @@
         "two_column_mobile": true,
         "three_column_mobile": false,
         "css_class": "home-section-5"
-      }
-    },
-    "text_and_image_8BxHDT": {
-      "type": "text-and-image",
-      "name": "t:sections.text-and-image.presets.image_with_text.name",
-      "settings": {
-        "image": "shopify://shop_images/Outdoor_Flooring_Solutions.jpg",
-        "image_width": 650,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>PORCELAIN PAVERS: THE PERFECT OUTDOOR FLOORING SOLUTION</h2><p>Porcelain pavers are the ultimate outdoor flooring solution, combining unmatched durability with sophisticated style. Engineered to withstand harsh weather, heavy foot traffic, and UV exposure, these dense, non-porous tiles resist stains, fading, and moisture damage without the need for sealing. Available in a wide variety of textures and finishes - including wood, stone, and concrete looks - porcelain pavers offer endless design versatility for patios, pool decks, walkways, rooftops, and outdoor kitchens. Low maintenance and built to last, porcelain pavers elevate outdoor spaces with lasting beauty and performance.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "reduce-text-padding"
       }
     },
     "79941ca3-0cb7-4860-bca5-d013efbba68b": {
@@ -738,9 +738,9 @@
     "main",
     "f179439e-be50-4d2b-a6be-a59ea9fbd72a",
     "56f31711-acbd-4fe8-8510-44d72e4826a6",
+    "text_and_image_8BxHDT",
     "dd55ec05-a69b-489b-aa4b-a94f69d5f8b8",
     "2a0c0693-ee03-4c99-b070-f48f33ce54a8",
-    "text_and_image_8BxHDT",
     "79941ca3-0cb7-4860-bca5-d013efbba68b",
     "6c386a30-0e43-4a02-b4bf-28909ff07d77",
     "f798ccf1-5f80-4f0a-aed1-357d4d35067a",
