@@ -107,6 +107,7 @@
         },
         "hero_kH3Kpz": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -397,9 +398,9 @@
     },
     "text_and_image_8BxHDT": {
       "type": "text-and-image",
-      "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/Outdoor_Flooring_Solutions.jpg",
+        "video_url": "",
         "image_width": 650,
         "subtitle": "",
         "title": "",
