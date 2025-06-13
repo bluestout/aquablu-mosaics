@@ -348,7 +348,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Blue_Pool_Tile.png",
+            "image": "shopify://shop_images/Blue_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Blue",
             "button_label": "",
@@ -370,7 +370,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/black_pool_tile.png",
+            "image": "shopify://shop_images/Black_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Black",
             "button_label": "",
@@ -452,7 +452,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/square_pool_tile.png",
+            "image": "shopify://shop_images/Square_porcelain_Tile_1.png",
             "image_width": 130,
             "title": "Square",
             "button_label": "",
@@ -463,7 +463,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/rectangle_pool_tile.png",
+            "image": "shopify://shop_images/Rectangle_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Rectangle",
             "button_label": "",
@@ -474,7 +474,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/round_pool_tile.png",
+            "image": "shopify://shop_images/Penny_Round_porcelain_Tile.png",
             "image_width": 130,
             "title": "Round",
             "button_label": "",
@@ -485,7 +485,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/geometricpooltile.png",
+            "image": "shopify://shop_images/geometric_tile.png",
             "image_width": 130,
             "title": "Geometric",
             "button_label": "",
@@ -507,7 +507,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/fish_scale_pool_tile.png",
+            "image": "shopify://shop_images/fish-scale-glass.jpg",
             "image_width": 130,
             "title": "Fish Scale",
             "button_label": "",
@@ -518,7 +518,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/mixed_pool_tile.png",
+            "image": "shopify://shop_images/Mixed_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "Mixed",
             "button_label": "",
@@ -529,7 +529,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/viewallshapespooltile.png",
+            "image": "shopify://shop_images/Square_Glass_Tile_by_AquaBlu_Mosaics.png",
             "image_width": 130,
             "title": "View All",
             "button_label": "",
@@ -695,6 +695,26 @@
         "css_class": "blue-bar-overlay"
       }
     },
+    "text_and_image_EUGDL9": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/SICISpool.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>MAKE IT YOURS WITH CUSTOM MOSAIC DESIGN</h2><p>A custom mosaic pool isn't just a pool – it's a masterpiece in your backyard. Each tile is a brushstroke of your imagination, creating a captivating display of color and design that turns every swim into an immersive experience. Beyond aesthetics, mosaic tiles are durable and weather-resistant, ensuring longevity and adding a touch of luxury to your outdoor space. With a custom mosaic pool, you're not just swimming – you're indulging in artistry and enhancing your outdoor oasis with timeless beauty.</p><p><a href=\"https://www.aquablumosaics.com/pages/custom-mosaics\" title=\"https://www.aquablumosaics.com/pages/custom-mosaics\">Learn More &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding"
+      }
+    },
     "featured_collections_custom_47rQxd": {
       "type": "featured-collections-custom",
       "blocks": {
@@ -749,26 +769,6 @@
         "title": "SHOP BY STYLE",
         "divider": false,
         "css_class": "exploring-pool-mosaic-grid"
-      }
-    },
-    "text_and_image_EUGDL9": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/SICISpool.jpg",
-        "video_url": "",
-        "image_width": 650,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>MAKE IT YOURS WITH CUSTOM MOSAIC DESIGN</h2><p>A custom mosaic pool isn't just a pool – it's a masterpiece in your backyard. Each tile is a brushstroke of your imagination, creating a captivating display of color and design that turns every swim into an immersive experience. Beyond aesthetics, mosaic tiles are durable and weather-resistant, ensuring longevity and adding a touch of luxury to your outdoor space. With a custom mosaic pool, you're not just swimming – you're indulging in artistry and enhancing your outdoor oasis with timeless beauty.</p><p><a href=\"https://www.aquablumosaics.com/pages/custom-mosaics\" title=\"https://www.aquablumosaics.com/pages/custom-mosaics\">Learn More &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "reduce-text-padding"
       }
     },
     "slideshow_BxatrY": {
