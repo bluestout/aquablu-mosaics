@@ -470,6 +470,17 @@
             "button_link": "shopify://collections/rectangle-subway-pool-tile"
           }
         },
+        "text_block_9cccY7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/diamond_pool_tile.png",
+            "image_width": 130,
+            "title": "Diamond",
+            "button_label": "",
+            "button_link": "shopify://collections/diamond-pool-tile"
+          }
+        },
         "text_block_ahQThn": {
           "type": "text_block",
           "settings": {
@@ -479,6 +490,17 @@
             "title": "Round",
             "button_label": "",
             "button_link": "shopify://collections/round-pool-tile"
+          }
+        },
+        "text_block_4bBytj": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Mixed_Glass_Tile_by_AquaBlu_Mosaics.png",
+            "image_width": 130,
+            "title": "Mixed",
+            "button_label": "",
+            "button_link": "shopify://collections/mixed-pool-tile"
           }
         },
         "text_block_WcFpzk": {
@@ -492,17 +514,6 @@
             "button_link": "shopify://collections/geometric-pool-tile"
           }
         },
-        "text_block_9cccY7": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/diamond_pool_tile.png",
-            "image_width": 130,
-            "title": "Diamond",
-            "button_label": "",
-            "button_link": "shopify://collections/diamond-pool-tile"
-          }
-        },
         "text_block_pdgUee": {
           "type": "text_block",
           "settings": {
@@ -512,17 +523,6 @@
             "title": "Fish Scale",
             "button_label": "",
             "button_link": "shopify://collections/fish-scale-pool-tile"
-          }
-        },
-        "text_block_4bBytj": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Mixed_Glass_Tile_by_AquaBlu_Mosaics.png",
-            "image_width": 130,
-            "title": "Mixed",
-            "button_label": "",
-            "button_link": "shopify://collections/mixed-pool-tile"
           }
         },
         "text_block_bRrq99": {
@@ -540,11 +540,11 @@
       "block_order": [
         "text_block_i7UHhG",
         "text_block_N4q3zd",
-        "text_block_ahQThn",
-        "text_block_WcFpzk",
         "text_block_9cccY7",
-        "text_block_pdgUee",
+        "text_block_ahQThn",
         "text_block_4bBytj",
+        "text_block_WcFpzk",
+        "text_block_pdgUee",
         "text_block_bRrq99"
       ],
       "settings": {
