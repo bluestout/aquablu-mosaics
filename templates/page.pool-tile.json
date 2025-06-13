@@ -670,26 +670,6 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
-    "text_and_image_EUGDL9": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/SICISpool.jpg",
-        "video_url": "",
-        "image_width": 650,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>MAKE IT YOURS WITH CUSTOM MOSAIC DESIGN</h2><p>A custom mosaic pool isn't just a pool – it's a masterpiece in your backyard. Each tile is a brushstroke of your imagination, creating a captivating display of color and design that turns every swim into an immersive experience. Beyond aesthetics, mosaic tiles are durable and weather-resistant, ensuring longevity and adding a touch of luxury to your outdoor space. With a custom mosaic pool, you're not just swimming – you're indulging in artistry and enhancing your outdoor oasis with timeless beauty.</p><p><a href=\"https://www.aquablumosaics.com/pages/custom-mosaics\" title=\"https://www.aquablumosaics.com/pages/custom-mosaics\">Learn More &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "reduce-text-padding"
-      }
-    },
     "promo_grid_fq4MAP": {
       "type": "promo-grid",
       "blocks": {
@@ -769,6 +749,26 @@
         "two_column_mobile": false,
         "three_column_mobile": true,
         "css_class": "blue-bar-overlay"
+      }
+    },
+    "text_and_image_EUGDL9": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/SICISpool.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>MAKE IT YOURS WITH CUSTOM MOSAIC DESIGN</h2><p>A custom mosaic pool isn't just a pool – it's a masterpiece in your backyard. Each tile is a brushstroke of your imagination, creating a captivating display of color and design that turns every swim into an immersive experience. Beyond aesthetics, mosaic tiles are durable and weather-resistant, ensuring longevity and adding a touch of luxury to your outdoor space. With a custom mosaic pool, you're not just swimming – you're indulging in artistry and enhancing your outdoor oasis with timeless beauty.</p><p><a href=\"https://www.aquablumosaics.com/pages/custom-mosaics\" title=\"https://www.aquablumosaics.com/pages/custom-mosaics\">Learn More &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding"
       }
     },
     "slideshow_BxatrY": {
@@ -914,11 +914,11 @@
     "promo_grid_yVKg3F",
     "text_columns_custom_Yx8wC4",
     "text_columns_custom_NR8NCW",
-    "1749819898ef54d8ff",
     "advanced_content_d4UdBw",
     "featured_collections_custom_47rQxd",
-    "text_and_image_EUGDL9",
+    "1749819898ef54d8ff",
     "promo_grid_fq4MAP",
+    "text_and_image_EUGDL9",
     "slideshow_BxatrY",
     "featured_collection_custom_TGf7KT",
     "faq_8FY79V"
