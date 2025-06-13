@@ -554,7 +554,7 @@
         "align_text": "center",
         "gutter_size": 20,
         "space_above": false,
-        "space_below": false,
+        "space_below": true,
         "divider": false,
         "color_scheme": "none",
         "css_class": ""
@@ -570,7 +570,7 @@
             "dynamic_source": "",
             "title": "Trending Now",
             "subtitle": "",
-            "heading_size": "1",
+            "heading_size": "1.2",
             "heading_color": "",
             "heading_align": "center",
             "desc_style": "subtitle",
