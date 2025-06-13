@@ -589,7 +589,7 @@
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
-        "layout": "left",
+        "layout": "right",
         "color_scheme": "2",
         "divider": false,
         "new_layout": true,

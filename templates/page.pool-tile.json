@@ -614,62 +614,6 @@
         "css_class": ""
       }
     },
-    "featured_collections_custom_47rQxd": {
-      "type": "featured-collections-custom",
-      "blocks": {
-        "collection_VWJKnW": {
-          "type": "collection",
-          "settings": {
-            "title": "CLASSIC",
-            "image": "shopify://shop_images/Classic_Pool_Tile.jpg",
-            "url": "shopify://collections/classic-pool-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_JXjmbY": {
-          "type": "collection",
-          "settings": {
-            "title": "MODERN",
-            "image": "shopify://shop_images/modern_pool_tile_13fedd55-9608-46e9-bab1-0fed1362f2f3.jpg",
-            "url": "shopify://collections/modern-pool-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_K6idEw": {
-          "type": "collection",
-          "settings": {
-            "title": "COASTAL",
-            "image": "shopify://shop_images/Coastal_Pool_tile_f5615766-38b8-456c-8f10-f7bbf20cd5af.jpg",
-            "url": "shopify://collections/coastal-swimming-pool-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_LchUzR": {
-          "type": "collection",
-          "settings": {
-            "title": "TROPICAL",
-            "image": "shopify://shop_images/Tropical_Pool_Tile.jpg",
-            "url": "shopify://collections/tropical-pool-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_VWJKnW",
-        "collection_JXjmbY",
-        "collection_K6idEw",
-        "collection_LchUzR"
-      ],
-      "settings": {
-        "title": "SHOP BY STYLE",
-        "divider": false,
-        "css_class": "exploring-pool-mosaic-grid"
-      }
-    },
     "promo_grid_fq4MAP": {
       "type": "promo-grid",
       "blocks": {
@@ -749,6 +693,62 @@
         "two_column_mobile": false,
         "three_column_mobile": true,
         "css_class": "blue-bar-overlay"
+      }
+    },
+    "featured_collections_custom_47rQxd": {
+      "type": "featured-collections-custom",
+      "blocks": {
+        "collection_VWJKnW": {
+          "type": "collection",
+          "settings": {
+            "title": "CLASSIC",
+            "image": "shopify://shop_images/Classic_Pool_Tile.jpg",
+            "url": "shopify://collections/classic-pool-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_JXjmbY": {
+          "type": "collection",
+          "settings": {
+            "title": "MODERN",
+            "image": "shopify://shop_images/modern_pool_tile_13fedd55-9608-46e9-bab1-0fed1362f2f3.jpg",
+            "url": "shopify://collections/modern-pool-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_K6idEw": {
+          "type": "collection",
+          "settings": {
+            "title": "COASTAL",
+            "image": "shopify://shop_images/Coastal_Pool_tile_f5615766-38b8-456c-8f10-f7bbf20cd5af.jpg",
+            "url": "shopify://collections/coastal-swimming-pool-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "collection_LchUzR": {
+          "type": "collection",
+          "settings": {
+            "title": "TROPICAL",
+            "image": "shopify://shop_images/Tropical_Pool_Tile.jpg",
+            "url": "shopify://collections/tropical-pool-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_VWJKnW",
+        "collection_JXjmbY",
+        "collection_K6idEw",
+        "collection_LchUzR"
+      ],
+      "settings": {
+        "title": "SHOP BY STYLE",
+        "divider": false,
+        "css_class": "exploring-pool-mosaic-grid"
       }
     },
     "text_and_image_EUGDL9": {
