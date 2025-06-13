@@ -560,6 +560,38 @@
         "css_class": ""
       }
     },
+    "1749819898ef54d8ff": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_DWndCD": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 25081,
+            "dynamic_source": "",
+            "title": "Trending Now",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_DWndCD"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
     "advanced_content_d4UdBw": {
       "type": "advanced-content",
       "blocks": {
@@ -575,6 +607,7 @@
       "block_order": [
         "liquid_XV8j9a"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
@@ -881,6 +914,7 @@
     "promo_grid_yVKg3F",
     "text_columns_custom_Yx8wC4",
     "text_columns_custom_NR8NCW",
+    "1749819898ef54d8ff",
     "advanced_content_d4UdBw",
     "featured_collections_custom_47rQxd",
     "text_and_image_EUGDL9",
