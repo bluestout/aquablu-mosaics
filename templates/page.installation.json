@@ -17,31 +17,6 @@
     "4ff181e0-4ba1-491c-8145-dff4a3c7fa3d": {
       "type": "slideshow",
       "blocks": {
-        "hero_MGqigU": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/memorial-day-sale",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
-            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
         "template--14555177517128__4ff181e0-4ba1-491c-8145-dff4a3c7fa3d-1681918116bb13bea1-1": {
           "type": "hero",
           "settings": {
@@ -64,11 +39,35 @@
             "overlay_opacity": 14,
             "focal_point": "center center"
           }
+        },
+        "hero_MGqigU": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "<p>Meet the Color-Adaptive Grout Everyone Loves</p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://products/crystal-glass-grout",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/EVO.700_Install.jpg",
+            "image_mobile": "shopify://shop_images/EVO.700_Install.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "hero_MGqigU",
-        "template--14555177517128__4ff181e0-4ba1-491c-8145-dff4a3c7fa3d-1681918116bb13bea1-1"
+        "template--14555177517128__4ff181e0-4ba1-491c-8145-dff4a3c7fa3d-1681918116bb13bea1-1",
+        "hero_MGqigU"
       ],
       "settings": {
         "full_width": true,
