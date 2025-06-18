@@ -605,6 +605,7 @@
     },
     "6f4bc7e7-baec-4c9d-bc77-42e7096034e4": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/litoelasticfeature1.jpg",
         "video_url": "",
@@ -726,9 +727,9 @@
     "d3fe0a0f-013c-4d40-9309-d4baecc864c3",
     "text_and_image_HL6ajD",
     "b338f59c-8aaf-4efe-96ff-a146e639772a",
+    "slideshow_BUKGCd",
     "6d0cea02-9928-4082-a0d8-a074b9bb7017",
     "7d3f06a3-3194-4a21-b385-82777c920c53",
-    "slideshow_BUKGCd",
     "6f4bc7e7-baec-4c9d-bc77-42e7096034e4",
     "faq_UMB44B"
   ]
