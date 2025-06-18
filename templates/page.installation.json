@@ -473,6 +473,61 @@
         "css_class": "reduce-text-padding installation-section-3"
       }
     },
+    "text_columns_custom_dnDC6E": {
+      "type": "text-columns-custom",
+      "blocks": {
+        "text_block_yTcRxY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_GgXXdj": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_YyQyEJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_yTcRxY",
+        "text_block_GgXXdj",
+        "text_block_YyQyEJ"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Text Columns Custom",
+      "settings": {
+        "title": "",
+        "text": "<p>SHOP BY COLLECTION</p>",
+        "column_size": 4,
+        "align_text": "center",
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "divider": false,
+        "color_scheme": "none",
+        "css_class": ""
+      }
+    },
     "faq_UMB44B": {
       "type": "faq",
       "blocks": {
@@ -577,6 +632,7 @@
     "b338f59c-8aaf-4efe-96ff-a146e639772a",
     "7d3f06a3-3194-4a21-b385-82777c920c53",
     "6f4bc7e7-baec-4c9d-bc77-42e7096034e4",
+    "text_columns_custom_dnDC6E",
     "faq_UMB44B"
   ]
 }
