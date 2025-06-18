@@ -157,7 +157,7 @@
         "gutter_size": 33,
         "section_gutter_size": 35,
         "space_above": true,
-        "space_below": false,
+        "space_below": true,
         "two_column_mobile": false,
         "three_column_mobile": true,
         "css_class": "blue-bar-overlay"
@@ -241,7 +241,7 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": false,
-        "divider": true,
+        "divider": false,
         "color_scheme": "2",
         "css_class": ""
       }
