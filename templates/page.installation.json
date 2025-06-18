@@ -505,13 +505,25 @@
             "button_label": "Optional button",
             "button_link": ""
           }
+        },
+        "text_block_EQkiAV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "text_block_yTcRxY",
         "text_block_GgXXdj",
-        "text_block_YyQyEJ"
+        "text_block_YyQyEJ",
+        "text_block_EQkiAV"
       ],
+      "disabled": true,
       "custom_css": [
         "h2 {margin-top: 20px;}"
       ],
