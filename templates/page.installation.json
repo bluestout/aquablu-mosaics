@@ -241,7 +241,7 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": false,
-        "divider": false,
+        "divider": true,
         "color_scheme": "2",
         "css_class": ""
       }
