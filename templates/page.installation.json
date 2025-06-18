@@ -163,26 +163,6 @@
         "css_class": "blue-bar-overlay"
       }
     },
-    "56368651-0c21-4b28-bd1f-b0c00be438b1": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/starlikeevo.jpg",
-        "video_url": "",
-        "image_width": 650,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>STARLIKE EVO EPOXY TILE GROUT BY LITOKOL</h2><p>Starlike EVO is a high-performance tile grout made from epoxy resins and hardeners. More durable and waterproof than traditional grouts - Starlike EVO has an unmatched ability to resist mold in wet areas like bathrooms, pools and spas. Plus, its UV and stain-resistant, offering minimal maintenance. As part of the ZHERORISK program, it's the most eco-friendly option on the market! This means it has ultra-low VOC emissions, no strong odors, it's non-corrosive, non-toxic, and more importantly, non-hazardous for the planet.</p><p><a href=\"https://www.aquablumosaics.com/blogs/news/4-reasons-you-should-choose-epoxy-grout\" title=\"4 reasons you should choose epoxy grout\">LEARN 4 REASONS TO CHOOSE EPOXY GROUT &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "reduce-text-padding installation-section-3"
-      }
-    },
     "text_columns_custom_dnDC6E": {
       "type": "text-columns-custom",
       "blocks": {
@@ -208,6 +188,17 @@
             "button_link": ""
           }
         },
+        "text_block_EQkiAV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/metallic-colors-epoxy-tile-grout.jpg",
+            "image_width": 650,
+            "title": "METALLIC",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
         "text_block_GgXXdj": {
           "type": "text_block",
           "settings": {
@@ -229,27 +220,15 @@
             "button_label": "",
             "button_link": ""
           }
-        },
-        "text_block_EQkiAV": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/metallic-colors-epoxy-tile-grout.jpg",
-            "image_width": 650,
-            "title": "METALLIC",
-            "button_label": "",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
         "text_block_yTcRxY",
         "text_block_KkwXW4",
+        "text_block_EQkiAV",
         "text_block_GgXXdj",
-        "text_block_YyQyEJ",
-        "text_block_EQkiAV"
+        "text_block_YyQyEJ"
       ],
-      "disabled": true,
       "custom_css": [
         "h2 {margin-top: 20px;}"
       ],
@@ -265,6 +244,27 @@
         "divider": false,
         "color_scheme": "2",
         "css_class": ""
+      }
+    },
+    "56368651-0c21-4b28-bd1f-b0c00be438b1": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/starlikeevo.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>STARLIKE EVO EPOXY TILE GROUT BY LITOKOL</h2><p>Starlike EVO is a high-performance tile grout made from epoxy resins and hardeners. More durable and waterproof than traditional grouts - Starlike EVO has an unmatched ability to resist mold in wet areas like bathrooms, pools and spas. Plus, its UV and stain-resistant, offering minimal maintenance. As part of the ZHERORISK program, it's the most eco-friendly option on the market! This means it has ultra-low VOC emissions, no strong odors, it's non-corrosive, non-toxic, and more importantly, non-hazardous for the planet.</p><p><a href=\"https://www.aquablumosaics.com/blogs/news/4-reasons-you-should-choose-epoxy-grout\" title=\"4 reasons you should choose epoxy grout\">LEARN 4 REASONS TO CHOOSE EPOXY GROUT &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding installation-section-3"
       }
     },
     "264fc5f0-3022-4d72-b899-fdc874180e4a": {
@@ -393,6 +393,7 @@
         "2e2f2cd6-93ec-46eb-95b6-320eefc73b93",
         "ff5ff200-578e-4040-ae2d-e92d1fcf7ec7"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "LITOKOL EPOXY TILE GROUT COLLECTIONS",
@@ -519,42 +520,9 @@
     "b338f59c-8aaf-4efe-96ff-a146e639772a": {
       "type": "featured-collection-carousel",
       "settings": {
-        "title": "EPOXY GROUT GLAMOUR COLORS",
-        "tab_collection_1": "starlike-glamour-grout",
+        "title": "GLOW IN THE DARK GROUT",
+        "tab_collection_1": "glow-in-the-dark-grouts",
         "css_class": "feat-collection-carousel set-carousel-height"
-      }
-    },
-    "6d0cea02-9928-4082-a0d8-a074b9bb7017": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/basecretefeature.jpg",
-        "video_url": "",
-        "image_width": 650,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>BASECRETE: THE UNRIVALED WATERPROOFING SYSTEM</h2><p>Waterproofing defends against efflorescence, an unsightly white mineral buildup. It safeguards your tile investment by forming a protective barrier. For this crucial pool element, trust Basecrete.</p><p>Basecrete products offer 100% waterproofing for all concrete surfaces, paired with simple application methods. This waterproofing system is not only suitable for initial protection, but can be used for repairs as well! Better yet, it doesn't require priming or a bondcoat!</p><p><a href=\"/collections/basecrete\" title=\"Basecrete\">SHOP BASECRETE</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "reduce-text-padding installation-section-3"
-      }
-    },
-    "7d3f06a3-3194-4a21-b385-82777c920c53": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "SHOP ALL WATERPROOFING",
-        "home_featured_products": "basecrete",
-        "count": 4,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false,
-        "css_class": ""
       }
     },
     "slideshow_BUKGCd": {
@@ -600,6 +568,39 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "6d0cea02-9928-4082-a0d8-a074b9bb7017": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/basecretefeature.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>BASECRETE: THE UNRIVALED WATERPROOFING SYSTEM</h2><p>Waterproofing defends against efflorescence, an unsightly white mineral buildup. It safeguards your tile investment by forming a protective barrier. For this crucial pool element, trust Basecrete.</p><p>Basecrete products offer 100% waterproofing for all concrete surfaces, paired with simple application methods. This waterproofing system is not only suitable for initial protection, but can be used for repairs as well! Better yet, it doesn't require priming or a bondcoat!</p><p><a href=\"/collections/basecrete\" title=\"Basecrete\">SHOP BASECRETE</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding installation-section-3"
+      }
+    },
+    "7d3f06a3-3194-4a21-b385-82777c920c53": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "SHOP ALL WATERPROOFING",
+        "home_featured_products": "basecrete",
+        "count": 4,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false,
         "css_class": ""
       }
     },
@@ -720,8 +721,8 @@
     "main",
     "4ff181e0-4ba1-491c-8145-dff4a3c7fa3d",
     "e867cf6b-359c-4cb8-849a-adfd3525e57b",
-    "56368651-0c21-4b28-bd1f-b0c00be438b1",
     "text_columns_custom_dnDC6E",
+    "56368651-0c21-4b28-bd1f-b0c00be438b1",
     "264fc5f0-3022-4d72-b899-fdc874180e4a",
     "7489cb07-5b08-4fb1-bdaa-a6dc2096ee68",
     "d3fe0a0f-013c-4d40-9309-d4baecc864c3",
