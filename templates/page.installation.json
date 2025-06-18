@@ -496,18 +496,18 @@
         "css_class": ""
       }
     },
-    "6d0cea02-9928-4082-a0d8-a074b9bb7017": {
+    "text_and_image_HL6ajD": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/basecretefeature.jpg",
+        "image": "shopify://shop_images/EV0.700_translucent_grout_installation.jpg",
         "video_url": "",
         "image_width": 650,
         "subtitle": "",
         "title": "",
-        "text": "<h2>BASECRETE: THE UNRIVALED WATERPROOFING SYSTEM</h2><p>Waterproofing defends against efflorescence, an unsightly white mineral buildup. It safeguards your tile investment by forming a protective barrier. For this crucial pool element, trust Basecrete.</p><p>Basecrete products offer 100% waterproofing for all concrete surfaces, paired with simple application methods. This waterproofing system is not only suitable for initial protection, but can be used for repairs as well! Better yet, it doesn't require priming or a bondcoat!</p><p><a href=\"/collections/basecrete\" title=\"Basecrete\">SHOP BASECRETE</a></p>",
+        "text": "<h2><strong>LITOELASTIC EVO:</strong> <strong>THE BEST IN TILE ADHESIVES</strong></h2><p>Litoelastic EVO stands out as the ultimate tile adhesive for high-stress applications like swimming pools, spas, and heavy traffic areas, thanks to its unique epoxy-poly blend. Its pure white color makes it ideal for translucent and semi-translucent glass tiles. Renowned for extreme elasticity, bond strength, and water resistance, it effectively bonds various materials such as glass, porcelain, metal, and PVC, and more. Additionally, it's part of the ZHERORISK program, ensuring safety for both users and the environment!</p><p><a href=\"/products/litoelastic-11lb-pail-epoxy-poly-tile-adhesive\" title=\"Litoelastic EVO - Tile Adhesive\">SHOP NOW</a></p>",
         "button_label": "",
         "button_link": "",
-        "button_style": "primary",
+        "button_style": "secondary",
         "align_text": "left",
         "layout": "right",
         "color_scheme": "2",
@@ -524,6 +524,26 @@
         "css_class": "feat-collection-carousel set-carousel-height"
       }
     },
+    "6d0cea02-9928-4082-a0d8-a074b9bb7017": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/basecretefeature.jpg",
+        "video_url": "",
+        "image_width": 650,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>BASECRETE: THE UNRIVALED WATERPROOFING SYSTEM</h2><p>Waterproofing defends against efflorescence, an unsightly white mineral buildup. It safeguards your tile investment by forming a protective barrier. For this crucial pool element, trust Basecrete.</p><p>Basecrete products offer 100% waterproofing for all concrete surfaces, paired with simple application methods. This waterproofing system is not only suitable for initial protection, but can be used for repairs as well! Better yet, it doesn't require priming or a bondcoat!</p><p><a href=\"/collections/basecrete\" title=\"Basecrete\">SHOP BASECRETE</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "reduce-text-padding installation-section-3"
+      }
+    },
     "7d3f06a3-3194-4a21-b385-82777c920c53": {
       "type": "featured-collection",
       "disabled": true,
@@ -537,6 +557,52 @@
         "css_class": ""
       }
     },
+    "slideshow_BUKGCd": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_jcKYKC": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/wholesale",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_jcKYKC"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "6f4bc7e7-baec-4c9d-bc77-42e7096034e4": {
       "type": "text-and-image",
       "settings": {
@@ -545,12 +611,12 @@
         "image_width": 650,
         "subtitle": "",
         "title": "",
-        "text": "<h2><strong>LITOELASTIC EVO:</strong> <strong>THE BEST IN TILE ADHESIVES</strong></h2><p>Litoelastic EVO stands out as the ultimate tile adhesive for high-stress applications like swimming pools, spas, and heavy traffic areas, thanks to its unique epoxy-poly blend. Its pure white color makes it ideal for translucent and semi-translucent glass tiles. Renowned for extreme elasticity, bond strength, and water resistance, it effectively bonds various materials such as glass, porcelain, metal, and PVC, and more. Additionally, it's part of the ZHERORISK program, ensuring safety for both users and the environment!</p><p><a href=\"/products/litoelastic-11lb-pail-epoxy-poly-tile-adhesive\" title=\"Litoelastic EVO - Tile Adhesive\">SHOP NOW</a></p>",
+        "text": "<h2><strong>LITOELASTIC EVO:</strong> <strong>THE BEST IN TILE ADHESIVES</strong></h2><p>Meet the Crystal EVO.700<em> - </em>the ultimate sidekick for your glass tile and mosaic masterpieces! This premium two-part translucent epoxy grout doesn’t just fill the gaps - it transforms them. Nicknamed “The Chameleon Grout” for a reason, it subtly adapts to the colors around it, making your tile shine without stealing the spotlight. Perfect for pools, spas, showers, and backsplashes, this high-performance grout is stain-resistant, non-shrinking, and tough enough to handle wet environments with ease. Plus, it’s easy to clean, low in toxicity, and trusted by tile pros around the globe. Want your tile to look flawless and stay that way? You just found your match.</p><p><a href=\"/products/litoelastic-11lb-pail-epoxy-poly-tile-adhesive\" title=\"Litoelastic EVO - Tile Adhesive\">SHOP NOW</a></p>",
         "button_label": "",
         "button_link": "",
         "button_style": "secondary",
         "align_text": "left",
-        "layout": "left",
+        "layout": "right",
         "color_scheme": "2",
         "divider": false,
         "new_layout": true,
@@ -658,9 +724,11 @@
     "264fc5f0-3022-4d72-b899-fdc874180e4a",
     "7489cb07-5b08-4fb1-bdaa-a6dc2096ee68",
     "d3fe0a0f-013c-4d40-9309-d4baecc864c3",
-    "6d0cea02-9928-4082-a0d8-a074b9bb7017",
+    "text_and_image_HL6ajD",
     "b338f59c-8aaf-4efe-96ff-a146e639772a",
+    "6d0cea02-9928-4082-a0d8-a074b9bb7017",
     "7d3f06a3-3194-4a21-b385-82777c920c53",
+    "slideshow_BUKGCd",
     "6f4bc7e7-baec-4c9d-bc77-42e7096034e4",
     "faq_UMB44B"
   ]
