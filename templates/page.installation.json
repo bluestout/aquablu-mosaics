@@ -512,12 +512,13 @@
         "text_block_GgXXdj",
         "text_block_YyQyEJ"
       ],
-      "disabled": true,
-      "custom_css": [],
+      "custom_css": [
+        "h2 {margin-top: 20px;}"
+      ],
       "name": "Text Columns Custom",
       "settings": {
         "title": "",
-        "text": "<p>SHOP BY COLLECTION</p>",
+        "text": "<h2>LITOKOL EPOXY TILE GROUT COLLECTIONS</h2>",
         "column_size": 4,
         "align_text": "center",
         "gutter_size": 20,
