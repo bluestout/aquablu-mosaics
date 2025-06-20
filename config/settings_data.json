@@ -383,7 +383,7 @@
           "0b066516-effd-470b-ba3b-fc9f69d6c6ae": {
             "type": "announcement",
             "settings": {
-              "richtext": "<p>Welcome to AquaBlu!  <a href=\"/pages/shipping-returns\" title=\"Shipping & Returns\">Enjoy FREE or Flat Rate Shipping*</a></p><p>Need help? |<a href=\"tel:800) 971-1442\" title=\"tel:800) 971-1442\"> (800) 971-1442</a></p>",
+              "richtext": "<p>Welcome to AquaBlu!  <a href=\"/pages/shipping-returns\" title=\"Shipping & Returns\">Enjoy FREE or Flat Rate Shipping*</a></p><p>Live, US-Based Support |<a href=\"tel:800) 971-1442\" title=\"tel:800) 971-1442\"> (800) 971-1442</a></p>",
               "richtext_mobile": ""
             }
           },
