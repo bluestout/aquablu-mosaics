@@ -86,12 +86,37 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_qF79RD": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_6.jpg",
+            "image_mobile": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_6.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
         "template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1",
         "hero_jA66ak",
-        "hero_QFURRq"
+        "hero_QFURRq",
+        "hero_qF79RD"
       ],
       "settings": {
         "full_width": true,
