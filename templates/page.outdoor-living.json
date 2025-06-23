@@ -386,14 +386,6 @@
         "css_class": "outdoor-section-3 reduce-text-padding"
       }
     },
-    "661f9c76-2a77-4cee-956f-e1e4ad6f1514": {
-      "type": "featured-collection-carousel",
-      "settings": {
-        "title": "BEST SELLING LOUNGERS",
-        "tab_collection_1": "best-selling-loungers",
-        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4"
-      }
-    },
     "f6555d85-5c5a-489a-a525-e6f076bcdff8": {
       "type": "slideshow",
       "blocks": {
@@ -409,14 +401,14 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/conservation",
-            "link_text": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/CONSERVATION-BANNER-2023_f53427f8-2ee0-43b0-a373-6cd6f02f6cef.jpg",
-            "image_mobile": "shopify://shop_images/b2c-conservation_daab2486-36c7-42c3-a4df-447a5df3beee.jpg",
+            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
+            "image_mobile": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -425,7 +417,6 @@
       "block_order": [
         "template--14459271512136__f6555d85-5c5a-489a-a525-e6f076bcdff8-hero-1"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
@@ -439,6 +430,14 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
+      }
+    },
+    "661f9c76-2a77-4cee-956f-e1e4ad6f1514": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "BEST SELLING LOUNGERS",
+        "tab_collection_1": "best-selling-loungers",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4"
       }
     },
     "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162": {
@@ -701,8 +700,8 @@
     "f7b49f3d-1c37-448e-888b-b38a40ba8033",
     "c4b52c04-7da6-471a-a2ab-d6fc4ec66c84",
     "3f71f403-ed57-4fab-8942-662f92e1e6d8",
-    "661f9c76-2a77-4cee-956f-e1e4ad6f1514",
     "f6555d85-5c5a-489a-a525-e6f076bcdff8",
+    "661f9c76-2a77-4cee-956f-e1e4ad6f1514",
     "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162",
     "89a27308-d751-41d5-aa05-b0d2fadff296",
     "advanced_content_GtJJEC",
