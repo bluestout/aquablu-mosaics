@@ -42,7 +42,6 @@
         },
         "hero_hy9FFd": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
