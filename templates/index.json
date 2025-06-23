@@ -25,7 +25,7 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_3.jpg",
+            "image": "shopify://shop_images/Flash_Sale_Homepage_Hero_5.jpg",
             "heading": "LEDGE LOUNGER",
             "heading_size": "h1",
             "subheading": "4TH OF JULY SALE",
@@ -217,6 +217,53 @@
         "space_above": true,
         "space_below": false,
         "css_class": "home-section-2 logo-list-set-height border-radius-active"
+      }
+    },
+    "slideshow_MmYkKH": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_yYfEFT": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_yYfEFT"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
       }
     },
     "slideshow_rnXYgH": {
@@ -1154,6 +1201,7 @@
     "173162359649190d6e",
     "slideshow_new_8zzw4R",
     "b6b5c71b-04a8-489b-8d39-9e5526b43a75",
+    "slideshow_MmYkKH",
     "slideshow_rnXYgH",
     "30705e54-079f-4d8f-a90c-029ef8734e73",
     "slideshow_bdAywG",
