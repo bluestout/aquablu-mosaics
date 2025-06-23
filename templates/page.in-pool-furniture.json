@@ -419,6 +419,30 @@
     "slideshow_4L9jrJ": {
       "type": "slideshow",
       "blocks": {
+        "hero_rL9zh3": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://products/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
+            "image_mobile": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
         "hero_tQBpWw": {
           "type": "hero",
           "settings": {
@@ -445,6 +469,7 @@
         }
       },
       "block_order": [
+        "hero_rL9zh3",
         "hero_tQBpWw"
       ],
       "settings": {
@@ -456,7 +481,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "arrows",
+        "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
