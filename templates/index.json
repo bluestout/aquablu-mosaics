@@ -219,53 +219,6 @@
         "css_class": "home-section-2 logo-list-set-height border-radius-active"
       }
     },
-    "slideshow_MmYkKH": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_yYfEFT": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#fff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_yYfEFT"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
-      "settings": {
-        "full_width": true,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "slideshow_rnXYgH": {
       "type": "slideshow",
       "blocks": {
@@ -426,6 +379,52 @@
         "space_above": true,
         "space_below": true,
         "css_class": "home-section-3 blue-bar-overlay grid-column-stack"
+      }
+    },
+    "slideshow_MmYkKH": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_yYfEFT": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#f5f5f5",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_yYfEFT"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 18,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7,
+        "css_class": ""
       }
     },
     "slideshow_bdAywG": {
@@ -1201,9 +1200,9 @@
     "173162359649190d6e",
     "slideshow_new_8zzw4R",
     "b6b5c71b-04a8-489b-8d39-9e5526b43a75",
-    "slideshow_MmYkKH",
     "slideshow_rnXYgH",
     "30705e54-079f-4d8f-a90c-029ef8734e73",
+    "slideshow_MmYkKH",
     "slideshow_bdAywG",
     "4d538ad8-5011-45d2-a63f-4de0e4c7de20",
     "2102c679-dbc1-401c-b7cc-7075043ab164",
