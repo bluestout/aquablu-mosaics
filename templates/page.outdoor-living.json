@@ -366,26 +366,6 @@
         "css_class": ""
       }
     },
-    "3f71f403-ed57-4fab-8942-662f92e1e6d8": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/Outdoor_Porcelain_Pavers.jpg",
-        "video_url": "",
-        "image_width": 690,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2><strong>TRANSFORM YOUR PATIO WITH PORCELAIN PAVERS</strong></h2><p>Stylish patio pavers are the ultimate enhancement for your outdoor living space. Our curated collection of pavers offer durability and functionality while also adding an element of style to your patio. The diverse range of colors, shapes, and patterns allows you to create a personalized outdoor oasis. </p><p>Whether you're looking to create a welcoming space for entertaining, a serene retreat for relaxation, or an extension of your indoor living area, stylish patio pavers transform your backyard into a haven of beauty and functionality. Don't miss the opportunity to elevate your outdoor experience and increase the value of your home with these versatile, stylish pavers.</p><p><a href=\"https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes\" title=\"https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes\">SHOP NOW &gt;&gt;</a></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "outdoor-section-3 reduce-text-padding"
-      }
-    },
     "f6555d85-5c5a-489a-a525-e6f076bcdff8": {
       "type": "slideshow",
       "blocks": {
@@ -430,6 +410,26 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
+      }
+    },
+    "3f71f403-ed57-4fab-8942-662f92e1e6d8": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Outdoor_Porcelain_Pavers.jpg",
+        "video_url": "",
+        "image_width": 690,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>TRANSFORM YOUR PATIO WITH PORCELAIN PAVERS</strong></h2><p>Stylish patio pavers are the ultimate enhancement for your outdoor living space. Our curated collection of pavers offer durability and functionality while also adding an element of style to your patio. The diverse range of colors, shapes, and patterns allows you to create a personalized outdoor oasis. </p><p>Whether you're looking to create a welcoming space for entertaining, a serene retreat for relaxation, or an extension of your indoor living area, stylish patio pavers transform your backyard into a haven of beauty and functionality. Don't miss the opportunity to elevate your outdoor experience and increase the value of your home with these versatile, stylish pavers.</p><p><a href=\"https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes\" title=\"https://www.aquablumosaics.com/pages/outdoor-patio-pavers-and-hardscapes\">SHOP NOW &gt;&gt;</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "outdoor-section-3 reduce-text-padding"
       }
     },
     "661f9c76-2a77-4cee-956f-e1e4ad6f1514": {
@@ -699,8 +699,8 @@
     "c9537080-8b7e-4d11-abed-ffdf006443e9",
     "f7b49f3d-1c37-448e-888b-b38a40ba8033",
     "c4b52c04-7da6-471a-a2ab-d6fc4ec66c84",
-    "3f71f403-ed57-4fab-8942-662f92e1e6d8",
     "f6555d85-5c5a-489a-a525-e6f076bcdff8",
+    "3f71f403-ed57-4fab-8942-662f92e1e6d8",
     "661f9c76-2a77-4cee-956f-e1e4ad6f1514",
     "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162",
     "89a27308-d751-41d5-aa05-b0d2fadff296",
