@@ -401,9 +401,9 @@
             "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#f5f5f5",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_5.jpg",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/4th_of_July.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
