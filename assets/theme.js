@@ -7231,21 +7231,68 @@ if (theme.config.isTouch) {
             // cartBtn.innerHTML = defaultText + " • " + theme.Currency.formatMoney(variant.price, theme.settings.moneyFormat);
             var variant_price = variant.price;
             var customer_type = localStorage.getItem("customer_type");
+            var customer_tags = localStorage.getItem("customer_tags");
+            var product_tags = this.container.getAttribute('data-product-tags');
             var b2b_price = variant.price;
             var is_B2B_customer = false;
-            if( customer_type ) {
-              if (  customer_type.includes("wholesale") || customer_type.includes("Wholesale") ){
-                is_B2B_customer = true;
-                b2b_price *= 0.75;
+            var discountTotal = 0;
+            var productSpecificDiscount = false;
+            var hideComparePrice = false;
+
+            // Check for product-specific discount tags first
+            if (product_tags && customer_tags) {
+              var productTagsArray = product_tags.split(',');
+              var customerTagsArray = customer_tags.split(',');
+              
+              for (var i = 0; i < productTagsArray.length; i++) {
+                var productTag = productTagsArray[i].trim();
+                if (productTag.indexOf('aqua_') === 0) {
+                  var tagParts = productTag.split('_');
+                  if (tagParts.length === 3) {
+                    var customerTagToMatch = tagParts[1].toLowerCase();
+                    var discountPercentage = parseInt(tagParts[2]);
+                    
+                    // Check if customer has matching tag
+                    for (var j = 0; j < customerTagsArray.length; j++) {
+                      var customerTagLower = customerTagsArray[j].toLowerCase().trim();
+                      if (customerTagLower === customerTagToMatch) {
+                        is_B2B_customer = true;
+                        productSpecificDiscount = true;
+                        discountTotal = discountPercentage / 100.0;
+                        
+                        // Hide compare price if discount is 0
+                        if (discountPercentage === 0) {
+                          hideComparePrice = true;
+                        }
+                        break;
+                      }
+                    }
+                    
+                    if (productSpecificDiscount) {
+                      break;
+                    }
+                  }
+                }
               }
-              if (  customer_type.includes("vip") || customer_type.includes("VIP") ){
+            }
+
+            // If no product-specific discount found, use default customer tag discounts
+            if (!productSpecificDiscount && customer_type) {
+              if (customer_type.includes("wholesale") || customer_type.includes("Wholesale")) {
                 is_B2B_customer = true;
-                b2b_price *= 0.80;
-              }
-              if (  customer_type.includes("trade") || customer_type.includes("Trade") ){
+                discountTotal = 0.25;
+              } else if (customer_type.includes("vip") || customer_type.includes("VIP")) {
                 is_B2B_customer = true;
-                b2b_price *= 0.85;
+                discountTotal = 0.20;
+              } else if (customer_type.includes("trade") || customer_type.includes("Trade")) {
+                is_B2B_customer = true;
+                discountTotal = 0.15;
               }
+            }
+
+            if (is_B2B_customer) {
+              var wholesalePriceAmount = variant.price * discountTotal;
+              b2b_price = variant.price - wholesalePriceAmount;
             }
             if ( is_B2B_customer ){
               variant_price = b2b_price;
@@ -7326,24 +7373,71 @@ if (theme.config.isTouch) {
           }
 
           // Fix To Test: Price on ATC
-          // --> Apply B2B customer's price  "wholesale", "Wholesale": 0.25, "vip", "VIP": 0.20, "trade", "Trade": 0.15 {% endcomment %}
+          // --> Apply B2B customer's price with product-specific and default discounts
           var customer_type = localStorage.getItem("customer_type");
+          var customer_tags = localStorage.getItem("customer_tags");
+          var product_tags = this.container.getAttribute('data-product-tags');
           var b2b_price = variant.price;
           var compare_price = variant.price;
           var is_B2B_customer = false;
-          if ( customer_type ) {
-            if (  customer_type.includes("wholesale") || customer_type.includes("Wholesale") ){
-              is_B2B_customer = true;
-              b2b_price *= 0.75;
+          var discountTotal = 0;
+          var productSpecificDiscount = false;
+          var hideComparePrice = false;
+
+          // Check for product-specific discount tags first
+          if (product_tags && customer_tags) {
+            var productTagsArray = product_tags.split(',');
+            var customerTagsArray = customer_tags.split(',');
+            
+            for (var i = 0; i < productTagsArray.length; i++) {
+              var productTag = productTagsArray[i].trim();
+              if (productTag.indexOf('aqua_') === 0) {
+                var tagParts = productTag.split('_');
+                if (tagParts.length === 3) {
+                  var customerTagToMatch = tagParts[1].toLowerCase();
+                  var discountPercentage = parseInt(tagParts[2]);
+                  
+                  // Check if customer has matching tag
+                  for (var j = 0; j < customerTagsArray.length; j++) {
+                    var customerTagLower = customerTagsArray[j].toLowerCase().trim();
+                    if (customerTagLower === customerTagToMatch) {
+                      is_B2B_customer = true;
+                      productSpecificDiscount = true;
+                      discountTotal = discountPercentage / 100.0;
+                      
+                      // Hide compare price if discount is 0
+                      if (discountPercentage === 0) {
+                        hideComparePrice = true;
+                      }
+                      break;
+                    }
+                  }
+                  
+                  if (productSpecificDiscount) {
+                    break;
+                  }
+                }
+              }
             }
-            if (  customer_type.includes("vip") || customer_type.includes("VIP") ){
+          }
+
+          // If no product-specific discount found, use default customer tag discounts
+          if (!productSpecificDiscount && customer_type) {
+            if (customer_type.includes("wholesale") || customer_type.includes("Wholesale")) {
               is_B2B_customer = true;
-              b2b_price *= 0.80;
-            }
-            if (  customer_type.includes("trade") || customer_type.includes("Trade") ){
+              discountTotal = 0.25;
+            } else if (customer_type.includes("vip") || customer_type.includes("VIP")) {
               is_B2B_customer = true;
-              b2b_price *= 0.85;
+              discountTotal = 0.20;
+            } else if (customer_type.includes("trade") || customer_type.includes("Trade")) {
+              is_B2B_customer = true;
+              discountTotal = 0.15;
             }
+          }
+
+          if (is_B2B_customer) {
+            var wholesalePriceAmount = variant.price * discountTotal;
+            b2b_price = variant.price - wholesalePriceAmount;
           }
           
           if ( is_B2B_customer ){
