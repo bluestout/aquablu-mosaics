@@ -34,34 +34,71 @@
       endunless
     -%}
 
-    {% comment %} --> To Test: Price on ATC {% endcomment %}
+    {% comment %} --> Price on ATC: Product-specific and default discount logic {% endcomment %}
     {% assign customerDiscount = false %}
     {% assign discountTotal = 0 %}
+    {% assign productSpecificDiscount = false %}
+    {% assign hideComparePrice = false %}
 
-    {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
-        {% assign customerDiscount = true %}
-        
-        {% assign discountTotal = 0.25 %}
-        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-    {% endif %}
+    {% comment %} Check for product-specific discount tags first {% endcomment %}
+    {% for product_tag in product.tags %}
+      {% if product_tag contains 'aqua_' %}
+        {% assign tag_parts = product_tag | split: '_' %}
+        {% if tag_parts.size == 3 %}
+          {% assign customer_tag_to_match = tag_parts[1] | downcase %}
+          {% assign discount_percentage = tag_parts[2] | times: 1 %}
+          
+          {% comment %} Check if customer has matching tag {% endcomment %}
+          {% for customer_tag in customer.tags %}
+            {% assign customer_tag_lower = customer_tag | downcase %}
+            {% if customer_tag_lower == customer_tag_to_match %}
+              {% assign customerDiscount = true %}
+              {% assign productSpecificDiscount = true %}
+              {% assign discountTotal = discount_percentage | divided_by: 100.0 %}
+              {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+              {% assign wholesalePriceTotal = current_variant.price | minus: wholesalePriceAmount | split: '.' %}
+              {% comment %} Hide compare price if discount is 0 {% endcomment %}
+              {% if discount_percentage == 0 %}
+                {% assign hideComparePrice = true %}
+              {% endif %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          
+          {% if productSpecificDiscount %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
 
-    {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
-        {% assign customerDiscount = true %}
-        
-        {% assign discountTotal = 0.20 %}
-        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-    {% endif %}
+    {% comment %} If no product-specific discount found, use default customer tag discounts {% endcomment %}
+    {% unless productSpecificDiscount %}
+      {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
+          {% assign customerDiscount = true %}
+          
+          {% assign discountTotal = 0.25 %}
+          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+      {% endif %}
 
-    {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
-        {% assign customerDiscount = true %}
-        
-        {% assign discountTotal = 0.15 %}
-        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-    {% endif %}
-    {% comment %} <-- To Test: Price on ATC {% endcomment %}
+      {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
+          {% assign customerDiscount = true %}
+          
+          {% assign discountTotal = 0.20 %}
+          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+      {% endif %}
+
+      {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
+          {% assign customerDiscount = true %}
+          
+          {% assign discountTotal = 0.15 %}
+          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+      {% endif %}
+    {% endunless %}
+    {% comment %} <-- Price on ATC: Product-specific and default discount logic {% endcomment %}
 
     <button
       {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}

@@ -310,6 +310,7 @@
     {% comment %} {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" or customer.tags contains "vip" or customer.tags contains "VIP" or customer.tags contains "trade" or customer.tags contains "Trade" %} {% endcomment %}
       <script> 
         localStorage.setItem("customer_type", "{{ customer.tags }}");
+        localStorage.setItem("customer_tags", "{{ customer.tags | join: ',' }}");
       </script>
     {% comment %} {% endif %} {% endcomment %}
   {% endif %}
