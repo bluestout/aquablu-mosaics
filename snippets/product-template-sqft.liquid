@@ -79,6 +79,7 @@
   data-product-id="{{ product.id }}"
   data-product-handle="{{ product.handle }}"
   data-product-title="{{ product.title | escape }}"
+  data-product-tags="{{ product.tags | join: ',' }}"
   data-history="{{ enableHistory }}"
   data-modal="{{ isModal }}">
 
@@ -280,30 +281,67 @@
 
                     {% assign customerDiscount = false %}
                     {% assign discountTotal = 0 %}
+                    {% assign productSpecificDiscount = false %}
+                    {% assign hideComparePrice = false %}
 
-                    {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
-                        {% assign customerDiscount = true %}
-                        
-                        {% assign discountTotal = 0.25 %}
-                        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-                        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-                    {% endif %}
+                    {% comment %} Check for product-specific discount tags first {% endcomment %}
+                    {% for product_tag in product.tags %}
+                      {% if product_tag contains 'aqua_' %}
+                        {% assign tag_parts = product_tag | split: '_' %}
+                        {% if tag_parts.size == 3 %}
+                          {% assign customer_tag_to_match = tag_parts[1] | downcase %}
+                          {% assign discount_percentage = tag_parts[2] | times: 1 %}
+                          
+                          {% comment %} Check if customer has matching tag {% endcomment %}
+                          {% for customer_tag in customer.tags %}
+                            {% assign customer_tag_lower = customer_tag | downcase %}
+                            {% if customer_tag_lower == customer_tag_to_match %}
+                              {% assign customerDiscount = true %}
+                              {% assign productSpecificDiscount = true %}
+                              {% assign discountTotal = discount_percentage | divided_by: 100.0 %}
+                              {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                              {% assign wholesalePriceTotal = current_variant.price | minus: wholesalePriceAmount | split: '.' %}
+                              {% comment %} Hide compare price if discount is 0 {% endcomment %}
+                              {% if discount_percentage == 0 %}
+                                {% assign hideComparePrice = true %}
+                              {% endif %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                          
+                          {% if productSpecificDiscount %}
+                            {% break %}
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
 
-                    {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
-                        {% assign customerDiscount = true %}
-                        
-                        {% assign discountTotal = 0.20 %}
-                        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-                        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-                    {% endif %}
+                    {% comment %} If no product-specific discount found, use default customer tag discounts {% endcomment %}
+                    {% unless productSpecificDiscount %}
+                      {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
+                          {% assign customerDiscount = true %}
+                          
+                          {% assign discountTotal = 0.25 %}
+                          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+                      {% endif %}
 
-                    {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
-                        {% assign customerDiscount = true %}
-                        
-                        {% assign discountTotal = 0.15 %}
-                        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-                        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-                    {% endif %}
+                      {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
+                          {% assign customerDiscount = true %}
+                          
+                          {% assign discountTotal = 0.20 %}
+                          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+                      {% endif %}
+
+                      {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
+                          {% assign customerDiscount = true %}
+                          
+                          {% assign discountTotal = 0.15 %}
+                          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+                      {% endif %}
+                    {% endunless %}
                  
 
 
@@ -424,9 +462,7 @@
                                   <span class="discounted-orginal-sheet-price">
                                       <span class="cross-through"> {%- render 'price' with current_variant.price -%} </span>
                                       (was {% render 'price' with current_variant.compare_at_price %})
-
-
-                                  </div>
+                                  </span>
                                  {% else %}
                                  
                                   {% assign per_sq_ft = current_variant.compare_at_price | divided_by: sq_ft %}
@@ -558,8 +594,8 @@
                           {% if customerDiscount %}
                             {% assign per_sq_ft = wholesalePriceTotal[0] | divided_by: sq_ft %}
                                               
-                            <span class="grid-product__price--savings" {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
-                              <span data-sq-ft-price="{{per_sq_ft | round}}" class="product__price wholesale-sqft-one grid-product__price--savings">
+                            <span class="{% if hideComparePrice == false %}grid-product__price--savings{% endif %}" {% if current_variant.title contains 'Sample' %}style="display:none;"{% endif %}>
+                              <span data-sq-ft-price="{{per_sq_ft | round}}" class="product__price wholesale-sqft-one {% if hideComparePrice == false %}grid-product__price--savings{% endif %}">
                               {%- render 'price' with per_sq_ft -%}
                               </span> 
                               per {{sq_ft_type | downcase}} | 
@@ -582,7 +618,7 @@
                         {% endif %}
 
                         <span data-product-price
-                          class="product__price here-wholesale {% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %} {% if customerDiscount %} grid-product__price--savings {% endif %}">
+                          class="product__price here-wholesale {% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %} {% if customerDiscount and hideComparePrice == false %} grid-product__price--savings {% endif %}">
                           {%- unless product.empty? -%}
                             {% comment %} Customer discounted price {% endcomment %}
                             {% if customerDiscount %}
@@ -602,7 +638,7 @@
                         </span>
 
                         {% if sq_ft %}
-                          <span class=" {% if customerDiscount %} grid-product__price--savings {% endif %}"> {{per | downcase}} </span>
+                          <span class=" {% if customerDiscount and hideComparePrice == false %} grid-product__price--savings {% endif %}"> {{per | downcase}} </span>
                         {% endif %}
                         {%- if settings.product_save_amount -%}
                           {%- if settings.product_save_type == 'dollar' -%}
@@ -641,7 +677,7 @@
                         {%- endif -%}
 
                         {% comment %} B2BCustomer Discount original product price {% endcomment %}
-                        {% if customerDiscount %}
+                        {% if customerDiscount and hideComparePrice == false %}
                           {% if sq_ft %}
                             <div>
                               {% assign per_sq_ft = current_variant.price | divided_by: sq_ft %}

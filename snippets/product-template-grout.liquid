@@ -55,6 +55,7 @@
   data-product-id="{{ product.id }}"
   data-product-handle="{{ product.handle }}"
   data-product-title="{{ product.title | escape }}"
+  data-product-tags="{{ product.tags | join: ',' }}"
   data-history="{{ enableHistory }}"
   data-modal="{{ isModal }}">
 

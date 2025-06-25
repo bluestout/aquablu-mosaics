@@ -58,6 +58,7 @@
   data-product-id="{{ product.id }}"
   data-product-handle="{{ product.handle }}"
   data-product-title="{{ product.title | escape }}"
+  data-product-tags="{{ product.tags | join: ',' }}"
   data-history="{{ enableHistory }}"
   data-modal="{{ isModal }}">
 
@@ -331,30 +332,67 @@
                   {%- when 'price' -%}
                     {% assign customerDiscount = false %}
                     {% assign discountTotal = 0 %}
+                    {% assign productSpecificDiscount = false %}
+                    {% assign hideComparePrice = false %}
 
-                    {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
-                        {% assign customerDiscount = true %}
-                        
-                        {% assign discountTotal = 0.25 %}
-                        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-                        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-                    {% endif %}
+                    {% comment %} Check for product-specific discount tags first {% endcomment %}
+                    {% for product_tag in product.tags %}
+                      {% if product_tag contains 'aqua_' %}
+                        {% assign tag_parts = product_tag | split: '_' %}
+                        {% if tag_parts.size == 3 %}
+                          {% assign customer_tag_to_match = tag_parts[1] | downcase %}
+                          {% assign discount_percentage = tag_parts[2] | times: 1 %}
+                          
+                          {% comment %} Check if customer has matching tag {% endcomment %}
+                          {% for customer_tag in customer.tags %}
+                            {% assign customer_tag_lower = customer_tag | downcase %}
+                            {% if customer_tag_lower == customer_tag_to_match %}
+                              {% assign customerDiscount = true %}
+                              {% assign productSpecificDiscount = true %}
+                              {% assign discountTotal = discount_percentage | divided_by: 100.0 %}
+                              {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                              {% assign wholesalePriceTotal = current_variant.price | minus: wholesalePriceAmount | split: '.' %}
+                              {% comment %} Hide compare price if discount is 0 {% endcomment %}
+                              {% if discount_percentage == 0 %}
+                                {% assign hideComparePrice = true %}
+                              {% endif %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                          
+                          {% if productSpecificDiscount %}
+                            {% break %}
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
 
-                    {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
-                        {% assign customerDiscount = true %}
-                        
-                        {% assign discountTotal = 0.20 %}
-                        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-                        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-                    {% endif %}
+                    {% comment %} If no product-specific discount found, use default customer tag discounts {% endcomment %}
+                    {% unless productSpecificDiscount %}
+                      {% if customer.tags contains "wholesale" or customer.tags contains "Wholesale" %}
+                          {% assign customerDiscount = true %}
+                          
+                          {% assign discountTotal = 0.25 %}
+                          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+                      {% endif %}
 
-                    {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
-                        {% assign customerDiscount = true %}
-                        
-                        {% assign discountTotal = 0.15 %}
-                        {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
-                        {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
-                    {% endif %}
+                      {% if customer.tags contains "vip" or customer.tags contains "VIP" %}
+                          {% assign customerDiscount = true %}
+                          
+                          {% assign discountTotal = 0.20 %}
+                          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+                      {% endif %}
+
+                      {% if customer.tags contains "trade" or customer.tags contains "Trade" %}
+                          {% assign customerDiscount = true %}
+                          
+                          {% assign discountTotal = 0.15 %}
+                          {% assign wholesalePriceAmount = current_variant.price | times: discountTotal %}
+                          {% assign wholesalePriceTotal = current_variant.price  | minus: wholesalePriceAmount | split: '.'%}
+                      {% endif %}
+                    {% endunless %}
 
                     <div class="product-block product-block--price" {{ block.shopify_attributes }} data-discount-rate="{{ discountTotal }}">
                       <label class="variant__label" for="ProductPrice-{{ section_id }}">
@@ -462,7 +500,7 @@
                         {%- else -%}
                           <span id="PriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
                         {%- endif -%}
-                        <span data-product-price class="product__price  {% if customerDiscount %} wholesale-price {% endif %} {% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %} {% if customerDiscount %} grid-product__price--savings {% endif %}">
+                        <span data-product-price class="product__price  {% if customerDiscount %} wholesale-price {% endif %} {% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %} {% if customerDiscount and hideComparePrice == false %} grid-product__price--savings {% endif %}">
                           {%- unless product.empty? -%}
                             {% if customerDiscount %}
                               {%- render 'price' with wholesalePriceTotal[0] -%}
@@ -506,7 +544,7 @@
                             <span> This item ships FREE!</span>
                           </span>
                         {%- endif -%}
-                        {% if customerDiscount %}
+                        {% if customerDiscount and hideComparePrice == false %}
                           <p style="text-decoration: line-through;" class="crossedout-price"> 
                             {%- render 'price' with current_variant.price -%} 
                           </p>
@@ -701,9 +739,14 @@
                               data-widths="[360, 540, 700, 1024]"
                               data-aspectratio="{{ block.settings.trust_image.aspect_ratio }}"
                               data-sizes="auto"
+                              width="{{ block.settings.trust_image.width }}"
+                              height="{{ block.settings.trust_image.height }}"
                               alt="{{ block.settings.trust_image.alt }}">
                           <noscript>
-                            <img class="lazyloaded" src="{{ block.settings.trust_image | img_url: '540x' }}" alt="{{ block.settings.trust_image.alt }}">
+                            <img class="lazyloaded" src="{{ block.settings.trust_image | img_url: '540x' }}" 
+                                 width="{{ block.settings.trust_image.width }}"
+                                 height="{{ block.settings.trust_image.height }}"
+                                 alt="{{ block.settings.trust_image.alt }}">
                           </noscript>
                         </div>
                       </div>
