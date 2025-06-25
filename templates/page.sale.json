@@ -67,6 +67,7 @@
         },
         "hero_QFURRq": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -180,8 +181,8 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/4th_of_July_1.jpg",
-            "image_mobile": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_be746c75-7ddb-4f2a-aa4b-f52a6996148c.jpg",
+            "image": "shopify://shop_images/4th_of_July_final.jpg",
+            "image_mobile": "shopify://shop_images/4th_of_July_final.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
