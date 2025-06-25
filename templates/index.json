@@ -25,11 +25,11 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Flash_Sale_Homepage_Hero_5.jpg",
-            "heading": "LEDGE LOUNGER",
+            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_2.jpg",
+            "heading": "",
             "heading_size": "h1",
-            "subheading": "4TH OF JULY SALE",
-            "button_label": "Shop 10% Off Games & Floats",
+            "subheading": "",
+            "button_label": "Shop Now",
             "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -39,6 +39,7 @@
         },
         "slide_dDz9fW": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Flash_Sale_Homepage_Hero_2.jpg",
             "heading": "",
