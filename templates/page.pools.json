@@ -538,6 +538,38 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
+    "175105900767219062": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_jQMtfJ": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 27589,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "left",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_jQMtfJ"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
     "text_and_image_6PBPde": {
       "type": "text-and-image",
       "settings": {
@@ -894,6 +926,7 @@
     "slideshow_97riEr",
     "69af82dc-9d1d-4fb5-9ee7-4c2d818ab72f",
     "featured_collections_custom_LwiJEf",
+    "175105900767219062",
     "text_and_image_6PBPde",
     "a6b5cda5-b2f0-4c77-9c9a-0e7d7c610605",
     "59ae0380-1b23-4b67-8668-11e0cc84a39c",
