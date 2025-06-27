@@ -433,8 +433,41 @@
         "css_class": ""
       }
     },
+    "1751059804e8b350b7": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_HYBAL3": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 27589,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_HYBAL3"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
     "661f9c76-2a77-4cee-956f-e1e4ad6f1514": {
       "type": "featured-collection-carousel",
+      "disabled": true,
       "settings": {
         "title": "BEST SELLING LOUNGERS",
         "tab_collection_1": "best-selling-loungers",
@@ -702,6 +735,7 @@
     "c4b52c04-7da6-471a-a2ab-d6fc4ec66c84",
     "3f71f403-ed57-4fab-8942-662f92e1e6d8",
     "f6555d85-5c5a-489a-a525-e6f076bcdff8",
+    "1751059804e8b350b7",
     "661f9c76-2a77-4cee-956f-e1e4ad6f1514",
     "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162",
     "89a27308-d751-41d5-aa05-b0d2fadff296",
