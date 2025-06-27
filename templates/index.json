@@ -25,7 +25,6 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_2.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -172,6 +171,15 @@
             "link": "shopify://pages/glass-mosaic-tile"
           }
         },
+        "logo_image_kWJxgq": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Pool_Accessories_and_Floats.jpg",
+            "logo_title": "Accessories & Floats",
+            "logo_text": "",
+            "link": "shopify://collections/pool-and-outdoor-accessories"
+          }
+        },
         "344f1b72-076c-4940-aac3-49dbdfe5ed33": {
           "type": "logo_image",
           "settings": {
@@ -207,6 +215,7 @@
         "05fe7af3-3df9-45e7-8c9c-750c5162dfd0",
         "logo_image_8kjGPB",
         "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-1",
+        "logo_image_kWJxgq",
         "344f1b72-076c-4940-aac3-49dbdfe5ed33",
         "80fbd045-b12c-4c9e-b103-856fb964c6e2",
         "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-3"
