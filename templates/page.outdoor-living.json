@@ -273,25 +273,6 @@
             "color_accent": "#ffffff"
           }
         },
-        "0fd4b0d0-cc26-43db-af44-6c6f286a7226": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "POOL CARE",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/robotic-pool-cleaners",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Arial-Robotic-Pool-Skiimmer-by-Solar-Breeze---Lifestyle_-Poloside_2_ac11e39a-0077-45d4-871e-c3d50c6ac456.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 480,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
         "efaaad38-5abf-4e8e-ad40-06ecddcab8b3": {
           "type": "advanced",
           "settings": {
@@ -303,6 +284,25 @@
             "cta_text2": "",
             "cta_link2": "",
             "image": "shopify://shop_images/Floats_and_caddys.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "0fd4b0d0-cc26-43db-af44-6c6f286a7226": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "textarea": "POOL CARE",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/robotic-pool-cleaners",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Arial-Robotic-Pool-Skiimmer-by-Solar-Breeze---Lifestyle_-Poloside_2_ac11e39a-0077-45d4-871e-c3d50c6ac456.jpg",
             "video_url": "",
             "width": "33",
             "height": 480,
@@ -338,8 +338,8 @@
         "cf08d9d3-ebab-474a-a2cb-2c2319234186",
         "5272ec7b-785e-4877-a77f-b36a9bec7d18",
         "508b2ef9-8e9b-46c2-8687-06ba44a6987c",
-        "0fd4b0d0-cc26-43db-af44-6c6f286a7226",
         "efaaad38-5abf-4e8e-ad40-06ecddcab8b3",
+        "0fd4b0d0-cc26-43db-af44-6c6f286a7226",
         "64bdd82d-c4c7-44e7-b476-f13964ae0e61"
       ],
       "settings": {
