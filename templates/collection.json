@@ -255,11 +255,43 @@
     "recently-viewed": {
       "type": "recently-viewed",
       "settings": {}
+    },
+    "17520129303b9335fd": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_collection_KMrPJE": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-collection/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "left",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_collection_KMrPJE"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
     }
   },
   "order": [
     "collection-header",
     "460e1109-3979-4fc6-839b-d65aa631b466",
+    "17520129303b9335fd",
     "f4d0ecef-57cc-4dfe-8f46-df51d1fc26e1",
     "56fa479f-6845-44a1-9973-9f0049ec9be7",
     "9d0b6f17-72ed-47e7-986f-0b6eb9aa945c",
