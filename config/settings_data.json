@@ -686,6 +686,11 @@
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {}
+      },
+      "260908246434737815": {
+        "type": "shopify://apps/thoughtmetric/blocks/tm/5a9f9e10-3a9f-41b1-8250-d2eab3bd19a4",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
