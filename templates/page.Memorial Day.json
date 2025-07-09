@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {}
-    },
     "slideshow_k4HkFF": {
       "type": "slideshow",
       "blocks": {
@@ -59,8 +55,45 @@
         "css_class": ""
       }
     },
+    "1752096094884bf702": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_KzDYV9": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 27978,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_KzDYV9"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
     "text_and_image_q7CzDP": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Artificial_Turf.jpg",
         "video_url": "",
@@ -110,6 +143,7 @@
       "block_order": [
         "hero_bYY8tt"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": true,
@@ -213,6 +247,7 @@
         "advanced_TfrwPP",
         "advanced_BTwABp"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "EXPLORE MORE EXCLUSIVE SAVINGS",
@@ -318,6 +353,7 @@
       "block_order": [
         "text_zBfYyJ"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "left",
         "narrow_column": false,
@@ -356,6 +392,7 @@
       "block_order": [
         "hero_QaAJPd"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
@@ -373,8 +410,9 @@
     }
   },
   "order": [
-    "main",
     "slideshow_k4HkFF",
+    "1752096094884bf702",
+    "main",
     "text_and_image_q7CzDP",
     "slideshow_eak7Dt",
     "rich_text_XQ3eiz",
