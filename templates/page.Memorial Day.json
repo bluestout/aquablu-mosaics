@@ -232,44 +232,6 @@
         "css_class": ""
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {}
-    },
-    "17525304199b791d17": {
-      "type": "apps",
-      "blocks": {
-        "lookfy_gallery_lookfy_gallery_QRhdat": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-          "settings": {
-            "gallery_id": 24703,
-            "dynamic_source": "",
-            "title": "",
-            "subtitle": "",
-            "heading_size": "0.8",
-            "heading_color": "",
-            "heading_align": "center",
-            "desc_style": "subtitle",
-            "desc_color": "",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_left_right": 0
-          }
-        }
-      },
-      "block_order": [
-        "lookfy_gallery_lookfy_gallery_QRhdat"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": ""
-      }
-    },
     "slideshow_eak7Dt": {
       "type": "slideshow",
       "blocks": {
@@ -313,6 +275,43 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "17525304199b791d17": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_QRhdat": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 24703,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_QRhdat"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
         "css_class": ""
       }
     },
@@ -551,9 +550,9 @@
     "175252686559448e4e",
     "text_and_image_q7CzDP",
     "1752096094884bf702",
+    "slideshow_eak7Dt",
     "main",
     "17525304199b791d17",
-    "slideshow_eak7Dt",
     "promo_grid_EWU4MJ",
     "promo_grid_4xT88Y",
     "rich_text_W3P9tD",
