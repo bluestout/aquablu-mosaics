@@ -9,11 +9,31 @@
  */
 {
   "sections": {
+    "hero_video_8PTPVX": {
+      "type": "hero-video",
+      "name": "t:sections.hero-video.presets.video_hero.name",
+      "settings": {
+        "full_width": true,
+        "title": "TILE & STONE",
+        "title_size": 70,
+        "subheading": "FOR EVERY PART OF YOUR HOME",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#fff",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/4e375753378a4ffe86437c9082091ed2.mp4",
+        "overlay_opacity": 0,
+        "height": 450,
+        "height_mobile": 300,
+        "css_class": ""
+      }
+    },
     "slideshow_k4HkFF": {
       "type": "slideshow",
       "blocks": {
         "hero_DhA7E9": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -40,6 +60,7 @@
       "block_order": [
         "hero_DhA7E9"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "full_width_mobile": false,
@@ -471,6 +492,7 @@
     }
   },
   "order": [
+    "hero_video_8PTPVX",
     "slideshow_k4HkFF",
     "1752096094884bf702",
     "main",
