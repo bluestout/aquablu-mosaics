@@ -263,6 +263,7 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_QRhdat"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
@@ -275,7 +276,7 @@
         "hero_bYY8tt": {
           "type": "hero",
           "settings": {
-            "image_width": 650,
+            "image_width": 340,
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
@@ -284,14 +285,14 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com",
+            "link": "shopify://pages/wholesale",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_33.jpg",
-            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_33.jpg",
+            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -300,7 +301,6 @@
       "block_order": [
         "hero_bYY8tt"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": true,
