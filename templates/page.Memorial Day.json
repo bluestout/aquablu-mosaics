@@ -13,7 +13,7 @@
       "type": "hero-video",
       "name": "t:sections.hero-video.presets.video_hero.name",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "title": "TILE & STONE",
         "title_size": 70,
         "subheading": "FOR EVERY PART OF YOUR HOME",
