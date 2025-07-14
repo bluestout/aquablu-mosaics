@@ -76,6 +76,36 @@
         "css_class": ""
       }
     },
+    "rich_text_6Jirpt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A7mPCF": {
+          "type": "heading",
+          "settings": {
+            "title": "SHOP BY COLLECTION"
+          }
+        },
+        "text_FA3Kn7": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Shop AquaBlu’s complete online catalog of Glass, Porcelain, Ceramic, and Natural Stone tile - all in one place. If you want it, chances are we’ve got it (and then some).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A7mPCF",
+        "text_FA3Kn7"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "2",
+        "divider": false,
+        "css_class": ""
+      }
+    },
     "1752096094884bf702": {
       "type": "apps",
       "blocks": {
@@ -173,33 +203,35 @@
       "disabled": true,
       "settings": {}
     },
-    "rich_text_6Jirpt": {
-      "type": "rich-text",
+    "175252686559448e4e": {
+      "type": "apps",
       "blocks": {
-        "heading_A7mPCF": {
-          "type": "heading",
+        "lookfy_gallery_lookfy_gallery_tCD38K": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
           "settings": {
-            "title": "SHOP BY COLLECTION"
-          }
-        },
-        "text_FA3Kn7": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Shop AquaBlu’s complete online catalog of Glass, Porcelain, Ceramic, and Natural Stone tile - all in one place. If you want it, chances are we’ve got it (and then some).</p>"
+            "gallery_id": 27925,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
           }
         }
       },
       "block_order": [
-        "heading_A7mPCF",
-        "text_FA3Kn7"
+        "lookfy_gallery_lookfy_gallery_tCD38K"
       ],
-      "name": "t:sections.rich-text.presets.rich_text.name",
       "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "color_scheme": "2",
-        "divider": false,
+        "full_width": false,
+        "space_around": true,
         "css_class": ""
       }
     },
@@ -524,9 +556,10 @@
   "order": [
     "hero_video_8PTPVX",
     "slideshow_k4HkFF",
+    "rich_text_6Jirpt",
     "1752096094884bf702",
     "main",
-    "rich_text_6Jirpt",
+    "175252686559448e4e",
     "text_and_image_q7CzDP",
     "slideshow_eak7Dt",
     "rich_text_XQ3eiz",
