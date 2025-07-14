@@ -108,36 +108,6 @@
         "css_class": ""
       }
     },
-    "rich_text_6Jirpt": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_A7mPCF": {
-          "type": "heading",
-          "settings": {
-            "title": "SHOP BY COLLECTION"
-          }
-        },
-        "text_FA3Kn7": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>Shop AquaBlu’s complete online catalog of Glass, Porcelain, Ceramic, and Natural Stone tile - all in one place. If you want it, chances are we’ve got it (and then some).</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_A7mPCF",
-        "text_FA3Kn7"
-      ],
-      "name": "t:sections.rich-text.presets.rich_text.name",
-      "settings": {
-        "align_text": "center",
-        "narrow_column": false,
-        "color_scheme": "2",
-        "divider": false,
-        "css_class": ""
-      }
-    },
     "1752096094884bf702": {
       "type": "apps",
       "blocks": {
@@ -537,7 +507,6 @@
     "hero_video_8PTPVX",
     "slideshow_k4HkFF",
     "175252686559448e4e",
-    "rich_text_6Jirpt",
     "1752096094884bf702",
     "main",
     "text_and_image_q7CzDP",
