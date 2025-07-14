@@ -85,9 +85,9 @@
             "dynamic_source": "",
             "title": "",
             "subtitle": "",
-            "heading_size": "1",
+            "heading_size": "0.8",
             "heading_color": "",
-            "heading_align": "left",
+            "heading_align": "center",
             "desc_style": "subtitle",
             "desc_color": "",
             "custom_class": "",
@@ -110,6 +110,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
     },
     "text_and_image_q7CzDP": {
