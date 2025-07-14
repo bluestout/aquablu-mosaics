@@ -283,34 +283,6 @@
       "disabled": true,
       "settings": {}
     },
-    "faq_rnPjG6": {
-      "type": "faq",
-      "blocks": {
-        "question_N6ehDz": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
-          }
-        },
-        "question_QrdPd3": {
-          "type": "question",
-          "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_N6ehDz",
-        "question_QrdPd3"
-      ],
-      "name": "t:sections.faq.presets.faq.name",
-      "settings": {
-        "title": "FAQs",
-        "css_class": ""
-      }
-    },
     "17525304199b791d17": {
       "type": "apps",
       "blocks": {
@@ -340,6 +312,34 @@
       "settings": {
         "full_width": false,
         "space_around": true,
+        "css_class": ""
+      }
+    },
+    "faq_rnPjG6": {
+      "type": "faq",
+      "blocks": {
+        "question_N6ehDz": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "question_QrdPd3": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_N6ehDz",
+        "question_QrdPd3"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "title": "FAQs",
         "css_class": ""
       }
     },
@@ -580,8 +580,8 @@
     "1752096094884bf702",
     "slideshow_eak7Dt",
     "main",
-    "faq_rnPjG6",
     "17525304199b791d17",
+    "faq_rnPjG6",
     "promo_grid_EWU4MJ",
     "promo_grid_4xT88Y",
     "rich_text_W3P9tD",
