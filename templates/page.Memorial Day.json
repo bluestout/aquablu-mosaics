@@ -76,26 +76,6 @@
         "css_class": ""
       }
     },
-    "text_and_image_q7CzDP": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/Zellige_Look_Tile_9c49658c-4781-4263-90dd-2aba096f7b10.jpg",
-        "video_url": "",
-        "image_width": 500,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>Endless Design Possibilities - Right At Your Fingertips</h2><p>Explore AquaBlu’s curated collection of Glass, Porcelain, Ceramic, and Natural Stone tile - thoughtfully selected to elevate every space with elegance and enduring style. Our expansive online catalog brings together timeless materials and trend-forward designs, all in one seamless destination. Whether you're designing a serene spa, a sophisticated outdoor retreat, or a showstopping kitchen backsplash, if you can dream it - chances are, we have it.</p><p>If you haven’t found the perfect piece, we’ll create it for you. Our custom design services turn your vision into a one-of-a-kind statement, tailored with intention and crafted without compromise.</p>",
-        "button_label": "Learn More",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "center",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "bath-section-8"
-      }
-    },
     "1752528387512030df": {
       "type": "apps",
       "blocks": {
@@ -158,6 +138,26 @@
         "full_width": false,
         "space_around": false,
         "css_class": ""
+      }
+    },
+    "text_and_image_q7CzDP": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Zellige_Look_Tile_9c49658c-4781-4263-90dd-2aba096f7b10.jpg",
+        "video_url": "",
+        "image_width": 500,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>Endless Design Possibilities - Right At Your Fingertips</h2><p>Explore AquaBlu’s curated collection of Glass, Porcelain, Ceramic, and Natural Stone tile - thoughtfully selected to elevate every space with elegance and enduring style. Our expansive online catalog brings together timeless materials and trend-forward designs, all in one seamless destination. Whether you're designing a serene spa, a sophisticated outdoor retreat, or a showstopping kitchen backsplash, if you can dream it - chances are, we have it.</p><p>If you haven’t found the perfect piece, we’ll create it for you. Our custom design services turn your vision into a one-of-a-kind statement, tailored with intention and crafted without compromise.</p>",
+        "button_label": "Learn More",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": "bath-section-8"
       }
     },
     "1752096094884bf702": {
@@ -236,6 +236,38 @@
       "type": "main-page",
       "disabled": true,
       "settings": {}
+    },
+    "17525304199b791d17": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_QRhdat": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 24703,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_QRhdat"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
     },
     "slideshow_eak7Dt": {
       "type": "slideshow",
@@ -520,6 +552,7 @@
     "text_and_image_q7CzDP",
     "1752096094884bf702",
     "main",
+    "17525304199b791d17",
     "slideshow_eak7Dt",
     "promo_grid_EWU4MJ",
     "promo_grid_4xT88Y",
