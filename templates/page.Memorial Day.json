@@ -93,7 +93,7 @@
             "desc_color": "",
             "custom_class": "",
             "background_color": "",
-            "padding_top": 20,
+            "padding_top": 0,
             "padding_bottom": 0,
             "padding_left_right": 0
           }
@@ -136,7 +136,7 @@
       ],
       "settings": {
         "full_width": false,
-        "space_around": true,
+        "space_around": false,
         "css_class": ""
       }
     },
