@@ -13,7 +13,7 @@
       "type": "hero-video",
       "name": "t:sections.hero-video.presets.video_hero.name",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "title": "TILE & STONE",
         "title_size": 70,
         "subheading": "FOR EVERY PART OF YOUR HOME",
@@ -23,7 +23,7 @@
         "text_align": "vertical-center horizontal-center",
         "video_url": "https://cdn.shopify.com/videos/c/o/v/847d7d412b3c4157ae1bf846d5d9dfb6.mp4",
         "overlay_opacity": 0,
-        "height": 450,
+        "height": 500,
         "height_mobile": 300,
         "css_class": ""
       }
