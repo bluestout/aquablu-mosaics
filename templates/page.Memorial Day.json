@@ -20,9 +20,9 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
+            "title": "<p>TILE AND STONE</p>",
+            "title_size": 56,
+            "subheading": "FOR EVERY PART OF YOUR HOME",
             "custom_text": "",
             "link": "",
             "link_text": "",
@@ -30,7 +30,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_31.jpg",
+            "image": "shopify://shop_images/Tile_Stone_Landing_Page_Hero.jpg",
             "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_31.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
@@ -40,7 +40,6 @@
       "block_order": [
         "hero_DhA7E9"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "full_width_mobile": false,
@@ -96,11 +95,31 @@
             "padding_bottom": 36,
             "padding_left_right": 0
           }
+        },
+        "lookfy_gallery_lookfy_gallery_ffCMT9": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 28096,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
         }
       },
       "block_order": [
         "lookfy_gallery_lookfy_gallery_KzDYV9",
-        "lookfy_gallery_lookfy_gallery_VBd7jV"
+        "lookfy_gallery_lookfy_gallery_VBd7jV",
+        "lookfy_gallery_lookfy_gallery_ffCMT9"
       ],
       "settings": {
         "full_width": false,
