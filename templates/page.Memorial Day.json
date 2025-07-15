@@ -331,11 +331,19 @@
             "title": "Can tile be used outdoors or around pools?",
             "text": "<p>Yes! We offer a wide selection of outdoor-rated tile and stone, including slip-resistant finishes and UV-stable materials perfect for patios, pool decks, and waterline applications.</p>"
           }
+        },
+        "question_tAKAnL": {
+          "type": "question",
+          "settings": {
+            "title": "Do I need to seal my tile or stone?",
+            "text": "<p>Porcelain and ceramic typically don’t require sealing, but natural stone and certain grouts do. We recommend sealing those materials upon installation and reapplying as needed based on use and exposure. Wondering if your selected tile requires sealing? Give us a call at 800-971-1442 and we will confirm for you!</p>"
+          }
         }
       },
       "block_order": [
         "question_N6ehDz",
-        "question_QrdPd3"
+        "question_QrdPd3",
+        "question_tAKAnL"
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
