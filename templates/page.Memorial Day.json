@@ -352,6 +352,13 @@
             "title": "Can I order samples before purchasing?",
             "text": "<p>Absolutely. We highly recommend ordering samples to see color, texture, and finish in person before making your final decision. </p>"
           }
+        },
+        "question_hKXC4r": {
+          "type": "question",
+          "settings": {
+            "title": "What’s the lead time on orders?",
+            "text": "<p>Lead times vary depending on the product and availability, but many items ship within 3–7 business days. Custom and special-order tiles may take longer - we’ll provide timelines when you order.</p>"
+          }
         }
       },
       "block_order": [
@@ -359,7 +366,8 @@
         "question_QrdPd3",
         "question_tAKAnL",
         "question_VQFcrG",
-        "question_Ba8Mpd"
+        "question_Ba8Mpd",
+        "question_hKXC4r"
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
