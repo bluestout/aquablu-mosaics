@@ -60,7 +60,7 @@
       "settings": {
         "full_width": false,
         "space_around": false,
-        "css_class": "/* Add spacing above a specific section */.section-custom-spacing {  margin-top: 30px; /* adjust this value as needed */}"
+        "css_class": ""
       }
     },
     "f4d0ecef-57cc-4dfe-8f46-df51d1fc26e1": {
