@@ -338,12 +338,20 @@
             "title": "Do I need to seal my tile or stone?",
             "text": "<p>Porcelain and ceramic typically don’t require sealing, but natural stone and certain grouts do. We recommend sealing those materials upon installation and reapplying as needed based on use and exposure. Wondering if your selected tile requires sealing? Give us a call at 800-971-1442 and we will confirm for you!</p>"
           }
+        },
+        "question_VQFcrG": {
+          "type": "question",
+          "settings": {
+            "title": "How do I clean and maintain my tile?",
+            "text": "<p>For most tile, regular sweeping and a pH-neutral cleaner will do the trick. Avoid harsh chemicals, especially on natural stone. We also carry recommended cleaning and maintenance products - shop now!</p>"
+          }
         }
       },
       "block_order": [
         "question_N6ehDz",
         "question_QrdPd3",
-        "question_tAKAnL"
+        "question_tAKAnL",
+        "question_VQFcrG"
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
