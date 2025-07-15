@@ -345,13 +345,21 @@
             "title": "How do I clean and maintain my tile?",
             "text": "<p>For most tile, regular sweeping and a pH-neutral cleaner will do the trick. Avoid harsh chemicals, especially on natural stone. We also carry recommended cleaning and maintenance products - <a href=\"https://www.aquablumosaics.com/collections/pool-tile-cleaning-solutions\" target=\"_blank\" title=\"Tile cleaners\">shop now!</a></p>"
           }
+        },
+        "question_Ba8Mpd": {
+          "type": "question",
+          "settings": {
+            "title": "Can I order samples before purchasing?",
+            "text": "<p>Absolutely. We highly recommend ordering samples to see color, texture, and finish in person before making your final decision. </p>"
+          }
         }
       },
       "block_order": [
         "question_N6ehDz",
         "question_QrdPd3",
         "question_tAKAnL",
-        "question_VQFcrG"
+        "question_VQFcrG",
+        "question_Ba8Mpd"
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
