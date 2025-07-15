@@ -57,6 +57,7 @@
       "block_order": [
         "lookfy_gallery_lookfy_collection_weDLYi"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
