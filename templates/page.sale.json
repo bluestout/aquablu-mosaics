@@ -924,7 +924,7 @@
       ],
       "settings": {
         "full_width": true,
-        "height": 650,
+        "height": 500,
         "height_mobile": 450,
         "style": "arrows",
         "autoplay": true,
