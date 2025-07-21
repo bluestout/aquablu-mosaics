@@ -12,6 +12,7 @@
   {%- if group.user_agent.value == '*' or group.user_agent.value == 'adsbot-google' -%}
     {{- 'Disallow: /*?pr_prod_strat=*' }}
     {{- 'Disallow: /wpm@*' }}
+    {{- 'Disallow: /services/login_with_shop/*' }}  
   {%- endif -%}
 
   {%- if group.sitemap != blank -%}
