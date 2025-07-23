@@ -147,10 +147,13 @@
           {%- case block.type -%}
 
             {%- when 'advanced' -%}
-              <a href="{{ block.settings.cta_link1 }}"
+              <div
                 class="promo-grid__container {{ block.settings.text_align }}">
 
-               
+                {%- if block.settings.cta_link1 != blank and block.settings.cta_link2 == blank -%}
+                  <a href="{{ block.settings.cta_link1 }}" class="promo-grid__slide-link" aria-hidden="true" aria-label="{{block.settings.cta_text1}}"></a>
+                {%- endif -%}
+
                 <div class="promo-grid__bg">
                   {%- if block.settings.video_url != '' -%}
                     {%- render 'promo-video', id: block.id, url: block.settings.video_url -%}
@@ -220,7 +223,7 @@
                     </div>
                   </div>
                 {%- endif -%}
-              </a>
+              </div>
 
             {%- when 'sale_collection' -%}
               <a
