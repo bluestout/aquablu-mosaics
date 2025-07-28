@@ -58,8 +58,6 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/hero-1_6d8f8989-4ddb-4c01-b9d6-0dbd3a5e1cb1.jpg",
-            "image_mobile": "shopify://shop_images/hero-1_6d8f8989-4ddb-4c01-b9d6-0dbd3a5e1cb1.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -471,8 +469,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Conservation_Banner_Final.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner_Final.jpg",
+            "image": "shopify://shop_images/Installation_Tools_Banner1.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
