@@ -11,6 +11,7 @@
   "sections": {
     "hero_video_8PTPVX": {
       "type": "hero-video",
+      "disabled": true,
       "name": "t:sections.hero-video.presets.video_hero.name",
       "settings": {
         "full_width": true,
@@ -33,7 +34,6 @@
       "blocks": {
         "hero_DhA7E9": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -60,7 +60,6 @@
       "block_order": [
         "hero_DhA7E9"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "full_width_mobile": false,
@@ -104,7 +103,7 @@
       ],
       "settings": {
         "full_width": false,
-        "space_around": true,
+        "space_around": false,
         "css_class": ""
       }
     },
