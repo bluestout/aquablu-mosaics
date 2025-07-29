@@ -297,7 +297,6 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/Website_sale_banner_2.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -999,6 +998,39 @@
         "css_class": "home-section-12"
       }
     },
+    "1753805430420396ae": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_nnwpEd": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 29256,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "left",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_nnwpEd"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
     "eb33306f-1f7f-4e7e-bba8-545a56c8253e": {
       "type": "blog-posts",
       "settings": {
@@ -1224,6 +1256,7 @@
     "3aa34ff7-417a-4828-b95a-946c5f5f32b0",
     "2554e28d-0d6c-49bf-91bd-0f901e71c7d2",
     "473d1d3e-a445-4cc3-9427-53b85f66ff55",
+    "1753805430420396ae",
     "eb33306f-1f7f-4e7e-bba8-545a56c8253e",
     "ae821482-e7dd-43ee-99ce-45d315cea0e5",
     "9cd711e4-3cff-4481-a68f-3e801382c63b",
