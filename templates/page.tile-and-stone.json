@@ -361,7 +361,7 @@
         "gutter_size": 24,
         "space_above": false,
         "space_below": false,
-        "mobile_size": 0,
+        "mobile_size": -100,
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
