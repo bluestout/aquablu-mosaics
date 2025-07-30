@@ -1045,6 +1045,67 @@
         "css_class": ""
       }
     },
+    "9cd711e4-3cff-4481-a68f-3e801382c63b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14459271839816__9cd711e4-3cff-4481-a68f-3e801382c63b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "GET INSPIRED"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271839816__9cd711e4-3cff-4481-a68f-3e801382c63b-heading-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": "home-section-14-5"
+      }
+    },
+    "1666361938d7d593e5": {
+      "type": "apps",
+      "blocks": {
+        "3097794d-ed00-4c8e-8204-6969783ac129": {
+          "type": "shopify://apps/foursixty-shoppable-social-ugc/blocks/custom_minifeed/e2616dfe-fbb6-4e7d-874d-d250b973556d",
+          "settings": {
+            "foreground_color": "#ffffff",
+            "background_color": "#000000",
+            "background_color_alpha": 90,
+            "post_spacing": 1,
+            "hover_margin": 0,
+            "rows": 2,
+            "columns": 6,
+            "target_blank": false,
+            "show_icon": true,
+            "show_text": false,
+            "show_date": false,
+            "call_to_action": "SHOP IT",
+            "shop_type": "button",
+            "body_font_size": 14,
+            "body_font": "helvetica_n4",
+            "accent_font_size": 14,
+            "accent_font": "helvetica_n4",
+            "disable_filter": false,
+            "override_feed_id": "",
+            "arbitrary_attributes": "",
+            "custom_css": "",
+            "custom_js": ""
+          }
+        }
+      },
+      "block_order": [
+        "3097794d-ed00-4c8e-8204-6969783ac129"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": false,
+        "css_class": "home-section-15"
+      }
+    },
     "ae821482-e7dd-43ee-99ce-45d315cea0e5": {
       "type": "logo-list-custom",
       "blocks": {
@@ -1176,67 +1237,6 @@
         "divider": false,
         "css_class": "home-section-14 logo-slider"
       }
-    },
-    "9cd711e4-3cff-4481-a68f-3e801382c63b": {
-      "type": "rich-text",
-      "blocks": {
-        "template--14459271839816__9cd711e4-3cff-4481-a68f-3e801382c63b-heading-1": {
-          "type": "heading",
-          "settings": {
-            "title": "GET INSPIRED"
-          }
-        }
-      },
-      "block_order": [
-        "template--14459271839816__9cd711e4-3cff-4481-a68f-3e801382c63b-heading-1"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "color_scheme": "none",
-        "divider": false,
-        "css_class": "home-section-14-5"
-      }
-    },
-    "1666361938d7d593e5": {
-      "type": "apps",
-      "blocks": {
-        "3097794d-ed00-4c8e-8204-6969783ac129": {
-          "type": "shopify://apps/foursixty-shoppable-social-ugc/blocks/custom_minifeed/e2616dfe-fbb6-4e7d-874d-d250b973556d",
-          "settings": {
-            "foreground_color": "#ffffff",
-            "background_color": "#000000",
-            "background_color_alpha": 90,
-            "post_spacing": 1,
-            "hover_margin": 0,
-            "rows": 2,
-            "columns": 6,
-            "target_blank": false,
-            "show_icon": true,
-            "show_text": false,
-            "show_date": false,
-            "call_to_action": "SHOP IT",
-            "shop_type": "button",
-            "body_font_size": 14,
-            "body_font": "helvetica_n4",
-            "accent_font_size": 14,
-            "accent_font": "helvetica_n4",
-            "disable_filter": false,
-            "override_feed_id": "",
-            "arbitrary_attributes": "",
-            "custom_css": "",
-            "custom_js": ""
-          }
-        }
-      },
-      "block_order": [
-        "3097794d-ed00-4c8e-8204-6969783ac129"
-      ],
-      "settings": {
-        "full_width": true,
-        "space_around": false,
-        "css_class": "home-section-15"
-      }
     }
   },
   "order": [
@@ -1258,8 +1258,8 @@
     "473d1d3e-a445-4cc3-9427-53b85f66ff55",
     "1753805430420396ae",
     "eb33306f-1f7f-4e7e-bba8-545a56c8253e",
-    "ae821482-e7dd-43ee-99ce-45d315cea0e5",
     "9cd711e4-3cff-4481-a68f-3e801382c63b",
-    "1666361938d7d593e5"
+    "1666361938d7d593e5",
+    "ae821482-e7dd-43ee-99ce-45d315cea0e5"
   ]
 }
