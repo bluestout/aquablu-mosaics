@@ -1,0 +1,133 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "3156ed70-a03d-42ff-9dfa-573033623669": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "Large image with text box",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>",
+        "button_label": "",
+        "button_link": "",
+        "focal_point": "center",
+        "layout": "left",
+        "height": 550,
+        "css_class": ""
+      }
+    },
+    "0b0979f9-8950-4419-b6f1-e32120b3dccb": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14453883961416__0b0979f9-8950-4419-b6f1-e32120b3dccb-16663740467f2e2ef8-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14453883961416__0b0979f9-8950-4419-b6f1-e32120b3dccb-16663740467f2e2ef8-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "f455d934-8a89-48da-ac2c-e26046c5c57e": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14453883961416__f455d934-8a89-48da-ac2c-e26046c5c57e-16663740467c8f62d8-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "template--14453883961416__f455d934-8a89-48da-ac2c-e26046c5c57e-16663740467c8f62d8-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "template--14453883961416__f455d934-8a89-48da-ac2c-e26046c5c57e-16663740467c8f62d8-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "853b788a-5a56-4737-97b8-75052f469a03": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "9ba9225c-01c1-48d5-a3a9-87a95c7a9d80": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "eddb25bc-3a09-4b90-9104-4368c3c9e160": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14453883961416__f455d934-8a89-48da-ac2c-e26046c5c57e-16663740467c8f62d8-0",
+        "template--14453883961416__f455d934-8a89-48da-ac2c-e26046c5c57e-16663740467c8f62d8-1",
+        "template--14453883961416__f455d934-8a89-48da-ac2c-e26046c5c57e-16663740467c8f62d8-2",
+        "853b788a-5a56-4737-97b8-75052f469a03",
+        "9ba9225c-01c1-48d5-a3a9-87a95c7a9d80",
+        "eddb25bc-3a09-4b90-9104-4368c3c9e160"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false,
+        "css_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3156ed70-a03d-42ff-9dfa-573033623669",
+    "0b0979f9-8950-4419-b6f1-e32120b3dccb",
+    "f455d934-8a89-48da-ac2c-e26046c5c57e"
+  ]
+}
