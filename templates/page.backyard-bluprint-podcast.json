@@ -20,10 +20,10 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "top_subheading": "",
-            "title": "<p>ABOUT US</p>",
+            "title": "<p>THE BACKYARD BLUPRINT</p>",
             "title_size": 70,
             "subheading": "",
-            "custom_text": "<h4>Empowering customers to <em>bring paradise home</em>.</h4>",
+            "custom_text": "<h4>Your resource for the latest backyard design trends.</h4>",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -54,13 +54,35 @@
         "css_class": ""
       }
     },
+    "advanced_content_YLcDXk": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_jjHkfN": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div id='buzzsprout-large-player'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/2512781.js?container_id=buzzsprout-large-player&player=large'></script>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_jjHkfN"
+      ],
+      "name": "t:sections.advanced-content.presets.custom_content.name",
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
     "df01fde5-8932-4ae9-b085-6b7934816659": {
       "type": "advanced-content",
       "blocks": {
         "template--14459271381064__df01fde5-8932-4ae9-b085-6b7934816659-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/aquablu_about_us.webp",
+            "image": "shopify://shop_images/The_Backyard_BluPrint_Podcast_Logo.png",
             "link": "",
             "width": "50%",
             "alignment": "center"
@@ -69,7 +91,7 @@
         "template--14459271381064__df01fde5-8932-4ae9-b085-6b7934816659-liquid-1": {
           "type": "liquid",
           "settings": {
-            "code": "<h2>OUR STORY</h2>\n<p>Founded by two brothers with a shared vision and love for the ocean, our journey began as online suppliers of swimming pool mosaics and tiles. As our reputation for quality and service spread, so too did our unique product offerings - launching us to become a leading authority for pools, outdoor living spaces and home interiors. At the heart of our business is a team of service-oriented professionals who share a passion for innovation, creativity and a dedication to exceeding customer expectations. From our knowledgeable customer support specialists to our experienced design consultants, every member of our team is committed to providing personalized service and expert guidance to our valued customers.</p>",
+            "code": "<h2>About The Backyard BluPrint</h2>\n<p>Welcome to The Backyard BluPrint, your go-to podcast for outdoor design inspiration, expert insights, and the latest trends in backyard living. Hosted by industry veteran Frank Vitori, who brings over 15 years of experience in crafting luxury backyard oases, this weekly show dives deep into the world of outdoor design and innovation. </p><p>\nEach week, we feature in-depth interviews and engaging conversations with the top names in the industry—from renowned landscape architects and interior designers, to pool builders, tile vendors, and outdoor living space professionals. Whether you’re a design enthusiast, a homeowner planning your dream backyard, or a trade professional looking for fresh ideas, you’ll find valuable insights and inspiration in every episode.</P><p>Discover the stories behind the designs, get expert advice on materials and layout, and explore the trends that are shaping luxury outdoor living today.",
             "width": "50%",
             "alignment": "center"
           }
@@ -91,7 +113,7 @@
         "5ce3703e-47b4-488e-93c7-83542c7bd75d": {
           "type": "liquid",
           "settings": {
-            "code": "<h2>OUR MISSION</h2>\n<p>We believe that everyone deserves to experience the beauty and serenity of paradise – right in their own backyard or living space. That's why our mission is to empower our customers to create their own personal oasis, tailored to their unique tastes and preferences. Whether you're a homeowner seeking to infuse your living space with personality, or an interior designer striving to create unforgettable environments for your clients, we are here to support and inspire you every step of the way.</p>",
+            "code": "<h2>YOUR HOST</h2>\n<p>Frank Vitori, Co-Founder of AquaBlu Mosaics, brings over fifteen years of deep industry knowledge to the forefront of pool, spa, outdoor living, and coastal home design. As a driving force behind the premier online retailer, Frank possesses comprehensive expertise across a wide range of product categories. He is particularly well-versed in all facets of tile pool finishes, installation products, and the intricate art of custom mosaic production. Frank's passion and understanding ensure AquaBlu Mosaics delivers exceptional quality and design solutions. Beyond aesthetics, Frank champions ocean conservation, embedding a commitment to charitable give-back initiatives within AquaBlu's core values reflecting his deep connection to the marine world.</p>",
             "width": "50%",
             "alignment": "center"
           }
@@ -99,7 +121,7 @@
         "e4a6dfe0-edc6-489a-b5a4-b75dd4a8d6d7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/About_Us_-_Our_Mission_600_x_400.jpg",
+            "image": "shopify://shop_images/Frank_HS.png",
             "link": "",
             "width": "50%",
             "alignment": "center"
@@ -210,6 +232,7 @@
         "416cce0a-f84a-43ee-b3a0-9c1628f7ab02",
         "6fabbbdb-d332-4007-9119-1f1700901da5"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
@@ -288,6 +311,7 @@
         "template--14459271381064__9a0034ff-b0a8-4c9e-874f-59f147f04a18-text_block-3",
         "306d542c-ae15-4a98-9515-eec5f1b0c8ec"
       ],
+      "disabled": true,
       "custom_css": [
         "div {background-color: #f3f3f3f3;}"
       ],
@@ -358,6 +382,7 @@
         "template--14459271381064__a2711b7a-da41-48b0-80d2-3c4d9bda00d8-testimonial-4",
         "template--14459271381064__a2711b7a-da41-48b0-80d2-3c4d9bda00d8-testimonial-5"
       ],
+      "disabled": true,
       "settings": {
         "title": "WHAT OUR CUSTOMERS SAY",
         "align_text": "center",
@@ -398,6 +423,7 @@
     },
     "75294159-d2bf-477f-b292-711444656eb4": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "title": "GET IN TOUCH",
         "text": "",
@@ -410,6 +436,7 @@
   },
   "order": [
     "eb0f50cf-76b6-4192-8a3b-ac62b49d2acc",
+    "advanced_content_YLcDXk",
     "df01fde5-8932-4ae9-b085-6b7934816659",
     "a0057277-c2c2-458b-a6bc-873fb54d54a2",
     "cbb16e33-3564-4ecc-9327-b428d900c274",
