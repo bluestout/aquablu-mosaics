@@ -386,6 +386,52 @@
         "css_class": ""
       }
     },
+    "slideshow_BiyV9c": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_gPtTBm": {
+          "type": "hero",
+          "settings": {
+            "image_width": 340,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/wholesale",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Conservation_Banner.jpg",
+            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_gPtTBm"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": true,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "faq_rnPjG6": {
       "type": "faq",
       "blocks": {
@@ -685,6 +731,7 @@
     "main",
     "1753822458c003ad66",
     "17525304199b791d17",
+    "slideshow_BiyV9c",
     "faq_rnPjG6",
     "promo_grid_EWU4MJ",
     "promo_grid_4xT88Y",
