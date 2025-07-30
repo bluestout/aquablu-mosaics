@@ -181,7 +181,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
             "image": "shopify://shop_images/AquaPro_Banner_2025.png",
-            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/VIP_PRICING_FLAT_RATE_SHIPPING_FREE_SAMPLES.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -299,7 +299,7 @@
             "custom_class": "",
             "background_color": "",
             "padding_top": 36,
-            "padding_bottom": 36,
+            "padding_bottom": 0,
             "padding_left_right": 60
           }
         }
@@ -344,7 +344,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
             "image": "shopify://shop_images/Conservation_Banner.jpg",
-            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/Conservation_Banner_06255dab-d6b1-4e2d-aca7-98bd0e1bb9a5.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -355,10 +355,10 @@
       ],
       "settings": {
         "full_width": false,
-        "full_width_mobile": true,
+        "full_width_mobile": false,
         "contact_popup": false,
         "desktop_size": 0,
-        "gutter_size": 40,
+        "gutter_size": 24,
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
