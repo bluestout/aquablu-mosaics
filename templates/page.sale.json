@@ -59,8 +59,6 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_6.jpg",
-            "image_mobile": "shopify://shop_images/Ledge_Lounger_4th_of_July_Flash_6.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -140,7 +138,6 @@
       "blocks": {
         "hero_Td9bdL": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -152,45 +149,20 @@
             "subheading": "",
             "custom_text": "",
             "link": "shopify://products/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
-            "link_text": "SHOP NOW",
+            "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/Laylo_Flash_Sale_2.jpg",
-            "image_mobile": "shopify://shop_images/Shop_All_Sale_Discounted_Tile_5.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_dMkEDU": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/Website_sale_banner_2.jpg",
-            "image_mobile": "shopify://shop_images/Website_sale_banner_2.jpg",
+            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_Td9bdL",
-        "hero_dMkEDU"
+        "hero_Td9bdL"
       ],
       "disabled": true,
       "settings": {
