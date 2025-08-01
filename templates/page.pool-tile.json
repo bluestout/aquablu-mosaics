@@ -157,6 +157,54 @@
         "css_class": ""
       }
     },
+    "slideshow_nzNTk6": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_7hWWPz": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_7hWWPz"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "logo_list_custom_2_k44iC4": {
       "type": "logo-list-custom-2",
       "blocks": {
@@ -942,6 +990,7 @@
   "order": [
     "main",
     "slideshow_KNKNYA",
+    "slideshow_nzNTk6",
     "logo_list_custom_2_k44iC4",
     "promo_grid_yVKg3F",
     "text_columns_custom_Yx8wC4",
