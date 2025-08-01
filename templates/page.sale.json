@@ -791,6 +791,24 @@
     "slideshow_split_yT6kCR": {
       "type": "slideshow-split",
       "blocks": {
+        "slide_UrC77T": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'FREETABLE' AT CHECKOUT",
+            "title": "Free Kai In-Pool Side Table",
+            "title_size": 46,
+            "subheading": "With the purchase of Floating Luxuries Kai Shelf Loungers",
+            "link": "",
+            "link_text": "Shop now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/FL600WE---Kai-Shelf-Lounger_With2FemaleModels-03_4fa9041c-a3e7-4078-ba71-ccbf664003ec_1.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
         "slide_xtA8Ar": {
           "type": "slide",
           "settings": {
@@ -811,6 +829,7 @@
         }
       },
       "block_order": [
+        "slide_UrC77T",
         "slide_xtA8Ar"
       ],
       "settings": {
