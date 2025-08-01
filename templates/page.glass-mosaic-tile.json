@@ -14,52 +14,6 @@
       "disabled": true,
       "settings": {}
     },
-    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "<h1>GLASS MOSAIC TILE</h1>",
-            "title_size": 48,
-            "subheading": "",
-            "custom_text": "<p>Enhance your home with the elegant and timeless look of glass mosaics. From showers and backsplashes to pool waterlines, glass tiles offer lasting elegance with easy maintenance.</p>",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/glass-tile-hero_f8a1fd0d-b642-4929-ae25-21b4dd1ac72b.jpg",
-            "overlay_opacity": 12,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 40,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 30,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "bath-section-1"
-      }
-    },
     "slideshow_jVbpHL": {
       "type": "slideshow",
       "blocks": {
@@ -202,6 +156,53 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": "home-section-1"
+      }
+    },
+    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 48,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "overlay_opacity": 12,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 30,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "bath-section-1"
       }
     },
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31": {
@@ -897,8 +898,8 @@
   },
   "order": [
     "main",
-    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
     "slideshow_jVbpHL",
+    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31",
     "134ebd64-785a-4b27-876c-bf3928cf40da",
     "text_columns_custom_WxgULQ",
