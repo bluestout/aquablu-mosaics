@@ -136,7 +136,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
-            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
