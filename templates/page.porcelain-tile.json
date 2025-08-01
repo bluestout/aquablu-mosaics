@@ -133,6 +133,54 @@
         "css_class": ""
       }
     },
+    "slideshow_NLjTfM": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_BniPPA": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_BniPPA"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "72a08518-21a4-438f-a7fb-4a1eb35b2e91": {
       "type": "logo-list-custom-2",
       "blocks": {
@@ -1041,6 +1089,7 @@
   "order": [
     "main",
     "cf944a42-813d-4747-a042-3ee4590c930c",
+    "slideshow_NLjTfM",
     "72a08518-21a4-438f-a7fb-4a1eb35b2e91",
     "af26c9c7-2b03-47b8-9194-c6e7a2ef546c",
     "b440dcd1-76ba-410b-9425-cf270db58f30",
