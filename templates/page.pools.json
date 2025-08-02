@@ -131,6 +131,52 @@
         "css_class": ""
       }
     },
+    "6aba6d4d-7ea2-4075-a201-041564b8219d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459271807048__6aba6d4d-7ea2-4075-a201-041564b8219d-168130994261edee2f-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459271807048__6aba6d4d-7ea2-4075-a201-041564b8219d-168130994261edee2f-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "3dc6dc2d-eca0-4c56-acf5-b4f2aa539329": {
       "type": "promo-grid",
       "blocks": {
@@ -207,53 +253,6 @@
         "two_column_mobile": false,
         "three_column_mobile": true,
         "css_class": "blue-bar-overlay"
-      }
-    },
-    "6aba6d4d-7ea2-4075-a201-041564b8219d": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14459271807048__6aba6d4d-7ea2-4075-a201-041564b8219d-168130994261edee2f-1": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 50,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/Website_sale_banner_2.jpg",
-            "image_mobile": "shopify://shop_images/Website_sale_banner_2.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "bottom center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14459271807048__6aba6d4d-7ea2-4075-a201-041564b8219d-168130994261edee2f-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
       }
     },
     "text_columns_custom_VdCiNC": {
@@ -921,8 +920,8 @@
   "order": [
     "main",
     "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
-    "3dc6dc2d-eca0-4c56-acf5-b4f2aa539329",
     "6aba6d4d-7ea2-4075-a201-041564b8219d",
+    "3dc6dc2d-eca0-4c56-acf5-b4f2aa539329",
     "text_columns_custom_VdCiNC",
     "slideshow_97riEr",
     "69af82dc-9d1d-4fb5-9ee7-4c2d818ab72f",
