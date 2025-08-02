@@ -447,7 +447,6 @@
       "block_order": [
         "hero_tQBpWw"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
@@ -1189,10 +1188,10 @@
   "order": [
     "main",
     "hero_video_cmBq3h",
+    "slideshow_4L9jrJ",
     "slideshow_kKwnX8",
     "slideshow_X6jry3",
     "logo_list_custom_2_eqV3fh",
-    "slideshow_4L9jrJ",
     "featured_collections_custom_9rAKTw",
     "text_columns_custom_xpbabN",
     "text_columns_custom_mNmpg6",
