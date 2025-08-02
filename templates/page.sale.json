@@ -164,7 +164,6 @@
       "block_order": [
         "hero_Td9bdL"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
@@ -838,7 +837,7 @@
         "height_mobile": 450,
         "style": "arrows",
         "autoplay": true,
-        "autoplay_speed": 7,
+        "autoplay_speed": 5,
         "css_class": ""
       }
     },
