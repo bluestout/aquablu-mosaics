@@ -157,6 +157,52 @@
       "disabled": true,
       "settings": {}
     },
+    "slideshow_VjTHEg": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_Qa4Fy7": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/conservation",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_Qa4Fy7"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 3,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "f179439e-be50-4d2b-a6be-a59ea9fbd72a": {
       "type": "featured-collections-custom",
       "blocks": {
@@ -737,6 +783,7 @@
   "order": [
     "slideshow_pQakFB",
     "main",
+    "slideshow_VjTHEg",
     "f179439e-be50-4d2b-a6be-a59ea9fbd72a",
     "56f31711-acbd-4fe8-8510-44d72e4826a6",
     "dd55ec05-a69b-489b-aa4b-a94f69d5f8b8",
