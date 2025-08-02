@@ -94,7 +94,7 @@
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#fff",
+            "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
             "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
@@ -106,7 +106,6 @@
       "block_order": [
         "hero_Y6cXUV"
       ],
-      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
