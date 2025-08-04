@@ -271,7 +271,7 @@
         "divider": false,
         "gutter_size": 40,
         "space_above": true,
-        "space_below": false,
+        "space_below": true,
         "css_class": "home-section-2 logo-list-set-height border-radius-active"
       }
     },
