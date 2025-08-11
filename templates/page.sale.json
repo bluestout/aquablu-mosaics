@@ -792,6 +792,7 @@
       "blocks": {
         "slide_UrC77T": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "USE CODE 'FREETABLE' AT CHECKOUT",
             "title": "Free Kai In-Pool Side Table",
