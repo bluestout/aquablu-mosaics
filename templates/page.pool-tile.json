@@ -367,7 +367,7 @@
       ],
       "settings": {
         "full_width": false,
-        "heading": "SHOP BY MATERIAL",
+        "heading": "SHOP POOL TILE BY MATERIAL",
         "gutter_size": 20,
         "section_gutter_size": 40,
         "space_above": false,
@@ -481,7 +481,7 @@
       ],
       "settings": {
         "title": "",
-        "text": "<h2>SHOP BY COLOR</h2>",
+        "text": "<h2>SHOP POOL TILE BY COLOR</h2>",
         "column_size": 8,
         "align_text": "center",
         "gutter_size": 20,
@@ -596,7 +596,7 @@
       ],
       "settings": {
         "title": "",
-        "text": "<h2>SHOP BY SHAPE</h2>",
+        "text": "<h2>SHOP POOL TILE BY SHAPE</h2>",
         "column_size": 8,
         "align_text": "center",
         "gutter_size": 20,
@@ -813,7 +813,7 @@
         "collection_LchUzR"
       ],
       "settings": {
-        "title": "SHOP BY STYLE",
+        "title": "SHOP POOL TILE BY STYLE",
         "divider": false,
         "css_class": "exploring-pool-mosaic-grid"
       }
