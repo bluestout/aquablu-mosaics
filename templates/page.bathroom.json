@@ -391,7 +391,7 @@
       ],
       "settings": {
         "title": "",
-        "text": "<h2>SHOP BY COLOR</h2>",
+        "text": "<h2>SHOP BATHROOM TILE BY COLOR</h2>",
         "column_size": 8,
         "align_text": "center",
         "gutter_size": 30,
@@ -506,7 +506,7 @@
       ],
       "settings": {
         "title": "",
-        "text": "<h2>SHOP BY SHAPE</h2>",
+        "text": "<h2>SHOP BATHROOM TILE BY SHAPE</h2>",
         "column_size": 8,
         "align_text": "center",
         "gutter_size": 20,
@@ -886,7 +886,7 @@
         "collection_bg96Tt"
       ],
       "settings": {
-        "title": "SHOP BY MATERIAL",
+        "title": "SHOP BATHROOM TILE BY MATERIAL",
         "divider": false,
         "css_class": "exploring-pool-mosaic-grid"
       }
@@ -959,7 +959,7 @@
       ],
       "settings": {
         "full_width": false,
-        "heading": "SHOP BY APPLICATION",
+        "heading": "SHOP BATHROOM TILE BY APPLICATION",
         "gutter_size": 20,
         "section_gutter_size": 40,
         "space_above": true,
@@ -1040,7 +1040,7 @@
         "collection_XRNTWc"
       ],
       "settings": {
-        "title": "SHOP BY LOOK",
+        "title": "SHOP BATHROOM TILE BY LOOK",
         "divider": false,
         "css_class": "exploring-pool-mosaic-grid"
       }
