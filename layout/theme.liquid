@@ -82,6 +82,10 @@
 
   {%- render 'font-face' -%}
   {%- render 'css-variables' -%}
+
+  {% comment %} START - SEO - VIDEO SCHEMA MARKUP {% endcomment %}
+   {%- render 'seo-video-schema-markup' -%}
+  {% comment %} END - SEO - VIDEO SCHEMA MARKUP {% endcomment %}
   
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
   <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}" fetchpriority="high">  
