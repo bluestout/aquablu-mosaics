@@ -1,0 +1,39 @@
+{%- comment -%}
+  Video Schema Markup for SEO
+  This snippet fetches video schema markup entries from metaobjects
+  and outputs them for the current page path
+{%- endcomment -%}
+
+<script type="application/ld+json">
+  {%- assign matching_videos = '' -%}
+  {%- assign video_count = 0 -%}
+  {%- paginate shop.metaobjects.videos_schema_markup.values by 250 -%}
+    {%- for entry in shop.metaobjects.videos_schema_markup.values -%}
+      {%- assign page_link = entry.page_url | escape | replace: 'https://www.aquablumosaics.com', '' -%}
+      {%- assign current_path = request.path | escape | replace: 'https://www.aquablumosaics.com', '' -%}
+      {%- if current_path == page_link -%}
+        {%- assign video_count = video_count | plus: 1 -%}
+
+        {%- if video_count > 1 -%}
+          {%- assign matching_videos = matching_videos | append: ',' -%}
+        {%- endif -%}
+        {%- capture video_object -%}
+          {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "{{ entry.name | escape }}",
+            "thumbnailUrl": "{{ entry.thumbnail_url | escape }}",
+            "uploadDate": "{{ entry.uploaded_data | escape }}",
+            "contentURL": "{{ entry.content_url | escape }}"
+          }
+        {%- endcapture -%}
+        {%- assign matching_videos = matching_videos | append: video_object -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endpaginate -%}
+
+  {%- if video_count > 0 -%}
+  {{ matching_videos }}
+  {%- else -%}
+  {%- endif -%}
+</script>
