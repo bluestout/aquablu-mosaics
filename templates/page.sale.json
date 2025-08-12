@@ -217,11 +217,30 @@
             "focal_point": "center center",
             "color_scheme": "2"
           }
+        },
+        "slide_NQqLer": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "NO CODE NEEDED",
+            "title": "20% OFF FLOATING LUXURIES FURNITURE & POOL FLOATS",
+            "title_size": 40,
+            "subheading": "",
+            "link": "shopify://collections/floating-luxuries",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/FL600WE_-_Kai_Shelf_Lounger_-_Lifestyle_-_with_Kids_-_Fathers_day.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
         }
       },
       "block_order": [
         "slide_UrC77T",
-        "slide_xtA8Ar"
+        "slide_xtA8Ar",
+        "slide_NQqLer"
       ],
       "disabled": true,
       "settings": {
