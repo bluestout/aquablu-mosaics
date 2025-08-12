@@ -194,7 +194,7 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/AquaBlu_Mosaics.jpg",
+            "image": "shopify://shop_images/2_dae7cd90-3606-4471-9699-c0b475c7b0ff.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -222,6 +222,24 @@
           "type": "slide",
           "settings": {
             "top_subheading": "NO CODE NEEDED",
+            "title": "15% OFF SELECT LEDGE LOUNGER",
+            "title_size": 40,
+            "subheading": "",
+            "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Ledge_Lounger_Autograph_Chair_Luxury_Pool_Patio_Furniture.jpg",
+            "indent_image": false,
+            "focal_point": "bottom center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_CBLpzU": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "NO CODE NEEDED",
             "title": "20% OFF FLOATING LUXURIES FURNITURE & POOL FLOATS",
             "title_size": 40,
             "subheading": "",
@@ -240,7 +258,8 @@
       "block_order": [
         "slide_UrC77T",
         "slide_xtA8Ar",
-        "slide_NQqLer"
+        "slide_NQqLer",
+        "slide_CBLpzU"
       ],
       "disabled": true,
       "settings": {
