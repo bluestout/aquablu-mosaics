@@ -83,6 +83,11 @@
   {%- render 'font-face' -%}
   {%- render 'css-variables' -%}
 
+
+  {% comment %} START - SEO - BREADCRUMB SCHEMA MARKUP {% endcomment %}
+   {%- render 'seo-breadcrumb-schema-markup' -%}
+  {% comment %} END - SEO - BREADCRUMB SCHEMA MARKUP {% endcomment %}
+
   {% comment %} START - SEO - VIDEO SCHEMA MARKUP {% endcomment %}
    {%- render 'seo-video-schema-markup' -%}
   {% comment %} END - SEO - VIDEO SCHEMA MARKUP {% endcomment %}
