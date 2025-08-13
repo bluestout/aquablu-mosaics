@@ -184,6 +184,7 @@
       "blocks": {
         "slide_UrC77T": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "OUR BIGGEST SALE OF THE SUMMER",
             "title": "WORK HARD. SHOP SMART.",
@@ -202,6 +203,7 @@
         },
         "slide_qrYUE6": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "USE CODE LABORDAY10",
             "title": "10% OFF TILE AND STONE",
@@ -238,6 +240,7 @@
         },
         "slide_NQqLer": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "NO CODE NEEDED",
             "title": "15% OFF SELECT LEDGE LOUNGER",
@@ -256,6 +259,7 @@
         },
         "slide_CBLpzU": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "NO CODE NEEDED",
             "title": "20% OFF FLOATING LUXURIES FURNITURE & POOL FLOATS",
@@ -280,7 +284,6 @@
         "slide_NQqLer",
         "slide_CBLpzU"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 500,
@@ -470,8 +473,8 @@
     "a92b5673-5ac8-4e2e-a61a-78fb827cbc99",
     "slideshow_R84TV7",
     "slideshow_split_yT6kCR",
-    "slideshow_split_3AUTRr",
     "slideshow_mWYVFP",
+    "slideshow_split_3AUTRr",
     "04e68109-2078-419d-82cc-f5e0b128ccea",
     "99e0f1b0-4941-4132-9a64-a1becadfeb62",
     "250ca572-c602-47ec-89af-1e37d80bc33f"
