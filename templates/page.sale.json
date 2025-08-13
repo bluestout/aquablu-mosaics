@@ -194,7 +194,25 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/AquaBlu_Mosaics_1.jpg",
+            "image": "shopify://shop_images/AquaBlu_Mosaics.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_qrYUE6": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE LABOR10",
+            "title": "10% OFF TILE AND STONE",
+            "title_size": 40,
+            "subheading": "",
+            "link": "https://www.aquablumosaics.com/pages/tile-and-stone",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Zest_Sky_4_x_4_Ceramic_Tile_Backsplash_Shower_Tile2.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -247,7 +265,7 @@
             "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
-            "text_position": "right",
+            "text_position": "left",
             "image": "shopify://shop_images/FL600WE_-_Kai_Shelf_Lounger_-_Lifestyle_-_with_Kids_-_Fathers_day.jpg",
             "indent_image": false,
             "focal_point": "center center",
@@ -257,6 +275,7 @@
       },
       "block_order": [
         "slide_UrC77T",
+        "slide_qrYUE6",
         "slide_xtA8Ar",
         "slide_NQqLer",
         "slide_CBLpzU"
