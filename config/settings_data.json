@@ -74,7 +74,7 @@
     "favicon": "shopify://shop_images/favicon-32x32_26ee8f95-bb04-4aca-9646-6805c754aae9.png",
     "search_type": "product,article,page,collection",
     "search_top_collection": "",
-    "show_breadcrumbs": false,
+    "show_breadcrumbs": true,
     "show_breadcrumbs_collection_link": false,
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
@@ -679,11 +679,6 @@
       },
       "15154131639906026026": {
         "type": "shopify://apps/tinyseo/blocks/broken-link-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "17676059084223943535": {
-        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {}
       },
