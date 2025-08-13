@@ -242,7 +242,7 @@
             "top_subheading": "NO CODE NEEDED",
             "title": "15% OFF SELECT LEDGE LOUNGER",
             "title_size": 40,
-            "subheading": "Promotion ends 8/12/2025",
+            "subheading": "Promotion ends 9/3/2025",
             "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
             "link_text": "SHOP NOW",
             "link_2": "",
@@ -280,6 +280,7 @@
         "slide_NQqLer",
         "slide_CBLpzU"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 500,
