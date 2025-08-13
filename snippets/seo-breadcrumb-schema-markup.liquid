@@ -1,0 +1,154 @@
+{%- comment -%}
+  Breadcrumb Schema Markup for SEO
+  This snippet generates JSON-LD structured data for breadcrumbs
+  following Google's guidelines for BreadcrumbList schema
+{%- endcomment -%}
+
+{%- unless template.name == 'index' or template.name == 'cart' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ 'general.breadcrumbs.home' | t }}",
+      "item": "{{ shop.secure_url }}"
+    }
+    {%- assign position = 2 -%}
+    
+    {%- if template.name == 'product' -%}
+      {%- if collection -%}
+        {%- if settings.show_breadcrumbs_collection_link -%}
+          ,{
+            "@type": "ListItem",
+            "position": {{ position }},
+            "name": "{{ 'general.search.collections' | t | replace: ':', '' }}",
+            "item": "{{ shop.secure_url }}{{ routes.collections_url }}"
+          }
+          {%- assign position = position | plus: 1 -%}
+        {%- endif -%}
+        
+        {%- if collection.handle -%}
+          ,{
+            "@type": "ListItem",
+            "position": {{ position }},
+            "name": "{{ collection.title | escape }}",
+            "item": "{{ shop.secure_url }}{{ routes.collections_url }}/{{ collection.handle }}"
+          }
+          {%- assign position = position | plus: 1 -%}
+        {%- endif -%}
+      {%- endif -%}
+      
+      ,{
+        "@type": "ListItem",
+        "position": {{ position }},
+        "name": "{{ product.title | escape }}"
+      }
+      
+    {%- elsif template.name == 'collection' and collection.handle -%}
+      {%- if settings.show_breadcrumbs_collection_link -%}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ 'general.search.collections' | t | replace: ':', '' }}",
+          "item": "{{ shop.secure_url }}{{ routes.collections_url }}"
+        }
+        {%- assign position = position | plus: 1 -%}
+      {%- endif -%}
+      
+      {%- if current_tags -%}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ collection.title | escape }}",
+          "item": "{{ shop.secure_url }}{{ routes.collections_url }}/{{ collection.handle }}"
+        }
+        {%- assign position = position | plus: 1 -%}
+        
+        {%- for tag in current_tags -%}
+          {%- if tag contains "_" -%}
+            {%- assign tag_starts_with = tag | slice: 0 -%}
+            {%- if tag_starts_with == "_" -%}
+              {%- continue -%}
+            {%- endif -%}
+          {%- endif -%}
+          {%- assign tag_name = tag | strip -%}
+          {%- assign tag_text = tag_name | capitalize -%}
+          ,{
+            "@type": "ListItem",
+            "position": {{ position }},
+            "name": "{{ tag_text | escape }}"
+          }
+          {%- assign position = position | plus: 1 -%}
+        {%- endfor -%}
+      {%- else -%}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ collection.title | escape }}"
+        }
+      {%- endif -%}
+      
+    {%- elsif template.name == 'blog' -%}
+      {%- if current_tags -%}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ blog.title | escape }}",
+          "item": "{{ shop.secure_url }}{{ blog.url }}"
+        }
+        {%- assign position = position | plus: 1 -%}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ current_tags | join: ' + ' | escape }}"
+        }
+      {%- else -%}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ blog.title | escape }}"
+        }
+      {%- endif -%}
+      
+    {%- elsif template.name == 'article' -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ position }},
+        "name": "{{ blog.title | escape }}",
+        "item": "{{ shop.secure_url }}{{ blog.url }}"
+      }
+      {%- assign position = position | plus: 1 -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ position }},
+        "name": "{{ article.title | escape }}"
+      }
+      
+    {%- elsif template.name == 'page' -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ position }},
+        "name": "{{ page.title | escape }}"
+      }
+      
+    {%- elsif template.name == 'search' -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ position }},
+        "name": "{{ page_title | replace: '*', '' | escape }}"
+      }
+      
+    {%- else -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ position }},
+        "name": "{{ page_title | escape }}"
+      }
+    {%- endif -%}
+  ]
+}
+</script>
+{%- endunless -%} 
