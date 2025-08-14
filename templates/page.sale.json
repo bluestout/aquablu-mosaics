@@ -159,10 +159,35 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_dUxKjY": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "hero_Td9bdL"
+        "hero_Td9bdL",
+        "hero_dUxKjY"
       ],
       "settings": {
         "full_width": false,
@@ -189,13 +214,13 @@
             "top_subheading": "OUR BIGGEST SALE OF THE SUMMER",
             "title": "WORK HARD. SHOP SMART.",
             "title_size": 40,
-            "subheading": "",
+            "subheading": "Promotion ends 9/6/2025",
             "link": "",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/Labor_Day_Static_Final.jpg",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_1.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -205,16 +230,16 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "top_subheading": "USE CODE LABORDAY10",
-            "title": "10% OFF TILE AND STONE",
+            "top_subheading": "NO CODED NEEDED",
+            "title": "15% OFF TENJAM SPLASH PRODUCTS",
             "title_size": 40,
-            "subheading": "",
-            "link": "https://www.aquablumosaics.com/pages/tile-and-stone",
+            "subheading": "Promotion ends 9/1/2025",
+            "link": "shopify://collections/tenjam",
             "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/Zest_Sky_4_x_4_Ceramic_Tile_Backsplash_Shower_Tile2.jpg",
+            "image": "shopify://shop_images/Tenjam_Loungers_Outdoor_Furniture21_3946e5f0-2fd7-4549-965b-c9e200c4595a.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
