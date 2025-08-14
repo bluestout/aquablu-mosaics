@@ -140,10 +140,36 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_PbWhpw": {
+          "type": "hero",
+          "disabled": true,
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_2.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "template--14459271839816__2102c679-dbc1-401c-b7cc-7075043ab164-hero-1"
+        "template--14459271839816__2102c679-dbc1-401c-b7cc-7075043ab164-hero-1",
+        "hero_PbWhpw"
       ],
       "settings": {
         "full_width": false,
