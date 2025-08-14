@@ -310,7 +310,7 @@
         "slide_NQqLer"
       ],
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "height": 500,
         "height_mobile": 450,
         "style": "arrows",
