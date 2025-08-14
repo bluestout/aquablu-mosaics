@@ -162,6 +162,7 @@
         },
         "hero_dUxKjY": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -172,14 +173,14 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
-            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_2.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_2.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -209,7 +210,6 @@
       "blocks": {
         "slide_UrC77T": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "top_subheading": "OUR BIGGEST SALE OF THE SUMMER",
             "title": "WORK HARD. SHOP SMART.",
