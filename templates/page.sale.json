@@ -210,6 +210,7 @@
       "blocks": {
         "slide_UrC77T": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "OUR BIGGEST SALE OF THE SUMMER",
             "title": "WORK HARD. SHOP SMART.",
