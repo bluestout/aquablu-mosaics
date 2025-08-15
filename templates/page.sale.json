@@ -247,6 +247,7 @@
         },
         "slide_CBLpzU": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "NO CODE NEEDED",
             "title": "20% OFF FLOATING LUXURIES FURNITURE & POOL FLOATS",
