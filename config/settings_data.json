@@ -301,7 +301,7 @@
             "type": "mega_menu_resources",
             "settings": {
               "image1": "shopify://shop_images/megamenu_image_3.jpg",
-              "text1": "Trade Program",
+              "text1": "Trade Program & Commercial Projects",
               "link1": "shopify://pages/wholesale",
               "image2": "shopify://shop_images/Resources_Customer_Gallery.jpg",
               "text2": "Gallery",
@@ -606,6 +606,10 @@
           "sticky_index": false,
           "sticky_collection": false
         }
+      },
+      "breadcrumbs": {
+        "type": "breadcrumbs",
+        "settings": {}
       }
     },
     "content_for_index": [],
