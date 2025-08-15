@@ -89,7 +89,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/Oasis_Pool_Tile.jpg",
+        "image": "shopify://shop_images/Commercial_Furniture.jpg",
         "video_url": "",
         "image_width": 500,
         "subtitle": "",
@@ -100,7 +100,7 @@
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
-        "color_scheme": "1",
+        "color_scheme": "3",
         "divider": false,
         "new_layout": true,
         "css_class": ""
