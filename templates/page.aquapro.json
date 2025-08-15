@@ -20,25 +20,24 @@
         "template--14565132697672__7d022773-3460-4eb2-af2e-beac532f8ae9-16848427378267a2f6-0": {
           "type": "hero",
           "settings": {
-            "image_above_header": "shopify://shop_images/MicrosoftTeams-image_87c78625-79f6-4234-bba0-a7dd071ece3e.png",
-            "image_width": 350,
+            "image_width": 400,
             "html_embed": "",
-            "html_embed_two": "<p>In the business? Builders, contractors, architects, designers and other trades may be eligible to receive exclusive perks and discounted pricing. Apply below to become a VIP Trade Affiliate and enjoy the following key benefits.</p>",
+            "html_embed_two": "",
             "additional_text_field": "",
             "top_subheading": "",
             "title": "",
-            "title_size": 70,
+            "title_size": 40,
             "subheading": "",
             "custom_text": "",
             "link": "#app-embed",
             "link_text": "SIGN UP NOW",
             "link_2": "https://cdn.shopify.com/s/files/1/1205/7108/files/B2B_Brochure_2023.pdf?v=1697658997",
             "link_text_2": "DOWNLOAD PDF",
-            "color_accent": "#55ccd9",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/AquaPro_Trade_Network_Hero.jpg",
+            "color_accent": "#fcf4f1",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/AquaPro_Trade_Network_2.jpg",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "80% 50%"
           }
         }
       },
@@ -743,7 +742,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Screenshot_2023-01-19_at_3.51.00_PM.png",
             "image_width": 240,
             "title": "",
             "text": "<h3><strong>PRO SALES SUPPORT</strong></h3><p>Bio placeholder Copy Sdjvbsvsvcopy copy Dkcjwbnsdlicbfuwf Dijcaoidbcapwfwwff dchbfwdjchbwdfcw</p>",
@@ -755,7 +753,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Rob_Rodrick_blue_bg_2x_1f40f32b-207e-4140-ae5f-7777babe8202.png",
             "image_width": 240,
             "title": "",
             "text": "<h3><strong>PRO SALES SUPPORT</strong></h3><p>Bio placeholder Copy Sdjvbsvsvcopy copy Dkcjwbnsdlicbfuwf Dijcaoidbcapwfwwff dchbfwdjchbwdfcw</p>",
@@ -767,7 +764,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/team-member_5_2x_3d4ca141-75ab-4cc2-b455-3a72375c932f.png",
             "image_width": 240,
             "title": "",
             "text": "<h3><strong>FOUNDER, CEO</strong></h3><p>Bio placeholder Copy Sdjvbsvsvcopy copy Dkcjwbnsdlicbfuwf Dijcaoidbcapwfwwff dchbfwdjchbwdfcw</p>",
@@ -779,7 +775,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Screenshot_2023-01-19_at_3.55.34_PM_2x_3ae0c3a1-bd52-41a0-8eed-5af6d614b8ba.png",
             "image_width": 240,
             "title": "",
             "text": "<h3><strong>VP, SALES & MARKETING</strong></h3><p>Bio placeholder Copy Sdjvbsvsvcopy copy Dkcjwbnsdlicbfuwf Dijcaoidbcapwfwwff dchbfwdjchbwdfcw</p>",
