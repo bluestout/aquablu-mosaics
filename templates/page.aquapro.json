@@ -404,20 +404,128 @@
         "css_class": "aquapro-section-5"
       }
     },
+    "promo_grid_three_col_hQkWXf": {
+      "type": "promo-grid-three-col",
+      "blocks": {
+        "advanced_cNtYCL": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "High-End Tile. Ready for Your Business.",
+            "textarea": "We carry thousands of the industry’s finest pool tiles, sourced from top manufacturers for unmatched quality, style, and performance.",
+            "cta_text1": "Shop Pool Tile",
+            "cta_link1": "shopify://pages/pool-tile",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Loungers_5_update.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/918a91e18ba54be899de3a7bda7c51f6.mp4",
+            "width": "33",
+            "height": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "focal_point": "80% 100%",
+            "color_accent": "#fff"
+          }
+        },
+        "advanced_YQ8n4H": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
+          }
+        },
+        "simple_qmVB3a": {
+          "type": "simple",
+          "settings": {
+            "link": "",
+            "text": "",
+            "width": "50",
+            "height": 300
+          }
+        },
+        "simple_wQ84VC": {
+          "type": "simple",
+          "settings": {
+            "link": "",
+            "text": "",
+            "width": "33",
+            "height": 0
+          }
+        },
+        "image_MM7XWe": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_FjTVAC": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_tmd3wB": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "width": "100"
+          }
+        },
+        "image_BnKmqk": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "width": "100"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_cNtYCL",
+        "advanced_YQ8n4H",
+        "simple_qmVB3a",
+        "simple_wQ84VC",
+        "image_MM7XWe",
+        "image_FjTVAC",
+        "image_tmd3wB",
+        "image_BnKmqk"
+      ],
+      "disabled": true,
+      "name": "Promotion grid custom",
+      "settings": {
+        "full_width": false,
+        "heading": "Announce your promotion",
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "css_class": ""
+      }
+    },
     "02420eb2-8278-4ba0-9812-e30739c11004": {
       "type": "promo-grid",
       "blocks": {
         "3311b349-de65-4db9-851c-683d6e859a94": {
           "type": "advanced",
           "settings": {
-            "subheading": "Pool",
+            "subheading": "Pool Tile",
             "heading": "",
             "textarea": "",
             "cta_text1": "",
             "cta_link1": "shopify://pages/pool-products",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/In-Pool_Floats.jpg",
+            "image": "shopify://shop_images/VINTA-242-Fujiwa-Glacier-Blue-2-x-4-Porcelain-Pool-Tile-by-AquaBlu-Mosaics_3_jpg.jpg",
             "video_url": "",
             "width": "33",
             "height": 400,
@@ -988,6 +1096,7 @@
     "a271f570-8bbd-4bd1-bae8-b78549f755ec",
     "a0221dfd-a009-4ffc-96db-9f14737552da",
     "1695739605531b635e",
+    "promo_grid_three_col_hQkWXf",
     "02420eb2-8278-4ba0-9812-e30739c11004",
     "ccc637fa-dc90-4ce5-8f14-e89386213d7d",
     "c942c84b-e003-4a25-b7d2-7bbf8540a7ba",
