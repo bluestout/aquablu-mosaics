@@ -90,10 +90,11 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/affinity-2-piece-sun-chair-pool-patio-daybed-474395.jpg",
+        "video_url": "",
         "image_width": 500,
         "subtitle": "",
         "title": "PREMIUM PRODUCTS, BUILT FOR BUSINESS",
-        "text": "<p>From boutique hotels to expansive luxury resorts, AquaBlu Mosaics is the trusted source for premium tile, in-pool furnishings, and high-end finishes designed to impress and built to endure. Our extensive collection includes thousands of commercial-grade porcelain, glass, and natural stone tiles, as well as resort-quality loungers, umbrellas, and outdoor accents. Whether your project calls for a stunning mosaic feature wall, a sleek pool deck, or durable in-pool seating, we offer the selection, expertise, and service to bring your vision to life on any scale.</p>",
+        "text": "<p>From boutique hotels to expansive luxury resorts, AquaBlu Mosaics is the trusted source for premium tile, in-pool furnishings, and high-end finishes designed to impress and built to endure. Our extensive collection includes thousands of commercial-grade porcelain, glass, and natural stone tiles, as well as resort-quality loungers, umbrellas, and outdoor accents. </p><p>Whether your project calls for a stunning mosaic feature wall, a sleek pool deck, or durable in-pool seating, we offer the selection, expertise, and service to bring your vision to life on any scale.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
