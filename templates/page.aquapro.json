@@ -20,13 +20,13 @@
         "template--14565132697672__7d022773-3460-4eb2-af2e-beac532f8ae9-16848427378267a2f6-0": {
           "type": "hero",
           "settings": {
-            "image_width": 350,
+            "image_width": 390,
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
             "top_subheading": "",
             "title": "<p>AQUAPRO TRADE NETWORK</p>",
-            "title_size": 45,
+            "title_size": 50,
             "subheading": "",
             "custom_text": "<p>Trusted by architects, designers, and builders for exceptional commercial & residential projects nationwide.</p>",
             "link": "",
@@ -34,8 +34,8 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#55ccd9",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/AquaPro_Trade_Network.jpg",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/AquaPro_Landing_Page.jpg",
             "overlay_opacity": 8,
             "focal_point": "center center"
           }
