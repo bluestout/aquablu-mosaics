@@ -506,15 +506,15 @@
             "subheading": "",
             "heading": "",
             "textarea": "",
-            "cta_text1": "Pavers & Coping",
+            "cta_text1": "Pool & Patio Furniture",
             "cta_link1": "",
             "cta_text2": "",
             "cta_link2": "",
-            "video_url": "",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/48866679387543ee96f5f17414159f0e.mp4",
             "width": "33",
             "height": 100,
             "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
+            "focal_point": "80% 100%",
             "color_accent": "#ffffff"
           }
         },
