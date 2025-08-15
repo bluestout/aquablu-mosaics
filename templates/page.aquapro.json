@@ -20,29 +20,55 @@
         "template--14565132697672__7d022773-3460-4eb2-af2e-beac532f8ae9-16848427378267a2f6-0": {
           "type": "hero",
           "settings": {
-            "image_width": 400,
+            "image_width": 350,
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
             "top_subheading": "",
+            "title": "<p>AQUAPRO TRADE NETWORK</p>",
+            "title_size": 45,
+            "subheading": "",
+            "custom_text": "<p>Trusted by architects, designers, and builders for exceptional commercial & residential projects nationwide.</p>",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#55ccd9",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/AquaPro_Trade_Network.jpg",
+            "overlay_opacity": 8,
+            "focal_point": "center center"
+          }
+        },
+        "hero_7ytnmG": {
+          "type": "hero",
+          "disabled": true,
+          "settings": {
+            "image_above_header": "shopify://shop_images/MicrosoftTeams-image_87c78625-79f6-4234-bba0-a7dd071ece3e.png",
+            "image_width": 350,
+            "html_embed": "",
+            "html_embed_two": "<p>In the business? Builders, contractors, architects, designers and other trades may be eligible to receive exclusive perks and discounted pricing. Apply below to become a VIP Trade Affiliate and enjoy the following key benefits.</p>",
+            "additional_text_field": "",
+            "top_subheading": "",
             "title": "",
-            "title_size": 40,
+            "title_size": 70,
             "subheading": "",
             "custom_text": "",
             "link": "#app-embed",
             "link_text": "SIGN UP NOW",
             "link_2": "https://cdn.shopify.com/s/files/1/1205/7108/files/B2B_Brochure_2023.pdf?v=1697658997",
             "link_text_2": "DOWNLOAD PDF",
-            "color_accent": "#fcf4f1",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/AquaPro_Trade_Network_2.jpg",
+            "color_accent": "#55ccd9",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/AquaPro_Trade_Network_Hero.jpg",
             "overlay_opacity": 0,
-            "focal_point": "80% 50%"
+            "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "template--14565132697672__7d022773-3460-4eb2-af2e-beac532f8ae9-16848427378267a2f6-0"
+        "template--14565132697672__7d022773-3460-4eb2-af2e-beac532f8ae9-16848427378267a2f6-0",
+        "hero_7ytnmG"
       ],
       "settings": {
         "full_width": true,
@@ -59,6 +85,26 @@
         "css_class": "aquapro-section-1"
       }
     },
+    "text_and_image_d9prDQ": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Commercial_Landing_Page.png",
+        "image_width": 500,
+        "subtitle": "",
+        "title": "PREMIUM PRODUCTS, BUILT FOR BUSINESS",
+        "text": "<p>From boutique hotels to expansive luxury resorts, AquaBlu Mosaics is the trusted source for premium tile, in-pool furnishings, and high-end finishes designed to impress and built to endure. Our extensive collection includes thousands of commercial-grade porcelain, glass, and natural stone tiles, as well as resort-quality loungers, umbrellas, and outdoor accents. Whether your project calls for a stunning mosaic feature wall, a sleek pool deck, or durable in-pool seating, we offer the selection, expertise, and service to bring your vision to life on any scale.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "3",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
+      }
+    },
     "3f212183-3ae0-4fab-b50f-157f64bc43b7": {
       "type": "text-columns",
       "blocks": {
@@ -67,8 +113,8 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/ABM_Samples.png",
-            "image_width": 120,
-            "title": "FREE SAMPLES",
+            "image_width": 140,
+            "title": "FREE & SAMPLES",
             "text": "<p>Feel confident in your purchases</p>",
             "button_label": "",
             "button_link": ""
@@ -150,7 +196,7 @@
         "align_text": "center",
         "three_col_mobile": false,
         "divider": false,
-        "color_scheme": "none",
+        "color_scheme": "2",
         "css_class": "aquapro-section-2"
       }
     },
@@ -936,6 +982,7 @@
   "order": [
     "main",
     "7d022773-3460-4eb2-af2e-beac532f8ae9",
+    "text_and_image_d9prDQ",
     "3f212183-3ae0-4fab-b50f-157f64bc43b7",
     "slideshow_8p9Ujd",
     "a271f570-8bbd-4bd1-bae8-b78549f755ec",
