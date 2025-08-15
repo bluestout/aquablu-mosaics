@@ -1,1 +1,102 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"d8ce75e4-cf19-446d-bb70-b00e7fde0aad":{"type":"slideshow","blocks":{"template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-0":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"","top_subheading":"","title":"<p>Contact Us<\/p>","title_size":66,"subheading":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"#fff","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/Contact-Us-Hero.jpg","overlay_opacity":10,"focal_point":"center center"}},"template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-1":{"type":"hero","settings":{"image_width":650,"html_embed":"","html_embed_two":"","additional_text_field":"And optional subtext","top_subheading":"","title":"<p>Make an Impact<\/p>","title_size":70,"subheading":"Supports multiple text alignments and mobile-specific images.","link":"","link_text":"Optional button","link_2":"","link_text_2":"","color_accent":"#fff","text_align":"vertical-center horizontal-center","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-0","template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-1"],"settings":{"full_width":true,"desktop_size":-10,"mobile_size":-10,"style":"minimal","autoplay":false,"autoplay_speed":7,"css_class":""}},"form":{"type":"contact-form","settings":{"title":"","text":"<p>Have a question that you would like us to answer? Need help creating a one-of-a-kind custom mosaic? Looking for discounts on a large order?<\/p><p>We can help! Get quick and easy answers about products or your order status via LIVE chat. AquaBlu Team Members are available to answer your questions from 9am-5pm. <\/p>","show_phone":true,"narrow_column":true,"color_scheme":"2","css_class":""}}},"order":["main","d8ce75e4-cf19-446d-bb70-b00e7fde0aad","form"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "d8ce75e4-cf19-446d-bb70-b00e7fde0aad": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-0": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "<p>Contact Us</p>",
+            "title_size": 66,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/AquaPro_Landing_Page.jpg",
+            "overlay_opacity": 10,
+            "focal_point": "center center"
+          }
+        },
+        "template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-1": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "top_subheading": "",
+            "title": "<p>Make an Impact</p>",
+            "title_size": 70,
+            "subheading": "Supports multiple text alignments and mobile-specific images.",
+            "custom_text": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-0",
+        "template--14459270758472__d8ce75e4-cf19-446d-bb70-b00e7fde0aad-1687617312b34b6490-1"
+      ],
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": -10,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": -10,
+        "style": "minimal",
+        "autoplay": false,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "",
+        "text": "<p>Have a question that you would like us to answer? Need help creating a one-of-a-kind custom mosaic? Looking for discounts on a large order?</p><p>We can help! Get quick and easy answers about products or your order status via LIVE chat. AquaBlu Team Members are available to answer your questions from 9am-5pm. </p>",
+        "show_phone": true,
+        "narrow_column": true,
+        "color_scheme": "2",
+        "css_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d8ce75e4-cf19-446d-bb70-b00e7fde0aad",
+    "form"
+  ]
+}
