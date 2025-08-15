@@ -89,7 +89,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/Commercial_Test.jpg",
+        "image": "shopify://shop_images/Commercial_Test_1.jpg",
         "image_width": 500,
         "subtitle": "",
         "title": "PREMIUM PRODUCTS, BUILT FOR BUSINESS",
