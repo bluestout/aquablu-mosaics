@@ -413,35 +413,36 @@
             "subheading": "",
             "heading": "High-End Tile. Ready for Your Business.",
             "textarea": "We carry thousands of the industry’s finest pool tiles, sourced from top manufacturers for unmatched quality, style, and performance.",
-            "cta_text1": "Shop Pool Tile",
+            "cta_text1": "Pool Tile",
             "cta_link1": "shopify://pages/pool-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Loungers_5_update.jpg",
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/918a91e18ba54be899de3a7bda7c51f6.mp4",
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
+            "video_url": "",
             "width": "33",
             "height": 100,
-            "text_align": "vertical-bottom horizontal-left",
-            "focal_point": "80% 100%",
+            "text_align": "vertical-top horizontal-right",
+            "focal_point": "20% 0",
             "color_accent": "#fff"
           }
         },
-        "advanced_YQ8n4H": {
+        "advanced_GKBQki": {
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "Fire Features",
             "cta_link1": "",
-            "cta_text2": "Shop All",
+            "cta_text2": "",
             "cta_link2": "",
+            "image": "shopify://shop_images/Manchester_Fire_Pit_by_the_Outdoor_Plus_3_1800x1800_22149991-ef5d-45eb-ae39-2167a85507c9.webp",
             "video_url": "",
-            "width": "50",
+            "width": "100",
             "height": 500,
             "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#fff"
+            "focal_point": "80% 50%",
+            "color_accent": "#ffffff"
           }
         },
         "simple_qmVB3a": {
@@ -462,51 +463,38 @@
             "height": 0
           }
         },
-        "image_MM7XWe": {
-          "type": "image",
+        "advanced_YQ8n4H": {
+          "type": "advanced",
           "settings": {
-            "link": "",
-            "width": "100"
-          }
-        },
-        "image_FjTVAC": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "width": "100"
-          }
-        },
-        "image_tmd3wB": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "width": "100"
-          }
-        },
-        "image_BnKmqk": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "width": "100"
+            "subheading": "",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "Umbrellas",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/918a91e18ba54be899de3a7bda7c51f6.mp4",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
           }
         }
       },
       "block_order": [
         "advanced_cNtYCL",
-        "advanced_YQ8n4H",
+        "advanced_GKBQki",
         "simple_qmVB3a",
         "simple_wQ84VC",
-        "image_MM7XWe",
-        "image_FjTVAC",
-        "image_tmd3wB",
-        "image_BnKmqk"
+        "advanced_YQ8n4H"
       ],
       "disabled": true,
       "name": "Promotion grid custom",
       "settings": {
-        "full_width": false,
-        "heading": "Announce your promotion",
-        "gutter_size": 20,
+        "full_width": true,
+        "heading": "POPULAR CATEGORIES",
+        "gutter_size": 9,
         "space_above": true,
         "space_below": true,
         "css_class": ""
