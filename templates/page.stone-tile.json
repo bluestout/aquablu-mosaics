@@ -115,6 +115,7 @@
       "block_order": [
         "hero_M38K3M"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
