@@ -246,22 +246,21 @@
             "color_scheme": "2"
           }
         },
-        "slide_CBLpzU": {
+        "slide_NQqLer": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "top_subheading": "NO CODE NEEDED",
-            "title": "20% OFF FLOATING LUXURIES FURNITURE & POOL FLOATS",
+            "title": "15% OFF SELECT LEDGE LOUNGER",
             "title_size": 40,
-            "subheading": "Promotion ends 8/18/2025",
-            "link": "shopify://collections/floating-luxuries",
+            "subheading": "Promotion ends 9/3/2025",
+            "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
             "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
-            "text_position": "left",
-            "image": "shopify://shop_images/FL600WE_-_Kai_Shelf_Lounger_-_Lifestyle_-_with_Kids_-_Fathers_day.jpg",
+            "text_position": "right",
+            "image": "shopify://shop_images/Ledge-Lounger-Autograph-Chaise_7e6f816b-7a20-4fa2-bd41-04665caa2b57.jpg",
             "indent_image": false,
-            "focal_point": "center center",
+            "focal_point": "bottom center",
             "color_scheme": "2"
           }
         },
@@ -282,33 +281,13 @@
             "focal_point": "center center",
             "color_scheme": "2"
           }
-        },
-        "slide_NQqLer": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "NO CODE NEEDED",
-            "title": "15% OFF SELECT LEDGE LOUNGER",
-            "title_size": 40,
-            "subheading": "Promotion ends 9/3/2025",
-            "link": "shopify://collections/ledge-lounger-outdoor-pool-and-patio-furniture",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Ledge-Lounger-Autograph-Chaise_7e6f816b-7a20-4fa2-bd41-04665caa2b57.jpg",
-            "indent_image": false,
-            "focal_point": "bottom center",
-            "color_scheme": "2"
-          }
         }
       },
       "block_order": [
         "slide_UrC77T",
         "slide_qrYUE6",
-        "slide_CBLpzU",
-        "slide_xtA8Ar",
-        "slide_NQqLer"
+        "slide_NQqLer",
+        "slide_xtA8Ar"
       ],
       "settings": {
         "full_width": false,
