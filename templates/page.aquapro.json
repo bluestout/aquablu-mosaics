@@ -905,11 +905,30 @@
             "focal_point": "20% 0",
             "color_scheme": "2"
           }
+        },
+        "slide_Yf8me6": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Where Fun Meets Luxury",
+            "title_size": 40,
+            "subheading": "Transform residential and commercial outdoor spaces with curated entertainment that exudes elegance and style.",
+            "link": "shopify://collections/pool-and-patio-entertainment",
+            "link_text": "Bring On The Fun",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/ping_pong_15505a08-d8e1-415e-9b6b-8f31fb31f772.jpg",
+            "indent_image": false,
+            "focal_point": "20% 50%",
+            "color_scheme": "2"
+          }
         }
       },
       "block_order": [
         "slide_gtLbVW",
-        "slide_LXJirF"
+        "slide_LXJirF",
+        "slide_Yf8me6"
       ],
       "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
