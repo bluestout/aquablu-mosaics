@@ -923,12 +923,31 @@
             "focal_point": "20% 50%",
             "color_scheme": "2"
           }
+        },
+        "slide_FGbaW9": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "From In-Pool Comfort to Outdoor Warmth",
+            "title": "Made in USA",
+            "title_size": 40,
+            "subheading": "Discover our curated selection of Made-in-USA products, crafted for durability, style, and outdoor living excellence.",
+            "link": "shopify://collections/made-in-america-products",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/20240611_Tupelo_Proof_1.Outside_Pool.290.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
         }
       },
       "block_order": [
         "slide_gtLbVW",
         "slide_LXJirF",
-        "slide_Yf8me6"
+        "slide_Yf8me6",
+        "slide_FGbaW9"
       ],
       "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
