@@ -602,10 +602,9 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_MC4xxM"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
-        "space_around": true,
+        "space_around": false,
         "css_class": ""
       }
     },
@@ -809,6 +808,7 @@
         "afff2e6a-9dc7-4139-8884-59f383bdb8d9",
         "40f13ac4-db41-4d36-9ceb-699e468fa2c1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "EXPLORE THE POSSIBILITIES",
