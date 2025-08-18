@@ -867,6 +867,61 @@
         "css_class": "aquapro-section-1"
       }
     },
+    "slideshow_split_8WPj6b": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_gtLbVW": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Tile & Stone",
+            "title_size": 40,
+            "subheading": "From intimate bars to grand restaurants, our tile and stone bring a touch of luxury to every surface.",
+            "link": "",
+            "link_text": "Shop Our Selection",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/amb-restaurante-kit-kat-water-glossy-2000x-web.jpg",
+            "indent_image": false,
+            "focal_point": "20% 50%",
+            "color_scheme": "2"
+          }
+        },
+        "slide_LXJirF": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "from dream to design",
+            "title": "Customize It",
+            "title_size": 40,
+            "subheading": "Can’t find exactly what you’re looking for? Elevate every detail with our bespoke custom products and expert guidance.",
+            "link": "https://www.aquablumosaics.com/pages/custom-mosaics",
+            "link_text": "Start Designing",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Custom_Mosaic_Murals_by_AquaBlu_Mosaics.jpg",
+            "indent_image": false,
+            "focal_point": "20% 0",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_gtLbVW",
+        "slide_LXJirF"
+      ],
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "height": 450,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "css_class": ""
+      }
+    },
     "ccc637fa-dc90-4ce5-8f14-e89386213d7d": {
       "type": "text-and-image",
       "settings": {
@@ -1198,6 +1253,7 @@
     "28f0875e-60d7-4a75-8f30-ae1b9a267557",
     "02420eb2-8278-4ba0-9812-e30739c11004",
     "slideshow_8p9Ujd",
+    "slideshow_split_8WPj6b",
     "ccc637fa-dc90-4ce5-8f14-e89386213d7d",
     "c942c84b-e003-4a25-b7d2-7bbf8540a7ba",
     "6b4f7b64-8a1c-4458-9603-6e3ba5674470",
