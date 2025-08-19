@@ -26,7 +26,7 @@
             "additional_text_field": "",
             "top_subheading": "CREATE YOUR DREAM",
             "title": "<p>SWIMMING POOL PARADISE</p>",
-            "title_size": 50,
+            "title_size": 40,
             "subheading": "",
             "custom_text": "",
             "link": "",
@@ -35,7 +35,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/pool_products.png",
+            "image": "shopify://shop_images/Pool_Products_Final.jpg",
             "overlay_opacity": 12,
             "focal_point": "center center"
           }
