@@ -60,8 +60,8 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Pool_Tile_Home_page.jpg",
-            "overlay_opacity": 16,
+            "image": "shopify://shop_images/Pool_Tile_by_Bisazza.jpg",
+            "overlay_opacity": 6,
             "focal_point": "center center"
           }
         },
