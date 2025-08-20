@@ -48,14 +48,14 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
-            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -64,7 +64,6 @@
       "block_order": [
         "hero_tQBpWw"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
