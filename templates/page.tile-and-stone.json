@@ -440,7 +440,7 @@
         "space_below": true,
         "two_column_mobile": false,
         "three_column_mobile": false,
-        "css_class": ".promo-grid__item {  position: relative;  overflow: hidden;}.promo-grid__item::after {  content: \"\";  position: absolute;  inset: 0;  background: rgba(0, 0, 0, 0);  transition: background 0.3s ease;  z-index: 1;}.promo-grid__item * {  position: relative;  z-index: 2;}.promo-grid__item:hover::after {  background: rgba(0, 0, 0, 0.35);}"
+        "css_class": "[data-section-type=\"promo-grid\"] .promo-grid__item {  position: relative;  overflow: hidden;}[data-section-type=\"promo-grid\"] .promo-grid__item::after {  content: \"\";  position: absolute;  inset: 0;  background: rgba(0, 0, 0, 0); /* Start transparent */  transition: background 0.3s ease;  z-index: 1;}[data-section-type=\"promo-grid\"] .promo-grid__item * {  position: relative;  z-index: 2;}[data-section-type=\"promo-grid\"] .promo-grid__item:hover::after {  background: rgba(0, 0, 0, 0.35); /* Dark overlay on hover */}"
       }
     },
     "main": {
