@@ -145,7 +145,7 @@
         "full_width": true,
         "full_width_mobile": false,
         "contact_popup": false,
-        "desktop_size": 0,
+        "desktop_size": 5,
         "gutter_size": 20,
         "space_above": false,
         "space_below": true,
@@ -154,6 +154,26 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": "all-glass-tile-section-8"
+      }
+    },
+    "text_and_image_CkqeHL": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Bathroom_Landing_2.jpg",
+        "image_width": 500,
+        "subtitle": "",
+        "title": "Give Your Bathroom the Glow-Up It Deserves",
+        "text": "<p>Bathroom tile is more than a protective surface - it’s a way to express your style and elevate your space. From timeless ceramic and porcelain to modern glass and stone, the right tile can transform your bathroom into a functional work of art. Choose from classic subway tiles, intricate mosaics, or trendy fluted designs to complement vanities, fixtures, and flooring while standing up to daily use.</p><p>Our curated collection makes it easy to select the perfect tile with guidance on materials, colors, and quantities. Explore our selection and discover how the right bathroom tile can enhance your home’s design, add lasting value, and create a space you’ll love for years to come.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "3",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
       }
     },
     "ee6a77e5-a918-4f22-81e3-69864c2ea251": {
@@ -517,324 +537,6 @@
         "css_class": ""
       }
     },
-    "224a9186-429e-4229-a215-a2d6291c94af": {
-      "type": "promo-grid",
-      "blocks": {
-        "3bf20897-7b43-441d-96b7-209d8a3bce56": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "GLASS BATHROOM TILE",
-            "textarea": "",
-            "cta_text1": "SHOP NOW",
-            "cta_link1": "shopify://collections/glass-bathroom-tiles",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Vidrepur-Soul-MatteTurquois-1024-x-1024_c9721d73-c1f7-46e1-84ef-2076ce672651.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "22c0a677-1183-45ec-a24d-98550256a040": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "PORCELAIN BATHROOM TILE",
-            "textarea": "",
-            "cta_text1": "SHOP NOW",
-            "cta_link1": "shopify://collections/porcelain-bathroom-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/porcelainbath.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "advanced_YQGbyh": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "ALL BATHROOM TILE",
-            "textarea": "",
-            "cta_text1": "SHOP NOW",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        }
-      },
-      "block_order": [
-        "3bf20897-7b43-441d-96b7-209d8a3bce56",
-        "22c0a677-1183-45ec-a24d-98550256a040",
-        "advanced_YQGbyh"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "heading": "",
-        "gutter_size": 20,
-        "section_gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "two_column_mobile": true,
-        "three_column_mobile": false,
-        "css_class": "home-section-5"
-      }
-    },
-    "112b2bb6-d98a-46df-80b4-3c2d732a3e87": {
-      "type": "promo-grid-three-col",
-      "blocks": {
-        "template--14565132828744__112b2bb6-d98a-46df-80b4-3c2d732a3e87-1683813545d9ed08f8-0": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "NEW & TRENDING BATHROOM TILE",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/new-and-trending-bathroom-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Bath-floor-Hex-CMYK_2x_46e9917c-b09c-4a72-8b59-ccd4a31656f1.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "template--14565132828744__112b2bb6-d98a-46df-80b4-3c2d732a3e87-1683813545d9ed08f8-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "3D TILES",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/3d-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/VI6733_1_2x_4fde5f7c-42e9-41f7-afea-b32b2adc20ff.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "cab62e0b-9f63-4adb-95b8-35e5980cc2d6": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "PENNY ROUND",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/penny-round-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/sicis.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "30a96c47-ccc7-4ed2-94d7-d761c9d6a80b": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "NEUTRALS",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/neutral-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Vidrepur-Antartica-Snow-1024-x-1024_2x_b57becf4-80b8-4b43-8d5f-5a2ea67e1f31.png",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "e4132645-7633-4758-930b-26c177ffacce": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "SLIP-RESISTANT GLASS",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/slip-resistant-glass-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/800x800-Anti-Slip-Tile-_AquaBlu-Mosaics.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 300,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132828744__112b2bb6-d98a-46df-80b4-3c2d732a3e87-1683813545d9ed08f8-0",
-        "template--14565132828744__112b2bb6-d98a-46df-80b4-3c2d732a3e87-1683813545d9ed08f8-1",
-        "cab62e0b-9f63-4adb-95b8-35e5980cc2d6",
-        "30a96c47-ccc7-4ed2-94d7-d761c9d6a80b",
-        "e4132645-7633-4758-930b-26c177ffacce"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "heading": "FEATURED COLLECTIONS",
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": true,
-        "css_class": "blue-bar-overlay bath-section-3 grid-column-stack"
-      }
-    },
-    "068db4f3-ad3d-473e-ad0b-85335d634734": {
-      "type": "slideshow",
-      "blocks": {
-        "18656b47-13e8-4c76-b2b1-757fc0ae5229": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/samples",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Samples-banner-1.jpg",
-            "image_mobile": "shopify://shop_images/samples-mobile_1687826e-1b07-4853-b056-ca85e0685048.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "18656b47-13e8-4c76-b2b1-757fc0ae5229"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 15,
-        "space_above": true,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "dea94801-e262-4688-903f-5251dc2f193b": {
-      "type": "slideshow-image",
-      "blocks": {
-        "template--14565132828744__dea94801-e262-4688-903f-5251dc2f193b-1684261330d0943803-0": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image": "shopify://shop_images/get-inspired.jpg"
-          }
-        },
-        "1c70af78-8f13-44e5-b481-e12d647a9781": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image": "shopify://shop_images/get-inspired-7.jpg"
-          }
-        },
-        "04c8d8c9-7a5a-414f-bb0b-8a1cff4ee754": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image": "shopify://shop_images/get-inspired-1.jpg"
-          }
-        },
-        "cfd2bcd0-6dcd-485f-90ce-dd06d5175687": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image": "shopify://shop_images/get-inspired-6.jpg"
-          }
-        },
-        "2da17030-d6f1-4603-b87e-f5441bcfbd7a": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image": "shopify://shop_images/get-inspired-5.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132828744__dea94801-e262-4688-903f-5251dc2f193b-1684261330d0943803-0",
-        "1c70af78-8f13-44e5-b481-e12d647a9781",
-        "04c8d8c9-7a5a-414f-bb0b-8a1cff4ee754",
-        "cfd2bcd0-6dcd-485f-90ce-dd06d5175687",
-        "2da17030-d6f1-4603-b87e-f5441bcfbd7a"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "bath-section-5"
-      }
-    },
-    "advanced_content_LU6Jt9": {
-      "type": "advanced-content",
-      "blocks": {
-        "liquid_HaBCUB": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"6635799ef10615204069aae4\">\n</div>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "liquid_HaBCUB"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": ""
-      }
-    },
     "featured_collections_custom_tXNdQN": {
       "type": "featured-collections-custom",
       "blocks": {
@@ -1045,75 +747,6 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
-    "cd43655b-0754-4426-a7e9-6d01556caab3": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14565132828744__cd43655b-0754-4426-a7e9-6d01556caab3-168425414418ba19ac-1": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "And optional subtext",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/tile-grout",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/shop-grout.jpg",
-            "image_mobile": "shopify://shop_images/groutmobile.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132828744__cd43655b-0754-4426-a7e9-6d01556caab3-168425414418ba19ac-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": true,
-        "desktop_size": 0,
-        "gutter_size": 30,
-        "space_above": true,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "d3e9d536-82ea-46ba-a582-472858d2be95": {
-      "type": "rich-text",
-      "blocks": {
-        "template--14565132828744__d3e9d536-82ea-46ba-a582-472858d2be95-1684261561dbe0f0c4-0": {
-          "type": "heading",
-          "settings": {
-            "title": "GET INSPIRED"
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132828744__d3e9d536-82ea-46ba-a582-472858d2be95-1684261561dbe0f0c4-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "color_scheme": "2",
-        "divider": false,
-        "css_class": "bath-section-4"
-      }
-    },
     "64c45b5f-5f0c-4872-b99e-ddd84472b0f1": {
       "type": "featured-collection-carousel",
       "disabled": true,
@@ -1218,21 +851,15 @@
   "order": [
     "main",
     "4b14a52d-a335-4150-a686-c3bde3e48acd",
+    "text_and_image_CkqeHL",
     "ee6a77e5-a918-4f22-81e3-69864c2ea251",
     "logo_list_custom_2_4PTFkb",
     "c2bbc6e9-2fd9-4a77-8f3f-02f25c6671ca",
     "text_columns_custom_Q8d9qh",
-    "224a9186-429e-4229-a215-a2d6291c94af",
-    "112b2bb6-d98a-46df-80b4-3c2d732a3e87",
-    "068db4f3-ad3d-473e-ad0b-85335d634734",
-    "dea94801-e262-4688-903f-5251dc2f193b",
-    "advanced_content_LU6Jt9",
     "featured_collections_custom_tXNdQN",
     "promo_grid_RqaJFg",
     "0d909433-0909-429c-86cc-588ca215f068",
     "featured_collections_custom_3DaeXn",
-    "cd43655b-0754-4426-a7e9-6d01556caab3",
-    "d3e9d536-82ea-46ba-a582-472858d2be95",
     "64c45b5f-5f0c-4872-b99e-ddd84472b0f1",
     "faq_CkyJNM"
   ]
