@@ -788,7 +788,7 @@
         "full_width": false,
         "heading": "START WITH A SOLID FOUNDATION",
         "gutter_size": 20,
-        "section_gutter_size": 40,
+        "section_gutter_size": 20,
         "space_above": false,
         "space_below": true,
         "two_column_mobile": false,
