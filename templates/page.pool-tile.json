@@ -762,8 +762,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "",
-            "textarea": "TILE GROUT",
+            "heading": "TILE GROUT",
+            "textarea": "DDD",
             "cta_text1": "",
             "cta_link1": "shopify://collections/tile-grout",
             "cta_text2": "",
@@ -774,7 +774,7 @@
             "height": 400,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
-            "color_accent": "#ffffff"
+            "color_accent": "rgba(0,0,0,0)"
           }
         }
       },
@@ -783,9 +783,8 @@
         "advanced_BWGV8x",
         "advanced_KA3qj6"
       ],
-      "custom_css": [
-        "h2 {margin-top: 50px;}"
-      ],
+      "disabled": true,
+      "custom_css": [],
       "settings": {
         "full_width": false,
         "heading": "START WITH A SOLID FOUNDATION",
@@ -794,8 +793,8 @@
         "space_above": false,
         "space_below": true,
         "two_column_mobile": false,
-        "three_column_mobile": true,
-        "css_class": "blue-bar-overlay"
+        "three_column_mobile": false,
+        "css_class": ""
       }
     },
     "text_and_image_EUGDL9": {
