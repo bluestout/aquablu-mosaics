@@ -156,26 +156,6 @@
         "css_class": "all-glass-tile-section-8"
       }
     },
-    "text_and_image_CkqeHL": {
-      "type": "text-and-image",
-      "name": "t:sections.text-and-image.presets.image_with_text.name",
-      "settings": {
-        "image": "shopify://shop_images/Bathroom_Landing_1.jpg",
-        "image_width": 500,
-        "subtitle": "Bathroom Tile for Floors, Walls & Showers",
-        "title": "",
-        "text": "<p>Bathroom tile is more than a protective surface - it’s a way to express your style and elevate your space. From timeless ceramic and porcelain to modern glass and stone, the right tile can transform your bathroom into a functional work of art. Choose from classic subway tiles, intricate mosaics, or trendy fluted designs to complement vanities, fixtures, and flooring while standing up to daily use.</p><p>Our curated collection makes it easy to select the perfect tile with guidance on materials, colors, and quantities. Explore our selection and discover how the right bathroom tile can enhance your home’s design, add lasting value, and create a space you’ll love for years to come.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "color_scheme": "3",
-        "divider": false,
-        "new_layout": true,
-        "css_class": ""
-      }
-    },
     "ee6a77e5-a918-4f22-81e3-69864c2ea251": {
       "type": "slideshow",
       "blocks": {
@@ -214,12 +194,32 @@
         "desktop_size": 0,
         "gutter_size": 20,
         "space_above": false,
-        "space_below": true,
+        "space_below": false,
         "mobile_size": 30,
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": "bath-section-1"
+      }
+    },
+    "text_and_image_CkqeHL": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Bathroom_Landing_1.jpg",
+        "image_width": 500,
+        "subtitle": "Bathroom Tile for Floors, Walls & Showers",
+        "title": "",
+        "text": "<p>Bathroom tile is more than a protective surface - it’s a way to express your style and elevate your space. From timeless ceramic and porcelain to modern glass and stone, the right tile can transform your bathroom into a functional work of art. Choose from classic subway tiles, intricate mosaics, or trendy fluted designs to complement vanities, fixtures, and flooring while standing up to daily use.</p><p>Our curated collection makes it easy to select the perfect tile with guidance on materials, colors, and quantities. Explore our selection and discover how the right bathroom tile can enhance your home’s design, add lasting value, and create a space you’ll love for years to come.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "3",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
       }
     },
     "logo_list_custom_2_4PTFkb": {
@@ -851,8 +851,8 @@
   "order": [
     "main",
     "4b14a52d-a335-4150-a686-c3bde3e48acd",
-    "text_and_image_CkqeHL",
     "ee6a77e5-a918-4f22-81e3-69864c2ea251",
+    "text_and_image_CkqeHL",
     "logo_list_custom_2_4PTFkb",
     "c2bbc6e9-2fd9-4a77-8f3f-02f25c6671ca",
     "text_columns_custom_Q8d9qh",
