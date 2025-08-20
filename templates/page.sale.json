@@ -260,7 +260,7 @@
             "text_position": "right",
             "image": "shopify://shop_images/Ledge-Lounger-Autograph-Chaise_7e6f816b-7a20-4fa2-bd41-04665caa2b57.jpg",
             "indent_image": false,
-            "focal_point": "bottom center",
+            "focal_point": "center center",
             "color_scheme": "2"
           }
         },
