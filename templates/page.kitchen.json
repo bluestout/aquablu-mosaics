@@ -195,7 +195,7 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": true,
-        "mobile_size": 20,
+        "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
