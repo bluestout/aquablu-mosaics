@@ -734,7 +734,7 @@
             "video_url": "",
             "width": "33",
             "height": 500,
-            "text_align": "vertical-bottom horizontal-center",
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "#ffffff"
           }
@@ -753,7 +753,7 @@
             "video_url": "",
             "width": "33",
             "height": 400,
-            "text_align": "vertical-bottom horizontal-center",
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "#ffffff"
           }
@@ -772,7 +772,7 @@
             "video_url": "",
             "width": "33",
             "height": 400,
-            "text_align": "vertical-bottom horizontal-center",
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "#fff"
           }
