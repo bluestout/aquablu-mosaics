@@ -182,10 +182,35 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_cRx3gC": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/tile-and-stone",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "hero_fRrmjn"
+        "hero_fRrmjn",
+        "hero_cRx3gC"
       ],
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
