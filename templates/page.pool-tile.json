@@ -214,10 +214,35 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_DewB3R": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/current-sales-promos",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "hero_7hWWPz"
+        "hero_7hWWPz",
+        "hero_DewB3R"
       ],
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
