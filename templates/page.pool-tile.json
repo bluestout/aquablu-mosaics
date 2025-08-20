@@ -743,8 +743,8 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "",
-            "textarea": "TILE ADHESIVES",
+            "heading": "TILE ADHESIVES",
+            "textarea": "Once you’ve chosen the perfect tile, ensure lasting strength and reliability with our high-performance adhesives, crafted for a flawless finish.",
             "cta_text1": "",
             "cta_link1": "shopify://collections/tile-adhesives",
             "cta_text2": "",
@@ -763,8 +763,8 @@
           "settings": {
             "subheading": "",
             "heading": "TILE GROUT",
-            "textarea": "DDD",
-            "cta_text1": "",
+            "textarea": "Discover our premium selection of tile grouts, offering lasting strength, seamless finishes, and color options to complement any design.",
+            "cta_text1": "SHOP NOW",
             "cta_link1": "shopify://collections/tile-grout",
             "cta_text2": "",
             "cta_link2": "",
@@ -774,7 +774,7 @@
             "height": 400,
             "text_align": "vertical-bottom horizontal-center",
             "focal_point": "center",
-            "color_accent": "rgba(0,0,0,0)"
+            "color_accent": "#fff"
           }
         }
       },
@@ -783,7 +783,6 @@
         "advanced_BWGV8x",
         "advanced_KA3qj6"
       ],
-      "disabled": true,
       "custom_css": [],
       "settings": {
         "full_width": false,
