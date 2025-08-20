@@ -160,7 +160,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/Bathroom_Landing_2.jpg",
+        "image": "shopify://shop_images/Bathroom_Landing_1.jpg",
         "image_width": 500,
         "subtitle": "",
         "title": "Give Your Bathroom the Glow-Up It Deserves",
