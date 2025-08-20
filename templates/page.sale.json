@@ -363,6 +363,26 @@
         "css_class": ""
       }
     },
+    "04e68109-2078-419d-82cc-f5e0b128ccea": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Join_ClubBlu.jpg",
+        "video_url": "",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "",
+        "text": "<h1>Looking to save more?</h1><p>Join ClubBlu to unlock exclusive member-only promotions and savings! </p><p>Stay in the loop with the latest tile trends for your home and outdoor spaces, discover new products and brands added to the AquaBlu catalog, and get inspired for your next design project!</p>",
+        "button_label": "Learn More",
+        "button_link": "shopify://pages/clubblu-email-sign-up",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": false,
+        "css_class": "bath-section-8"
+      }
+    },
     "slideshow_split_3AUTRr": {
       "type": "slideshow-split",
       "blocks": {
@@ -415,26 +435,6 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
-      }
-    },
-    "04e68109-2078-419d-82cc-f5e0b128ccea": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/Join_ClubBlu.jpg",
-        "video_url": "",
-        "image_width": 700,
-        "subtitle": "",
-        "title": "",
-        "text": "<h1>Looking to save more?</h1><p>Join ClubBlu to unlock exclusive member-only promotions and savings! </p><p>Stay in the loop with the latest tile trends for your home and outdoor spaces, discover new products and brands added to the AquaBlu catalog, and get inspired for your next design project!</p>",
-        "button_label": "Learn More",
-        "button_link": "shopify://pages/clubblu-email-sign-up",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": false,
-        "css_class": "bath-section-8"
       }
     },
     "99e0f1b0-4941-4132-9a64-a1becadfeb62": {
@@ -497,8 +497,8 @@
     "slideshow_R84TV7",
     "slideshow_split_yT6kCR",
     "slideshow_mWYVFP",
-    "slideshow_split_3AUTRr",
     "04e68109-2078-419d-82cc-f5e0b128ccea",
+    "slideshow_split_3AUTRr",
     "99e0f1b0-4941-4132-9a64-a1becadfeb62",
     "250ca572-c602-47ec-89af-1e37d80bc33f"
   ]
