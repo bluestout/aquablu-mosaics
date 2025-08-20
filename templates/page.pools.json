@@ -170,7 +170,7 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/tile-and-stone",
+            "link": "shopify://pages/current-sales-promos",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
@@ -179,7 +179,7 @@
             "image": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
             "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
             "overlay_opacity": 0,
-            "focal_point": "bottom center"
+            "focal_point": "center center"
           }
         }
       },
