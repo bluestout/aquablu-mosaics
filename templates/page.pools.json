@@ -146,14 +146,14 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "",
+            "link": "shopify://pages/tile-and-stone",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
-            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
             "overlay_opacity": 0,
             "focal_point": "bottom center"
           }
@@ -162,7 +162,6 @@
       "block_order": [
         "template--14459271807048__6aba6d4d-7ea2-4075-a201-041564b8219d-168130994261edee2f-1"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
