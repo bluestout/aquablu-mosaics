@@ -789,7 +789,7 @@
         "heading": "START WITH A SOLID FOUNDATION",
         "gutter_size": 20,
         "section_gutter_size": 20,
-        "space_above": false,
+        "space_above": true,
         "space_below": true,
         "two_column_mobile": false,
         "three_column_mobile": false,
