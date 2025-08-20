@@ -168,18 +168,18 @@
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
             "top_subheading": "",
-            "title": "<h2>MAKE YOUR DREAM KITCHEN A REALITY</h2>",
+            "title": "",
             "title_size": 40,
             "subheading": "",
-            "custom_text": "<p>Your kitchen is the heart of your home, and our team of experts are here to help you transform it into a beautiful space to make lifelong memories.</p>",
+            "custom_text": "",
             "link": "",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/KitchenHero.jpg",
-            "overlay_opacity": 28,
+            "image": "shopify://shop_images/Labor_Day_Static_Final_6.jpg",
+            "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
@@ -187,9 +187,8 @@
       "block_order": [
         "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0"
       ],
-      "disabled": true,
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "full_width_mobile": false,
         "contact_popup": false,
         "desktop_size": 0,
