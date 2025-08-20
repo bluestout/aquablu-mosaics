@@ -529,7 +529,7 @@
         "text": "<h2>SHOP BATHROOM TILE BY SHAPE</h2>",
         "column_size": 8,
         "align_text": "center",
-        "gutter_size": 20,
+        "gutter_size": 40,
         "space_above": true,
         "space_below": true,
         "divider": false,
