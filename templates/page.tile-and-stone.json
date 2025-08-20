@@ -430,6 +430,7 @@
         "advanced_xQmipe",
         "advanced_niiCYz"
       ],
+      "custom_css": [],
       "name": "t:sections.promo-grid.presets.promotional_grid.name",
       "settings": {
         "full_width": false,
