@@ -440,7 +440,7 @@
         "space_below": true,
         "two_column_mobile": false,
         "three_column_mobile": false,
-        "css_class": ""
+        "css_class": ".promotional-grid .promotional-grid__item {  position: relative;  overflow: hidden;}.promotional-grid .promotional-grid__item::after {  content: \"\";  position: absolute;  inset: 0;  background: rgba(0, 0, 0, 0); /* Transparent initially */  transition: background 0.3s ease;}.promotional-grid .promotional-grid__item:hover::after {  background: rgba(0, 0, 0, 0.3); /* Dark overlay on hover */}"
       }
     },
     "main": {
