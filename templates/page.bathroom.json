@@ -177,7 +177,8 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_6.jpg",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_7.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_7.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
