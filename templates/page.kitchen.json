@@ -172,13 +172,14 @@
             "title_size": 40,
             "subheading": "",
             "custom_text": "",
-            "link": "",
+            "link": "shopify://pages/tile-and-stone",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-left",
             "image": "shopify://shop_images/Labor_Day_Static_Final_6.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_6.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
