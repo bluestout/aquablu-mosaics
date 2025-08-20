@@ -364,6 +364,85 @@
         "css_class": ""
       }
     },
+    "promo_grid_gLNq6x": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_79JX7q": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "WATERPROOFING",
+            "textarea": "Protect every project with our professional-grade waterproofing solutions, engineered for durability and long-lasting peace of mind.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/waterproofing",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/OP_25.03_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
+          }
+        },
+        "advanced_xQmipe": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "ADHESIVES",
+            "textarea": "Once you’ve chosen the perfect tile, ensure lasting strength and reliability with our high-performance adhesives, crafted for a flawless finish.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/tile-adhesives",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Shop_Adhesive_by_AquaBlu_Mosaics.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
+          }
+        },
+        "advanced_niiCYz": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "TILE GROUT",
+            "textarea": "Discover our premium selection of tile grouts, offering lasting strength, seamless finishes, and color options to complement any design.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/tile-grout",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Shop_Epoxy_Grout_by_AquaBlu_Mosaics.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_79JX7q",
+        "advanced_xQmipe",
+        "advanced_niiCYz"
+      ],
+      "name": "t:sections.promo-grid.presets.promotional_grid.name",
+      "settings": {
+        "full_width": false,
+        "heading": "START WITH A SOLID FOUNDATION",
+        "gutter_size": 20,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -776,6 +855,7 @@
     "text_and_image_q7CzDP",
     "slideshow_eak7Dt",
     "1752096094884bf702",
+    "promo_grid_gLNq6x",
     "main",
     "slideshow_BiyV9c",
     "1753822458c003ad66",
