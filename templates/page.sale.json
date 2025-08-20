@@ -211,7 +211,6 @@
       "blocks": {
         "slide_UrC77T": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "top_subheading": "OUR BIGGEST SALE OF THE SUMMER",
             "title": "WORK HARD. SHOP SMART.",
@@ -222,7 +221,25 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_1.jpg",
+            "image": "shopify://shop_images/3_aa975218-f15b-4054-a7ce-242ebc98c819.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_FpHFp6": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE LABORDAY10",
+            "title": "10% OFF",
+            "title_size": 68,
+            "subheading": "TILE, STONE, & INSTALLATION PRODUCTS",
+            "link": "shopify://pages/tile-and-stone",
+            "link_text": "Shop Tile & Stone",
+            "link_2": "shopify://pages/installation",
+            "link_text_2": "Shop Tile Grouts & Adhesives",
+            "text_position": "left",
+            "image": "shopify://shop_images/Sophia_3_4_3_4_Glass_Tile_Mosaic_Tile_by_Bisazza2.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -285,6 +302,7 @@
       },
       "block_order": [
         "slide_UrC77T",
+        "slide_FpHFp6",
         "slide_qrYUE6",
         "slide_NQqLer",
         "slide_xtA8Ar"
