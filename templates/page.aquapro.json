@@ -999,6 +999,138 @@
         "css_class": "reduce-text-padding aquapro-section-6"
       }
     },
+    "01e8330d-fb95-45c6-b60d-f3b6f506d6df": {
+      "type": "logo-list-custom",
+      "blocks": {
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Tesoro-_B_and_W_b4aa16af-8ac8-4c2b-9794-03d44539188b.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/TD_-_B_and_W_72fd5569-7541-4d53-9e78-4c84a6b467ae.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/murrine-_B_and_W_9eba352e-c2d7-4d78-a05d-a3ed09e8a58d.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/FL-_Band_W_5215ddbe-0bca-47c9-8210-4c4199a23e7f.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Basecrete-_B_and_W_0e7b2057-f8e9-4f81-9439-957f8ef87c12.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "d0bec76d-6b9a-45d1-a301-30d63d8f0073": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Vidrepur-_B_and_W_5f78c843-7848-440a-a2b7-231dd83c6984.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "865b5707-f09b-4f1d-add9-aab0f4173977": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Vondom_-_B_and_W_c46f8482-e1b1-41e1-925d-aa6b93cc1f3f.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "5c54e2d4-cbec-4146-acc3-3fc4937072bd": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/AGM-B_and_W_de08ee78-a725-45de-be8e-d04716b156f8.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "304a6181-976f-4791-8925-5530996f763d": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/SICIS-B_and_W_c6b749fb-9320-495a-bc0e-f39e36ae0f59.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "c6d246f9-7a4b-4e3d-b3aa-b51575d3db41": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Ledge-_B_and_w_41ea5798-7fed-4069-aca4-da35cf7db77a.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "7a18d194-5b99-4b3f-9c0f-f9a4926f5829": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/AIM-B_and_W_20b1608e-12db-4055-9709-9ed02e478027.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        },
+        "8460c308-7e09-426b-b266-3c1d59ad2324": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Custom_Mosaics-B_and_W_b63442af-94c0-4399-9dab-82e60b3d6bc5.png",
+            "logo_title": "",
+            "logo_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-0",
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-1",
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-2",
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-3",
+        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-4",
+        "d0bec76d-6b9a-45d1-a301-30d63d8f0073",
+        "865b5707-f09b-4f1d-add9-aab0f4173977",
+        "5c54e2d4-cbec-4146-acc3-3fc4937072bd",
+        "304a6181-976f-4791-8925-5530996f763d",
+        "c6d246f9-7a4b-4e3d-b3aa-b51575d3db41",
+        "7a18d194-5b99-4b3f-9c0f-f9a4926f5829",
+        "8460c308-7e09-426b-b266-3c1d59ad2324"
+      ],
+      "settings": {
+        "title": "OUR TRUSTED PARTNERS",
+        "divider": false,
+        "css_class": "logo-slider aquapro-section-8"
+      }
+    },
     "17558031248d5e38d4": {
       "type": "apps",
       "blocks": {
@@ -1027,7 +1159,7 @@
       ],
       "settings": {
         "full_width": false,
-        "space_around": true,
+        "space_around": false,
         "css_class": ""
       }
     },
@@ -1195,138 +1327,6 @@
         "color_scheme": "2",
         "css_class": ""
       }
-    },
-    "01e8330d-fb95-45c6-b60d-f3b6f506d6df": {
-      "type": "logo-list-custom",
-      "blocks": {
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-0": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Tesoro-_B_and_W_b4aa16af-8ac8-4c2b-9794-03d44539188b.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-1": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/TD_-_B_and_W_72fd5569-7541-4d53-9e78-4c84a6b467ae.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-2": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/murrine-_B_and_W_9eba352e-c2d7-4d78-a05d-a3ed09e8a58d.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-3": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/FL-_Band_W_5215ddbe-0bca-47c9-8210-4c4199a23e7f.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-4": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Basecrete-_B_and_W_0e7b2057-f8e9-4f81-9439-957f8ef87c12.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "d0bec76d-6b9a-45d1-a301-30d63d8f0073": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Vidrepur-_B_and_W_5f78c843-7848-440a-a2b7-231dd83c6984.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "865b5707-f09b-4f1d-add9-aab0f4173977": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Vondom_-_B_and_W_c46f8482-e1b1-41e1-925d-aa6b93cc1f3f.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "5c54e2d4-cbec-4146-acc3-3fc4937072bd": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/AGM-B_and_W_de08ee78-a725-45de-be8e-d04716b156f8.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "304a6181-976f-4791-8925-5530996f763d": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/SICIS-B_and_W_c6b749fb-9320-495a-bc0e-f39e36ae0f59.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "c6d246f9-7a4b-4e3d-b3aa-b51575d3db41": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Ledge-_B_and_w_41ea5798-7fed-4069-aca4-da35cf7db77a.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "7a18d194-5b99-4b3f-9c0f-f9a4926f5829": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/AIM-B_and_W_20b1608e-12db-4055-9709-9ed02e478027.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "8460c308-7e09-426b-b266-3c1d59ad2324": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Custom_Mosaics-B_and_W_b63442af-94c0-4399-9dab-82e60b3d6bc5.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-0",
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-1",
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-2",
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-3",
-        "template--14565132697672__01e8330d-fb95-45c6-b60d-f3b6f506d6df-168485320307c57813-4",
-        "d0bec76d-6b9a-45d1-a301-30d63d8f0073",
-        "865b5707-f09b-4f1d-add9-aab0f4173977",
-        "5c54e2d4-cbec-4146-acc3-3fc4937072bd",
-        "304a6181-976f-4791-8925-5530996f763d",
-        "c6d246f9-7a4b-4e3d-b3aa-b51575d3db41",
-        "7a18d194-5b99-4b3f-9c0f-f9a4926f5829",
-        "8460c308-7e09-426b-b266-3c1d59ad2324"
-      ],
-      "settings": {
-        "title": "OUR TRUSTED PARTNERS",
-        "divider": false,
-        "css_class": "logo-slider aquapro-section-8"
-      }
     }
   },
   "order": [
@@ -1344,10 +1344,10 @@
     "slideshow_split_8WPj6b",
     "slideshow_8p9Ujd",
     "ccc637fa-dc90-4ce5-8f14-e89386213d7d",
+    "01e8330d-fb95-45c6-b60d-f3b6f506d6df",
     "17558031248d5e38d4",
     "c942c84b-e003-4a25-b7d2-7bbf8540a7ba",
     "6b4f7b64-8a1c-4458-9603-6e3ba5674470",
-    "557edd84-07d0-400f-8e97-6b43fe33e417",
-    "01e8330d-fb95-45c6-b60d-f3b6f506d6df"
+    "557edd84-07d0-400f-8e97-6b43fe33e417"
   ]
 }
