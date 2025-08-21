@@ -758,30 +758,13 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
+            "heading": "WATERPROOFING",
+            "textarea": "Protect your bathroom tile from leaks and moisture damage with our high-performance waterproofing products.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/waterproofing",
+            "cta_text2": "",
             "cta_link2": "",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#fff"
-          }
-        },
-        "advanced_qbbHqg": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
-            "cta_link2": "",
+            "image": "shopify://shop_images/dali-juniper-5-x-5-ceramic-tile-804667.jpg",
             "video_url": "",
             "width": "33",
             "height": 500,
@@ -794,12 +777,13 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "Announce your promotion",
-            "textarea": "Include the smaller details of your promotion in text below the title.",
-            "cta_text1": "Shop This",
-            "cta_link1": "",
-            "cta_text2": "Shop All",
+            "heading": "TILE ADHESIVES",
+            "textarea": "Secure your surfaces with our tile adhesives, engineered for strength, reliability, and lasting results in any bathroom project.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/tile-adhesives",
+            "cta_text2": "",
             "cta_link2": "",
+            "image": "shopify://shop_images/Natural_Stone_Bathroom_Tile_d17c1f60-1774-4a85-b77f-e681d61f27af.jpg",
             "video_url": "",
             "width": "33",
             "height": 500,
@@ -807,14 +791,32 @@
             "focal_point": "center",
             "color_accent": "#fff"
           }
+        },
+        "advanced_qbbHqg": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "TILE GROUT",
+            "textarea": "Ensure lasting beauty with our premium tile grout, crafted to resist stains, moisture, and everyday wear in any bathroom tile design.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/tile-grout",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Zest_Sky_2.5_x_8_Ceramic_Tile_Backsplash_Shower_Tile4.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#fff"
+          }
         }
       },
       "block_order": [
         "advanced_q63Yca",
-        "advanced_qbbHqg",
-        "advanced_VfXRgp"
+        "advanced_VfXRgp",
+        "advanced_qbbHqg"
       ],
-      "disabled": true,
       "name": "t:sections.promo-grid.presets.promotional_grid.name",
       "settings": {
         "full_width": false,
