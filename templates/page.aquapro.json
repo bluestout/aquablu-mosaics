@@ -1017,7 +1017,7 @@
             "custom_class": "",
             "background_color": "",
             "padding_top": 20,
-            "padding_bottom": 36,
+            "padding_bottom": 0,
             "padding_left_right": 0
           }
         }
