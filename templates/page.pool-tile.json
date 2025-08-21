@@ -157,6 +157,26 @@
         "css_class": ""
       }
     },
+    "text_and_image_DbPRqD": {
+      "type": "text-and-image",
+      "disabled": true,
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image_width": 470,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Your swimming pool is more than a place to cool off—it’s the focal point of your backyard. Choosing the right <strong>pool tile</strong> adds color, texture, and durability, transforming an ordinary pool into a stunning <strong>backyard oasis</strong> that reflects your style.</p><p>At <strong>AquaBlu Mosaics</strong>, we offer one of the largest online selections of <strong>high-quality pool tile</strong>, including <strong>glass pool tile</strong>, <strong>porcelain pool tile</strong>, <strong>natural stone pool tile</strong>, and <strong>ceramic pool tile</strong>. With countless colors, shapes, and patterns—plus <strong>custom mosaic design services</strong>—you’ll find everything you need to create a luxurious, long-lasting pool design.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "1",
+        "divider": false,
+        "new_layout": false,
+        "css_class": ""
+      }
+    },
     "rich_text_jJMJUy": {
       "type": "rich-text",
       "blocks": {
@@ -774,7 +794,7 @@
             "height": 400,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
-            "color_accent": "#fff"
+            "color_accent": "#ffffff"
           }
         }
       },
@@ -1043,6 +1063,7 @@
   "order": [
     "main",
     "slideshow_KNKNYA",
+    "text_and_image_DbPRqD",
     "rich_text_jJMJUy",
     "slideshow_nzNTk6",
     "logo_list_custom_2_k44iC4",
