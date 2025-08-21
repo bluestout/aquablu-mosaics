@@ -164,10 +164,11 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/Bathroom_Landing_1.jpg",
+        "video_url": "",
         "image_width": 500,
         "subtitle": "GIVE YOUR SPACE THE GLOW-UP IT DESERVES",
         "title": "",
-        "text": "<p>Bathroom tile is more than a protective surface - it’s a way to express your style and elevate your space. From timeless ceramic and porcelain to modern glass and stone, the right tile can transform your bathroom into a functional work of art. Choose from classic subway tiles, intricate mosaics, or trendy fluted designs to complement vanities, fixtures, and flooring while standing up to daily use.</p><p>Our curated collection makes it easy to select the perfect tile with guidance on materials, colors, and quantities. Explore our selection and discover how the right bathroom tile can enhance your home’s design, add lasting value, and create a space you’ll love for years to come.</p>",
+        "text": "<p>Bathroom tile is more than a protective surface - it’s a way to express your style and elevate your space. From timeless ceramic and porcelain to modern glass and stone, the right tile can transform your bathroom into a functional work of art. </p><p>Our curated collection makes it easy to select the perfect tile with guidance on materials, colors, and quantities. Explore our selection and discover how the right bathroom tile can enhance your home’s design, add lasting value, and create a space you’ll love for years to come.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
