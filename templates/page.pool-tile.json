@@ -159,7 +159,6 @@
     },
     "text_and_image_DbPRqD": {
       "type": "text-and-image",
-      "disabled": true,
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/Pool_tile_text_highlight.jpg",
@@ -172,7 +171,7 @@
         "button_style": "primary",
         "align_text": "center",
         "layout": "left",
-        "color_scheme": "1",
+        "color_scheme": "3",
         "divider": false,
         "new_layout": true,
         "css_class": ""
