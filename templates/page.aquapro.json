@@ -821,55 +821,27 @@
         "css_class": "blue-bar-bottom blue-bar-overlay"
       }
     },
-    "slideshow_8p9Ujd": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_EHbfnd": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "https://www.aquablumosaics.com/pages/conservation",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_EHbfnd"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 18,
-        "space_above": true,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "aquapro-section-1"
-      }
-    },
     "slideshow_split_8WPj6b": {
       "type": "slideshow-split",
       "blocks": {
+        "slide_td3FhV": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "protect every design",
+            "title": "Waterproofing Solutions",
+            "title_size": 40,
+            "subheading": "Our premium waterproofing products are ideal for commercial pools, spas, and more. Help your customer preserve every surface while ensuring safety and reliability.",
+            "link": "shopify://collections/waterproofing",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza3.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
         "slide_gtLbVW": {
           "type": "slide",
           "settings": {
@@ -944,6 +916,7 @@
         }
       },
       "block_order": [
+        "slide_td3FhV",
         "slide_gtLbVW",
         "slide_LXJirF",
         "slide_Yf8me6",
@@ -958,6 +931,52 @@
         "autoplay": true,
         "autoplay_speed": 6,
         "css_class": ""
+      }
+    },
+    "slideshow_8p9Ujd": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_EHbfnd": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "https://www.aquablumosaics.com/pages/conservation",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner_AquaPro.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_EHbfnd"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 18,
+        "space_above": true,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "aquapro-section-1"
       }
     },
     "ccc637fa-dc90-4ce5-8f14-e89386213d7d": {
@@ -978,6 +997,38 @@
         "divider": false,
         "new_layout": true,
         "css_class": "reduce-text-padding aquapro-section-6"
+      }
+    },
+    "17558031248d5e38d4": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_QppKTc": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 30314,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 20,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_QppKTc"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
       }
     },
     "c942c84b-e003-4a25-b7d2-7bbf8540a7ba": {
@@ -1290,9 +1341,10 @@
     "1755529005190167bb",
     "28f0875e-60d7-4a75-8f30-ae1b9a267557",
     "02420eb2-8278-4ba0-9812-e30739c11004",
-    "slideshow_8p9Ujd",
     "slideshow_split_8WPj6b",
+    "slideshow_8p9Ujd",
     "ccc637fa-dc90-4ce5-8f14-e89386213d7d",
+    "17558031248d5e38d4",
     "c942c84b-e003-4a25-b7d2-7bbf8540a7ba",
     "6b4f7b64-8a1c-4458-9603-6e3ba5674470",
     "557edd84-07d0-400f-8e97-6b43fe33e417",
