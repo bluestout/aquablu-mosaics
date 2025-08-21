@@ -770,7 +770,7 @@
             "height": 500,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
-            "color_accent": "#fff"
+            "color_accent": "#ffffff"
           }
         },
         "advanced_VfXRgp": {
@@ -778,7 +778,7 @@
           "settings": {
             "subheading": "",
             "heading": "TILE ADHESIVES",
-            "textarea": "Secure your surfaces with our tile adhesives, engineered for strength, reliability, and lasting results in any bathroom project.",
+            "textarea": "Secure your space our tile adhesives, engineered for strength, reliability, and lasting results in any bathroom project.",
             "cta_text1": "Shop Now",
             "cta_link1": "shopify://collections/tile-adhesives",
             "cta_text2": "",
@@ -789,7 +789,7 @@
             "height": 500,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
-            "color_accent": "#fff"
+            "color_accent": "#ffffff"
           }
         },
         "advanced_qbbHqg": {
@@ -808,7 +808,7 @@
             "height": 500,
             "text_align": "vertical-center horizontal-center",
             "focal_point": "bottom",
-            "color_accent": "#fff"
+            "color_accent": "#ffffff"
           }
         }
       },
