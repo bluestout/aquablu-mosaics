@@ -14,52 +14,6 @@
       "disabled": true,
       "settings": {}
     },
-    "ee6a77e5-a918-4f22-81e3-69864c2ea251": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14565132828744__ee6a77e5-a918-4f22-81e3-69864c2ea251-168381328892e35a88-0": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 46,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/tile-and-stone",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_7.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_7.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132828744__ee6a77e5-a918-4f22-81e3-69864c2ea251-168381328892e35a88-0"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 30,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "bath-section-1"
-      }
-    },
     "4b14a52d-a335-4150-a686-c3bde3e48acd": {
       "type": "slideshow",
       "blocks": {
@@ -203,6 +157,52 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": "all-glass-tile-section-8"
+      }
+    },
+    "ee6a77e5-a918-4f22-81e3-69864c2ea251": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14565132828744__ee6a77e5-a918-4f22-81e3-69864c2ea251-168381328892e35a88-0": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 46,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/tile-and-stone",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Labor_Day_Static_Final_7.jpg",
+            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_7.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14565132828744__ee6a77e5-a918-4f22-81e3-69864c2ea251-168381328892e35a88-0"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 30,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "bath-section-1"
       }
     },
     "text_and_image_CkqeHL": {
@@ -751,6 +751,83 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
+    "promo_grid_zwXU9K": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_q63Yca": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
+          }
+        },
+        "advanced_qbbHqg": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
+          }
+        },
+        "advanced_VfXRgp": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_q63Yca",
+        "advanced_qbbHqg",
+        "advanced_VfXRgp"
+      ],
+      "disabled": true,
+      "name": "t:sections.promo-grid.presets.promotional_grid.name",
+      "settings": {
+        "full_width": false,
+        "heading": "Announce your promotion",
+        "gutter_size": 20,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
     "64c45b5f-5f0c-4872-b99e-ddd84472b0f1": {
       "type": "featured-collection-carousel",
       "disabled": true,
@@ -864,6 +941,7 @@
     "promo_grid_RqaJFg",
     "0d909433-0909-429c-86cc-588ca215f068",
     "featured_collections_custom_3DaeXn",
+    "promo_grid_zwXU9K",
     "64c45b5f-5f0c-4872-b99e-ddd84472b0f1",
     "faq_CkyJNM"
   ]
