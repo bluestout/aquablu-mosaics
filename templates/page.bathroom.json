@@ -218,7 +218,7 @@
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
-        "align_text": "left",
+        "align_text": "center",
         "layout": "left",
         "color_scheme": "3",
         "divider": false,
