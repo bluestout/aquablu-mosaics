@@ -169,7 +169,7 @@
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
-        "align_text": "center",
+        "align_text": "left",
         "layout": "left",
         "color_scheme": "3",
         "divider": false,
