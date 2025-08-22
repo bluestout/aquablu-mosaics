@@ -326,6 +326,39 @@
         "css_class": "logo-list-set-height rounded-corners"
       }
     },
+    "17558920808179e9c1": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_Hy7HqN": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 30397,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "left",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_Hy7HqN"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
     "4d3c4e7c-b4b0-40ba-8026-3638655534e7": {
       "type": "text-columns-custom",
       "blocks": {
@@ -428,6 +461,7 @@
         "text_block_hf98iH",
         "text_block_dNrmip"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "<h2>SHOP BY COLOR</h2>",
@@ -438,6 +472,38 @@
         "space_below": true,
         "divider": false,
         "color_scheme": "none",
+        "css_class": ""
+      }
+    },
+    "17558743395ea157d7": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_kxnLkX": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 30392,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_kxnLkX"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
         "css_class": ""
       }
     },
@@ -508,38 +574,6 @@
         "css_class": ""
       }
     },
-    "17558743395ea157d7": {
-      "type": "apps",
-      "blocks": {
-        "lookfy_gallery_lookfy_gallery_kxnLkX": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-          "settings": {
-            "gallery_id": 30392,
-            "dynamic_source": "",
-            "title": "",
-            "subtitle": "",
-            "heading_size": "0.8",
-            "heading_color": "",
-            "heading_align": "center",
-            "desc_style": "subtitle",
-            "desc_color": "",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_left_right": 0
-          }
-        }
-      },
-      "block_order": [
-        "lookfy_gallery_lookfy_gallery_kxnLkX"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": ""
-      }
-    },
     "3faa508f-66f1-4e95-89be-5e9c339d14f4": {
       "type": "text-and-image",
       "disabled": true,
@@ -559,38 +593,6 @@
         "divider": false,
         "new_layout": true,
         "css_class": "all-glass-tile-section-5"
-      }
-    },
-    "1749679120b341a9aa": {
-      "type": "apps",
-      "blocks": {
-        "lookfy_gallery_lookfy_gallery_VQBEiQ": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-          "settings": {
-            "gallery_id": 25081,
-            "dynamic_source": "",
-            "title": "Top Selling All Glass Pool Tile: Oasis Series",
-            "subtitle": "",
-            "heading_size": "0.8",
-            "heading_color": "#000000",
-            "heading_align": "center",
-            "desc_style": "body",
-            "desc_color": "#f5f5f5",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_left_right": 0
-          }
-        }
-      },
-      "block_order": [
-        "lookfy_gallery_lookfy_gallery_VQBEiQ"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": false,
-        "css_class": ""
       }
     },
     "192eb932-cf00-43a5-bb1e-9a9c9bdc7bbb": {
@@ -709,52 +711,6 @@
         "css_class": "home-section-3 blue-bar-overlay grid-column-stack"
       }
     },
-    "0024a2e3-7be7-42d1-832c-5c65e08bbe1f": {
-      "type": "slideshow",
-      "blocks": {
-        "93a77731-2250-4e22-8b0f-3ae2a17c3663": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/conservation",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Conservation_Banner.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "93a77731-2250-4e22-8b0f-3ae2a17c3663"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 10,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "3074f93d-2035-4257-933d-5ac90c150dd5": {
       "type": "promo-grid",
       "blocks": {
@@ -850,6 +806,84 @@
         "color_scheme": "2",
         "divider": false,
         "new_layout": true,
+        "css_class": ""
+      }
+    },
+    "1749679120b341a9aa": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_VQBEiQ": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 25081,
+            "dynamic_source": "",
+            "title": "Top Selling All Glass Pool Tile: Oasis Series",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "#000000",
+            "heading_align": "center",
+            "desc_style": "body",
+            "desc_color": "#f5f5f5",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_VQBEiQ"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "css_class": ""
+      }
+    },
+    "0024a2e3-7be7-42d1-832c-5c65e08bbe1f": {
+      "type": "slideshow",
+      "blocks": {
+        "93a77731-2250-4e22-8b0f-3ae2a17c3663": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/pages/conservation",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Conservation_Banner.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "93a77731-2250-4e22-8b0f-3ae2a17c3663"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 10,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
         "css_class": ""
       }
     },
@@ -1286,6 +1320,7 @@
     "text_and_image_kzK3Yx",
     "rich_text_nac8wC",
     "logo_list_custom_2_EfAD4N",
+    "17558920808179e9c1",
     "4d3c4e7c-b4b0-40ba-8026-3638655534e7",
     "17558743395ea157d7",
     "text_columns_custom_dBDzNp",
