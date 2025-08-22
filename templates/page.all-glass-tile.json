@@ -579,15 +579,16 @@
         "slide_Va96z4": {
           "type": "slide",
           "settings": {
-            "top_subheading": "Stock Colors & Mixes",
-            "title": "",
-            "title_size": 60,
-            "subheading": "AquaBlu offers one of the largest online collections of stock glass pool tile, designed to bring beauty and durability to any project. Explore our mosaic glass tiles in a variety of colors, sizes, and shapes. With endless options to fit every style, you’re sure to find the perfect glass tile to complete your dream design.",
+            "top_subheading": "",
+            "title": "Stock Colors & Mixes",
+            "title_size": 40,
+            "subheading": "AquaBlu offers one of the largest online collections of stock glass pool tile, designed to bring beauty and durability to any project. Explore our mosaic glass tiles in a variety of colors, sizes, and shapes.",
             "link": "shopify://collections/shop-all-glass-tile-pool-finishes",
             "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
+            "image": "shopify://shop_images/Blue_Planet.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
