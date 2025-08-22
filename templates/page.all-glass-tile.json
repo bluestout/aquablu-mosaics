@@ -113,6 +113,7 @@
         },
         "template--14565147967560__f5f4c706-279b-437f-9aa1-372fdb22ddf9-16890972783136d6a4-1": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -136,6 +137,7 @@
         },
         "hero_bef4RN": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -240,6 +242,7 @@
       "block_order": [
         "text_TeDn6y"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": false,
