@@ -629,9 +629,9 @@
           "settings": {
             "gallery_id": 25081,
             "dynamic_source": "",
-            "title": "Trending Now: Oasis Series by Vidrepur",
+            "title": "Trending Now: Oasis Series",
             "subtitle": "",
-            "heading_size": "1",
+            "heading_size": "0.8",
             "heading_color": "#000000",
             "heading_align": "center",
             "desc_style": "body",
@@ -649,7 +649,7 @@
       ],
       "settings": {
         "full_width": false,
-        "space_around": true,
+        "space_around": false,
         "css_class": ""
       }
     },
