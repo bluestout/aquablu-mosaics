@@ -600,32 +600,34 @@
             "top_subheading": "",
             "title": "Custom Blends & Gradients",
             "title_size": 40,
-            "subheading": "",
+            "subheading": "Custom blends and gradients seamlessly blend hues, creating mesmerizing transitions that elevate your pool to a realm of unparalleled elegance. Indulge in the epitome of personalized luxury.",
             "link": "",
-            "link_text": "Optional button",
+            "link_text": "Create my Dream Tile Blend",
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
+            "image": "shopify://shop_images/Custom_Pool_Mosaic.jpg",
             "indent_image": false,
             "focal_point": "center center",
-            "color_scheme": "none"
+            "color_scheme": "2"
           }
         },
         "slide_jmNXBq": {
           "type": "slide",
           "settings": {
             "top_subheading": "",
-            "title": "Highlight products",
-            "title_size": 60,
-            "subheading": "Repurpose your product photography with our \"Indented\" image option",
-            "link": "",
-            "link_text": "Optional button",
+            "title": "Custom Mosaics",
+            "title_size": 40,
+            "subheading": "Transform your pool into a stunning work of art with our custom design services. From intricate patterns inspired by nature to contemporary designs that reflect your personal style, our custom glass mosaic art brings a touch of elegance and sophistication to any aquatic sanctuary.",
+            "link": "shopify://pages/custom-mosaics",
+            "link_text": "Bring My Dream to Reality",
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
-            "indent_image": true,
+            "image": "shopify://shop_images/Custom_Mosaic_Murals_by_AquaBlu_Mosaics.jpg",
+            "indent_image": false,
             "focal_point": "center center",
-            "color_scheme": "1"
+            "color_scheme": "2"
           }
         }
       },
