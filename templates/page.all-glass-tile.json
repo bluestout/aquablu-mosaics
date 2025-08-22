@@ -598,10 +598,10 @@
           "type": "slide",
           "settings": {
             "top_subheading": "",
-            "title": "Side by Side Slide",
-            "title_size": 60,
-            "subheading": "Add optional subtext",
-            "link": "",
+            "title": "Custom Blends & Gradients",
+            "title_size": 40,
+            "subheading": "Custom blends and gradients seamlessly blend hues, creating mesmerizing transitions that elevate your pool to a realm of unparalleled elegance. Indulge in the epitome of personalized luxury.",
+            "link": "shopify://pages/custom-mosaics",
             "link_text": "Optional button",
             "link_2": "",
             "link_text_2": "",
@@ -634,7 +634,6 @@
         "slide_mEBpRD",
         "slide_jmNXBq"
       ],
-      "disabled": true,
       "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
         "full_width": false,
