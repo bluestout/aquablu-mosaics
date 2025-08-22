@@ -211,7 +211,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<h2><strong>TRUSTED EXPERTS, LARGEST SELECTION</strong></h2><p>Embracing all-glass tile pool finishes reveals unmatched elegance and practicality, with benefits including stain-resistant surfaces, durability, and limitless customization. AquaBlu is the leading supplier of glass tile pool finishes. Building and remodeling your pool is a big project, and we're here to help you make sure you have everything you need to <strong>Bring Paradise Home.</strong></p>"
+            "text": "<h4><strong>Trusted Experts | Largest Selection of Glass Tile Pool Finishes</strong></h4><p>Elevate your pool with all-glass tile finishes that combine luxury, durability, and stain-resistant performance. Perfect for both new builds and remodeling projects, glass tile offers limitless design possibilities, from shimmering mosaics to vibrant custom patterns. As the leading supplier of glass tile pool finishes, AquaBlu provides expert guidance and an extensive selection to help you create the perfect backyard oasis. Bring Paradise Home with our unmatched quality and support every step of the way.</p>"
           }
         }
       },
@@ -221,7 +221,7 @@
       "settings": {
         "align_text": "center",
         "narrow_column": false,
-        "color_scheme": "none",
+        "color_scheme": "3",
         "divider": false,
         "css_class": ""
       }
