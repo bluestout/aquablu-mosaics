@@ -573,141 +573,76 @@
         "css_class": ""
       }
     },
-    "3faa508f-66f1-4e95-89be-5e9c339d14f4": {
-      "type": "text-and-image",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Blue_Planet.jpg",
-        "video_url": "",
-        "image_width": 550,
-        "subtitle": "THE PINNACLE OF POOL FINISHES",
-        "title": "",
-        "text": "<p>Opting for an all-glass tile pool finish delivers unmatched durability, beauty, and sustainability. Glass tile is 100% recyclable, non-porous, and highly resistant to stains, fading, and chemicals, making it perfect for residential pools, spas, and commercial applications. When professionally installed, glass tile is the most long-lasting pool finish available, ensuring years of low-maintenance enjoyment. </p><p>Learn about the difference between pool tile and regular tile <a href=\"https://youtu.be/-ZCRN5NEvcQ?si=OzJPSJDiDMbivi62\" title=\"https://youtu.be/-ZCRN5NEvcQ?si=OzJPSJDiDMbivi62\">here.</a></p><p></p><p></p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "new_layout": true,
-        "css_class": "all-glass-tile-section-5"
-      }
-    },
-    "192eb932-cf00-43a5-bb1e-9a9c9bdc7bbb": {
-      "type": "promo-grid-three-col",
+    "slideshow_split_dNCP8b": {
+      "type": "slideshow-split",
       "blocks": {
-        "template--14565147967560__192eb932-cf00-43a5-bb1e-9a9c9bdc7bbb-1683813545d9ed08f8-0": {
-          "type": "advanced",
+        "slide_Va96z4": {
+          "type": "slide",
           "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "VIDREPUR NATURE",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/glass-pool-tile-nature-series",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/vp.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
+            "top_subheading": "Stock Colors & Mixes",
+            "title": "",
+            "title_size": 60,
+            "subheading": "AquaBlu offers one of the largest online collections of stock glass pool tile, designed to bring beauty and durability to any project. Explore our mosaic glass tiles in a variety of colors, sizes, and shapes. With endless options to fit every style, you’re sure to find the perfect glass tile to complete your dream design.",
+            "link": "shopify://collections/shop-all-glass-tile-pool-finishes",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
           }
         },
-        "template--14565147967560__192eb932-cf00-43a5-bb1e-9a9c9bdc7bbb-1683813545d9ed08f8-1": {
-          "type": "advanced",
+        "slide_mEBpRD": {
+          "type": "slide",
           "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "ABM EXCLUSIVES",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/aquablu-exclusives",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/abmexclusives.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
+            "top_subheading": "",
+            "title": "Side by Side Slide",
+            "title_size": 60,
+            "subheading": "Add optional subtext",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "none"
           }
         },
-        "cb3f4135-af2c-467f-98e2-21126b691e4c": {
-          "type": "advanced",
+        "slide_jmNXBq": {
+          "type": "slide",
           "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "GEOMETRO",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/geometro-series-nsr-geometric-mosaic-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/BAYEUX_COASTAL_INSTALL_2_94fe6853-5635-4837-a7fa-ab660d7a5889.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "0150bda1-6213-4619-a6f9-fd32bb62f0ab": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "IRIDESCENT",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/iridescent-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/iridescentglasstile.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
-          }
-        },
-        "f7197c05-eb9f-44dc-84d5-68cc6da65e52": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "textarea": "GLOW-IN-THE-DARK",
-            "cta_text1": "",
-            "cta_link1": "https://www.aquablumosaics.com/collections/glow-in-the-dark-glass-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Fireglass-1_1.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#b2dbe6"
+            "top_subheading": "",
+            "title": "Highlight products",
+            "title_size": 60,
+            "subheading": "Repurpose your product photography with our \"Indented\" image option",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "1"
           }
         }
       },
       "block_order": [
-        "template--14565147967560__192eb932-cf00-43a5-bb1e-9a9c9bdc7bbb-1683813545d9ed08f8-0",
-        "template--14565147967560__192eb932-cf00-43a5-bb1e-9a9c9bdc7bbb-1683813545d9ed08f8-1",
-        "cb3f4135-af2c-467f-98e2-21126b691e4c",
-        "0150bda1-6213-4619-a6f9-fd32bb62f0ab",
-        "f7197c05-eb9f-44dc-84d5-68cc6da65e52"
+        "slide_Va96z4",
+        "slide_mEBpRD",
+        "slide_jmNXBq"
       ],
       "disabled": true,
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
         "full_width": false,
-        "heading": "SHOP OUR FEATURED COLLECTIONS",
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": true,
-        "css_class": "home-section-3 blue-bar-overlay grid-column-stack"
+        "height": 450,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
       }
     },
     "3074f93d-2035-4257-933d-5ac90c150dd5": {
@@ -1111,7 +1046,6 @@
     },
     "7d232497-b8ea-4313-bc84-57b1b808249c": {
       "type": "featured-collection-carousel",
-      "disabled": true,
       "settings": {
         "title": "SHOP OUR BEST SELLERS",
         "tab_collection_1": "best-glass-tile-for-pools",
@@ -1323,8 +1257,7 @@
     "4d3c4e7c-b4b0-40ba-8026-3638655534e7",
     "17558743395ea157d7",
     "text_columns_custom_dBDzNp",
-    "3faa508f-66f1-4e95-89be-5e9c339d14f4",
-    "192eb932-cf00-43a5-bb1e-9a9c9bdc7bbb",
+    "slideshow_split_dNCP8b",
     "3074f93d-2035-4257-933d-5ac90c150dd5",
     "text_and_image_KPBbFP",
     "1749679120b341a9aa",
