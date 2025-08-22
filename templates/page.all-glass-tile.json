@@ -318,10 +318,10 @@
         "logo_image_MPCAJr"
       ],
       "settings": {
-        "title": "EXPLORE GLASS POOL TILE",
+        "title": "",
         "divider": false,
         "gutter_size": 20,
-        "space_above": false,
+        "space_above": true,
         "space_below": false,
         "css_class": "logo-list-set-height rounded-corners"
       }
