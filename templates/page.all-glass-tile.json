@@ -602,13 +602,14 @@
             "title_size": 40,
             "subheading": "Custom blends and gradients seamlessly blend hues, creating mesmerizing transitions that elevate your pool to a realm of unparalleled elegance. Indulge in the epitome of personalized luxury.",
             "link": "shopify://pages/custom-mosaics",
-            "link_text": "Optional button",
+            "link_text": "Create My Dream Tile",
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
+            "image": "shopify://shop_images/Custom_Pool_Mosaic.jpg",
             "indent_image": false,
             "focal_point": "center center",
-            "color_scheme": "none"
+            "color_scheme": "2"
           }
         },
         "slide_jmNXBq": {
