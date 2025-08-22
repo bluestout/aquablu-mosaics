@@ -560,6 +560,7 @@
         "text_block_aWJ8ht",
         "text_block_NnGdUn"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "<h2>WHY GLASS TILE?</h2>",
@@ -570,6 +571,52 @@
         "space_below": false,
         "divider": false,
         "color_scheme": "none",
+        "css_class": ""
+      }
+    },
+    "edde9d69-064b-4524-9260-dac6fd499329": {
+      "type": "slideshow",
+      "blocks": {
+        "4a6d7060-2966-4b19-b6ab-f1188d23aec5": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://pages/wholesale",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
+            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "4a6d7060-2966-4b19-b6ab-f1188d23aec5"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
         "css_class": ""
       }
     },
@@ -922,52 +969,6 @@
         "css_class": ""
       }
     },
-    "edde9d69-064b-4524-9260-dac6fd499329": {
-      "type": "slideshow",
-      "blocks": {
-        "4a6d7060-2966-4b19-b6ab-f1188d23aec5": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/wholesale",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
-            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "4a6d7060-2966-4b19-b6ab-f1188d23aec5"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "5dfcf890-2165-4203-b0bf-7150a769a849": {
       "type": "promo-grid",
       "blocks": {
@@ -1280,13 +1281,13 @@
     "4d3c4e7c-b4b0-40ba-8026-3638655534e7",
     "17558743395ea157d7",
     "text_columns_custom_dBDzNp",
+    "edde9d69-064b-4524-9260-dac6fd499329",
     "slideshow_split_dNCP8b",
     "3074f93d-2035-4257-933d-5ac90c150dd5",
     "text_and_image_KPBbFP",
     "1749679120b341a9aa",
     "0024a2e3-7be7-42d1-832c-5c65e08bbe1f",
     "promo_grid_mVEyqh",
-    "edde9d69-064b-4524-9260-dac6fd499329",
     "5dfcf890-2165-4203-b0bf-7150a769a849",
     "7d232497-b8ea-4313-bc84-57b1b808249c",
     "9d70d689-9b4b-4264-858b-37afbf3665ab",
