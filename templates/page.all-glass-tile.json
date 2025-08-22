@@ -965,7 +965,7 @@
         "space_above": true,
         "space_below": true,
         "two_column_mobile": false,
-        "three_column_mobile": true,
+        "three_column_mobile": false,
         "css_class": ""
       }
     },
