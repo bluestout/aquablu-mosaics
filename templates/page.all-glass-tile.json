@@ -629,12 +629,31 @@
             "focal_point": "center center",
             "color_scheme": "2"
           }
+        },
+        "slide_UTNKab": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Not Looking For Glass?",
+            "title_size": 40,
+            "subheading": "Porcelain tile is also a premium choice for all-tile pool finishes, combining strength, longevity, and elegant design. Its resistance to moisture, fading, and wear makes it ideal for residential pools, spa areas, and commercial projects. With its classic yet versatile aesthetic, porcelain elevates any pool design.",
+            "link": "shopify://collections/shop-all-porcelain-tile-pool-finishes",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Tahiti_Series_Porcelain_Tile_Zellige-Look_Tile_for_Pools_Kitchens_Bathrooms.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
         }
       },
       "block_order": [
         "slide_Va96z4",
         "slide_mEBpRD",
-        "slide_jmNXBq"
+        "slide_jmNXBq",
+        "slide_UTNKab"
       ],
       "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
@@ -713,6 +732,7 @@
         "template--14565147967560__3074f93d-2035-4257-933d-5ac90c150dd5-16838134561dbfa07c-1",
         "6c9639dd-9d75-4e9a-94d6-45ffae41f758"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "",
@@ -727,6 +747,7 @@
     },
     "text_and_image_KPBbFP": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Tahiti_Series_Porcelain_Tile_Zellige-Look_Tile_for_Pools_Kitchens_Bathrooms.jpg",
         "video_url": "",
