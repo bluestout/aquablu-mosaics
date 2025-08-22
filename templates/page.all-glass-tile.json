@@ -905,7 +905,7 @@
             "video_url": "",
             "width": "33",
             "height": 380,
-            "text_align": "vertical-bottom horizontal-center",
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "#ffffff"
           }
@@ -924,7 +924,7 @@
             "video_url": "",
             "width": "33",
             "height": 400,
-            "text_align": "vertical-bottom horizontal-center",
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "#ffffff"
           }
@@ -934,7 +934,7 @@
           "settings": {
             "subheading": "",
             "heading": "TILE GROUT",
-            "textarea": "",
+            "textarea": "Discover our premium selection of pool tile grouts, offering lasting strength, seamless finishes, and color options to complement any design.",
             "cta_text1": "",
             "cta_link1": "shopify://collections/tile-grout",
             "cta_text2": "",
@@ -943,7 +943,7 @@
             "video_url": "",
             "width": "33",
             "height": 500,
-            "text_align": "vertical-bottom horizontal-center",
+            "text_align": "vertical-center horizontal-center",
             "focal_point": "center",
             "color_accent": "#ffffff"
           }
