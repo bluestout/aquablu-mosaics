@@ -336,9 +336,9 @@
             "dynamic_source": "",
             "title": "",
             "subtitle": "",
-            "heading_size": "1",
+            "heading_size": "0.8",
             "heading_color": "",
-            "heading_align": "left",
+            "heading_align": "center",
             "desc_style": "subtitle",
             "desc_color": "",
             "custom_class": "",
@@ -352,7 +352,6 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_Hy7HqN"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
