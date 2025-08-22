@@ -1249,6 +1249,61 @@
         "css_class": "kitchen-section-14"
       }
     },
+    "slideshow_split_N8XERk": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_FFYeka": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Installation Tips",
+            "title": "",
+            "title_size": 40,
+            "subheading": "A professional-looking tile installation starts with proper prep. Ensure your wall is clean, dry, and level. Plan your layout by arranging tiles first to visualize patterns and cuts. Mark your starting point with a level and chalk line for balance. Use spacers to keep grout lines even and achieve a polished, high-end finish. Careful preparation will reward you with a beautiful, lasting backsplash.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Zest_Star_4_x_4_Ceramic_Tile_Backsplash_Shower_Tile10_c77bd3f0-1db7-4e91-b17f-6ff46084b703.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_4cAgcJ": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Get Your Supplies at AquaBlu Mosaics",
+            "title": "",
+            "title_size": 60,
+            "subheading": "AquaBlu Mosaics is your one-stop shop for tile installation essentials. Along with your favorite tiles, you’ll find high-quality adhesives, premium grout, and professional-grade installation tools. Get everything you need for a durable, flawless backsplash in one place.",
+            "link": "shopify://pages/installation",
+            "link_text": "Shop Installation Products",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/AMB_AGADIR_AGUA_14.7X14.7_3_42638739-2516-4d9c-9acf-b21d0de19628.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "3"
+          }
+        }
+      },
+      "block_order": [
+        "slide_FFYeka",
+        "slide_4cAgcJ"
+      ],
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "height": 500,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "faq_Uq9AXE": {
       "type": "faq",
       "blocks": {
@@ -1355,6 +1410,7 @@
     "3ebae419-d203-4d98-a256-f12c011db2db",
     "df6005d9-5f8f-4db5-83cb-6c05ebcc570b",
     "df80ef78-2d88-4763-8ed7-a2e7c76389a8",
+    "slideshow_split_N8XERk",
     "faq_Uq9AXE"
   ]
 }
