@@ -163,6 +163,7 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/Kitchen_Backsplash_Landing_page.jpg",
+        "video_url": "",
         "image_width": 500,
         "subtitle": "Transform Your Kitchen, Transform Your Home",
         "title": "",
@@ -170,8 +171,8 @@
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
+        "align_text": "center",
+        "layout": "left",
         "color_scheme": "3",
         "divider": false,
         "new_layout": true,
