@@ -209,6 +209,7 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/All_glass_tile_pool_92da1c82-35d0-4501-82c9-70453a664f8e.jpg",
+        "video_url": "",
         "image_width": 400,
         "subtitle": "Largest Selection of Glass Tile Pool Finishes",
         "title": "",
@@ -238,6 +239,7 @@
       "block_order": [
         "text_TeDn6y"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": false,
@@ -313,7 +315,7 @@
         "logo_image_MPCAJr"
       ],
       "settings": {
-        "title": "EXPLORE",
+        "title": "",
         "divider": false,
         "gutter_size": 20,
         "space_above": false,
