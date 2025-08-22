@@ -90,6 +90,7 @@
         },
         "fe566f05-8ead-44be-adeb-b04954782cd1": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
