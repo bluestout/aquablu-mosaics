@@ -158,6 +158,26 @@
         "css_class": "all-glass-tile-section-8"
       }
     },
+    "text_and_image_W7gcGM": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Kitchen_Backsplash_Landing_page.jpg",
+        "image_width": 500,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Kitchen backsplash tile is more than protection - it’s a statement piece that reflects your style and elevates your space. From ceramic and porcelain to glass and natural stone, the right kitchen backsplash tile can transform any kitchen. With endless colors, shapes, and materials, you can design a space that’s both functional and artistic. At AquaBlu Mosaics, our curated collection suits every style, from rustic farmhouse to sleek contemporary, with expert guidance on materials, colors, and quantities to ensure a perfect fit.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "3",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
+      }
+    },
     "6beb8612-632d-4031-8db9-c867670f61f9": {
       "type": "slideshow",
       "blocks": {
@@ -1392,6 +1412,7 @@
   "order": [
     "main",
     "b8729415-180c-4e72-a200-75a107466995",
+    "text_and_image_W7gcGM",
     "6beb8612-632d-4031-8db9-c867670f61f9",
     "logo_list_custom_2_jjhjBt",
     "119c1923-0e00-44f3-8409-18542297d27d",
