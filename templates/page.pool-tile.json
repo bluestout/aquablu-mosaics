@@ -162,6 +162,7 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/Pool_tile_text_highlight.jpg",
+        "video_url": "",
         "image_width": 500,
         "subtitle": "Tile Your Way to Paradise",
         "title": "",
@@ -806,7 +807,7 @@
       "custom_css": [],
       "settings": {
         "full_width": false,
-        "heading": "START WITH A SOLID FOUNDATION",
+        "heading": "GIVE YOUR POOL A SOLID FOUNDATION",
         "gutter_size": 20,
         "section_gutter_size": 20,
         "space_above": true,
