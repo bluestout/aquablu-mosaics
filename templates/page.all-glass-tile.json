@@ -573,80 +573,6 @@
         "css_class": ""
       }
     },
-    "slideshow_split_dNCP8b": {
-      "type": "slideshow-split",
-      "blocks": {
-        "slide_Va96z4": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Stock Colors & Mixes",
-            "title_size": 40,
-            "subheading": "AquaBlu offers one of the largest online collections of glass pool tile. Explore our mosaic glass tiles in a variety of colors, sizes, and shapes. With endless options to fit every style, you’re sure to find the perfect glass tile to complete your dream design.",
-            "link": "shopify://collections/shop-all-glass-tile-pool-finishes",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Blue_Planet.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        },
-        "slide_mEBpRD": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Custom Blends & Gradients",
-            "title_size": 40,
-            "subheading": "Custom blends and gradients seamlessly blend hues, creating mesmerizing transitions that elevate your pool to a realm of unparalleled elegance. Indulge in the epitome of personalized luxury.",
-            "link": "",
-            "link_text": "Create my Dream Tile Blend",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "left",
-            "image": "shopify://shop_images/Custom_Pool_Mosaic.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        },
-        "slide_jmNXBq": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Custom Mosaics",
-            "title_size": 40,
-            "subheading": "Transform your pool into a stunning work of art with our custom design services. From intricate patterns inspired by nature to contemporary designs that reflect your personal style, our custom glass mosaic art brings a touch of elegance and sophistication to any aquatic sanctuary.",
-            "link": "shopify://pages/custom-mosaics",
-            "link_text": "Bring My Dream to Reality",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "left",
-            "image": "shopify://shop_images/Custom_Mosaic_Murals_by_AquaBlu_Mosaics.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        }
-      },
-      "block_order": [
-        "slide_Va96z4",
-        "slide_mEBpRD",
-        "slide_jmNXBq"
-      ],
-      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
-      "settings": {
-        "full_width": false,
-        "height": 450,
-        "height_mobile": 450,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "3074f93d-2035-4257-933d-5ac90c150dd5": {
       "type": "promo-grid",
       "blocks": {
@@ -713,6 +639,7 @@
         "template--14565147967560__3074f93d-2035-4257-933d-5ac90c150dd5-16838134561dbfa07c-1",
         "6c9639dd-9d75-4e9a-94d6-45ffae41f758"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "",
@@ -774,6 +701,80 @@
       "settings": {
         "full_width": false,
         "space_around": false,
+        "css_class": ""
+      }
+    },
+    "slideshow_split_dNCP8b": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_Va96z4": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Stock Colors & Mixes",
+            "title_size": 40,
+            "subheading": "AquaBlu offers one of the largest online collections of glass pool tile. Explore our mosaic glass tiles in a variety of colors, sizes, and shapes. With endless options to fit every style, you’re sure to find the perfect glass tile to complete your dream design.",
+            "link": "shopify://collections/shop-all-glass-tile-pool-finishes",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Blue_Planet.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_mEBpRD": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Custom Blends & Gradients",
+            "title_size": 40,
+            "subheading": "Custom blends and gradients seamlessly blend hues, creating mesmerizing transitions that elevate your pool to a realm of unparalleled elegance. Indulge in the epitome of personalized luxury.",
+            "link": "shopify://pages/custom-mosaics",
+            "link_text": "Create my Dream Tile Blend",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Custom_Pool_Mosaic.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_jmNXBq": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Custom Mosaics",
+            "title_size": 40,
+            "subheading": "Transform your pool into a stunning work of art with our custom design services. From intricate patterns inspired by nature to contemporary designs that reflect your personal style, our custom glass mosaic art brings a touch of elegance and sophistication to any aquatic sanctuary.",
+            "link": "shopify://pages/custom-mosaics",
+            "link_text": "Bring My Dream to Reality",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Custom_Mosaic_Murals_by_AquaBlu_Mosaics.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Va96z4",
+        "slide_mEBpRD",
+        "slide_jmNXBq"
+      ],
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "height": 450,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
         "css_class": ""
       }
     },
@@ -1259,10 +1260,10 @@
     "4d3c4e7c-b4b0-40ba-8026-3638655534e7",
     "17558743395ea157d7",
     "text_columns_custom_dBDzNp",
-    "slideshow_split_dNCP8b",
     "3074f93d-2035-4257-933d-5ac90c150dd5",
     "text_and_image_KPBbFP",
     "1749679120b341a9aa",
+    "slideshow_split_dNCP8b",
     "0024a2e3-7be7-42d1-832c-5c65e08bbe1f",
     "promo_grid_mVEyqh",
     "edde9d69-064b-4524-9260-dac6fd499329",
