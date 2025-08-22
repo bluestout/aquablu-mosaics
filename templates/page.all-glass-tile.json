@@ -239,7 +239,6 @@
       "block_order": [
         "text_TeDn6y"
       ],
-      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": false,
@@ -315,7 +314,7 @@
         "logo_image_MPCAJr"
       ],
       "settings": {
-        "title": "",
+        "title": "EXPLORE",
         "divider": false,
         "gutter_size": 20,
         "space_above": false,
