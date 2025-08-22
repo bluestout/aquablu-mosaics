@@ -792,6 +792,84 @@
         "css_class": "all-glass-tile-section-3"
       }
     },
+    "promo_grid_mVEyqh": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_XjQiYf": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "WATERPROOFING",
+            "textarea": "Protect your glass pool tile project with our professional-grade waterproofing solutions, engineered for durability and peace of mind.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/waterproofing",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/OP_25.12_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza3.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 380,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_TLK3pw": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "TILE ADHESIVES",
+            "textarea": "Once you’ve chosen the perfect glass pool tile, ensure lasting strength and reliability with our high-performance tile adhesives.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/tile-adhesives",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/GM_20.59_3_4_x_3_4_Glass_Tile_Bisazza_Mosaic_Tile.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_GpHdGf": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "TILE GROUT",
+            "textarea": "Discover our premium selection of pool tile grouts, offering lasting strength, seamless finishes, and color options to complement any design.",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/tile-grout",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/OP_25.12_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_XjQiYf",
+        "advanced_TLK3pw",
+        "advanced_GpHdGf"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "GIVE YOUR POOL TILE A SOLID FOUNDATION",
+        "gutter_size": 15,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
     "text_and_image_KPBbFP": {
       "type": "text-and-image",
       "disabled": true,
@@ -888,84 +966,6 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "promo_grid_mVEyqh": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_XjQiYf": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "WATERPROOFING",
-            "textarea": "Protect your glass pool tile project with our professional-grade waterproofing solutions, engineered for durability and peace of mind.",
-            "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/waterproofing",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/OP_25.12_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza3.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 380,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_TLK3pw": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "TILE ADHESIVES",
-            "textarea": "Once you’ve chosen the perfect glass pool tile, ensure lasting strength and reliability with our high-performance tile adhesives.",
-            "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/tile-adhesives",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/GM_20.59_3_4_x_3_4_Glass_Tile_Bisazza_Mosaic_Tile.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 400,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_GpHdGf": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "TILE GROUT",
-            "textarea": "Discover our premium selection of pool tile grouts, offering lasting strength, seamless finishes, and color options to complement any design.",
-            "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/tile-grout",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/OP_25.12_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "advanced_XjQiYf",
-        "advanced_TLK3pw",
-        "advanced_GpHdGf"
-      ],
-      "settings": {
-        "full_width": false,
-        "heading": "GIVE YOUR POOL TILE A SOLID FOUNDATION",
-        "gutter_size": 15,
-        "section_gutter_size": 20,
-        "space_above": true,
-        "space_below": true,
-        "two_column_mobile": false,
-        "three_column_mobile": false,
         "css_class": ""
       }
     },
@@ -1284,10 +1284,10 @@
     "edde9d69-064b-4524-9260-dac6fd499329",
     "slideshow_split_dNCP8b",
     "3074f93d-2035-4257-933d-5ac90c150dd5",
+    "promo_grid_mVEyqh",
     "text_and_image_KPBbFP",
     "1749679120b341a9aa",
     "0024a2e3-7be7-42d1-832c-5c65e08bbe1f",
-    "promo_grid_mVEyqh",
     "5dfcf890-2165-4203-b0bf-7150a769a849",
     "7d232497-b8ea-4313-bc84-57b1b808249c",
     "9d70d689-9b4b-4264-858b-37afbf3665ab",
