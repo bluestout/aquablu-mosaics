@@ -213,7 +213,7 @@
       "settings": {
         "image": "shopify://shop_images/All_glass_tile_pool_page.jpg",
         "video_url": "",
-        "image_width": 400,
+        "image_width": 500,
         "subtitle": "",
         "title": "The Industry’s Largest Selection of Glass Tile Pool Finishes",
         "text": "<p>Elevate your pool with all-glass tile finishes that combine luxury, durability, and stain-resistant performance. Perfect for both new builds and remodeling projects, glass tile offers limitless design possibilities, from shimmering mosaics to vibrant custom patterns. </p><p>As the leading supplier of glass tile pool finishes, AquaBlu provides expert guidance and an extensive selection to help you create the perfect backyard oasis. Bring Paradise Home with our unmatched quality and support every step of the way.</p>",
@@ -573,6 +573,78 @@
         "css_class": ""
       }
     },
+    "slideshow_split_dNCP8b": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_Va96z4": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Stock Colors & Mixes",
+            "title": "",
+            "title_size": 60,
+            "subheading": "AquaBlu offers one of the largest online collections of stock glass pool tile, designed to bring beauty and durability to any project. Explore our mosaic glass tiles in a variety of colors, sizes, and shapes. With endless options to fit every style, you’re sure to find the perfect glass tile to complete your dream design.",
+            "link": "shopify://collections/shop-all-glass-tile-pool-finishes",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_mEBpRD": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Side by Side Slide",
+            "title_size": 60,
+            "subheading": "Add optional subtext",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "none"
+          }
+        },
+        "slide_jmNXBq": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Highlight products",
+            "title_size": 60,
+            "subheading": "Repurpose your product photography with our \"Indented\" image option",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Va96z4",
+        "slide_mEBpRD",
+        "slide_jmNXBq"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "height": 450,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "3074f93d-2035-4257-933d-5ac90c150dd5": {
       "type": "promo-grid",
       "blocks": {
@@ -639,7 +711,6 @@
         "template--14565147967560__3074f93d-2035-4257-933d-5ac90c150dd5-16838134561dbfa07c-1",
         "6c9639dd-9d75-4e9a-94d6-45ffae41f758"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "",
@@ -654,7 +725,6 @@
     },
     "text_and_image_KPBbFP": {
       "type": "text-and-image",
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Tahiti_Series_Porcelain_Tile_Zellige-Look_Tile_for_Pools_Kitchens_Bathrooms.jpg",
         "video_url": "",
@@ -702,99 +772,6 @@
       "settings": {
         "full_width": false,
         "space_around": false,
-        "css_class": ""
-      }
-    },
-    "slideshow_split_dNCP8b": {
-      "type": "slideshow-split",
-      "blocks": {
-        "slide_Va96z4": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Stock Colors & Mixes",
-            "title_size": 40,
-            "subheading": "AquaBlu offers one of the largest online collections of glass pool tile. Explore our mosaic glass tiles in a variety of colors, sizes, and shapes. With endless options to fit every style, you’re sure to find the perfect glass tile to complete your dream design.",
-            "link": "shopify://collections/shop-all-glass-tile-pool-finishes",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Blue_Planet.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        },
-        "slide_mEBpRD": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Custom Blends & Gradients",
-            "title_size": 40,
-            "subheading": "Custom blends and gradients seamlessly blend hues, creating mesmerizing transitions that elevate your pool to a realm of unparalleled elegance. Indulge in the epitome of personalized luxury.",
-            "link": "shopify://pages/custom-mosaics",
-            "link_text": "Create my Dream Tile Blend",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "left",
-            "image": "shopify://shop_images/Custom_Pool_Mosaic.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        },
-        "slide_jmNXBq": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Custom Mosaics",
-            "title_size": 40,
-            "subheading": "Transform your pool into a stunning work of art with our custom design services. From intricate patterns inspired by nature to contemporary designs that reflect your personal style, our custom glass mosaic art brings a touch of elegance and sophistication to any aquatic sanctuary.",
-            "link": "shopify://pages/custom-mosaics",
-            "link_text": "Help Me Customize",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Custom_Mosaic_Murals_by_AquaBlu_Mosaics.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        },
-        "slide_QbRYmQ": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Not Looking For Glass?",
-            "title_size": 40,
-            "subheading": "Porcelain tile is also a premium choice for all-tile pool finishes, combining strength, longevity, and elegant design. Its resistance to moisture, fading, and wear makes it ideal for residential pools, spa areas, and commercial projects. With its classic yet versatile aesthetic, porcelain elevates any pool design.",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "left",
-            "image": "shopify://shop_images/Tahiti_Series_Porcelain_Tile_Zellige-Look_Tile_for_Pools_Kitchens_Bathrooms.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "none"
-          }
-        }
-      },
-      "block_order": [
-        "slide_Va96z4",
-        "slide_mEBpRD",
-        "slide_jmNXBq",
-        "slide_QbRYmQ"
-      ],
-      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
-      "settings": {
-        "full_width": false,
-        "height": 450,
-        "height_mobile": 450,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
         "css_class": ""
       }
     },
