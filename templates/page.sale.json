@@ -247,6 +247,7 @@
         },
         "slide_qrYUE6": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "NO CODED NEEDED",
             "title": "10% OFF TENJAM SPLASH PRODUCTS",
