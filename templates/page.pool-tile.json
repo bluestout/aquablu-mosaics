@@ -265,6 +265,7 @@
         "hero_7hWWPz",
         "hero_DewB3R"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
