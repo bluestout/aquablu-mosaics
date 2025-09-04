@@ -156,6 +156,26 @@
         "css_class": "outdoor-living-section-1"
       }
     },
+    "text_and_image_cftjxY": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Outdoor_Living_Image_with_Text.jpg",
+        "image_width": 500,
+        "subtitle": "an elevated way to live",
+        "title": "",
+        "text": "<p>Create the ultimate backyard retreat with our wide range of outdoor living essentials. Explore our full selection of pool furniture, including stylish <a href=\"https://www.aquablumosaics.com/collections/in-pool-chairs\" title=\"https://www.aquablumosaics.com/collections/in-pool-chairs\">pool chairs</a>, resort-inspired chaise loungers, functional in-pool side tables, and comfortable <a href=\"https://www.aquablumosaics.com/pages/in-pool-furniture\" title=\"https://www.aquablumosaics.com/pages/in-pool-furniture\">pool lounge chairs</a> made for relaxing in and around the water. Complete your space with cozy <a href=\"https://www.aquablumosaics.com/collections/outdoor-fire-pits\" title=\"https://www.aquablumosaics.com/collections/outdoor-fire-pits\">fire pits</a>, durable patio pavers, and must-have pool and patio accessories that bring comfort and style to every corner of your outdoor oasis. Whether you’re unwinding solo or entertaining friends, our collection makes it easy to design the perfect outdoor living space.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "1",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
+      }
+    },
     "slideshow_T4nNPj": {
       "type": "slideshow",
       "blocks": {
@@ -803,6 +823,7 @@
   "order": [
     "main",
     "c9537080-8b7e-4d11-abed-ffdf006443e9",
+    "text_and_image_cftjxY",
     "slideshow_T4nNPj",
     "f7b49f3d-1c37-448e-888b-b38a40ba8033",
     "c4b52c04-7da6-471a-a2ab-d6fc4ec66c84",
