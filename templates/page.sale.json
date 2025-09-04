@@ -133,6 +133,60 @@
         "css_class": ""
       }
     },
+    "slideshow_split_3AUTRr": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_KUc3m6": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'INSTALL20' AT CHECKOUT",
+            "title": "Save 20% on Installation Materials",
+            "title_size": 40,
+            "subheading": "Spend $750 on tile and stone products and get 20% off tile grout, adhesives, waterproofing, and tools!",
+            "link": "shopify://pages/tile-and-stone",
+            "link_text": "Shop All Tile & Stone",
+            "link_2": "shopify://pages/installation",
+            "link_text_2": "Browse All Installation",
+            "text_position": "right",
+            "image": "shopify://shop_images/install20.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_RFRin3": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'SHADESAVE' AT CHECKOUT",
+            "title": "Save 50% on the Perfect Umbrella",
+            "title_size": 40,
+            "subheading": "Spend $1000 on in-pool and patio furniture and get one bluSHADES umbrella HALF OFF!",
+            "link": "https://www.aquablumosaics.com/collections/pool-and-patio-outdoor-furniture",
+            "link_text": "Shop Pool & Patio Furniture",
+            "link_2": "shopify://collections/blushades-pool-and-patio-umbrellas",
+            "link_text_2": "Find The Perfect Umbrella",
+            "text_position": "left",
+            "image": "shopify://shop_images/umbrella.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_KUc3m6",
+        "slide_RFRin3"
+      ],
+      "settings": {
+        "full_width": true,
+        "height": 500,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "slideshow_R84TV7": {
       "type": "slideshow",
       "blocks": {
@@ -386,60 +440,6 @@
         "css_class": "bath-section-8"
       }
     },
-    "slideshow_split_3AUTRr": {
-      "type": "slideshow-split",
-      "blocks": {
-        "slide_KUc3m6": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "USE CODE 'INSTALL20' AT CHECKOUT",
-            "title": "Save 20% on Installation Materials",
-            "title_size": 40,
-            "subheading": "Spend $750 on tile and stone products and get 20% off tile grout, adhesives, waterproofing, and tools!",
-            "link": "shopify://pages/tile-and-stone",
-            "link_text": "Shop All Tile & Stone",
-            "link_2": "shopify://pages/installation",
-            "link_text_2": "Browse All Installation",
-            "text_position": "right",
-            "image": "shopify://shop_images/install20.jpg",
-            "indent_image": true,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        },
-        "slide_RFRin3": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "USE CODE 'SHADESAVE' AT CHECKOUT",
-            "title": "Save 50% on the Perfect Umbrella",
-            "title_size": 40,
-            "subheading": "Spend $1000 on in-pool and patio furniture and get one bluSHADES umbrella HALF OFF!",
-            "link": "https://www.aquablumosaics.com/collections/pool-and-patio-outdoor-furniture",
-            "link_text": "Shop Pool & Patio Furniture",
-            "link_2": "shopify://collections/blushades-pool-and-patio-umbrellas",
-            "link_text_2": "Find The Perfect Umbrella",
-            "text_position": "left",
-            "image": "shopify://shop_images/umbrella.jpg",
-            "indent_image": true,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        }
-      },
-      "block_order": [
-        "slide_KUc3m6",
-        "slide_RFRin3"
-      ],
-      "settings": {
-        "full_width": true,
-        "height": 500,
-        "height_mobile": 450,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "99e0f1b0-4941-4132-9a64-a1becadfeb62": {
       "type": "newsletter",
       "blocks": {
@@ -497,11 +497,11 @@
   "order": [
     "main",
     "a92b5673-5ac8-4e2e-a61a-78fb827cbc99",
+    "slideshow_split_3AUTRr",
     "slideshow_R84TV7",
     "slideshow_split_yT6kCR",
     "slideshow_mWYVFP",
     "04e68109-2078-419d-82cc-f5e0b128ccea",
-    "slideshow_split_3AUTRr",
     "99e0f1b0-4941-4132-9a64-a1becadfeb62",
     "250ca572-c602-47ec-89af-1e37d80bc33f"
   ]
