@@ -161,6 +161,7 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/Outdoor_Living_Image_with_Text.jpg",
+        "video_url": "",
         "image_width": 500,
         "subtitle": "an elevated way to live",
         "title": "",
@@ -170,7 +171,7 @@
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
-        "color_scheme": "1",
+        "color_scheme": "3",
         "divider": false,
         "new_layout": true,
         "css_class": ""
