@@ -64,6 +64,7 @@
       "block_order": [
         "hero_tQBpWw"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
