@@ -56,13 +56,13 @@
           "settings": {
             "image": "shopify://shop_images/AquaPro_Landing_Page.jpg",
             "heading": "From Homes to Businesses",
-            "heading_size": "h1",
-            "subheading": "AQUAPRO NETWORK",
+            "heading_size": "h2",
+            "subheading": "TRADE & COMMERCIAL",
             "button_label": "Learn More",
             "link": "shopify://pages/wholesale",
             "box_align": "middle-left",
             "text_alignment": "left",
-            "image_overlay_opacity": 10,
+            "image_overlay_opacity": 20,
             "text_alignment_mobile": "center"
           }
         },
