@@ -312,7 +312,7 @@
         "text_block_dnywcw": {
           "type": "text_block",
           "settings": {
-            "icon": "chat",
+            "icon": "shield",
             "title": "Weather-Resistance",
             "text": "<p>Pool lounge chairs are exposed to sun, chlorine, and rain, so durability matters. High-quality options use UV-resistant materials to withstand the elements.</p>"
           }
@@ -320,7 +320,7 @@
         "text_block_MQ3hwg": {
           "type": "text_block",
           "settings": {
-            "icon": "chat",
+            "icon": "thumbs-up",
             "title": "Comfort",
             "text": "<p>Whether it's great ergonomics or a cushioned seat, comfort is what makes you actually want to use your in-pool-furniture. Quick-dry, breathable fabrics add to the relaxation and make maintenance easier.</p>"
           }
@@ -328,7 +328,7 @@
         "text_block_RBAVPV": {
           "type": "text_block",
           "settings": {
-            "icon": "chat",
+            "icon": "trophy",
             "title": "Style & Design",
             "text": "<p>Your pool furniture should look as good as it feels. From sleek modern lines to resort-inspired designs, choosing a style that matches your outdoor space elevates the whole outdoor experience.</p>"
           }
