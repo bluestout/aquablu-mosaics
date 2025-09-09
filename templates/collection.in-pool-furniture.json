@@ -391,6 +391,55 @@
         "css_class": ""
       }
     },
+    "text_and_image_DUg6c8": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "1",
+        "divider": false,
+        "new_layout": false,
+        "css_class": ""
+      }
+    },
+    "rich_text_986eVM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kLABEX": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "text_3T7ycz": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kLABEX",
+        "text_3T7ycz"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    },
     "testimonials_cQnVVP": {
       "type": "testimonials",
       "blocks": {
@@ -471,6 +520,8 @@
     "text_with_icons_XQjeWP",
     "text_and_image_4ADyKK",
     "text_and_image_7nTi9f",
+    "text_and_image_DUg6c8",
+    "rich_text_986eVM",
     "testimonials_cQnVVP"
   ]
 }
