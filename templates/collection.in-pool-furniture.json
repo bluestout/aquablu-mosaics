@@ -406,7 +406,7 @@
             "link_text_2": "",
             "text_position": "left",
             "image": "shopify://shop_images/MG_9682_Final_High_Rez_Tenjam_Jupiter_2025_SPLASH_Robert_Holland.jpg",
-            "indent_image": true,
+            "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
           }
@@ -424,7 +424,7 @@
             "link_text_2": "",
             "text_position": "left",
             "image": "shopify://shop_images/Untitled_design_31.jpg",
-            "indent_image": true,
+            "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "none"
           }
