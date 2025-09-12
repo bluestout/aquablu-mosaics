@@ -372,12 +372,57 @@
         "css_class": ""
       }
     },
-    "featured_collection_carousel_zxwgpa": {
-      "type": "featured-collection-carousel",
-      "name": "Feat collection carousel",
+    "text_columns_custom_Tm4Rfy": {
+      "type": "text-columns-custom",
+      "blocks": {
+        "text_block_9hnWa4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/FL600WE_-_Kai_Shelf_Lounger_-_Lifestyle_-_with_Kids_-_Fathers_day.jpg",
+            "image_width": 650,
+            "title": "IN-POOL LOUNGERS",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-loungers"
+          }
+        },
+        "text_block_tDzcj9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_HCyNe9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_9hnWa4",
+        "text_block_tDzcj9",
+        "text_block_HCyNe9"
+      ],
+      "name": "Text Columns Custom",
       "settings": {
-        "title": "Featured collection",
-        "tab_collection_1": "trending-furniture",
+        "title": "POOL FURNITURE BY CATEGORY",
+        "text": "",
+        "column_size": 4,
+        "align_text": "center",
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "divider": false,
+        "color_scheme": "none",
         "css_class": ""
       }
     },
@@ -690,7 +735,7 @@
     "hero_video_pwWcHi",
     "text_with_icons_XQjeWP",
     "text_and_image_4ADyKK",
-    "featured_collection_carousel_zxwgpa",
+    "text_columns_custom_Tm4Rfy",
     "slideshow_split_HtUkpq",
     "text_and_image_7nTi9f",
     "text_and_image_DUg6c8",
