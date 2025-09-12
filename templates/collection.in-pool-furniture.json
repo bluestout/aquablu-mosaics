@@ -355,7 +355,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/All_glass_page_-_2.jpg",
+        "image": "shopify://shop_images/20240611_Tupelo_Proof_1.Lounger_In_Pool.289.jpg",
         "video_url": "",
         "image_width": 700,
         "subtitle": "",
@@ -366,7 +366,7 @@
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
-        "color_scheme": "1",
+        "color_scheme": "3",
         "divider": false,
         "new_layout": false,
         "css_class": ""
