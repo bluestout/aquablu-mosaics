@@ -459,7 +459,7 @@
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
-        "align_text": "right",
+        "align_text": "left",
         "layout": "left",
         "color_scheme": "none",
         "divider": false,
