@@ -582,6 +582,42 @@
         "color_scheme": "none",
         "css_class": ""
       }
+    },
+    "faq_x3ydMN": {
+      "type": "faq",
+      "blocks": {
+        "question_6nPimE": {
+          "type": "question",
+          "settings": {
+            "title": "What delivery options are available for outdoor furniture?",
+            "text": "<p>We aim to make receiving your outdoor furniture convenient and affordable, offering free and flat rate shipping on eligible items based on size and weight. Smaller pieces such as side tables, umbrellas, planters, and select chairs ship via parcel services. Larger furniture pieces such as <a href=\"https://www.aquablumosaics.com/collections/in-pool-loungers\" title=\"In-Pool Loungers\">loungers</a>, daybeds, and cabanas require LTL freight. For these larger LTL deliveries, your experience is enhanced with a scheduled delivery appointment, a call notification before arrival, and lift gate service to ground level, ensuring a smoother and more predictable delivery process for your larger items.</p>"
+          }
+        },
+        "question_yFEGEV": {
+          "type": "question",
+          "settings": {
+            "title": "Is your in pool furniture made in the USA?",
+            "text": "<p>AquaBlu prioritizes premium, American-made in-pool furniture, reflecting a commitment to superior craftsmanship and enduring quality. Featuring distinguished brands such as Tenjam, Tupelo Goods, Ledge Lounger, Floating Luxuries, Studio Redrock and SR Smith, our selection ensures exceptional durability and design. By choosing \"<a href=\"https://www.aquablumosaics.com/collections/made-in-america-products\" title=\"Products made in the USA\">Made in USA</a>,\" clients invest in products that adhere to rigorous quality standards and support domestic manufacturing, enhancing their poolside experience with unparalleled elegance and reliability.</p>"
+          }
+        },
+        "question_AAhJtf": {
+          "type": "question",
+          "settings": {
+            "title": "How does AquaBlu ensure furniture product quality?",
+            "text": "<p>We make sure our in pool furniture is top quality by working only with trusted manufacturers. These partners are known for their excellent craftsmanship and for using strong, durable materials built to handle the outdoors, like weather-resistant plastics and metals. Every piece is carefully checked to meet high standards before it comes to you, ensuring you get beautiful furniture that lasts.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_6nPimE",
+        "question_yFEGEV",
+        "question_AAhJtf"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "title": "FAQs",
+        "css_class": ""
+      }
     }
   },
   "order": [
@@ -601,6 +637,7 @@
     "text_and_image_DUg6c8",
     "slideshow_split_HtUkpq",
     "rich_text_986eVM",
-    "testimonials_cQnVVP"
+    "testimonials_cQnVVP",
+    "faq_x3ydMN"
   ]
 }
