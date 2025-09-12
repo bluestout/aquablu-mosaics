@@ -372,6 +372,15 @@
         "css_class": ""
       }
     },
+    "featured_collection_carousel_zxwgpa": {
+      "type": "featured-collection-carousel",
+      "name": "Feat collection carousel",
+      "settings": {
+        "title": "Featured collection",
+        "tab_collection_1": "trending-furniture",
+        "css_class": ""
+      }
+    },
     "slideshow_split_HtUkpq": {
       "type": "slideshow-split",
       "blocks": {
@@ -681,6 +690,7 @@
     "hero_video_pwWcHi",
     "text_with_icons_XQjeWP",
     "text_and_image_4ADyKK",
+    "featured_collection_carousel_zxwgpa",
     "slideshow_split_HtUkpq",
     "text_and_image_7nTi9f",
     "text_and_image_DUg6c8",
