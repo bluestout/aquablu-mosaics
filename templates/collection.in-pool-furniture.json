@@ -596,6 +596,13 @@
         "question_yFEGEV": {
           "type": "question",
           "settings": {
+            "title": "Why are people putting furniture in their pools?",
+            "text": "<p>Sun shelves and Baja shelves are a top trend in modern pool design, featured in over 90% of new builds and recognized by <a href=\"https://poolmagazine.com/\" title=\"Pool Magazine\">industry professionals</a>. AquaBlu leads the way with the largest curated selection of in-pool furniture to elevate these shallow spaces. Shop premium loungers, submersible chairs, in-water tables, and <a href=\"https://www.aquablumosaics.com/collections/outdoor-umbrellas-for-pool-and-patio\" title=\"In-Pool and Patio Umbrellas\">umbrellas</a> from top-tier pool brands. Our durable, stylish pieces transform your sun shelf into a resort-style retreat, perfect for lounging, sipping drinks, and staying shaded. These features not only boost comfort and aesthetics but also create a social, relaxing environment. Explore AquaBlu’s top-rated sun shelf and Baja shelf furniture to upgrade your pool experience today!</p>"
+          }
+        },
+        "question_Pe6zQt": {
+          "type": "question",
+          "settings": {
             "title": "Is your in pool furniture made in the USA?",
             "text": "<p>AquaBlu prioritizes premium, American-made in-pool furniture, reflecting a commitment to superior craftsmanship and enduring quality. Featuring distinguished brands such as Tenjam, Tupelo Goods, Ledge Lounger, Floating Luxuries, Studio Redrock and SR Smith, our selection ensures exceptional durability and design. By choosing \"<a href=\"https://www.aquablumosaics.com/collections/made-in-america-products\" title=\"Products made in the USA\">Made in USA</a>,\" clients invest in products that adhere to rigorous quality standards and support domestic manufacturing, enhancing their poolside experience with unparalleled elegance and reliability.</p>"
           }
@@ -611,6 +618,7 @@
       "block_order": [
         "question_6nPimE",
         "question_yFEGEV",
+        "question_Pe6zQt",
         "question_AAhJtf"
       ],
       "name": "t:sections.faq.presets.faq.name",
