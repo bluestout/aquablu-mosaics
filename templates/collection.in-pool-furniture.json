@@ -596,6 +596,13 @@
         "question_yFEGEV": {
           "type": "question",
           "settings": {
+            "title": "How do I choose the best in-pool furniture for my swimming pool?",
+            "text": "<p>When selecting in-pool furniture, consider pool depth, material durability, and comfort. Look for UV-resistant, waterproof, and easy-to-clean options like resin, plastic, or aluminum to ensure your pool chairs, tables, and benches last season after season.</p><p></p>"
+          }
+        },
+        "question_CWbUEW": {
+          "type": "question",
+          "settings": {
             "title": "What types of in-pool furniture are available at AquaBlu?",
             "text": "<p>In-pool furniture includes pool chairs, in-pool tables, benches, and loungers designed specifically to sit partially in the water. These pieces allow you to relax comfortably in your pool while enjoying snacks, drinks, or socializing with family and friends.</p><p></p>"
           }
@@ -625,6 +632,7 @@
       "block_order": [
         "question_6nPimE",
         "question_yFEGEV",
+        "question_CWbUEW",
         "question_4wgUJw",
         "question_Pe6zQt",
         "question_AAhJtf"
