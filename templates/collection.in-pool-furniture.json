@@ -390,10 +390,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/Woosah_Tall_Base_Chair_Set_of_Two_-_Luxury_Pool_Chair_17.jpg",
             "image_width": 650,
-            "title": "Example title",
-            "button_label": "Optional button",
-            "button_link": ""
+            "title": "POOL CHAIRS",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-chairs"
           }
         },
         "text_block_HCyNe9": {
