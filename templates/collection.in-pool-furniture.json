@@ -449,11 +449,29 @@
             "focal_point": "center center",
             "color_scheme": "1"
           }
+        },
+        "slide_GbGKgM": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
+            "title": "Protect & Store",
+            "title_size": 60,
+            "subheading": "Add optional subtext",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "none"
+          }
         }
       },
       "block_order": [
         "slide_NCKJtj",
-        "slide_x467fe"
+        "slide_x467fe",
+        "slide_GbGKgM"
       ],
       "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
