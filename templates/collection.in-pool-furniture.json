@@ -624,6 +624,13 @@
         "question_AAhJtf": {
           "type": "question",
           "settings": {
+            "title": "Can in-pool furniture be left in the water year-round?",
+            "text": "<p>Many in-pool furniture pieces are designed for seasonal use, but some high-quality options can withstand extended exposure to water. Always check manufacturer guidelines for UV protection, corrosion resistance, and weight limits to avoid damage.</p>"
+          }
+        },
+        "question_bhMtCd": {
+          "type": "question",
+          "settings": {
             "title": "How does AquaBlu ensure furniture product quality?",
             "text": "<p>We make sure our in pool furniture is top quality by working only with trusted manufacturers. These partners are known for their excellent craftsmanship and for using strong, durable materials built to handle the outdoors, like weather-resistant plastics and metals. Every piece is carefully checked to meet high standards before it comes to you, ensuring you get beautiful furniture that lasts.</p>"
           }
@@ -635,7 +642,8 @@
         "question_CWbUEW",
         "question_4wgUJw",
         "question_Pe6zQt",
-        "question_AAhJtf"
+        "question_AAhJtf",
+        "question_bhMtCd"
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
