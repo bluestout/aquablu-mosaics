@@ -423,10 +423,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/In-Pool_Tables_2.jpg",
             "image_width": 650,
-            "title": "Example title",
-            "button_label": "Optional button",
-            "button_link": ""
+            "title": "TABLES",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-tables"
           }
         }
       },
