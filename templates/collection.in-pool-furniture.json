@@ -631,6 +631,13 @@
         "question_bFQCEb": {
           "type": "question",
           "settings": {
+            "title": "I'm not seeing the color I want, do you do custom orders?",
+            "text": "<p>Yes! We offer custom color options for many of our products. Please <a href=\"https://www.aquablumosaics.com/pages/custom-mosaics\" target=\"_blank\" title=\"Custom Projects\">reach out to our team </a>with the specific color or finish you’re looking for, and we’ll work with you to create a solution that fits your vision.</p>"
+          }
+        },
+        "question_Jb4MqW": {
+          "type": "question",
+          "settings": {
             "title": "Can in-pool furniture be left in the water year-round?",
             "text": "<p>Many in-pool furniture pieces are designed for seasonal use, but some high-quality options can withstand extended exposure to water. Always check manufacturer guidelines for UV protection, corrosion resistance, and weight limits to avoid damage.</p>"
           }
@@ -651,6 +658,7 @@
         "question_Pe6zQt",
         "question_AAhJtf",
         "question_bFQCEb",
+        "question_Jb4MqW",
         "question_bhMtCd"
       ],
       "name": "t:sections.faq.presets.faq.name",
