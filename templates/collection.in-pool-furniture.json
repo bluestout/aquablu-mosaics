@@ -292,16 +292,16 @@
       "name": "t:sections.hero-video.presets.video_hero.name",
       "settings": {
         "full_width": true,
-        "title": "Bring your\nbrand to life.",
-        "title_size": 70,
-        "subheading": "Seamless hero videos",
-        "link_text": "Optional button",
+        "title": "BRING PARADISE HOME",
+        "title_size": 40,
+        "subheading": "WITH IN POOL FURNITURE",
+        "link_text": "",
         "link": "",
         "color_accent": "#ffffff",
         "text_align": "vertical-center horizontal-center",
         "video_url": "https://cdn.shopify.com/videos/c/o/v/44a44d3383104711b5d51eb897d37358.mp4",
         "overlay_opacity": 0,
-        "height": 500,
+        "height": 480,
         "height_mobile": 300,
         "css_class": ""
       }
