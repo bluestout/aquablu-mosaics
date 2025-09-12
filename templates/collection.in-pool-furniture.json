@@ -624,6 +624,13 @@
         "question_AAhJtf": {
           "type": "question",
           "settings": {
+            "title": "Are in-pool furniture sets safe for families and kids?",
+            "text": "<p>Yes! Most in-pool furniture is designed with safety in mind, featuring stable bases, rounded edges, and non-slip surfaces. Always supervise children in the pool, ensure furniture is placed in the correct depth, and follow weight limits for chairs, benches, and in-pool tables.</p>"
+          }
+        },
+        "question_bFQCEb": {
+          "type": "question",
+          "settings": {
             "title": "Can in-pool furniture be left in the water year-round?",
             "text": "<p>Many in-pool furniture pieces are designed for seasonal use, but some high-quality options can withstand extended exposure to water. Always check manufacturer guidelines for UV protection, corrosion resistance, and weight limits to avoid damage.</p>"
           }
@@ -643,6 +650,7 @@
         "question_4wgUJw",
         "question_Pe6zQt",
         "question_AAhJtf",
+        "question_bFQCEb",
         "question_bhMtCd"
       ],
       "name": "t:sections.faq.presets.faq.name",
