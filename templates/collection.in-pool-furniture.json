@@ -596,6 +596,13 @@
         "question_yFEGEV": {
           "type": "question",
           "settings": {
+            "title": "What types of in-pool furniture are available at AquaBlu?",
+            "text": "<p>In-pool furniture includes pool chairs, in-pool tables, benches, and loungers designed specifically to sit partially in the water. These pieces allow you to relax comfortably in your pool while enjoying snacks, drinks, or socializing with family and friends.</p><p></p>"
+          }
+        },
+        "question_4wgUJw": {
+          "type": "question",
+          "settings": {
             "title": "Why are people putting furniture in their pools?",
             "text": "<p>Sun shelves and Baja shelves are a top trend in modern pool design, featured in over 90% of new builds and recognized by <a href=\"https://poolmagazine.com/\" title=\"Pool Magazine\">industry professionals</a>. AquaBlu leads the way with the largest curated selection of in-pool furniture to elevate these shallow spaces. Shop premium loungers, submersible chairs, in-water tables, and <a href=\"https://www.aquablumosaics.com/collections/outdoor-umbrellas-for-pool-and-patio\" title=\"In-Pool and Patio Umbrellas\">umbrellas</a> from top-tier pool brands. Our durable, stylish pieces transform your sun shelf into a resort-style retreat, perfect for lounging, sipping drinks, and staying shaded. These features not only boost comfort and aesthetics but also create a social, relaxing environment. Explore AquaBlu’s top-rated sun shelf and Baja shelf furniture to upgrade your pool experience today!</p>"
           }
@@ -618,6 +625,7 @@
       "block_order": [
         "question_6nPimE",
         "question_yFEGEV",
+        "question_4wgUJw",
         "question_Pe6zQt",
         "question_AAhJtf"
       ],
