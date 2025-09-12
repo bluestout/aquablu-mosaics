@@ -297,11 +297,11 @@
         "subheading": "Seamless hero videos",
         "link_text": "Optional button",
         "link": "",
-        "color_accent": "#fff",
+        "color_accent": "#ffffff",
         "text_align": "vertical-center horizontal-center",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/44a44d3383104711b5d51eb897d37358.mp4",
         "overlay_opacity": 0,
-        "height": 650,
+        "height": 500,
         "height_mobile": 300,
         "css_class": ""
       }
@@ -344,7 +344,7 @@
         "title": "Top Features to Look for in a Pool Lounger",
         "align_text": "center",
         "desktop_columns_per_row": 3,
-        "icon_color": "#000",
+        "icon_color": "#000000",
         "button_label": "",
         "button_link": "",
         "divider": false,
@@ -356,6 +356,7 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/All_glass_page_-_2.jpg",
+        "video_url": "",
         "image_width": 700,
         "subtitle": "",
         "title": "The Ultimate Pool Chair Buying Guide",
@@ -376,6 +377,7 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/In_pool_furniture_page.jpg",
+        "video_url": "",
         "image_width": 700,
         "subtitle": "",
         "title": "Why Investing in a Quality Pool Lounge Chair is Worth It",
@@ -395,6 +397,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
+        "video_url": "",
         "image_width": 700,
         "subtitle": "",
         "title": "Simple Maintenance Tips for Pool Chairs",
