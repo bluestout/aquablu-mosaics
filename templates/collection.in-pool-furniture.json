@@ -388,7 +388,7 @@
             "link_text_2": "",
             "text_position": "left",
             "image": "shopify://shop_images/Untitled_design_30.jpg",
-            "indent_image": true,
+            "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
           }
