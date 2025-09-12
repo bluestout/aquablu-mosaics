@@ -462,7 +462,7 @@
             "link_text": "Optional button",
             "link_2": "",
             "link_text_2": "",
-            "text_position": "left",
+            "text_position": "right",
             "indent_image": true,
             "focal_point": "center center",
             "color_scheme": "none"
