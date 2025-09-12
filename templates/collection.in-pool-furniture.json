@@ -395,6 +395,7 @@
     },
     "text_and_image_DUg6c8": {
       "type": "text-and-image",
+      "disabled": true,
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "video_url": "",
@@ -428,7 +429,7 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "indent_image": false,
+            "indent_image": true,
             "focal_point": "center center",
             "color_scheme": "2"
           }
@@ -447,7 +448,7 @@
             "text_position": "left",
             "indent_image": true,
             "focal_point": "center center",
-            "color_scheme": "1"
+            "color_scheme": "2"
           }
         },
         "slide_GbGKgM": {
@@ -462,7 +463,7 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
-            "indent_image": false,
+            "indent_image": true,
             "focal_point": "center center",
             "color_scheme": "none"
           }
