@@ -401,6 +401,27 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
+            "image": "shopify://shop_images/LedgeLoungerSignatureBarstool_OutdoorFurnitureforPools.jpg",
+            "image_width": 650,
+            "title": "BARSTOOLS",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-barstools"
+          }
+        },
+        "text_block_iQRTfc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_6CKTD4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
             "image_width": 650,
             "title": "Example title",
             "button_label": "Optional button",
@@ -411,15 +432,17 @@
       "block_order": [
         "text_block_9hnWa4",
         "text_block_tDzcj9",
-        "text_block_HCyNe9"
+        "text_block_HCyNe9",
+        "text_block_iQRTfc",
+        "text_block_6CKTD4"
       ],
       "name": "Text Columns Custom",
       "settings": {
         "title": "POOL FURNITURE BY CATEGORY",
         "text": "",
-        "column_size": 4,
+        "column_size": 5,
         "align_text": "center",
-        "gutter_size": 20,
+        "gutter_size": 24,
         "space_above": false,
         "space_below": false,
         "divider": false,
