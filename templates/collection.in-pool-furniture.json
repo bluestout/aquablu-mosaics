@@ -395,7 +395,6 @@
     },
     "text_and_image_DUg6c8": {
       "type": "text-and-image",
-      "disabled": true,
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "video_url": "",
@@ -420,12 +419,12 @@
         "slide_NCKJtj": {
           "type": "slide",
           "settings": {
-            "top_subheading": "",
-            "title": "Side by side slide",
-            "title_size": 60,
-            "subheading": "Tailored for longer text and smaller images. Explain more about your promotion.",
+            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
+            "title": "Quick Cleans Go Far",
+            "title_size": 40,
+            "subheading": "Rinse pool chairs weekly with fresh water to wash off chlorine, salt, and dust. Spot-clean sunscreen or spills right away to prevent stains, and use mild soap with a soft cloth for an easy refresh!",
             "link": "",
-            "link_text": "Optional button",
+            "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
@@ -437,10 +436,10 @@
         "slide_x467fe": {
           "type": "slide",
           "settings": {
-            "top_subheading": "",
-            "title": "Highlight products",
-            "title_size": 60,
-            "subheading": "Repurpose your product photography with our \"Indented\" image option",
+            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
+            "title": "Deep Clean as Needed",
+            "title_size": 40,
+            "subheading": "Every few weeks, give your pool chairs a deeper wash with gentle cleaners to keep them looking new. Skip harsh chemicals that can fade finishes, and refresh cushions with fabric cleaner or removable covers.",
             "link": "",
             "link_text": "Optional button",
             "link_2": "",
