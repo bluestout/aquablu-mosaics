@@ -568,6 +568,19 @@
         "css_class": ""
       }
     },
+    "featured_collection_376VnQ": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.featured_collection.name",
+      "settings": {
+        "title": "Featured collection",
+        "home_featured_products": "trending-furniture",
+        "count": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false,
+        "css_class": ""
+      }
+    },
     "rich_text_986eVM": {
       "type": "rich-text",
       "blocks": {
@@ -765,6 +778,7 @@
     "slideshow_split_HtUkpq",
     "text_and_image_7nTi9f",
     "text_and_image_DUg6c8",
+    "featured_collection_376VnQ",
     "rich_text_986eVM",
     "testimonials_cQnVVP",
     "faq_x3ydMN"
