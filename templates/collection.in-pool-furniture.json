@@ -541,7 +541,7 @@
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
-        "color_scheme": "none",
+        "color_scheme": "3",
         "divider": false,
         "new_layout": false,
         "css_class": ""
