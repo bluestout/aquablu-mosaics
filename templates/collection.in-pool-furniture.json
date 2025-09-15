@@ -366,7 +366,7 @@
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
-        "color_scheme": "3",
+        "color_scheme": "2",
         "divider": false,
         "new_layout": false,
         "css_class": ""
@@ -448,7 +448,7 @@
         "space_above": false,
         "space_below": false,
         "divider": false,
-        "color_scheme": "none",
+        "color_scheme": "3",
         "css_class": ""
       }
     },
@@ -506,7 +506,7 @@
             "image": "shopify://shop_images/Untitled_design_31.jpg",
             "indent_image": false,
             "focal_point": "center center",
-            "color_scheme": "none"
+            "color_scheme": "2"
           }
         }
       },
