@@ -283,10 +283,6 @@
         "css_class": "collection-section-3 border-radius-none"
       }
     },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "settings": {}
-    },
     "hero_video_pwWcHi": {
       "type": "hero-video",
       "name": "t:sections.hero-video.presets.video_hero.name",
@@ -787,6 +783,10 @@
         "title": "FAQs",
         "css_class": ""
       }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {}
     }
   },
   "order": [
@@ -798,7 +798,6 @@
     "9d0b6f17-72ed-47e7-986f-0b6eb9aa945c",
     "main-collection",
     "bab8f5a0-f44c-49e7-b9ff-dcb727719db0",
-    "recently-viewed",
     "hero_video_pwWcHi",
     "text_with_icons_XQjeWP",
     "text_and_image_4ADyKK",
@@ -809,6 +808,7 @@
     "175797330089e82fba",
     "rich_text_986eVM",
     "testimonials_cQnVVP",
-    "faq_x3ydMN"
+    "faq_x3ydMN",
+    "recently-viewed"
   ]
 }
