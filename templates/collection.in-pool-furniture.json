@@ -701,6 +701,13 @@
         "question_6nPimE": {
           "type": "question",
           "settings": {
+            "title": "Is your in-pool furniture commercially rated for hotels and resorts?",
+            "text": "<p>Yes! AquaBlu partners exclusively with premier pool furniture manufacturers, ensuring you receive only the highest quality in pool furnishings. Each piece is meticulously crafted using top-grade, UV and chemical-resistant materials. Plus, a significant portion of our pool furniture is proudly made in the USA. For expert resort pool deck planning or volume discount information, please reach out to us via chat, phone, or email. We're here to assist you.</p>"
+          }
+        },
+        "question_cBzN4b": {
+          "type": "question",
+          "settings": {
             "title": "What delivery options are available for outdoor furniture?",
             "text": "<p>We aim to make receiving your outdoor furniture convenient and affordable, offering free and flat rate shipping on eligible items based on size and weight. Smaller pieces such as side tables, umbrellas, planters, and select chairs ship via parcel services. Larger furniture pieces such as <a href=\"https://www.aquablumosaics.com/collections/in-pool-loungers\" title=\"In-Pool Loungers\">loungers</a>, daybeds, and cabanas require LTL freight. For these larger LTL deliveries, your experience is enhanced with a scheduled delivery appointment, a call notification before arrival, and lift gate service to ground level, ensuring a smoother and more predictable delivery process for your larger items.</p>"
           }
@@ -764,6 +771,7 @@
       },
       "block_order": [
         "question_6nPimE",
+        "question_cBzN4b",
         "question_yFEGEV",
         "question_CWbUEW",
         "question_4wgUJw",
