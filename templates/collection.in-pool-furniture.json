@@ -691,10 +691,6 @@
         "css_class": ""
       }
     },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "settings": {}
-    },
     "faq_x3ydMN": {
       "type": "faq",
       "blocks": {
@@ -787,6 +783,10 @@
         "title": "FAQs",
         "css_class": ""
       }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {}
     }
   },
   "order": [
@@ -808,7 +808,7 @@
     "175797330089e82fba",
     "rich_text_986eVM",
     "testimonials_cQnVVP",
-    "recently-viewed",
-    "faq_x3ydMN"
+    "faq_x3ydMN",
+    "recently-viewed"
   ]
 }
