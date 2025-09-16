@@ -781,6 +781,7 @@
         "question_Jb4MqW",
         "question_bhMtCd"
       ],
+      "disabled": true,
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
         "title": "FAQs",
