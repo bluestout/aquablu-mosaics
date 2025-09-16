@@ -379,7 +379,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/FL600WE_-_Kai_Shelf_Lounger_-_Lifestyle_-_with_Kids_-_Fathers_day.jpg",
+            "image": "shopify://shop_images/Kai_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
             "image_width": 650,
             "title": "POOL LOUNGERS",
             "button_label": "SHOP NOW",
@@ -390,7 +390,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Woosah_Tall_Base_Chair_Set_of_Two_-_Luxury_Pool_Chair_17.jpg",
+            "image": "shopify://shop_images/Woosah_tall_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
             "image_width": 650,
             "title": "POOL CHAIRS",
             "button_label": "SHOP NOW",
@@ -423,7 +423,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/In-Pool_Tables_2.jpg",
+            "image": "shopify://shop_images/Autograph_side_table_for_pool_shelf_Ledge_Lounger.jpg",
             "image_width": 650,
             "title": "TABLES",
             "button_label": "SHOP NOW",
@@ -530,7 +530,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/In_pool_furniture_page.jpg",
+        "image": "shopify://shop_images/Autograph_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
         "video_url": "",
         "image_width": 510,
         "subtitle": "",
