@@ -372,7 +372,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/In_pool_furniture_page.jpg",
+        "image": "shopify://shop_images/Autograph_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
         "video_url": "",
         "image_width": 500,
         "subtitle": "From Pool Chairs to Chaise Loungers - Your oasis awaits",
@@ -511,7 +511,7 @@
           "type": "collection",
           "settings": {
             "title": "TABLES",
-            "image": "shopify://shop_images/In-Pool_Tables_2.jpg",
+            "image": "shopify://shop_images/Autograph_side_table_for_pool_shelf_Ledge_Lounger.jpg",
             "url": "https://www.aquablumosaics.com/collections/in-pool-tables",
             "tooltip": false,
             "tooltip_text": ""
