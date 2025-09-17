@@ -46,6 +46,63 @@
 <div class="page-width" style="{% if template.name == "index" %}display: none;{% endif %}">
 
 
+<nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+       <a class="breadcrumb-item" href="/">Home</a>
+    {%- case t -%}
+      {%- when 'page' -%}
+        <span class="breadcrumb-slash"> | </span>
+           <a class="breadcrumb-item" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+      {%- when 'product' -%}
+        {%- if collection.url -%}
+           <span class="breadcrumb-slash"> | </span>
+            {{ collection.title | link_to: collection.url }}
+          
+        {%- endif -%}
+         <span class="breadcrumb-slash"> | </span>
+          <a class="breadcrumb-item" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+        
+      {%- when 'collection' and collection.handle -%}
+        {%- if current_tags -%}
+           <span class="breadcrumb-slash"> | </span>
+            {{ collection.title | link_to: collection.url }}
+          
+           <span class="breadcrumb-slash"> | </span>
+            {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+            <a class="breadcrumb-item" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+          
+        {%- else -%}
+           <span class="breadcrumb-slash"> | </span>
+            <a class="breadcrumb-item" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+          
+        {%- endif -%}
+      {%- when 'blog' -%}
+        {%- if current_tags -%}
+           <span class="breadcrumb-slash"> | </span>
+            {{ blog.title | link_to: blog.url }}
+          
+           <span class="breadcrumb-slash"> | </span>
+            {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+            <a class="breadcrumb-item" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+          
+        {%- else -%}
+           <span class="breadcrumb-slash"> | </span>
+            <a class="breadcrumb-item" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+          
+        {%- endif -%}
+      {%- when 'article' -%}
+         <span class="breadcrumb-slash"> | </span>
+          {{ blog.title | link_to: blog.url }}
+        
+         <span class="breadcrumb-slash"> | </span>
+          <a class="breadcrumb-item" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+        
+      {%- else -%}
+         <span class="breadcrumb-slash"> | </span>
+          <a class="breadcrumb-item" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+        
+    {%- endcase -%}
+</nav>
+
   
     <nav class="history-breadcrumb test" data-breadcrumb-label='{{ page_title }}' data-page-template='{{ template.name }}' data-page-suffix='{{ template.suffix }}'>
     </nav>
