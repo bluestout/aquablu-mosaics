@@ -51,28 +51,28 @@
        <a class="breadcrumb-item" href="/">Home</a>
     {%- case t -%}
       {%- when 'page' -%}
-        <span class="breadcrumb-slash"> | </span>
+        <span class="breadcrumb-slash" data-type="page"> | </span>
            <a class="breadcrumb-item" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
       {%- when 'product' -%}
         {%- if collection.url -%}
-           <span class="breadcrumb-slash"> | </span>
+           <span class="breadcrumb-slash" data-type="productCollection"> | </span>
             {{ collection.title | link_to: collection.url }}
           
         {%- endif -%}
-         <span class="breadcrumb-slash"> | </span>
+         <span class="breadcrumb-slash" data-type="product"> | </span>
           <a class="breadcrumb-item" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
         
       {%- when 'collection' and collection.handle -%}
         {%- if current_tags -%}
-           <span class="breadcrumb-slash"> | </span>
+           <span class="breadcrumb-slash" data-type="collection"> | </span>
             {{ collection.title | link_to: collection.url }}
           
-           <span class="breadcrumb-slash"> | </span>
+           <span class="breadcrumb-slash" data-type="collectionTag"> | </span>
             {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
             <a class="breadcrumb-item" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
           
         {%- else -%}
-           <span class="breadcrumb-slash"> | </span>
+           <span class="breadcrumb-slash" data-type="other"> | </span>
             <a class="breadcrumb-item" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
           
         {%- endif -%}
