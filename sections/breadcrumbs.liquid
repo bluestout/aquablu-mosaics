@@ -67,9 +67,18 @@
         <span class="breadcrumb-slash" data-type="page"> | </span>
            <a class="breadcrumb-item" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
       {%- when 'product' -%}
-        {%- if collection.url -%}
+
+        {% assign collectionDetails = product.metafields.custom.collection_url %}
+        {% assign product__collection_object = collections[collectionDetails].url %}
+        {% assign product__collection_title = collections[collectionDetails].title %}
+        
+        {%- if product.metafields.custom.collection.url -%}
+
+          
+
            <span class="breadcrumb-slash" data-type="productCollection"> | </span>
-            {{ collection.title | link_to: collection.url }}
+            
+            <a href="https://www.aquablumosaics.com{{product__collection_object}}">{{- product__collection_title -}}</a>
           
         {%- endif -%}
          <span class="breadcrumb-slash" data-type="product"> | </span>
