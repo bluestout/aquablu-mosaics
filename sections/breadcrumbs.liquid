@@ -81,30 +81,12 @@
           
         {%- endif -%}
 
-        {%- assign type_tag = "" -%}
+        {%- if current_tags -%}
+            <span class="breadcrumb-slash" data-type="collectionTag"> | </span>
+            {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+            <a class="breadcrumb-item" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
 
-{%- for tag in current_tags -%}
-
-  {%- if tag contains "type" -%}
-
-    {%- assign type_tag = tag -%}
-
-    {%- break -%}
-
-  {%- endif -%}
-
-{%- endfor -%}
-
-
-{%- if type_tag != "" -%}
-
-  <span class="breadcrumb-slash" data-type="collectionTag"> | </span>
-
-  {%- capture tag_url -%}{{ collection.url }}/{{ type_tag }}{%- endcapture -%}
-
-  <a class="breadcrumb-item" href="{{ tag_url }}" aria-current="page">{{ type_tag | remove: "type_" | capitalize }}</a>
-
-{%- endif -%}
+           {%- endif -%}
 
          <span class="breadcrumb-slash" data-type="product"> | </span>
           <a class="breadcrumb-item" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
