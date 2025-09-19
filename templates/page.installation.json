@@ -299,6 +299,18 @@
             "button_label": "",
             "button_link": "https://www.aquablumosaics.com/collections/starlike-crystal-glass-grout-jewels"
           }
+        },
+        "text_block_WXgJai": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Shop_All_grout.jpg",
+            "image_width": 650,
+            "title": "SHOP ALL",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/collections/starlike-crystal-glass-grout-jewels"
+          }
         }
       },
       "block_order": [
@@ -306,7 +318,8 @@
         "text_block_KkwXW4",
         "text_block_EQkiAV",
         "text_block_GgXXdj",
-        "text_block_YyQyEJ"
+        "text_block_YyQyEJ",
+        "text_block_WXgJai"
       ],
       "custom_css": [
         "h2 {margin-top: 20px;}"
