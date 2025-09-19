@@ -302,14 +302,13 @@
         },
         "text_block_WXgJai": {
           "type": "text_block",
-          "disabled": true,
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Shop_All_grout.jpg",
+            "image": "shopify://shop_images/Shop_All_grout_1.jpg",
             "image_width": 650,
             "title": "SHOP ALL",
             "button_label": "",
-            "button_link": "https://www.aquablumosaics.com/collections/starlike-crystal-glass-grout-jewels"
+            "button_link": "https://www.aquablumosaics.com/collections/tile-grout"
           }
         }
       },
