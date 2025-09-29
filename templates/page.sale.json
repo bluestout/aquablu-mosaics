@@ -148,8 +148,8 @@
             "link_2": "shopify://pages/installation",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/Ignite_your_style_2.jpg",
-            "indent_image": true,
+            "image": "shopify://shop_images/2_8c6899c5-34b2-438f-a66b-d46a10eae2d3.jpg",
+            "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "3"
           }
@@ -163,8 +163,8 @@
             "subheading": "Enjoy FREE shipping on every fire pit, table, and bowl!",
             "link": "https://www.aquablumosaics.com/collections/outdoor-fire-pits",
             "link_text": "Shop All Fire Pits",
-            "link_2": "https://www.aquablumosaics.com/collections/fire-bowls",
-            "link_text_2": "Shop Fire Bowls",
+            "link_2": "",
+            "link_text_2": "",
             "text_position": "left",
             "image": "shopify://shop_images/3_bfc6a318-e6f0-4d71-a20a-1a7ff7839fe4.jpg",
             "indent_image": false,
@@ -218,8 +218,8 @@
       "disabled": true,
       "settings": {
         "full_width": true,
-        "height": 500,
-        "height_mobile": 450,
+        "height": 550,
+        "height_mobile": 400,
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
