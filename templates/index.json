@@ -135,7 +135,6 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
             "image": "shopify://shop_images/Ignite_your_style_1.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
