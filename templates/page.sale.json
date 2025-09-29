@@ -148,8 +148,8 @@
             "link_2": "shopify://pages/installation",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/2_8c6899c5-34b2-438f-a66b-d46a10eae2d3.jpg",
-            "indent_image": false,
+            "image": "shopify://shop_images/Ignite_your_style_2.jpg",
+            "indent_image": true,
             "focal_point": "center center",
             "color_scheme": "3"
           }
@@ -215,6 +215,7 @@
         "slide_yq6WHF",
         "slide_BHcfUb"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 500,
