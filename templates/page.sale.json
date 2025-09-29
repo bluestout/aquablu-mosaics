@@ -139,19 +139,19 @@
         "slide_KUc3m6": {
           "type": "slide",
           "settings": {
-            "top_subheading": "USE CODE 'INSTALL20' AT CHECKOUT",
-            "title": "Save 20% on Installation Materials",
+            "top_subheading": "Bring the heat with sizzling savings.",
+            "title": "",
             "title_size": 40,
-            "subheading": "Spend $750 on tile and stone products and get 20% off tile grout, adhesives, waterproofing, and tools!",
+            "subheading": "Save big on fire pits, bowls, and features this year with our Ignite Your Style Savings Event!",
             "link": "shopify://pages/tile-and-stone",
-            "link_text": "Shop All Tile & Stone",
+            "link_text": "",
             "link_2": "shopify://pages/installation",
-            "link_text_2": "Browse All Installation",
+            "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/install20.jpg",
-            "indent_image": true,
+            "image": "shopify://shop_images/2_8c6899c5-34b2-438f-a66b-d46a10eae2d3.jpg",
+            "indent_image": false,
             "focal_point": "center center",
-            "color_scheme": "2"
+            "color_scheme": "3"
           }
         },
         "slide_RFRin3": {
@@ -176,6 +176,61 @@
       "block_order": [
         "slide_KUc3m6",
         "slide_RFRin3"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "height": 500,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "slideshow_split_deb7dY": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_qAp4kH": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'INSTALL20' AT CHECKOUT",
+            "title": "Save 20% on Installation Materials",
+            "title_size": 40,
+            "subheading": "Spend $750 on tile and stone products and get 20% off tile grout, adhesives, waterproofing, and tools!",
+            "link": "shopify://pages/tile-and-stone",
+            "link_text": "Shop All Tile & Stone",
+            "link_2": "shopify://pages/installation",
+            "link_text_2": "Browse All Installation",
+            "text_position": "right",
+            "image": "shopify://shop_images/install20.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_nEpRyW": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE 'SHADESAVE' AT CHECKOUT",
+            "title": "Save 50% on the Perfect Umbrella",
+            "title_size": 40,
+            "subheading": "Spend $1000 on in-pool and patio furniture and get one bluSHADES umbrella HALF OFF!",
+            "link": "https://www.aquablumosaics.com/collections/pool-and-patio-outdoor-furniture",
+            "link_text": "Shop Pool & Patio Furniture",
+            "link_2": "shopify://collections/blushades-pool-and-patio-umbrellas",
+            "link_text_2": "Find The Perfect Umbrella",
+            "text_position": "left",
+            "image": "shopify://shop_images/umbrella.jpg",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_qAp4kH",
+        "slide_nEpRyW"
       ],
       "settings": {
         "full_width": true,
@@ -349,7 +404,6 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
-            "image": "shopify://shop_images/20240611_Tupelo_Proof_1.Lounger_In_Pool.289.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -498,6 +552,7 @@
     "main",
     "a92b5673-5ac8-4e2e-a61a-78fb827cbc99",
     "slideshow_split_3AUTRr",
+    "slideshow_split_deb7dY",
     "slideshow_R84TV7",
     "slideshow_split_yT6kCR",
     "slideshow_mWYVFP",
