@@ -283,6 +283,507 @@
         "css_class": "collection-section-3 border-radius-none"
       }
     },
+    "hero_video_pwWcHi": {
+      "type": "hero-video",
+      "name": "t:sections.hero-video.presets.video_hero.name",
+      "settings": {
+        "full_width": true,
+        "title": "BRING PARADISE HOME",
+        "title_size": 40,
+        "subheading": "WITH IN POOL FURNITURE",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/aff3b8b493304cad94267d1815b3cb18.mp4",
+        "overlay_opacity": 0,
+        "height": 550,
+        "height_mobile": 300,
+        "css_class": ""
+      }
+    },
+    "text_with_icons_XQjeWP": {
+      "type": "text-with-icons",
+      "blocks": {
+        "text_block_dnywcw": {
+          "type": "text_block",
+          "settings": {
+            "icon": "shield",
+            "title": "Weather-Resistance",
+            "text": "<p>Pool lounge chairs are exposed to sun, chlorine, and rain, so durability matters. High-quality options use UV-resistant materials to withstand the elements.</p>"
+          }
+        },
+        "text_block_MQ3hwg": {
+          "type": "text_block",
+          "settings": {
+            "icon": "thumbs-up",
+            "title": "Comfort",
+            "text": "<p>Whether it's great ergonomics or a cushioned seat, comfort is what makes you actually want to use your in-pool-furniture. Quick-dry, breathable fabrics add to the relaxation and make maintenance easier.</p>"
+          }
+        },
+        "text_block_RBAVPV": {
+          "type": "text_block",
+          "settings": {
+            "icon": "trophy",
+            "title": "Style & Design",
+            "text": "<p>Your pool furniture should look as good as it feels. From sleek modern lines to resort-inspired designs, choosing a style that matches your outdoor space elevates the whole outdoor experience.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_dnywcw",
+        "text_block_MQ3hwg",
+        "text_block_RBAVPV"
+      ],
+      "name": "Text columns with icons",
+      "settings": {
+        "title": "Top Features to Look for in a Pool Lounger",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "text_and_image_4ADyKK": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Tupelo_Deck_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
+        "video_url": "",
+        "image_width": 500,
+        "subtitle": "",
+        "title": "The Ultimate Pool Chair Buying Guide",
+        "text": "<p>When it comes to creating a relaxing poolside retreat, the right pool chair makes all the difference. Here are some things to consider:</p><ul><li>Pool chairs and pool loungers made from UV-resistant materials</li><li><a href=\"/collections/modern-pool-furniture\" title=\"Modern Pool Furniture\">Modern pool furniture</a> or resort-inspired classics to elevate your backyard</li><li>Low-maintenance designs and quick-dry fabrics</li><li>Additional features like cup holders, cushions, and integrated sun shades</li></ul>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": false,
+        "css_class": ""
+      }
+    },
+    "text_columns_custom_Tm4Rfy": {
+      "type": "text-columns-custom",
+      "blocks": {
+        "text_block_9hnWa4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Kai_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
+            "image_width": 650,
+            "title": "POOL LOUNGERS",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-loungers"
+          }
+        },
+        "text_block_tDzcj9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Woosah_tall_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
+            "image_width": 650,
+            "title": "POOL CHAIRS",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-chairs"
+          }
+        },
+        "text_block_HCyNe9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/LedgeLoungerSignatureBarstool_OutdoorFurnitureforPools.jpg",
+            "image_width": 650,
+            "title": "BARSTOOLS",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-barstools"
+          }
+        },
+        "text_block_iQRTfc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DashInPoolBench_OutdoorPoolFurnitureByTenjam.jpg",
+            "image_width": 650,
+            "title": "BENCHES",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-benches"
+          }
+        },
+        "text_block_6CKTD4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Autograph_side_table_for_pool_shelf_Ledge_Lounger.jpg",
+            "image_width": 650,
+            "title": "TABLES",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-tables"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_9hnWa4",
+        "text_block_tDzcj9",
+        "text_block_HCyNe9",
+        "text_block_iQRTfc",
+        "text_block_6CKTD4"
+      ],
+      "name": "Text Columns Custom",
+      "settings": {
+        "title": "POOL FURNITURE BY CATEGORY",
+        "text": "",
+        "column_size": 5,
+        "align_text": "center",
+        "gutter_size": 24,
+        "space_above": false,
+        "space_below": false,
+        "divider": false,
+        "color_scheme": "3",
+        "css_class": ""
+      }
+    },
+    "slideshow_split_HtUkpq": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_NCKJtj": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
+            "title": "Quick Cleans Go Far",
+            "title_size": 40,
+            "subheading": "Rinse pool chairs weekly with fresh water to wash off chlorine, salt, and dust. Spot-clean sunscreen or spills right away to prevent stains, and use mild soap with a soft cloth for an easy refresh!",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Bask_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_x467fe": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
+            "title": "Deep Clean as Needed",
+            "title_size": 40,
+            "subheading": "Every few weeks, give your pool chairs a deeper wash with gentle cleaners to keep them looking new. Skip harsh chemicals that can fade finishes, and refresh cushions with fabric cleaner or removable covers.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Woosah_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_GbGKgM": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
+            "title": "Protect & Store",
+            "title_size": 40,
+            "subheading": "Cover chairs when not in use to block harsh sun and rain. Store indoors or in a shaded area during the off-season to keep your in pool furniture sturdy and stylish.",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Laylo_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NCKJtj",
+        "slide_x467fe",
+        "slide_GbGKgM"
+      ],
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": true,
+        "height": 500,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "text_and_image_7nTi9f": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Autograph_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
+        "video_url": "",
+        "image_width": 510,
+        "subtitle": "",
+        "title": "Why Investing in a Quality Pool Lounge Chair is Worth It",
+        "text": "<p>A quality pool lounge chair is more than just seating - it's an investment in comfort, style, and long-term value. Brands like <a href=\"/collections/ledge-lounger-outdoor-pool-and-patio-furniture\" title=\"Ledge Lounger\">Ledge Lounger</a> and <a href=\"/collections/floating-luxuries\" title=\"Floating Luxuries\">Floating Luxuries</a> show the difference high-end design can make. Built with UV-resistant resin and craft to handle pool water, chlorine, and intense sun, these lounger last season after season without fading or breaking down. Their sleek, resort-style designs instantly upgrade your backyard or luxury retreat. While the upfront cost may be higher, the durability, comfort, and style they deliver make them well worth the investment.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "3",
+        "divider": false,
+        "new_layout": false,
+        "css_class": ""
+      }
+    },
+    "text_and_image_DUg6c8": {
+      "type": "text-and-image",
+      "disabled": true,
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "video_url": "",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Simple Maintenance Tips for Pool Chairs",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "color_scheme": "1",
+        "divider": false,
+        "new_layout": false,
+        "css_class": ""
+      }
+    },
+    "175797330089e82fba": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_gegX3H": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 31860,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_gegX3H"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "css_class": ""
+      }
+    },
+    "rich_text_986eVM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kLABEX": {
+          "type": "heading",
+          "settings": {
+            "title": "Trusted Products"
+          }
+        },
+        "text_3T7ycz": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>At AquaBlu Mosaics, we take pride in offering only the most trusted names in in-pool furniture. Whether you’re looking for a comfortable <a href=\"/collections/in-pool-chairs\" title=\"In-Pool Chairs\">pool chair</a> to relax by the water or a stylish <a href=\"/collections/in-pool-loungers\" title=\"In-Pool Loungers\">pool lounger</a> designed for sunbathing in the shallow end, our curated collection ensures lasting quality, comfort, and style.</p><p>We partner with leading brands such as Ledge Lounger, Floating Luxuries, and <a href=\"/collections/tenjam\" title=\"Tenjam Pool and Patio Furniture\">Tenjam</a> - companies known for setting the standard in luxury pool furniture. Each piece is engineered to withstand sun, water, and everyday use, giving you peace of mind that your investment will look beautiful season after season.</p><p>By choosing AquaBlu, you’re not only shopping the best selection of pool chairs and loungers - you’re also working with a trusted authority in outdoor living. Our team has years of experience helping homeowners, designers, and builders create stunning backyard spaces with furniture that combines performance, durability, and modern design.</p><p>From sleek in-pool loungers for tanning ledges to durable pool chairs perfect for gatherings, AquaBlu Mosaics is your go-to source for quality and expertise. Shop with confidence knowing every product we carry has been carefully selected to meet the highest standards in the industry.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kLABEX",
+        "text_3T7ycz"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "testimonials_cQnVVP": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_QydRWq": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>These pool chairs are the best! They are so comfortable. They are light enough to move around yet heavy enough to stay out in the water. The color is exactly what we expected from the picture.</p>",
+            "author": "Sharon F.",
+            "author_info": ""
+          }
+        },
+        "testimonial_peFR9i": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>These pool chairs are great for a swim platform. You can sit under an umbrella and still have your feet in the water. And the colors are beautiful. Very sturdy chairs.</p>",
+            "author": "Angela C.",
+            "author_info": ""
+          }
+        },
+        "testimonial_z7b3pr": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Fantastic product and customer service! Thanks AquaBlu!</p>",
+            "author": "Jamie B.",
+            "author_info": ""
+          }
+        },
+        "testimonial_AfL94U": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>I couldn't be happier with my experience! Products and customer service were top notch. Well done, AquaBlu!</p>",
+            "author": "Jason S.",
+            "author_info": ""
+          }
+        },
+        "testimonial_KDCWAd": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>We ordered the Tenjam Shayz loungers and are so pleased with them! The customer service was wonderful and shipping was quick. We are happy customers!</p>",
+            "author": "Carol S.",
+            "author_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_QydRWq",
+        "testimonial_peFR9i",
+        "testimonial_z7b3pr",
+        "testimonial_AfL94U",
+        "testimonial_KDCWAd"
+      ],
+      "name": "t:sections.testimonials.presets.testimonials.name",
+      "settings": {
+        "title": "From Our Customers",
+        "align_text": "center",
+        "round_images": true,
+        "color_scheme": "none",
+        "css_class": ""
+      }
+    },
+    "faq_x3ydMN": {
+      "type": "faq",
+      "blocks": {
+        "question_6nPimE": {
+          "type": "question",
+          "settings": {
+            "title": "Is your in-pool furniture commercially rated for hotels and resorts?",
+            "text": "<p>Yes! AquaBlu partners exclusively with premier pool furniture manufacturers, ensuring you receive only the highest quality in pool furnishings. Each piece is meticulously crafted using top-grade, UV and chemical-resistant materials. Plus, a significant portion of our pool furniture is proudly made in the USA. For expert resort pool deck planning or volume discount information, please reach out to us via chat, phone, or email. We're here to assist you.</p>"
+          }
+        },
+        "question_cBzN4b": {
+          "type": "question",
+          "settings": {
+            "title": "What delivery options are available for outdoor furniture?",
+            "text": "<p>We aim to make receiving your outdoor furniture convenient and affordable, offering free and flat rate shipping on eligible items based on size and weight. Smaller pieces such as side tables, umbrellas, planters, and select chairs ship via parcel services. Larger furniture pieces such as <a href=\"https://www.aquablumosaics.com/collections/in-pool-loungers\" title=\"In-Pool Loungers\">loungers</a>, <a href=\"https://www.aquablumosaics.com/collections/outdoor-daybeds-and-cabanas\" title=\"Daybeds and Cabanas\">daybeds</a>, and cabanas require LTL freight. For these larger LTL deliveries, your experience is enhanced with a scheduled delivery appointment, a call notification before arrival, and lift gate service to ground level, ensuring a smoother and more predictable delivery process for your larger items.</p>"
+          }
+        },
+        "question_yFEGEV": {
+          "type": "question",
+          "settings": {
+            "title": "How do I choose the best in-pool furniture for my swimming pool?",
+            "text": "<p>When selecting in-pool furniture, consider pool depth, material durability, and comfort. Look for UV-resistant, waterproof, and easy-to-clean options like resin, plastic, or aluminum to ensure your pool chairs, tables, and benches last season after season.</p><p></p>"
+          }
+        },
+        "question_CWbUEW": {
+          "type": "question",
+          "settings": {
+            "title": "What types of in-pool furniture are available at AquaBlu?",
+            "text": "<p>In-pool furniture includes pool chairs, in-pool tables, benches, and loungers designed specifically to sit partially in the water. These pieces allow you to relax comfortably in your pool while enjoying snacks, drinks, or socializing with family and friends.</p><p></p>"
+          }
+        },
+        "question_4wgUJw": {
+          "type": "question",
+          "settings": {
+            "title": "Why are people putting furniture in their pools?",
+            "text": "<p>Sun shelves and Baja shelves are a top trend in modern pool design, featured in over 90% of new builds and recognized by <a href=\"https://poolmagazine.com/\" title=\"Pool Magazine\">industry professionals</a>. AquaBlu leads the way with the largest curated selection of in-pool furniture to elevate these shallow spaces. Shop premium loungers, submersible chairs, in-water tables, and <a href=\"https://www.aquablumosaics.com/collections/outdoor-umbrellas-for-pool-and-patio\" title=\"In-Pool and Patio Umbrellas\">umbrellas</a> from top-tier pool brands. Our durable, stylish pieces transform your sun shelf into a resort-style retreat, perfect for lounging, sipping drinks, and staying shaded. These features not only boost comfort and aesthetics but also create a social, relaxing environment. Explore AquaBlu’s top-rated sun shelf and Baja shelf furniture to upgrade your pool experience today!</p>"
+          }
+        },
+        "question_Pe6zQt": {
+          "type": "question",
+          "settings": {
+            "title": "Is your in pool furniture made in the USA?",
+            "text": "<p>AquaBlu prioritizes premium, American-made in-pool furniture, reflecting a commitment to superior craftsmanship and enduring quality. Featuring distinguished brands such as Tenjam, Tupelo Goods, Ledge Lounger, Floating Luxuries, Studio Redrock and SR Smith, our selection ensures exceptional durability and design. By choosing \"<a href=\"https://www.aquablumosaics.com/collections/made-in-america-products\" title=\"Products made in the USA\">Made in USA</a>,\" clients invest in products that adhere to rigorous quality standards and support domestic manufacturing, enhancing their poolside experience with unparalleled elegance and reliability.</p>"
+          }
+        },
+        "question_AAhJtf": {
+          "type": "question",
+          "settings": {
+            "title": "Are in-pool furniture sets safe for families and kids?",
+            "text": "<p>Yes! Most in-pool furniture is designed with safety in mind, featuring stable bases, rounded edges, and non-slip surfaces. Always supervise children in the pool, ensure furniture is placed in the correct depth, and follow weight limits for pool chairs, benches, and in-pool tables.</p>"
+          }
+        },
+        "question_bFQCEb": {
+          "type": "question",
+          "settings": {
+            "title": "I'm not seeing the color I want, do you do custom orders?",
+            "text": "<p>Yes! We offer custom color options for many of our products. Please <a href=\"https://www.aquablumosaics.com/pages/custom-mosaics\" target=\"_blank\" title=\"Custom Projects\">reach out to our team </a>with the specific color or finish you’re looking for, and we’ll work with you to create a solution that fits your vision.</p>"
+          }
+        },
+        "question_Jb4MqW": {
+          "type": "question",
+          "settings": {
+            "title": "Can in-pool furniture be left in the water year-round?",
+            "text": "<p>Many in-pool furniture pieces are designed for seasonal use, but some high-quality options can withstand extended exposure to water. Always check manufacturer guidelines for UV protection, corrosion resistance, and weight limits to avoid damage.</p>"
+          }
+        },
+        "question_bhMtCd": {
+          "type": "question",
+          "settings": {
+            "title": "How does AquaBlu ensure furniture product quality?",
+            "text": "<p>We make sure our in pool furniture is top quality by working only with trusted manufacturers. These partners are known for their excellent craftsmanship and for using strong, durable materials built to handle the outdoors, like weather-resistant plastics and metals. Every piece is carefully checked to meet high standards before it comes to you, ensuring you get beautiful furniture that lasts.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_6nPimE",
+        "question_cBzN4b",
+        "question_yFEGEV",
+        "question_CWbUEW",
+        "question_4wgUJw",
+        "question_Pe6zQt",
+        "question_AAhJtf",
+        "question_bFQCEb",
+        "question_Jb4MqW",
+        "question_bhMtCd"
+      ],
+      "disabled": true,
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "title": "FAQs",
+        "css_class": ""
+      }
+    },
     "recently-viewed": {
       "type": "recently-viewed",
       "settings": {}
@@ -297,6 +798,17 @@
     "9d0b6f17-72ed-47e7-986f-0b6eb9aa945c",
     "main-collection",
     "bab8f5a0-f44c-49e7-b9ff-dcb727719db0",
+    "hero_video_pwWcHi",
+    "text_with_icons_XQjeWP",
+    "text_and_image_4ADyKK",
+    "text_columns_custom_Tm4Rfy",
+    "slideshow_split_HtUkpq",
+    "text_and_image_7nTi9f",
+    "text_and_image_DUg6c8",
+    "175797330089e82fba",
+    "rich_text_986eVM",
+    "testimonials_cQnVVP",
+    "faq_x3ydMN",
     "recently-viewed"
   ]
 }
