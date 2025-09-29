@@ -166,7 +166,7 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
-            "image": "shopify://shop_images/3_bfc6a318-e6f0-4d71-a20a-1a7ff7839fe4.jpg",
+            "image": "shopify://shop_images/Ignite_your_style_3.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -176,7 +176,7 @@
           "type": "slide",
           "settings": {
             "top_subheading": "USE CODE:IGNITEMYSTYLE",
-            "title": "FREE TABLETOP FIREPIT",
+            "title": "A little extra glow, on the house.",
             "title_size": 40,
             "subheading": "Spend $1,000+ and receive a FREE tabletop fire pit -while supplies last!",
             "link": "",
@@ -184,7 +184,7 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/4_de32ed4f-790a-4f7a-b4d2-e33b617cd72b.jpg",
+            "image": "shopify://shop_images/5_d28d0943-be54-4d28-bca4-eec4d31eba57.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -217,7 +217,7 @@
       ],
       "disabled": true,
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "height": 550,
         "height_mobile": 400,
         "style": "arrows",
