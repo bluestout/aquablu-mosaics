@@ -218,7 +218,7 @@
       "disabled": true,
       "settings": {
         "full_width": false,
-        "height": 550,
+        "height": 500,
         "height_mobile": 400,
         "style": "arrows",
         "autoplay": true,
