@@ -129,45 +129,20 @@
             "subheading": "",
             "custom_text": "",
             "link": "shopify://pages/tile-and-stone",
-            "link_text": "",
+            "link_text": "LEARN MORE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/Ignite_your_style_1.jpg",
             "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_V6YQyY": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_PbWhpw",
-        "hero_V6YQyY"
+        "hero_PbWhpw"
       ],
       "disabled": true,
       "settings": {
@@ -1063,9 +1038,9 @@
             "call_to_action": "SHOP IT",
             "shop_type": "button",
             "body_font_size": 14,
-            "body_font": "helvetica_n4",
+            "body_font": "sans_serif_n4",
             "accent_font_size": 14,
-            "accent_font": "helvetica_n4",
+            "accent_font": "sans_serif_n4",
             "disable_filter": false,
             "override_feed_id": "",
             "arbitrary_attributes": "",
