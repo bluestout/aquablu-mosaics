@@ -157,17 +157,17 @@
         "slide_RFRin3": {
           "type": "slide",
           "settings": {
-            "top_subheading": "USE CODE 'SHADESAVE' AT CHECKOUT",
-            "title": "Save 50% on the Perfect Umbrella",
+            "top_subheading": "no code needed",
+            "title": "FREE SHIPPING",
             "title_size": 40,
-            "subheading": "Spend $1000 on in-pool and patio furniture and get one bluSHADES umbrella HALF OFF!",
-            "link": "https://www.aquablumosaics.com/collections/pool-and-patio-outdoor-furniture",
-            "link_text": "Shop Pool & Patio Furniture",
-            "link_2": "shopify://collections/blushades-pool-and-patio-umbrellas",
-            "link_text_2": "Find The Perfect Umbrella",
+            "subheading": "Enjoy FREE shipping on every fire pit, table, and bowl!",
+            "link": "https://www.aquablumosaics.com/collections/outdoor-fire-pits",
+            "link_text": "Shop All Fire Pits",
+            "link_2": "https://www.aquablumosaics.com/collections/fire-bowls",
+            "link_text_2": "Shop Fire Bowls",
             "text_position": "left",
-            "image": "shopify://shop_images/umbrella.jpg",
-            "indent_image": true,
+            "image": "shopify://shop_images/3_bfc6a318-e6f0-4d71-a20a-1a7ff7839fe4.jpg",
+            "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
           }
