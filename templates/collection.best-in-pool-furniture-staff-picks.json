@@ -310,7 +310,7 @@
           "settings": {
             "icon": "shield",
             "title": "Weather-Resistance",
-            "text": "<p>Pool lounge chairs are exposed to sun, chlorine, and rain, so durability matters. High-quality options use UV-resistant materials to withstand the elements.</p>"
+            "text": "<p>Pool furniture is exposed to sun, chlorine, and rain, so durability matters. High-quality options use UV-resistant materials to withstand the elements.</p>"
           }
         },
         "text_block_MQ3hwg": {
@@ -318,7 +318,7 @@
           "settings": {
             "icon": "thumbs-up",
             "title": "Comfort",
-            "text": "<p>Whether it's great ergonomics or a cushioned seat, comfort is what makes you actually want to use your in-pool-furniture. Quick-dry, breathable fabrics add to the relaxation and make maintenance easier.</p>"
+            "text": "<p>Whether it's great ergonomics or a cushioned seat, comfort is what makes you actually want to use your pool furniture. Quick-dry, breathable fabrics add to the relaxation and make maintenance easier.</p>"
           }
         },
         "text_block_RBAVPV": {
@@ -335,9 +335,10 @@
         "text_block_MQ3hwg",
         "text_block_RBAVPV"
       ],
+      "disabled": true,
       "name": "Text columns with icons",
       "settings": {
-        "title": "Top Features to Look for in a Pool Lounger",
+        "title": "Top Features to Look for in In Pool Furniture",
         "align_text": "center",
         "desktop_columns_per_row": 3,
         "icon_color": "#000000",
@@ -355,8 +356,8 @@
         "video_url": "",
         "image_width": 500,
         "subtitle": "",
-        "title": "The Ultimate Pool Chair Buying Guide",
-        "text": "<p>When it comes to creating a relaxing poolside retreat, the right pool chair makes all the difference. Here are some things to consider:</p><ul><li>Pool chairs and pool loungers made from UV-resistant materials</li><li><a href=\"/collections/modern-pool-furniture\" title=\"Modern Pool Furniture\">Modern pool furniture</a> or resort-inspired classics to elevate your backyard</li><li>Low-maintenance designs and quick-dry fabrics</li><li>Additional features like cup holders, cushions, and integrated sun shades</li></ul>",
+        "title": "Upgrade Your Poolside Experience",
+        "text": "<p>Our collection has something for every style and need. We want to help you make your poolside experience the best it can be.</p><ul><li><strong>Relax in the Water:</strong> Try our amazing ledge in-pool furniture. These pieces, like the popular tanning ledge chair, sit right on your pool's tanning ledge.</li><li><strong>Classic Comfort:</strong> Our wide selection of chaise lounges and other poolside chairs offers classic comfort for sunbathing or reading by the water.</li><li><strong>Modern Style:</strong> Discover our modern lounge chair options. Many have strong powder-coated steel frames. They have sleek lines and cool organic shapes that add a touch of class.</li><li><strong>Luxurious Materials:</strong> We offer chairs with different finishes. You can choose a soft Fabric cushion or the sleek look of Imitation leather. Be sure to check each product description for details.</li><li><strong>Complete the Look:</strong> Don't forget a matching side table. It's the perfect spot to place your drink, book, or sunscreen while you enjoy the sun.</li></ul>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -454,10 +455,10 @@
         "slide_NCKJtj": {
           "type": "slide",
           "settings": {
-            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
-            "title": "Quick Cleans Go Far",
+            "top_subheading": "Maintenance Tips",
+            "title": "How to Care for Your Outdoor Pool Furniture",
             "title_size": 40,
-            "subheading": "Rinse pool chairs weekly with fresh water to wash off chlorine, salt, and dust. Spot-clean sunscreen or spills right away to prevent stains, and use mild soap with a soft cloth for an easy refresh!",
+            "subheading": "Our pool chairs are made with the finest materials to handle the weather. A little bit of care will keep them looking brand new for years. Keeping your pool furniture clean is simple.",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -472,10 +473,10 @@
         "slide_x467fe": {
           "type": "slide",
           "settings": {
-            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
-            "title": "Deep Clean as Needed",
+            "top_subheading": "1- Simple, Regular Cleaning",
+            "title": "How to Care for Your Outdoor Pool Furniture",
             "title_size": 40,
-            "subheading": "Every few weeks, give your pool chairs a deeper wash with gentle cleaners to keep them looking new. Skip harsh chemicals that can fade finishes, and refresh cushions with fabric cleaner or removable covers.",
+            "subheading": "For most clean-ups, all you need is warm water and a gentle soap. Use a soft bristle brush to gently scrub the surface. For the frame, a simple wipe with a damp cloth is often enough. Rinse it well with clean water, then wipe with a dry cloth.",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -490,12 +491,12 @@
         "slide_GbGKgM": {
           "type": "slide",
           "settings": {
-            "top_subheading": "Simple Maintenance Tips for Pool Chairs",
-            "title": "Protect & Store",
+            "top_subheading": "2 - Taking Care of Spills",
+            "title": "How to Care for Your Outdoor Pool Furniture",
             "title_size": 40,
-            "subheading": "Cover chairs when not in use to block harsh sun and rain. Store indoors or in a shaded area during the off-season to keep your in pool furniture sturdy and stylish.",
+            "subheading": "In case of stains, it's best to clean them up quickly. For oily spills or non-greasy stains, a mix of mild soap and warm water usually does the trick. Gently clean the spot with a damp cloth. For a tough stain on a Fabric cushion, always check the care instructions first.",
             "link": "",
-            "link_text": "Optional button",
+            "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
@@ -504,12 +505,31 @@
             "focal_point": "center center",
             "color_scheme": "2"
           }
+        },
+        "slide_VtH6Ad": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "3 - Protecting Your Furniture",
+            "title": "How to Care for Your Outdoor Pool Furniture",
+            "title_size": 40,
+            "subheading": "Our high quality in-pool furniture is built to stand up to the elements. But, you can extend the life even further by using furniture covers or applying protective coatings. Bring cushions inside when not in use.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Tenjam_Loungers_Outdoor_Furniture67.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "none"
+          }
         }
       },
       "block_order": [
         "slide_NCKJtj",
         "slide_x467fe",
-        "slide_GbGKgM"
+        "slide_GbGKgM",
+        "slide_VtH6Ad"
       ],
       "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
@@ -590,6 +610,7 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_gegX3H"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
