@@ -189,14 +189,32 @@
             "focal_point": "center center",
             "color_scheme": "2"
           }
+        },
+        "slide_BHcfUb": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Limited-time offers - exclusions apply.",
+            "title": "Style, savings, and sparks.",
+            "title_size": 40,
+            "subheading": "Hot deals won’t last forever! 🔥 Get them before they’re gone.",
+            "link": "shopify://pages/tile-and-stone",
+            "link_text": "",
+            "link_2": "shopify://pages/installation",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/5_3b59e034-87ba-4811-a74e-f99c1ef938be.jpg",
+            "indent_image": false,
+            "focal_point": "bottom center",
+            "color_scheme": "3"
+          }
         }
       },
       "block_order": [
         "slide_KUc3m6",
         "slide_RFRin3",
-        "slide_yq6WHF"
+        "slide_yq6WHF",
+        "slide_BHcfUb"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 500,
