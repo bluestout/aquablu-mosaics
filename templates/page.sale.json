@@ -171,11 +171,30 @@
             "focal_point": "center center",
             "color_scheme": "2"
           }
+        },
+        "slide_yq6WHF": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE:IGNITEMYSTYLE",
+            "title": "FREE TABLETOP FIREPIT",
+            "title_size": 40,
+            "subheading": "Spend $1,000+ and receive a FREE tabletop fire pit -while supplies last!",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/4_de32ed4f-790a-4f7a-b4d2-e33b617cd72b.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
         }
       },
       "block_order": [
         "slide_KUc3m6",
-        "slide_RFRin3"
+        "slide_RFRin3",
+        "slide_yq6WHF"
       ],
       "disabled": true,
       "settings": {
