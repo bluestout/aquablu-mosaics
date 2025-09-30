@@ -421,17 +421,6 @@
             "button_link": "https://www.aquablumosaics.com/collections/in-pool-chairs"
           }
         },
-        "text_block_HCyNe9": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/LedgeLoungerSignaturePoolStool.2.jpg",
-            "image_width": 650,
-            "title": "POOL BARSTOOLS",
-            "button_label": "SHOP NOW",
-            "button_link": "https://www.aquablumosaics.com/collections/in-pool-barstools"
-          }
-        },
         "text_block_6CKTD4": {
           "type": "text_block",
           "settings": {
@@ -443,11 +432,22 @@
             "button_link": "https://www.aquablumosaics.com/collections/in-pool-tables"
           }
         },
+        "text_block_HCyNe9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/LedgeLoungerSignaturePoolStool.2.jpg",
+            "image_width": 650,
+            "title": "POOL BARSTOOLS",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-barstools"
+          }
+        },
         "text_block_iQRTfc": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/In-Pool_Benches.jpg",
+            "image": "shopify://shop_images/DashInPoolBench_OutdoorPoolFurnitureByTenjam_1.jpg",
             "image_width": 650,
             "title": "POOL BENCHES",
             "button_label": "SHOP NOW",
@@ -458,8 +458,8 @@
       "block_order": [
         "text_block_9hnWa4",
         "text_block_tDzcj9",
-        "text_block_HCyNe9",
         "text_block_6CKTD4",
+        "text_block_HCyNe9",
         "text_block_iQRTfc"
       ],
       "name": "Text Columns Custom",
