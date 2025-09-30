@@ -403,7 +403,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Vondom-Ibiza-In-Pool-Sun-Lounger_7.jpg",
+            "image": "shopify://shop_images/Angle_Chaise_Lounger_Luxury_Concrete_Pool_Patio_Lounge_Chair2.jpg",
             "image_width": 650,
             "title": "POOL LOUNGERS",
             "button_label": "SHOP NOW",
@@ -432,17 +432,6 @@
             "button_link": "https://www.aquablumosaics.com/collections/in-pool-barstools"
           }
         },
-        "text_block_iQRTfc": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/In-Pool_Benches.jpg",
-            "image_width": 650,
-            "title": "POOL BENCHES",
-            "button_label": "SHOP NOW",
-            "button_link": "https://www.aquablumosaics.com/collections/in-pool-benches"
-          }
-        },
         "text_block_6CKTD4": {
           "type": "text_block",
           "settings": {
@@ -453,14 +442,25 @@
             "button_label": "SHOP NOW",
             "button_link": "https://www.aquablumosaics.com/collections/in-pool-tables"
           }
+        },
+        "text_block_iQRTfc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/In-Pool_Benches.jpg",
+            "image_width": 650,
+            "title": "POOL BENCHES",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/in-pool-benches"
+          }
         }
       },
       "block_order": [
         "text_block_9hnWa4",
         "text_block_tDzcj9",
         "text_block_HCyNe9",
-        "text_block_iQRTfc",
-        "text_block_6CKTD4"
+        "text_block_6CKTD4",
+        "text_block_iQRTfc"
       ],
       "name": "Text Columns Custom",
       "settings": {
