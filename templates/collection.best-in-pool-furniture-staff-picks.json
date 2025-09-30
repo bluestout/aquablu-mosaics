@@ -322,7 +322,7 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": false,
-        "mobile_size": 30,
+        "mobile_size": 25,
         "style": "arrows",
         "autoplay": false,
         "autoplay_speed": 7,
