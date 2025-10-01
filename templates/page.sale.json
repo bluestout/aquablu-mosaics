@@ -448,7 +448,7 @@
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 20,
-        "space_above": false,
+        "space_above": true,
         "space_below": false,
         "mobile_size": 0,
         "style": "arrows",
