@@ -677,12 +677,12 @@
     "testimonials_cQnVVP": {
       "type": "testimonials",
       "blocks": {
-        "testimonial_QydRWq": {
+        "testimonial_z7b3pr": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Excellent service. Excellent product. Quick shipping. I am very satisfied.</p>",
-            "author": "Tom M.",
+            "testimonial": "<p>In-pool umbrella selection is excellent - a good buy.</p>",
+            "author": "Kay B.",
             "author_info": ""
           }
         },
@@ -695,21 +695,21 @@
             "author_info": ""
           }
         },
-        "testimonial_z7b3pr": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>In-pool umbrella selection is excellent - a good buy.</p>",
-            "author": "Kay B.",
-            "author_info": ""
-          }
-        },
         "testimonial_AfL94U": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>I couldn't be happier with my experience! Products and customer service were top notch. Well done, AquaBlu!</p>",
-            "author": "Jason S.",
+            "testimonial": "<p>The tanning shelf loungers look great! The dark blue color is just what I wanted to compliment our other pool furniture!</p>",
+            "author": "Sarah B.",
+            "author_info": ""
+          }
+        },
+        "testimonial_QydRWq": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Excellent service. Excellent product. Quick shipping. I am very satisfied.</p>",
+            "author": "Tom M.",
             "author_info": ""
           }
         },
@@ -724,10 +724,10 @@
         }
       },
       "block_order": [
-        "testimonial_QydRWq",
-        "testimonial_peFR9i",
         "testimonial_z7b3pr",
+        "testimonial_peFR9i",
         "testimonial_AfL94U",
+        "testimonial_QydRWq",
         "testimonial_KDCWAd"
       ],
       "name": "t:sections.testimonials.presets.testimonials.name",
