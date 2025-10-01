@@ -221,7 +221,7 @@
         "height_mobile": 400,
         "style": "arrows",
         "autoplay": true,
-        "autoplay_speed": 7,
+        "autoplay_speed": 5,
         "css_class": ""
       }
     },
