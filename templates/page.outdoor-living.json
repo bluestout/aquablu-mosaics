@@ -156,6 +156,53 @@
         "css_class": "outdoor-living-section-1"
       }
     },
+    "slideshow_T4nNPj": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_fRrmjn": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "Learn More",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Ignite_your_style_6.jpg",
+            "image_mobile": "shopify://shop_images/Ignite_your_style_6.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_fRrmjn"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "text_and_image_cftjxY": {
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
@@ -174,79 +221,6 @@
         "color_scheme": "3",
         "divider": false,
         "new_layout": true,
-        "css_class": ""
-      }
-    },
-    "slideshow_T4nNPj": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_fRrmjn": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_cRx3gC": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/tile-and-stone",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_fRrmjn",
-        "hero_cRx3gC"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
         "css_class": ""
       }
     },
@@ -824,8 +798,8 @@
   "order": [
     "main",
     "c9537080-8b7e-4d11-abed-ffdf006443e9",
-    "text_and_image_cftjxY",
     "slideshow_T4nNPj",
+    "text_and_image_cftjxY",
     "f7b49f3d-1c37-448e-888b-b38a40ba8033",
     "c4b52c04-7da6-471a-a2ab-d6fc4ec66c84",
     "3f71f403-ed57-4fab-8942-662f92e1e6d8",
