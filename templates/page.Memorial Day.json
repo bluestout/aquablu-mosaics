@@ -157,12 +157,12 @@
         "slide_qf94na": {
           "type": "slide",
           "settings": {
-            "top_subheading": "",
-            "title": "Highlight products",
+            "top_subheading": "USE CODE:IGNITEMYSTYLE",
+            "title": "A little extra glow, on the house.",
             "title_size": 60,
-            "subheading": "Repurpose your product photography with our \"Indented\" image option",
-            "link": "",
-            "link_text": "Optional button",
+            "subheading": "Spend $1,000+ and receive a FREE tabletop fire pit - while supplies last!",
+            "link": "shopify://products/concrete-semi-round-fire-pit",
+            "link_text": "View Product",
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
