@@ -121,7 +121,7 @@
         "button_link": "https://www.aquablumosaics.com/pages/outdoor-gas-fire-pits-and-water-features",
         "button_style": "primary",
         "align_text": "center",
-        "layout": "right",
+        "layout": "left",
         "color_scheme": "3",
         "divider": false,
         "new_layout": true,
