@@ -139,12 +139,12 @@
         "slide_Km9pkW": {
           "type": "slide",
           "settings": {
-            "top_subheading": "",
-            "title": "Side by side slide",
-            "title_size": 60,
-            "subheading": "Tailored for longer text and smaller images. Explain more about your promotion.",
-            "link": "",
-            "link_text": "Optional button",
+            "top_subheading": "no code needed",
+            "title": "Enjoy the warmth, we’ll cover the shipping.",
+            "title_size": 40,
+            "subheading": "Enjoy FREE shipping on every fire pit, table, and bowl!",
+            "link": "https://www.aquablumosaics.com/collections/outdoor-fire-pits",
+            "link_text": "Shop All Fire Pits",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
