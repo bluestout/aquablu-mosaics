@@ -188,6 +188,84 @@
         "css_class": ""
       }
     },
+    "promo_grid_4xT88Y": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_BrbLae": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Fire & Water Features",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/fire-and-water-features",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Outdoor_Fire_Water_Features.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "20% 0",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_zG4YKx": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Fire Bowls",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/fire-bowls",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/sedona-27-fire-bowl-gfrc-concrete-fire-feature-332948.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "20% 0",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_39p7XE": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Fire Tables",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/fire-pit-tables",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/fairmont-fire-table-gas-fire-pit-169866.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_align": "vertical-bottom horizontal-center",
+            "focal_point": "20% 0",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_BrbLae",
+        "advanced_zG4YKx",
+        "advanced_39p7XE"
+      ],
+      "settings": {
+        "full_width": false,
+        "heading": "",
+        "gutter_size": 25,
+        "section_gutter_size": 20,
+        "space_above": false,
+        "space_below": true,
+        "two_column_mobile": true,
+        "three_column_mobile": false,
+        "css_class": "blue-bar-overlay"
+      }
+    },
     "rich_text_AwEbLJ": {
       "type": "rich-text",
       "blocks": {
@@ -297,85 +375,6 @@
         "css_class": "blue-bar-overlay"
       }
     },
-    "promo_grid_4xT88Y": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_BrbLae": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "Code: FIREWATER25",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/fire-and-water-features",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/firewater25_41c3abc0-4005-4411-9a3f-8956b586f054.png",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "20% 0",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_zG4YKx": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "CODE: UMBRELLA50",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/outdoor-umbrellas-for-pool-and-patio",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/UMBRELLA50_95d2d61f-a3a6-4261-ab03-0f379e8cd8ac.png",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "20% 0",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_39p7XE": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "CODE: FIREPIT400",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/outdoor-fire-pits",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Firepit400_af72e025-f619-4722-bf87-82df2c11559f.png",
-            "video_url": "",
-            "width": "33",
-            "height": 500,
-            "text_align": "vertical-bottom horizontal-center",
-            "focal_point": "20% 0",
-            "color_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "advanced_BrbLae",
-        "advanced_zG4YKx",
-        "advanced_39p7XE"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "heading": "",
-        "gutter_size": 25,
-        "section_gutter_size": 20,
-        "space_above": false,
-        "space_below": true,
-        "two_column_mobile": true,
-        "three_column_mobile": false,
-        "css_class": "blue-bar-overlay"
-      }
-    },
     "rich_text_W3P9tD": {
       "type": "rich-text",
       "blocks": {
@@ -453,9 +452,9 @@
     "text_and_image_q7CzDP",
     "main",
     "slideshow_split_cVwgga",
+    "promo_grid_4xT88Y",
     "rich_text_AwEbLJ",
     "promo_grid_EWU4MJ",
-    "promo_grid_4xT88Y",
     "rich_text_W3P9tD",
     "slideshow_9DYixK"
   ]
