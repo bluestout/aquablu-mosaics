@@ -133,6 +133,59 @@
       "disabled": true,
       "settings": {}
     },
+    "slideshow_split_cVwgga": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_Km9pkW": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Side by side slide",
+            "title_size": 60,
+            "subheading": "Tailored for longer text and smaller images. Explain more about your promotion.",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_qf94na": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Highlight products",
+            "title_size": 60,
+            "subheading": "Repurpose your product photography with our \"Indented\" image option",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "indent_image": true,
+            "focal_point": "center center",
+            "color_scheme": "1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Km9pkW",
+        "slide_qf94na"
+      ],
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "height": 500,
+        "height_mobile": 400,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "css_class": ""
+      }
+    },
     "faq_rnPjG6": {
       "type": "faq",
       "blocks": {
@@ -427,6 +480,7 @@
     "1752528387512030df",
     "text_and_image_q7CzDP",
     "main",
+    "slideshow_split_cVwgga",
     "faq_rnPjG6",
     "promo_grid_EWU4MJ",
     "promo_grid_4xT88Y",
