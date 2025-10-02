@@ -108,38 +108,6 @@
         "css_class": ""
       }
     },
-    "175252686559448e4e": {
-      "type": "apps",
-      "blocks": {
-        "lookfy_gallery_lookfy_gallery_tCD38K": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-          "settings": {
-            "gallery_id": 27925,
-            "dynamic_source": "",
-            "title": "",
-            "subtitle": "",
-            "heading_size": "0.8",
-            "heading_color": "",
-            "heading_align": "center",
-            "desc_style": "subtitle",
-            "desc_color": "",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_left_right": 0
-          }
-        }
-      },
-      "block_order": [
-        "lookfy_gallery_lookfy_gallery_tCD38K"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": false,
-        "css_class": ""
-      }
-    },
     "text_and_image_q7CzDP": {
       "type": "text-and-image",
       "settings": {
@@ -725,7 +693,6 @@
     "hero_video_8PTPVX",
     "slideshow_k4HkFF",
     "1752528387512030df",
-    "175252686559448e4e",
     "text_and_image_q7CzDP",
     "slideshow_eak7Dt",
     "1752096094884bf702",
