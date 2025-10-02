@@ -122,7 +122,7 @@
         "button_style": "primary",
         "align_text": "center",
         "layout": "right",
-        "color_scheme": "2",
+        "color_scheme": "3",
         "divider": false,
         "new_layout": true,
         "css_class": ""
@@ -169,7 +169,7 @@
             "image": "shopify://shop_images/Ignite_your_style_5.jpg",
             "indent_image": false,
             "focal_point": "center center",
-            "color_scheme": "1"
+            "color_scheme": "2"
           }
         }
       },
