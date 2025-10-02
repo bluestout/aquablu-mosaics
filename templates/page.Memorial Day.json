@@ -256,10 +256,10 @@
       ],
       "settings": {
         "full_width": false,
-        "heading": "",
+        "heading": "SHOP FIRE PRODUCTS",
         "gutter_size": 25,
         "section_gutter_size": 20,
-        "space_above": false,
+        "space_above": true,
         "space_below": true,
         "two_column_mobile": true,
         "three_column_mobile": false,
