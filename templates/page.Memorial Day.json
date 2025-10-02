@@ -117,7 +117,7 @@
         "subtitle": "",
         "title": "",
         "text": "<h2>Cozy vibes, sizzling savings.</h2><p>Save big on fire pits this year with our <strong>Ignite Your Style Savings Event!</strong> Cozy vibes meet sizzling savings as you enjoy the warmth - and we’ll cover the shipping. Get <strong>FREE shipping</strong> on every fire pit, table, and bowl - no code needed. For a little extra glow, use code <strong>IGNITEMYSTYLE</strong> at checkout to unlock an exclusive bonus. Plus, when you spend <strong>$1,000 or more</strong>, you’ll receive a <strong>FREE tabletop fire pit</strong> - while supplies last! Style, savings, and sparks await, but these hot deals won’t last forever. 🔥 Don’t miss out!</p>",
-        "button_label": "Shop Fire Products",
+        "button_label": "Shop All Fire Products",
         "button_link": "https://www.aquablumosaics.com/pages/outdoor-gas-fire-pits-and-water-features",
         "button_style": "primary",
         "align_text": "center",
@@ -185,66 +185,6 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 5,
-        "css_class": ""
-      }
-    },
-    "faq_rnPjG6": {
-      "type": "faq",
-      "blocks": {
-        "question_N6ehDz": {
-          "type": "question",
-          "settings": {
-            "title": "What’s the difference between porcelain, ceramic, and natural stone tile?",
-            "text": "<p>Porcelain is highly dense and water-resistant, ideal for both indoor and outdoor use. Ceramic is slightly softer and more porous, great for interior walls and floors. Natural stone offers unique variation and timeless beauty but often requires sealing and more maintenance.</p>"
-          }
-        },
-        "question_QrdPd3": {
-          "type": "question",
-          "settings": {
-            "title": "Can tile be used outdoors or around pools?",
-            "text": "<p>Yes! We offer a wide selection of outdoor-rated tile and stone, including slip-resistant finishes and UV-stable materials perfect for patios, pool decks, and waterline applications.</p>"
-          }
-        },
-        "question_tAKAnL": {
-          "type": "question",
-          "settings": {
-            "title": "Do I need to seal my tile or stone?",
-            "text": "<p>Porcelain and ceramic typically don’t require sealing, but natural stone and certain grouts do. We recommend sealing those materials upon installation and reapplying as needed based on use and exposure. Wondering if your selected tile requires sealing? Give us a call at 800-971-1442 and we will confirm for you!</p>"
-          }
-        },
-        "question_VQFcrG": {
-          "type": "question",
-          "settings": {
-            "title": "How do I clean and maintain my tile?",
-            "text": "<p>For most tile, regular sweeping and a pH-neutral cleaner will do the trick. Avoid harsh chemicals, especially on natural stone. We also carry recommended cleaning and maintenance products - <a href=\"https://www.aquablumosaics.com/collections/pool-tile-cleaning-solutions\" target=\"_blank\" title=\"Tile cleaners\">shop now!</a></p>"
-          }
-        },
-        "question_Ba8Mpd": {
-          "type": "question",
-          "settings": {
-            "title": "Can I order samples before purchasing?",
-            "text": "<p>Absolutely. We highly recommend ordering samples to see color, texture, and finish in person before making your final decision. </p>"
-          }
-        },
-        "question_hKXC4r": {
-          "type": "question",
-          "settings": {
-            "title": "What’s the lead time on orders?",
-            "text": "<p>Lead times vary depending on the product and availability, but many items ship within 3–7 business days. Custom and special-order tiles may take longer - we’ll provide timelines when you order.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_N6ehDz",
-        "question_QrdPd3",
-        "question_tAKAnL",
-        "question_VQFcrG",
-        "question_Ba8Mpd",
-        "question_hKXC4r"
-      ],
-      "name": "t:sections.faq.presets.faq.name",
-      "settings": {
-        "title": "FAQs",
         "css_class": ""
       }
     },
@@ -513,7 +453,6 @@
     "text_and_image_q7CzDP",
     "main",
     "slideshow_split_cVwgga",
-    "faq_rnPjG6",
     "rich_text_AwEbLJ",
     "promo_grid_EWU4MJ",
     "promo_grid_4xT88Y",
