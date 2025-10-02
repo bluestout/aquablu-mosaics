@@ -248,6 +248,36 @@
         "css_class": ""
       }
     },
+    "rich_text_AwEbLJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TGbzzG": {
+          "type": "heading",
+          "settings": {
+            "title": "Ignite Your Style Event - Terms & Conditions"
+          }
+        },
+        "text_YkLNFp": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Offer valid while supplies last. Minimum purchase of <strong>$1,000 pre-tax</strong> required to qualify. Must enter coupon code <strong>IGNITEMYSTYLE</strong> at checkout to receive free tabletop fire pit. Cannot be combined with any other discounts, promotions, or coupon codes. Offer valid on qualifying merchandise purchased through AquaBluMosaics.com only. Limit one free tabletop fire pit per qualifying order. No cash value. If merchandise is returned and the qualifying spend drops below $1,000, the retail value of the tabletop fire pit will be deducted from any refund. AquaBlu Mosaics reserves the right to modify or cancel this promotion at any time without notice.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TGbzzG",
+        "text_YkLNFp"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "divider": false,
+        "css_class": ""
+      }
+    },
     "promo_grid_EWU4MJ": {
       "type": "promo-grid",
       "blocks": {
@@ -484,6 +514,7 @@
     "main",
     "slideshow_split_cVwgga",
     "faq_rnPjG6",
+    "rich_text_AwEbLJ",
     "promo_grid_EWU4MJ",
     "promo_grid_4xT88Y",
     "rich_text_W3P9tD",
