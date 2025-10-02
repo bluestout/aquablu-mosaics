@@ -116,16 +116,16 @@
         "image_width": 450,
         "subtitle": "",
         "title": "",
-        "text": "<h2>Endless Design Possibilities - Right At Your Fingertips</h2><p>Explore AquaBlu’s curated collection of Glass, Porcelain, Ceramic, and Natural Stone - thoughtfully selected to elevate every space with elegance and enduring style. Our expansive online tile catalog brings together timeless materials and trend-forward designs, all in one seamless destination. Whether you're designing a serene spa, a sophisticated outdoor retreat, or a showstopping kitchen backsplash, if you can dream it - chances are, we have it.</p><p>If you haven’t found the perfect piece, we’ll create it for you. Our custom design services turn your vision into a one-of-a-kind statement, tailored with intention and crafted without compromise.</p>",
-        "button_label": "Learn More",
-        "button_link": "",
+        "text": "<h2>Cozy vibes, sizzling savings.</h2><p>Save big on fire pits this year with our <strong>Ignite Your Style Savings Event!</strong> Cozy vibes meet sizzling savings as you enjoy the warmth - and we’ll cover the shipping. Get <strong>FREE shipping</strong> on every fire pit, table, and bowl - no code needed. For a little extra glow, use code <strong>IGNITEMYSTYLE</strong> at checkout to unlock an exclusive bonus. Plus, when you spend <strong>$1,000 or more</strong>, you’ll receive a <strong>FREE tabletop fire pit</strong> - while supplies last! Style, savings, and sparks await, but these hot deals won’t last forever. 🔥 Don’t miss out!</p>",
+        "button_label": "Shop Fire Products",
+        "button_link": "https://www.aquablumosaics.com/pages/outdoor-gas-fire-pits-and-water-features",
         "button_style": "primary",
         "align_text": "center",
         "layout": "right",
         "color_scheme": "2",
         "divider": false,
         "new_layout": true,
-        "css_class": "bath-section-8"
+        "css_class": ""
       }
     },
     "slideshow_eak7Dt": {
