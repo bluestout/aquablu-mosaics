@@ -265,8 +265,11 @@
         "80fbd045-b12c-4c9e-b103-856fb964c6e2",
         "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-3"
       ],
+      "custom_css": [
+        "h2 {opacity: 0; display:none;}"
+      ],
       "settings": {
-        "title": "",
+        "title": "Shop by Category",
         "divider": false,
         "gutter_size": 40,
         "space_above": true,
