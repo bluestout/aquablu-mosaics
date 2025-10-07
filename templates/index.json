@@ -266,7 +266,7 @@
         "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-3"
       ],
       "custom_css": [
-        "h2 {opacity: 0; display:none;}"
+        ".section-header__title {opacity: 0; display: none;}"
       ],
       "settings": {
         "title": "Shop by Category",
