@@ -37,8 +37,13 @@
                         alt="{{ block.settings.image.alt }}">
                   </div>
                   <div class="logo-right">
-                    <h3>{{ block.settings.logo_title }}</h3>
-                    <p>{{ block.settings.logo_text }}</p>
+                    {% if block.settings.logo_title %}
+                      <h3>{{ block.settings.logo_title }}</h3>
+                    {% endif %}
+
+                    {% if block.settings.logo_text %}
+                      <p>{{ block.settings.logo_text }}</p>
+                    {% endif %}
                   </div>
                 </div>
               {%- else -%}
