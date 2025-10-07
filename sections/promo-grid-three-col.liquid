@@ -155,9 +155,9 @@
 				  <div class="promo-grid__content">
 					<div class="promo-grid__text">
 					  {%- if block.settings.subheading != blank -%}
-						<div class="rte--block rte--em test1">
+						<h3 class="rte--block rte--em">
 						  {{ block.settings.subheading }}
-						</div>
+						</h3>
 					  {%- endif -%}
 					  {%- if block.settings.heading != blank -%}
 						<div class="rte--block rte--strong">
@@ -197,7 +197,7 @@
 				  <div class="promo-grid__content{% if block.settings.width == '50' %} promo-grid__content--small-text{% endif %}">
 					<div class="promo-grid__text text-center">
 					  {%- if block.settings.top_text != blank -%}
-						<div class="rte--block rte--em test2">
+						<div class="rte--block rte--em">
 						  {{ block.settings.top_text }}
 						</div>
 					  {%- endif -%}
@@ -394,7 +394,7 @@
 					{%- if block.settings.subheading != blank or block.settings.heading != blank or block.settings.textarea != blank or block.settings.link_label != blank -%}
 					  <div class="promo-grid__product-text type-product__text promo-grid__text small--text-center">
 						{%- if block.settings.subheading != blank -%}
-						  <div class="rte--block rte--em test3">
+						  <div class="rte--block rte--em">
 							{{ block.settings.subheading }}
 						  </div>
 						{%- endif -%}
