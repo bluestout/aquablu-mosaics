@@ -196,14 +196,14 @@
 						</div>
 					  {%- endif -%}
 					  {%- if block.settings.heading != blank -%}
-						<div class="rte--block rte--strong test1">
+						<h3 class="rte--block rte--strong test1">
 						  {{ block.settings.heading }}
-						</div>
+						</h3>
 					  {%- endif -%}
 					  {%- if block.settings.textarea != blank -%}
-						<div class="rte--block enlarge-text">
+						<h4 class="rte--block enlarge-text">
 						  {{ block.settings.textarea | newline_to_br }}
-						</div>
+						</h4>
 					  {%- endif -%}
 					  {%- if block.settings.cta_text1 != blank -%}
 						<div class="btn{% unless accent_exists %} btn--inverse{% endunless %}">
