@@ -76,7 +76,9 @@
         {%- endif -%}
       </div>
     {%- else -%}
-      <a href="{{ article.url }}" class="article__title">{{ article.title }}</a>
+      <h3 style="font-weight:300;font-size:16px;font-family:'FuturaBook';margin:0;line-height:25.6;">
+        <a href="{{ article.url }}" class="article__title">{{ article.title }}</a>
+      </h3>
       <div class="article__sub-meta">
         {%- if show_comments and article.comments_count > 0 -%}
           <span>
