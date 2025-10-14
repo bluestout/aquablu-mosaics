@@ -83,6 +83,26 @@
         "css_class": ""
       }
     },
+    "text_and_image_tiihYD": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Installation_page.jpg",
+        "image_width": 500,
+        "subtitle": "Master your installation",
+        "title": "",
+        "text": "<p>A flawless tile design starts with the right foundation. From professional-grade <strong>tile installation products</strong> to advanced <strong>waterproofing systems</strong>, the right materials ensure lasting beauty and performance. Whether you’re working on a pool, shower, or outdoor patio, using high-quality <strong>tile adhesive and tile</strong> <strong>grout</strong> helps prevent cracking, moisture damage, and staining - keeping your tile looking pristine for years to come.</p><p>At AquaBlu Mosaics, we carry everything you need to install with confidence, including premium <strong>waterproofing membranes</strong> from top brands. Designed for both DIYers and professionals, our selection of <strong>tile installation tools</strong> and products makes every project smoother, faster, and more durable - so you can achieve professional-grade results every time.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "2",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
+      }
+    },
     "slideshow_CGc9Uf": {
       "type": "slideshow",
       "blocks": {
@@ -811,6 +831,7 @@
   "order": [
     "main",
     "4ff181e0-4ba1-491c-8145-dff4a3c7fa3d",
+    "text_and_image_tiihYD",
     "slideshow_CGc9Uf",
     "e867cf6b-359c-4cb8-849a-adfd3525e57b",
     "175383947130d23098",
