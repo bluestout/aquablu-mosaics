@@ -157,6 +157,7 @@
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/3_55ea4018-249a-446a-ac8a-a8aa7320b719.jpg",
+        "video_url": "",
         "image_width": 500,
         "subtitle": "Luxury is a paver away",
         "title": "",
@@ -319,7 +320,7 @@
         "41c69297-1243-45e8-a756-edd75d6d1494"
       ],
       "settings": {
-        "title": "SHOP BY LOOK",
+        "title": "SHOP PATIO PAVERS BY LOOK",
         "divider": false,
         "css_class": "exploring-pool-mosaic-grid"
       }
