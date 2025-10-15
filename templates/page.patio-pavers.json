@@ -152,6 +152,26 @@
         "css_class": ""
       }
     },
+    "text_and_image_pngdhE": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/3_55ea4018-249a-446a-ac8a-a8aa7320b719.jpg",
+        "image_width": 500,
+        "subtitle": "Luxury is a paver away",
+        "title": "",
+        "text": "<p>Transform your outdoor living areas with hardscape materials that blend durability, style, and natural beauty. From natural stone ledger panels that add texture and depth to your walls, to flagstone and porcelain pavers that create elegant, slip-resistant surfaces, our collection is designed to enhance any patio, pool deck, or walkway. Finish your design with expertly crafted <strong>pool </strong>coping that provides a seamless transition from water to deck while ensuring safety and comfort underfoot.</p><p>At AquaBlu Mosaics, we offer premium hardscape products built for both performance and visual impact. Whether you’re creating a modern retreat or a timeless backyard escape, our <strong>hardscaping materials</strong> help you build an outdoor space that’s as functional as it is stunning.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "layout": "right",
+        "color_scheme": "3",
+        "divider": false,
+        "new_layout": true,
+        "css_class": ""
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -783,6 +803,7 @@
   },
   "order": [
     "slideshow_pQakFB",
+    "text_and_image_pngdhE",
     "main",
     "slideshow_VjTHEg",
     "f179439e-be50-4d2b-a6be-a59ea9fbd72a",
