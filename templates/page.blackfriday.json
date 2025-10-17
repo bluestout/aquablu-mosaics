@@ -96,7 +96,7 @@
             "text_position": "left",
             "image": "shopify://shop_images/Black_Friday_Image_Landing_4.jpg",
             "indent_image": false,
-            "focal_point": "bottom center",
+            "focal_point": "center center",
             "color_scheme": "2"
           }
         },
@@ -114,7 +114,7 @@
             "text_position": "right",
             "image": "shopify://shop_images/Black_Friday_Image_Landing_5.jpg",
             "indent_image": false,
-            "focal_point": "bottom center",
+            "focal_point": "center center",
             "color_scheme": "2"
           }
         },
@@ -132,7 +132,7 @@
             "text_position": "left",
             "image": "shopify://shop_images/Black_Friday_Image_Landing_3.jpg",
             "indent_image": false,
-            "focal_point": "bottom center",
+            "focal_point": "center center",
             "color_scheme": "2"
           }
         }
