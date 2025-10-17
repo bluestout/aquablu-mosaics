@@ -35,7 +35,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/BLACK_FRIDAY_SALES_EVENT_1.jpg",
+            "image": "shopify://shop_images/BLACK_FRIDAY_SALES_EVENT_3.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -95,7 +95,7 @@
             "link_text_2": "",
             "text_position": "right",
             "image": "shopify://shop_images/flamenco-racing-green-brick-2x18-glossy-bathroom-0696-chris3_5.png",
-            "indent_image": true,
+            "indent_image": false,
             "focal_point": "bottom center",
             "color_scheme": "2"
           }
