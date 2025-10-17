@@ -385,7 +385,13 @@
         "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1": {
           "type": "title",
           "settings": {
-            "title": "SIGN UP & SAVE TODAY!"
+            "title": "SIGN UP & BE IN THE KNOW!"
+          }
+        },
+        "text_B7LnVR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be the first to know about exclusive sales, new arrivals, and design inspiration - straight to your inbox. ✨</p>"
           }
         },
         "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1": {
@@ -413,11 +419,12 @@
       },
       "block_order": [
         "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1",
+        "text_B7LnVR",
         "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1",
         "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c"
       ],
       "settings": {
-        "color_scheme": "2"
+        "color_scheme": "3"
       }
     },
     "d3e9d536-82ea-46ba-a582-472858d2be95": {
