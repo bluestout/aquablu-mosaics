@@ -130,7 +130,7 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
-            "image": "shopify://shop_images/Untitled-3.png",
+            "image": "shopify://shop_images/Black_Friday_Image_Landing_2.jpg",
             "indent_image": false,
             "focal_point": "bottom center",
             "color_scheme": "2"
@@ -144,7 +144,7 @@
       ],
       "settings": {
         "full_width": false,
-        "height": 650,
+        "height": 550,
         "height_mobile": 450,
         "style": "arrows",
         "autoplay": true,
