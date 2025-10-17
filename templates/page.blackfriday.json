@@ -63,7 +63,7 @@
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/Black_Friday_Image_Landing.jpg",
+        "image": "shopify://shop_images/Black_Friday_Image_Landing_1.jpg",
         "image_width": 500,
         "subtitle": "BLACK FRIDAY IS HERE",
         "title": "",
