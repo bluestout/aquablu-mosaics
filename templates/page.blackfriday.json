@@ -465,18 +465,8 @@
           "type": "collection",
           "settings": {
             "title": "IN-POOL FURNITURE",
-            "image": "shopify://shop_images/Tenjam_Loungers_Outdoor_Furniture123.jpg",
+            "image": "shopify://shop_images/woosah-chair-with-tall-base-set-of-two-luxury-pool-chair-714680.jpg",
             "url": "shopify://collections/in-pool-furniture",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-3": {
-          "type": "collection",
-          "settings": {
-            "title": "PATIO PAVERS",
-            "image": "shopify://shop_images/Terrazzo_Look_Porcelain_Pavers.jpg",
-            "url": "shopify://pages/outdoor-patio-pavers-and-hardscapes",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -487,6 +477,16 @@
             "title": "FIRE PITS",
             "image": "shopify://shop_images/Sunflower_Fire_Pit_by_Prism_Hardscapes_1_45f99fbe-8cea-4453-9c56-cf42017f0b22.png",
             "url": "shopify://collections/outdoor-fire-pits",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-3": {
+          "type": "collection",
+          "settings": {
+            "title": "PATIO PAVERS",
+            "image": "shopify://shop_images/Terrazzo_Look_Porcelain_Pavers.jpg",
+            "url": "shopify://pages/outdoor-patio-pavers-and-hardscapes",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -505,7 +505,7 @@
           "type": "collection",
           "settings": {
             "title": "POOL MOSAICS",
-            "image": "shopify://shop_images/AIM-Provincial-Medallion-_AquaBlu-Mosaics__jpg.jpg",
+            "image": "shopify://shop_images/glassseaturtleinstallationphoto1.jpg",
             "url": "shopify://pages/swimming-pool-mosaics",
             "tooltip": false,
             "tooltip_text": ""
@@ -535,8 +535,8 @@
       "block_order": [
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-1",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-2",
-        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-3",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-4",
+        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-3",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-5",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-6",
         "cdf1e7df-a2d6-4c0d-984a-92344b2fb484",
