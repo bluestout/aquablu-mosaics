@@ -79,41 +79,6 @@
         "css_class": ""
       }
     },
-    "slideshow_split_FejXbk": {
-      "type": "slideshow-split",
-      "blocks": {
-        "slide_qETKzM": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "USE CODE: 'BLACKFRIDAY15' AT CHECKOUT",
-            "title": "15% OFF",
-            "title_size": 72,
-            "subheading": "ALL TILE & STONE",
-            "link": "shopify://collections/tile-and-stone",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/flamenco-racing-green-brick-2x18-glossy-bathroom-0696-chris3_5.png",
-            "indent_image": false,
-            "focal_point": "bottom center",
-            "color_scheme": "2"
-          }
-        }
-      },
-      "block_order": [
-        "slide_qETKzM"
-      ],
-      "settings": {
-        "full_width": false,
-        "height": 650,
-        "height_mobile": 450,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "slideshow_split_iNMxDw": {
       "type": "slideshow-split",
       "blocks": {
@@ -580,7 +545,6 @@
     "main",
     "ee6a77e5-a918-4f22-81e3-69864c2ea251",
     "text_and_image_nnnqYm",
-    "slideshow_split_FejXbk",
     "slideshow_split_iNMxDw",
     "slideshow_tzJ44H",
     "promo_grid_n7H3Q7",
