@@ -59,70 +59,23 @@
         "css_class": "bath-section-1"
       }
     },
-    "rich_text_Ac8Amf": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_yL7nej": {
-          "type": "heading",
-          "settings": {
-            "title": "EXPLORE ALL THE DEALS"
-          }
-        }
-      },
-      "block_order": [
-        "heading_yL7nej"
-      ],
+    "text_and_image_nnnqYm": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
       "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "color_scheme": "none",
+        "image": "shopify://shop_images/Black_Friday_Image_Landing.jpg",
+        "image_width": 500,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "color_scheme": "3",
         "divider": false,
-        "css_class": ""
-      }
-    },
-    "slideshow_MjnPNy": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_wXJJhC": {
-          "type": "hero",
-          "settings": {
-            "image_width": 90,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/bf_2024_pg.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_wXJJhC"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": true,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 40,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
+        "new_layout": true,
         "css_class": ""
       }
     },
@@ -193,52 +146,6 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "promo_grid_tUVXWF": {
-      "type": "promo-grid",
-      "blocks": {
-        "product_HNJFkb": {
-          "type": "product",
-          "settings": {
-            "product": "tenjam-shayz-in-pool-lounger",
-            "subheading": "",
-            "heading": "SAVE 10% ON ALL TENJAM FURNITURE",
-            "textarea": "USE CODE: BFTENJAM10",
-            "link_label": "",
-            "label": "",
-            "enable_price": false,
-            "width": "50",
-            "color_scheme": "2"
-          }
-        },
-        "sale_collection_M9xKrK": {
-          "type": "sale_collection",
-          "settings": {
-            "sale_collection": "outdoor-pavers-and-coping",
-            "top_text": "USE CODE: BFHARDSCAPES10",
-            "middle_text": "10% off",
-            "bottom_text": "ALL HARDSCAPES",
-            "width": "50",
-            "color_scheme": "none"
-          }
-        }
-      },
-      "block_order": [
-        "product_HNJFkb",
-        "sale_collection_M9xKrK"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "heading": "",
-        "gutter_size": 33,
-        "section_gutter_size": 40,
-        "space_above": false,
-        "space_below": true,
-        "two_column_mobile": false,
-        "three_column_mobile": false,
         "css_class": ""
       }
     },
@@ -672,11 +579,9 @@
   "order": [
     "main",
     "ee6a77e5-a918-4f22-81e3-69864c2ea251",
-    "rich_text_Ac8Amf",
-    "slideshow_MjnPNy",
+    "text_and_image_nnnqYm",
     "slideshow_split_FejXbk",
     "slideshow_split_iNMxDw",
-    "promo_grid_tUVXWF",
     "slideshow_tzJ44H",
     "promo_grid_n7H3Q7",
     "slideshow_gHVraw",
