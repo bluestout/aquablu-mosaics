@@ -451,22 +451,12 @@
     "69357716-720e-447f-b363-ad48fe666e6e": {
       "type": "featured-collections-custom",
       "blocks": {
-        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-1": {
+        "71b30416-5e2f-43c1-b0e8-5b1db10fd282": {
           "type": "collection",
           "settings": {
-            "title": "GLASS TILE",
-            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
-            "url": "shopify://collections/glass-mosaic-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-2": {
-          "type": "collection",
-          "settings": {
-            "title": "IN-POOL FURNITURE",
-            "image": "shopify://shop_images/woosah-chair-with-tall-base-set-of-two-luxury-pool-chair-714680.jpg",
-            "url": "shopify://collections/in-pool-furniture",
+            "title": "PATIO FURNITURE",
+            "image": "shopify://shop_images/MainstayBench_52_Gray_LedgeLoungerOutdoorFurniture_LL-MS-DB52-GRY.jpg",
+            "url": "shopify://collections/outdoor-patio-furniture",
             "tooltip": false,
             "tooltip_text": ""
           }
@@ -501,6 +491,26 @@
             "tooltip_text": ""
           }
         },
+        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-1": {
+          "type": "collection",
+          "settings": {
+            "title": "GLASS TILE",
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
+            "url": "shopify://collections/glass-mosaic-tile",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
+        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-2": {
+          "type": "collection",
+          "settings": {
+            "title": "IN-POOL FURNITURE",
+            "image": "shopify://shop_images/woosah-chair-with-tall-base-set-of-two-luxury-pool-chair-714680.jpg",
+            "url": "shopify://collections/in-pool-furniture",
+            "tooltip": false,
+            "tooltip_text": ""
+          }
+        },
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-6": {
           "type": "collection",
           "settings": {
@@ -520,27 +530,17 @@
             "tooltip": false,
             "tooltip_text": ""
           }
-        },
-        "71b30416-5e2f-43c1-b0e8-5b1db10fd282": {
-          "type": "collection",
-          "settings": {
-            "title": "PATIO FURNITURE",
-            "image": "shopify://shop_images/Patio-Furniture.jpg",
-            "url": "shopify://collections/outdoor-patio-furniture",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
         }
       },
       "block_order": [
-        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-1",
-        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-2",
+        "71b30416-5e2f-43c1-b0e8-5b1db10fd282",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-4",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-3",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-5",
+        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-1",
+        "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-2",
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-6",
-        "cdf1e7df-a2d6-4c0d-984a-92344b2fb484",
-        "71b30416-5e2f-43c1-b0e8-5b1db10fd282"
+        "cdf1e7df-a2d6-4c0d-984a-92344b2fb484"
       ],
       "settings": {
         "title": "",
