@@ -117,11 +117,30 @@
             "focal_point": "bottom center",
             "color_scheme": "2"
           }
+        },
+        "slide_hVnMHR": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE:",
+            "title": "SAVE $750",
+            "title_size": 50,
+            "subheading": "Save $750 when you spend $5,000! Go all in on luxury. From full renovations to outdoor transformations, make every detail unforgettable. 🔥",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Untitled-3.png",
+            "indent_image": false,
+            "focal_point": "bottom center",
+            "color_scheme": "2"
+          }
         }
       },
       "block_order": [
         "slide_hLgcc7",
-        "slide_pfcUEU"
+        "slide_pfcUEU",
+        "slide_hVnMHR"
       ],
       "settings": {
         "full_width": false,
