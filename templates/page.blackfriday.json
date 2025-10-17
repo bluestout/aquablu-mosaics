@@ -183,6 +183,7 @@
       "block_order": [
         "hero_RBzqjU"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
@@ -248,6 +249,7 @@
         "product_iYHrqz",
         "sale_collection_M6MwUi"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "",
@@ -291,6 +293,7 @@
       "block_order": [
         "hero_CfpekJ"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
@@ -342,6 +345,7 @@
         "product_6WwYBT",
         "product_TU3Rq4"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "heading": "",
@@ -356,6 +360,7 @@
     },
     "0d909433-0909-429c-86cc-588ca215f068": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/sign_up_save_more_BF_24.png",
         "video_url": "",
@@ -421,7 +426,7 @@
         "template--14565132828744__d3e9d536-82ea-46ba-a582-472858d2be95-1684261561dbe0f0c4-0": {
           "type": "heading",
           "settings": {
-            "title": "BROWSE OUR MOST POPULAR COLLECTIONS"
+            "title": "SHOP OUR MOST POPULAR COLLECTIONS"
           }
         }
       },
