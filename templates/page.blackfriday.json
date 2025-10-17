@@ -85,24 +85,43 @@
         "slide_hLgcc7": {
           "type": "slide",
           "settings": {
-            "top_subheading": "USE CODE: 'BFHARDSCAPES10' AT CHECKOUT",
-            "title": "10% OFF",
-            "title_size": 72,
-            "subheading": "ALL HARDSCAPES AND COPING",
-            "link": "shopify://collections/outdoor-pavers-and-coping",
-            "link_text": "SHOP NOW",
+            "top_subheading": "USE CODE:",
+            "title": "SAVE $75",
+            "title_size": 50,
+            "subheading": "Save $75 when you spend $500! Start your refresh in style. Perfect for accent walls, backsplashes, or small projects that make a big impact. ✨",
+            "link": "",
+            "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
             "image": "shopify://shop_images/Untitled-3.png",
-            "indent_image": true,
+            "indent_image": false,
+            "focal_point": "bottom center",
+            "color_scheme": "2"
+          }
+        },
+        "slide_pfcUEU": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "USE CODE:",
+            "title": "SAVE $150",
+            "title_size": 50,
+            "subheading": "Save $150 when you spend $1,000! Upgrade your space with timeless materials and elevated design - the perfect balance of beauty and value.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Untitled-3.png",
+            "indent_image": false,
             "focal_point": "bottom center",
             "color_scheme": "2"
           }
         }
       },
       "block_order": [
-        "slide_hLgcc7"
+        "slide_hLgcc7",
+        "slide_pfcUEU"
       ],
       "settings": {
         "full_width": false,
