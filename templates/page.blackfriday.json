@@ -495,9 +495,9 @@
         "template--14631516536904__69357716-720e-447f-b363-ad48fe666e6e-collection-1": {
           "type": "collection",
           "settings": {
-            "title": "GLASS TILE",
+            "title": "POOL TILE",
             "image": "shopify://shop_images/OP_25.34_Matte_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza3.jpg",
-            "url": "shopify://collections/glass-mosaic-tile",
+            "url": "https://www.aquablumosaics.com/pages/pool-tile",
             "tooltip": false,
             "tooltip_text": ""
           }
