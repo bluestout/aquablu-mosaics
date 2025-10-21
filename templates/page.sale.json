@@ -138,6 +138,7 @@
       "blocks": {
         "slide_KUc3m6": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "tis the season",
             "title": "Cozy vibes, sizzling savings.",
@@ -174,6 +175,7 @@
         },
         "slide_yq6WHF": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "USE CODE:IGNITEMYSTYLE",
             "title": "A little extra glow, on the house.",
@@ -192,6 +194,7 @@
         },
         "slide_BHcfUb": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "Limited-time offers - exclusions apply.",
             "title": "Style, savings, and sparks.",
