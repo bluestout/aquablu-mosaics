@@ -153,29 +153,10 @@
             "focal_point": "center center",
             "color_scheme": "2"
           }
-        },
-        "slide_qf94na": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "USE CODE:IGNITEMYSTYLE",
-            "title": "A little extra glow, on the house.",
-            "title_size": 40,
-            "subheading": "Spend $1,000+ and receive a FREE tabletop fire pit - while supplies last. Simply add the product to your cart and input code IGNITEMYSTYLE to save!",
-            "link": "shopify://products/concrete-semi-round-fire-pit",
-            "link_text": "View Product",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Static_Set_3_-_Ignite_Your_Style_7.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
         }
       },
       "block_order": [
-        "slide_Km9pkW",
-        "slide_qf94na"
+        "slide_Km9pkW"
       ],
       "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
       "settings": {
