@@ -25,12 +25,13 @@
           "type": "slide",
           "disabled": true,
           "settings": {
+            "image": "shopify://shop_images/BLACK_FRIDAY_SALES_EVENT_4.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
-            "button_label": "Shop Now",
+            "button_label": "",
             "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "box_align": "middle-center",
+            "box_align": "bottom-center",
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
