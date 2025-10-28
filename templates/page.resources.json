@@ -480,12 +480,12 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/AquaBar-B_W_333513ae-87f6-4b42-b9cc-e41ab3201ea9.png",
+            "image": "shopify://shop_images/Untitled_design_14.png",
             "image_width": 120,
-            "title": "The AquaBar",
-            "text": "<h5><a href=\"https://cdn.shopify.com/s/files/1/1205/7108/files/The_Aquabar_Warranty__AquaBlu_1.pdf?v=1698156600\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/1205/7108/files/The_Aquabar_Warranty__AquaBlu_1.pdf?v=1698156600\">Warranty</a></h5>",
+            "title": "Big Joe",
+            "text": "",
             "button_label": "",
-            "button_link": ""
+            "button_link": "https://www.aquablumosaics.com/collections/big-joe-pool-floats-outdoor-furniture"
           }
         },
         "0ad6cb81-4b61-4d6b-8b5c-adf88d3a9698": {
