@@ -887,6 +887,7 @@
     },
     "f9924b8e-a6f5-4947-8294-5ba93d7327ff": {
       "type": "blog-posts",
+      "disabled": true,
       "settings": {
         "title": "CHECK OUT THE AQUABLOG",
         "blog": "news",
