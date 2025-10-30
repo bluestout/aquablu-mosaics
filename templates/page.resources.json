@@ -181,6 +181,7 @@
         "template--14668593725512__38ca7bc2-ab74-4964-8724-6743d46bd680-text_block-3",
         "b481a9c8-166e-41be-99c5-11bbff3c043a"
       ],
+      "disabled": true,
       "settings": {
         "title": "BROCHURES / TECH SHEETS",
         "text": "",
@@ -275,6 +276,7 @@
         "471db496-1ed1-4d34-8db1-e493c36df848",
         "c04df3d9-0c0c-4f9c-8109-ee55cbdb976d"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -369,6 +371,7 @@
         "623c2513-529f-4f65-ae6d-4c5a5d4f3250",
         "23bbe920-e92f-4359-acbb-63245092c491"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -463,6 +466,7 @@
         "c7150cb3-c773-4e69-93cb-f04200ce888d",
         "932a0d05-dc54-47ec-979a-f1fd963323f1"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -557,6 +561,7 @@
         "a0d29602-2141-4f7a-8b37-03bedb6fb3d9",
         "8249e8ed-bba1-4250-838f-7da72aa5db8c"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -593,7 +598,6 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_pQ989m"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
