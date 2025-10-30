@@ -657,6 +657,123 @@
         "css_class": "outdoor-section-3 reduce-text-padding"
       }
     },
+    "faq_dEKnrV": {
+      "type": "faq",
+      "blocks": {
+        "question_PR6cRn": {
+          "type": "question",
+          "settings": {
+            "title": "American Glass Mosaics",
+            "text": ""
+          }
+        },
+        "question_Wn9yPR": {
+          "type": "question",
+          "settings": {
+            "title": "Aquatica/IWT",
+            "text": ""
+          }
+        },
+        "question_bD3PQA": {
+          "type": "question",
+          "settings": {
+            "title": "Artistry in Mosaics",
+            "text": ""
+          }
+        },
+        "question_P9ENLp": {
+          "type": "question",
+          "settings": {
+            "title": "Basecrete",
+            "text": ""
+          }
+        },
+        "question_ERJDCC": {
+          "type": "question",
+          "settings": {
+            "title": "Bisazza",
+            "text": ""
+          }
+        },
+        "question_DQNzce": {
+          "type": "question",
+          "settings": {
+            "title": "BluSHADES",
+            "text": ""
+          }
+        },
+        "question_zCmVm8": {
+          "type": "question",
+          "settings": {
+            "title": "Custom Mosaics",
+            "text": ""
+          }
+        },
+        "question_H7wNhc": {
+          "type": "question",
+          "settings": {
+            "title": "Dune Tile",
+            "text": ""
+          }
+        },
+        "question_FUTaVk": {
+          "type": "question",
+          "settings": {
+            "title": "Element Glo",
+            "text": ""
+          }
+        },
+        "question_JECFgy": {
+          "type": "question",
+          "settings": {
+            "title": "Floating Luxuries",
+            "text": ""
+          }
+        },
+        "question_ADaqNM": {
+          "type": "question",
+          "settings": {
+            "title": "Fujiwa",
+            "text": ""
+          }
+        },
+        "question_FfdCxj": {
+          "type": "question",
+          "settings": {
+            "title": "Good Turf Co",
+            "text": ""
+          }
+        },
+        "question_UKDcVC": {
+          "type": "question",
+          "settings": {
+            "title": "Ledge Lounger",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_PR6cRn",
+        "question_Wn9yPR",
+        "question_bD3PQA",
+        "question_P9ENLp",
+        "question_ERJDCC",
+        "question_DQNzce",
+        "question_zCmVm8",
+        "question_H7wNhc",
+        "question_FUTaVk",
+        "question_JECFgy",
+        "question_ADaqNM",
+        "question_FfdCxj",
+        "question_UKDcVC"
+      ],
+      "disabled": true,
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "title": "DOWNLOAD CATALOGS",
+        "css_class": ""
+      }
+    },
     "f9924b8e-a6f5-4947-8294-5ba93d7327ff": {
       "type": "blog-posts",
       "settings": {
@@ -685,6 +802,7 @@
     "17618401420a551655",
     "176168856737720679",
     "d1e903ba-e789-40db-8412-623d059dba50",
+    "faq_dEKnrV",
     "f9924b8e-a6f5-4947-8294-5ba93d7327ff"
   ]
 }
