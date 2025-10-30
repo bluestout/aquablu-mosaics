@@ -794,13 +794,6 @@
             "text": ""
           }
         },
-        "question_nbR3mF": {
-          "type": "question",
-          "settings": {
-            "title": "Studio Redrock",
-            "text": ""
-          }
-        },
         "question_tQUMY7": {
           "type": "question",
           "settings": {
@@ -864,7 +857,6 @@
         "question_UdPzTQ",
         "question_UJC7FC",
         "question_QFrdjf",
-        "question_nbR3mF",
         "question_tQUMY7",
         "question_7iKWjm",
         "question_tLAq4q",
