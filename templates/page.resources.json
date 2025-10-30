@@ -640,12 +640,12 @@
     "d1e903ba-e789-40db-8412-623d059dba50": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/About-us-Environment.jpg",
+        "image": "shopify://shop_images/A_force_for_good.png",
         "video_url": "",
         "image_width": 700,
         "subtitle": "",
         "title": "",
-        "text": "<h2>A FORCE FOR GOOD: CONSERVATION AT AQUABLU</h2><p>AquaBlu is committed to not only providing you with the best products and service, but to helping protect the world while we're at it. Learn more about our conservation efforts and find out how you can get involved as well.</p><p><a href=\"/pages/conservation\" target=\"_blank\" title=\"Conservation\">LEARN MORE &gt;&gt;</a></p>",
+        "text": "<h2><strong>A FORCE FOR GOOD: CONSERVATION AT AQUABLU</strong></h2><p>AquaBlu is committed to not only providing you with the best products and service, but to helping protect the world while we're at it. Learn more about our conservation efforts and find out how you can get involved as well.</p><p><a href=\"/pages/conservation\" target=\"_blank\" title=\"Conservation\">LEARN MORE</a></p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
