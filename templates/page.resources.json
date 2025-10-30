@@ -756,14 +756,7 @@
           "type": "question",
           "settings": {
             "title": "Litokol/Tile Doctor",
-            "text": ""
-          }
-        },
-        "question_XnhxX3": {
-          "type": "question",
-          "settings": {
-            "title": "Natural Stone Resources (NSR)",
-            "text": ""
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/1205/7108/files/Litokol_Warranty.pdf?v=1761853532\" target=\"_blank\" title=\"Litokol Warranty\">Litokol Warranty</a></p>"
           }
         },
         "question_8JXhLR": {
@@ -852,7 +845,6 @@
         "question_FfdCxj",
         "question_UKDcVC",
         "question_emDLCG",
-        "question_XnhxX3",
         "question_8JXhLR",
         "question_UdPzTQ",
         "question_UJC7FC",
