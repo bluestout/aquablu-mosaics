@@ -61,11 +61,11 @@
             "image_width": 650,
             "html_embed": "",
             "html_embed_two": "",
-            "additional_text_field": "And optional subtext",
+            "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "",
-            "title": "<p>RESOURCES</p>",
-            "title_size": 60,
+            "top_subheading": "Artistry. Integrity. Style.",
+            "title": "<p>Explore Our Brands</p>",
+            "title_size": 45,
             "subheading": "",
             "custom_text": "",
             "link": "",
@@ -573,38 +573,6 @@
         "css_class": ""
       }
     },
-    "17618401420a551655": {
-      "type": "apps",
-      "blocks": {
-        "lookfy_gallery_lookfy_gallery_KLwM3B": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-          "settings": {
-            "gallery_id": 34812,
-            "dynamic_source": "",
-            "title": "",
-            "subtitle": "",
-            "heading_size": "0.8",
-            "heading_color": "",
-            "heading_align": "center",
-            "desc_style": "subtitle",
-            "desc_color": "",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 36,
-            "padding_bottom": 12,
-            "padding_left_right": 0
-          }
-        }
-      },
-      "block_order": [
-        "lookfy_gallery_lookfy_gallery_KLwM3B"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": false,
-        "css_class": ""
-      }
-    },
     "176168856737720679": {
       "type": "apps",
       "blocks": {
@@ -655,6 +623,39 @@
         "divider": true,
         "new_layout": true,
         "css_class": "outdoor-section-3 reduce-text-padding"
+      }
+    },
+    "17618401420a551655": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_KLwM3B": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 34812,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 12,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_KLwM3B"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "css_class": ""
       }
     },
     "faq_dEKnrV": {
