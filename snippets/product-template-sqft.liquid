@@ -85,8 +85,11 @@
 
   {%- render 'product-template-variables', product: product, current_variant: current_variant -%}
 
-  {%- capture product_header -%}
-    {%- if settings.show_breadcrumbs and isModal != true -%}
+  <div class="page-content page-content--product">
+    <div class="page-width">
+
+      <div class="product-single__header--mobile medium-up--hide">
+        {%- if settings.show_breadcrumbs and isModal != true -%}
       {%- render 'breadcrumbs' -%}
     {%- endif -%}
         {% assign collectionDetails = product.metafields.custom.collection_url %}
@@ -145,13 +148,6 @@
           </a> 
       </div>
     {%- endif -%}
-  {%- endcapture -%}
-
-  <div class="page-content page-content--product">
-    <div class="page-width">
-
-      <div class="product-single__header--mobile medium-up--hide">
-        {{ product_header }}
       </div>
 
       <div class="product-grid__container grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %}">
@@ -177,7 +173,61 @@
 
           <div class="product-single__meta">
             <div class="product-block product-block--header product-single__header small--hide">
-              {{ product_header }}
+              {%- if settings.show_breadcrumbs and isModal != true -%}
+      {%- render 'breadcrumbs' -%}
+    {%- endif -%}
+        
+        {%- if collectionDetails -%}
+
+          {% comment %} --> PDP Collection Link {% endcomment %}
+          <span><a href="https://www.aquablumosaics.com{{product__collection_object}}" >{{ product__collection_title  }}</a></span>
+          {% comment %} <-- PDP Collection Link {% endcomment %}
+        {%- endif -%}
+
+    {%- if isModal -%}
+      <p class="h2 product-single__title">
+        {{ product.title }}
+      </p>
+    {%- else -%}
+      <h2 class="h2 product-single__title">
+        {%- unless product.empty? -%}
+          {{ product.title }}
+        {%- else -%}
+          {{ 'home_page.onboarding.product_title' | t }}
+        {%- endunless -%}
+      </h2>
+    {%- endif -%}
+
+    {%- if settings.vendor_enable or sku_enable -%}
+      <div class="product-single__vendor-sku">
+        {%- if settings.vendor_enable -%}
+          <span class="product-single__vendor">
+            {%- assign vendor_handle = product.vendor | handleize -%}
+            {%- if collections[vendor_handle] != empty -%}
+              <a href="{{ routes.collections_url }}/{{ collections[vendor_handle].handle }}">
+                {{ collections[vendor_handle].title }}
+              </a>
+            {%- else -%}
+              {{ product.vendor | link_to_vendor }}
+            {%- endif -%}
+          </span>
+        {%- endif -%}
+
+
+        {% comment %} {%- if product.collections[1] -%}
+          <span class="collection-name">{{ product.collections[1].title }}</span>
+        {%- endif -%} {% endcomment %}
+        {%- if sku_enable -%}
+          <span data-sku class="product-single__sku{% if current_variant.sku == blank %} hide{% endif %}">
+            SKU: <span data-sku-id>{{ current_variant.sku }}</span>
+          </span>
+        {%- endif -%}
+        <!-- Yotpo Stars based on Sku -->
+          <a class="yotpo-link" href="#product-reviews-widget">
+            <div class="yotpo-widget-instance" data-yotpo-instance-id="593213" data-yotpo-product-id="{{product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="{{template.name}}"></div>
+          </a> 
+      </div>
+    {%- endif -%}
             </div>
 
             <div data-product-blocks>

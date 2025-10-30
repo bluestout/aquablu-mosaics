@@ -332,7 +332,11 @@
                             {%- unless block.settings.title == blank -%}
                               {%- if collection.metafield.custom.sec_1_heading != 'none' -%}
                                 {% if forloop.first %}
-                                  <h1 class="hero__title">
+                                  {% if block.settings.title_h1 %}
+                                    <h1 class="hero__title">
+                                  {% else %}
+                                    <h2 class="hero__title">
+                                    {% endif %}
                                 {% else %}
                                   <h2 class="hero__title">
                                 {% endif %}
@@ -340,7 +344,11 @@
                                   {{ block.settings.title | newline_to_br }}
                                   </div>
                                 {% if forloop.first %}
-                                  </h1>
+                                  {% if block.settings.title_h1 %}
+                                    </h1>
+                                  {% else %}
+                                    </h2>
+                                  {% endif %}
                                 {% else %}
                                   </h2>
                                 {% endif %}
@@ -571,6 +579,12 @@
           "id": "additional_text_field",
           "label": "Additional text field left side",
           "default": "And optional subtext"
+        },
+        {
+          "type": "checkbox",
+          "id": "title_h1",
+          "label": "H1 Tag",
+          "default": true
         },
         {
           "type": "text",
