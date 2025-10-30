@@ -750,6 +750,104 @@
             "title": "Ledge Lounger",
             "text": ""
           }
+        },
+        "question_emDLCG": {
+          "type": "question",
+          "settings": {
+            "title": "Litokol/Tile Doctor",
+            "text": ""
+          }
+        },
+        "question_XnhxX3": {
+          "type": "question",
+          "settings": {
+            "title": "Natural Stone Resources (NSR)",
+            "text": ""
+          }
+        },
+        "question_8JXhLR": {
+          "type": "question",
+          "settings": {
+            "title": "Prism Hardscapes",
+            "text": ""
+          }
+        },
+        "question_UdPzTQ": {
+          "type": "question",
+          "settings": {
+            "title": "SR Smith",
+            "text": ""
+          }
+        },
+        "question_UJC7FC": {
+          "type": "question",
+          "settings": {
+            "title": "Shoreline Tiles",
+            "text": ""
+          }
+        },
+        "question_QFrdjf": {
+          "type": "question",
+          "settings": {
+            "title": "SICIS",
+            "text": ""
+          }
+        },
+        "question_nbR3mF": {
+          "type": "question",
+          "settings": {
+            "title": "Studio Redrock",
+            "text": ""
+          }
+        },
+        "question_78YqUJ": {
+          "type": "question",
+          "settings": {
+            "title": "Tenjam",
+            "text": ""
+          }
+        },
+        "question_tQUMY7": {
+          "type": "question",
+          "settings": {
+            "title": "The Outdoor Plus",
+            "text": ""
+          }
+        },
+        "question_7iKWjm": {
+          "type": "question",
+          "settings": {
+            "title": "TREND",
+            "text": ""
+          }
+        },
+        "question_tLAq4q": {
+          "type": "question",
+          "settings": {
+            "title": "Tupelo Goods",
+            "text": ""
+          }
+        },
+        "question_ydaNha": {
+          "type": "question",
+          "settings": {
+            "title": "US Porcelain Pavers",
+            "text": ""
+          }
+        },
+        "question_q4XcUV": {
+          "type": "question",
+          "settings": {
+            "title": "Vidrepur",
+            "text": ""
+          }
+        },
+        "question_A94Fcf": {
+          "type": "question",
+          "settings": {
+            "title": "Vondom",
+            "text": ""
+          }
         }
       },
       "block_order": [
@@ -765,9 +863,22 @@
         "question_JECFgy",
         "question_ADaqNM",
         "question_FfdCxj",
-        "question_UKDcVC"
+        "question_UKDcVC",
+        "question_emDLCG",
+        "question_XnhxX3",
+        "question_8JXhLR",
+        "question_UdPzTQ",
+        "question_UJC7FC",
+        "question_QFrdjf",
+        "question_nbR3mF",
+        "question_78YqUJ",
+        "question_tQUMY7",
+        "question_7iKWjm",
+        "question_tLAq4q",
+        "question_ydaNha",
+        "question_q4XcUV",
+        "question_A94Fcf"
       ],
-      "disabled": true,
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
         "title": "DOWNLOAD CATALOGS",
