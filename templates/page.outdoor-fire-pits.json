@@ -63,6 +63,7 @@
       "block_order": [
         "hero_MW7Fzm"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
