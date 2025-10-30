@@ -840,14 +840,14 @@
           "type": "question",
           "settings": {
             "title": "Vidrepur",
-            "text": ""
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/1205/7108/files/Vidrepur_2025_Pool_Catalog.pdf?v=1761846197\" target=\"_blank\" title=\"Vidrepur Catalog\">Download Catalog</a></p>"
           }
         },
         "question_A94Fcf": {
           "type": "question",
           "settings": {
             "title": "Vondom",
-            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/1205/7108/files/Vondom_2026_Catalog-compressed.pdf?v=1761227850\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/1205/7108/files/Vondom_2026_Catalog-compressed.pdf?v=1761227850\">Download Catalog</a></p>"
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/1205/7108/files/Vondom_2026_Catalog-compressed.pdf?v=1761227850\" target=\"_blank\" title=\"Vondom Catalog\">Download Catalog</a></p>"
           }
         }
       },
