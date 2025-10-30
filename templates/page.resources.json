@@ -62,6 +62,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
+            "title_h1": true,
             "top_subheading": "",
             "title": "<p>RESOURCES</p>",
             "title_size": 60,
@@ -181,6 +182,7 @@
         "template--14668593725512__38ca7bc2-ab74-4964-8724-6743d46bd680-text_block-3",
         "b481a9c8-166e-41be-99c5-11bbff3c043a"
       ],
+      "disabled": true,
       "settings": {
         "title": "BROCHURES / TECH SHEETS",
         "text": "",
@@ -275,6 +277,7 @@
         "471db496-1ed1-4d34-8db1-e493c36df848",
         "c04df3d9-0c0c-4f9c-8109-ee55cbdb976d"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -369,6 +372,7 @@
         "623c2513-529f-4f65-ae6d-4c5a5d4f3250",
         "23bbe920-e92f-4359-acbb-63245092c491"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -463,6 +467,7 @@
         "c7150cb3-c773-4e69-93cb-f04200ce888d",
         "932a0d05-dc54-47ec-979a-f1fd963323f1"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -557,6 +562,7 @@
         "a0d29602-2141-4f7a-8b37-03bedb6fb3d9",
         "8249e8ed-bba1-4250-838f-7da72aa5db8c"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -564,6 +570,38 @@
         "three_col_mobile": false,
         "divider": false,
         "color_scheme": "none",
+        "css_class": ""
+      }
+    },
+    "17618401420a551655": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_KLwM3B": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 34812,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_KLwM3B"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
         "css_class": ""
       }
     },
@@ -593,7 +631,6 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_pQ989m"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
@@ -645,6 +682,7 @@
     "6b8da7a4-318f-456e-abb6-7c025fde5f3d",
     "45c5c2ec-abc8-41d3-8f06-a2b0f23cc5f0",
     "754ff957-80ac-4040-9c26-1376aa59edee",
+    "17618401420a551655",
     "176168856737720679",
     "d1e903ba-e789-40db-8412-623d059dba50",
     "f9924b8e-a6f5-4947-8294-5ba93d7327ff"
