@@ -20,6 +20,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 40,
@@ -43,6 +44,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
+            "title_h1": true,
             "top_subheading": "UNMATCHED DURABILITY & STYLE",
             "title": "<p>VERSATILE HARDSCAPES</p>",
             "title_size": 50,
@@ -66,6 +68,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "ELEVATE YOUR POOL",
             "title": "<p>MODERN EDGE COPING</p>",
             "title_size": 40,
@@ -89,6 +92,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "STYLISH, MODERN LIVING",
             "title": "<p>CONCRETE-LOOK PORCELAIN PAVERS</p>",
             "title_size": 40,
@@ -113,6 +117,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "SLEEK & BEAUTIFUL",
             "title": "<p>TRAVERTINE-LOOK COPING</p>",
             "title_size": 40,
@@ -188,6 +193,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -494,6 +500,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -597,7 +604,6 @@
           "settings": {
             "link": "shopify://collections/outdoor-porcelain-pavers-and-coping",
             "text": "PORCELAIN PAVERS",
-            "image": "shopify://shop_images/Cape_Cod_Ivory_24_x_24_-_2CM_Outdoor_Porcelain_Paver.jpg",
             "width": "50",
             "height": 500
           }
@@ -607,7 +613,7 @@
           "settings": {
             "link": "shopify://collections/modern-pool-coping",
             "text": "MODERN POOL COPING",
-            "image": "shopify://shop_images/coping.jpg",
+            "image": "shopify://shop_images/Pavers_And_Coping_e03d5a75-34a0-4cf8-87de-473d687d78c5.jpg",
             "width": "50",
             "height": 500
           }
@@ -661,6 +667,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "<h1>SHOP ALL PAVERS</h1>",
             "title_size": 48,
