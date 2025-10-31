@@ -519,6 +519,7 @@
           "type": "collection",
           "settings": {
             "title": "POOL MOSAICS",
+            "image": "shopify://shop_images/Custom_Mosaics_830653e9-b87c-4840-82c7-c2f39a17c880.jpg",
             "url": "shopify://pages/swimming-pool-mosaics",
             "tooltip": false,
             "tooltip_text": ""
