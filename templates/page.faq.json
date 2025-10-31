@@ -19,6 +19,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
+            "title_h1": true,
             "top_subheading": "",
             "title": "<p>FAQs</p>",
             "title_size": 70,
@@ -30,7 +31,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/FAQ-hero.jpg",
+            "image": "shopify://shop_images/AquaPro_Trade_Network_Hero.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
