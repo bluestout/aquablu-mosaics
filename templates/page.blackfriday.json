@@ -24,6 +24,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 40,
@@ -163,6 +164,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -273,6 +275,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -456,7 +459,7 @@
           "type": "collection",
           "settings": {
             "title": "PATIO FURNITURE",
-            "image": "shopify://shop_images/MainstayBench_52_Gray_LedgeLoungerOutdoorFurniture_LL-MS-DB52-GRY.jpg",
+            "image": "shopify://shop_images/Vondom_8d41261d-58c9-4ae4-83ed-0f64d74d8dc8.jpg",
             "url": "shopify://collections/outdoor-patio-furniture",
             "tooltip": false,
             "tooltip_text": ""
@@ -496,7 +499,7 @@
           "type": "collection",
           "settings": {
             "title": "POOL TILE",
-            "image": "shopify://shop_images/OP_25.34_Matte_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza3.jpg",
+            "image": "shopify://shop_images/amb-tahiti-emerald-15x15-pietrasanta-ivory-90x90-2000x-web_2e1086a6-8ce6-4a20-8210-acc6efc0591e.jpg",
             "url": "https://www.aquablumosaics.com/pages/pool-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -516,7 +519,6 @@
           "type": "collection",
           "settings": {
             "title": "POOL MOSAICS",
-            "image": "shopify://shop_images/glassseaturtleinstallationphoto1.jpg",
             "url": "shopify://pages/swimming-pool-mosaics",
             "tooltip": false,
             "tooltip_text": ""
