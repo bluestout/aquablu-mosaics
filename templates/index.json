@@ -107,6 +107,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -387,6 +388,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -495,6 +497,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -578,7 +581,7 @@
           "type": "collection",
           "settings": {
             "title": "PAVERS & COPING",
-            "image": "shopify://shop_images/Living_Style_Cream_24_x_24_2CM_Porcelain_Pavers_by_MSI_5_a2676213-b82d-4461-b353-a05f73558623.jpg",
+            "image": "shopify://shop_images/living-style-cream-pavers-porcelain-e_jpg.jpg",
             "url": "shopify://collections/outdoor-pavers-and-coping",
             "tooltip": false,
             "tooltip_text": ""
@@ -733,6 +736,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 70,
@@ -777,7 +781,6 @@
           "settings": {
             "link": "shopify://pages/glass-mosaic-tile",
             "text": "GLASS",
-            "image": "shopify://shop_images/Black_Iridescent_1_x_1_AURA_BLACK_Vidrepur_Mosaic_Glass_Tile.jpg",
             "width": "33",
             "height": 440
           }
