@@ -19,6 +19,7 @@
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
+            "title_h1": true,
             "top_subheading": "",
             "title": "",
             "title_size": 100,
@@ -228,7 +229,7 @@
             "cta_link1": "shopify://pages/kitchen-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/MSICeramicTile_RENZOJADEPICKETT_NRENJADPICK2.5X13_Renzo.jpg",
+            "image": "shopify://shop_images/stella-oceano-2x10-kitchen-1018.jpg",
             "video_url": "",
             "width": "100",
             "height": 340,
@@ -302,6 +303,7 @@
             "html_embed": "<form>\n<input type=\"text\" id=\"name\" name=\"name\" value=\"What’s your name?\" size=\"95\"><br><br>\n<input type=\"email\" id=\"email\" name=\"email\" value=\"Email\" size=\"95\">\n<br><br>\n<input type=\"tel\" id=\"phone\" name=\"phone\" value=\"Phone Number\" size=\"95\">\n<h2>How can AquaBlu help you?</h2>\n <label><input type=\"checkbox\" value=\"pool tile or mosaic\"> Find my dream pool tile or mosaic</label>\n  <label><input type=\"checkbox\" value=\"tile for my kitchen and bath\"> Discover amazing tile for my kitchen and bath</label>\n<label><input type=\"checkbox\" value=\"Decorate or furnish my pool and patio\"> Decorate or furnish my pool and patio</label>\n<h2>Do you have a pool?</h2>\n<label><input type=\"radio\" id=\"yes\" name=\"poolm\" value=\"yes\"> Yes I do!</label><label><input type=\"radio\" id=\"no\" name=\"pool\" value=\"no\">  Unfortunately, no.</label>\n<label><input type=\"radio\" id=\"not yet\" name=\"pool\" value=\"not yet\">  Not yet, we’re building one soon.</label>\n<h2>Are you a pool builder or contractor?<br>Sign up for our AquaPRO Trade Network here &gt;&gt;</h2>\n</form>",
             "html_embed_two": "",
             "additional_text_field": "And optional subtext",
+            "title_h1": true,
             "top_subheading": "",
             "title": "<h2></h2><h1></h1><h2> </h2><h2> </h2><h2></h2><p></p><p></p>",
             "title_size": 40,
@@ -421,7 +423,6 @@
     "4d2f728c-fc5b-4d3a-9e15-c56ff56b2727": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/Black_Iridescent_1_x_1_AURA_BLACK_Vidrepur_Mosaic_Glass_Tile_3.jpg",
         "video_url": "",
         "image_width": 600,
         "subtitle": "",
