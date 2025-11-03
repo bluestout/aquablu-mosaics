@@ -643,34 +643,6 @@
         "disabled": false,
         "settings": {}
       },
-      "11567226959186545843": {
-        "type": "shopify://apps/savedby-package-protection/blocks/savedby-storefront-widget/6d4bce9c-696c-4f95-8a15-0cc2b2b9e839",
-        "disabled": false,
-        "settings": {
-          "hideSubtotal": true,
-          "parentMarginBottom": 4,
-          "infoIconUrl": "https://cdn.savedby.io/logos/savedby/SavedByLogo-small.png",
-          "infoBGColor": "#f5f5f5",
-          "infoTextColor": "#000000",
-          "checkoutButtonBGColor": "#000000",
-          "checkoutButtonTextColor": "#ffffff",
-          "checkoutButtonBorderRadius": 5,
-          "continueTextColor": "#000000",
-          "continueFontSize": 15,
-          "showLockIcon": false,
-          "showCartTotal": true,
-          "showCompareAtPrice": false,
-          "showInlineCartButton": false,
-          "swapButtonOrder": false,
-          "disclaimerLocation": "bottom",
-          "disclaimer": "",
-          "customCheckoutSelector": "",
-          "tosSelector": "",
-          "customCSS": ":host {\\n  --container-max-width: inherit;\\n  --info-bg-color: inherit;\\n  --info-border-radius: inherit;\\n  --info-text-color: inherit;\\n  --info-font-family: inherit;\\n  --info-font-size: inherit;\\n\\n  --info-title-text-color: inherit;\\n  --info-title-font-size: inherit;\\n  --info-desc-text-color: inherit;\\n  --info-desc-font-size: inherit;\\n  --info-fee-text-color: inherit;\\n  --info-fee-font-size: inherit;\\n  --info-help-color: inherit;\\n  --info-help-size: inherit;\\n  --btn-height: inherit;\\n  --btn-border-radius: inherit;\\n  --btn-checkout-bg-color: inherit;\\n  --btn-checkout-text-color: inherit;\\n  --btn-cart-bg-color: inherit;\\n  --btn-cart-text-color: inherit;\\n  --continue-text-color: inherit;\\n  --continue-font-size: inherit;\\n  --continue-font-family: inherit;\\n  --continue-text-decoration: inherit;\\n  --disclaimer-text-color: inherit;\\n  --disclaimer-font-size: inherit;\\n  --disclaimer-font-family: inherit;\\n  --disclaimer-text-decoration: inherit;\\n  --disclaimer-font-style: inherit;\\n}",
-          "customJS": "SavedBy.checkoutText = (text) => {\n   return text.replace(\"CHECKOUT\", \"Check out\");\n}",
-          "popupOverride": ""
-        }
-      },
       "7520711097648287086": {
         "type": "shopify://apps/lookfy-gallery/blocks/app-embed/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
         "disabled": false,
@@ -690,6 +662,37 @@
         "type": "shopify://apps/thoughtmetric/blocks/tm/5a9f9e10-3a9f-41b1-8250-d2eab3bd19a4",
         "disabled": false,
         "settings": {}
+      },
+      "11567226959186545843": {
+        "type": "shopify://apps/savedby-package-protection/blocks/savedby-storefront-widget/6d4bce9c-696c-4f95-8a15-0cc2b2b9e839",
+        "disabled": false,
+        "settings": {
+          "useDefaultFontFamily": false,
+          "fontFamily": "montserrat_n2",
+          "hideSubtotal": true,
+          "parentMarginBottom": 4,
+          "infoIconUrl": "https://cdn.savedby.io/logos/savedby/SavedByLogo-small.png",
+          "infoBGColor": "#f5f5f5",
+          "infoTextColor": "#000000",
+          "infoVariant": "SIMPLE",
+          "checkoutButtonBGColor": "#000000",
+          "checkoutButtonTextColor": "#ffffff",
+          "checkoutButtonBorderRadius": 5,
+          "continueTextColor": "#000000",
+          "continueFontSize": 15,
+          "showLockIcon": false,
+          "showCartTotal": true,
+          "showCompareAtPrice": false,
+          "showInlineCartButton": false,
+          "swapButtonOrder": false,
+          "disclaimerLocation": "bottom",
+          "disclaimer": "",
+          "customCheckoutSelector": "",
+          "tosSelector": "",
+          "customCSS": "",
+          "customJS": "SavedBy.checkoutText = (text) => {\n   return text.replace(\"CHECKOUT\", \"Check out\");\n}",
+          "popupOverride": ""
+        }
       }
     }
   },
