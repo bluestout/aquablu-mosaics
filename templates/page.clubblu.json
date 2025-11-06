@@ -32,6 +32,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/Join_ClubBlu_Final.jpg",
+            "image_mobile": "shopify://shop_images/Join_ClubBlu_Final_4.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
