@@ -749,7 +749,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/Conservation_Banner.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
+            "image_mobile": "shopify://shop_images/Conservation_Banner_Final_1.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
