@@ -866,7 +866,7 @@
       ],
       "settings": {
         "full_width": false,
-        "space_around": false,
+        "space_around": true,
         "css_class": "home-section-13"
       }
     },
