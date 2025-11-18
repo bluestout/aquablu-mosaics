@@ -824,38 +824,6 @@
         "css_class": "home-section-10"
       }
     },
-    "1749827550c7786343": {
-      "type": "apps",
-      "blocks": {
-        "lookfy_gallery_lookfy_gallery_WaFyCw": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-          "settings": {
-            "gallery_id": 35733,
-            "dynamic_source": "",
-            "title": "",
-            "subtitle": "",
-            "heading_size": "0.8",
-            "heading_color": "",
-            "heading_align": "center",
-            "desc_style": "subtitle",
-            "desc_color": "",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_left_right": 0
-          }
-        }
-      },
-      "block_order": [
-        "lookfy_gallery_lookfy_gallery_WaFyCw"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": ""
-      }
-    },
     "3aa34ff7-417a-4828-b95a-946c5f5f32b0": {
       "type": "featured-collection-custom",
       "disabled": true,
@@ -972,6 +940,38 @@
       "settings": {
         "full_width": false,
         "space_around": false,
+        "css_class": ""
+      }
+    },
+    "1749827550c7786343": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_WaFyCw": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 35733,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_WaFyCw"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
         "css_class": ""
       }
     },
@@ -1195,11 +1195,11 @@
     "642626b5-0326-4165-bdf3-ac1ef0d767a4",
     "310c0c1b-4bb2-48e2-a6fa-5825fdfcfe18",
     "08886a75-76d2-4348-951a-12f407cb264e",
-    "1749827550c7786343",
     "3aa34ff7-417a-4828-b95a-946c5f5f32b0",
     "2554e28d-0d6c-49bf-91bd-0f901e71c7d2",
     "473d1d3e-a445-4cc3-9427-53b85f66ff55",
     "1753805430420396ae",
+    "1749827550c7786343",
     "eb33306f-1f7f-4e7e-bba8-545a56c8253e",
     "9cd711e4-3cff-4481-a68f-3e801382c63b",
     "1666361938d7d593e5",
