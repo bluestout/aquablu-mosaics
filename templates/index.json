@@ -858,6 +858,7 @@
     },
     "3aa34ff7-417a-4828-b95a-946c5f5f32b0": {
       "type": "featured-collection-custom",
+      "disabled": true,
       "settings": {
         "title": "EXPLORE THE POSSIBILITIES",
         "tab_collection_1": "in-pool-furniture",
