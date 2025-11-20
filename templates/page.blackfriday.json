@@ -430,54 +430,6 @@
         "css_class": ""
       }
     },
-    "36417a07-ba56-41d3-b0f1-520b05b91e32": {
-      "type": "newsletter",
-      "blocks": {
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1": {
-          "type": "title",
-          "settings": {
-            "title": "SIGN UP & BE IN THE KNOW!"
-          }
-        },
-        "text_B7LnVR": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Be the first to know about exclusive sales, new arrivals, and design inspiration - straight to your inbox. ✨</p>"
-          }
-        },
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1": {
-          "type": "form",
-          "settings": {}
-        },
-        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "disabled": true,
-          "settings": {
-            "form_id": "",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1",
-        "text_B7LnVR",
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1",
-        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c"
-      ],
-      "settings": {
-        "color_scheme": "3"
-      }
-    },
     "d3e9d536-82ea-46ba-a582-472858d2be95": {
       "type": "rich-text",
       "blocks": {
@@ -599,6 +551,54 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
+    "36417a07-ba56-41d3-b0f1-520b05b91e32": {
+      "type": "newsletter",
+      "blocks": {
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "SIGN UP & BE IN THE KNOW!"
+          }
+        },
+        "text_B7LnVR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be the first to know about exclusive sales, new arrivals, and design inspiration - straight to your inbox. ✨</p>"
+          }
+        },
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1": {
+          "type": "form",
+          "settings": {}
+        },
+        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": true,
+          "settings": {
+            "form_id": "",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1",
+        "text_B7LnVR",
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1",
+        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c"
+      ],
+      "settings": {
+        "color_scheme": "3"
+      }
+    },
     "24904f21-1940-44c1-9288-37fd9d494779": {
       "type": "rich-text",
       "blocks": {
@@ -653,9 +653,9 @@
     "promo_grid_hXaweJ",
     "0d909433-0909-429c-86cc-588ca215f068",
     "slideshow_hEMApG",
-    "36417a07-ba56-41d3-b0f1-520b05b91e32",
     "d3e9d536-82ea-46ba-a582-472858d2be95",
     "69357716-720e-447f-b363-ad48fe666e6e",
+    "36417a07-ba56-41d3-b0f1-520b05b91e32",
     "24904f21-1940-44c1-9288-37fd9d494779",
     "text_and_image_bxVeFj"
   ]
