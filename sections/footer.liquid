@@ -234,9 +234,9 @@
         </div> {% endcomment %}
         {%- if section.settings.show_copyright -%}
           <div class="bottom-left">
-            {% comment %} &copy; {{ 'now' | date: '%Y' }} {{ shop.name }} {% endcomment %}
+            &copy; {{ 'now' | date: '%Y' }}
             {%- if section.settings.copyright_text != blank -%}
-            © {{ section.settings.copyright_text }}
+              {{ section.settings.copyright_text }}
             {%- endif -%}
             {% comment %} • <a href="/pages/terms-conditions" class="menu-item-footer">Terms & Privacy</a> {% endcomment %}
             <a href="#" class="menu-item-footer accessibility-button">
