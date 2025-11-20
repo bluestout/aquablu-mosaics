@@ -383,6 +383,53 @@
         "css_class": "bath-section-8"
       }
     },
+    "slideshow_hEMApG": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_Ni7exa": {
+          "type": "hero",
+          "settings": {
+            "image_width": 60,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Weekly_Wave_Sale_Banner.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_Ni7exa"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "36417a07-ba56-41d3-b0f1-520b05b91e32": {
       "type": "newsletter",
       "blocks": {
@@ -605,6 +652,7 @@
     "slideshow_gHVraw",
     "promo_grid_hXaweJ",
     "0d909433-0909-429c-86cc-588ca215f068",
+    "slideshow_hEMApG",
     "36417a07-ba56-41d3-b0f1-520b05b91e32",
     "d3e9d536-82ea-46ba-a582-472858d2be95",
     "69357716-720e-447f-b363-ad48fe666e6e",
