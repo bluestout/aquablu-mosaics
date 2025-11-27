@@ -202,7 +202,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "dots",
+        "style": "minimal",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
