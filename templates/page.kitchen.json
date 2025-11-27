@@ -230,7 +230,7 @@
         "space_above": false,
         "space_below": true,
         "mobile_size": 0,
-        "style": "arrows",
+        "style": "minimal",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": "kitchen-section-1"
