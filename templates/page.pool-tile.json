@@ -203,14 +203,14 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/current-sales-promos",
+            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_4.jpg",
+            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -230,7 +230,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "arrows",
+        "style": "minimal",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
