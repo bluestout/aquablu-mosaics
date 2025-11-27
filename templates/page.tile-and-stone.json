@@ -68,7 +68,7 @@
         "desktop_size": 0,
         "gutter_size": 40,
         "space_above": false,
-        "space_below": true,
+        "space_below": false,
         "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
