@@ -180,7 +180,7 @@
             "title_size": 46,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/tile-and-stone",
+            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
@@ -191,10 +191,35 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_QemqV9": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "template--14565132828744__ee6a77e5-a918-4f22-81e3-69864c2ea251-168381328892e35a88-0"
+        "template--14565132828744__ee6a77e5-a918-4f22-81e3-69864c2ea251-168381328892e35a88-0",
+        "hero_QemqV9"
       ],
       "settings": {
         "full_width": false,
