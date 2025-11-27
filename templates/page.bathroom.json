@@ -230,7 +230,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": -5,
-        "style": "arrows",
+        "style": "minimal",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": "bath-section-1"
