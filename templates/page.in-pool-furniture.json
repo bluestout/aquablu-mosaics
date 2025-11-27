@@ -49,13 +49,13 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://collections/tenjam",
+            "link": "https://www.aquablumosaics.com/pages/black-friday",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Tenjam_Flash_Banner_1.jpg",
+            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
             "image_mobile": "shopify://shop_images/Tenjam_Flash_Banner_1.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
@@ -65,7 +65,6 @@
       "block_order": [
         "hero_tQBpWw"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
@@ -75,7 +74,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "dots",
+        "style": "minimal",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
