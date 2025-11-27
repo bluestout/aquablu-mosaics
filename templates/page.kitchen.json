@@ -190,10 +190,36 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
+        },
+        "hero_4RH8mT": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "<p>Overlaid Hero Slide</p>",
+            "title_size": 70,
+            "subheading": "And optional subtext",
+            "custom_text": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
-        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0"
+        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0",
+        "hero_4RH8mT"
       ],
       "settings": {
         "full_width": false,
