@@ -23,6 +23,7 @@
       "blocks": {
         "slide_KTCdTA": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_5.png",
             "heading": "Everything You Need To",
@@ -38,6 +39,7 @@
         },
         "slide_dDz9fW": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/AquaPro_Landing_Page.jpg",
             "heading": "From Homes to Businesses",
@@ -53,6 +55,7 @@
         },
         "slide_R3tWbP": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Woosah-Sale.jpg",
             "heading": "lounge in style",
@@ -68,6 +71,7 @@
         },
         "slide_jDt9WQ": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Outdoor_living_Tupelo_compressed.jpg",
             "heading": "Introducing",
@@ -83,14 +87,13 @@
         },
         "slide_6AxnEF": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Home_page_hero_1.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "",
+            "link": "https://www.aquablumosaics.com/pages/black-friday",
             "box_align": "middle-center",
             "text_alignment": "center",
             "image_overlay_opacity": 0,
