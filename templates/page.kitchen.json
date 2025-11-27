@@ -163,6 +163,53 @@
         "css_class": "all-glass-tile-section-8"
       }
     },
+    "6beb8612-632d-4031-8db9-c867670f61f9": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
+            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": true,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": "kitchen-section-1"
+      }
+    },
     "text_and_image_W7gcGM": {
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
@@ -182,54 +229,6 @@
         "divider": false,
         "new_layout": true,
         "css_class": ""
-      }
-    },
-    "6beb8612-632d-4031-8db9-c867670f61f9": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "And optional subtext",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/tile-and-stone",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_6.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_6.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 0,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "kitchen-section-1"
       }
     },
     "logo_list_custom_2_jjhjBt": {
@@ -1425,8 +1424,8 @@
   "order": [
     "main",
     "b8729415-180c-4e72-a200-75a107466995",
-    "text_and_image_W7gcGM",
     "6beb8612-632d-4031-8db9-c867670f61f9",
+    "text_and_image_W7gcGM",
     "logo_list_custom_2_jjhjBt",
     "119c1923-0e00-44f3-8409-18542297d27d",
     "text_columns_custom_ecmmnH",
