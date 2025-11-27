@@ -163,10 +163,10 @@
         "css_class": "home-section-1"
       }
     },
-    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0": {
+    "slideshow_a6n7Kz": {
       "type": "slideshow",
       "blocks": {
-        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1": {
+        "hero_xNwzre": {
           "type": "hero",
           "settings": {
             "image_width": 650,
@@ -176,38 +176,63 @@
             "title_h1": true,
             "top_subheading": "",
             "title": "",
-            "title_size": 48,
+            "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#fff",
+            "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
             "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 12,
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
+        "hero_zEg4jC": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "<p>Make an Impact</p>",
+            "title_size": 70,
+            "subheading": "Supports multiple text alignments and mobile-specific images.",
+            "custom_text": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-center horizontal-center",
+            "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1"
+        "hero_xNwzre",
+        "hero_zEg4jC"
       ],
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "full_width_mobile": false,
         "contact_popup": false,
         "desktop_size": 0,
-        "gutter_size": 40,
-        "space_above": false,
+        "gutter_size": 20,
+        "space_above": true,
         "space_below": false,
-        "mobile_size": 30,
-        "style": "arrows",
+        "mobile_size": 0,
+        "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
-        "css_class": "bath-section-1"
+        "css_class": ""
       }
     },
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31": {
@@ -905,7 +930,7 @@
   "order": [
     "main",
     "slideshow_jVbpHL",
-    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
+    "slideshow_a6n7Kz",
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31",
     "134ebd64-785a-4b27-876c-bf3928cf40da",
     "text_columns_custom_WxgULQ",
