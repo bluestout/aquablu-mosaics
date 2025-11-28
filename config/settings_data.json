@@ -383,7 +383,7 @@
           "announcement_nAdpwz": {
             "type": "announcement",
             "settings": {
-              "richtext": "<p>Shop Our Biggest Savings of the Year - Black Friday is here! </p><p><a href=\"https://www.aquablumosaics.com/pages/black-friday\" target=\"_blank\" title=\"https://www.aquablumosaics.com/pages/black-friday\"> Learn More!</a> </p>",
+              "richtext": "<p>Shop Our Biggest Savings of the Year - Black Friday is here! </p><p><a href=\"https://www.aquablumosaics.com/pages/black-friday\" target=\"_blank\" title=\"https://www.aquablumosaics.com/pages/black-friday\"> Learn More</a></p>",
               "richtext_mobile": ""
             }
           },
