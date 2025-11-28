@@ -185,7 +185,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "arrows",
+        "style": "minimal",
         "autoplay": false,
         "autoplay_speed": 7,
         "css_class": ""
