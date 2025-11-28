@@ -23,14 +23,13 @@
       "blocks": {
         "slide_KTCdTA": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_5.png",
             "heading": "Everything You Need To",
             "heading_size": "h1",
             "subheading": "BRING PARADISE HOME",
-            "button_label": "Shop Tile & Stone",
-            "link": "shopify://pages/tile-and-stone",
+            "button_label": "Shop Black Friday Deals",
+            "link": "https://www.aquablumosaics.com/pages/black-friday",
             "box_align": "middle-center",
             "text_alignment": "center",
             "image_overlay_opacity": 10,
@@ -88,14 +87,14 @@
         "slide_6AxnEF": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Home_page_hero_2.png",
+            "image": "shopify://shop_images/Homepage_5.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "Learn More",
             "link": "https://www.aquablumosaics.com/pages/black-friday",
-            "box_align": "top-right",
-            "text_alignment": "right",
+            "box_align": "middle-center",
+            "text_alignment": "center",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
