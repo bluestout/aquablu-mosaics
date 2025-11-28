@@ -380,6 +380,13 @@
       "toolbar": {
         "type": "toolbar",
         "blocks": {
+          "announcement_nAdpwz": {
+            "type": "announcement",
+            "settings": {
+              "richtext": "<p>Shop Our Biggest Savings of the Year - Black Friday is here! </p><p><a href=\"https://www.aquablumosaics.com/pages/black-friday\" target=\"_blank\" title=\"https://www.aquablumosaics.com/pages/black-friday\"> Learn More!</a> </p>",
+              "richtext_mobile": ""
+            }
+          },
           "0b066516-effd-470b-ba3b-fc9f69d6c6ae": {
             "type": "announcement",
             "settings": {
@@ -393,19 +400,12 @@
               "richtext": "<p>Trade Pro? <a href=\"/pages/wholesale\" title=\"Affiliate Registration\">Join the network &gt;&gt;</a></p><p>Ask an Expert! |<a href=\"tel:800) 971-1442\" title=\"tel:800) 971-1442\"> (800) 971-1442</a></p>",
               "richtext_mobile": ""
             }
-          },
-          "announcement_nAdpwz": {
-            "type": "announcement",
-            "settings": {
-              "richtext": "<p>Shop Our Biggest Savings of the Year - Black Friday is here! </p><p><a href=\"https://www.aquablumosaics.com/pages/black-friday\" target=\"_blank\" title=\"https://www.aquablumosaics.com/pages/black-friday\"> Learn More!</a> </p>",
-              "richtext_mobile": ""
-            }
           }
         },
         "block_order": [
+          "announcement_nAdpwz",
           "0b066516-effd-470b-ba3b-fc9f69d6c6ae",
-          "042de2fe-f26a-4e7f-a161-ad5212c6531b",
-          "announcement_nAdpwz"
+          "042de2fe-f26a-4e7f-a161-ad5212c6531b"
         ],
         "settings": {
           "announcement_center": false,
