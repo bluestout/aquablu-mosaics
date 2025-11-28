@@ -92,10 +92,10 @@
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
-            "button_label": "",
+            "button_label": "Learn More",
             "link": "https://www.aquablumosaics.com/pages/black-friday",
-            "box_align": "middle-center",
-            "text_alignment": "center",
+            "box_align": "top-right",
+            "text_alignment": "right",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
