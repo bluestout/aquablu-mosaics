@@ -165,6 +165,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
