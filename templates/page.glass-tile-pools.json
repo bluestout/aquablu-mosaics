@@ -60,6 +60,78 @@
         "css_class": ""
       }
     },
+    "slideshow_wpaDqG": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_LTN7ab": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
+            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
+        "hero_FJYYCA": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "And optional subtext",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "<p>Make an Impact</p>",
+            "title_size": 70,
+            "subheading": "Supports multiple text alignments and mobile-specific images.",
+            "custom_text": "",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fff",
+            "text_align": "vertical-center horizontal-center",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_LTN7ab",
+        "hero_FJYYCA"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
+      "settings": {
+        "full_width": true,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
+        "style": "minimal",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
     "text_and_image_qbfYMF": {
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
@@ -965,6 +1037,7 @@
   "order": [
     "main",
     "a751ffce-4fd5-47b9-a26e-dd78d1f6a478",
+    "slideshow_wpaDqG",
     "text_and_image_qbfYMF",
     "rich_text_D8pgbz",
     "text_columns_custom_aCaRDk",
