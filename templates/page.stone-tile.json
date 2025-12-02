@@ -78,7 +78,7 @@
         "desktop_size": 0,
         "gutter_size": 40,
         "space_above": false,
-        "space_below": false,
+        "space_below": true,
         "mobile_size": 20,
         "style": "dots",
         "autoplay": true,
@@ -144,6 +144,7 @@
         "hero_M38K3M",
         "hero_Gkqk7D"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
