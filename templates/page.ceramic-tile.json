@@ -192,6 +192,7 @@
         "hero_mPxPFY",
         "hero_tmtnbN"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
