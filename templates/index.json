@@ -38,7 +38,6 @@
         },
         "slide_dDz9fW": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/AquaPro_Landing_Page.jpg",
             "heading": "From Homes to Businesses",
@@ -54,7 +53,6 @@
         },
         "slide_R3tWbP": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Woosah-Sale.jpg",
             "heading": "lounge in style",
@@ -70,7 +68,6 @@
         },
         "slide_jDt9WQ": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Outdoor_living_Tupelo_compressed.jpg",
             "heading": "Introducing",
