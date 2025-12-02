@@ -421,53 +421,6 @@
         "css_class": ""
       }
     },
-    "slideshow_mWYVFP": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_YXEbfg": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 50,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_YXEbfg"
-      ],
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "slideshow_split_deb7dY": {
       "type": "slideshow-split",
       "blocks": {
@@ -516,6 +469,53 @@
         "full_width": true,
         "height": 500,
         "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "slideshow_mWYVFP": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_YXEbfg": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "",
+            "title_size": 50,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_YXEbfg"
+      ],
+      "settings": {
+        "full_width": false,
+        "full_width_mobile": false,
+        "contact_popup": false,
+        "desktop_size": 0,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
@@ -602,8 +602,8 @@
     "slideshow_split_3AUTRr",
     "slideshow_R84TV7",
     "slideshow_split_yT6kCR",
-    "slideshow_mWYVFP",
     "slideshow_split_deb7dY",
+    "slideshow_mWYVFP",
     "04e68109-2078-419d-82cc-f5e0b128ccea",
     "99e0f1b0-4941-4132-9a64-a1becadfeb62",
     "250ca572-c602-47ec-89af-1e37d80bc33f"
