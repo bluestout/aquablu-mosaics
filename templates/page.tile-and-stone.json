@@ -68,7 +68,7 @@
         "desktop_size": 0,
         "gutter_size": 40,
         "space_above": false,
-        "space_below": false,
+        "space_below": true,
         "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
@@ -134,6 +134,7 @@
         "hero_Y6cXUV",
         "hero_QNFDWT"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
