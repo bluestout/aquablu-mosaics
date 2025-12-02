@@ -175,6 +175,7 @@
         "hero_AaGnNX",
         "hero_dFc3F3"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
