@@ -90,6 +90,7 @@
         "hero_MW7Fzm",
         "hero_Ji7CWL"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
