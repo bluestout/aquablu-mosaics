@@ -183,7 +183,7 @@
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#fff",
+            "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
             "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
@@ -208,7 +208,7 @@
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#fff",
+            "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
             "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
@@ -221,6 +221,7 @@
         "hero_xNwzre",
         "hero_6fdAhd"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
