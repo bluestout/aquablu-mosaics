@@ -2,19 +2,46 @@
 
 {%- liquid
   assign productObject1 = all_products["cornhole-luxury-outdoor-game"]
+  unless productObject1
+    assign productObject1 = collections.outdoor-games.products.first
+  endunless
   assign collectionCustom1 = productObject1.metafields.custom.collection.value.url
+  
   assign productObject2 = all_products["bianco-assoluto-evo100-tile-grout"]
-  assign collectionCustom2 = productObject1.metafields.custom.collection.value.url
+  unless productObject2
+    assign productObject2 = collections.tile-grout.products.first
+  endunless
+  assign collectionCustom2 = productObject2.metafields.custom.collection.value.url
+  
   assign productObject3 = all_products["green-epoxy-hard-rubber-float-tile-installation-product"]
-  assign collectionCustom3 = productObject1.metafields.custom.collection.value.url
+  unless productObject3
+    assign productObject3 = collections.installation-products.products.first
+  endunless
+  assign collectionCustom3 = productObject3.metafields.custom.collection.value.url
+  
   assign productObject4 = all_products["ibiza-sun-lounger-modern-pool-lounge-chair"]
-  assign collectionCustom4 = productObject1.metafields.custom.collection.value.url
+  unless productObject4
+    assign productObject4 = collections.in-pool-furniture.products.first
+  endunless
+  assign collectionCustom4 = productObject4.metafields.custom.collection.value.url
+  
   assign productObject5 = all_products["verano-9-umbrella-pool-and-patio-umbrella"]
-  assign collectionCustom5 = productObject1.metafields.custom.collection.value.url
+  unless productObject5
+    assign productObject5 = collections.outdoor-umbrellas-for-pool-and-patio.products.first
+  endunless
+  assign collectionCustom5 = productObject5.metafields.custom.collection.value.url
+  
   assign productObject6 = all_products["ledge-lounger-laze-pillow-pool-accessory"]
-  assign collectionCustom6 = productObject1.metafields.custom.collection.value.url
+  unless productObject6
+    assign productObject6 = collections.pool-accessories.products.first
+  endunless
+  assign collectionCustom6 = productObject6.metafields.custom.collection.value.url
+  
   assign productObject7 = all_products["kai-shelf-lounger-luxury-pool-lounge-chair"]
-  assign collectionCustom7 = productObject1.metafields.custom.collection.value.url
+  unless productObject7
+    assign productObject7 = collections.in-pool-furniture.products.first
+  endunless
+  assign collectionCustom7 = productObject7.metafields.custom.collection.value.url
 -%}
 
 {% for item in cart.items %}
@@ -26,7 +53,7 @@
 
 {% if product__object == false %}
   {% case productType %}
-    {% when 'Pool Mosaic'  %}
+    {% when 'Pool Mosaic' %}
       {% assign product__object = all_products["kai-shelf-lounger-luxury-pool-lounge-chair"] %}
     {% when 'Games'   %}
       {% assign product__object = all_products["aquabar-floating-pool-bar"] %}
@@ -213,16 +240,16 @@
 
   let choices = {
     product1: {
-      product__url: '{{ productObject1.url }}',
-      product__img: '{{ productObject1.featured_image | img_url }}',
-      product__name: '{{ productObject1.title }}',
-      product__id: '{{ productObject1.id }}',
-      product__variant__id: '{{ productObject1.selected_or_first_available_variant.id }}',
-      product__price: '{{ productObject1.price | money  }}',
+      product__url: '{{ productObject1.url | default: "#" }}',
+      product__img: '{{ productObject1.featured_image | img_url | default: "" }}',
+      product__name: '{{ productObject1.title | default: "Product Not Available" }}',
+      product__id: '{{ productObject1.id | default: "" }}',
+      product__variant__id: '{{ productObject1.selected_or_first_available_variant.id | default: "" }}',
+      product__price: '{{ productObject1.price | money | default: "N/A" }}',
       featured__collection: '/collections/outdoor-games',
       product__collection_title: 'View Outdoor Games',
-      product_totalInventory: "{{productObject1.first_available_variant.inventory_quantity}}",
-      product_available: "{{productObject2.first_available_variant.available}}"
+      product_totalInventory: "{{productObject1.first_available_variant.inventory_quantity | default: 0}}",
+      product_available: "{{productObject1.first_available_variant.available | default: false}}"
     },
     product2: {
       product__url: '{{ productObject2.url }}',
@@ -247,7 +274,7 @@
       featured__collection: '/pages/installation',
       product__collection_title: 'View All Installation Products',
       product_totalInventory: "{{productObject3.first_available_variant.inventory_quantity}}",
-      product_available: "{{productObject2.first_available_variant.available}}"
+      product_available: "{{productObject3.first_available_variant.available}}"
     },
     product4: {
       product__url: '{{ productObject4.url }}',
@@ -259,7 +286,7 @@
       featured__collection: '/pages/outdoor-living-products',
       product__collection_title: 'View Outdoor Living Products',
       product_totalInventory: "{{productObject4.first_available_variant.inventory_quantity}}",
-      product_available: "{{productObject2.first_available_variant.available}}"
+      product_available: "{{productObject4.first_available_variant.available}}"
     },
     product5: {
       product__url: '{{ productObject5.url }}',
@@ -271,7 +298,7 @@
       featured__collection: '/pages/outdoor-living-products',
       product__collection_title: 'View Outdoor Living Products',
       product_totalInventory: "{{productObject5.first_available_variant.inventory_quantity}}",
-      product_available: "{{productObject2.first_available_variant.available}}"
+      product_available: "{{productObject5.first_available_variant.available}}"
     },
     product6: {
       product__url: '{{ productObject6.url }}',
@@ -283,7 +310,7 @@
       featured__collection: '/pages/outdoor-living-products',
       product__collection_title: 'View Outdoor Living Products',
       product_totalInventory: "{{productObject6.first_available_variant.inventory_quantity}}",
-      product_available: "{{productObject2.first_available_variant.available}}"
+      product_available: "{{productObject6.first_available_variant.available}}"
     },
     product7: {
       product__url: '{{ productObject7.url }}',
@@ -295,7 +322,7 @@
       featured__collection: '/pages/outdoor-living-products',
       product__collection_title: 'View Outdoor Living Products',
       product_totalInventory: "{{productObject7.first_available_variant.inventory_quantity}}",
-      product_available: "{{productObject2.first_available_variant.available}}"
+      product_available: "{{productObject7.first_available_variant.available}}"
     }
   }
 
@@ -311,6 +338,11 @@
       groutToggle = "";
     }
 
+    // Only show upsell if we have a valid product
+    if (!activeUpsell.product__name || activeUpsell.product__name === "Product Not Available" || !activeUpsell.product__url || activeUpsell.product__url === "#") {
+      document.querySelector('.cart-upsell-area-default').innerHTML = '';
+      return;
+    }
 
     document.querySelector('.cart-upsell-area-default').innerHTML = `<div class="ajaxcart__upsells cart-upsell-area cart-upsell-area-custom">
       <h3>Discover More </h3>
@@ -361,7 +393,19 @@
     let productTypeCheck = false;
 
     var elFirstCartItem = document.querySelectorAll('.cart__items .cart__item')[0];
-    var productType = String(elFirstCartItem.querySelector('.cart-drawer-product-type').textContent.trim());
+    if (!elFirstCartItem) {
+      console.log('No cart items found');
+      return;
+    }
+    
+    var productTypeElement = elFirstCartItem.querySelector('.cart-drawer-product-type');
+    if (!productTypeElement) {
+      console.log('No product type element found');
+      return;
+    }
+    
+    var productType = String(productTypeElement.textContent.trim());
+    console.log('Product type detected:', productType);
 
     switch (productType) {
       case 'Artificial Grass':
@@ -394,8 +438,10 @@
         break;
       default:
         activeUpsell = choices.product7;
+        console.log('Using default product (product7)');
 
     }
+    console.log('Selected upsell product:', activeUpsell);
     printUpsellArea(productTypeCheck);
   }
 
