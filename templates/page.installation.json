@@ -179,54 +179,6 @@
         "css_class": ""
       }
     },
-    "slideshow_CGc9Uf": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_yhHwTT": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/tile-doctor-adhesives-tile-grout-waterproofing",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
-            "image_mobile": "shopify://shop_images/Labor_Day_Static_Final_5.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_yhHwTT"
-      ],
-      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "e867cf6b-359c-4cb8-849a-adfd3525e57b": {
       "type": "promo-grid",
       "blocks": {
@@ -912,7 +864,6 @@
     "4ff181e0-4ba1-491c-8145-dff4a3c7fa3d",
     "slideshow_wtXqwL",
     "text_and_image_tiihYD",
-    "slideshow_CGc9Uf",
     "e867cf6b-359c-4cb8-849a-adfd3525e57b",
     "175383947130d23098",
     "text_columns_custom_dnDC6E",
