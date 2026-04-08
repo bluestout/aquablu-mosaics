@@ -671,7 +671,7 @@
           "type": "question",
           "settings": {
             "title": "Aquatica/IWT",
-            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/1205/7108/files/Aquatica_Master_Catalog.pdf?v=1761854979\" target=\"_blank\" title=\"Aquatica Catalog\">Download Catalog</a></p>"
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/1205/7108/files/2026-2027_Aquatica_Catalog_Updated_c0798d6a-81c5-49ed-9b21-3f2ed419eb1c.pdf?v=1767898730\" target=\"_blank\" title=\"IWT Aquatica Catalog\">Download Catalog</a></p>"
           }
         },
         "question_bD3PQA": {
@@ -861,39 +861,6 @@
         "css_class": ""
       }
     },
-    "176521272134f57b1e": {
-      "type": "apps",
-      "blocks": {
-        "lookfy_gallery_lookfy_gallery_Ub8BbG": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
-          "settings": {
-            "gallery_id": 36954,
-            "dynamic_source": "",
-            "title": "",
-            "subtitle": "",
-            "heading_size": "1",
-            "heading_color": "",
-            "heading_align": "left",
-            "desc_style": "subtitle",
-            "desc_color": "",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 36,
-            "padding_bottom": 36,
-            "padding_left_right": 0
-          }
-        }
-      },
-      "block_order": [
-        "lookfy_gallery_lookfy_gallery_Ub8BbG"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": ""
-      }
-    },
     "f9924b8e-a6f5-4947-8294-5ba93d7327ff": {
       "type": "blog-posts",
       "disabled": true,
@@ -924,7 +891,6 @@
     "d1e903ba-e789-40db-8412-623d059dba50",
     "17618401420a551655",
     "faq_dEKnrV",
-    "176521272134f57b1e",
     "f9924b8e-a6f5-4947-8294-5ba93d7327ff"
   ]
 }

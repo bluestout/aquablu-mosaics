@@ -19,7 +19,6 @@
       "blocks": {
         "hero_RHW9Hr": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -31,20 +30,21 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/current-sales-promos",
-            "link_text": "Learn More",
+            "link": "https://www.aquablumosaics.com/collections/shop-all-pool-tile",
+            "link_text": "10% OFF POOL TILE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
-            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_27.jpg",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
             "overlay_opacity": 0,
-            "focal_point": "20% 50%"
+            "focal_point": "top center"
           }
         },
         "hero_xh83zf": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -66,86 +66,11 @@
             "overlay_opacity": 6,
             "focal_point": "center center"
           }
-        },
-        "hero_AfRhJx": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "LUXURY REDEFINED",
-            "title": "<p>ALL GLASS TILE POOLS</p>",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/all-glass-tile-pool",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/pooltilepage-opt.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_tDGezb": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "GLIMMERING BEAUTY",
-            "title": "<p>IRIDESCENT TILE</p>",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/iridescent-tile",
-            "link_text": "Browse Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Iridescent_Tile_8fe0b5c2-c836-43fd-b922-4597eb9540f3.jpg",
-            "overlay_opacity": 6,
-            "focal_point": "center center"
-          }
-        },
-        "hero_rENQHF": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "Gilded Glamour",
-            "title": "<p>24K GOLD TILE</p>",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/24k-gold-tile",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/24kgoldpool-opt.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
         }
       },
       "block_order": [
         "hero_RHW9Hr",
-        "hero_xh83zf",
-        "hero_AfRhJx",
-        "hero_tDGezb",
-        "hero_rENQHF"
+        "hero_xh83zf"
       ],
       "settings": {
         "full_width": true,
@@ -155,83 +80,8 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": true,
-        "mobile_size": 20,
+        "mobile_size": 10,
         "style": "dots",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
-    "slideshow_nzNTk6": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_7hWWPz": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_DewB3R": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_7hWWPz",
-        "hero_DewB3R"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "minimal",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
@@ -244,8 +94,8 @@
         "image": "shopify://shop_images/Pool_tile_text_highlight.jpg",
         "video_url": "",
         "image_width": 500,
-        "subtitle": "",
-        "title": "TILE YOUR WAY TO PARADISE",
+        "subtitle": "Tile Your Way to Paradise",
+        "title": "",
         "text": "<p>Your swimming pool is more than a place to cool off - it’s the focal point of your backyard. Choosing the right pool tile adds color, texture, and durability, transforming an ordinary pool into a stunning backyard oasis that reflects your style.</p><p>At AquaBlu Mosaics, we offer one of the largest online selections of high-quality pool tile, including glass pool tile and porcelain pool tile. With countless colors, shapes, and patterns - plus custom mosaic design services - you’ll find everything you need to create a luxurious, long-lasting pool design.</p>",
         "button_label": "",
         "button_link": "",
@@ -1073,7 +923,6 @@
   "order": [
     "main",
     "slideshow_KNKNYA",
-    "slideshow_nzNTk6",
     "text_and_image_DbPRqD",
     "rich_text_jJMJUy",
     "logo_list_custom_2_k44iC4",

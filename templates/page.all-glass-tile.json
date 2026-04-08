@@ -14,12 +14,11 @@
       "disabled": true,
       "settings": {}
     },
-    "af69fbb6-143c-4466-8eff-86f020d6031c": {
+    "f5f4c706-279b-437f-9aa1-372fdb22ddf9": {
       "type": "slideshow",
       "blocks": {
-        "template--14565147967560__af69fbb6-143c-4466-8eff-86f020d6031c-168381328892e35a88-0": {
+        "template--14565147967560__f5f4c706-279b-437f-9aa1-372fdb22ddf9-16890972783136d6a4-0": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -27,46 +26,25 @@
             "additional_text_field": "",
             "title_h1": true,
             "top_subheading": "",
-            "title": "<h1>THE ULTIMATE POOL FINISH: GLASS TILE</h1>",
+            "title": "",
             "title_size": 40,
-            "subheading": "At AquaBlu, we pride ourselves on our ability to turn any pool into a true work of art. From stock selections and blends to custom artisan crafted designs, our team of experts will be able to bring your vision to life.",
+            "subheading": "",
             "custom_text": "",
-            "link": "",
-            "link_text": "",
+            "link": "https://www.aquablumosaics.com/collections/tile-and-stone",
+            "link_text": "10% OFF TILE & STONE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/allglasstile.jpg",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "bottom center"
           }
-        }
-      },
-      "block_order": [
-        "template--14565147967560__af69fbb6-143c-4466-8eff-86f020d6031c-168381328892e35a88-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 40,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "all-glass-tile-section-1"
-      }
-    },
-    "f5f4c706-279b-437f-9aa1-372fdb22ddf9": {
-      "type": "slideshow",
-      "blocks": {
+        },
         "hero_Wqdtxa": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -86,31 +64,6 @@
             "text_align": "vertical-center horizontal-center",
             "image": "shopify://shop_images/Pool_Tile_by_Bisazza.jpg",
             "overlay_opacity": 10,
-            "focal_point": "center center"
-          }
-        },
-        "template--14565147967560__f5f4c706-279b-437f-9aa1-372fdb22ddf9-16890972783136d6a4-0": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "BRIGHT & TROPICAL",
-            "title": "<p>FOG CARIBBEAN GREEN</p>",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/products/fog-caribbean-green-1-x-1",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Fog-Caribbean-green-1x1-allglasspools.jpg",
-            "overlay_opacity": 12,
             "focal_point": "center center"
           }
         },
@@ -192,8 +145,8 @@
         }
       },
       "block_order": [
-        "hero_Wqdtxa",
         "template--14565147967560__f5f4c706-279b-437f-9aa1-372fdb22ddf9-16890972783136d6a4-0",
+        "hero_Wqdtxa",
         "template--14565147967560__f5f4c706-279b-437f-9aa1-372fdb22ddf9-16890972783136d6a4-1",
         "hero_bef4RN",
         "defb74f3-9e48-46b8-b35f-5c46b58db72f"
@@ -213,79 +166,6 @@
         "css_class": "all-glass-tile-section-8"
       }
     },
-    "slideshow_J4J4Rm": {
-      "type": "slideshow",
-      "blocks": {
-        "hero_cxHeqV": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "And optional subtext",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_97RGE6": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "And optional subtext",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "hero_cxHeqV",
-        "hero_97RGE6"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": true,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
-      }
-    },
     "text_and_image_kzK3Yx": {
       "type": "text-and-image",
       "name": "t:sections.text-and-image.presets.image_with_text.name",
@@ -294,7 +174,7 @@
         "video_url": "",
         "image_width": 500,
         "subtitle": "",
-        "title": "THE INDUSTRY'S LARGEST SELECTION OF GLASS TILE POOL FINISHES",
+        "title": "The Industry’s Largest Selection of Glass Tile Pool Finishes",
         "text": "<p>Elevate your pool with all-glass tile finishes that combine luxury, durability, and stain-resistant performance. Perfect for both new builds and remodeling projects, glass tile offers limitless design possibilities, from shimmering mosaics to vibrant custom patterns. </p><p>As the leading supplier of glass tile pool finishes, AquaBlu provides expert guidance and an extensive selection to help you create the perfect backyard oasis. Bring Paradise Home with our unmatched quality and support every step of the way.</p>",
         "button_label": "",
         "button_link": "",
@@ -1154,7 +1034,12 @@
       "settings": {
         "title": "SHOP OUR BEST SELLERS",
         "tab_collection_1": "best-glass-tile-for-pools",
-        "css_class": "feat-collection-carousel set-carousel-height all-glass-tile-section-12"
+        "css_class": "feat-collection-carousel set-carousel-height all-glass-tile-section-12",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "9d70d689-9b4b-4264-858b-37afbf3665ab": {
@@ -1354,9 +1239,7 @@
   },
   "order": [
     "main",
-    "af69fbb6-143c-4466-8eff-86f020d6031c",
     "f5f4c706-279b-437f-9aa1-372fdb22ddf9",
-    "slideshow_J4J4Rm",
     "text_and_image_kzK3Yx",
     "rich_text_nac8wC",
     "logo_list_custom_2_EfAD4N",

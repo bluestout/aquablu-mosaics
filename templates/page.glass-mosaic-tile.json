@@ -19,7 +19,6 @@
       "blocks": {
         "hero_XLwyq4": {
           "type": "hero",
-          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -31,19 +30,21 @@
             "title_size": 48,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/memorial-day-sale",
-            "link_text": "LEARN MORE",
+            "link": "https://www.aquablumosaics.com/collections/glass-tile",
+            "link_text": "10% OFF GLASS TILE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_38.jpg",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         },
         "hero_e44qmA": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -61,112 +62,35 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Glass_Tile.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_keEVQw": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "LIGHT UP THE NIGHT",
-            "title": "<p>GLOW-IN-THE-DARK GLASS TILE</p>",
-            "title_size": 48,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/glow-in-the-dark-glass-pool-tile",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/glow_in_the_dark_glass.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_jVMdEV": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "BRING YOUR VISION TO LIFE",
-            "title": "<p>GLASS MOSAIC MURALS</p>",
-            "title_size": 48,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/custom-mosaics",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/venetian_2.jpg",
-            "overlay_opacity": 10,
-            "focal_point": "top center"
-          }
-        },
-        "hero_bCLeDV": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/blogs/news/staff-picks-subway-tile-favorites-for-2024",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Subway_Staff_Picks_DT_48ca07da-6ff8-4dc4-8629-00c48ea28649.jpg",
-            "image_mobile": "shopify://shop_images/Subway_Staff_Picks_mb_e020b0ad-a986-4167-a394-bad92003f69f.jpg",
-            "overlay_opacity": 0,
+            "image": "shopify://shop_images/Untitled_design_91.jpg",
+            "overlay_opacity": 6,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
         "hero_XLwyq4",
-        "hero_e44qmA",
-        "hero_keEVQw",
-        "hero_jVMdEV",
-        "hero_bCLeDV"
+        "hero_e44qmA"
       ],
       "settings": {
         "full_width": true,
         "full_width_mobile": false,
         "contact_popup": false,
-        "desktop_size": -20,
+        "desktop_size": 0,
         "gutter_size": 20,
         "space_above": false,
         "space_below": false,
-        "mobile_size": -10,
+        "mobile_size": 10,
         "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": "home-section-1"
       }
     },
-    "slideshow_a6n7Kz": {
+    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0": {
       "type": "slideshow",
       "blocks": {
-        "hero_xNwzre": {
+        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1": {
           "type": "hero",
           "settings": {
             "image_width": 650,
@@ -176,66 +100,39 @@
             "title_h1": true,
             "top_subheading": "",
             "title": "",
-            "title_size": 70,
+            "title_size": 48,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/tile-and-stone",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_6fdAhd": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "overlay_opacity": 0,
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/END_OF_YEAR_SALE_4.png",
+            "image_mobile": "shopify://shop_images/END_OF_YEAR_SALE_4.png",
+            "overlay_opacity": 12,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_xNwzre",
-        "hero_6fdAhd"
+        "template--14459271807048__cd00939b-df2f-4b67-b04c-4d5a2f1044c0-168130994261edee2f-1"
       ],
       "disabled": true,
-      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
         "contact_popup": false,
         "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": true,
+        "gutter_size": 40,
+        "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "dots",
+        "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
-        "css_class": ""
+        "css_class": "bath-section-1"
       }
     },
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31": {
@@ -933,7 +830,7 @@
   "order": [
     "main",
     "slideshow_jVbpHL",
-    "slideshow_a6n7Kz",
+    "cd00939b-df2f-4b67-b04c-4d5a2f1044c0",
     "8c05ddf4-ccbd-4661-9ce8-763093fbaa31",
     "134ebd64-785a-4b27-876c-bf3928cf40da",
     "text_columns_custom_WxgULQ",

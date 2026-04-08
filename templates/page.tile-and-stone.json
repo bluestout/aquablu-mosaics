@@ -41,6 +41,32 @@
             "additional_text_field": "",
             "title_h1": true,
             "top_subheading": "",
+            "title": "",
+            "title_size": 56,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tile-and-stone",
+            "link_text": "10% OFF TILE & STONE",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "top center"
+          }
+        },
+        "hero_CTpghX": {
+          "type": "hero",
+          "disabled": true,
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "",
             "title": "<p>TILE AND STONE</p>",
             "title_size": 56,
             "subheading": "FOR EVERY PART OF YOUR HOME",
@@ -59,7 +85,8 @@
         }
       },
       "block_order": [
-        "hero_DhA7E9"
+        "hero_DhA7E9",
+        "hero_CTpghX"
       ],
       "settings": {
         "full_width": true,
@@ -92,60 +119,34 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/bluhaven-porcelain-tile",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_QNFDWT": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image": "shopify://shop_images/END_OF_YEAR_SALE_27_95b22405-07a7-468c-b81d-8bc9995501ed.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_YEAR_SALE_27_95b22405-07a7-468c-b81d-8bc9995501ed.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_Y6cXUV",
-        "hero_QNFDWT"
+        "hero_Y6cXUV"
       ],
       "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
-        "full_width_mobile": false,
+        "full_width_mobile": true,
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 20,
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "minimal",
+        "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
@@ -164,7 +165,7 @@
             "heading_size": "0.8",
             "heading_color": "",
             "heading_align": "center",
-            "desc_style": "body",
+            "desc_style": "subtitle",
             "desc_color": "",
             "custom_class": "",
             "background_color": "",
@@ -258,7 +259,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
             "image": "shopify://shop_images/AquaPro_Banner_2025.png",
-            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
+            "image_mobile": "shopify://shop_images/VIP_PRICING_FLAT_RATE_SHIPPING_FREE_SAMPLES.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -552,6 +553,7 @@
       "block_order": [
         "lookfy_gallery_lookfy_gallery_Ytr8h7"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": false,

@@ -19,6 +19,7 @@
       "blocks": {
         "template--14551638868040__cf944a42-813d-4747-a042-3ee4590c930c-1681393773f7e6b65f-1": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -36,8 +37,8 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Porcelain_Tile_Page.png",
-            "overlay_opacity": 6,
+            "image": "shopify://shop_images/Untitled_design_93.jpg",
+            "overlay_opacity": 0,
             "focal_point": "top center"
           }
         },
@@ -49,79 +50,27 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "Rustic feel, modern strength.",
-            "title": "<p>WOOD LOOK TILE</p>",
-            "title_size": 45,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/wood-look-porcelain-tile",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Wood_look_porcelain_tile_c48e4594-7cca-4d70-985e-c1a3b9abd169.jpg",
-            "overlay_opacity": 4,
-            "focal_point": "center center"
-          }
-        },
-        "hero_8n3Aqc": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "Brick looks. Porcelain strength.",
-            "title": "<p>BRICKSTONE SERIES</p>",
-            "title_size": 45,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/msi-brickstone-series-brick-look-porcelain-tile",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Brickstone_series_porcelain_tile.jpg",
-            "overlay_opacity": 4,
-            "focal_point": "center center"
-          }
-        },
-        "hero_VEbTDN": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
             "top_subheading": "",
             "title": "",
-            "title_size": 70,
+            "title_size": 40,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/blogs/news/natural-beauty-modern-convenience-discover-stone-look-tiles",
-            "link_text": "Learn More",
+            "link": "https://www.aquablumosaics.com/pages/shop-porcelain-tile",
+            "link_text": "10% OFF PORCELAIN TILE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Stone-lookdt.jpg",
-            "image_mobile": "shopify://shop_images/Stone-lookmb.jpg",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "top center"
           }
         }
       },
       "block_order": [
         "template--14551638868040__cf944a42-813d-4747-a042-3ee4590c930c-1681393773f7e6b65f-1",
-        "hero_CgUdGh",
-        "hero_8n3Aqc",
-        "hero_VEbTDN"
+        "hero_CgUdGh"
       ],
       "settings": {
         "full_width": true,
@@ -131,7 +80,7 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": true,
-        "mobile_size": 20,
+        "mobile_size": 15,
         "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
@@ -154,60 +103,34 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/bluhaven-porcelain-tile",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_aVkpXW": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image": "shopify://shop_images/END_OF_YEAR_SALE_27_95b22405-07a7-468c-b81d-8bc9995501ed.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_YEAR_SALE_27_95b22405-07a7-468c-b81d-8bc9995501ed.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_BniPPA",
-        "hero_aVkpXW"
+        "hero_BniPPA"
       ],
       "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
         "full_width": false,
-        "full_width_mobile": false,
+        "full_width_mobile": true,
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 20,
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "minimal",
+        "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
@@ -219,7 +142,7 @@
         "logo_image_QzJFp6": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_29.png",
+            "image": "shopify://shop_images/New_and_trending_porcelain_tile_a6962c6c-8caf-4d4a-9486-8edc27b96ca9.jpg",
             "logo_title": "New & Trending",
             "logo_text": "",
             "link": "shopify://collections/new-and-trending-porcelain-tile"
@@ -552,7 +475,7 @@
             "cta_link1": "shopify://collections/porcelain-pool-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Coastline_-_Sky2.jpg",
+            "image": "shopify://shop_images/Porcelain_Pool_Tile_3.jpg",
             "video_url": "",
             "width": "33",
             "height": 460,
@@ -571,7 +494,7 @@
             "cta_link1": "shopify://collections/porcelain-kitchen-tile",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/Granadella-Sal2.5x8.8.jpg",
+            "image": "shopify://shop_images/Porcelain_Kitchen_Tile_7f07d930-22a2-4dd8-a497-4d90322468c6.jpg",
             "video_url": "",
             "width": "33",
             "height": 460,
@@ -644,7 +567,7 @@
           "type": "collection",
           "settings": {
             "title": "COASTAL",
-            "image": "shopify://shop_images/Tiderock_-_Blue_Large_2958b331-cc8e-4e5a-a8dd-529f38b09d32.jpg",
+            "image": "shopify://shop_images/Coastal_Porcelain_Tile_e84f1eed-47ac-4aad-872a-056fb289e0ca.jpg",
             "url": "shopify://collections/coastal-porcelain-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -654,7 +577,7 @@
           "type": "collection",
           "settings": {
             "title": "TROPICAL",
-            "image": "shopify://shop_images/DiamondReflection-GulfBlueAkron4.jpg",
+            "image": "shopify://shop_images/glee-gaida-6-x-6-porcelain-tile-677416.jpg",
             "url": "shopify://collections/tropical-porcelain-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -664,7 +587,7 @@
           "type": "collection",
           "settings": {
             "title": "CLASSIC",
-            "image": "shopify://shop_images/Saltstone_-_Venetian_White.jpg",
+            "image": "shopify://shop_images/Classic_Porcelain_Tile_7e1cf2f7-b7ad-419c-9140-1775209ecec3.jpg",
             "url": "shopify://collections/classic-porcelain-tile",
             "tooltip": false,
             "tooltip_text": ""
@@ -944,7 +867,12 @@
       "settings": {
         "title": "Slip-Resistant Porcelain",
         "tab_collection_1": "slip-resistant-porcelain-tile",
-        "css_class": "feat-collection-carousel set-carousel-height"
+        "css_class": "feat-collection-carousel set-carousel-height",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "0fa5451d-2c23-4ac7-8abb-4007b4ddafb1": {

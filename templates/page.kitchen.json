@@ -17,7 +17,7 @@
     "b8729415-180c-4e72-a200-75a107466995": {
       "type": "slideshow",
       "blocks": {
-        "template--14565132894280__b8729415-180c-4e72-a200-75a107466995-hero-1": {
+        "1b746b27-ab2d-451e-971b-eeecd84aa933": {
           "type": "hero",
           "disabled": true,
           "settings": {
@@ -26,33 +26,8 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 45,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/memorial-day-sale",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_23.jpg",
-            "image_mobile": "shopify://shop_images/Memorial_Day_Heros_2025_Tupelo_Goods_Flash_Sale_23.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "80% 50%"
-          }
-        },
-        "1b746b27-ab2d-451e-971b-eeecd84aa933": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "DESIGN YOUR",
-            "title": "<p>DREAM KITCHEN</p>",
+            "top_subheading": "Built to Endure, Designed to Inspire",
+            "title": "<p>PREMIUM KITCHEN TILE</p>",
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
@@ -62,56 +37,7 @@
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Kitchen_Tile_Hero.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "template--14565132894280__b8729415-180c-4e72-a200-75a107466995-hero-2": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "UNIQUE STYLES AND MATERIALS",
-            "title": "<p>MSI INTERNATIONAL</p>",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/msi",
-            "link_text": "Explore The Collections",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Kitchen_Tile_by_MSI.jpg",
-            "overlay_opacity": 8,
-            "focal_point": "center center"
-          }
-        },
-        "fe566f05-8ead-44be-adeb-b04954782cd1": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "CLEAN & CLASSIC STYLE",
-            "title": "<p>SUBWAY TILE</p>",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/shop-all-subway-tile",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/kitchnew4.jpg",
+            "image": "shopify://shop_images/Untitled_design_92.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -122,108 +48,32 @@
             "image_width": 650,
             "html_embed": "",
             "html_embed_two": "",
-            "additional_text_field": "And optional subtext",
+            "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "Where safety meets style",
-            "title": "<p>FLOORING FAVORITES</p>",
+            "top_subheading": "",
+            "title": "",
             "title_size": 40,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://collections/flooring-favorites",
-            "link_text": "Shop Now",
+            "link": "https://www.aquablumosaics.com/collections/shop-all-kitchen-backsplash-and-floor-tile",
+            "link_text": "10% OFF KITCHEN TILE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Flooring_Favorites_-_Outdoor_Kitchen_Tile.jpg",
-            "overlay_opacity": 10,
-            "focal_point": "center center"
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "top center"
           }
         }
       },
       "block_order": [
-        "template--14565132894280__b8729415-180c-4e72-a200-75a107466995-hero-1",
         "1b746b27-ab2d-451e-971b-eeecd84aa933",
-        "template--14565132894280__b8729415-180c-4e72-a200-75a107466995-hero-2",
-        "fe566f05-8ead-44be-adeb-b04954782cd1",
         "86b1c735-db31-462b-9e15-fce6efc7ef22"
       ],
       "settings": {
         "full_width": true,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 5,
-        "gutter_size": 0,
-        "space_above": false,
-        "space_below": true,
-        "mobile_size": 20,
-        "style": "dots",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "all-glass-tile-section-8"
-      }
-    },
-    "6beb8612-632d-4031-8db9-c867670f61f9": {
-      "type": "slideshow",
-      "blocks": {
-        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_4RH8mT": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14565132894280__6beb8612-632d-4031-8db9-c867670f61f9-168381328892e35a88-0",
-        "hero_4RH8mT"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
         "full_width_mobile": false,
         "contact_popup": false,
         "desktop_size": 0,
@@ -231,10 +81,10 @@
         "space_above": false,
         "space_below": true,
         "mobile_size": 0,
-        "style": "minimal",
+        "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
-        "css_class": "kitchen-section-1"
+        "css_class": "all-glass-tile-section-8"
       }
     },
     "text_and_image_W7gcGM": {
@@ -244,8 +94,8 @@
         "image": "shopify://shop_images/Kitchen_Backsplash_Landing_page.jpg",
         "video_url": "",
         "image_width": 500,
-        "subtitle": "",
-        "title": "TRANSFORM YOUR KITCHEN, TRANSFORM YOUR HOME",
+        "subtitle": "Transform Your Kitchen, Transform Your Home",
+        "title": "",
         "text": "<p>Kitchen backsplash tile is more than protection - it’s a statement piece that reflects your style and elevates your space. From ceramic and porcelain to glass and natural stone, the right kitchen backsplash tile can transform any kitchen. With endless colors, shapes, and materials, you can design a space that’s both functional and artistic. </p><p>At AquaBlu Mosaics, our curated kitchen tile collections suits every style, from rustic farmhouse to coastal chic, with expert guidance on materials, colors, and quantities to ensure a perfect fit.</p>",
         "button_label": "",
         "button_link": "",
@@ -978,7 +828,12 @@
       "settings": {
         "title": "SHOP KITCHEN BEST SELLERS",
         "tab_collection_1": "kitchen-bath-top-sellers",
-        "css_class": "feat-collection-carousel set-carousel-height kitchen-section-7"
+        "css_class": "feat-collection-carousel set-carousel-height kitchen-section-7",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "65298214-fb00-4bb2-a5d7-2e399917a15f": {
@@ -1451,7 +1306,6 @@
   "order": [
     "main",
     "b8729415-180c-4e72-a200-75a107466995",
-    "6beb8612-632d-4031-8db9-c867670f61f9",
     "text_and_image_W7gcGM",
     "logo_list_custom_2_jjhjBt",
     "119c1923-0e00-44f3-8409-18542297d27d",

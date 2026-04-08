@@ -49,47 +49,21 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "shopify://collections/tenjam",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_zUYQkA": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image": "shopify://shop_images/Tenjam_Flash_Banner_1.jpg",
+            "image_mobile": "shopify://shop_images/Tenjam_Flash_Banner_1.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_tQBpWw",
-        "hero_zUYQkA"
+        "hero_tQBpWw"
       ],
       "disabled": true,
       "settings": {
@@ -101,7 +75,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "minimal",
+        "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
@@ -412,8 +386,8 @@
         "image": "shopify://shop_images/Autograph_In-Pool_Lounge_Chair_for_Sun_Shelf.jpg",
         "video_url": "",
         "image_width": 500,
-        "subtitle": "",
-        "title": "FROM POOL CHAIRS TO CHAISE LOUNGERS - YOUR OASIS AWAITS",
+        "subtitle": "From Pool Chairs to Chaise Loungers - Your oasis awaits",
+        "title": "",
         "text": "<p>Transform your pool into a true retreat with premium in-pool furniture built for relaxation and style. From sleek pool lounge chairs to resort-style <a href=\"https://www.aquablumosaics.com/collections/in-pool-loungers\" title=\"https://www.aquablumosaics.com/collections/in-pool-loungers\">chaise loungers</a> and convenient in-pool side tables, every piece is designed to elevate your outdoor living. Crafted from durable, UV-resistant materials, our furniture withstands sun, water, and pool chemicals while keeping your space looking modern and inviting. Perfect for tanning ledges, Baja shelves, or poolside seating, our <a href=\"https://www.aquablumosaics.com/collections/in-pool-chairs\" title=\"https://www.aquablumosaics.com/collections/in-pool-chairs\">in pool chairs</a>, chaise loungers, and side tables let you unwind, entertain, and enjoy every moment by the water.</p>",
         "button_label": "",
         "button_link": "",
@@ -837,7 +811,7 @@
         "image_width": 700,
         "subtitle": "",
         "title": "",
-        "text": "<h2><strong>TUPELO GOODS: DURABLE & TRENDY OUTDOOR LIVING</strong></h2><p>Tupelo Goods designs stylish, durable, and low-maintenance outdoor furniture built to withstand the elements. Using marine-grade polyethylene and rotomolding technology, their products resist sun, rain, and chemicals, ensuring long-lasting beauty. </p><p>From in-pool chairs and side tables to fire pit seating and outdoor games, Tupelo Goods blends modern aesthetics with effortless functionality. Their furniture is designed for comfort, stability, and versatility, making it ideal for residential, hospitality, and commercial spaces.</p>",
+        "text": "<h2><strong>NOW OFFERING TUPELO GOODS: DURABLE & TRENDY OUTDOOR LIVING</strong></h2><p>Tupelo Goods designs stylish, durable, and low-maintenance outdoor furniture built to withstand the elements. Using marine-grade polyethylene and rotomolding technology, their products resist sun, rain, and chemicals, ensuring long-lasting beauty. </p><p>From in-pool chairs and side tables to fire pit seating and outdoor games, Tupelo Goods blends modern aesthetics with effortless functionality. Their furniture is designed for comfort, stability, and versatility, making it ideal for residential, hospitality, and commercial spaces.</p>",
         "button_label": "SHOP NOW",
         "button_link": "https://www.aquablumosaics.com/collections/tupelo-goods-pool-patio-furniture",
         "button_style": "primary",

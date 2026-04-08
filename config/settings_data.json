@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "color_body_bg": "#f5f5f5",
+    "color_body_bg": "#ffffff",
     "color_body_text": "#374759",
-    "color_price": "#374759",
+    "color_price": "#1c1d1d",
     "color_savings_text": "#ba4444",
     "color_borders": "#0a469c",
     "color_button": "rgba(0,0,0,0)",
@@ -19,27 +19,27 @@
     "color_sale_tag": "#ba4444",
     "color_cart_dot": "#ba4444",
     "color_small_image_bg": "rgba(0,0,0,0)",
-    "color_large_image_bg": "#0f0f0f",
+    "color_large_image_bg": "#374759",
     "color_header": "#152755",
     "color_header_text": "#ffffff",
-    "color_announcement": "#0f0f0f",
+    "color_announcement": "#1c1d1d",
     "color_announcement_text": "#ffffff",
     "color_header_search": "#ffffff",
-    "color_footer": "#152755",
+    "color_footer": "#374759",
     "color_footer_border": "#e8e8e1",
     "color_footer_text": "#ffffff",
-    "color_scheme_1_bg": "#f7ebdf",
-    "color_scheme_1_text": "#152755",
+    "color_scheme_1_bg": "#374759",
+    "color_scheme_1_text": "#fff",
     "color_scheme_2_bg": "#ffffff",
     "color_scheme_2_text": "#374759",
-    "color_scheme_3_bg": "#fcf4f1",
+    "color_scheme_3_bg": "#f1e7dd",
     "color_scheme_3_text": "#374759",
-    "type_header_font_family": "futura_n5",
+    "type_header_font_family": "serif",
     "type_header_spacing": "50",
     "type_header_base_size": 40,
     "type_header_line_height": 1.1,
     "type_header_capitalize": false,
-    "type_base_font_family": "futura_n3",
+    "type_base_font_family": "serif",
     "type_base_spacing": "50",
     "type_base_size": 15,
     "type_base_line_height": 1.6,
@@ -52,6 +52,7 @@
     "icon_weight": "5px",
     "icon_linecaps": "round",
     "superscript_decimals": true,
+    "product_save_amount": true,
     "quick_shop_enable": true,
     "quick_add_enable": true,
     "product_grid_image_size": "square",
@@ -380,13 +381,6 @@
       "toolbar": {
         "type": "toolbar",
         "blocks": {
-          "announcement_nAdpwz": {
-            "type": "announcement",
-            "settings": {
-              "richtext": "<p>Introducing Our Exclusive BluHaven Porcelain! Enjoy 20% off the entire collection!</p><p><a href=\"https://www.aquablumosaics.com/collections/bluhaven-porcelain-tile\" target=\"_blank\" title=\"https://www.aquablumosaics.com/collections/bluhaven-porcelain-tile\">Shop Now</a></p>",
-              "richtext_mobile": ""
-            }
-          },
           "0b066516-effd-470b-ba3b-fc9f69d6c6ae": {
             "type": "announcement",
             "settings": {
@@ -397,13 +391,12 @@
           "042de2fe-f26a-4e7f-a161-ad5212c6531b": {
             "type": "announcement",
             "settings": {
-              "richtext": "<p>Trade Pro? <a href=\"/pages/wholesale\" title=\"Affiliate Registration\">Join the network &gt;&gt;</a></p><p>Ask an Expert! |<a href=\"tel:800) 971-1442\" title=\"tel:800) 971-1442\"> (800) 971-1442</a></p>",
+              "richtext": "<p>Trade Pro? <a href=\"/pages/wholesale\" title=\"Affiliate Registration\">Join the network &gt;&gt;</a></p><p>Contact Us! |<a href=\"tel:800) 971-1442\" title=\"tel:800) 971-1442\"> (800) 971-1442</a></p>",
               "richtext_mobile": ""
             }
           }
         },
         "block_order": [
-          "announcement_nAdpwz",
           "0b066516-effd-470b-ba3b-fc9f69d6c6ae",
           "042de2fe-f26a-4e7f-a161-ad5212c6531b"
         ],
@@ -580,7 +573,7 @@
           "text_seen": "As seen in...",
           "footer_main_menu": true,
           "show_copyright": true,
-          "copyright_text": "AquaBlu Mosaics. All rights reserved.",
+          "copyright_text": "2024 AquaBlu Mosaics. All rights reserved.",
           "policies_menu": ""
         }
       },
@@ -701,6 +694,11 @@
           "customJS": "SavedBy.checkoutText = (text) => {\n   return text.replace(\"CHECKOUT\", \"Check out\");\n}",
           "popupOverride": ""
         }
+      },
+      "13837741438304301716": {
+        "type": "shopify://apps/easy-table-of-contents/blocks/etoc_generator/1109862a-ebd8-48e4-8edb-2e51ea2359a0",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

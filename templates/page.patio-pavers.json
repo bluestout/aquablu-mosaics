@@ -50,8 +50,8 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "",
-            "link_text": "",
+            "link": "https://www.aquablumosaics.com/collections/outdoor-porcelain-pavers-and-coping",
+            "link_text": "SHOP ALL",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
@@ -75,7 +75,7 @@
             "subheading": "",
             "custom_text": "",
             "link": "shopify://collections/modern-pool-coping",
-            "link_text": "Shop Now",
+            "link_text": "EXPLORE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
@@ -99,7 +99,7 @@
             "subheading": "",
             "custom_text": "",
             "link": "shopify://collections/concrete-look-porcelain-pavers-coping",
-            "link_text": "Shop Now",
+            "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
@@ -149,7 +149,7 @@
         "desktop_size": 0,
         "gutter_size": 40,
         "space_above": false,
-        "space_below": false,
+        "space_below": true,
         "mobile_size": 20,
         "style": "dots",
         "autoplay": true,
@@ -173,47 +173,21 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/tile-and-stone",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_d3QenX": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image": "shopify://shop_images/END_OF_YEAR_SALE_4.png",
+            "image_mobile": "shopify://shop_images/END_OF_YEAR_SALE_4.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_Qa4Fy7",
-        "hero_d3QenX"
+        "hero_Qa4Fy7"
       ],
       "disabled": true,
       "settings": {
@@ -225,7 +199,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "minimal",
+        "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
@@ -238,8 +212,8 @@
         "image": "shopify://shop_images/3_55ea4018-249a-446a-ac8a-a8aa7320b719.jpg",
         "video_url": "",
         "image_width": 500,
-        "subtitle": "",
-        "title": "LUXURY IS A PAVER AWAY",
+        "subtitle": "Luxury is a paver away",
+        "title": "",
         "text": "<p>Transform your outdoor living areas with hardscape materials that blend durability, style, and natural beauty. From natural stone ledger panels that add texture and depth to your walls, to flagstone and porcelain pavers that create elegant, slip-resistant surfaces, our collection is designed to enhance any patio, pool deck, or walkway. Finish your design with expertly crafted <strong>pool </strong>coping that provides a seamless transition from water to deck while ensuring safety and comfort underfoot.</p><p>At AquaBlu Mosaics, we offer premium hardscape products built for both performance and visual impact. Whether you’re creating a modern retreat or a timeless backyard escape, our <strong>hardscaping materials</strong> help you build an outdoor space that’s as functional as it is stunning.</p>",
         "button_label": "",
         "button_link": "",
@@ -680,7 +654,12 @@
       "settings": {
         "title": "BROWSE OUR MOST POPULAR",
         "tab_collection_1": "1-x-1-glass-mosaic-tile",
-        "css_class": "feat-collection-carousel set-carousel-height"
+        "css_class": "feat-collection-carousel set-carousel-height",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "4a671b33-4a2e-48a2-a47d-26c42c9920e6": {
@@ -748,7 +727,12 @@
       "settings": {
         "title": "SHOP POOL PAVERS & COPING",
         "tab_collection_1": "2cm-outdoor-porcelain-pavers-and-coping",
-        "css_class": "feat-collection-carousel set-carousel-height"
+        "css_class": "feat-collection-carousel set-carousel-height",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     },
     "faq_PfqNEz": {

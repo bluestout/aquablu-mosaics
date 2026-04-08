@@ -1,0 +1,307 @@
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<style>
+  .title {
+    text-align: center;
+  }
+
+  .title h2 {
+    font-size: calc(var(--font-heading-scale, 1) * 27px);
+  }
+
+  @media (max-width: 425px) {
+    .title h2 {
+      font-size: 20px;
+    }
+  }
+
+    .slider-item {
+    width: 100%;
+  }
+
+  .product-card-simple {
+    width: 100%;
+  }
+
+  /* 🔥 KEY PART */
+  .product-card-simple img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* crops nicely */
+    display: block;
+  }
+
+  .product-card-simple img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .5s linear;
+  }
+
+  /* 👇 Create fixed ratio container like your example */
+  .slider-item a {
+    display: fake;
+    width: 100%;
+    aspect-ratio: 1 / 0.9; /* same as --ratio-percent:100% */
+  }
+
+     #custom-slider {
+      position: relative;
+    }
+
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    #custom-slider .swiper {
+        position: static;
+    }
+
+        .slider-item {
+          padding-bottom: 10px;
+        }
+
+        .product-card-simple {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-decoration: none;
+          text-align: center;
+          gap: 0px;
+        }
+
+        .flickitylf-button-icon {
+          position: absolute !important;
+          left: 50% !important;
+          top: 50% !important;
+          width: 50% !important;
+          height: 50% !important;
+          transform: translate(-50%, -50%) !important;
+      }
+
+      #custom-slider .swiper-button-next:after, .swiper-button-prev:after {
+          padding: 0px !important;
+        }
+
+        #custom-slider .swiper-button-prev, .swiper-button-next {
+            width: 30px !important;
+            height: 30px !important;
+            box-shadow: none !important;
+        }
+
+        .product-card-simple img {
+          max-width: 80%;
+        }
+
+        .divs h2 {
+          margin: 0px;
+        }
+
+        .divs h2 span {
+          padding-top: 4px;
+          padding-bottom: 10px;
+          color: #374759;
+          font-size: 16px;
+          line-height: 26px;
+          text-align: center;
+          font-weight: 600;
+          transition-duration: 350ms;
+          transition-timing-function: ease;
+          letter-spacing: 0px;
+          font-weight: bold;
+        }
+
+        .divs p {
+          font-size: 12px;
+          margin: 0px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          box-shadow: 0 0 6px rgba(0,0,0,0.15);
+          z-index: 20;
+          color: black;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+          border-radius: 39px;
+          background-color: white;
+          padding: 13px 18px;
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
+          font-weight: bold;
+          font-size: 25px !important;
+        }
+
+        @media (max-width: 768px) {
+        .swiper-button-next:after, .swiper-button-prev:after {
+          font-size: 19px !important;
+        }
+        }
+</style>
+
+<div class="custom-slider-parent-wrapper">
+  <section id="custom-slider" class="custom-slider page-width">
+    {% if section.settings.show_title %}
+      <div class="title">
+        <h2>{{ section.settings.header_text }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="swiper custom-swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide slider-item">
+            <a class="product-card-simple" href="{{ block.settings.link }}">
+              {% if block.settings.image %}
+                <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title }}" width="" height="">
+              {% endif %}
+
+              <div class="divs">
+                <h2>
+                  <span class="fake-link">{{ block.settings.title }}</span>
+                </h2>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev">
+        <svg class="flickitylf-button-icon" viewBox="0 0 100 100">
+          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg class="flickitylf-button-icon" viewBox="0 0 100 100">
+          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Manual Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "title"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Titles",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable Autoscroll",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Label",
+          "default": "Category Name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Manual Slider"
+    }
+  ]
+}
+{% endschema %}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  var customSliderInstance = null;
+
+  function initCustomSlider() {
+    if (customSliderInstance) {
+      customSliderInstance.destroy(true, true);
+      customSliderInstance = null;
+    }
+    customSliderInstance = new Swiper('.custom-swiper', {
+      slidesPerView: 5,
+      spaceBetween: 10,
+      loop: true,
+
+      breakpoints: {
+        360: { slidesPerView: 2 },
+        820: { slidesPerView: 3 },
+        1024: { slidesPerView: 5 },
+        1440: { slidesPerView: 5 },
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      {% if section.settings.autoplay %}
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      {% endif %}
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initCustomSlider);
+
+  document.addEventListener('shopify:section:load', function (event) {
+    if (event.target.querySelector('#custom-slider')) {
+      initCustomSlider();
+    }
+  });
+</script>

@@ -17,8 +17,34 @@
     "a92b5673-5ac8-4e2e-a61a-78fb827cbc99": {
       "type": "slideshow",
       "blocks": {
+        "hero_WnfVpm": {
+          "type": "hero",
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "",
+            "title": "",
+            "title_size": 47,
+            "subheading": "",
+            "custom_text": "",
+            "link": "shopify://collections/tile-and-stone",
+            "link_text": "10% TILE & STONE",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "top center"
+          }
+        },
         "template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
@@ -40,87 +66,11 @@
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
-        },
-        "hero_qF79RD": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_QFURRq": {
-          "type": "hero",
-          "disabled": true,
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "And optional subtext",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "",
-            "link_text": "Shop Now",
-            "link_2": "shopify://products/laylo-in-pool-lounger-set-of-two-luxury-pool-lounge-chair",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Laylo_Flash_Sale_1.jpg",
-            "image_mobile": "shopify://shop_images/Laylo_Flash_Sale_1.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_jA66ak": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "shopify://pages/clubblu-email-sign-up",
-            "link_text": "Learn More",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-right",
-            "image": "shopify://shop_images/Join_ClubBlu_Final_1.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
         }
       },
       "block_order": [
-        "template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1",
-        "hero_qF79RD",
-        "hero_QFURRq",
-        "hero_jA66ak"
+        "hero_WnfVpm",
+        "template--14668641665096__a92b5673-5ac8-4e2e-a61a-78fb827cbc99-hero-1"
       ],
       "settings": {
         "full_width": true,
@@ -130,7 +80,7 @@
         "gutter_size": 20,
         "space_above": false,
         "space_below": true,
-        "mobile_size": 20,
+        "mobile_size": 15,
         "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
@@ -140,87 +90,27 @@
     "slideshow_split_3AUTRr": {
       "type": "slideshow-split",
       "blocks": {
-        "slide_KUc3m6": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "tis the season",
-            "title": "Cozy vibes, sizzling savings.",
-            "title_size": 40,
-            "subheading": "Save big on fire pits this year with our Ignite Your Style Savings Event!",
-            "link": "https://www.aquablumosaics.com/pages/ignite-your-style-savings-event",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Static_Set_3_-_Ignite_Your_Style_6.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "3"
-          }
-        },
         "slide_RFRin3": {
           "type": "slide",
           "settings": {
-            "top_subheading": "no code needed",
-            "title": "Enjoy the warmth, we’ll cover the shipping.",
+            "top_subheading": "USE CODE: BYE2025",
+            "title": "15% OFF TILE & STONE",
             "title_size": 40,
-            "subheading": "Enjoy FREE shipping on every fire pit, table, and bowl!",
-            "link": "https://www.aquablumosaics.com/collections/outdoor-fire-pits",
-            "link_text": "Shop All Fire Pits",
+            "subheading": "Give your home the glow-up it deserves before the year ends! It’s the perfect time to refresh your floors and walls - all at 15% off. Hurry, this year-end deal won’t last!",
+            "link": "https://www.aquablumosaics.com/collections/tile-and-stone",
+            "link_text": "Shop All Tile & Stone",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/Ignite_your_style_3.jpg",
+            "image": "shopify://shop_images/End_of_Year_Sale.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
-          }
-        },
-        "slide_yq6WHF": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "USE CODE:IGNITEMYSTYLE",
-            "title": "A little extra glow, on the house.",
-            "title_size": 40,
-            "subheading": "Spend $1,000+ and receive a FREE tabletop fire pit - while supplies last. Simply add product to your cart and add code: IGNITEMYSTYLE",
-            "link": "shopify://products/concrete-semi-round-fire-pit",
-            "link_text": "View Product",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/Static_Set_3_-_Ignite_Your_Style_7.jpg",
-            "indent_image": false,
-            "focal_point": "center center",
-            "color_scheme": "2"
-          }
-        },
-        "slide_BHcfUb": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "Limited-time offers - exclusions apply.",
-            "title": "Style, savings, and sparks.",
-            "title_size": 40,
-            "subheading": "Hot deals won’t last forever! 🔥 Get them before they’re gone.",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "image": "shopify://shop_images/5_3b59e034-87ba-4811-a74e-f99c1ef938be.jpg",
-            "indent_image": false,
-            "focal_point": "bottom center",
-            "color_scheme": "3"
           }
         }
       },
       "block_order": [
-        "slide_KUc3m6",
-        "slide_RFRin3",
-        "slide_yq6WHF",
-        "slide_BHcfUb"
+        "slide_RFRin3"
       ],
       "disabled": true,
       "settings": {
@@ -228,7 +118,7 @@
         "height": 500,
         "height_mobile": 400,
         "style": "arrows",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 5,
         "css_class": ""
       }
@@ -249,14 +139,14 @@
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "",
+            "link": "https://www.aquablumosaics.com/collections/bluhaven-porcelain-tile",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
-            "image_mobile": "shopify://shop_images/END_OF_SUMMER_SALE_CREATIVES.jpg",
+            "image": "shopify://shop_images/END_OF_YEAR_SALE_27_95b22405-07a7-468c-b81d-8bc9995501ed.jpg",
+            "image_mobile": "shopify://shop_images/END_OF_YEAR_SALE_27_95b22405-07a7-468c-b81d-8bc9995501ed.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -295,7 +185,7 @@
       "disabled": true,
       "settings": {
         "full_width": false,
-        "full_width_mobile": false,
+        "full_width_mobile": true,
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 20,
@@ -492,13 +382,13 @@
             "subheading": "",
             "custom_text": "",
             "link": "shopify://collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
+            "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image": "shopify://shop_images/2_9fd55c35-bca0-4aff-b381-6d8215705355.jpg",
+            "image_mobile": "shopify://shop_images/2_9fd55c35-bca0-4aff-b381-6d8215705355.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -513,7 +403,7 @@
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 20,
-        "space_above": false,
+        "space_above": true,
         "space_below": false,
         "mobile_size": 0,
         "style": "arrows",

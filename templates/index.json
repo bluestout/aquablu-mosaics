@@ -9,140 +9,35 @@
  */
 {
   "sections": {
-    "173162359649190d6e": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": ""
-      }
-    },
-    "slideshow_new_8zzw4R": {
-      "type": "slideshow-new",
-      "blocks": {
-        "slide_KTCdTA": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Homepage_5.png",
-            "heading": "Everything You Need To",
-            "heading_size": "h1",
-            "subheading": "BRING PARADISE HOME",
-            "button_label": "Shop Tile & Stone",
-            "link": "https://www.aquablumosaics.com/pages/tile-and-stone",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 10,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_dDz9fW": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/AquaPro_Landing_Page.jpg",
-            "heading": "From Homes to Businesses",
-            "heading_size": "h2",
-            "subheading": "TRADE & COMMERCIAL",
-            "button_label": "Learn More",
-            "link": "shopify://pages/wholesale",
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "image_overlay_opacity": 20,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_R3tWbP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Woosah-Sale.jpg",
-            "heading": "lounge in style",
-            "heading_size": "h1",
-            "subheading": "IN-POOL FURNITURE",
-            "button_label": "Shop Now",
-            "link": "https://www.aquablumosaics.com/pages/in-pool-furniture",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 10,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_jDt9WQ": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Outdoor_living_Tupelo_compressed.jpg",
-            "heading": "Introducing",
-            "heading_size": "h1",
-            "subheading": "OUTDOOR LIVING PRODUCTS",
-            "button_label": "Browse Furniture, Accessories & More",
-            "link": "shopify://pages/outdoor-living-products",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 10,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_6AxnEF": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Homepage_5.png",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Learn More",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_KTCdTA",
-        "slide_dDz9fW",
-        "slide_R3tWbP",
-        "slide_jDt9WQ",
-        "slide_6AxnEF"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "auto_rotate": true,
-        "change_slides_speed": 7,
-        "show_text_below": false,
-        "accessibility_info": "Main slideshow on page. Displays links to 4 key pages."
-      }
-    },
-    "slideshow_XiQizM": {
+    "slideshow_7qdjAy": {
       "type": "slideshow",
       "blocks": {
-        "hero_AaGnNX": {
+        "hero_dT7LFf": {
           "type": "hero",
+          "disabled": true,
           "settings": {
             "image_width": 650,
             "html_embed": "",
             "html_embed_two": "",
             "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
+            "top_subheading": "EVERYTHING YOU NEED TO",
+            "title": "<p>BRING PARADISE HOME</p>",
+            "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/bluhaven-porcelain-tile",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Homepage_5.png",
+            "overlay_opacity": 10,
             "focal_point": "center center"
           }
         },
-        "hero_dFc3F3": {
+        "hero_MpgJgw": {
           "type": "hero",
           "settings": {
             "image_width": 650,
@@ -152,280 +47,656 @@
             "title_h1": true,
             "top_subheading": "",
             "title": "",
-            "title_size": 70,
+            "title_size": 60,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
+            "link": "https://www.aquablumosaics.com/collections/tile-and-stone",
+            "link_text": "10% OFF TILE & STONE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_12.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_2.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_AaGnNX",
-        "hero_dFc3F3"
+        "hero_dT7LFf",
+        "hero_MpgJgw"
       ],
-      "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "full_width_mobile": false,
         "contact_popup": false,
-        "desktop_size": 0,
+        "desktop_size": 5,
         "gutter_size": 20,
         "space_above": false,
         "space_below": false,
-        "mobile_size": 0,
-        "style": "minimal",
-        "autoplay": false,
+        "mobile_size": 50,
+        "style": "dots",
+        "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
       }
     },
-    "b6b5c71b-04a8-489b-8d39-9e5526b43a75": {
-      "type": "logo-list-custom-2",
+    "text_columns_9q773C": {
+      "type": "text-columns",
       "blocks": {
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-0": {
-          "type": "logo_image",
+        "text_block_rGW3BB": {
+          "type": "text_block",
           "settings": {
-            "image": "shopify://shop_images/Glass_tile_homepage_91808fac-d15e-4105-87fa-b125c919af44.jpg",
-            "logo_title": "Pool Tile",
-            "logo_text": "",
+            "enable_image": true,
+            "image": "shopify://shop_images/AgadirAgua.jpg",
+            "image_width": 650,
+            "title": "POOLS",
+            "text": "<p></p><h3></h3>",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/pool-products"
+          }
+        },
+        "text_block_fg7LpY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/ledge-lounger-relaxation-bundle-in-pool-patio-furniture-2-signature-chairs-ice-bin-634542.jpg",
+            "image_width": 650,
+            "title": "OUTDOOR LIVING",
+            "text": "",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/outdoor-living-products"
+          }
+        },
+        "text_block_pGBwDP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/stella-oceano-2-x-10-ceramic-tile-203792.jpg",
+            "image_width": 650,
+            "title": "KITCHEN",
+            "text": "",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/kitchen-tile"
+          }
+        },
+        "text_block_UAUVaD": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/imgi_4_athena-gold-estrella-polished-tile-bathroom-0966.jpg",
+            "image_width": 650,
+            "title": "BATHROOM",
+            "text": "",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/bathroom-tile"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_rGW3BB",
+        "text_block_fg7LpY",
+        "text_block_pGBwDP",
+        "text_block_UAUVaD"
+      ],
+      "name": "t:sections.text-columns.presets.text_columns_with_images.name",
+      "settings": {
+        "title": "DESIGN YOUR ESCAPE",
+        "text": "",
+        "align_text": "center",
+        "three_col_mobile": false,
+        "divider": false,
+        "color_scheme": "none",
+        "css_class": ""
+      }
+    },
+    "slideshow_split_iz4aPw": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_f8q3AY": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Resort Living with AquaBlu",
+            "title": "",
+            "title_size": 40,
+            "subheading": "At AquaBlu, we help you turn everyday spaces into resort-inspired retreats. From luxury pool tile and handcrafted mosaics to designer outdoor furniture, our collections help create a home that feels like a getaway, with a purpose beyond design.",
+            "link": "https://www.aquablumosaics.com/pages/tile-and-stone",
+            "link_text": "SHOP TILE",
+            "link_2": "https://www.aquablumosaics.com/pages/custom-mosaics",
+            "link_text_2": "SHOP CUSTOM",
+            "text_position": "left",
+            "image": "shopify://shop_images/HomePage_-_Porcelain.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_f8q3AY"
+      ],
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "height": 500,
+        "height_mobile": 585,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "css_class": ""
+      }
+    },
+    "promo_grid_three_col_L9FhKb": {
+      "type": "promo-grid-three-col",
+      "blocks": {
+        "advanced_rEizXq": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "SHOP ALL POOL TILE",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/oasis-blue-15-x-15-glass-tile-280912.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#374759"
+          }
+        },
+        "advanced_mpmUgY": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "GLASS POOL TILE",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Vidrepur_Glass_Pool_Tile.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_fcT4Pt": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "PORCELAIN POOL TILE",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Pool_Products_-_New_Homepage_Mockup.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 300,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "top",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_XFYyYm": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "POOL MOSAICS",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Turtle-Step-Markers_-Custom-Mosaics_-Artists-Choice--_AquaBlu-Mosaics.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 300,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_kdBxfX": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "PAVERS &  COPING",
+            "heading": "",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Wood_Look_Porcelain_pavers.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 300,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "bottom",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_rEizXq",
+        "advanced_mpmUgY",
+        "advanced_fcT4Pt",
+        "advanced_XFYyYm",
+        "advanced_kdBxfX"
+      ],
+      "disabled": true,
+      "name": "Promotion grid custom",
+      "settings": {
+        "full_width": false,
+        "heading": "THE INDUSTRY'S PREMIER POOL TILE EXPERTS",
+        "gutter_size": 25,
+        "space_above": false,
+        "space_below": false,
+        "css_class": "home-section-3 blue-bar-overlay grid-column-stack"
+      }
+    },
+    "featured_collection_carousel_3jAhMt": {
+      "type": "featured-collection-carousel",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Feat collection carousel",
+      "settings": {
+        "title": "Featured collection",
+        "tab_collection_1": "outdoor-fire-pits",
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "176417845711ac38f8": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_RGPA9t": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 36954,
+            "dynamic_source": "",
+            "title": "TRUSTED EXPERTS IN POOL & OUTDOOR LIVING",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "#ffffff",
+            "padding_top": 36,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_RGPA9t"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "css_class": ""
+      }
+    },
+    "17648068664a20cf69": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_kkaVfV": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 36958,
+            "dynamic_source": "",
+            "title": "OUR ORIGIN STORY: POOL MOSAICS",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 32,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_kkaVfV"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "css_class": ""
+      }
+    },
+    "lookfy_section1_c8xUkm": {
+      "type": "lookfy-section1",
+      "blocks": {
+        "block_AUX3Bn": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Blue_Zellige_Look_Swimming_Pool_Tile_9a2a7e27-f78c-44f7-a345-93fba5ea4add.jpg",
+            "title": "POOL TILE",
             "link": "shopify://pages/pool-tile"
           }
         },
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-2": {
-          "type": "logo_image",
+        "block_GJWkrT": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/In-pool_furniture_home_page_2.jpg",
-            "logo_title": "In-Pool Furniture",
-            "logo_text": "",
-            "link": "shopify://pages/in-pool-furniture"
-          }
-        },
-        "logo_image_ULyJm3": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Outdoor_Living_Products.jpg",
-            "logo_title": "Fire & Water Features",
-            "logo_text": "",
-            "link": "shopify://pages/outdoor-gas-fire-pits-and-water-features"
-          }
-        },
-        "05fe7af3-3df9-45e7-8c9c-750c5162dfd0": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Pool_mosaics_home_page.jpg",
-            "logo_title": "Pool Mosaics",
-            "logo_text": "",
+            "image": "shopify://shop_images/Swimming_Pool_Mosaics_-_Glass_Turtle_41c2211a-3bdc-4a94-b3c4-468d2dea1aab.jpg",
+            "title": "POOL MOSAICS",
             "link": "shopify://pages/swimming-pool-mosaics"
           }
         },
-        "logo_image_8kjGPB": {
-          "type": "logo_image",
+        "block_AT7kag": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/Zellige_Look_Tile.jpg",
-            "logo_title": "Zellige-Look Tile",
-            "logo_text": "",
-            "link": "shopify://collections/zellige-look-tile"
+            "image": "shopify://shop_images/In_Pool_Loungers_Furniture_684655e9-2302-4ac2-b3e1-88fce81ddc0c.jpg",
+            "title": "POOL FURNITURE",
+            "link": "shopify://pages/in-pool-furniture"
           }
         },
-        "logo_image_kWJxgq": {
-          "type": "logo_image",
+        "block_hUiQwA": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/Pool_Accessories_and_Floats.jpg",
-            "logo_title": "Accessories & Floats",
-            "logo_text": "",
-            "link": "shopify://collections/pool-and-outdoor-accessories"
+            "image": "shopify://shop_images/Fire_Water_Features_for_Swimming_Pools_1c286e67-dc61-4c0a-aa07-0dfc0adcc96c.jpg",
+            "title": "FIRE & WATER FEATURES",
+            "link": "shopify://pages/outdoor-gas-fire-pits-and-water-features"
           }
         },
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-1": {
-          "type": "logo_image",
+        "block_QgD4mx": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/Glass_Tile_Homepage_fa02cd36-da6e-41f7-a794-439726f37146.jpg",
-            "logo_title": "Glass Tile",
-            "logo_text": "",
-            "link": "shopify://pages/glass-mosaic-tile"
-          }
-        },
-        "344f1b72-076c-4940-aac3-49dbdfe5ed33": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Outdoor_living_home_page.jpg",
-            "logo_title": "Outdoor Living",
-            "logo_text": "",
-            "link": "shopify://pages/outdoor-living-products"
-          }
-        },
-        "80fbd045-b12c-4c9e-b103-856fb964c6e2": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Outdoor_Pavers_Homepage.jpg",
-            "logo_title": "Hardscapes",
-            "logo_text": "",
+            "image": "shopify://shop_images/Wood_look_porcelain_pavers_and_coping_593ebc15-0c10-46c4-8339-24b97af400a1.jpg",
+            "title": "PATIO PAVERS & COPING",
             "link": "shopify://pages/outdoor-patio-pavers-and-hardscapes"
           }
         },
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-3": {
-          "type": "logo_image",
+        "block_HWUWeF": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/Popular-Grout-500-x-30-slider.jpg",
-            "logo_title": "Installation Products",
-            "logo_text": "",
+            "image": "shopify://shop_images/White_umbrella_for_in_pool_and_patios_8b45ecc5-0889-48c2-9741-33f9ce08e7e1.jpg",
+            "title": "POOL & PATIO UMBRELLAS",
+            "link": "shopify://collections/outdoor-umbrellas-for-pool-and-patio"
+          }
+        },
+        "block_mQPU8J": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/White_striped_pool_float_e50f8561-7721-4f66-b062-b01b968f9cf0.jpg",
+            "title": "POOL FLOATS",
+            "link": "shopify://collections/luxury-pool-floats-and-pool-noodles"
+          }
+        },
+        "block_Ctm7LT": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Tile_grout_and_adhesives_14355194-dece-43dd-9458-24d46f7c6d64.jpg",
+            "title": "SETTING MATERIALS",
             "link": "shopify://pages/installation"
           }
         }
       },
       "block_order": [
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-0",
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-2",
-        "logo_image_ULyJm3",
-        "05fe7af3-3df9-45e7-8c9c-750c5162dfd0",
-        "logo_image_8kjGPB",
-        "logo_image_kWJxgq",
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-1",
-        "344f1b72-076c-4940-aac3-49dbdfe5ed33",
-        "80fbd045-b12c-4c9e-b103-856fb964c6e2",
-        "template--14459271839816__b6b5c71b-04a8-489b-8d39-9e5526b43a75-167468270738112596-3"
+        "block_AUX3Bn",
+        "block_GJWkrT",
+        "block_AT7kag",
+        "block_hUiQwA",
+        "block_QgD4mx",
+        "block_HWUWeF",
+        "block_mQPU8J",
+        "block_Ctm7LT"
       ],
-      "custom_css": [
-        ".section-header__title {opacity: 0; display: none;}"
-      ],
+      "name": "Lookfy Section 1",
       "settings": {
-        "title": "Shop by Category",
-        "divider": false,
-        "gutter_size": 40,
-        "space_above": true,
-        "space_below": true,
-        "css_class": "home-section-2 logo-list-set-height border-radius-active"
+        "header": "TRUSTED EXPERTS IN POOL & OUTDOOR LIVING"
       }
     },
-    "30705e54-079f-4d8f-a90c-029ef8734e73": {
-      "type": "promo-grid-three-col",
+    "1764807551e1f5a972": {
+      "type": "apps",
       "blocks": {
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-0": {
-          "type": "advanced",
+        "lookfy_gallery_lookfy_gallery_Y6wCfY": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
           "settings": {
-            "subheading": "POOLS",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://pages/pool-products",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Pool_Products_Homepage.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 700,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "f89bc8b2-184c-4d40-9af0-dfe16313243d": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "KITCHEN",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://pages/kitchen-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Ceramic_Kitchen_Tile.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "BATH",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://pages/bathroom-tile",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Bathroom_Tile_a2fbde9b-82d9-4f5b-b684-ee06ff327843.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "5588f136-9544-41ca-8d48-50bfaa4e0fe8": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "OUTDOOR LIVING",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://pages/outdoor-living-products",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Acr630661610688010039469_2x_8b12380d-67cb-4216-b379-f650dc3f9de7.png",
-            "video_url": "",
-            "width": "100",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "60867fe7-1b72-46be-9c82-831703da72b4": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "ARTIFICIAL TURF",
-            "heading": "",
-            "textarea": "",
-            "cta_text1": "",
-            "cta_link1": "shopify://collections/artificial-grass-top-turf-products",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Artificial_Turf.jpg",
-            "video_url": "",
-            "width": "100",
-            "height": 340,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "80% 100%",
-            "color_accent": "#ffffff"
+            "gallery_id": 36967,
+            "dynamic_source": "",
+            "title": "TOP OUTDOOR LUXURY TRENDS",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_color": "#ffffff",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "#ffffff",
+            "custom_class": "",
+            "background_color": "#374759",
+            "padding_top": 52,
+            "padding_bottom": 28,
+            "padding_left_right": 0
           }
         }
       },
       "block_order": [
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-0",
-        "f89bc8b2-184c-4d40-9af0-dfe16313243d",
-        "template--14459271839816__30705e54-079f-4d8f-a90c-029ef8734e73-1676410104fd8ea06b-1",
-        "5588f136-9544-41ca-8d48-50bfaa4e0fe8",
-        "60867fe7-1b72-46be-9c82-831703da72b4"
+        "lookfy_gallery_lookfy_gallery_Y6wCfY"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
-        "heading": "ELEVATE YOUR SPACE",
-        "gutter_size": 25,
-        "space_above": false,
-        "space_below": true,
-        "css_class": "home-section-3 blue-bar-overlay grid-column-stack"
+        "space_around": false,
+        "css_class": ""
       }
     },
-    "slideshow_bdAywG": {
+    "lookfy_section2_TJw9KV": {
+      "type": "lookfy-section2",
+      "blocks": {
+        "block_Q8L4f3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vidrepur_Glass_Pool_Tile_1a884f5a-f516-4864-80ca-d3338af14cd8.jpg",
+            "title": "GLASS POOL TILE",
+            "link": "shopify://collections/glass-pool-tile"
+          }
+        },
+        "block_RMpzw4": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Sunburst-CobaltBlue4_569bd415-4707-49e2-8f00-fafc0cdd7bff.jpg",
+            "title": "PORCELAIN POOL TILE",
+            "link": "shopify://collections/porcelain-pool-tile"
+          }
+        },
+        "block_djgLQF": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vondom-Ibiza-In-Pool-Sun-Lounger_7.jpg",
+            "title": "POOL LOUNGERS",
+            "link": "shopify://collections/in-pool-loungers"
+          }
+        },
+        "block_MJDbLy": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Autograph_side_table_for_pool_shelf_Ledge_Lounger_a8885470-79ae-40a0-beda-400fd0f06c97.jpg",
+            "title": "IN POOL TABLES",
+            "link": "shopify://collections/in-pool-tables"
+          }
+        },
+        "block_jHMztb": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/PrismHardscapesLombardFire_WaterBowl_OutdoorGasFireFeature_1800x1800_83007b50-a207-48b0-987a-c9d6a422a5bb.jpg",
+            "title": "FIRE & WATER FEATURES",
+            "link": "shopify://collections/fire-and-water-features"
+          }
+        },
+        "block_pnXRp9": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/oasis-turquoise-15-x-15-glass-tile-359983_1cc40780-52c3-4e0e-8761-51c1cadcb5ba.jpg",
+            "title": "2CM PAVERS",
+            "link": "shopify://collections/2cm-outdoor-porcelain-pavers-and-coping"
+          }
+        },
+        "block_pttVjN": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Sunburst-TerraBlue_9e92eee8-bf43-4d66-9d68-da5a430a2c18.jpg",
+            "title": "6\" X 6\" WATERLINE TILE",
+            "link": "shopify://collections/6x6-pool-waterline-tile"
+          }
+        },
+        "block_hdaNXc": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Fireglass_Pearl_-_Fire_Fly_1_2_x_1_2_097458M_Vidrepur_Pool_Tile_9cc41a62-d6f2-4415-8b6e-e6b3392f80f5.jpg",
+            "title": "GLOW IN THE DARK TILE",
+            "link": "shopify://collections/glow-in-the-dark-glass-pool-tile"
+          }
+        },
+        "block_faahjB": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/ledge-lounger-signature-chaise-deep-cushion-chair-accessory-224901_cec46aee-8114-4d9c-8bd6-b1fa006ccdb9.jpg",
+            "title": "FURNITURE FOR 12\" BAJA SHELF",
+            "link": "shopify://collections/in-pool-furniture-12-water-depth"
+          }
+        },
+        "block_D7EgEn": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Fire_Pits_and_Fire_Features_41c64e88-0a23-494d-a0e8-1553c3c87167.png",
+            "title": "FIRE BOWL FEATURES",
+            "link": "shopify://collections/fire-bowls"
+          }
+        },
+        "block_wgUzDh": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Pavers_and_Coping_96594c61-46e2-4e53-bdac-ffee4ffbcd58.jpg",
+            "title": "MODERN COPING",
+            "link": "shopify://collections/modern-pool-coping"
+          }
+        },
+        "block_E3GUBe": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Wood_Look_Porcelain_pavers_82e33195-0d6f-425b-91a8-114a26a0d93e.jpg",
+            "title": "WOOD LOOK PAVERS",
+            "link": "shopify://collections/wood-look-porcelain-pavers-and-coping"
+          }
+        },
+        "block_ce9HU9": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/AquaBlu-The-Outdoor-Plus-Radius-Scupper-Pool-Wall_7e9de2ee-ca8c-4905-a968-0edf26672f81.jpg",
+            "title": "POOL SCUPPERS",
+            "link": "shopify://collections/scuppers-outdoor-water-features"
+          }
+        },
+        "block_Rm6DGe": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/AUTUMN_LEAVES_FLAGSTONE_INSTALL_1_afd2107d-c94a-4956-8ed5-090c634a4b3d.jpg",
+            "title": "FLAGSTONE PAVERS",
+            "link": "shopify://collections/flagstone-pavers-outdoor-stone-tile"
+          }
+        },
+        "block_AAXRjV": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/evergrass-viridian-green-turf-96-15-ft-wide-premium-artificial-grass-955794_e93a6eed-fb4c-494e-892c-61c479cdb135.jpg",
+            "title": "ARTIFICIAL TURF",
+            "link": "shopify://collections/evergrass-artificial-turf"
+          }
+        },
+        "block_ecf3kk": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/tupelo-goods-loop-lounge-chair-pool-patio-chair-202821_04cb347d-cfd2-4877-b751-79a3ad5c0eb2.jpg",
+            "title": "PATIO FURNITURE",
+            "link": "shopify://collections/pool-and-patio-outdoor-furniture"
+          }
+        },
+        "block_CGMLrq": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/outdoor_fire_pits_737f37ae-6ce0-4446-9890-e6862418872f.jpg",
+            "title": "FIRE PITS",
+            "link": "shopify://collections/outdoor-fire-pits"
+          }
+        }
+      },
+      "block_order": [
+        "block_Q8L4f3",
+        "block_RMpzw4",
+        "block_djgLQF",
+        "block_MJDbLy",
+        "block_jHMztb",
+        "block_pnXRp9",
+        "block_pttVjN",
+        "block_hdaNXc",
+        "block_faahjB",
+        "block_D7EgEn",
+        "block_wgUzDh",
+        "block_E3GUBe",
+        "block_ce9HU9",
+        "block_Rm6DGe",
+        "block_AAXRjV",
+        "block_ecf3kk",
+        "block_CGMLrq"
+      ],
+      "name": "Lookfy Section 2",
+      "settings": {
+        "header": "TOP OUTDOOR LUXURY TRENDS",
+        "bg_color": "#374759",
+        "header_color": "#ffffff"
+      }
+    },
+    "slideshow_diDwba": {
       "type": "slideshow",
       "blocks": {
-        "hero_AE4Fyj": {
+        "hero_yiVrGh": {
+          "type": "hero",
+          "settings": {
+            "image_width": 300,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": false,
+            "top_subheading": "SPOTLIGHT: TRADE & COMMERCIAL",
+            "title": "<p>JOIN THE AQUAPRO TRADE NETWORK</p>",
+            "title_size": 44,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/pages/wholesale",
+            "link_text": "SIGN UP",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fcf4f1",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/AquaPro_Landing_Page.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
+        "hero_mhiaFe": {
           "type": "hero",
           "settings": {
             "image_width": 650,
@@ -433,107 +704,46 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
+            "top_subheading": "SPOTLIGHT: POOL DESIGN",
+            "title": "<p>ALL GLASS TILE POOLS</p>",
+            "title_size": 40,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/current-sales-promos",
-            "link_text": "",
+            "link": "https://www.aquablumosaics.com/pages/all-glass-tile-pool",
+            "link_text": "LEARN MORE",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4th_thin_ba_1.png",
-            "image_mobile": "shopify://shop_images/4th_mobile_1.png",
+            "color_accent": "#fcf4f1",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Shop_all_pool_tile_2.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
-        }
-      },
-      "block_order": [
-        "hero_AE4Fyj"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "full_width_mobile": false,
-        "contact_popup": false,
-        "desktop_size": 0,
-        "gutter_size": 20,
-        "space_above": true,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": "home-section-2-5"
-      }
-    },
-    "4d538ad8-5011-45d2-a63f-4de0e4c7de20": {
-      "type": "promo-grid",
-      "blocks": {
-        "template--14481642094664__4d538ad8-5011-45d2-a63f-4de0e4c7de20-1673998668676ecdb3-0": {
-          "type": "advanced",
+        },
+        "hero_Mpwitm": {
+          "type": "hero",
           "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "SPOTLIGHT: SIGNATURE MATERIALS",
+            "title": "<p>SWIMMING POOL TILE</p>",
+            "title_size": 40,
             "subheading": "",
-            "heading": "ALL GLASS TILE POOLS",
-            "textarea": "THE PINNACLE OF POOL FINISHES",
-            "cta_text1": "Learn More",
-            "cta_link1": "shopify://pages/all-glass-tile-pool",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/GM_20.49_3_4_x_3_4_Glass_Tile_Bisazza_Mosaic_Tile3.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "80% 0",
-            "color_accent": "#2bd8e2"
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/collections/shop-all-pool-tile",
+            "link_text": "BROWSE ALL",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fcf4f1",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Shop_all_pool_tile_1.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
           }
         },
-        "template--14481642094664__4d538ad8-5011-45d2-a63f-4de0e4c7de20-1673998668676ecdb3-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "CUSTOM MOSAICS",
-            "textarea": "YOUR VISION, BROUGHT TO LIFE",
-            "cta_text1": "Learn More",
-            "cta_link1": "shopify://pages/custom-mosaics",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/Custom_Mosaic_Mural.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "focal_point": "80% 100%",
-            "color_accent": "#2bd8e2"
-          }
-        }
-      },
-      "block_order": [
-        "template--14481642094664__4d538ad8-5011-45d2-a63f-4de0e4c7de20-1673998668676ecdb3-0",
-        "template--14481642094664__4d538ad8-5011-45d2-a63f-4de0e4c7de20-1673998668676ecdb3-1"
-      ],
-      "custom_css": [
-        ".home-section-5 {background-color: #f3f3f3;}"
-      ],
-      "settings": {
-        "full_width": false,
-        "heading": "",
-        "gutter_size": 25,
-        "section_gutter_size": 20,
-        "space_above": true,
-        "space_below": true,
-        "two_column_mobile": true,
-        "three_column_mobile": false,
-        "css_class": "home-section-5"
-      }
-    },
-    "slideshow_diDwba": {
-      "type": "slideshow",
-      "blocks": {
         "hero_WPM9Fa": {
           "type": "hero",
           "settings": {
@@ -542,232 +752,340 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
+            "top_subheading": "SPOTLIGHT: MOSAIC ARTISTRY",
+            "title": "<p>POOL MOSAICS</p>",
+            "title_size": 44,
             "subheading": "",
             "custom_text": "",
-            "link": "shopify://pages/wholesale",
-            "link_text": "",
+            "link": "https://www.aquablumosaics.com/collections/pool-mosaics",
+            "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/AquaPro_Banner_2025.png",
-            "image_mobile": "shopify://shop_images/AquaPro_Banner_2025_mb.png",
+            "color_accent": "#374759",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Pool_mosaics_homepage_1.png",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "20% 50%"
+          }
+        },
+        "hero_ejj8wc": {
+          "type": "hero",
+          "disabled": true,
+          "settings": {
+            "image_width": 650,
+            "html_embed": "",
+            "html_embed_two": "",
+            "additional_text_field": "",
+            "title_h1": true,
+            "top_subheading": "Luxury Lounging on Water",
+            "title": "<p>POOL FLOATS</p>",
+            "title_size": 40,
+            "subheading": "",
+            "custom_text": "",
+            "link": "https://www.aquablumosaics.com/collections/luxury-pool-floats-and-pool-noodles",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#fcf4f1",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/In_Pool_Furniture_HomePage_4.png",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
           }
         }
       },
       "block_order": [
-        "hero_WPM9Fa"
+        "hero_yiVrGh",
+        "hero_mhiaFe",
+        "hero_Mpwitm",
+        "hero_WPM9Fa",
+        "hero_ejj8wc"
       ],
       "settings": {
         "full_width": false,
-        "full_width_mobile": false,
+        "full_width_mobile": true,
         "contact_popup": false,
-        "desktop_size": 0,
+        "desktop_size": -10,
         "gutter_size": 23,
-        "space_above": true,
-        "space_below": true,
-        "mobile_size": 0,
+        "space_above": false,
+        "space_below": false,
+        "mobile_size": 15,
         "style": "arrows",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 7,
         "css_class": ""
       }
     },
-    "642626b5-0326-4165-bdf3-ac1ef0d767a4": {
-      "type": "featured-collections-custom",
+    "text_columns_Db3kck": {
+      "type": "text-columns",
       "blocks": {
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-0": {
-          "type": "collection",
+        "text_block_V3KMrB": {
+          "type": "text_block",
           "settings": {
-            "title": "ALL GLASS",
-            "image": "shopify://shop_images/All_glass_tile_pool_80bf1887-1836-4791-9a26-21496a36d577.jpg",
-            "url": "shopify://collections/glass-tile",
-            "tooltip": false,
-            "tooltip_text": ""
+            "enable_image": true,
+            "image": "shopify://shop_images/Vidrepur_Glass_Tile_f475902f-3793-4778-9212-cd65a7145672.jpg",
+            "image_width": 650,
+            "title": "GLASS POOL TILE",
+            "text": "<p>Glass pool tile brings vibrant color, shimmering light, and luxurious dimension to any pool or spa with a durable, easy-to-maintain finish.</p>",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/collections/glass-pool-tile"
           }
         },
-        "collection_Rrcz3x": {
-          "type": "collection",
+        "text_block_hJPxhK": {
+          "type": "text_block",
           "settings": {
-            "title": "PORCELAIN POOL",
-            "image": "shopify://shop_images/Porcelain_Pool_Tile_127f352a-6716-4a31-9daa-7ae35f069e8c.jpg",
-            "url": "shopify://collections/porcelain-pool-tile",
-            "tooltip": false,
-            "tooltip_text": ""
+            "enable_image": true,
+            "image": "shopify://shop_images/MarrakechLightBlue_2_x8_PorcelainTile_RNDMARRLBGL28_Kitchen_Bathroom_PoolTilebyAquatica-2.jpg",
+            "image_width": 650,
+            "title": "PORCELAIN POOL TILE",
+            "text": "<p>Porcelain pool tile delivers durable, low-maintenance style for sleek, long-lasting waterlines and outdoor spaces.</p>",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/pages/custom-mosaics"
           }
         },
-        "collection_jJcGa8": {
-          "type": "collection",
+        "text_block_UANpF9": {
+          "type": "text_block",
           "settings": {
-            "title": "BACKSPLASHES",
-            "image": "shopify://shop_images/folk-pearl-7-x-16-porcelain-tile-920485.jpg",
-            "url": "shopify://collections/kitchen-backsplash-tile",
-            "tooltip": false,
-            "tooltip_text": ""
+            "enable_image": true,
+            "image": "shopify://shop_images/DiamondReflection-PacificBlueAkron3.jpg",
+            "image_width": 650,
+            "title": "6\" X 6\" WATERLINE",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions.</p>",
+            "button_label": "SHOP NOW",
+            "button_link": ""
           }
         },
-        "collection_Q9Ax7K": {
-          "type": "collection",
+        "text_block_hTBw9B": {
+          "type": "text_block",
           "settings": {
-            "title": "STONE BATHROOM",
-            "image": "shopify://shop_images/carrara-white-2-hexagon-mosaic-stone-tile-404186.jpg",
-            "url": "https://www.aquablumosaics.com/collections/bathroom-stone-tile",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "261afe8b-0786-43a2-a006-be1112902b01": {
-          "type": "collection",
-          "settings": {
-            "title": "PAVERS & COPING",
-            "image": "shopify://shop_images/living-style-cream-pavers-porcelain-e_jpg.jpg",
-            "url": "shopify://collections/outdoor-pavers-and-coping",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "bc2efd61-d747-4dcd-8353-54c3fd50748f": {
-          "type": "collection",
-          "settings": {
-            "title": "PATIO FURNITURE",
-            "image": "shopify://shop_images/Patio_Sectional_Sofa_by_Ledge_Lounger.jpg",
-            "url": "shopify://collections/outdoor-patio-furniture",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "139bc28c-b362-4c60-81b8-0e57f99bcc64": {
-          "type": "collection",
-          "settings": {
-            "title": "FIRE PITS",
-            "image": "shopify://shop_images/Manchester_Fire_Pit_by_the_Outdoor_Plus_3_1800x1800_22149991-ef5d-45eb-ae39-2167a85507c9.webp",
-            "url": "shopify://collections/outdoor-fire-pits",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-3": {
-          "type": "collection",
-          "settings": {
-            "title": "DAYBEDS",
-            "image": "shopify://shop_images/Ulm_Daybed_with_Fixed_Backrests_and_Sunroof_Furniture_by_Vondom_1080x_7421078e-980c-44ea-a779-237dd43bda96.jpg",
-            "url": "shopify://collections/daybeds-and-cabanas",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-1": {
-          "type": "collection",
-          "settings": {
-            "title": "POOL MOSAICS",
-            "image": "shopify://shop_images/pool_mosaics.jpg",
-            "url": "shopify://collections/pool-mosaics",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-5": {
-          "type": "collection",
-          "settings": {
-            "title": "IN-POOL FURNITURE",
-            "image": "shopify://shop_images/pool_furniture.jpg",
-            "url": "shopify://collections/in-pool-furniture",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "collection_QEqkiR": {
-          "type": "collection",
-          "settings": {
-            "title": "UMBRELLAS",
-            "image": "shopify://shop_images/outdoor_pool_umbrellas.jpg",
-            "url": "shopify://collections/outdoor-umbrellas-for-pool-and-patio",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "678c9677-08d5-4168-a86c-519c2a9df9c5": {
-          "type": "collection",
-          "settings": {
-            "title": "POOL FLOATS",
-            "image": "shopify://shop_images/Floats.jpg",
-            "url": "shopify://collections/luxury-pool-floats-and-pool-noodles",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-2": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "title": "EPOXY GROUT",
-            "image": "shopify://shop_images/tile_grout.jpg",
-            "url": "shopify://collections/tile-grout",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-4": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "title": "FIRE/WATER FEATURES",
-            "image": "shopify://shop_images/fireandwater2.jpg",
-            "url": "shopify://collections/fire-and-water-features",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "88bea911-b90f-4b8a-a599-92ad1625facd": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "title": "POOL CLEANERS",
-            "image": "shopify://shop_images/cosmy2.jpg",
-            "url": "shopify://collections/robotic-pool-cleaners",
-            "tooltip": false,
-            "tooltip_text": ""
-          }
-        },
-        "d8d05416-030f-448d-a260-bdedaac614e6": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "title": "ARTIFICIAL TURF",
-            "image": "shopify://shop_images/Turf.jpg",
-            "url": "shopify://collections/artificial-grass-top-turf-products",
-            "tooltip": false,
-            "tooltip_text": ""
+            "enable_image": true,
+            "image": "shopify://shop_images/Fireglass_Pearl_-_Fire_Fly_1_2_x_1_2_097458M_Vidrepur_Pool_Tile.jpg",
+            "image_width": 650,
+            "title": "GLOW IN THE DARK",
+            "text": "<p>Glow-in-the-dark tile adds a bold, luminous touch to pools and spas, creating nighttime ambiance and safety-friendly visibility.</p>",
+            "button_label": "SHOP NOW",
+            "button_link": "https://www.aquablumosaics.com/pages/all-glass-tile-pool"
           }
         }
       },
       "block_order": [
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-0",
-        "collection_Rrcz3x",
-        "collection_jJcGa8",
-        "collection_Q9Ax7K",
-        "261afe8b-0786-43a2-a006-be1112902b01",
-        "bc2efd61-d747-4dcd-8353-54c3fd50748f",
-        "139bc28c-b362-4c60-81b8-0e57f99bcc64",
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-3",
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-1",
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-5",
-        "collection_QEqkiR",
-        "678c9677-08d5-4168-a86c-519c2a9df9c5",
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-2",
-        "template--14459271839816__642626b5-0326-4165-bdf3-ac1ef0d767a4-167476195392eb7c87-4",
-        "88bea911-b90f-4b8a-a599-92ad1625facd",
-        "d8d05416-030f-448d-a260-bdedaac614e6"
+        "text_block_V3KMrB",
+        "text_block_hJPxhK",
+        "text_block_UANpF9",
+        "text_block_hTBw9B"
       ],
+      "disabled": true,
+      "name": "t:sections.text-columns.presets.text_columns_with_images.name",
       "settings": {
-        "title": "POPULAR COLLECTIONS",
+        "title": "TRENDING NOW",
+        "text": "",
+        "align_text": "center",
+        "three_col_mobile": false,
         "divider": false,
-        "css_class": "exploring-pool-mosaic-grid"
+        "color_scheme": "1",
+        "css_class": ""
+      }
+    },
+    "text_columns_pHfYVE": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_H3Njgg": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/oasis-blue-15-x-15-glass-tile-875626.jpg",
+            "image_width": 650,
+            "title": "GLASS",
+            "text": "<p></p><h3></h3>",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/glass-mosaic-tile"
+          }
+        },
+        "text_block_qGB8KA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Coastline_-_Sky_1800x1800_0c54c61b-b2dc-4448-94a2-fa9337aba023.webp",
+            "image_width": 650,
+            "title": "PORCELAIN",
+            "text": "",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/shop-porcelain-tile"
+          }
+        },
+        "text_block_pztw6C": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/carrara-white-2-hexagon-mosaic-stone-tile-404186.jpg",
+            "image_width": 650,
+            "title": "STONE",
+            "text": "",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/stone-tile"
+          }
+        },
+        "text_block_HQpAFH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Stella_Emerald_2_x_10_Ceramic_Tile_Bathroom_Kitchen_Tile_6_1800x1800_3587e96d-9dd3-4f6f-802f-6ac21536b5aa.webp",
+            "image_width": 650,
+            "title": "CERAMIC",
+            "text": "",
+            "button_label": "",
+            "button_link": "https://www.aquablumosaics.com/pages/ceramic-tile"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_H3Njgg",
+        "text_block_qGB8KA",
+        "text_block_pztw6C",
+        "text_block_HQpAFH"
+      ],
+      "name": "t:sections.text-columns.presets.text_columns_with_images.name",
+      "settings": {
+        "title": "MATERIALS TO MATCH YOUR VISION",
+        "text": "",
+        "align_text": "center",
+        "three_col_mobile": false,
+        "divider": false,
+        "color_scheme": "2",
+        "css_class": ""
+      }
+    },
+    "176480055700fff8fc": {
+      "type": "apps",
+      "blocks": {
+        "lookfy_gallery_lookfy_gallery_L4iWN8": {
+          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+          "settings": {
+            "gallery_id": 36617,
+            "dynamic_source": "",
+            "title": "",
+            "subtitle": "",
+            "heading_size": "0.8",
+            "heading_color": "",
+            "heading_align": "center",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 0,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "lookfy_gallery_lookfy_gallery_L4iWN8"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "css_class": ""
+      }
+    },
+    "rich_text_BkWLUf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MKxUBK": {
+          "type": "heading",
+          "settings": {
+            "title": "THE LATEST IN LUXURY"
+          }
+        },
+        "text_xewxBd": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Introducing BluHaven - an AquaBlu exclusive line. Large-format porcelain tile designed for waterlines that flow with style. Minimal grout, maximum impact, and pure resort-ready sophistication.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MKxUBK",
+        "text_xewxBd"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false,
+        "css_class": ""
+      }
+    },
+    "text_columns_custom_GDwQRf": {
+      "type": "text-columns-custom",
+      "blocks": {
+        "text_block_L9Nit3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
+            "image_width": 650,
+            "title": "",
+            "button_label": "GLASS",
+            "button_link": "https://www.aquablumosaics.com/pages/glass-mosaic-tile"
+          }
+        },
+        "text_block_H8yPpE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Coastline_-_Forest.jpg",
+            "image_width": 650,
+            "title": "",
+            "button_label": "PORCELAIN",
+            "button_link": "https://www.aquablumosaics.com/pages/shop-porcelain-tile"
+          }
+        },
+        "text_block_bhxFjb": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/carrara-white-2-hexagon-mosaic-stone-tile-404186.jpg",
+            "image_width": 650,
+            "title": "",
+            "button_label": "STONE",
+            "button_link": "https://www.aquablumosaics.com/pages/stone-tile"
+          }
+        },
+        "text_block_rHdUm7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Stella_Emerald_2_x_10_Ceramic_Tile_Bathroom_Kitchen_Tile_6_1800x1800_3587e96d-9dd3-4f6f-802f-6ac21536b5aa.webp",
+            "image_width": 650,
+            "title": "",
+            "button_label": "CERAMIC",
+            "button_link": "https://www.aquablumosaics.com/pages/ceramic-tile"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_L9Nit3",
+        "text_block_H8yPpE",
+        "text_block_bhxFjb",
+        "text_block_rHdUm7"
+      ],
+      "disabled": true,
+      "name": "Text Columns Custom",
+      "settings": {
+        "title": "MATERIALS TO MATCH YOUR VISION",
+        "text": "",
+        "column_size": 4,
+        "align_text": "center",
+        "gutter_size": 40,
+        "space_above": false,
+        "space_below": false,
+        "divider": false,
+        "color_scheme": "2",
+        "css_class": ""
       }
     },
     "310c0c1b-4bb2-48e2-a6fa-5825fdfcfe18": {
@@ -793,7 +1111,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/Conservation_Banner.jpg",
-            "image_mobile": "shopify://shop_images/Conservation_Banner_Final_1.png",
+            "image_mobile": "shopify://shop_images/Conservation_Banner.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
@@ -802,157 +1120,20 @@
       "block_order": [
         "87d51e8a-f6ca-4a66-ac3d-736fb843b55f"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "full_width_mobile": false,
         "contact_popup": false,
         "desktop_size": 0,
         "gutter_size": 18,
-        "space_above": true,
-        "space_below": true,
+        "space_above": false,
+        "space_below": false,
         "mobile_size": 0,
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
-      }
-    },
-    "08886a75-76d2-4348-951a-12f407cb264e": {
-      "type": "promo-grid",
-      "blocks": {
-        "07f28ab6-4f0e-49f6-bda2-db83649caaa2": {
-          "type": "simple",
-          "settings": {
-            "link": "shopify://pages/glass-mosaic-tile",
-            "text": "GLASS",
-            "image": "shopify://shop_images/OP_25.06_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza3.jpg",
-            "width": "33",
-            "height": 440
-          }
-        },
-        "256bd2e3-428f-4065-b22e-137827291f5a": {
-          "type": "simple",
-          "settings": {
-            "link": "shopify://pages/shop-porcelain-tile",
-            "text": "PORCELAIN",
-            "image": "shopify://shop_images/verdigris-field-6-x-6-porcelain-tile-751467.jpg",
-            "width": "33",
-            "height": 440
-          }
-        },
-        "6ce9af08-6db5-45a9-92ad-be602c279599": {
-          "type": "simple",
-          "settings": {
-            "link": "shopify://pages/stone-tile",
-            "text": "STONE",
-            "image": "shopify://shop_images/Natural_Stone_6172d70d-9172-4151-b4f0-3bb3543cf802.jpg",
-            "width": "33",
-            "height": 440
-          }
-        }
-      },
-      "block_order": [
-        "07f28ab6-4f0e-49f6-bda2-db83649caaa2",
-        "256bd2e3-428f-4065-b22e-137827291f5a",
-        "6ce9af08-6db5-45a9-92ad-be602c279599"
-      ],
-      "settings": {
-        "full_width": false,
-        "heading": "SHOP TILES BY MATERIAL",
-        "gutter_size": 20,
-        "section_gutter_size": 40,
-        "space_above": false,
-        "space_below": false,
-        "two_column_mobile": false,
-        "three_column_mobile": true,
-        "css_class": "home-section-10"
-      }
-    },
-    "3aa34ff7-417a-4828-b95a-946c5f5f32b0": {
-      "type": "featured-collection-custom",
-      "disabled": true,
-      "settings": {
-        "title": "EXPLORE THE POSSIBILITIES",
-        "tab_collection_1": "in-pool-furniture",
-        "tabs_title_1": "In-Pool Furniture",
-        "tab_collection_2": "outdoor-fire-pits",
-        "tabs_title_2": "Fire Pits & Tables",
-        "tab_collection_3": "outdoor-games",
-        "tabimage2": "shopify://shop_images/Group_26.png",
-        "tabs_title_3": "Outdoor Games",
-        "css_class": "home-section-9 featured-collection-tabs home-featured-collection-section"
-      }
-    },
-    "2554e28d-0d6c-49bf-91bd-0f901e71c7d2": {
-      "type": "advanced-content",
-      "blocks": {
-        "template--14481642094664__2554e28d-0d6c-49bf-91bd-0f901e71c7d2-167327763907008cdd-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Our_Story_Image_Homepage.jpg",
-            "link": "",
-            "width": "50%",
-            "alignment": "center"
-          }
-        },
-        "template--14481642094664__2554e28d-0d6c-49bf-91bd-0f901e71c7d2-167327763907008cdd-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<h2>Transform Your Space with AquaBlu Mosaics</h2><p>Elevate your design with luxury <a href=\"https://www.aquablumosaics.com/collections/porcelain-pool-tile\" title=\"pool tiles\">pool tiles</a>, decorative <a href=\"https://www.aquablumosaics.com/pages/swimming-pool-mosaics\" title=\"pool mosaics\">pool mosaics</a>, and sophisticated <a href=\"https://www.aquablumosaics.com/collections/in-pool-furniture\" title=\"pool furniture\">pool furniture</a> that redefine outdoor living. With the largest curated selection of porcelain, stone, and <a href=\"https://www.aquablumosaics.com/collections/glass-tile\" title=\"glass tiles\">glass tiles</a>, we empower homeowners, designers, and architects to create breathtaking designs that stand out. Whether you’re creating a stunning swimming pool retreat, a bold <a href=\"https://www.aquablumosaics.com/collections/kitchen-backsplash-tile\" title=\"kitchen backsplash\">kitchen backsplash</a>, <a href=\"https://www.aquablumosaics.com/collections/coastal-bathroom-tile\" title=\"coastal bathroom\">coastal bathroom</a>, or a sleek outdoor oasis, our premium products are crafted to endure and impress.</p>\n<p>At AquaBlu Mosaics, we're more than just a mosaic supplier - we're committed to giving back. Every purchase supports ocean conservation through our charitable partnerships - proof that beauty can make a difference. By choosing AquaBlu, you're not just elevating your home; you're contributing to the preservation of our planet's most precious ecosystems.</p>\n<p>Explore our catalog today and see why we're trusted by thousands of happy homeowners and trade professionals. Let us help you bring your design dreams to life while leaving a lasting impact on the world around us.</p>",
-            "width": "50%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14481642094664__2554e28d-0d6c-49bf-91bd-0f901e71c7d2-167327763907008cdd-0",
-        "template--14481642094664__2554e28d-0d6c-49bf-91bd-0f901e71c7d2-167327763907008cdd-1"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": "home-section-13"
-      }
-    },
-    "473d1d3e-a445-4cc3-9427-53b85f66ff55": {
-      "type": "advanced-content",
-      "blocks": {
-        "92917def-7411-430d-a880-fd53d2318bf4": {
-          "type": "liquid",
-          "settings": {
-            "code": "<h2 class=\"text-center\"><b>FEATURED BUILDER</b></h2>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        },
-        "template--14459271839816__473d1d3e-a445-4cc3-9427-53b85f66ff55-16806136719cfc5ceb-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<h3>JEFF HAMPE POOLS</h3><p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion. Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion. Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
-            "width": "50%",
-            "alignment": "center"
-          }
-        },
-        "template--14459271839816__473d1d3e-a445-4cc3-9427-53b85f66ff55-16806136719cfc5ceb-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/jeff-image.png",
-            "link": "",
-            "width": "50%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "92917def-7411-430d-a880-fd53d2318bf4",
-        "template--14459271839816__473d1d3e-a445-4cc3-9427-53b85f66ff55-16806136719cfc5ceb-1",
-        "template--14459271839816__473d1d3e-a445-4cc3-9427-53b85f66ff55-16806136719cfc5ceb-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "space_around": true,
-        "css_class": "home-section-12"
       }
     },
     "1753805430420396ae": {
@@ -961,61 +1142,279 @@
         "lookfy_gallery_lookfy_gallery_nnwpEd": {
           "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
           "settings": {
-            "gallery_id": 29256,
+            "gallery_id": 37004,
             "dynamic_source": "",
-            "title": "",
+            "title": "WHAT'S TRENDING INDOORS",
             "subtitle": "",
             "heading_size": "1",
-            "heading_color": "",
+            "heading_color": "#374759",
             "heading_align": "center",
             "desc_style": "subtitle",
             "desc_color": "",
             "custom_class": "",
-            "background_color": "",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_left_right": 75
+            "background_color": "#f1e7dd",
+            "padding_top": 52,
+            "padding_bottom": 4,
+            "padding_left_right": 0
           }
         }
       },
       "block_order": [
         "lookfy_gallery_lookfy_gallery_nnwpEd"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
-        "space_around": true,
+        "space_around": false,
         "css_class": ""
       }
     },
-    "1749827550c7786343": {
-      "type": "apps",
+    "lookfy_section2_McNNVt": {
+      "type": "lookfy-section2",
       "blocks": {
-        "lookfy_gallery_lookfy_gallery_WaFyCw": {
-          "type": "shopify://apps/lookfy-gallery/blocks/lookfy-gallery/596af5f6-9933-4730-95c2-f7d8d52a0c3e",
+        "block_3XJ4Bw": {
+          "type": "block",
           "settings": {
-            "gallery_id": 35733,
-            "dynamic_source": "",
-            "title": "",
-            "subtitle": "",
-            "heading_size": "0.8",
-            "heading_color": "",
-            "heading_align": "center",
-            "desc_style": "subtitle",
-            "desc_color": "",
-            "custom_class": "",
-            "background_color": "",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_left_right": 0
+            "image": "shopify://shop_images/Zest_Star_4_x_4_Ceramic_Tile_Backsplash_Shower_Tile10_74ca5cf8-cb0d-4fb7-aeb3-38a24a3901ed.jpg",
+            "title": "KITCHEN BACKSPLASH TILE",
+            "link": "shopify://collections/kitchen-backsplash-tile"
+          }
+        },
+        "block_JyUYEc": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Zest_Sky_4_x_4_Ceramic_Tile_Backsplash_Shower_Tile2_dcf89350-5fdb-4757-aba4-54492466b7c8.jpg",
+            "title": "COASTAL BATHROOM TILE",
+            "link": "shopify://collections/coastal-bathroom-tile"
+          }
+        },
+        "block_J7KL8n": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/gems-caraibi-bathroom-0798-alt-01_45d8ead4-2cef-4d76-9f3e-64f68064f165.jpg",
+            "title": "PORCELAIN BATHROOM TILE",
+            "link": "shopify://collections/porcelain-bathroom-tile"
+          }
+        },
+        "block_XhnHyF": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Marrakech_Sea_Water_4_x_4_Porcelain_Tile_RNDMARRSWGL44_Kitchen_Bathroom_Pool_Tile_by_Aquatica_9019a081-f2d0-4d35-8a05-eefb91f824ec.jpg",
+            "title": "PORCELAIN KITCHEN TILE",
+            "link": "shopify://collections/porcelain-kitchen-tile"
+          }
+        },
+        "block_e9dkPh": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Kitchen_Backsplash_Landing_page_e44d8ffe-2954-484e-a373-d0ab2844001d.jpg",
+            "title": "COASTAL KITCHEN TILE",
+            "link": "shopify://collections/coastal-kitchen-tile"
+          }
+        },
+        "block_tGtfLJ": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/stella-biscotti-2-x-10-ceramic-tile-144267_5982cf1b-7266-4d00-9dad-e81353766da0.jpg",
+            "title": "BATHROOM SHOWER TILE",
+            "link": "shopify://collections/bathroom-stone-tile"
+          }
+        },
+        "block_8CUYqM": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Glass_Kitchen_Tile_ebe1dc0a-ceee-40c2-860a-ec35da57359d.jpg",
+            "title": "GLASS KITCHEN TILE",
+            "link": "shopify://collections/glass-kitchen-tile"
+          }
+        },
+        "block_TmdXKE": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Glass_Bathroom_Tile_by_Vidrepur_544318b5-3552-4f8a-a9b6-55da3a4fb9ec.jpg",
+            "title": "GLASS BATHROOM TILE",
+            "link": "shopify://collections/glass-bathroom-tiles"
+          }
+        },
+        "block_WBtbCQ": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Marrakech_Ocean_2_x_8_Porcelain_Tile_RNDMARROCGL28_Kitchen_Bathroom_Pool_Tile_by_Aquatica_09854bcd-e3a8-4b99-81f8-768318ce7b8f.jpg",
+            "title": "BLUE BATHROOM TILE",
+            "link": "shopify://collections/blue-bathroom-tiles"
           }
         }
       },
       "block_order": [
-        "lookfy_gallery_lookfy_gallery_WaFyCw"
+        "block_3XJ4Bw",
+        "block_JyUYEc",
+        "block_J7KL8n",
+        "block_XhnHyF",
+        "block_e9dkPh",
+        "block_tGtfLJ",
+        "block_8CUYqM",
+        "block_TmdXKE",
+        "block_WBtbCQ"
       ],
+      "name": "Lookfy Section 2",
+      "settings": {
+        "header": "WHAT'S TRENDING INDOORS",
+        "bg_color": "#f1e7dd",
+        "header_color": "#374759"
+      }
+    },
+    "promo_grid_fr3eTw": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_yKqmNC": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "WATERPROOFING",
+            "textarea": "Protect every pool tile project with our professional-grade waterproofing solutions, engineered for durability and peace of mind.",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/waterproofing",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_rE9Jmi": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "TILE ADHESIVE",
+            "textarea": "Once you’ve chosen the perfect pool tile, ensure lasting strength and reliability with our high-performance tile adhesives.",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/tile-adhesives",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_8FNQeB": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "TILE GROUT",
+            "textarea": "Discover our premium selection of pool tile grouts, offering lasting strength, seamless finishes, and color options to complement any design.",
+            "cta_text1": "",
+            "cta_link1": "https://www.aquablumosaics.com/collections/tile-grout",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Audrey_3_4_3_4_Glass_Tile_Mosaic_Tile_by_Bisazza.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 400,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_yKqmNC",
+        "advanced_rE9Jmi",
+        "advanced_8FNQeB"
+      ],
+      "disabled": true,
+      "name": "t:sections.promo-grid.presets.promotional_grid.name",
       "settings": {
         "full_width": false,
-        "space_around": true,
+        "heading": "START WITH A SOLID FOUNDATION",
+        "gutter_size": 14,
+        "section_gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "two_column_mobile": false,
+        "three_column_mobile": false,
+        "css_class": ""
+      }
+    },
+    "slideshow_split_i6qg8R": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_LqxfHm": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "INSTALL WITH CONFIDENCE",
+            "title": "",
+            "title_size": 40,
+            "subheading": "Great tile installation starts with the right setting materials - premium adhesives, waterproofing, and durable grouts that protect and perform for years to come.",
+            "link": "https://www.aquablumosaics.com/collections/tile-grout",
+            "link_text": "SHOP GROUT",
+            "link_2": "https://www.aquablumosaics.com/collections/tile-adhesives",
+            "link_text_2": "SHOP ADHESIVES",
+            "text_position": "right",
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza2.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "1"
+          }
+        },
+        "slide_AQWfwc": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "WATERPROOFING",
+            "title": "",
+            "title_size": 40,
+            "subheading": "Protect every pool tile project with our professional-grade waterproofing solutions, engineered for long-lasting durability, enhanced performance, and total peace of mind - whether you're building a new pool or upgrading an existing one.",
+            "link": "https://www.aquablumosaics.com/collections/waterproofing",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/OP_25.38_1_x_1_Glass_Tile_Glass_Mosaic_Tile_by_Bisazza.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "1"
+          }
+        },
+        "slide_Fq7dXe": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "TILE GROUT & ADHESIVES",
+            "title": "",
+            "title_size": 40,
+            "subheading": "Explore our premium selection of pool tile adhesives and grouts, engineered for lasting strength, smooth finishes, and reliable performance. With high-bond adhesives and color-rich, durable grouts, you can achieve a beautiful, long-lasting installation in pools, spas, and outdoor living spaces.",
+            "link": "https://www.aquablumosaics.com/collections/tile-grout",
+            "link_text": "SHOP GROUT",
+            "link_2": "https://www.aquablumosaics.com/collections/tile-adhesives",
+            "link_text_2": "SHOP ADHESIVES",
+            "text_position": "right",
+            "image": "shopify://shop_images/Audrey_3_4_3_4_Glass_Tile_Mosaic_Tile_by_Bisazza.jpg",
+            "indent_image": false,
+            "focal_point": "center center",
+            "color_scheme": "1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_LqxfHm",
+        "slide_AQWfwc",
+        "slide_Fq7dXe"
+      ],
+      "name": "t:sections.slideshow-split.presets.split_optional_slides.name",
+      "settings": {
+        "full_width": false,
+        "height": 500,
+        "height_mobile": 500,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7,
         "css_class": ""
       }
     },
@@ -1039,7 +1438,7 @@
         "template--14459271839816__9cd711e4-3cff-4481-a68f-3e801382c63b-heading-1": {
           "type": "heading",
           "settings": {
-            "title": "GET INSPIRED"
+            "title": "CREATE YOUR HAVEN, SHOP OUR LOOKS"
           }
         }
       },
@@ -1080,7 +1479,7 @@
             "disable_filter": false,
             "override_feed_id": "",
             "arbitrary_attributes": "",
-            "custom_css": "",
+            "custom_css": ".fs-slider_v2_5-feed.fs-wrapper { scrollbar-width: none}",
             "custom_js": ""
           }
         }
@@ -1088,165 +1487,40 @@
       "block_order": [
         "3097794d-ed00-4c8e-8204-6969783ac129"
       ],
+      "custom_css": [
+        ".fs-wrapper {overflow: hidden;}"
+      ],
       "settings": {
         "full_width": true,
         "space_around": false,
         "css_class": "home-section-15"
       }
-    },
-    "ae821482-e7dd-43ee-99ce-45d315cea0e5": {
-      "type": "logo-list-custom",
-      "blocks": {
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-0": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Tesoro-_B_and_W_b4aa16af-8ac8-4c2b-9794-03d44539188b.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-1": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/TD_-_B_and_W_72fd5569-7541-4d53-9e78-4c84a6b467ae.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-2": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/murrine-_B_and_W_9eba352e-c2d7-4d78-a05d-a3ed09e8a58d.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-3": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/FL-_Band_W_5215ddbe-0bca-47c9-8210-4c4199a23e7f.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-4": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Custom_Mosaics-B_and_W_b63442af-94c0-4399-9dab-82e60b3d6bc5.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-5": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Basecrete-_B_and_W_0e7b2057-f8e9-4f81-9439-957f8ef87c12.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "47444913-5376-45aa-91a2-1ab11c57a454": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Vidrepur-_B_and_W_5f78c843-7848-440a-a2b7-231dd83c6984.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "9ec49d47-672b-4724-9d9c-bd023d35e520": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Vondom_-_B_and_W_c46f8482-e1b1-41e1-925d-aa6b93cc1f3f.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "3fa37f59-6670-4831-b22b-62a3b93245ce": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/AGM-B_and_W_de08ee78-a725-45de-be8e-d04716b156f8.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "02987d36-a5c6-412c-aa3b-1a97f78c923e": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/SICIS-B_and_W_c6b749fb-9320-495a-bc0e-f39e36ae0f59.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "3625fcc6-6ae2-45de-9c98-411f0a1d974a": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/Ledge-_B_and_w_41ea5798-7fed-4069-aca4-da35cf7db77a.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        },
-        "e2cafbc8-3638-4ba5-aee4-ef0d43ec33e1": {
-          "type": "logo_image",
-          "settings": {
-            "image": "shopify://shop_images/AIM-B_and_W_20b1608e-12db-4055-9709-9ed02e478027.png",
-            "logo_title": "",
-            "logo_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-0",
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-1",
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-2",
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-3",
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-4",
-        "template--14481642094664__ae821482-e7dd-43ee-99ce-45d315cea0e5-167400446883e1ac24-5",
-        "47444913-5376-45aa-91a2-1ab11c57a454",
-        "9ec49d47-672b-4724-9d9c-bd023d35e520",
-        "3fa37f59-6670-4831-b22b-62a3b93245ce",
-        "02987d36-a5c6-412c-aa3b-1a97f78c923e",
-        "3625fcc6-6ae2-45de-9c98-411f0a1d974a",
-        "e2cafbc8-3638-4ba5-aee4-ef0d43ec33e1"
-      ],
-      "settings": {
-        "title": "OUR TRUSTED PARTNERS",
-        "divider": false,
-        "css_class": "home-section-14 logo-slider"
-      }
     }
   },
   "order": [
-    "173162359649190d6e",
-    "slideshow_new_8zzw4R",
-    "slideshow_XiQizM",
-    "b6b5c71b-04a8-489b-8d39-9e5526b43a75",
-    "30705e54-079f-4d8f-a90c-029ef8734e73",
-    "slideshow_bdAywG",
-    "4d538ad8-5011-45d2-a63f-4de0e4c7de20",
+    "slideshow_7qdjAy",
+    "text_columns_9q773C",
+    "slideshow_split_iz4aPw",
+    "promo_grid_three_col_L9FhKb",
+    "featured_collection_carousel_3jAhMt",
+    "176417845711ac38f8",
+    "17648068664a20cf69",
+    "lookfy_section1_c8xUkm",
+    "1764807551e1f5a972",
+    "lookfy_section2_TJw9KV",
     "slideshow_diDwba",
-    "642626b5-0326-4165-bdf3-ac1ef0d767a4",
+    "text_columns_Db3kck",
+    "text_columns_pHfYVE",
+    "176480055700fff8fc",
+    "rich_text_BkWLUf",
+    "text_columns_custom_GDwQRf",
     "310c0c1b-4bb2-48e2-a6fa-5825fdfcfe18",
-    "08886a75-76d2-4348-951a-12f407cb264e",
-    "3aa34ff7-417a-4828-b95a-946c5f5f32b0",
-    "2554e28d-0d6c-49bf-91bd-0f901e71c7d2",
-    "473d1d3e-a445-4cc3-9427-53b85f66ff55",
     "1753805430420396ae",
-    "1749827550c7786343",
+    "lookfy_section2_McNNVt",
+    "promo_grid_fr3eTw",
+    "slideshow_split_i6qg8R",
     "eb33306f-1f7f-4e7e-bba8-545a56c8253e",
     "9cd711e4-3cff-4481-a68f-3e801382c63b",
-    "1666361938d7d593e5",
-    "ae821482-e7dd-43ee-99ce-45d315cea0e5"
+    "1666361938d7d593e5"
   ]
 }

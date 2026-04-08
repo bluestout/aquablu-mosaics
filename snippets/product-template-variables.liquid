@@ -13,57 +13,50 @@
   endif
 -%}
 {% comment %} --> Product snippets vs. merchant listings {% endcomment %}
+{% if template.name == 'product' and product.metafields.yotpo.review_count > 0 %}
 <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "ProductGroup",
-    "name": {{ product.title | json }},
-    "description": {{ product.description | strip_html | json }},
-    "brand": {{ product.vendor | json }},
-    "sku": {{ current_variant.sku | json }},
-    "ProductGroupID": "{{ product.id }}",
-    "category": "{{ product.type | default: 'General' }}",
-    "hasVariant": [{% for variant in product.variants %}
-      {
-        "@type": "Product",
-        "sku": "{{ variant.sku }}",
-        "gtin14": "{{ variant.id }}",{% if variant.featured_image %}
-        "image": "{{ variant.featured_image.src |  image_url: width: variant.featured_image.width }}",{% else %}
-        "image": "{{ product.featured_image.src |  image_url: width: product.featured_image.width }}",{% endif %}
-        "name": "{{ variant.title | replace: '"', '' }}",
-        "offers": {
-            "@type": "Offer",
-            "price": {{ variant.price | divided_by: 100.00 | json }},
-            "priceCurrency": {{ cart.currency.iso_code | json }},
-            "availability": "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-            "url": {{ shop.url | append: variant.url | json }}
-          }
-      }{% unless forloop.last %},{% endunless %}{% endfor %}
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "reviewCount": "10"
-    },
-    "review": [],
-    {%- if is_barcode_available and is_valid_gtin_length -%}
-      "{{ gtin_option }}": {{ current_variant.barcode | json }},
-      "productId": {{ current_variant.barcode | json }},
-    {%- elsif is_barcode_available -%}
-      "mpn": {{ current_variant.barcode | json }},
-      "productId": {{ current_variant.barcode | json }},
-    {%- endif -%}
-    "image": {
-      "@type": "ImageObject",
-      "url": "https:{{ product.featured_media.preview_image | img_url: '1024x1024' }}",
-      "name": {{ product.title | json }},
-      "width": 1024,
-      "height": 1024
-    }
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "description": {{ product.description | strip_html | json }},
+  "brand": {{ product.vendor | json }},
+  "sku": {{ current_variant.sku | json }},
+  "offers": {
+    "@type": "Offer",
+    "price": {{ current_variant.price | divided_by: 100.0 | json }},
+    "priceCurrency": {{ shop.currency | json }},
+    "availability": "http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}",
+    "url": {{ shop.url | append: current_variant.url | json }}
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": {{ product.metafields.yotpo.average_rating | json }},
+    "reviewCount": {{ product.metafields.yotpo.review_count | json }}
+  },
+  "review": [
+    {% for review in product.metafields.yotpo.reviews %}
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": {{ review.reviewer_name | default: "Anonymous" | json }}
+      },
+      "datePublished": "{{ review.date | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+      "reviewBody": {{ review.content | strip_html | strip_newlines | json }},
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": {{ review.score | json }},
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
 </script>
-
-<script>
+{% endif %}
+{% comment %} <script>
   const appKey = "7grhf0lP3zYoAmdQOa6FxrOsngY8diqMaeG2uT5K"; // Replace with your Yotpo app key
   const productId = "{{ product.id }}";
 
@@ -95,5 +88,5 @@
     console.log("Updated JSON-LD:", jsonLd.textContent);
   })
   .catch(error => console.error("Error fetching Yotpo reviews:", error));
-</script>
+</script> {% endcomment %}
 {% comment %} <-- Product snippets vs. merchant listings {% endcomment %}

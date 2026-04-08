@@ -1,0 +1,238 @@
+{% style %}
+    .section-{{ section.id }} {
+        background-color: {{ section.settings.bg_color }};
+    }
+
+    .section-{{ section.id }} .page-width {
+        padding-top: 52px;
+        padding-bottom: 98px;
+        position: relative;
+    }
+
+    .section-{{ section.id }} h2 {
+        color: {{ section.settings.header_color }};
+        font-family: "Jost";
+        font-size: calc(var(--font-heading-scale, 1) * 27px);
+        font-weight: 300;
+        letter-spacing: 1.4px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section-{{ section.id }} .blocks-group {
+        position: relative;
+    }
+
+    .section-{{ section.id }} .swiper-slide {
+        position: relative;
+        cursor: pointer;
+        aspect-ratio: 1;
+        overflow: hidden;
+    }
+
+    .section-{{ section.id }} .swiper-slide img {
+        border-style: solid;
+        border-width: 0px;
+        width: calc(100% + 30px);
+        height: calc(100% + 30px);
+        max-width: none;
+        max-height: none;
+        opacity: 1;
+        transition-duration: 350ms;
+        transform: scale(1, 1) translateX(-30px);
+    }
+
+    .section-{{ section.id }} .swiper-slide:hover img {
+        transform: scale(1, 1) translateX(0px);
+    }
+
+    .section-{{ section.id }} .swiper-slide .swiper-back {
+        display: none;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    .section-{{ section.id }} .swiper-slide:hover .swiper-back {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #00000066;
+        z-index: 1;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    .section-{{ section.id }} .swiper-slide p {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: #FFF;
+        font-size: 15px;
+        letter-spacing: 0.75px;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .section-{{ section.id }} .swiper-slide:hover p {
+        bottom: 40px;
+    }
+
+    .section-{{ section.id }} .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        right: 10px;
+        color: black;
+        z-index: 1;
+    }
+
+    .section-{{ section.id }} .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        left: 10px;
+        color: black;
+        z-index: 1;
+    }
+
+    .section-{{ section.id }} .swiper-button-next svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .section-{{ section.id }} .swiper-button-prev svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .section-{{ section.id }} .swiper-pagination {
+        bottom: 40px;
+        z-index: 1;
+    }
+
+    .section-{{ section.id }} .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 8px !important;
+        background: #888;
+    }
+
+    .section-{{ section.id }} .swiper-pagination-bullet-active {
+        background: white;
+    }
+
+    @media screen and (max-width: 750px) {
+        .section-{{ section.id }} .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            margin: 0 4px !important;
+        }
+    }
+{% endstyle %}
+
+<link href="https://fonts.googleapis.com/css2?family=Jost&amp;display=swap" rel="stylesheet">
+<div class="section-{{ section.id }}">
+    <div class="page-width">
+        <h2>{{ section.settings.header }}</h2>
+        <div class="blocks-group">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        <div class="swiper-slide" onclick="location.href='{{ block.settings.link }}'">
+                            <img src="{{ block.settings.image | img_url: 'master' }}" width="100%" height="100%" alt="lookfy-img-{{ forloop.index }}">
+                            <p>{{ block.settings.title }}</p>
+                            <div class="swiper-back"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script>
+    var swiper = new Swiper(".section-{{ section.id }} .mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+
+        pagination: {
+            el: ".section-{{ section.id }} .swiper-pagination",
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: ".section-{{ section.id }} .swiper-button-next",
+            prevEl: ".section-{{ section.id }} .swiper-button-prev",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+        }
+    });
+</script>
+
+{% schema %}
+{
+    "name": "Lookfy Section 2",
+    "settings": [
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color"
+        },
+        {
+            "type": "color",
+            "id": "header_color",
+            "label": "Header Color"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "block",
+            "name": "block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Lookfy Section 2"
+        }
+    ]
+}
+{% endschema %}

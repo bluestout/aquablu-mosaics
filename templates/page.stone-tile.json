@@ -17,7 +17,7 @@
     "f21ed0a7-2cfa-45ca-9a5d-24083a207528": {
       "type": "slideshow",
       "blocks": {
-        "hero_Yw4eFD": {
+        "template--14551638900808__f21ed0a7-2cfa-45ca-9a5d-24083a207528-168148148025553fef-1": {
           "type": "hero",
           "disabled": true,
           "settings": {
@@ -36,13 +36,13 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/Natural_Stone_Hero_44fe5385-8a2e-4cbe-987c-643eb90153cd.jpg",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Untitled_design_94.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         },
-        "template--14551638900808__f21ed0a7-2cfa-45ca-9a5d-24083a207528-168148148025553fef-1": {
+        "hero_mVkkx4": {
           "type": "hero",
           "settings": {
             "image_width": 650,
@@ -50,26 +50,27 @@
             "html_embed_two": "",
             "additional_text_field": "",
             "title_h1": true,
-            "top_subheading": "THE PINNACLE OF LUXURY",
-            "title": "<p>NATURAL STONE TILE</p>",
+            "top_subheading": "",
+            "title": "",
             "title_size": 50,
             "subheading": "",
             "custom_text": "",
-            "link": "",
-            "link_text": "",
+            "link": "https://www.aquablumosaics.com/collections/stone-tile",
+            "link_text": "10% OFF STONE TILE",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Natural_Stone_Tile_by_MSI_for_kitchens.jpg",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify://shop_images/SPRING_SALE_2026_14.jpg",
+            "image_mobile": "shopify://shop_images/SPRING_SALE_2026_16.jpg",
             "overlay_opacity": 0,
-            "focal_point": "center center"
+            "focal_point": "top center"
           }
         }
       },
       "block_order": [
-        "hero_Yw4eFD",
-        "template--14551638900808__f21ed0a7-2cfa-45ca-9a5d-24083a207528-168148148025553fef-1"
+        "template--14551638900808__f21ed0a7-2cfa-45ca-9a5d-24083a207528-168148148025553fef-1",
+        "hero_mVkkx4"
       ],
       "settings": {
         "full_width": true,
@@ -79,7 +80,7 @@
         "gutter_size": 40,
         "space_above": false,
         "space_below": true,
-        "mobile_size": 20,
+        "mobile_size": 15,
         "style": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
@@ -102,47 +103,21 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "https://www.aquablumosaics.com/collections/tile-and-stone",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "image_mobile": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_Gkqk7D": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image": "shopify://shop_images/END_OF_YEAR_SALE_4.png",
+            "image_mobile": "shopify://shop_images/END_OF_YEAR_SALE_4.png",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_M38K3M",
-        "hero_Gkqk7D"
+        "hero_M38K3M"
       ],
       "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
@@ -155,7 +130,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "minimal",
+        "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
@@ -232,7 +207,7 @@
         "divider": false,
         "gutter_size": 10,
         "space_above": false,
-        "space_below": true,
+        "space_below": false,
         "css_class": "logo-list-set-height rounded-corners"
       }
     },
@@ -848,7 +823,12 @@
       "settings": {
         "title": "FEATURED PEBBLE TILE",
         "tab_collection_1": "featured-pebble-tile",
-        "css_class": "feat-collection-carousel set-carousel-height"
+        "css_class": "feat-collection-carousel set-carousel-height",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "1ac6b721-9583-4592-947c-95d86dbe88d1": {

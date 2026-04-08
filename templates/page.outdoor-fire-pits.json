@@ -49,46 +49,20 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/black-friday",
+            "link": "https://www.aquablumosaics.com/pages/ignite-your-style-savings-event",
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/3_64eb1a8d-88ff-4b17-a379-35fff6257358.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "hero_Ji7CWL": {
-          "type": "hero",
-          "settings": {
-            "image_width": 650,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 70,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
-            "image_mobile": "shopify://shop_images/4_d48b616e-320d-4e8f-a60e-35c35a5ee0f3.png",
+            "image": "shopify://shop_images/Ignite_your_style_7.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
         }
       },
       "block_order": [
-        "hero_MW7Fzm",
-        "hero_Ji7CWL"
+        "hero_MW7Fzm"
       ],
       "disabled": true,
       "name": "t:sections.slideshow.presets.hero_optional_slides.name",
@@ -101,7 +75,7 @@
         "space_above": false,
         "space_below": false,
         "mobile_size": 0,
-        "style": "minimal",
+        "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7,
         "css_class": ""
@@ -289,7 +263,12 @@
       "settings": {
         "title": "GAS FIRE PITS - MADE IN U.S.A.",
         "tab_collection_1": "outdoor-fire-pits",
-        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4"
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     },
     "logo_list_custom_2_9frKFc": {
@@ -635,7 +614,12 @@
       "settings": {
         "title": "FEATURED: CORONADO SERIES",
         "tab_collection_1": "coronado-series-outdoor-fire-tables",
-        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8"
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     },
     "0588edea-afce-4615-b359-5845d141dd26": {
@@ -739,7 +723,12 @@
       "settings": {
         "title": "FIRE/WATER COMBO FEATURES FOR POOLS",
         "tab_collection_1": "fire-and-water-features",
-        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8"
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-8",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "28998fc9-3ae3-4cf9-a1c0-41bd9bcf1162": {
@@ -767,7 +756,12 @@
       "settings": {
         "title": "POOL SCUPPERS",
         "tab_collection_1": "scuppers-outdoor-water-features",
-        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4"
+        "css_class": "feat-collection-carousel set-carousel-height outdoor-living-section-4",
+        "center_arrows": false,
+        "hide_pagination": false,
+        "hide_pricing": false,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "promo_grid_d6BYhN": {

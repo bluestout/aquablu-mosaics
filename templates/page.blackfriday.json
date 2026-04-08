@@ -66,10 +66,10 @@
       "settings": {
         "image": "shopify://shop_images/Black_Friday_Image_Landing_1.jpg",
         "video_url": "",
-        "image_width": 570,
+        "image_width": 500,
         "subtitle": "Upgrade. Indulge. Save.",
         "title": "BLACK FRIDAY SAVINGS EVENT",
-        "text": "<p>It’s our most anticipated event of the year - and your chance to give your home the glow-up it deserves. Whether you’re refreshing a bathroom, reimagining your backyard, or adding a touch of modern elegance to your pool, now is the perfect time to make it happen.</p><p>Oh, and did we mention… the more you buy, the more you save? </p>",
+        "text": "<p>It’s our most anticipated event of the year - and your chance to give your home the glow-up it deserves. From shimmering glass mosaics and designer porcelain tile to chic outdoor furniture and luxe fire pits, every piece is crafted to transform your space into something truly extraordinary. Whether you’re refreshing a bathroom, reimagining your backyard, or adding a touch of modern elegance to your pool, now is the perfect time to make it happen.</p><p>Oh, and did we mention… the more you buy, the more you save? </p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -96,9 +96,9 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
-            "image": "shopify://shop_images/imgi_4_athena-gold-estrella-polished-tile-bathroom-0966.jpg",
+            "image": "shopify://shop_images/Black_Friday_Image_Landing_4.jpg",
             "indent_image": false,
-            "focal_point": "bottom center",
+            "focal_point": "center center",
             "color_scheme": "2"
           }
         },
@@ -114,9 +114,9 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/folk-sky-7-x-16-porcelain-tile-664440.jpg",
+            "image": "shopify://shop_images/Black_Friday_Image_Landing_5.jpg",
             "indent_image": false,
-            "focal_point": "center center",
+            "focal_point": "top center",
             "color_scheme": "2"
           }
         },
@@ -132,7 +132,7 @@
             "link_2": "",
             "link_text_2": "",
             "text_position": "left",
-            "image": "shopify://shop_images/RoundUnityFirePit-PowderCoatedMetal-Black_TheOutdoorPlusFirePitsandTables-2.jpg",
+            "image": "shopify://shop_images/Black_Friday_Image_Landing_3.jpg",
             "indent_image": false,
             "focal_point": "center center",
             "color_scheme": "2"
@@ -383,51 +383,52 @@
         "css_class": "bath-section-8"
       }
     },
-    "slideshow_hEMApG": {
-      "type": "slideshow",
+    "36417a07-ba56-41d3-b0f1-520b05b91e32": {
+      "type": "newsletter",
       "blocks": {
-        "hero_Ni7exa": {
-          "type": "hero",
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1": {
+          "type": "title",
           "settings": {
-            "image_width": 60,
-            "html_embed": "",
-            "html_embed_two": "",
-            "additional_text_field": "",
-            "title_h1": true,
-            "top_subheading": "",
-            "title": "",
-            "title_size": 40,
-            "subheading": "",
-            "custom_text": "",
-            "link": "https://www.aquablumosaics.com/collections/clearance-discounted-tile-furniture-outdoor-accessories",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/Weekly_Wave_Sale_Banner_1.png",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
+            "title": "SIGN UP & BE IN THE KNOW!"
+          }
+        },
+        "text_B7LnVR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be the first to know about exclusive sales, new arrivals, and design inspiration - straight to your inbox. ✨</p>"
+          }
+        },
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1": {
+          "type": "form",
+          "settings": {}
+        },
+        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": true,
+          "settings": {
+            "form_id": "",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
           }
         }
       },
       "block_order": [
-        "hero_Ni7exa"
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1",
+        "text_B7LnVR",
+        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1",
+        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c"
       ],
-      "name": "t:sections.slideshow.presets.hero_optional_slides.name",
       "settings": {
-        "full_width": false,
-        "full_width_mobile": true,
-        "contact_popup": false,
-        "desktop_size": -10,
-        "gutter_size": 20,
-        "space_above": false,
-        "space_below": false,
-        "mobile_size": 0,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "css_class": ""
+        "color_scheme": "3"
       }
     },
     "d3e9d536-82ea-46ba-a582-472858d2be95": {
@@ -551,62 +552,14 @@
         "css_class": "exploring-pool-mosaic-grid"
       }
     },
-    "36417a07-ba56-41d3-b0f1-520b05b91e32": {
-      "type": "newsletter",
-      "blocks": {
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1": {
-          "type": "title",
-          "settings": {
-            "title": "SIGN UP & BE IN THE KNOW!"
-          }
-        },
-        "text_B7LnVR": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Be the first to know about exclusive sales, new arrivals, and design inspiration - straight to your inbox. ✨</p>"
-          }
-        },
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1": {
-          "type": "form",
-          "settings": {}
-        },
-        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "disabled": true,
-          "settings": {
-            "form_id": "",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-title-1",
-        "text_B7LnVR",
-        "template--14631516536904__36417a07-ba56-41d3-b0f1-520b05b91e32-form-1",
-        "0fc2d98c-5d6a-4f0c-891b-a3a8823c0d1c"
-      ],
-      "settings": {
-        "color_scheme": "3"
-      }
-    },
     "24904f21-1940-44c1-9288-37fd9d494779": {
       "type": "rich-text",
       "blocks": {
         "template--14631516536904__24904f21-1940-44c1-9288-37fd9d494779-text-1": {
           "type": "text",
           "settings": {
-            "enlarge_text": false,
-            "text": "<p><strong>AquaBlu Mosaics Black Friday Sale Terms and Conditions</strong><br/><strong>Sale Period:</strong> The Black Friday sale at AquaBlu Mosaics is valid from November 24th, 2025 to December 1st, 2025. During this time, customers can enjoy exclusive discounts and offers on a wide range of our products. <strong>Exclusions:</strong> Please note that SavedBy,Tenjam, Tupelo Goods, Ledge Lounger, Custom Mosaics, Big Joe, LETO, Floating Luxuries, and Prism Hardscapes are excluded from the Buy More, Save More discounts. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. The specific details of discounts and offers can be found on our website or in our Black Friday promotional materials. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all Black Friday sale purchases. Please review our return policy on our website for more information. <strong>Promo Codes:</strong> If you have received a promotional code for the Black Friday sale, ensure it is applied during the checkout process to take advantage of the discounts. <strong>Customer Support:</strong> If you have any questions or concerns regarding our Black Friday sale, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. <strong>Newsletter Exclusive Promotions:</strong> AquaBlu Mosaics is offering exclusive Black Friday deals to our newsletter members. To avail of these discounts, you must sign up for the newsletter by providing your email address before the sale period begins. Any promotional codes received must be applied at checkout to avail of the discounts.</p>"
+            "enlarge_text": true,
+            "text": "<h4>AquaBlu Mosaics Black Friday Sale Terms and Conditions</h4><h6><strong>Sale Period: </strong>The Black Friday sale at AquaBlu Mosaics is valid from November 18th, 2024 to December 1st, 2024. During this time, customers can enjoy exclusive discounts and offers on a wide range of our products.<strong> Exclusions:</strong> Please note that any product category not listed in the sale promotion are excluded from the discounts. <strong>Discounts and Promotions:</strong> Discounts and promotions are subject to product availability and may vary. The specific details of discounts and offers can be found on our website or in our Black Friday promotional materials. <strong>Limited Stock:</strong> Some products may have limited quantities available during the sale period. Availability is on a first-come, first-served basis. <strong>Returns and Exchanges:</strong> The standard AquaBlu Mosaics return and exchange policy applies to all Black Friday sale purchases. Please review our return policy on our website for more information. <strong>Promo Codes:</strong> If you have received a promotional code for the Black Friday sale, ensure it is applied during the checkout process to avail of the discounts. <strong>Customer Support:</strong> If you have any questions or concerns regarding our Black Friday sale, product availability, or exclusions, please do not hesitate to contact our customer support team for assistance. <strong>Newsletter Exclusive Promotions: </strong>AquaBlu Mosaics is offering exclusive Black Friday deals to our newsletter members. To avail of these discounts, you must sign up for the newsletter by providing your email address before the sale period begins. Any promotional codes received must be applied at checkout to avail of the discounts.</h6><h6>AquaBlu Mosaics is excited to offer these exclusive Black Friday discounts while ensuring transparency about the exclusions. We appreciate your understanding and look forward to assisting you in finding the perfect mosaic and pool products during this special event.</h6>"
           }
         }
       },
@@ -652,10 +605,9 @@
     "slideshow_gHVraw",
     "promo_grid_hXaweJ",
     "0d909433-0909-429c-86cc-588ca215f068",
-    "slideshow_hEMApG",
+    "36417a07-ba56-41d3-b0f1-520b05b91e32",
     "d3e9d536-82ea-46ba-a582-472858d2be95",
     "69357716-720e-447f-b363-ad48fe666e6e",
-    "36417a07-ba56-41d3-b0f1-520b05b91e32",
     "24904f21-1940-44c1-9288-37fd9d494779",
     "text_and_image_bxVeFj"
   ]

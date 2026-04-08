@@ -117,8 +117,8 @@
             "enable_image": true,
             "image": "shopify://shop_images/ABM_Samples.png",
             "image_width": 120,
-            "title": "FREE & SAMPLES",
-            "text": "<p>Feel confident in your purchases</p>",
+            "title": "FREE SAMPLES",
+            "text": "<p>Feel confident in your purchases with 5 free samples (including shipping) per month</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -948,9 +948,9 @@
             "title_size": 70,
             "subheading": "",
             "custom_text": "",
-            "link": "https://www.aquablumosaics.com/pages/conservation",
+            "link": "",
             "link_text": "",
-            "link_2": "",
+            "link_2": "https://www.aquablumosaics.com/pages/conservation",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-bottom horizontal-left",

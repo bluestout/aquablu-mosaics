@@ -185,11 +185,38 @@
   <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
-  <script src="https://www.googletagmanager.com/gtag/js?id=G-VFRG14EQVG" defer="defer"></script>
   <script>
-    window.dataLayer = window.dataLayer || []; 
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VFRG14EQVG'); 
+    function loadGA() {
+      if (window.gaLoaded) return;
+      window.gaLoaded = true;
+      var script = document.createElement("script");
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-VFRG14EQVG";
+      script.defer = true;
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-VFRG14EQVG');
+    }
+    function checkConsentAndLoadGA() {
+      if (
+        window.Shopify &&
+        Shopify.customerPrivacy &&
+        Shopify.customerPrivacy.analyticsProcessingAllowed()
+      ) {
+        loadGA();
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      checkConsentAndLoadGA();
+      document.addEventListener("visitorConsentCollected", function () {
+        checkConsentAndLoadGA();
+      });
+    });
   </script>
+  <!-- Google tag (gtag.js) -->
+
   <script>
     function getParam(p) {
       var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
@@ -259,6 +286,9 @@
     }());
   </script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  
 <script type="text/javascript">
  var _conv_page_type = "{{ request.page_type }}";
  var _conv_category_id = "{{ collection.id }}";
@@ -273,13 +303,36 @@
  var _conv_custom_v4 = "{{ cart.total_price | money_without_currency }}";
 </script>
 {% render 'convert' %}
+
+
 <!--Start ABM Clarity Code-->
 <script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
+  function loadClarity() {
+    if (window.clarityLoaded) return;
+      window.clarityLoaded = true;
+    (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "mof3nqf8iw");
+    })(window, document, "clarity", "script", "mof3nqf8iw");
+  }
+
+  function checkConsentAndLoad() {
+    if (
+      window.Shopify &&
+      Shopify.customerPrivacy &&
+      Shopify.customerPrivacy.analyticsProcessingAllowed()
+    ) {
+      loadClarity();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    checkConsentAndLoad();
+    document.addEventListener("visitorConsentCollected", function () {
+      checkConsentAndLoad();
+    });
+  });
 </script>
 <!--End ABM Clarity Code-->
 
@@ -300,9 +353,101 @@
 <!--Start Custom Breadcrumbs-->
 <script src="{{ 'crumbs.js' | asset_url }}" defer="defer"></script>
 <!--End Custom Breadcrumbs-->
+
+
+<!--Bing Ads Conversion Tracking-->
+<script type="text/javascript">
+  function loadBingAds() {
+    if (window.bingLoaded) return;
+    window.bingLoaded = true;
+    (function(w,d,t,r,u){
+      var f,n,i;
+      w[u]=w[u]||[];
+      f=function(){
+        var o={ti:"5727218", enableAutoSpaTracking:true};
+        o.q=w[u];
+        w[u]=new UET(o);
+        w[u].push("pageLoad");
+      };
+      n=d.createElement(t);
+      n.src=r;
+      n.async=1;
+      n.onload=n.onreadystatechange=function(){
+        var s=this.readyState;
+        if (!s || s==="loaded" || s==="complete") {
+          f();
+          n.onload=n.onreadystatechange=null;
+        }
+      };
+      i=d.getElementsByTagName(t)[0];
+      i.parentNode.insertBefore(n,i);
+    })(window,document,"script","https://bat.bing.com/bat.js","uetq");
+  }
+  function checkBingConsent() {
+    if (
+      window.Shopify &&
+      Shopify.customerPrivacy &&
+      Shopify.customerPrivacy.marketingAllowed()
+    ) {
+      loadBingAds();
+    }
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    checkBingConsent();
+    document.addEventListener("visitorConsentCollected", function () {
+      checkBingConsent();
+    });
+  });
+</script>
 <!--Bing Ads Conversion Tracking--> 
-  <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5727218", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="e4ceXL/uHPvAnd0e2cbEQA" async></script>
+
+{% comment %} COOKIES HANDLER {% endcomment %}
+<script>
+(function () {
+  const allowedCookies = [
+    "cart",
+    "cart_currency",
+    "_shopify_s",
+    "_shopify_y",
+    "_shopify_sa_t",
+    "_shopify_sa_p",
+    "_shopify_essential",
+    "secure_customer_sig",
+    "localization"
+  ];
+  function hasUserConsent() {
+    return localStorage.getItem("user_consent") === "accepted";
+  }
+  function deleteNonEssentialCookies() {
+    if (hasUserConsent()) return;
+    document.cookie.split(";").forEach(function(cookie) {
+      let cookieName = cookie.split("=")[0].trim();
+      if (!allowedCookies.includes(cookieName)) {
+        document.cookie =
+          cookieName +
+          "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+        document.cookie =
+          cookieName +
+          "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;domain=" +
+          location.hostname.replace(/^www\./, "");
+      }
+    });
+  }
+  deleteNonEssentialCookies();
+  const cookieInterval = setInterval(function () {
+    if (hasUserConsent()) {
+      clearInterval(cookieInterval);
+    } else {
+      deleteNonEssentialCookies();
+    }
+  }, 1500);
+})();
+</script>
+{% comment %} COOKIES HANDLER {% endcomment %}
+
+
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challenge{% endif %}" data-button_style="{{ settings.button_style }}" data-edges="{{ settings.roundness }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" data-grid-style="{{ settings.product_grid_style }}" data-template-suffix="{{template.name}}.{{template.suffix}}">
