@@ -1,0 +1,433 @@
+<style>
+  /* ===== Product Feature Details Section ===== */
+  .product-feature-details {
+    background-color: #f5f5f5;
+    padding-top: 66px;
+    padding-bottom: 80px;
+  }
+
+  .product-feature-details__inner {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .product-feature-details__left {
+    flex: 0 0 430px;
+    width: 430px;
+  }
+
+  .product-feature-details__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .product-feature-details__block {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .product-feature-details__block-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0;
+  }
+
+  .product-feature-details__specs-content ul {
+    list-style: disc;
+    padding-left: 24px;
+    margin: 0;
+  }
+
+  .product-feature-details__specs-content li,
+  .product-feature-details__specs-content p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+  }
+
+  .product-feature-details__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+    max-width: 584px;
+  }
+
+  .product-feature-details__resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .product-feature-details__resources-list a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+    text-underline-position: from-font;
+    color: black;
+  }
+
+  .product-feature-details__resource-link {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    text-decoration: underline;
+    display: block;
+  }
+
+  .product-feature-details__resource-link:hover {
+    opacity: 0.75;
+  }
+
+  .product-feature-details__mobile {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .product-feature-details {
+      padding: 0 0px;
+      background-color: #fff;
+    }
+
+    .product-feature-details__desktop {
+      display: none;
+    }
+
+    .product-feature-details__mobile {
+      display: block;
+    }
+
+    .pfd-accordion__item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .pfd-accordion__trigger {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .pfd-accordion__trigger-label {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22.4px;
+      letter-spacing: 0.7px;
+      color: #374759;
+    }
+
+    .pfd-accordion__icon {
+      flex-shrink: 0;
+      margin-left: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .pfd-accordion__trigger[aria-expanded='true'] .pfd-accordion__icon {
+      transform: rotate(180deg);
+    }
+
+    .pfd-accordion__content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+    }
+
+    .pfd-accordion__content-inner {
+      padding-bottom: 20px;
+    }
+
+    .pfd-accordion__content-inner ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .pfd-accordion__content-inner li,
+    .pfd-accordion__content-inner p {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+      color: #374759;
+    }
+
+    .pfd-accordion__content-inner a {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+      color: #374759;
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .product-feature-details__inner{
+      gap: 99px;
+    }
+  }
+</style>
+
+{%- liquid
+  assign specs_exclude = linklists['product-specs-exclude-list'].links | map: 'title' | join: ','
+  assign has_specs = false
+  for tag in product.tags
+    if tag contains ':'
+      assign tag_parts = tag | split: ':'
+      assign tag_match = tag_parts[0] | append: ':'
+      unless specs_exclude contains tag_match
+        assign has_specs = true
+        break
+      endunless
+    endif
+  endfor
+  assign has_shipping = false
+  if product.metafields.custom.tab_shipping != blank
+    assign has_shipping = true
+  endif
+  assign has_resources = false
+  if product.metafields.custom.tab_resources != blank
+    assign has_resources = true
+  endif
+-%}
+
+{%- if has_specs or has_shipping or has_resources -%}
+  <div class="product-feature-details" id="ProductFeatureDetails-{{ section.id }}">
+    <div class="page-width">
+      <div class="product-feature-details__desktop">
+        <div class="product-feature-details__inner">
+          {%- if has_specs -%}
+            <div class="product-feature-details__left product-feature-details__block">
+              <h2 class="product-feature-details__block-title">{{ section.settings.specs_title }}</h2>
+              <div class="product-feature-details__specs-content">
+                <ul>
+                  {%- for tag in product.tags -%}
+                    {%- if tag contains ':' -%}
+                      {%- assign tag_parts = tag | split: ':' -%}
+                      {%- assign tag_match = tag_parts[0] | append: ':' -%}
+                      {%- unless specs_exclude contains tag_match -%}
+                        <li>{{ tag_parts[0] | capitalize }}: {{ tag_parts[1] | capitalize }}</li>
+                      {%- endunless -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if has_shipping or has_resources -%}
+            <div class="product-feature-details__right">
+              {%- if has_shipping -%}
+                <div class="product-feature-details__block">
+                  <h2 class="product-feature-details__block-title">{{ section.settings.shipping_title }}</h2>
+                  <div class="product-feature-details__text">
+                    {{ product.metafields.custom.tab_shipping.value }}
+                  </div>
+                </div>
+              {%- endif -%}
+
+              {%- if has_resources -%}
+                <div class="product-feature-details__block">
+                  <h2 class="product-feature-details__block-title">{{ section.settings.resources_title }}</h2>
+                  <div class="product-feature-details__resources-list">
+                    {{ product.metafields.custom.tab_resources | metafield_tag }}
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <pfd-accordion class="product-feature-details__mobile">
+        {%- if has_specs -%}
+          <div class="pfd-accordion__item">
+            <button
+              class="pfd-accordion__trigger"
+              aria-expanded="false"
+              aria-controls="pfd-specs-{{ section.id }}"
+            >
+              <span class="pfd-accordion__trigger-label">{{ section.settings.specs_title }}</span>
+              <svg
+                class="pfd-accordion__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="7"
+                viewBox="0 0 10 7"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M9 1.5L5 5.5L1 1.5" stroke="#152755" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="pfd-accordion__content" id="pfd-specs-{{ section.id }}">
+              <div class="pfd-accordion__content-inner">
+                <ul>
+                  {%- for tag in product.tags -%}
+                    {%- if tag contains ':' -%}
+                      {%- assign tag_parts = tag | split: ':' -%}
+                      {%- assign tag_match = tag_parts[0] | append: ':' -%}
+                      {%- unless specs_exclude contains tag_match -%}
+                        <li>{{ tag_parts[0] | capitalize }}: {{ tag_parts[1] | capitalize }}</li>
+                      {%- endunless -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if has_resources -%}
+          <div class="pfd-accordion__item">
+            <button
+              class="pfd-accordion__trigger"
+              aria-expanded="false"
+              aria-controls="pfd-resources-{{ section.id }}"
+            >
+              <span class="pfd-accordion__trigger-label">{{ section.settings.resources_title }}</span>
+              <svg
+                class="pfd-accordion__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="7"
+                viewBox="0 0 10 7"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M9 1.5L5 5.5L1 1.5" stroke="#152755" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="pfd-accordion__content" id="pfd-resources-{{ section.id }}">
+              <div class="pfd-accordion__content-inner">
+                {{ product.metafields.custom.tab_resources | metafield_tag }}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if has_shipping -%}
+          <div class="pfd-accordion__item">
+            <button
+              class="pfd-accordion__trigger"
+              aria-expanded="false"
+              aria-controls="pfd-shipping-{{ section.id }}"
+            >
+              <span class="pfd-accordion__trigger-label">{{ section.settings.shipping_title }}</span>
+              <svg
+                class="pfd-accordion__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="7"
+                viewBox="0 0 10 7"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M9 1.5L5 5.5L1 1.5" stroke="#152755" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="pfd-accordion__content" id="pfd-shipping-{{ section.id }}">
+              <div class="pfd-accordion__content-inner">
+                {{ product.metafields.custom.tab_shipping.value }}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      </pfd-accordion>
+    </div>
+  </div>
+
+  <script>
+    if (!customElements.get('pfd-accordion')) {
+      customElements.define(
+        'pfd-accordion',
+        class PfdAccordion extends HTMLElement {
+          connectedCallback() {
+            this.querySelectorAll('.pfd-accordion__trigger').forEach((trigger) => {
+              trigger.addEventListener('click', this.#onTriggerClick.bind(this));
+            });
+          }
+
+          #onTriggerClick(event) {
+            const trigger = event.currentTarget;
+            const expanded = trigger.getAttribute('aria-expanded') === 'true';
+            const content = this.querySelector(`#${trigger.getAttribute('aria-controls')}`);
+
+            trigger.setAttribute('aria-expanded', String(!expanded));
+            content.style.maxHeight = expanded ? '0' : `${content.scrollHeight}px`;
+          }
+        }
+      );
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product Feature Details",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Specifications"
+    },
+    {
+      "type": "paragraph",
+      "content": "Specifications are pulled from product tags using the key:value format (e.g. Material:Porcelain). Tags in the 'product-specs-exclude-list' link list are hidden."
+    },
+    {
+      "type": "text",
+      "id": "specs_title",
+      "label": "Specifications heading",
+      "default": "Product Specification"
+    },
+    {
+      "type": "header",
+      "content": "Shipping & Delivery"
+    },
+    {
+      "type": "paragraph",
+      "content": "Content is pulled from the product metafield: custom.tab_shipping"
+    },
+    {
+      "type": "text",
+      "id": "shipping_title",
+      "label": "Shipping heading",
+      "default": "Shipping & Delivery"
+    },
+    {
+      "type": "header",
+      "content": "Resources"
+    },
+    {
+      "type": "paragraph",
+      "content": "Content is pulled from the product metafield: custom.tab_resources"
+    },
+    {
+      "type": "text",
+      "id": "resources_title",
+      "label": "Resources heading",
+      "default": "Resources"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Feature Details"
+    }
+  ]
+}
+{% endschema %}
