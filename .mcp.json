@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "shopify-dev-mcp": {
+      "args": [
+        "-y",
+        "@shopify/dev-mcp@latest"
+      ],
+      "command": "npx"
+    },
+    "trigger": {
+      "args": [
+        "trigger.dev@4.3.0",
+        "mcp",
+        "--dev-only"
+      ],
+      "command": "npx"
+    },
+    "Figma": {
+      "url": "https://mcp.figma.com/mcp"
+    }
+  }
+}

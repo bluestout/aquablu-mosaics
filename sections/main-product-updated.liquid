@@ -1,0 +1,130 @@
+{{ 'component-product-updated.css' | asset_url | stylesheet_tag }}
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+{%- comment -%} Parse sq_ft and per from product tags (old implementation) {%- endcomment -%}
+{%- assign sq_ft = false -%}
+{%- assign per = false -%}
+{%- for tag in product.tags -%}
+  {%- if tag contains 'coverage:' -%}
+    {%- assign sq_ft = tag | remove: 'coverage:' | remove: ' Sqft' | remove: ' sqft' | times: 1.00 -%}
+  {%- endif -%}
+  {%- if tag contains 'sold by:' -%}
+    {%- assign per = tag | remove: 'sold by:' | prepend: 'per ' -%}
+  {%- endif -%}
+  {%- if product.type == 'Pool Mosaic' -%}
+    {%- assign per = 'each' -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- unless sq_ft -%}{%- assign sq_ft = 10.24 -%}{%- endunless -%}
+{%- unless per -%}{%- assign per = 'per box' -%}{%- endunless -%}
+{%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+
+{%- assign sample_variant = nil -%}
+{%- for v in product.variants -%}
+  {%- assign v_title_lower = v.title | downcase -%}
+  {%- if v_title_lower contains 'sample' -%}
+    {%- assign sample_variant = v -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<product-updated
+  class="product-updated-main-wrapper"
+  id="updated-product-{{ section.id }}"
+  data-current-variant-id="{{ current_variant.id }}"
+  data-sqft-per-box="{{ sq_ft }}"
+  data-unit-type="{{ unit_type }}"
+>
+  {%- comment -%} Inject product JSON for variant lookup {%- endcomment -%}
+  <script type="application/json" data-product-json>
+    {{ product | json }}
+  </script>
+
+  <div class="product-updated-child-wrapper page-width">
+    <div class="up-media-wrapper">
+      {% render 'component-product-media', product: product %}
+    </div>
+    <div class="up-product-info-wrapper">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'header' -%}
+            {% render 'component-buybox-header', product: product, current_variant: current_variant %}
+          {%- when 'pricing' -%}
+            {% render 'component-buybox-pricing',
+              product: product,
+              current_variant: current_variant,
+              sq_ft: sq_ft,
+              per: per,
+              sample_variant: sample_variant
+            %}
+          {%- when 'options' -%}
+            {% render 'component-buybox-options',
+              product: product,
+              current_variant: current_variant,
+              sample_variant: sample_variant
+            %}
+          {%- when 'calculator' -%}
+            {% render 'component-buybox-calculator',
+              product: product,
+              current_variant: current_variant,
+              sq_ft: sq_ft,
+              per: per
+            %}
+          {%- when 'cta' -%}
+            {% render 'component-buybox-cta', product: product, current_variant: current_variant %}
+          {%- when '@app' -%}
+            {% render block %}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</product-updated>
+
+{% render 'component-quote-popup', product: product, current_variant: current_variant %}
+
+<script src="{{ 'component-product-updated.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Main Product Updated",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "header",
+      "name": "Header"
+    },
+    {
+      "type": "pricing",
+      "name": "Pricing"
+    },
+    {
+      "type": "options",
+      "name": "Options"
+    },
+    {
+      "type": "calculator",
+      "name": "Calculator"
+    },
+    {
+      "type": "cta",
+      "name": "CTA Buttons"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Product Updated",
+      "blocks": [
+        { "type": "header" },
+        { "type": "pricing" },
+        { "type": "options" },
+        { "type": "calculator" },
+        { "type": "cta" }
+      ]
+    }
+  ]
+}
+{% endschema %}

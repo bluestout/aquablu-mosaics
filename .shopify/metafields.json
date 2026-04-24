@@ -1,192 +1,52 @@
 {
   "article": [],
-  "blog": [],
-  "brand": [],
+  "blog": [
+    {
+      "key": "blog_image",
+      "namespace": "custom",
+      "name": "Blog image",
+      "description": "Blog image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
   "collection": [
     {
-      "key": "sec_1_image",
+      "key": "sub_heading",
       "namespace": "custom",
-      "name": "sec_1_image",
-      "description": "Collection Metafield\tSection 1 - Promotion grid\tImage",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "sec_2_image",
-      "namespace": "custom",
-      "name": "sec_2_image",
-      "description": "Collection Metafield\tSection 2 - Promotion grid\tImage",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "sec_2_link_text",
-      "namespace": "custom",
-      "name": "sec_2_link_text",
-      "description": "Collection Metafield\tSection 2 - Promotion grid\tlink text",
+      "name": "Sub heading",
+      "description": "Collection sub-heading",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
       }
     },
     {
-      "key": "sec_2_link",
+      "key": "sub_categories",
       "namespace": "custom",
-      "name": "sec_2_link",
-      "description": "Collection Metafield\tSection 2 - Promotion grid\tlink",
-      "type": {
-        "name": "url",
-        "category": "URL"
-      }
-    },
-    {
-      "key": "sec_3_image_left",
-      "namespace": "custom",
-      "name": "sec_3_image_left",
-      "description": "Collection Metafield\tSection 3 - Promotion grid\tImage Left",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "sec_3_image_right",
-      "namespace": "custom",
-      "name": "sec_3_image_right",
-      "description": "Collection Metafield\tSection 3 - Promotion grid\tImage Right",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "sec_4_image",
-      "namespace": "custom",
-      "name": "sec_4_image",
-      "description": "Collection Metafield\tSection 4 - Promotion grid\tImage",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "sec_4_link",
-      "namespace": "custom",
-      "name": "sec_4_link",
-      "description": "Collection Metafield\tSection 4 - Promotion grid\tLink",
-      "type": {
-        "name": "url",
-        "category": "URL"
-      }
-    },
-    {
-      "key": "sec_1_heading",
-      "namespace": "custom",
-      "name": "sec_1_heading",
+      "name": "Sub categories",
       "description": "",
       "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "sec_2_heading",
-      "namespace": "custom",
-      "name": "sec_2_heading",
-      "description": "Collection Metafield\tSection 2 - Promotion grid\tHeading",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "sec_3_heading_left",
-      "namespace": "custom",
-      "name": "sec_3_heading_left",
-      "description": "Collection Metafield\tSection 3 - Promotion grid\tHeading Left",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "sec_3_heading_right",
-      "namespace": "custom",
-      "name": "sec_3_heading_right",
-      "description": "Collection Metafield\tSection 3 - Promotion grid\tHeading Right",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "sec_4_heading",
-      "namespace": "custom",
-      "name": "sec_4_heading",
-      "description": "Collection Metafield\tSection 4 - Promotion grid\tHeading",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "sec_3_link_left",
-      "namespace": "custom",
-      "name": "sec_3_link_left",
-      "description": "",
-      "type": {
-        "name": "url",
-        "category": "URL"
-      }
-    },
-    {
-      "key": "sec_3_link_right",
-      "namespace": "custom",
-      "name": "sec_3_link_right",
-      "description": "",
-      "type": {
-        "name": "url",
-        "category": "URL"
-      }
-    },
-    {
-      "key": "sec_1_image_mobile",
-      "namespace": "custom",
-      "name": "sec_1_image_mobile",
-      "description": "Collection Metafield\tSection 1 - Promotion grid\tImage Mobile",
-      "type": {
-        "name": "file_reference",
+        "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "two_col_image",
+      "key": "custom_test",
       "namespace": "custom",
-      "name": "two col image",
+      "name": "Custom Test",
       "description": "",
       "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "two_col_bg_color",
-      "namespace": "custom",
-      "name": "two col bg-color",
-      "description": "",
-      "type": {
-        "name": "color",
+        "name": "list.color",
         "category": "COLOR"
       }
     },
     {
-      "key": "two_col_title",
+      "key": "pre_footer_title",
       "namespace": "custom",
-      "name": "two col title",
+      "name": "Pre Footer Title",
       "description": "",
       "type": {
         "name": "single_line_text_field",
@@ -194,83 +54,13 @@
       }
     },
     {
-      "key": "two_col_title_color",
+      "key": "footer_description",
       "namespace": "custom",
-      "name": "two col title color",
+      "name": "Footer Description",
       "description": "",
       "type": {
-        "name": "color",
-        "category": "COLOR"
-      }
-    },
-    {
-      "key": "two_col_text",
-      "namespace": "custom",
-      "name": "two col text",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
+        "name": "multi_line_text_field",
         "category": "TEXT"
-      }
-    },
-    {
-      "key": "two_col_text_color",
-      "namespace": "custom",
-      "name": "two col text color",
-      "description": "",
-      "type": {
-        "name": "color",
-        "category": "COLOR"
-      }
-    },
-    {
-      "key": "two_col_right_text_area",
-      "namespace": "custom",
-      "name": "two col right text area",
-      "description": "",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "hero_text_position",
-      "namespace": "custom",
-      "name": "hero text position",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "two_col_image_mobile",
-      "namespace": "custom",
-      "name": "two col image mobile",
-      "description": "",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "two_col_title_color_mobile",
-      "namespace": "custom",
-      "name": "two col title color mobile",
-      "description": "",
-      "type": {
-        "name": "color",
-        "category": "COLOR"
-      }
-    },
-    {
-      "key": "two_col_right_bg_color",
-      "namespace": "custom",
-      "name": "two col right bg color",
-      "description": "",
-      "type": {
-        "name": "color",
-        "category": "COLOR"
       }
     }
   ],
@@ -278,337 +68,26 @@
   "company_location": [],
   "location": [],
   "market": [],
-  "order": [
-    {
-      "key": "draft_order_id",
-      "namespace": "custom",
-      "name": "Draft Order ID",
-      "description": "Store draft order id (current object)",
-      "type": {
-        "name": "number_integer",
-        "category": "NUMBER"
-      }
-    }
-  ],
+  "order": [],
   "page": [],
   "product": [
     {
-      "key": "queries",
-      "namespace": "shopify--discovery--product_search_boost",
-      "name": "Search product boosts",
-      "description": "List of search queries for which a product gets higher rank in search results",
+      "key": "flavor",
+      "namespace": "shopify",
+      "name": "Flavor",
+      "description": "Specifies the taste or flavor of a product, e.g. vanilla, mint",
       "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "related_products",
-      "namespace": "shopify--discovery--product_recommendation",
-      "name": "Related products",
-      "description": "List of related products",
-      "type": {
-        "name": "list.product_reference",
+        "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "related_products_display",
-      "namespace": "shopify--discovery--product_recommendation",
-      "name": "Related products settings",
-      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "key": "tea-input-type",
+      "namespace": "shopify",
+      "name": "Tea input type",
+      "description": "Specifies the preparation style of tea, e.g. bags, K-cups",
       "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "complementary_products",
-      "namespace": "shopify--discovery--product_recommendation",
-      "name": "Complementary products",
-      "description": "List of complementary products",
-      "type": {
-        "name": "list.product_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "styles",
-      "namespace": "custom",
-      "name": "styles",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "color",
-      "namespace": "filter",
-      "name": "color",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "thickness",
-      "namespace": "custom",
-      "name": "thickness",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "shape",
-      "namespace": "custom",
-      "name": "shape",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "size",
-      "namespace": "custom",
-      "name": "size",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "feature",
-      "namespace": "custom",
-      "name": "feature",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "mounting_type",
-      "namespace": "custom",
-      "name": "mounting_type",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "material",
-      "namespace": "custom",
-      "name": "material",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "type",
-      "namespace": "custom",
-      "name": "type",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "application",
-      "namespace": "custom",
-      "name": "application",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "finish",
-      "namespace": "custom",
-      "name": "finish",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "price_per_sqr_ft",
-      "namespace": "custom",
-      "name": "price_per_sq_ft",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "sold_by",
-      "namespace": "custom",
-      "name": "sold by",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "upsell",
-      "namespace": "custom",
-      "name": "upsell",
-      "description": "",
-      "type": {
-        "name": "product_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "tab_resources",
-      "namespace": "custom",
-      "name": "tab resources",
-      "description": "",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "tab_shipping",
-      "namespace": "custom",
-      "name": "tab shipping",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "main_collection",
-      "namespace": "custom",
-      "name": "Main Collection",
-      "description": "",
-      "type": {
-        "name": "collection_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "icon_code_1",
-      "namespace": "custom",
-      "name": "Icon Code 1",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "icon_code_2",
-      "namespace": "custom",
-      "name": "Icon Code 2",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "icon_code_3",
-      "namespace": "custom",
-      "name": "Icon Code 3",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "icon_code_4",
-      "namespace": "custom",
-      "name": "Icon Code 4",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "icon_code_5",
-      "namespace": "custom",
-      "name": "Icon Code 5",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "icon_show_1",
-      "namespace": "custom",
-      "name": "Icon Show 1",
-      "description": "",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
-      "key": "icon_show_2",
-      "namespace": "custom",
-      "name": "Icon Show 2",
-      "description": "",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
-      "key": "icon_show_3",
-      "namespace": "custom",
-      "name": "Icon Show 3",
-      "description": "",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
-      "key": "icon_show_4",
-      "namespace": "custom",
-      "name": "Icon Show 4",
-      "description": "",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
-      "key": "icon_show_5",
-      "namespace": "custom",
-      "name": "Icon Show 5",
-      "description": "",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
-      "key": "collection_url",
-      "namespace": "custom",
-      "name": "collection_url",
-      "description": "",
-      "type": {
-        "name": "collection_reference",
+        "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     },
@@ -623,13 +102,273 @@
       }
     },
     {
-      "key": "color-pattern",
+      "key": "taxcode",
+      "namespace": "avalara",
+      "name": "Avalara Tax Code",
+      "description": "Used only for Avalara integration.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "short_description",
+      "namespace": "custom",
+      "name": "Short description",
+      "description": "Short description",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "tea_type",
+      "namespace": "custom",
+      "name": "Tea type",
+      "description": "Type of tea",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "calories",
+      "namespace": "custom",
+      "name": "Calories",
+      "description": "Value of calories",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "tea_location",
+      "namespace": "custom",
+      "name": "Tea location",
+      "description": "Location of tea",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "certification_image1",
+      "namespace": "custom",
+      "name": "Certification image1",
+      "description": "Certification image1",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image2",
+      "namespace": "custom",
+      "name": "Certification image2",
+      "description": "Certification image2",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image3",
+      "namespace": "custom",
+      "name": "Certification image3",
+      "description": "Certification image3",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image4",
+      "namespace": "custom",
+      "name": "Certification image4",
+      "description": "Certification image4",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image5",
+      "namespace": "custom",
+      "name": "Certification image5",
+      "description": "Certification image5",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image6",
+      "namespace": "custom",
+      "name": "Certification image6",
+      "description": "Certification image6",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image7",
+      "namespace": "custom",
+      "name": "Certification image7",
+      "description": "Certification image7",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image8",
+      "namespace": "custom",
+      "name": "Certification image8",
+      "description": "Certification image8",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image9",
+      "namespace": "custom",
+      "name": "Certification image9",
+      "description": "Certification image9",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "certification_image10",
+      "namespace": "custom",
+      "name": "Certification image10",
+      "description": "Certification image10",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "what_s_inside_title",
+      "namespace": "custom",
+      "name": "What's inside title",
+      "description": "What's inside title",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "what_s_inside_description",
+      "namespace": "custom",
+      "name": "What's inside description",
+      "description": "What's inside description",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "what_s_inside_icon",
+      "namespace": "custom",
+      "name": "What's inside icon",
+      "description": "What's inside icon",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "recipe_title",
+      "namespace": "custom",
+      "name": "Recipe title",
+      "description": "Recipe title",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "recipe_banner_image",
+      "namespace": "custom",
+      "name": "Recipe banner image",
+      "description": "Recipe banner image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "recipe_ingredients",
+      "namespace": "custom",
+      "name": "Recipe ingredients",
+      "description": "Recipe Ingredients",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "recipe_instructions",
+      "namespace": "custom",
+      "name": "Recipe instructions",
+      "description": "Recipe instructions",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "caffeine",
+      "namespace": "custom",
+      "name": "Caffeine",
+      "description": "Value of Caffeine",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "what_s_inside_detail",
+      "namespace": "custom",
+      "name": "What's inside detail",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_scripts",
+      "namespace": "custom",
+      "name": "Custom Scripts",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "dietary-preferences",
       "namespace": "shopify",
-      "name": "Color",
-      "description": "Defines the primary color or pattern, such as blue or striped",
+      "name": "Dietary preferences",
+      "description": "Helps identify products suitable for specific diets, e.g. vegan, nut free",
       "type": {
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "custom_price",
+      "namespace": "custom",
+      "name": "custom_price",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
       }
     }
   ],
@@ -743,7 +482,88 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "package_value",
+      "namespace": "custom",
+      "name": "Package Value",
+      "description": "Tea bags",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "taxcode",
+      "namespace": "avalara",
+      "name": "Avalara Tax Code",
+      "description": "Used only for Avalara integration.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "audiobook_url",
+      "namespace": "custom",
+      "name": "audiobook_url",
+      "description": "External audiobook purchase link",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "is_tin_variant",
+      "namespace": "custom",
+      "name": "is_tin_variant",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "oos_message",
+      "namespace": "custom",
+      "name": "OOS Message",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
-  "shop": []
+  "shop": [
+    {
+      "key": "freegifts_custom_data",
+      "namespace": "secomapp",
+      "name": "BOGOS custom_data (Do not edit)",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "blocks_list_checkout_static_content",
+      "namespace": "checkoutblocks",
+      "name": "Checkout Blocks: Blocks List for: checkout_static_content",
+      "description": null,
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "blocks_list_checkout_line_item_content",
+      "namespace": "checkoutblocks",
+      "name": "Checkout Blocks: Blocks List for: checkout_line_item_content",
+      "description": null,
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ]
 }

@@ -1,0 +1,71 @@
+{%- comment -%}
+  Buybox Pricing
+  Displays: price per sq ft, price per box, sold-by label, shipping text, sample button.
+
+  Sample button:
+    - Only renders when `sample_variant` is provided.
+    - Uses the sample variant's price and ID.
+    - Click is handled by <product-updated> which adds sample_variant to cart.
+{%- endcomment -%}
+
+{%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
+{%- assign sq_ft = sq_ft | default: 10.24 -%}
+{%- assign per = per | default: 'per box' -%}
+{%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+{%- assign price_per_sqft_cents = current_variant.price | divided_by: sq_ft -%}
+
+{%- comment -%} Split the sample price into dollars + cents for the superscript styling {%- endcomment -%}
+{%- if sample_variant -%}
+  {%- assign sample_dollars = sample_variant.price | divided_by: 100 -%}
+  {%- assign sample_cents_int = sample_variant.price | modulo: 100 -%}
+  {%- if sample_cents_int < 10 -%}
+    {%- assign sample_cents = '0' | append: sample_cents_int -%}
+  {%- else -%}
+    {%- assign sample_cents = sample_cents_int | append: '' -%}
+  {%- endif -%}
+{%- endif -%}
+
+<div class="buybox-pricing">
+  {%- comment -%} Price per sq ft {%- endcomment -%}
+  <p class="buybox-price-sqft" data-price-sqft>
+    {{ price_per_sqft_cents | money }} per sq. ft.
+  </p>
+
+  {%- comment -%} Price per box row {%- endcomment -%}
+  <div class="buybox-price-row">
+    <div class="buybox-price-box-info">
+      <span class="buybox-price-box" data-price-box>
+        {{ current_variant.price | money }} {{ per }}
+      </span>
+      <span class="buybox-sold-by-label">
+        Sold by {{ unit_type }} ({{ sq_ft }} sq.ft.)
+      </span>
+    </div>
+
+    <p class="buybox-shipping-text up-mobile-only">
+      Usually ships in 3-5 business days.
+    </p>
+
+    {%- if sample_variant -%}
+      <button
+        type="button"
+        class="buybox-sample-btn"
+        data-sample-btn
+        data-sample-variant-id="{{ sample_variant.id }}"
+        {% unless sample_variant.available %}disabled{% endunless %}
+      >
+        <span data-sample-label>
+          Order a sample for ${{ sample_dollars }}<span class="price-cents">{{ sample_cents }}</span>
+        </span>
+      </button>
+    {%- endif -%}
+  </div>
+
+  {%- comment -%} Shipping text {%- endcomment -%}
+  <p class="buybox-shipping-text up-desktop-only">
+    Usually ships in 3-5 business days.
+  </p>
+
+  {%- comment -%} Divider {%- endcomment -%}
+  <hr class="buybox-divider">
+</div>

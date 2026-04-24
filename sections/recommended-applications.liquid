@@ -1,8 +1,20 @@
 {% if product.metafields.custom.icon_code_1 %}
   <style>
+    {% unless section.settings.show_on_desktop %}
+      @media (min-width: 769px) {
+        #RecommendedApplications-{{ section.id }} { display: none !important; }
+      }
+    {% endunless %}
+    {% unless section.settings.show_on_mobile %}
+      @media (max-width: 768px) {
+        #RecommendedApplications-{{ section.id }} { display: none !important; }
+      }
+    {% endunless %}
+  </style>
+
+  <style>
     .recommended-applications {
       padding: 20px 40px;
-      margin-top: 50px;
     }
 
     .recommended-applications__inner {
@@ -156,6 +168,22 @@
       "id": "title",
       "label": "Title",
       "default": "Recommended Applications"
+    },
+    {
+      "type": "header",
+      "content": "Visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_desktop",
+      "label": "Show on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_mobile",
+      "label": "Show on mobile",
+      "default": true
     }
   ],
   "presets": [

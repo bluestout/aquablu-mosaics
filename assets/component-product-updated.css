@@ -1,0 +1,1363 @@
+/* ============================================
+   Product Updated - Component Styles
+   ============================================ */
+
+/* === Layout === */
+.product-updated-main-wrapper {
+  padding: 20px 0 40px;
+}
+
+.product-updated-child-wrapper.page-width {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.up-media-wrapper {
+  flex: 0 0 48%;
+  max-width: 48%;
+  position: sticky;
+  top: 120px;
+}
+
+.up-product-info-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* === Utility === */
+.up-desktop-only {
+  display: block;
+}
+.up-mobile-only {
+  display: none!important;
+}
+
+/* ============================================
+   Media Gallery
+   ============================================ */
+.product-media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.product-media-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-media-item:only-child {
+  grid-column: 1 / -1;
+}
+
+.product-media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.media-zoom-btn {
+  position: absolute;
+  bottom: 11px;
+  right: 11px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.media-zoom-btn svg {
+  width: 21px;
+  height: 21px;
+}
+
+.media-visualize-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 46px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  margin-top: 12px;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.media-visualize-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   Buybox Header
+   ============================================ */
+.buybox-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buybox-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  font-family: FuturaBook, sans-serif;
+  font-size: 11.1px;
+  letter-spacing: 0.65px;
+  color: #374759;
+  line-height: 17.68px;
+  padding: 22px 0 10px;
+}
+
+.buybox-breadcrumbs a {
+  color: #374759;
+  text-decoration: none;
+}
+
+.buybox-breadcrumbs .breadcrumb-separator {
+  opacity: 0.2;
+  margin: 0 3px;
+}
+
+.buybox-collection-link-mobile {
+  font-family: FuturaBook, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.65px;
+  color: #374759;
+  text-decoration: none;
+  line-height: 20.8px;
+}
+
+.buybox-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buybox-sku {
+  font-family: FuturaBook, sans-serif;
+  font-size: 12px;
+  color: #727272;
+  letter-spacing: 0.8px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.buybox-title {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: 0.9px;
+  color: #000;
+  margin: 0;
+  font-weight: normal;
+}
+
+.buybox-reviews {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buybox-reviews-stars {
+  display: flex;
+  align-items: center;
+  gap: 3.5px;
+}
+
+.buybox-reviews-stars svg {
+  width: 15px;
+  height: 15px;
+  fill: #000;
+}
+
+.buybox-reviews-count {
+  font-family: FuturaBook, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  color: #000;
+  line-height: 24px;
+}
+
+/* ============================================
+   Buybox Pricing
+   ============================================ */
+.buybox-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buybox-price-sqft {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  color: #000;
+  line-height: 24px;
+  margin: 0;
+}
+
+.buybox-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  column-gap: 10px;
+}
+
+.buybox-price-box-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.buybox-price-box {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  color: #000;
+  line-height: 24px;
+}
+
+.buybox-sold-by-label {
+  background: #f8f8f8;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: #000;
+  line-height: 24px;
+}
+
+.buybox-sample-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  border: 1.5px solid #000;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.09px;
+  text-transform: uppercase;
+  color: #000;
+  white-space: nowrap;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+.buybox-sample-btn .price-cents {
+  font-size: 11.61px;
+  vertical-align: super;
+  line-height: 1;
+}
+
+.buybox-shipping-text {
+  font-family: FuturaBook, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #374759;
+  line-height: normal;
+  margin: 2px 0 0;
+}
+
+.buybox-divider {
+  height: 1px;
+  background: #d5d5d5;
+  border: none;
+  margin: 7px 0 0;
+}
+
+/* ============================================
+   Buybox Options
+   ============================================ */
+.buybox-options {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.buybox-option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.buybox-option-group--size {
+  gap: 14px;
+}
+
+.buybox-option-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.buybox-option-label {
+  font-family: FuturaBook, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  color: #000;
+  line-height: 24px;
+  margin: 0;
+}
+
+.buybox-option-label strong {
+  font-family: FuturaMedium, sans-serif;
+  font-weight: normal;
+}
+
+.buybox-view-collection {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: FuturaBook, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: none;
+  min-width: max-content;
+}
+
+.buybox-view-collection svg {
+  width: 11.5px;
+  height: 10.5px;
+}
+
+.buybox-color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buybox-color-swatch {
+  display: block;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #efefef;
+  padding: 0;
+  background: none;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.buybox-color-swatch:hover {
+  border-color: #d5d5d5;
+}
+
+.buybox-color-swatch.is-active,
+.buybox-color-swatch.is-active:hover {
+  border-color: #000;
+}
+
+.buybox-color-swatch.is-active {
+  border-color: #000;
+}
+
+.buybox-color-swatch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.buybox-size-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.buybox-size-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 148px;
+  height: 52px;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  color: #000;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.buybox-size-option.is-active {
+  border: 1.5px solid #000;
+}
+
+.buybox-options-divider {
+  height: 1px;
+  background: #d5d5d5;
+  border: none;
+  margin: 5px 0 0;
+}
+
+/* Mobile links inside options */
+.buybox-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buybox-request-quote {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-family: FuturaBook, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.buybox-request-quote svg {
+  width: 15px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   Buybox Calculator
+   ============================================ */
+.buybox-calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.buybox-quantity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buybox-quantity-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 121px;
+}
+
+.buybox-quantity-label {
+  font-family: FuturaBook, sans-serif;
+  font-size: 15px;
+  color: #000;
+  letter-spacing: 0.8px;
+  line-height: normal;
+  margin: 0;
+}
+
+.buybox-quantity-label strong {
+  font-family: FuturaMedium, sans-serif;
+  font-weight: normal;
+}
+
+.buybox-quantity-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background: #fff;
+  padding: 0 15px;
+}
+
+.buybox-quantity-input button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.buybox-quantity-input .qty-value {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  color: #000;
+  line-height: 24px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.buybox-need-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: underline;
+  font-family: FuturaBook, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #888;
+}
+
+.buybox-need-link svg {
+  width: 18px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+/* Calculator Box — hidden by default, opens via .buybox-need-link */
+.buybox-calc-box {
+  background: #f8f8f8;
+  padding: 30px 20px;
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+}
+
+.buybox-calc-box.is-open {
+  display: flex;
+}
+
+/* Disabled add to cart button */
+.buybox-atc-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.buybox-calc-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.buybox-calc-header-title {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  color: #000;
+  line-height: normal;
+  margin: 0;
+}
+
+.buybox-calc-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buybox-calc-toggle svg {
+  width: 13px;
+  height: 13px;
+}
+
+.buybox-calc-form {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.buybox-calc-input {
+  flex: 1;
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background: #fff;
+  padding: 0 15px;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  color: #000;
+}
+
+.buybox-calc-input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.buybox-calc-btn {
+  height: 46px;
+  padding: 0 30px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: FuturaBook, sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.buybox-calc-divider {
+  height: 1px;
+  background: #d5d5d5;
+  margin: 10px 0;
+}
+
+.buybox-calc-overage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+}
+
+.buybox-calc-checkbox {
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  margin-right: 0px!important;
+}
+
+.buybox-calc-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.buybox-calc-overage-label {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: normal;
+}
+
+.buybox-calc-overage-label em {
+  font-family: FuturaBook, sans-serif;
+  font-style: italic;
+}
+
+/* Calculator Details */
+.buybox-calc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.buybox-calc-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  color: #000;
+}
+
+.buybox-calc-row-label {
+  font-family: FuturaBook, sans-serif;
+  line-height: normal;
+}
+
+.buybox-calc-row-value {
+  font-family: FuturaMedium, sans-serif;
+  text-align: right;
+  line-height: normal;
+}
+
+/* Total Price */
+
+.buybox-total-divider {
+  height: 1px;
+  background: #d5d5d5;
+  border: none;
+  margin: 0 0 19px;
+}
+
+.buybox-total-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.buybox-total-label {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.7px;
+  color: #000;
+  line-height: normal;
+}
+
+.buybox-total-value {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  color: #000;
+  line-height: normal;
+}
+
+/* ============================================
+   Buybox CTA
+   ============================================ */
+.buybox-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.buybox-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.buybox-atc-btn {
+  flex: 1;
+  height: 46px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: max-content;
+  padding-inline: 15px;
+}
+
+.buybox-atc-btn .atc-separator {
+  text-transform: none;
+}
+
+.buybox-wishlist-btn {
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 213px;
+  min-width: 213px;
+  height: 46px!important;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 3px;
+  font-family: FuturaMedium, sans-serif!important;
+  font-size: 16px!important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+}
+
+.buybox-wishlist-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.swym-added.swym-add-to-wishlist.swym-added.swym-add-to-wishlist, .swym-added.swym-add-to-wishlist:after, .swym-added.swym-add-to-wishlist + .swym-fave-count{
+  color: black!important;
+}
+
+.swym-button.disabled{
+  opacity: 1!important;
+}
+
+.buybox-wishlist-btn.swym-added svg {
+  fill: #000;
+}
+
+/* Product form wrapper inside buybox-cta */
+.buybox-cta form[data-product-form] {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+}
+
+/* Shop Pay installments widget — Shopify renders its own markup */
+.buybox-shop-pay {
+  font-family: FuturaBook, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0px;
+}
+/* ============================================
+   Quote Request Popup
+   ============================================ */
+.quote-popup-root {
+  display: contents;
+}
+
+.quote-popup {
+  width: min(759px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.quote-popup::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.quote-popup__inner {
+  padding: 50px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  position: relative;
+}
+
+.quote-popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  padding: 0;
+}
+
+.quote-popup__close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.quote-popup__title {
+  font-family: FuturaDemi, sans-serif;
+  font-size: 36px;
+  letter-spacing: 0.8px;
+  color: #000;
+  text-align: center;
+  margin: 0 0 16px;
+  font-weight: normal;
+}
+
+.quote-popup__subtitle {
+  font-family: FuturaBook, sans-serif;
+  font-size: 18px;
+  color: #393939;
+  text-align: center;
+  margin: 0 0 30px;
+  line-height: 1.4;
+}
+
+.quote-popup__product {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f8f8f8;
+  border-radius: 3px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.quote-popup__product-image {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.quote-popup__product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quote-popup__product-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.quote-popup__product-sku {
+  font-family: FuturaBook, sans-serif;
+  font-size: 14px;
+  color: #393939;
+  margin: 0 0 6px;
+}
+
+.quote-popup__product-title {
+  font-family: FuturaDemi, sans-serif;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.quote-popup__success,
+.quote-popup__error {
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 16px;
+}
+
+.quote-popup__success {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.quote-popup__error {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+.quote-popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quote-popup__form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+}
+
+.quote-popup__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quote-popup__field--full {
+  grid-column: 1 / -1;
+}
+
+.quote-popup__field label {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 24px;
+}
+
+.quote-popup__field input,
+.quote-popup__field textarea {
+  width: 100%;
+  border: 1px solid #393939;
+  border-radius: 5px;
+  background: #fff;
+  padding: 12px 14px;
+  font-family: FuturaBook, sans-serif;
+  font-size: 16px;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.quote-popup__field input {
+  height: 48px;
+}
+
+.quote-popup__field textarea {
+  height: 135px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.quote-popup__field input:focus,
+.quote-popup__field textarea:focus {
+  outline: 2px solid #000;
+  outline-offset: -1px;
+}
+
+/* Radio group */
+.quote-popup__radio-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quote-popup__radio-group legend {
+  font-family: FuturaMedium, sans-serif;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.quote-popup__radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 32px;
+}
+
+.quote-popup__radio input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.quote-popup__radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #393939;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.quote-popup__radio input[type='radio']:checked + .quote-popup__radio-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.quote-popup__radio input[type='radio']:focus-visible + .quote-popup__radio-circle {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.quote-popup__submit-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.quote-popup__submit {
+  height: 48px;
+  min-width: 175px;
+  padding: 0 30px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: FuturaBook, sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quote-popup__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.yotpo-sr-bottom-line-summary.yotpo-sr-bottom-line-button path {
+  stroke: #EFA36B;
+  fill: #EFA36B;
+}
+
+
+span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
+  font-family: 'FuturaMedium'!important;
+  font-size: 15px!important;
+  font-weight: 400!important;
+  color: black!important;
+  letter-spacing: 0.8px!important;
+}
+
+@media only screen and (max-width: 640px) {
+  .quote-popup__inner {
+    padding: 40px 20px 24px;
+  }
+
+  .quote-popup__title {
+    font-size: 26px;
+  }
+
+  .quote-popup__subtitle {
+    font-size: 16px;
+  }
+
+  .quote-popup__form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .quote-popup__product {
+    padding: 16px;
+  }
+
+  .quote-popup__product-title {
+    font-size: 16px;
+  }
+
+  .quote-popup__submit {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   Mobile Responsive Styles
+   ============================================ */
+@media only screen and (max-width: 768px) {
+  /* Utility toggles */
+  .up-desktop-only {
+    display: none !important;
+  }
+  .up-mobile-only {
+    display: flex !important;
+  }
+
+  /* Layout reorder */
+  .product-updated-child-wrapper.page-width {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .up-product-info-wrapper {
+    display: contents;
+  }
+
+  .up-media-wrapper {
+    flex: none;
+    max-width: 100%;
+    position: relative;
+    top: auto;
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .buybox-header {
+    order: 1;
+    padding: 0 17px;
+    margin-bottom: 10px;
+  }
+
+  .buybox-pricing {
+    order: 3;
+    padding: 0 17px;
+    width: 100%;
+  }
+
+  .buybox-options {
+    order: 4;
+    padding: 0 17px;
+    margin-top: 15px;
+  }
+
+  .buybox-calculator {
+    order: 5;
+    padding: 0 17px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .buybox-cta {
+    order: 6;
+    padding: 0 17px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  /* Media gallery: horizontal scroll */
+  .product-media-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    scrollbar-width: none;
+    column-gap: 1.6px;
+  }
+
+  .product-media-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-media-item {
+    min-width: 50%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .media-visualize-btn {
+    display: none;
+  }
+
+  /* Mobile header styles */
+  .buybox-title-block {
+    gap: 6px;
+  }
+
+  .buybox-title {
+    font-size: 25.2px;
+    line-height: 27.72px;
+    letter-spacing: 1.26px;
+    color: #374759;
+    order: -1;
+  }
+
+  .buybox-sku {
+    font-size: 10px;
+    opacity: 0.65;
+    color: #374759;
+    letter-spacing: 0.65px;
+  }
+
+  .buybox-reviews {
+    opacity: 0.65;
+  }
+
+  /* Mobile pricing */
+  .buybox-price-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .buybox-sample-btn {
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+  }
+
+  .buybox-sample-btn.up-mobile-only {
+    display: inline-flex !important;
+  }
+
+  /* Mobile CTA */
+
+  .buybox-wishlist-btn span{
+    display: none;
+  }
+
+  .buybox-wishlist-btn {
+    width: unset;
+    min-width: unset;
+    padding-inline: 15px;
+  }
+
+  /* Mobile options: collection link alignment */
+  .buybox-view-collection {
+    justify-content: flex-end;
+  }
+
+  /* Mobile calculator */
+  .buybox-calc-form {
+    flex-direction: column;
+  }
+
+  .buybox-calc-input {
+    width: 100%;
+  }
+
+  .buybox-calc-btn {
+    width: 100%;
+  }
+
+  .buybox-quantity-row {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .buybox-total-row{
+    max-width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .buybox-calc-input{
+    flex: unset;
+  }
+
+  .buybox-calc-row{
+    font-size: 14px;
+  }
+  
+  .buybox-calc-header-title{
+    font-size: 16px;
+  }
+
+  .buybox-calc-input{
+    height: 38px;
+    font-size: 14px!important;
+  }
+
+  .buybox-calc-box{
+    padding: 20px 17px;
+  }
+}
+
+.label, label:not(.variant__button-label):not(.text-label){
+  margin-bottom: 0px;
+}
+
+.swym-button-bar{
+  margin: 0px!important;
+}
+
+.buybox-calc-overage .buybox-calc-checkbox:checked:after{
+  display: none!important;
+}
+
+@media(max-width: 768px){
+  .shopify-app-block:has(.sg-widget) {
+      display: none;
+      order: 7;
+  }
+}

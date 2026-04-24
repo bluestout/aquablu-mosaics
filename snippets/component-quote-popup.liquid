@@ -1,0 +1,114 @@
+{%- comment -%}
+  Quote Request Popup
+
+  Native <dialog> wrapped in <quote-popup> web component.
+  Triggered by any element with [data-quote-trigger] anywhere on the page.
+  Submits via AJAX to Shopify's contact form endpoint, with hidden
+  product/SKU/URL fields so the store admin knows what was requested.
+{%- endcomment -%}
+
+{%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
+
+<quote-popup class="quote-popup-root">
+  <dialog class="quote-popup" aria-labelledby="quote-popup-title">
+    <div class="quote-popup__inner">
+      <button type="button" class="quote-popup__close" data-quote-close aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <h2 id="quote-popup-title" class="quote-popup__title">Request a Quote</h2>
+      <p class="quote-popup__subtitle">
+        Please complete the form below and we&rsquo;ll get back to you soon with a quote.
+      </p>
+
+      {%- comment -%} Product info card {%- endcomment -%}
+      <div class="quote-popup__product">
+        {%- if product.featured_image -%}
+          <div class="quote-popup__product-image">
+            <img
+              src="{{ product.featured_image | image_url: width: 128 }}"
+              alt="{{ product.title | escape }}"
+              width="64"
+              height="64"
+              loading="lazy"
+            >
+          </div>
+        {%- endif -%}
+        <div class="quote-popup__product-info">
+          {%- if current_variant.sku != blank -%}
+            <p class="quote-popup__product-sku">SKU: {{ current_variant.sku }}</p>
+          {%- endif -%}
+          <p class="quote-popup__product-title">{{ product.title }}</p>
+        </div>
+      </div>
+
+      {%- comment -%} Success / error states {%- endcomment -%}
+      <div class="quote-popup__success" data-quote-success hidden>
+        <p>Thanks! Your quote request has been sent. We&rsquo;ll be in touch soon.</p>
+      </div>
+      <div class="quote-popup__error" data-quote-error hidden>
+        <p>Something went wrong. Please try again or email us directly.</p>
+      </div>
+
+      {%- comment -%} Form {%- endcomment -%}
+      {%- form 'contact', class: 'quote-popup__form', data-quote-form: '' -%}
+        <input type="hidden" name="contact[Product]" value="{{ product.title }}">
+        <input type="hidden" name="contact[Product URL]" value="{{ shop.url }}{{ product.url }}">
+        <input type="hidden" name="contact[SKU]" value="{{ current_variant.sku }}">
+        <input type="hidden" name="contact[Variant ID]" value="{{ current_variant.id }}">
+
+        <div class="quote-popup__form-grid">
+          <div class="quote-popup__field">
+            <label for="quote-first-name">First Name</label>
+            <input id="quote-first-name" type="text" name="contact[First Name]" required>
+          </div>
+          <div class="quote-popup__field">
+            <label for="quote-last-name">Last Name</label>
+            <input id="quote-last-name" type="text" name="contact[Last Name]" required>
+          </div>
+          <div class="quote-popup__field">
+            <label for="quote-email">Email</label>
+            <input id="quote-email" type="email" name="contact[email]" required>
+          </div>
+          <div class="quote-popup__field">
+            <label for="quote-phone">Phone</label>
+            <input id="quote-phone" type="tel" name="contact[phone]">
+          </div>
+        </div>
+
+        <fieldset class="quote-popup__radio-group">
+          <legend>Preferred Contact Method</legend>
+          <label class="quote-popup__radio">
+            <input type="radio" name="contact[Preferred Contact Method]" value="Call">
+            <span class="quote-popup__radio-circle" aria-hidden="true"></span>
+            <span>Call</span>
+          </label>
+          <label class="quote-popup__radio">
+            <input type="radio" name="contact[Preferred Contact Method]" value="Text">
+            <span class="quote-popup__radio-circle" aria-hidden="true"></span>
+            <span>Text</span>
+          </label>
+          <label class="quote-popup__radio">
+            <input type="radio" name="contact[Preferred Contact Method]" value="Email" checked>
+            <span class="quote-popup__radio-circle" aria-hidden="true"></span>
+            <span>Email</span>
+          </label>
+        </fieldset>
+
+        <div class="quote-popup__field quote-popup__field--full">
+          <label for="quote-message">Message</label>
+          <textarea id="quote-message" name="contact[body]" rows="5"></textarea>
+        </div>
+
+        <div class="quote-popup__submit-row">
+          <button type="submit" class="quote-popup__submit">
+            <span data-submit-label>Submit Request</span>
+          </button>
+        </div>
+      {%- endform -%}
+    </div>
+  </dialog>
+</quote-popup>

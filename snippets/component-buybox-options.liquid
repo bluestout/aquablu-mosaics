@@ -1,0 +1,106 @@
+{%- comment -%}
+  Buybox Options
+
+  Color/Style swatches:
+    Products pulled from the `products` field on the metaobject referenced by
+    `product.metafields.custom.combine_listing`.
+    The "View the Collection" link still uses `product.metafields.custom.collection_url`.
+    Each swatch is an <a> tag pointing to the related product. The swatch matching the
+    current product gets `.is-active`.
+
+  Size tabs (and any other variant options):
+    Driven by the current product's variants. Clicking emits a variant change to
+    <product-updated>.
+{%- endcomment -%}
+
+{%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
+{%- assign options_collection = product.metafields.custom.collection_url.value -%}
+{%- assign combine_listing = product.metafields.custom.combine_listing.value -%}
+{%- assign combine_products = combine_listing.products.value -%}
+
+<div class="buybox-options">
+  {%- comment -%} === Color / Style swatches from combine_listing metaobject === {%- endcomment -%}
+  {%- if combine_products.size > 0 -%}
+    {%- assign current_label = product.metafields.custom.color_name
+      | default: product.metafields.custom.option_label
+      | default: product.title
+    -%}
+
+    <div class="buybox-option-group">
+      <div class="buybox-option-header">
+        <p class="buybox-option-label">
+          Options: <strong>{{ current_label }}</strong>
+        </p>
+        {%- if options_collection.url -%}
+          <a href="{{ options_collection.url }}" class="buybox-view-collection">
+            View the Collection
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+              <path d="M0 5.85355H11" stroke="black"/>
+              <path d="M6 0.353546L11.5 5.85355L6 10.8535" stroke="black"/>
+            </svg>
+          </a>
+        {%- endif -%}
+      </div>
+      <div class="buybox-color-swatches">
+        {%- for option_product in combine_products -%}
+          {%- assign is_current = false -%}
+          {%- if option_product.id == product.id -%}{%- assign is_current = true -%}{%- endif -%}
+
+          <a
+            href="{{ option_product.url }}"
+            class="buybox-color-swatch{% if is_current %} is-active{% endif %}"
+            aria-label="{{ option_product.title | escape }}"
+            title="{{ option_product.title | escape }}"
+            {% if is_current %}
+              aria-current="page"
+            {% endif %}
+          >
+            {%- if option_product.featured_image -%}
+              <img
+                src="{{ option_product.featured_image | image_url: width: 120 }}"
+                alt="{{ option_product.title | escape }}"
+                width="60"
+                height="60"
+                loading="lazy"
+              >
+            {%- endif -%}
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} === Variant-based options (Size, etc.) === {%- endcomment -%}
+  {%- for option in product.options_with_values -%}
+    {%- assign option_index = forloop.index0 -%}
+    {%- assign selected_value = current_variant.options[option_index] -%}
+
+    {%- comment -%} Skip Color/Colour — handled by collection metafield above {%- endcomment -%}
+    {%- unless option.name == 'Color' or option.name == 'Colour' -%}
+      <div class="buybox-option-group buybox-option-group--size">
+        <p class="buybox-option-label">
+          {{ option.name }}: <strong>{{ selected_value }}</strong>
+        </p>
+        <div class="buybox-size-options">
+          {%- for value in option.values -%}
+            {%- comment -%} Skip "Sample" values — handled by .buybox-sample-btn instead {%- endcomment -%}
+            {%- assign value_lower = value | downcase -%}
+            {%- unless value_lower contains 'sample' -%}
+              <button
+                type="button"
+                class="buybox-size-option{% if value == selected_value %} is-active{% endif %}"
+                data-option-index="{{ option_index }}"
+                data-value="{{ value | escape }}"
+              >
+                {{ value }}
+              </button>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endunless -%}
+  {%- endfor -%}
+
+  {%- comment -%} Options divider {%- endcomment -%}
+  <hr class="buybox-options-divider">
+</div>

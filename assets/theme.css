@@ -15688,9 +15688,9 @@ label.tag__checkbox-wrapper {
 }
 .cart-max2-samples-info span{
   font-size: 14px;
-  white-space: nowrap;
-  position: absolute;
-  left: 20px;
+  /* white-space: nowrap; */
+  /* position: absolute; */
+  /* left: 20px; */
 }
 
 @media only screen and (max-width: 1025px) and (min-width: 800px) {

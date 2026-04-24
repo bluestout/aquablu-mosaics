@@ -1,0 +1,36 @@
+<div class="updated-product-media-wrapper">
+  <div class="product-media-grid">
+    {%- for media in product.media limit: 6 -%}
+      <div class="product-media-item">
+        <img
+          class="photoswipe__image"
+          src="{{ media | image_url: width: 640 }}"
+          data-photoswipe-src="{{ media | image_url: width: 2000 }}"
+          data-photoswipe-width="{{ media.preview_image.width }}"
+          data-photoswipe-height="{{ media.preview_image.height }}"
+          data-index="{{ forloop.index }}"
+          alt="{{ media.alt | escape }}"
+          width="{{ media.preview_image.width }}"
+          height="{{ media.preview_image.height }}"
+          loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
+        >
+          <button class="media-zoom-btn js-photoswipe__zoom up-mobile-only" type="button" aria-label="Zoom image" data-index="{{ forloop.index }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+              <path d="M17.7188 17.7188L13.7616 13.7812M15.4744 9.37781C15.4744 10.5836 15.1168 11.7623 14.4469 12.7649C13.777 13.7675 12.8249 14.5489 11.7109 15.0103C10.5969 15.4717 9.37105 15.5925 8.18843 15.3572C7.00582 15.122 5.91951 14.5414 5.06689 13.6887C4.21427 12.8361 3.63363 11.7498 3.3984 10.5672C3.16316 9.38458 3.28389 8.15876 3.74533 7.04476C4.20676 5.93076 4.98817 4.9786 5.99075 4.30871C6.99332 3.63881 8.17203 3.28125 9.37781 3.28125C10.1784 3.28125 10.9712 3.43894 11.7109 3.74532C12.4505 4.0517 13.1226 4.50077 13.6887 5.06689C14.2549 5.63301 14.7039 6.30509 15.0103 7.04476C15.3167 7.78443 15.4744 8.5772 15.4744 9.37781Z" stroke="#374759" stroke-width="1.64062" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  {% comment %}
+    <a href="#" class="media-visualize-btn up-desktop-only">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+      </svg>
+      Visualize in Your Space
+    </a>
+  {% endcomment %}
+</div>

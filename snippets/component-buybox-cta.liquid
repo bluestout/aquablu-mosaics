@@ -1,0 +1,72 @@
+{%- comment -%}
+  Buybox CTA
+  - Uses Shopify's {% form 'product' %} so we get {{ form | payment_terms }}
+    (the official Shop Pay installments widget).
+  - <product-updated> intercepts submit via JS for AJAX cart add.
+  - Wishlist dispatches a custom event for the theme/Swym to handle.
+{%- endcomment -%}
+
+{%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
+
+<div class="buybox-cta">
+  {%- comment -%} Add to Cart Product Form {%- endcomment -%}
+  {%- form 'product', product, data-product-form: '', novalidate: 'novalidate' -%}
+    <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+    <input type="hidden" name="quantity" value="1" data-quantity-input>
+
+    <div class="buybox-cta-group">
+      <button
+        type="submit"
+        class="buybox-atc-btn"
+        data-add-to-cart
+        {% unless current_variant.available %}
+          disabled
+        {% endunless %}
+      >
+        <span data-atc-label>
+          {% if current_variant.available %}Add To Cart{% else %}Sold Out{% endif %}
+        </span>
+        <span class="atc-separator">&bull;</span>
+        <span class="atc-price" data-atc-price>{{ current_variant.price | money }}</span>
+      </button>
+      <button
+        type="button"
+        class="buybox-wishlist-btn swym-button swym-add-to-wishlist"
+        data-with-epi="true"
+        data-swaction="addToWishlist"
+        data-product-id="{{ product.id }}"
+        data-variant-id="{{ current_variant.id }}"
+        data-product-url="{{ shop.url }}{{ product.url }}"
+        data-wishlist-btn
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span>Add to wishlist</span>
+      </button>
+    </div>
+
+    {%- comment -%} Shopify Shop Pay installments widget {%- endcomment -%}
+    <div class="shopify-payment-terms product__policies buybox-shop-pay">
+      {{ form | payment_terms }}
+    </div>
+  {%- endform -%}
+
+  {%- comment -%} Request Custom Quote (desktop) {%- endcomment -%}
+  <a href="#request-quote" class="buybox-request-quote" data-quote-trigger>
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="19" viewBox="0 0 15 19" fill="none">
+      <path d="M1 0.75H10.166L14.25 5.28809V18C14.25 18.1381 14.1381 18.25 14 18.25H1C0.861929 18.25 0.75 18.1381 0.75 18V1C0.75 0.861929 0.861928 0.75 1 0.75Z" stroke="#393939" stroke-width="1.5"/>
+      <path d="M10 5.5V0L15 5.5H10Z" fill="#393939"/>
+      <path d="M9.66383 6.06204L8.51583 6.73404C8.43183 6.52404 8.30583 6.32804 8.09583 6.14604C7.81583 5.90804 7.47983 5.81004 7.08783 5.81004C6.58383 5.81004 6.24783 5.99204 6.05183 6.18804C5.82783 6.41204 5.77183 6.62204 5.77183 6.90204C5.77183 7.22404 5.86983 7.46204 6.13583 7.68604C6.33183 7.85404 6.76583 8.06404 7.01783 8.16204L7.71783 8.44204C8.23583 8.65204 8.83783 8.93204 9.27183 9.42204C9.74783 9.95404 9.91583 10.57 9.91583 11.186C9.91583 11.956 9.70583 12.67 9.10383 13.314C8.64183 13.804 8.13783 14.042 7.56383 14.126V15.54H6.52783V14.168C5.85583 14.112 5.25383 13.86 4.70783 13.244C4.20383 12.684 3.97983 12.068 3.92383 11.424L5.33783 11.116C5.33783 11.578 5.50583 12.012 5.72983 12.306C6.05183 12.712 6.45783 12.866 6.94783 12.866C7.39583 12.866 7.73183 12.754 8.05383 12.418C8.38983 12.082 8.48783 11.732 8.48783 11.298C8.48783 10.892 8.37583 10.584 8.08183 10.276C7.77383 9.95404 7.49383 9.85604 7.14383 9.70204L6.24783 9.32404C5.82783 9.14204 5.25383 8.79204 4.93183 8.47004C4.49783 8.02204 4.34383 7.54604 4.34383 7.04204C4.34383 6.28604 4.62383 5.65604 5.05783 5.23604C5.37983 4.92804 5.86983 4.63404 6.52783 4.53604V3.29004H7.56383V4.52204C7.91383 4.55004 8.34783 4.66204 8.78183 4.98404C9.14583 5.26404 9.46783 5.65604 9.66383 6.06204Z" fill="#393939"/>
+    </svg>
+    Request Custom Quote
+  </a>
+</div>

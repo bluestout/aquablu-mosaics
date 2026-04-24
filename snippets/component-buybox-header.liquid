@@ -1,0 +1,34 @@
+{%- comment -%}
+  Buybox Header
+  Displays: breadcrumbs (mobile), collection link (mobile), SKU, title, reviews.
+{%- endcomment -%}
+
+{%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
+
+<div class="buybox-header">
+  {%- comment -%} Mobile collection link {%- endcomment -%}
+  {%- if product.collections.size > 0 -%}
+    <a href="{{ product.collections.first.url }}" class="buybox-collection-link-mobile up-mobile-only">
+      {{ product.collections.first.title }}
+    </a>
+  {%- endif -%}
+
+  {%- comment -%} Title block: Desktop = SKU above title, Mobile = title above SKU (via CSS order) {%- endcomment -%}
+  <div class="buybox-title-block">
+    {%- if current_variant.sku != blank -%}
+      <p class="buybox-sku" data-sku>SKU: {{ current_variant.sku }}</p>
+    {%- endif -%}
+    <h1 class="buybox-title">{{ product.title }}</h1>
+  </div>
+
+  {%- comment -%} Yotpo star rating + reviews count {%- endcomment -%}
+  <a class="yotpo-link buybox-reviews" href="#product-reviews-widget">
+    <div
+      class="yotpo-widget-instance"
+      data-yotpo-instance-id="593213"
+      data-yotpo-product-id="{{ product.id }}"
+      data-yotpo-cart-product-id="{{ product.id }}"
+      data-yotpo-section-id="{{ template.name }}"
+    ></div>
+  </a>
+</div>

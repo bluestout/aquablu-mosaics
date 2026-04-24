@@ -7,6 +7,10 @@
       background-color: #fff;
     }
 
+    .product-feat-image-text{
+      margin-top: 50px;
+    }
+
     .pfiwt__inner {
       display: flex;
       flex-direction: row;
@@ -89,6 +93,10 @@
         padding-bottom: 40px;
       }
 
+      .product-feat-image-text{
+        margin-top: 0px;
+      }
+
       .pfiwt__inner,
       .pfiwt__inner--image-right {
         flex-direction: column;
@@ -111,7 +119,7 @@
     }
   </style>
 
-  <div class="pfiwt" id="ProductFeatImageWithText-{{ section.id }}">
+  <div class="pfiwt product-feat-image-text" id="ProductFeatImageWithText-{{ section.id }}">
     <div class="page-width">
       <div class="pfiwt__inner{% if section.settings.image_position == 'right' %} pfiwt__inner--image-right{% endif %}">
         {%- if section.settings.image != blank -%}

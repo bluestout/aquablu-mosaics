@@ -1,0 +1,33 @@
+{%- comment -%}
+  Product Info - Orchestrator
+  Renders all buybox sub-components in order.
+  On mobile, display:contents on the wrapper allows CSS order-based reordering.
+
+  Computes `sample_variant` once and passes it down so the size tabs can hide it
+  and the sample button can use its price + ID.
+{%- endcomment -%}
+
+{%- comment -%} Find the sample variant (any variant whose title contains "sample") {%- endcomment -%}
+{%- assign sample_variant = nil -%}
+{%- for v in product.variants -%}
+  {%- assign v_title_lower = v.title | downcase -%}
+  {%- if v_title_lower contains 'sample' -%}
+    {%- assign sample_variant = v -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{% render 'component-buybox-header', product: product, current_variant: current_variant %}
+{% render 'component-buybox-pricing',
+  product: product,
+  current_variant: current_variant,
+  sqft_per_box: sqft_per_box,
+  sample_variant: sample_variant
+%}
+{% render 'component-buybox-options',
+  product: product,
+  current_variant: current_variant,
+  sample_variant: sample_variant
+%}
+{% render 'component-buybox-calculator', product: product, current_variant: current_variant, sqft_per_box: sqft_per_box %}
+{% render 'component-buybox-cta', product: product, current_variant: current_variant %}
