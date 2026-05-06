@@ -41,7 +41,7 @@
           </a>
         {%- endif -%}
       </div>
-      {%- assign swatch_visible_limit = 4 -%}
+      {%- assign swatch_visible_limit = 10 -%}
       {%- comment -%} Auto-expand if the active product is past the visible limit, so it stays visible. {%- endcomment -%}
       {%- assign auto_expand_swatches = false -%}
       {%- for option_product in combine_products -%}
