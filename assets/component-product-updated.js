@@ -243,6 +243,7 @@ class ProductUpdated extends HTMLElement {
       buttons: allSampleBtns,
       labels: allSampleLabels,
       successText: 'Sample Added!',
+      errorText: 'Sample Limit Reached',
     });
   }
 
@@ -255,7 +256,7 @@ class ProductUpdated extends HTMLElement {
     );
   }
 
-  async submitToCart({ id, quantity, buttons, labels, successText }) {
+  async submitToCart({ id, quantity, buttons, labels, successText, errorText = 'Error - Try Again' }) {
     const originalLabels = Array.from(labels).map((l) => l.innerHTML);
 
     buttons.forEach((b) => (b.disabled = true));
@@ -280,7 +281,7 @@ class ProductUpdated extends HTMLElement {
       setTimeout(() => this.resetButtons(buttons, labels, originalLabels), 1500);
     } catch (error) {
       console.error('Add to cart error:', error);
-      labels.forEach((l) => (l.textContent = 'Error - Try Again'));
+      labels.forEach((l) => (l.textContent = errorText));
       setTimeout(() => this.resetButtons(buttons, labels, originalLabels), 2000);
     }
   }

@@ -713,10 +713,9 @@
 .buybox-total-row {
   display: flex;
   align-items: flex-end;
-  gap: 20px;
-  justify-content: space-between;
+  gap: 12px;
+  justify-content: flex-start;
   width: 100%;
-  max-width: 400px;
   margin-bottom: 10px;
 }
 
@@ -730,7 +729,7 @@
 
 .buybox-total-value {
   font-family: FuturaMedium, sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: 0.7px;
   color: #000;
   line-height: normal;

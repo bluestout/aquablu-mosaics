@@ -77,27 +77,39 @@
 
     {%- comment -%} Skip Color/Colour — handled by collection metafield above {%- endcomment -%}
     {%- unless option.name == 'Color' or option.name == 'Colour' -%}
-      <div class="buybox-option-group buybox-option-group--size">
-        <p class="buybox-option-label">
-          {{ option.name }}: <strong>{{ selected_value }}</strong>
-        </p>
-        <div class="buybox-size-options">
-          {%- for value in option.values -%}
-            {%- comment -%} Skip "Sample" values — handled by .buybox-sample-btn instead {%- endcomment -%}
-            {%- assign value_lower = value | downcase -%}
-            {%- unless value_lower contains 'sample' -%}
-              <button
-                type="button"
-                class="buybox-size-option{% if value == selected_value %} is-active{% endif %}"
-                data-option-index="{{ option_index }}"
-                data-value="{{ value | escape }}"
-              >
-                {{ value }}
-              </button>
-            {%- endunless -%}
-          {%- endfor -%}
+
+      {%- comment -%} Count non-sample values — hide the selector if only 1 exists {%- endcomment -%}
+      {%- assign non_sample_count = 0 -%}
+      {%- for value in option.values -%}
+        {%- assign value_lower = value | downcase -%}
+        {%- unless value_lower contains 'sample' -%}
+          {%- assign non_sample_count = non_sample_count | plus: 1 -%}
+        {%- endunless -%}
+      {%- endfor -%}
+
+      {%- if non_sample_count > 1 -%}
+        <div class="buybox-option-group buybox-option-group--size">
+          <p class="buybox-option-label">
+            {{ option.name }}: <strong>{{ selected_value }}</strong>
+          </p>
+          <div class="buybox-size-options">
+            {%- for value in option.values -%}
+              {%- assign value_lower = value | downcase -%}
+              {%- unless value_lower contains 'sample' -%}
+                <button
+                  type="button"
+                  class="buybox-size-option{% if value == selected_value %} is-active{% endif %}"
+                  data-option-index="{{ option_index }}"
+                  data-value="{{ value | escape }}"
+                >
+                  {{ value }}
+                </button>
+              {%- endunless -%}
+            {%- endfor -%}
+          </div>
         </div>
-      </div>
+      {%- endif -%}
+
     {%- endunless -%}
   {%- endfor -%}
 
