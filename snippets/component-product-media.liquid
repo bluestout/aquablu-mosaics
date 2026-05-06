@@ -1,7 +1,8 @@
+{%- assign media_visible_limit = 4 -%}
 <div class="updated-product-media-wrapper">
   <div class="product-media-grid">
-    {%- for media in product.media limit: 6 -%}
-      <div class="product-media-item">
+    {%- for media in product.media -%}
+      <div class="product-media-item{% if forloop.index > media_visible_limit %} product-media-item--hidden{% endif %}">
         <img
           class="photoswipe__image"
           src="{{ media | image_url: width: 640 }}"
@@ -23,8 +24,13 @@
     {%- endfor -%}
   </div>
 
-  {% comment %}
-    <a href="#" class="media-visualize-btn up-desktop-only">
+  {%- if product.media.size > media_visible_limit -%}
+    <button type="button" class="product-media-show-more" data-show-more-media>
+      Show More Images ({{ product.media.size | minus: media_visible_limit }})
+    </button>
+  {%- endif -%}
+
+    <a href="https://tilesview.ai/app/-_Q_ZToH0I5BSPPy-bhDYA/room-select" class="media-visualize-btn up-desktop-only">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
         <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
@@ -32,5 +38,4 @@
       </svg>
       Visualize in Your Space
     </a>
-  {% endcomment %}
 </div>

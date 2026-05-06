@@ -526,5 +526,18 @@
   {%- if template contains 'index' or template contains 'collection' -%}
     {% render '__opt-theme-js' %}
   {%- endif -%}
+
+  <script type="text/javascript">
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'https://tilesview.ai/app/widget.php?id=NTE2MzEydGlsZXNwcmV2aWV3XzE5OTQ=', true);
+    xhttp.send();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var widget = document.createElement('div');
+        widget.innerHTML = this.responseText;
+        document.body.appendChild(widget);
+      }
+    };
+  </script>
 </body>
 </html>

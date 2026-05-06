@@ -41,14 +41,23 @@
           </a>
         {%- endif -%}
       </div>
-      <div class="buybox-color-swatches">
+      {%- assign swatch_visible_limit = 4 -%}
+      {%- comment -%} Auto-expand if the active product is past the visible limit, so it stays visible. {%- endcomment -%}
+      {%- assign auto_expand_swatches = false -%}
+      {%- for option_product in combine_products -%}
+        {%- if option_product.id == product.id and forloop.index > swatch_visible_limit -%}
+          {%- assign auto_expand_swatches = true -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      <div class="buybox-color-swatches{% if auto_expand_swatches %} is-expanded{% endif %}">
         {%- for option_product in combine_products -%}
           {%- assign is_current = false -%}
           {%- if option_product.id == product.id -%}{%- assign is_current = true -%}{%- endif -%}
 
           <a
-            href="{{ option_product.url }}"
-            class="buybox-color-swatch{% if is_current %} is-active{% endif %}"
+            href="{{ option_product.url }}?view=updated-template"
+            class="buybox-color-swatch{% if is_current %} is-active{% endif %}{% if forloop.index > swatch_visible_limit %} buybox-color-swatch--hidden{% endif %}"
             aria-label="{{ option_product.title | escape }}"
             title="{{ option_product.title | escape }}"
             {% if is_current %}
@@ -67,6 +76,12 @@
           </a>
         {%- endfor -%}
       </div>
+
+      {%- if combine_products.size > swatch_visible_limit and auto_expand_swatches == false -%}
+        <button type="button" class="buybox-swatches-show-more" data-show-more-swatches>
+          Show More ({{ combine_products.size | minus: swatch_visible_limit }})
+        </button>
+      {%- endif -%}
     </div>
   {%- endif -%}
 

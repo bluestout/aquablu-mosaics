@@ -74,6 +74,26 @@ class ProductUpdated extends HTMLElement {
         return;
       }
 
+      const showMoreMedia = e.target.closest('[data-show-more-media]');
+      if (showMoreMedia) {
+        this.expandHidden(
+          '.product-media-item--hidden',
+          'product-media-item--hidden',
+          showMoreMedia
+        );
+        return;
+      }
+
+      const showMoreSwatches = e.target.closest('[data-show-more-swatches]');
+      if (showMoreSwatches) {
+        this.expandHidden(
+          '.buybox-color-swatch--hidden',
+          'buybox-color-swatch--hidden',
+          showMoreSwatches
+        );
+        return;
+      }
+
       // Sample button — adds the sample variant (quantity 1) to cart
       const sampleBtn = e.target.closest('[data-sample-btn]');
       if (sampleBtn) {
@@ -107,6 +127,11 @@ class ProductUpdated extends HTMLElement {
     if (wishBtn) {
       wishBtn.addEventListener('click', () => this.handleWishlistClick());
     }
+  }
+
+  expandHidden(selector, hiddenClass, button) {
+    this.querySelectorAll(selector).forEach((el) => el.classList.remove(hiddenClass));
+    if (button) button.remove();
   }
 
   handleOptionClick(button) {
