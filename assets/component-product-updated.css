@@ -1421,6 +1421,15 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   display: none!important;
 }
 
+@media(max-width: 1250px){
+  .buybox-calc-form {
+      flex-wrap: wrap;
+  }
+  .buybox-calc-btn{
+      width: 100%;
+  }
+}
+
 @media(max-width: 768px){
   .shopify-app-block:has(.sg-widget) {
       display: none;

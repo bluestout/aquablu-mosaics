@@ -129,6 +129,11 @@ class ProductUpdated extends HTMLElement {
     const lessText = button.querySelector('[data-less-text]');
     if (moreText) moreText.hidden = expanded;
     if (lessText) lessText.hidden = !expanded;
+
+    if (!expanded && containerSelector === '.product-media-grid') {
+      const wrapper = this.querySelector('.updated-product-media-wrapper');
+      if (wrapper) wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   handleOptionClick(button) {
