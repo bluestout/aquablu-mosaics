@@ -76,21 +76,13 @@ class ProductUpdated extends HTMLElement {
 
       const showMoreMedia = e.target.closest('[data-show-more-media]');
       if (showMoreMedia) {
-        this.expandHidden(
-          '.product-media-item--hidden',
-          'product-media-item--hidden',
-          showMoreMedia
-        );
+        this.toggleExpanded(showMoreMedia, '.product-media-grid');
         return;
       }
 
       const showMoreSwatches = e.target.closest('[data-show-more-swatches]');
       if (showMoreSwatches) {
-        this.expandHidden(
-          '.buybox-color-swatch--hidden',
-          'buybox-color-swatch--hidden',
-          showMoreSwatches
-        );
+        this.toggleExpanded(showMoreSwatches, '.buybox-color-swatches');
         return;
       }
 
@@ -129,9 +121,14 @@ class ProductUpdated extends HTMLElement {
     }
   }
 
-  expandHidden(selector, hiddenClass, button) {
-    this.querySelectorAll(selector).forEach((el) => el.classList.remove(hiddenClass));
-    if (button) button.remove();
+  toggleExpanded(button, containerSelector) {
+    const container = this.querySelector(containerSelector);
+    if (!container) return;
+    const expanded = container.classList.toggle('is-expanded');
+    const moreText = button.querySelector('[data-more-text]');
+    const lessText = button.querySelector('[data-less-text]');
+    if (moreText) moreText.hidden = expanded;
+    if (lessText) lessText.hidden = !expanded;
   }
 
   handleOptionClick(button) {

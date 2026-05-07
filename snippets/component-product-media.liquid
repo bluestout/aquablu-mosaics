@@ -26,11 +26,12 @@
 
   {%- if product.media.size > media_visible_limit -%}
     <button type="button" class="product-media-show-more" data-show-more-media>
-      Show More Images ({{ product.media.size | minus: media_visible_limit }})
+      <span data-more-text>Show More Images ({{ product.media.size | minus: media_visible_limit }})</span>
+      <span data-less-text hidden>Show less</span>
     </button>
   {%- endif -%}
 
-    <a href="https://tilesview.ai/app/-_Q_ZToH0I5BSPPy-bhDYA/room-select" class="media-visualize-btn up-desktop-only">
+    <a href="https://tilesview.ai/app/-_Q_ZToH0I5BSPPy-bhDYA/room-select" class="media-visualize-btn up-desktop-only" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
         <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>

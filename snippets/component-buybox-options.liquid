@@ -79,7 +79,8 @@
 
       {%- if combine_products.size > swatch_visible_limit and auto_expand_swatches == false -%}
         <button type="button" class="buybox-swatches-show-more" data-show-more-swatches>
-          Show More ({{ combine_products.size | minus: swatch_visible_limit }})
+          <span data-more-text>Show More ({{ combine_products.size | minus: swatch_visible_limit }})</span>
+          <span data-less-text hidden>Show less</span>
         </button>
       {%- endif -%}
     </div>

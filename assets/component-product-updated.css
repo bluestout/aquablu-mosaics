@@ -4,7 +4,8 @@
 
 /* === Layout === */
 .product-updated-main-wrapper {
-  padding: 20px 0 40px;
+  display: block;
+  padding: 0px 0 40px;
 }
 
 .product-updated-child-wrapper.page-width {
@@ -65,11 +66,15 @@
   display: none;
 }
 
+.product-media-grid.is-expanded .product-media-item--hidden {
+  display: block;
+}
+
 .product-media-show-more {
   display: block;
   width: 100%;
   margin-top: 12px;
-  padding: 14px 20px;
+  padding: 10px 20px;
   background: transparent;
   border: 1px solid #d5d5d5;
   border-radius: 3px;
@@ -120,6 +125,7 @@
   background: transparent;
   cursor: pointer;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-family: FuturaMedium, sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
@@ -418,6 +424,10 @@
 
 .buybox-color-swatch--hidden {
   display: none;
+}
+
+.buybox-color-swatches.is-expanded .buybox-color-swatch--hidden {
+  display: block;
 }
 
 .buybox-swatches-show-more {
@@ -1282,6 +1292,15 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     scroll-snap-align: start;
     width: 100%;
     max-width: 80%;
+  }
+
+  /* Mobile: show all media, hide the show-more/less button */
+  .product-media-item--hidden {
+    display: block;
+  }
+
+  .product-media-show-more {
+    display: none;
   }
 
   .media-visualize-btn {
