@@ -1,0 +1,37 @@
+{%- comment -%}
+  Replace the token value below with your TilesView account token.
+  The product_id is automatically set from the current product.
+{%- endcomment -%}
+
+{%- assign tilesview_url = 'https://tilesview.ai/app/product_preview?token=-_Q_ZToH0I5BSPPy-bhDYA&RedirectType=ProductApply&product_id=947332' -%}
+
+<tilesview-popup class="tilesview-popup-root">
+  <dialog
+    class="tilesview-popup"
+    aria-modal="true"
+    aria-label="Visualize in Your Space"
+    role="dialog"
+  >
+    <div class="tilesview-popup__header">
+      <p class="tilesview-popup__title">Visualize in Your Space</p>
+      <button
+        type="button"
+        class="tilesview-popup__close"
+        data-tilesview-close
+        aria-label="Close visualizer"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <iframe
+      class="tilesview-popup__iframe"
+      data-src="{{ tilesview_url }}"
+      title="Visualize tile in your space"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </dialog>
+</tilesview-popup>

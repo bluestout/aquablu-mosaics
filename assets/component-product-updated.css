@@ -1436,3 +1436,74 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
       order: 7;
   }
 }
+
+/* ============================================
+   TilesView Popup
+   ============================================ */
+.tilesview-popup-root {
+  display: contents;
+}
+
+.tilesview-popup {
+  width: min(1100px, calc(100vw - 32px));
+  height: min(750px, calc(100vh - 32px));
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tilesview-popup::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.tilesview-popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tilesview-popup__title {
+  font-family: FuturaDemi, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #000;
+  margin: 0;
+  font-weight: normal;
+}
+
+.tilesview-popup__close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.tilesview-popup__close:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.tilesview-popup__close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.tilesview-popup__iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  /* subtract header height (14+14 padding + ~20px text) = ~49px */
+  height: calc(100% - 49px);
+}

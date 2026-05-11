@@ -453,6 +453,70 @@ class SqftCalculator extends HTMLElement {
 customElements.define('sqft-calculator', SqftCalculator);
 
 /* ============================================================
+   <tilesview-popup> — TilesView visualizer modal
+   ============================================================
+   - Wraps a native <dialog>.
+   - Opens via any element with [data-tilesview-trigger] anywhere on the page.
+   - Closes via [data-tilesview-close], Esc key, or backdrop click.
+   - Iframe src is set lazily on first open to avoid loading on page load.
+*/
+class TilesviewPopup extends HTMLElement {
+  connectedCallback() {
+    this.dialog = this.querySelector('dialog');
+    this.iframe = this.querySelector('.tilesview-popup__iframe');
+    if (!this.dialog) return;
+
+    this._onTriggerClick = (e) => {
+      const trigger = e.target.closest('[data-tilesview-trigger]');
+      if (!trigger) return;
+      e.preventDefault();
+      this.open();
+    };
+    document.addEventListener('click', this._onTriggerClick);
+
+    const closeBtn = this.querySelector('[data-tilesview-close]');
+    if (closeBtn) closeBtn.addEventListener('click', () => this.close());
+
+    this.dialog.addEventListener('click', (e) => {
+      const rect = this.dialog.getBoundingClientRect();
+      const inDialog =
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom;
+      if (!inDialog) this.close();
+    });
+  }
+
+  disconnectedCallback() {
+    if (this._onTriggerClick) document.removeEventListener('click', this._onTriggerClick);
+  }
+
+  open() {
+    if (this.iframe && !this.iframe.src && this.iframe.dataset.src) {
+      this.iframe.src = this.iframe.dataset.src;
+    }
+    if (typeof this.dialog.showModal === 'function') {
+      this.dialog.showModal();
+    } else {
+      this.dialog.setAttribute('open', '');
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  close() {
+    if (typeof this.dialog.close === 'function') {
+      this.dialog.close();
+    } else {
+      this.dialog.removeAttribute('open');
+    }
+    document.body.style.overflow = '';
+  }
+}
+
+customElements.define('tilesview-popup', TilesviewPopup);
+
+/* ============================================================
    <quote-popup> — Request a Quote modal
    ============================================================
    - Wraps a native <dialog>.
