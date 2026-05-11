@@ -87,6 +87,7 @@
   {%- endif -%}
 
   {%- comment -%} === Variant-based options (Size, etc.) === {%- endcomment -%}
+  {%- assign has_variant_options = false -%}
   {%- for option in product.options_with_values -%}
     {%- assign option_index = forloop.index0 -%}
     {%- assign selected_value = current_variant.options[option_index] -%}
@@ -104,6 +105,7 @@
       {%- endfor -%}
 
       {%- if non_sample_count > 1 -%}
+        {%- assign has_variant_options = true -%}
         <div class="buybox-option-group buybox-option-group--size">
           <p class="buybox-option-label">
             {{ option.name }}: <strong>{{ selected_value }}</strong>
@@ -129,6 +131,7 @@
     {%- endunless -%}
   {%- endfor -%}
 
-  {%- comment -%} Options divider {%- endcomment -%}
-  <hr class="buybox-options-divider">
+  {%- if combine_products.size > 0 or has_variant_options -%}
+    <hr class="buybox-options-divider">
+  {%- endif -%}
 </div>
