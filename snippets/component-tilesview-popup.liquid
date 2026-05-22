@@ -3,8 +3,6 @@
   The product_id is automatically set from the current product.
 {%- endcomment -%}
 
-{%- capture tilesview_url -%}https://tilesview.ai/app/product_preview?token=-_Q_ZToH0I5BSPPy-bhDYA&RedirectType=ProductApply&product_id=947319{%- endcapture -%}
-
 <tilesview-popup class="tilesview-popup-root">
   <dialog
     class="tilesview-popup"
@@ -28,7 +26,7 @@
     </div>
     <iframe
       class="tilesview-popup__iframe"
-      data-src="{{ tilesview_url }}"
+      data-src="https://tilesview.ai/app/product_preview?token=-_Q_ZToH0I5BSPPy-bhDYA&RedirectType=ProductApply&product_id={{ product.selected_or_first_available_variant.sku }}"
       title="Visualize tile in your space"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
