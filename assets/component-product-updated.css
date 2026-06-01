@@ -1505,5 +1505,5 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   width: 100%;
   border: none;
   /* subtract header height (14+14 padding + ~20px text) = ~49px */
-  height: calc(100% - 49px);
+  height: calc(100% - 61px);
 }
