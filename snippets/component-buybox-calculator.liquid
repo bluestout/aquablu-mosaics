@@ -13,14 +13,14 @@
 {%- if unit_type == 'each' -%}
   {%- assign units_required_label = 'Units Required' -%}
 {%- else -%}
-  {%- assign units_required_label = unit_label | append: 's Required' -%}
+  {%- assign units_required_label = unit_label | append: ' Required' -%}
 {%- endif -%}
 
 <div class="buybox-calculator">
   {%- comment -%} Quantity + How Much Link {%- endcomment -%}
   <div class="buybox-quantity-row">
     <quantity-input-updated class="buybox-quantity-group" data-min="1">
-      <p class="buybox-quantity-label">Quantity: <strong>{{ unit_label }}s</strong></p>
+      <p class="buybox-quantity-label">Quantity: <strong>{{ unit_label }}</strong></p>
       <div class="buybox-quantity-input">
         <button type="button" class="qty-decrease" aria-label="Decrease quantity">
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
