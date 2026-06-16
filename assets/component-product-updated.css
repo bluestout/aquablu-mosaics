@@ -1448,8 +1448,8 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
 }
 
 .tilesview-popup {
-  width: min(1100px, calc(100vw - 32px));
-  height: min(750px, calc(100vh - 32px));
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
   padding: 0;
   border: none;
   border-radius: 10px;
