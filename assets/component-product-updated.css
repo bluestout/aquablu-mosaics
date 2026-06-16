@@ -586,6 +586,7 @@
   font-size: 18px;
   letter-spacing: 0.5px;
   color: #888;
+  margin-top: 25px;
 }
 
 .buybox-need-link svg {
@@ -1270,7 +1271,7 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     order: 6;
     padding: 0 17px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     width: 100%;
   }
 
@@ -1409,6 +1410,10 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
 
   .buybox-calc-box{
     padding: 20px 17px;
+  }
+  
+  .product-updated-main-wrapper{
+    padding-bottom: 15px;
   }
 }
 
