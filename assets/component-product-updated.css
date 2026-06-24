@@ -573,8 +573,26 @@
   letter-spacing: 0.8px;
   color: #000;
   line-height: 24px;
+  width: 60px;
   min-width: 20px;
   text-align: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.buybox-quantity-input .qty-value:focus,
+.buybox-quantity-input .qty-value:focus-visible {
+  outline: none;
+}
+
+.buybox-quantity-input .qty-value::-webkit-outer-spin-button,
+.buybox-quantity-input .qty-value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .buybox-need-link {

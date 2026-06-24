@@ -27,7 +27,16 @@
             <line x1="0" y1="1" x2="10" y2="1" stroke="currentColor" stroke-width="1.5"/>
           </svg>
         </button>
-        <span class="qty-value" data-qty-value>1</span>
+        <input
+          type="number"
+          class="qty-value"
+          data-qty-value
+          value="1"
+          min="1"
+          step="1"
+          inputmode="numeric"
+          aria-label="Quantity"
+        >
         <button type="button" class="qty-increase" aria-label="Increase quantity">
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
             <line x1="5" y1="0" x2="5" y2="10" stroke="currentColor" stroke-width="1.5"/>

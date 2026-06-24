@@ -359,16 +359,31 @@ class QuantityInputUpdated extends HTMLElement {
 
     if (decrease) decrease.addEventListener('click', () => this.setValue(this.getValue() - 1));
     if (increase) increase.addEventListener('click', () => this.setValue(this.getValue() + 1));
+
+    // Manual entry: dispatch on each keystroke, clamp on blur.
+    if (this.valueEl) {
+      this.valueEl.addEventListener('input', () => this.dispatchChange(this.getValue()));
+      this.valueEl.addEventListener('change', () => this.setValue(this.valueEl.value));
+    }
   }
 
   getValue() {
-    return parseInt(this.valueEl.textContent, 10) || this.minValue;
+    const raw = this.valueEl.value !== undefined ? this.valueEl.value : this.valueEl.textContent;
+    return parseInt(raw, 10) || this.minValue;
   }
 
   setValue(val) {
     val = Math.max(this.minValue, parseInt(val, 10) || this.minValue);
-    this.valueEl.textContent = val;
+    if (this.valueEl.value !== undefined) {
+      this.valueEl.value = val;
+    } else {
+      this.valueEl.textContent = val;
+    }
     if (this.hiddenInput) this.hiddenInput.value = val;
+    this.dispatchChange(val);
+  }
+
+  dispatchChange(val) {
     this.dispatchEvent(
       new CustomEvent('quantity:change', { bubbles: true, detail: { value: val } })
     );
