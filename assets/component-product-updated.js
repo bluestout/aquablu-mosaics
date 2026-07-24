@@ -175,7 +175,8 @@ class ProductUpdated extends HTMLElement {
     const totalPrice = variantPrice * qty;
 
     this.setText('[data-price-sqft]', `${this.formatMoney(pricePerSqft)} per sq. ft.`);
-    this.setText('[data-price-box]', `${this.formatMoney(variantPrice)} per ${this.unitType}`);
+    const unitLabel = this.unitType === 'each' ? 'each' : `per ${this.unitType}`;
+    this.setText('[data-price-box]', `${this.formatMoney(variantPrice)} ${unitLabel}`);
     this.setText('[data-total-price]', this.formatMoney(totalPrice));
     this.setText('[data-atc-price]', this.formatMoney(totalPrice));
   }

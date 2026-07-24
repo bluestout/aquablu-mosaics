@@ -1,4 +1,51 @@
-{%- if section.settings.image != blank or section.settings.heading != blank -%}
+{%- liquid
+  assign body_content = section.settings.body_text
+  assign heading_text = section.settings.heading
+
+  if section.settings.use_product_description and product.description != blank
+    assign body_content = product.description
+
+    comment
+      Pull the first heading (h1, else h2) out of the description so it can
+      render in pfiwt__heading, and strip that heading tag from the body.
+    endcomment
+    assign extracted_heading = ''
+    assign heading_tag = ''
+    assign heading_levels = 'h1,h2' | split: ','
+    for level in heading_levels
+      assign open_tag = '<' | append: level
+      if body_content contains open_tag
+        assign heading_tag = level
+        break
+      endif
+    endfor
+
+    if heading_tag != ''
+      assign close_tag = '</' | append: heading_tag | append: '>'
+      assign open_tag = '<' | append: heading_tag
+      assign after_open = body_content | split: open_tag | last
+      assign inner_with_attrs = after_open | split: close_tag | first
+      comment
+        inner_with_attrs still starts with the opening tag's remainder
+        (attributes + '>'). Remove everything up to and including that first '>',
+        then strip any nested tags (e.g. <strong>) from the heading text.
+      endcomment
+      assign open_remainder = inner_with_attrs | split: '>' | first | append: '>'
+      assign extracted_heading = inner_with_attrs | remove_first: open_remainder | strip_html | strip
+
+      assign before_heading = body_content | split: open_tag | first
+      assign after_heading = body_content | split: close_tag | last
+      assign body_content = before_heading | append: after_heading
+    endif
+
+    if extracted_heading != ''
+      assign heading_text = extracted_heading
+    else
+      assign heading_text = ''
+    endif
+  endif
+-%}
+{%- if section.settings.image != blank or heading_text != blank or body_content != blank -%}
   <style>
     /* ===== Product Feature: Image with Text ===== */
     .pfiwt {
@@ -10,12 +57,21 @@
     .pfiwt__inner {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       gap: 40px;
     }
 
     .pfiwt__inner--image-right {
       flex-direction: row-reverse;
+    }
+
+    .pfiwt__inner--no-image {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .pfiwt__inner--no-image .pfiwt__text-col {
+      align-items: center;
     }
 
     .pfiwt__image-col {
@@ -83,6 +139,15 @@
       font-style: italic;
     }
 
+    .pfiwt__body ul li {
+      width: fit-content;
+    }
+
+    .pfiwt__body ul {
+      max-width: max-content;
+      margin: 0 auto;
+    }
+
     @media (max-width: 768px) {
       .pfiwt {
         padding-top: 40px;
@@ -117,7 +182,7 @@
 
   <div class="pfiwt product-feat-image-text" id="ProductFeatImageWithText-{{ section.id }}">
     <div class="page-width">
-      <div class="pfiwt__inner{% if section.settings.image_position == 'right' %} pfiwt__inner--image-right{% endif %}">
+      <div class="pfiwt__inner{% if section.settings.image_position == 'right' %} pfiwt__inner--image-right{% endif %}{% if section.settings.image == blank %} pfiwt__inner--no-image{% endif %}">
         {%- if section.settings.image != blank -%}
           <div class="pfiwt__image-col">
             <div class="pfiwt__image-wrapper">
@@ -129,22 +194,16 @@
               }}
             </div>
           </div>
-        {%- elsif section.settings.image == blank -%}
-          <div class="pfiwt__image-col">
-            <div class="pfiwt__image-wrapper">
-              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-          </div>
         {%- endif -%}
 
         <div class="pfiwt__text-col">
-          {%- if section.settings.heading != blank -%}
-            <h2 class="pfiwt__heading">{{ section.settings.heading | escape }}</h2>
+          {%- if heading_text != blank -%}
+            <h2 class="pfiwt__heading">{{ heading_text | escape }}</h2>
           {%- endif -%}
 
-          {%- if section.settings.body_text != blank -%}
-            <div class="pfiwt__body">
-              {{ section.settings.body_text }}
+          {%- if body_content != blank -%}
+            <div class="pfiwt__body rte">
+              {{ body_content }}
             </div>
           {%- endif -%}
         </div>
@@ -187,9 +246,17 @@
       "default": "PORCELAIN DECO TILE FOR POOLS"
     },
     {
+      "type": "checkbox",
+      "id": "use_product_description",
+      "label": "Use product description as body text",
+      "info": "When enabled, the product's description is shown here instead of the body text below.",
+      "default": true
+    },
+    {
       "type": "richtext",
       "id": "body_text",
       "label": "Body text",
+      "info": "Used only when 'Use product description as body text' is off.",
       "default": "<p>Add your product description here. You can include <a href=\"#\">inline links</a> and use italic text for disclaimers.</p>"
     }
   ],

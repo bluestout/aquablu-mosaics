@@ -12,6 +12,10 @@
 {%- assign sq_ft = sq_ft | default: 10.24 -%}
 {%- assign per = per | default: 'per box' -%}
 {%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+{%- comment -%} Each-sold products read "$45.00 each" with no sold-by line {%- endcomment -%}
+{%- if unit_type == 'each' -%}
+  {%- assign per = 'each' -%}
+{%- endif -%}
 {%- assign price_per_sqft_cents = current_variant.price | divided_by: sq_ft -%}
 
 {%- comment -%} Split the sample price into dollars + cents for the superscript styling {%- endcomment -%}
@@ -26,10 +30,12 @@
 {%- endif -%}
 
 <div class="buybox-pricing">
-  {%- comment -%} Price per sq ft {%- endcomment -%}
-  <p class="buybox-price-sqft" data-price-sqft>
-    {{ price_per_sqft_cents | money }} per sq. ft.
-  </p>
+  {%- comment -%} Price per sq ft — hidden in simplified mode (default / grout) {%- endcomment -%}
+  {%- unless simplified -%}
+    <p class="buybox-price-sqft" data-price-sqft>
+      {{ price_per_sqft_cents | money }} per sq. ft.
+    </p>
+  {%- endunless -%}
 
   {%- comment -%} Price per box row {%- endcomment -%}
   <div class="buybox-price-row">
@@ -37,16 +43,19 @@
       <span class="buybox-price-box" data-price-box>
         {{ current_variant.price | money }} {{ per }}
       </span>
-      <span class="buybox-sold-by-label">
-        Sold by {{ unit_type }} ({{ sq_ft }} sq.ft.)
-      </span>
+      {%- unless unit_type == 'each' -%}
+        <span class="buybox-sold-by-label">
+          Sold by {{ unit_type }}{% unless simplified %} ({{ sq_ft }} sq.ft.){% endunless %}
+        </span>
+      {%- endunless -%}
     </div>
 
     <p class="buybox-shipping-text up-mobile-only">
       Usually ships in 3-5 business days.
     </p>
 
-    {%- if sample_variant -%}
+    {%- comment -%} Order-a-sample — hidden in simplified mode (default / grout) {%- endcomment -%}
+    {%- if sample_variant and simplified != true -%}
       <button
         type="button"
         class="buybox-sample-btn"

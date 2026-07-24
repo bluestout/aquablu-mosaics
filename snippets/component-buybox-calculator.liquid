@@ -20,7 +20,7 @@
   {%- comment -%} Quantity + How Much Link {%- endcomment -%}
   <div class="buybox-quantity-row">
     <quantity-input-updated class="buybox-quantity-group" data-min="1">
-      <p class="buybox-quantity-label">Quantity: <strong>{{ unit_label }}</strong></p>
+      <p class="buybox-quantity-label">Quantity: {% comment %} <strong>{{ unit_label }}</strong>{% endcomment %}</p>
       <div class="buybox-quantity-input">
         <button type="button" class="qty-decrease" aria-label="Decrease quantity">
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
@@ -46,6 +46,8 @@
       </div>
     </quantity-input-updated>
 
+    {%- comment -%} How-much link — hidden in simplified mode (default / grout) {%- endcomment -%}
+    {%- unless simplified -%}
     <a href="#calculator" class="buybox-need-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22" fill="none">
         <path d="M1 0.75H17C17.1381 0.75 17.25 0.861929 17.25 1V21C17.25 21.1381 17.1381 21.25 17 21.25H1C0.861929 21.25 0.75 21.1381 0.75 21V1C0.75 0.861929 0.861929 0.75 1 0.75Z" stroke="#393939" stroke-width="1.5"/>
@@ -62,9 +64,11 @@
       </svg>
       How much do I need?
     </a>
+    {%- endunless -%}
   </div>
 
-  {%- comment -%} Calculator Box {%- endcomment -%}
+  {%- comment -%} Calculator Box — hidden in simplified mode (default / grout) {%- endcomment -%}
+  {%- unless simplified -%}
   <sqft-calculator class="buybox-calc-box" id="calculator" data-sqft-per-box="{{ sq_ft }}" data-unit-type="{{ unit_type }}">
     <div class="buybox-calc-header">
       <p class="buybox-calc-header-title">Calculate how much I need:</p>
@@ -129,6 +133,7 @@
       </div>
     </div>
   </sqft-calculator>
+  {%- endunless -%}
 
   {%- comment -%} Total Price {%- endcomment -%}
   <div class="buybox-total">

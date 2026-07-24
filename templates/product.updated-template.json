@@ -76,6 +76,7 @@
         "image": "{{ product.metafields.custom.image_with_text.value.product_image.value }}",
         "image_position": "left",
         "heading": "{{ product.metafields.custom.image_with_text.value.title.value }}",
+        "use_product_description": true,
         "body_text": "{{ product.metafields.custom.image_with_text.value.description | metafield_tag }}"
       }
     },

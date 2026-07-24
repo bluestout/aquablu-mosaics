@@ -2,6 +2,15 @@
 
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 
+{%- comment -%}
+  Simplified mode strips the sqft-only features (per-sqft price, order-a-sample,
+  how-much calculator, custom quote) for the default & grout product templates.
+{%- endcomment -%}
+{%- assign simplified = false -%}
+{%- if section.settings.template_mode == 'simplified' -%}
+  {%- assign simplified = true -%}
+{%- endif -%}
+
 {%- comment -%} Parse sq_ft and per from product tags (old implementation) {%- endcomment -%}
 {%- assign sq_ft = false -%}
 {%- assign per = false -%}
@@ -56,7 +65,8 @@
               current_variant: current_variant,
               sq_ft: sq_ft,
               per: per,
-              sample_variant: sample_variant
+              sample_variant: sample_variant,
+              simplified: simplified
             %}
           {%- when 'options' -%}
             {% render 'component-buybox-options',
@@ -69,10 +79,15 @@
               product: product,
               current_variant: current_variant,
               sq_ft: sq_ft,
-              per: per
+              per: per,
+              simplified: simplified
             %}
           {%- when 'cta' -%}
-            {% render 'component-buybox-cta', product: product, current_variant: current_variant %}
+            {% render 'component-buybox-cta',
+              product: product,
+              current_variant: current_variant,
+              simplified: simplified
+            %}
           {%- when '@app' -%}
             {% render block %}
         {%- endcase -%}
@@ -81,14 +96,28 @@
   </div>
 </product-updated>
 
-{% render 'component-quote-popup', product: product, current_variant: current_variant %}
+{%- unless simplified -%}
+  {% render 'component-quote-popup', product: product, current_variant: current_variant %}
+{%- endunless -%}
 
 <script src="{{ 'component-product-updated.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
   "name": "Main Product Updated",
-  "settings": [],
+  "settings": [
+    {
+      "type": "select",
+      "id": "template_mode",
+      "label": "Template mode",
+      "info": "Choose 'Simplified' for default & grout products to hide the per-sq-ft price, order-a-sample, how-much calculator, and custom quote.",
+      "options": [
+        { "value": "sqft", "label": "Sqft (full)" },
+        { "value": "simplified", "label": "Simplified (default / grout)" }
+      ],
+      "default": "sqft"
+    }
+  ],
   "blocks": [
     {
       "type": "header",
