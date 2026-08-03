@@ -3,12 +3,113 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 
 {%- comment -%}
-  Simplified mode strips the sqft-only features (per-sqft price, order-a-sample,
-  how-much calculator, custom quote) for the default & grout product templates.
+  Simplified mode strips the sqft-only features (per-sqft price, per-unit sq.ft.
+  label, order-a-sample, how-much calculator) for the default & grout templates.
+
+  The mode is resolved from `product.template_suffix` by default rather than the
+  section setting alone, so it stays correct when a product is previewed through
+  `?view=updated-template` (which swaps the template JSON — and therefore the
+  section settings — out from under the product). The setting can still force a
+  mode when needed.
 {%- endcomment -%}
+{%- assign is_grout = false -%}
+{%- if product.template_suffix == 'grout' -%}
+  {%- assign is_grout = true -%}
+{%- endif -%}
+
+{%- assign resolved_mode = section.settings.template_mode | default: 'auto' -%}
+{%- if resolved_mode == 'auto' -%}
+  {%- if product.template_suffix == 'sqft' -%}
+    {%- assign resolved_mode = 'sqft' -%}
+  {%- else -%}
+    {%- assign resolved_mode = 'simplified' -%}
+  {%- endif -%}
+{%- endif -%}
+
 {%- assign simplified = false -%}
-{%- if section.settings.template_mode == 'simplified' -%}
+{%- if resolved_mode == 'simplified' -%}
   {%- assign simplified = true -%}
+{%- endif -%}
+
+{%- comment -%}
+  The how-much calculator can be shown independently of simplified mode.
+  In full sqft mode it always shows; grout products always get their own
+  (tile-dimension) calculator; other simplified products only get one when
+  `show_calculator` is enabled.
+{%- endcomment -%}
+{%- assign hide_calculator = simplified -%}
+{%- if section.settings.show_calculator or is_grout -%}
+  {%- assign hide_calculator = false -%}
+{%- endif -%}
+
+{%- comment -%}
+  Shipping window for "Usually ships in X-X business days".
+  Resolution order (most specific wins):
+    3. Section setting    "Default shipping window"
+    2. Vendor default     metaobject `shipping_window`, entry handle = the
+                          handleized vendor name, field `window`
+    1. Product metafield  custom.tab_shipping — the sentence already maintained
+                          per product for the shipping tab, e.g.
+                          "Item ships from USA within 3-5 business days. ..."
+                          The range is read out of it so there is only ever one
+                          place to edit a product's lead time.
+{%- endcomment -%}
+{%- assign shipping_window = section.settings.default_shipping_window | default: '3-5' -%}
+
+{%- assign vendor_handle = product.vendor | handleize -%}
+{%- assign vendor_entry = metaobjects.shipping_window[vendor_handle] -%}
+{%- if vendor_entry.window.value != blank -%}
+  {%- assign shipping_window = vendor_entry.window.value -%}
+{%- endif -%}
+
+{%- comment -%}
+  Pull the "3-5" out of "... within 3-5 business days. ..." — the token
+  immediately before "business days". Products worded differently (e.g. "ships
+  in 1-2 weeks") won't yield digits, so the candidate is character-checked and
+  discarded unless it is purely digits and dashes; those fall back to the
+  vendor / section default rather than printing nonsense.
+{%- endcomment -%}
+{%- assign tab_shipping = product.metafields.custom.tab_shipping.value -%}
+{%- if tab_shipping contains 'business days' -%}
+  {%- comment -%} Normalise "2 - 4" / "2- 4" / "2 -4" to "2-4" first {%- endcomment -%}
+  {%- assign lead_in = tab_shipping
+    | split: 'business days'
+    | first
+    | replace: ' - ', '-'
+    | replace: '- ', '-'
+    | replace: ' -', '-'
+    | strip
+  -%}
+  {%- assign candidate = lead_in | split: ' ' | last | strip -%}
+
+  {%- assign candidate_chars = candidate | split: '' -%}
+  {%- assign candidate_is_range = true -%}
+  {%- assign candidate_has_digit = false -%}
+  {%- if candidate_chars.size == 0 -%}
+    {%- assign candidate_is_range = false -%}
+  {%- endif -%}
+  {%- for ch in candidate_chars -%}
+    {%- unless '0123456789-' contains ch -%}
+      {%- assign candidate_is_range = false -%}
+    {%- endunless -%}
+    {%- if '0123456789' contains ch -%}
+      {%- assign candidate_has_digit = true -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if candidate_is_range and candidate_has_digit -%}
+    {%- assign shipping_window = candidate -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%}
+  Sqft template only: a product with a single real size has nothing to choose
+  between, so the size row is dropped entirely. Default/grout keep it as a
+  static spec line.
+{%- endcomment -%}
+{%- assign hide_single_size = false -%}
+{%- if resolved_mode == 'sqft' -%}
+  {%- assign hide_single_size = true -%}
 {%- endif -%}
 
 {%- comment -%} Parse sq_ft and per from product tags (old implementation) {%- endcomment -%}
@@ -26,8 +127,11 @@
   {%- endif -%}
 {%- endfor -%}
 {%- unless sq_ft -%}{%- assign sq_ft = 10.24 -%}{%- endunless -%}
-{%- unless per -%}{%- assign per = 'per box' -%}{%- endunless -%}
-{%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+{%- if per -%}
+  {%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+{%- else -%}
+  {%- assign unit_type = '' -%}
+{%- endif -%}
 
 {%- assign sample_variant = nil -%}
 {%- for v in product.variants -%}
@@ -38,12 +142,25 @@
   {%- endif -%}
 {%- endfor -%}
 
+{%- comment -%}
+  Variant IDs eligible for the "This item ships FREE!" badge, using the live
+  site's rule (price > $299 and weight_in_unit < 120). weight_in_unit is a
+  Liquid-only field, so we precompute the eligible set here for the JS toggle.
+{%- endcomment -%}
+{%- assign ships_free_variants = '' -%}
+{%- for v in product.variants -%}
+  {%- if v.price > 29900 and v.weight_in_unit < 120 -%}
+    {%- assign ships_free_variants = ships_free_variants | append: v.id | append: ',' -%}
+  {%- endif -%}
+{%- endfor -%}
+
 <product-updated
   class="product-updated-main-wrapper"
   id="updated-product-{{ section.id }}"
   data-current-variant-id="{{ current_variant.id }}"
   data-sqft-per-box="{{ sq_ft }}"
   data-unit-type="{{ unit_type }}"
+  data-ships-free-variants="{{ ships_free_variants }}"
 >
   {%- comment -%} Inject product JSON for variant lookup {%- endcomment -%}
   <script type="application/json" data-product-json>
@@ -66,13 +183,15 @@
               sq_ft: sq_ft,
               per: per,
               sample_variant: sample_variant,
-              simplified: simplified
+              simplified: simplified,
+              shipping_window: shipping_window
             %}
           {%- when 'options' -%}
             {% render 'component-buybox-options',
               product: product,
               current_variant: current_variant,
-              sample_variant: sample_variant
+              sample_variant: sample_variant,
+              hide_single_size: hide_single_size
             %}
           {%- when 'calculator' -%}
             {% render 'component-buybox-calculator',
@@ -80,7 +199,7 @@
               current_variant: current_variant,
               sq_ft: sq_ft,
               per: per,
-              simplified: simplified
+              simplified: hide_calculator
             %}
           {%- when 'cta' -%}
             {% render 'component-buybox-cta',
@@ -96,9 +215,8 @@
   </div>
 </product-updated>
 
-{%- unless simplified -%}
-  {% render 'component-quote-popup', product: product, current_variant: current_variant %}
-{%- endunless -%}
+{%- comment -%} Request Custom Quote — available on all three product templates {%- endcomment -%}
+{% render 'component-quote-popup', product: product, current_variant: current_variant %}
 
 <script src="{{ 'component-product-updated.js' | asset_url }}" defer></script>
 
@@ -110,12 +228,27 @@
       "type": "select",
       "id": "template_mode",
       "label": "Template mode",
-      "info": "Choose 'Simplified' for default & grout products to hide the per-sq-ft price, order-a-sample, how-much calculator, and custom quote.",
+      "info": "Auto reads the product's own template suffix (sqft / grout / default) and stays correct in ?view= previews. Only force a mode to override that.",
       "options": [
+        { "value": "auto", "label": "Auto (from product template)" },
         { "value": "sqft", "label": "Sqft (full)" },
         { "value": "simplified", "label": "Simplified (default / grout)" }
       ],
-      "default": "sqft"
+      "default": "auto"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_calculator",
+      "label": "Show how-much calculator",
+      "info": "In Simplified mode, show the 'How much do I need?' calculator while keeping per-sq-ft price and order-a-sample hidden. Grout products always get their own calculator.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "default_shipping_window",
+      "label": "Default shipping window",
+      "info": "Fallback for 'Usually ships in X-X business days'. Overridden per vendor by the 'shipping_window' metaobject, and per product by the range inside the custom.tab_shipping metafield.",
+      "default": "3-5"
     }
   ],
   "blocks": [

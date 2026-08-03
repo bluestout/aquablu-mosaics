@@ -10,7 +10,12 @@
 
   Size tabs (and any other variant options):
     Driven by the current product's variants. Clicking emits a variant change to
-    <product-updated>.
+    <product-updated>. Color is only skipped here when the combine_listing
+    swatches above are covering it — standalone products keep their own Color
+    variant picker.
+
+  @param hide_single_size - when true (sqft template) an option with only one
+                            real value is dropped instead of shown as a static row.
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
@@ -92,19 +97,47 @@
     {%- assign option_index = forloop.index0 -%}
     {%- assign selected_value = current_variant.options[option_index] -%}
 
-    {%- comment -%} Skip Color/Colour — handled by collection metafield above {%- endcomment -%}
-    {%- unless option.name == 'Color' or option.name == 'Colour' -%}
+    {%- comment -%}
+      Skip Color/Colour ONLY when the combine_listing metaobject is already
+      rendering the colour swatches above. Products that aren't part of a
+      combined listing carry their colours as real variant options — those must
+      still render here, otherwise the colour picker disappears entirely.
+    {%- endcomment -%}
+    {%- assign is_color_option = false -%}
+    {%- if option.name == 'Color' or option.name == 'Colour' -%}
+      {%- assign is_color_option = true -%}
+    {%- endif -%}
+    {%- assign skip_option = false -%}
+    {%- if is_color_option and combine_products.size > 0 -%}
+      {%- assign skip_option = true -%}
+    {%- endif -%}
 
-      {%- comment -%} Count non-sample values — hide the selector if only 1 exists {%- endcomment -%}
+    {%- unless skip_option -%}
+
+      {%- comment -%}
+        Count non-sample values. Also capture the single non-sample value so a
+        product with just one real size can still display it (static, not a picker).
+        Shopify's placeholder option ("Title" / "Default Title") is skipped —
+        it isn't a real size.
+      {%- endcomment -%}
       {%- assign non_sample_count = 0 -%}
+      {%- assign single_value = '' -%}
       {%- for value in option.values -%}
         {%- assign value_lower = value | downcase -%}
         {%- unless value_lower contains 'sample' -%}
           {%- assign non_sample_count = non_sample_count | plus: 1 -%}
+          {%- assign single_value = value -%}
         {%- endunless -%}
       {%- endfor -%}
 
+      {%- comment -%} Is this Shopify's placeholder option with no real variants? {%- endcomment -%}
+      {%- assign is_default_option = false -%}
+      {%- if option.name == 'Title' and single_value == 'Default Title' -%}
+        {%- assign is_default_option = true -%}
+      {%- endif -%}
+
       {%- if non_sample_count > 1 -%}
+        {%- comment -%} Multiple sizes — interactive picker {%- endcomment -%}
         {%- assign has_variant_options = true -%}
         <div class="buybox-option-group buybox-option-group--size">
           <p class="buybox-option-label">
@@ -124,6 +157,23 @@
                 </button>
               {%- endunless -%}
             {%- endfor -%}
+          </div>
+        </div>
+      {%- elsif non_sample_count == 1 and is_default_option == false and hide_single_size != true -%}
+        {%- comment -%}
+          Single real value — show it as a static, non-interactive row.
+          Dropped entirely on the sqft template (hide_single_size), where a
+          one-option row is noise rather than a choice.
+        {%- endcomment -%}
+        {%- assign has_variant_options = true -%}
+        <div class="buybox-option-group buybox-option-group--size">
+          <p class="buybox-option-label">
+            {{ option.name }}: <strong>{{ single_value }}</strong>
+          </p>
+          <div class="buybox-size-options">
+            <span class="buybox-size-option buybox-size-option--static is-active">
+              {{ single_value }}
+            </span>
           </div>
         </div>
       {%- endif -%}

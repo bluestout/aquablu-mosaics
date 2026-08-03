@@ -1,11 +1,25 @@
+{%- comment -%}
+  Gallery layout (desktop):
+    1-4 images -> full-width, one per row
+    5+ images  -> two-column masonry (row spans computed in JS)
+  Mobile keeps the horizontal scroll carousel in both cases.
+{%- endcomment -%}
 {%- assign media_visible_limit = 6 -%}
+{%- if product.media.size > 4 -%}
+  {%- assign gallery_layout = 'masonry' -%}
+{%- else -%}
+  {%- assign gallery_layout = 'full' -%}
+{%- endif -%}
+
 <div class="updated-product-media-wrapper">
-  <div class="product-media-grid">
+  <div class="product-media-grid product-media-grid--{{ gallery_layout }}" data-gallery-layout="{{ gallery_layout }}">
     {%- for media in product.media -%}
       <div class="product-media-item{% if forloop.index > media_visible_limit %} product-media-item--hidden{% endif %}">
         <img
           class="photoswipe__image"
-          src="{{ media | image_url: width: 640 }}"
+          src="{{ media | image_url: width: 1024 }}"
+          srcset="{{ media | image_url: width: 480 }} 480w, {{ media | image_url: width: 768 }} 768w, {{ media | image_url: width: 1024 }} 1024w, {{ media | image_url: width: 1440 }} 1440w"
+          sizes="(min-width: 769px) {% if gallery_layout == 'masonry' %}25vw{% else %}50vw{% endif %}, 80vw"
           data-photoswipe-src="{{ media | image_url: width: 2000 }}"
           data-photoswipe-width="{{ media.preview_image.width }}"
           data-photoswipe-height="{{ media.preview_image.height }}"

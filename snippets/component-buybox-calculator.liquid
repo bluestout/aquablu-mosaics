@@ -7,12 +7,33 @@
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
 {%- assign sq_ft = sq_ft | default: 10.24 -%}
-{%- assign per = per | default: 'per box' -%}
-{%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
-{%- assign unit_label = unit_type | capitalize -%}
-{%- if unit_type == 'each' -%}
+
+{%- comment -%}
+  Grout / adhesive products use a DIFFERENT calculator from the sqft box.
+  The sqft box turns square footage into tile boxes; the grout calculator
+  (grout-calculator.liquid, rendered globally in theme.liquid) turns tile
+  dimensions into pounds of grout & adhesive.
+  Detected via product.template_suffix so it holds even when the page is
+  previewed through ?view=updated-template (which changes template.suffix).
+{%- endcomment -%}
+{%- assign is_grout = false -%}
+{%- if product.template_suffix == 'grout' -%}
+  {%- assign is_grout = true -%}
+{%- endif -%}
+{%- if per -%}
+  {%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+{%- else -%}
+  {%- assign unit_type = '' -%}
+{%- endif -%}
+{%- if unit_type == blank -%}
+  {%- assign unit_noun = 'unit' -%}
+  {%- assign units_required_label = 'Units Required' -%}
+{%- elsif unit_type == 'each' -%}
+  {%- assign unit_noun = 'unit' -%}
   {%- assign units_required_label = 'Units Required' -%}
 {%- else -%}
+  {%- assign unit_noun = unit_type -%}
+  {%- assign unit_label = unit_type | capitalize -%}
   {%- assign units_required_label = unit_label | append: ' Required' -%}
 {%- endif -%}
 
@@ -46,29 +67,31 @@
       </div>
     </quantity-input-updated>
 
-    {%- comment -%} How-much link — hidden in simplified mode (default / grout) {%- endcomment -%}
-    {%- unless simplified -%}
+    {%- comment -%}
+      How-much link.
+      - Grout products: opens the site-wide grout/adhesive modal via its
+        #grout-form-modal-btn trigger (a distinct, tile-dimension calculator).
+      - Sqft (full) mode: opens the inline <sqft-calculator> box below.
+      - Simplified default products: no calculator.
+    {%- endcomment -%}
+    {%- if is_grout -%}
+    <button type="button" id="grout-form-modal-btn" class="buybox-need-link buybox-need-link--grout">
+      {%- render 'icon-buybox-calculator' -%}
+      How much do I need?
+    </button>
+    {%- elsif simplified == false -%}
     <a href="#calculator" class="buybox-need-link">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22" fill="none">
-        <path d="M1 0.75H17C17.1381 0.75 17.25 0.861929 17.25 1V21C17.25 21.1381 17.1381 21.25 17 21.25H1C0.861929 21.25 0.75 21.1381 0.75 21V1C0.75 0.861929 0.861929 0.75 1 0.75Z" stroke="#393939" stroke-width="1.5"/>
-        <rect x="4" y="16" width="2" height="2" fill="#393939"/>
-        <rect x="8" y="16" width="2" height="2" fill="#393939"/>
-        <rect x="12" y="16" width="2" height="2" fill="#393939"/>
-        <rect x="4" y="12" width="2" height="2" fill="#393939"/>
-        <rect x="4" y="8" width="2" height="2" fill="#393939"/>
-        <rect x="4" y="3" width="10" height="3" fill="#393939"/>
-        <rect x="8" y="12" width="2" height="2" fill="#393939"/>
-        <rect x="8" y="8" width="2" height="2" fill="#393939"/>
-        <rect x="12" y="12" width="2" height="2" fill="#393939"/>
-        <rect x="12" y="8" width="2" height="2" fill="#393939"/>
-      </svg>
+      {%- render 'icon-buybox-calculator' -%}
       How much do I need?
     </a>
-    {%- endunless -%}
+    {%- endif -%}
   </div>
 
-  {%- comment -%} Calculator Box — hidden in simplified mode (default / grout) {%- endcomment -%}
-  {%- unless simplified -%}
+  {%- comment -%}
+    Sqft calculator box — only for full sqft mode. Never for grout (grout uses
+    the modal above) or simplified default products.
+  {%- endcomment -%}
+  {%- if simplified == false and is_grout == false -%}
   <sqft-calculator class="buybox-calc-box" id="calculator" data-sqft-per-box="{{ sq_ft }}" data-unit-type="{{ unit_type }}">
     <div class="buybox-calc-header">
       <p class="buybox-calc-header-title">Calculate how much I need:</p>
@@ -91,7 +114,7 @@
       <input
         type="number"
         class="buybox-calc-input"
-        placeholder="Or enter {{ unit_type }} amount"
+        placeholder="Or enter {{ unit_noun }} amount"
         data-calc-boxes
         min="0"
         step="any"
@@ -125,7 +148,7 @@
       </div>
       <div class="buybox-calc-row">
         <span class="buybox-calc-row-label">{{ units_required_label }}</span>
-        <span class="buybox-calc-row-value" data-calc-boxes-required>0 @ {{ sq_ft }} sq.ft./{{ unit_type }}</span>
+        <span class="buybox-calc-row-value" data-calc-boxes-required>0 @ {{ sq_ft }} sq.ft./{{ unit_noun }}</span>
       </div>
       <div class="buybox-calc-row">
         <span class="buybox-calc-row-label">Square Feet Included</span>
@@ -133,7 +156,7 @@
       </div>
     </div>
   </sqft-calculator>
-  {%- endunless -%}
+  {%- endif -%}
 
   {%- comment -%} Total Price {%- endcomment -%}
   <div class="buybox-total">

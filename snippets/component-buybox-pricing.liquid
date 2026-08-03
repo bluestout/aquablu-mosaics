@@ -10,8 +10,11 @@
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
 {%- assign sq_ft = sq_ft | default: 10.24 -%}
-{%- assign per = per | default: 'per box' -%}
-{%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+{%- if per -%}
+  {%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
+{%- else -%}
+  {%- assign unit_type = '' -%}
+{%- endif -%}
 {%- comment -%} Each-sold products read "$45.00 each" with no sold-by line {%- endcomment -%}
 {%- if unit_type == 'each' -%}
   {%- assign per = 'each' -%}
@@ -41,18 +44,18 @@
   <div class="buybox-price-row">
     <div class="buybox-price-box-info">
       <span class="buybox-price-box" data-price-box>
-        {{ current_variant.price | money }} {{ per }}
+        {{ current_variant.price | money }}{% if per %} {{ per }}{% endif %}
       </span>
-      {%- unless unit_type == 'each' -%}
+      {%- if unit_type != blank and unit_type != 'each' -%}
         <span class="buybox-sold-by-label">
           Sold by {{ unit_type }}{% unless simplified %} ({{ sq_ft }} sq.ft.){% endunless %}
         </span>
-      {%- endunless -%}
+      {%- endif -%}
     </div>
 
-    <p class="buybox-shipping-text up-mobile-only">
-      Usually ships in 3-5 business days.
-    </p>
+    <span class="buybox-shipping-text up-mobile-only" data-shipping-slot>
+      {%- render 'component-buybox-shipping', current_variant: current_variant, shipping_window: shipping_window -%}
+    </span>
 
     {%- comment -%} Order-a-sample — hidden in simplified mode (default / grout) {%- endcomment -%}
     {%- if sample_variant and simplified != true -%}
@@ -70,10 +73,10 @@
     {%- endif -%}
   </div>
 
-  {%- comment -%} Shipping text {%- endcomment -%}
-  <p class="buybox-shipping-text up-desktop-only">
-    Usually ships in 3-5 business days.
-  </p>
+  {%- comment -%} Shipping badge — matches live "This item ships FREE!" logic {%- endcomment -%}
+  <span class="buybox-shipping-text up-desktop-only" data-shipping-slot>
+    {%- render 'component-buybox-shipping', current_variant: current_variant, shipping_window: shipping_window -%}
+  </span>
 
   {%- comment -%} Divider {%- endcomment -%}
   <hr class="buybox-divider">

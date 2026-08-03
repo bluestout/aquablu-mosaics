@@ -28,6 +28,13 @@
   gap: 10px;
 }
 
+@media screen and (min-width: 768px){
+    .product-updated-child-wrapper:has(.product-media-grid--full) .up-product-info-wrapper{
+        position: sticky;
+        top: 120px;
+    }
+}
+
 /* === Utility === */
 .up-desktop-only {
   display: block;
@@ -68,6 +75,41 @@
 
 .product-media-grid.is-expanded .product-media-item--hidden {
   display: block;
+}
+
+/* --- Desktop gallery layouts -------------------------------------------
+   1-4 images  -> `--full`:    one image per row, full container width,
+                               natural aspect ratio (no square crop).
+   5+ images   -> `--masonry`: two columns, natural aspect ratios, row spans
+                               computed in JS (see layoutMasonry) so images
+                               tile without gaps.
+   Both are desktop-only; mobile keeps the horizontal scroll carousel defined
+   in the max-width: 768px block below.
+   -------------------------------------------------------------------- */
+@media only screen and (min-width: 769px) {
+  .product-media-grid--full {
+    grid-template-columns: 1fr;
+  }
+
+  .product-media-grid--full .product-media-item {
+    aspect-ratio: auto;
+  }
+
+  .product-media-grid--masonry {
+    grid-auto-rows: 8px;
+    align-items: start;
+    row-gap: 0;
+  }
+
+  .product-media-grid--masonry .product-media-item {
+    aspect-ratio: auto;
+  }
+
+  .product-media-grid--full .product-media-item img,
+  .product-media-grid--masonry .product-media-item img {
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 .product-media-show-more {
@@ -308,13 +350,48 @@
   line-height: 1;
 }
 
+/* Stacks the "ships FREE!" badge above the "usually ships in X-X" line.
+   Both can be visible at once, so they get their own rows. */
 .buybox-shipping-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2px;
   font-family: FuturaBook, sans-serif;
-  font-style: italic;
   font-size: 16px;
   color: #374759;
   line-height: normal;
-  margin: 2px 0 0;
+}
+
+/* "This item ships FREE!" badge — mirrors the live product page.
+   Override the theme's global `span.shipping-option` (margin-left: 20px; italic). */
+.buybox-shipping-free.shipping-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+  gap: 6px;
+  margin: 2px auto 0 0;
+  font-style: normal;
+  color: #374759;
+}
+
+/* Fallback "Usually ships in 3-5 business days." — left-aligned italic */
+.buybox-shipping-standard {
+  display: block;
+  align-self: flex-start;
+  margin: 2px auto 0 0;
+  font-family: FuturaBook, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #374759;
+  line-height: normal;
+}
+
+.buybox-shipping-free .icon-truck {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
 
 .buybox-divider {
@@ -475,6 +552,11 @@
   border: 1.5px solid #000;
 }
 
+/* Single real size shown as a static value, not a picker */
+.buybox-size-option--static {
+  cursor: default;
+}
+
 .buybox-options-divider {
   height: 1px;
   background: #d5d5d5;
@@ -611,6 +693,23 @@
   width: 18px;
   height: 22px;
   flex-shrink: 0;
+}
+
+/* Grout products use a <button> to open the site-wide grout/adhesive modal.
+   Reset native button chrome so it reads as the same link as the sqft variant. */
+button.buybox-need-link--grout {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+button.buybox-need-link--grout:focus-visible {
+  outline: 2px solid #152755;
+  outline-offset: 2px;
 }
 
 /* Calculator Box — hidden by default, opens via .buybox-need-link */
@@ -1239,6 +1338,14 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   }
   .up-mobile-only {
     display: flex !important;
+  }
+
+  /* Shipping lines take a full row inside .buybox-price-row so the
+     "ships FREE!" badge sits above the "usually ships in X-X" line */
+  .buybox-shipping-text.up-mobile-only {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
 
   /* Layout reorder */

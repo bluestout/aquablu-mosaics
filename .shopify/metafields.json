@@ -1,32 +1,52 @@
 {
-  "article": [],
-  "blog": [
+  "article": [
     {
-      "key": "blog_image",
+      "key": "event_date",
       "namespace": "custom",
-      "name": "Blog image",
-      "description": "Blog image",
+      "name": "Event Date",
+      "description": "",
+      "type": {
+        "name": "date",
+        "category": "DATE_TIME"
+      }
+    }
+  ],
+  "blog": [],
+  "collection": [
+    {
+      "key": "2023_collection_launch_date",
+      "namespace": "custom",
+      "name": "2023 Collection Launch Date",
+      "description": "Date of special collection launch in 2023 for reporting purposes",
+      "type": {
+        "name": "date",
+        "category": "DATE_TIME"
+      }
+    },
+    {
+      "key": "image",
+      "namespace": "global",
+      "name": "Banner image",
+      "description": "",
       "type": {
         "name": "file_reference",
         "category": "REFERENCE"
       }
-    }
-  ],
-  "collection": [
+    },
     {
-      "key": "sub_heading",
-      "namespace": "custom",
-      "name": "Sub heading",
-      "description": "Collection sub-heading",
+      "key": "mobile_image",
+      "namespace": "global",
+      "name": "Mobile banner image",
+      "description": "",
       "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
+        "name": "file_reference",
+        "category": "REFERENCE"
       }
     },
     {
-      "key": "sub_categories",
-      "namespace": "custom",
-      "name": "Sub categories",
+      "key": "sub_collections",
+      "namespace": "global",
+      "name": "Sub collections",
       "description": "",
       "type": {
         "name": "list.metaobject_reference",
@@ -34,33 +54,63 @@
       }
     },
     {
-      "key": "custom_test",
-      "namespace": "custom",
-      "name": "Custom Test",
+      "key": "promotions",
+      "namespace": "global",
+      "name": "Promotions",
       "description": "",
       "type": {
-        "name": "list.color",
-        "category": "COLOR"
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
       }
     },
     {
-      "key": "pre_footer_title",
+      "key": "ups_icons",
       "namespace": "custom",
-      "name": "Pre Footer Title",
+      "name": "UPS icons",
       "description": "",
       "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
       }
     },
     {
-      "key": "footer_description",
+      "key": "customer_quote",
       "namespace": "custom",
-      "name": "Footer Description",
+      "name": "customer_quote",
       "description": "",
       "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "curated_collections",
+      "namespace": "custom",
+      "name": "Curated Collections",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "collection_usp",
+      "namespace": "custom",
+      "name": "Collection USPs (DG Version)",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "toggle_searchspring_display",
+      "namespace": "custom",
+      "name": "Toggle Search Spring",
+      "description": "If set to \"False\", Search Spring will be disabled. If set to \"True\" or left empty, Search Spring remains enabled",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
       }
     }
   ],
@@ -68,27 +118,269 @@
   "company_location": [],
   "location": [],
   "market": [],
-  "order": [],
-  "page": [],
+  "order": [
+    {
+      "key": "known_tracking_numbers",
+      "namespace": "mechanic",
+      "name": "Known Tracking Numbers",
+      "description": "Used in Mechanic flows",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    }
+  ],
+  "page": [
+    {
+      "key": "image",
+      "namespace": "global",
+      "name": "Banner image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "mobile_banner_image",
+      "namespace": "global",
+      "name": "Mobile banner image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
   "product": [
     {
-      "key": "flavor",
-      "namespace": "shopify",
-      "name": "Flavor",
-      "description": "Specifies the taste or flavor of a product, e.g. vanilla, mint",
+      "key": "queries",
+      "namespace": "shopify--discovery--product_search_boost",
+      "name": "Search product boosts",
+      "description": "List of search queries for which a product gets higher rank in search results",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "related_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products",
+      "description": "List of related products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "related_products_display",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products settings",
+      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "complementary_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Complementary products",
+      "description": "List of complementary products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "condition",
+      "namespace": "product",
+      "name": "Product Condition Detail",
+      "description": "Product Condition Detail",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "created_after_lister_launch",
+      "namespace": "custom",
+      "name": "Created After Lister Launch",
+      "description": "True if after launch, False or Blank if not",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "scheduled_launch",
+      "namespace": "custom",
+      "name": "Scheduled Launch",
+      "description": "This is the date that a product is scheduled to be released in Shopify, updated via Shopify Flow",
+      "type": {
+        "name": "date",
+        "category": "DATE_TIME"
+      }
+    },
+    {
+      "key": "retail_price",
+      "namespace": "product",
+      "name": "Retail Price",
+      "description": "This is the MSRP or Retail comparison price used for calculating savings",
+      "type": {
+        "name": "number_decimal",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "use_description_field",
+      "namespace": "custom",
+      "name": "Use Description Field",
+      "description": "Use Description Field instead of building from Shopify Tags",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "color_family",
+      "namespace": "product",
+      "name": "Filter: Color Family",
+      "description": "",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "sold_in_promotion",
+      "namespace": "product",
+      "name": "Sold in Promotion",
+      "description": "Promotions related to product",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "merch_priority",
+      "namespace": "product",
+      "name": "Merchandizing Priority",
+      "description": "Used by Nick to automate product curation across collections",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "default_publish_channels",
+      "namespace": "custom",
+      "name": "Default Publish Channels",
+      "description": "For use by Mechanic automation to automatically activate channels whenever pushed to Online Store",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "merch_collection",
+      "namespace": "product",
+      "name": "Merchandised Collections",
+      "description": "Use to add products to specific special collections",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "may_23_memorial_day_clearance_prep",
+      "namespace": "custom",
+      "name": "Clearance Prep",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "special_purpose_value",
+      "namespace": "custom",
+      "name": "Special Purpose Value",
+      "description": "For use to store values in special circumstances to get around Lister limitations",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "compare_text",
+      "namespace": "product",
+      "name": "Compare Text",
+      "description": "For use in site design, to display a text other than \"retail price\" in the compare at text",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "original_price",
+      "namespace": "custom",
+      "name": "Original Price",
+      "description": "The original price for the product, before any markdowns or changes over time.",
+      "type": {
+        "name": "number_decimal",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "pdp_usp",
+      "namespace": "custom",
+      "name": "PDP USPs (DG Version)",
+      "description": "",
       "type": {
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "tea-input-type",
-      "namespace": "shopify",
-      "name": "Tea input type",
-      "description": "Specifies the preparation style of tea, e.g. bags, K-cups",
+      "key": "customer_quote",
+      "namespace": "custom",
+      "name": "customer_quote",
+      "description": "",
       "type": {
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "curated_collections",
+      "namespace": "custom",
+      "name": "Curated Collections",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "pouch",
+      "namespace": "custom",
+      "name": "Pouches",
+      "description": "",
+      "type": {
+        "name": "number_decimal",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "size_categories",
+      "namespace": "filter",
+      "name": "Filter Categories for Sizes ",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
       }
     },
     {
@@ -102,282 +394,202 @@
       }
     },
     {
-      "key": "taxcode",
-      "namespace": "avalara",
-      "name": "Avalara Tax Code",
-      "description": "Used only for Avalara integration.",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "short_description",
+      "key": "parent_categories",
       "namespace": "custom",
-      "name": "Short description",
-      "description": "Short description",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "tea_type",
-      "namespace": "custom",
-      "name": "Tea type",
-      "description": "Type of tea",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "calories",
-      "namespace": "custom",
-      "name": "Calories",
-      "description": "Value of calories",
-      "type": {
-        "name": "number_integer",
-        "category": "NUMBER"
-      }
-    },
-    {
-      "key": "tea_location",
-      "namespace": "custom",
-      "name": "Tea location",
-      "description": "Location of tea",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "certification_image1",
-      "namespace": "custom",
-      "name": "Certification image1",
-      "description": "Certification image1",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image2",
-      "namespace": "custom",
-      "name": "Certification image2",
-      "description": "Certification image2",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image3",
-      "namespace": "custom",
-      "name": "Certification image3",
-      "description": "Certification image3",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image4",
-      "namespace": "custom",
-      "name": "Certification image4",
-      "description": "Certification image4",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image5",
-      "namespace": "custom",
-      "name": "Certification image5",
-      "description": "Certification image5",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image6",
-      "namespace": "custom",
-      "name": "Certification image6",
-      "description": "Certification image6",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image7",
-      "namespace": "custom",
-      "name": "Certification image7",
-      "description": "Certification image7",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image8",
-      "namespace": "custom",
-      "name": "Certification image8",
-      "description": "Certification image8",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image9",
-      "namespace": "custom",
-      "name": "Certification image9",
-      "description": "Certification image9",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "certification_image10",
-      "namespace": "custom",
-      "name": "Certification image10",
-      "description": "Certification image10",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "what_s_inside_title",
-      "namespace": "custom",
-      "name": "What's inside title",
-      "description": "What's inside title",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "what_s_inside_description",
-      "namespace": "custom",
-      "name": "What's inside description",
-      "description": "What's inside description",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "what_s_inside_icon",
-      "namespace": "custom",
-      "name": "What's inside icon",
-      "description": "What's inside icon",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "recipe_title",
-      "namespace": "custom",
-      "name": "Recipe title",
-      "description": "Recipe title",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "recipe_banner_image",
-      "namespace": "custom",
-      "name": "Recipe banner image",
-      "description": "Recipe banner image",
-      "type": {
-        "name": "file_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "recipe_ingredients",
-      "namespace": "custom",
-      "name": "Recipe ingredients",
-      "description": "Recipe Ingredients",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "recipe_instructions",
-      "namespace": "custom",
-      "name": "Recipe instructions",
-      "description": "Recipe instructions",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "caffeine",
-      "namespace": "custom",
-      "name": "Caffeine",
-      "description": "Value of Caffeine",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "what_s_inside_detail",
-      "namespace": "custom",
-      "name": "What's inside detail",
+      "name": "Parent Categories",
       "description": "",
       "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
+        "name": "list.collection_reference",
+        "category": "REFERENCE"
       }
     },
     {
-      "key": "custom_scripts",
+      "key": "how_it_works-1",
       "namespace": "custom",
-      "name": "Custom Scripts",
+      "name": "How it Works - 1",
       "description": "",
       "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
       }
     },
     {
-      "key": "dietary-preferences",
+      "key": "how_it_works-2",
+      "namespace": "custom",
+      "name": "How it Works - 2",
+      "description": "",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "how_it_works-3",
+      "namespace": "custom",
+      "name": "How it Works - 3",
+      "description": "",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "lister_product_id",
+      "namespace": "uprightlabs",
+      "name": "Lister Product ID",
+      "description": null,
+      "type": {
+        "name": "id",
+        "category": "ID"
+      }
+    },
+    {
+      "key": "pre_order_product",
+      "namespace": "custom",
+      "name": "Pre-Order Product",
+      "description": "Display \"About the Author & Illustrator\" dropdown, custom \"Vendor\" link and Tuesday's Bears product recommendations",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "size",
       "namespace": "shopify",
-      "name": "Dietary preferences",
-      "description": "Helps identify products suitable for specific diets, e.g. vegan, nut free",
+      "name": "Size",
+      "description": "Used to specify the size of a product, such as 0-3 months or Extra large (XL)",
       "type": {
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "custom_price",
+      "key": "shoe-size",
+      "namespace": "shopify",
+      "name": "Shoe size",
+      "description": "Used to define the size of footwear, e.g. Extra large (XL), 9.5",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "shopify_listing_start_date",
       "namespace": "custom",
-      "name": "custom_price",
+      "name": "Shopify Listing Start Date",
+      "description": "",
+      "type": {
+        "name": "date",
+        "category": "DATE_TIME"
+      }
+    },
+    {
+      "key": "shop_listing_start_date",
+      "namespace": "custom",
+      "name": "Shop Listing Start Date",
       "description": "",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "auction_product",
+      "namespace": "tipo",
+      "name": "Auction product",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "disclosure",
+      "namespace": "shopify",
+      "name": "Disclosures",
+      "description": "Required safety warnings and regulatory disclosures for this product",
+      "type": {
+        "name": "list.disclosure_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
     {
+      "key": "override_price",
+      "namespace": "mechanic",
+      "name": "Override Price",
+      "description": "",
+      "type": {
+        "name": "number_decimal",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "restore_price",
+      "namespace": "mechanic",
+      "name": "Restore Price",
+      "description": "",
+      "type": {
+        "name": "number_decimal",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "waist",
+      "namespace": "lister",
+      "name": "Waist",
+      "description": "Stores waist size variant from Lister",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "inseam",
+      "namespace": "lister",
+      "name": "Inseam",
+      "description": "For storing the variant's inseam from Lister",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_family",
+      "namespace": "filter",
+      "name": "Filter: Size Family",
+      "description": "For sizing roll-up hierarchy values",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "original_price",
+      "namespace": "custom",
+      "name": "Original Price",
+      "description": "The original price for the product, before any markdowns or changes over time.",
+      "type": {
+        "name": "number_decimal",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "size_by_category",
+      "namespace": "filter",
+      "name": "Size Filter by Category ",
+      "description": "",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
       "key": "custom_label_4",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 4",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -387,7 +599,7 @@
       "key": "custom_label_3",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 3",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -397,7 +609,7 @@
       "key": "custom_label_2",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 2",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -407,7 +619,7 @@
       "key": "custom_label_1",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 1",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -417,7 +629,7 @@
       "key": "custom_label_0",
       "namespace": "mm-google-shopping",
       "name": "Google: Custom Label 0",
-      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
@@ -484,71 +696,81 @@
       }
     },
     {
-      "key": "package_value",
-      "namespace": "custom",
-      "name": "Package Value",
-      "description": "Tea bags",
+      "key": "preorder_count",
+      "namespace": "restockrocket_production",
+      "name": "Preorder Count",
+      "description": "Current preorder count for the variant",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "preorder_max_count",
+      "namespace": "restockrocket_production",
+      "name": "Preorder Max Count",
+      "description": "Maximum preorder count allowed for the variant",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "shipping_text",
+      "namespace": "restockrocket_production",
+      "name": "Shipping Text",
+      "description": "Custom shipping text for the variant",
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
       }
     },
     {
-      "key": "taxcode",
-      "namespace": "avalara",
-      "name": "Avalara Tax Code",
-      "description": "Used only for Avalara integration.",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "audiobook_url",
-      "namespace": "custom",
-      "name": "audiobook_url",
-      "description": "External audiobook purchase link",
-      "type": {
-        "name": "url",
-        "category": "URL"
-      }
-    },
-    {
-      "key": "is_tin_variant",
-      "namespace": "custom",
-      "name": "is_tin_variant",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "oos_message",
-      "namespace": "custom",
-      "name": "OOS Message",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    }
-  ],
-  "shop": [
-    {
-      "key": "freegifts_custom_data",
-      "namespace": "secomapp",
-      "name": "BOGOS custom_data (Do not edit)",
-      "description": null,
+      "key": "market_preorder_count",
+      "namespace": "restockrocket_production",
+      "name": "Market Preorder Count",
+      "description": "Market-specific preorder counts for the variant",
       "type": {
         "name": "json",
         "category": "JSON"
       }
     },
     {
-      "key": "blocks_list_checkout_static_content",
+      "key": "market_preorder_max_count",
+      "namespace": "restockrocket_production",
+      "name": "Market Preorder Max Count",
+      "description": "Market-specific preorder max counts for the variant",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "market_shipping_text",
+      "namespace": "restockrocket_production",
+      "name": "Market Shipping Text",
+      "description": "Market-specific shipping text for the variant",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "variationPrices",
+      "namespace": "intelligems",
+      "name": "PriceTestVariant",
+      "description": "Metafields configuring product variant prices per variation",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    }
+  ],
+  "shop": [
+    {
+      "key": "blocks_list_checkout_upsell_free_shipping",
       "namespace": "checkoutblocks",
-      "name": "Checkout Blocks: Blocks List for: checkout_static_content",
+      "name": "Checkout Blocks: Blocks List for: checkout_upsell_free_shipping",
       "description": null,
       "type": {
         "name": "list.metaobject_reference",
@@ -556,13 +778,93 @@
       }
     },
     {
-      "key": "blocks_list_checkout_line_item_content",
-      "namespace": "checkoutblocks",
-      "name": "Checkout Blocks: Blocks List for: checkout_line_item_content",
-      "description": null,
+      "key": "settings",
+      "namespace": "restockrocket_production",
+      "name": "Settings",
+      "description": "Settings for the app",
       "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "selling_plans",
+      "namespace": "restockrocket_production",
+      "name": "Selling Plans",
+      "description": "Settings and variant IDs for preorder offers",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "out_of_stock_variant_ids",
+      "namespace": "restockrocket_production",
+      "name": "Out of Stock Variant IDs",
+      "description": "List of variant IDs that are currently out of stock",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "in_stock_variant_ids",
+      "namespace": "restockrocket_production",
+      "name": "In Stock Variant IDs",
+      "description": "List of variant IDs that are currently in stock",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "preorder_variant_ids",
+      "namespace": "restockrocket_production",
+      "name": "Preorder Variant IDs",
+      "description": "List of variant IDs that are available for preorder",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "merchant_id",
+      "namespace": "mm_google_shopping_extension",
+      "name": "Google: Merchant ID",
+      "description": "Currently Linked Merchant Center ID",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "show_store_widget_app_embed_block",
+      "namespace": "mm_google_shopping_extension",
+      "name": "Google: Show Store Widget App Embed Block",
+      "description": "Indicates if the store widget app embed block should be shown.",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "pid",
+      "namespace": "swym",
+      "name": "Swym Merchant ID",
+      "description": "Swym's unique merchant identifier",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "relay_path",
+      "namespace": "swym",
+      "name": "Swym API Endpoint",
+      "description": "Swym's Storefront API",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
       }
     }
   ]
