@@ -191,7 +191,8 @@
               product: product,
               current_variant: current_variant,
               sample_variant: sample_variant,
-              hide_single_size: hide_single_size
+              hide_single_size: hide_single_size,
+              swatch_visible_limit: section.settings.swatch_visible_limit
             %}
           {%- when 'calculator' -%}
             {% render 'component-buybox-calculator',
@@ -242,6 +243,16 @@
       "label": "Show how-much calculator",
       "info": "In Simplified mode, show the 'How much do I need?' calculator while keeping per-sq-ft price and order-a-sample hidden. Grout products always get their own calculator.",
       "default": false
+    },
+    {
+      "type": "range",
+      "id": "swatch_visible_limit",
+      "label": "Combined listing swatches shown",
+      "info": "How many swatches render before the 'Show More' toggle. The swatch for the product being viewed is always shown, even when it falls past this limit.",
+      "min": 4,
+      "max": 40,
+      "step": 1,
+      "default": 10
     },
     {
       "type": "text",
