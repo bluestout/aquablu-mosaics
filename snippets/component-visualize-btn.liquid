@@ -1,0 +1,27 @@
+{%- comment -%}
+  "Visualize in Your Space" — trigger for the TilesView modal.
+
+  Rendered twice: once under the desktop media gallery, once above the
+  order-a-sample button on mobile. The two live in different columns that swap
+  order on mobile, so a single element can't sit in both places. Both share the
+  [data-tilesview-trigger] hook, which <tilesview-popup> listens for on
+  `document`, so one modal instance serves either button.
+
+  Renders nothing unless the product carries a TilesView product id.
+
+  @param product - the current product
+  @param device  - 'desktop' (default) or 'mobile'; picks the visibility class
+{%- endcomment -%}
+
+{%- if product.metafields.tileview.product_id != blank -%}
+  {%- if device == 'mobile' -%}
+    {%- assign visibility_class = 'media-visualize-btn--mobile up-mobile-only' -%}
+  {%- else -%}
+    {%- assign visibility_class = 'up-desktop-only' -%}
+  {%- endif -%}
+
+  <button type="button" class="media-visualize-btn {{ visibility_class }}" data-tilesview-trigger>
+    {%- render 'icon-visualize' -%}
+    Visualize in Your Space
+  </button>
+{%- endif -%}

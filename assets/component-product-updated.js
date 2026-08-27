@@ -1,3 +1,177 @@
+class ProductMediaCarousel extends HTMLElement {
+  connectedCallback() {
+    this.viewport = this.querySelector('[data-carousel-viewport]');
+    this.slides = [...this.querySelectorAll('[data-carousel-slide]')];
+    if (!this.viewport || this.slides.length === 0) return;
+    this.prevBtn = this.querySelector('[data-carousel-prev]');
+    this.nextBtn = this.querySelector('[data-carousel-next]');
+    this.thumb = this.querySelector('[data-carousel-thumb]');
+    this.index = 0;
+    this.loop = this.slides.length > 1;
+
+    if (this.thumb) this.thumb.style.width = `${100 / this.slides.length}%`;
+    if (this.loop) this.buildLoop();
+    this.cells = [...this.viewport.children];
+    this.cellIndex = this.cells.map((cell) => {
+      if (cell === this.cloneOfLast) return this.slides.length - 1;
+      if (cell === this.cloneOfFirst) return 0;
+      return this.slides.indexOf(cell);
+    });
+    if (this.loop) this.jumpTo(this.slides[0], 'auto');
+
+    if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.goTo(this.index - 1));
+    if (this.nextBtn) this.nextBtn.addEventListener('click', () => this.goTo(this.index + 1));
+    // Sync only once scrolling stops. Per-frame syncing makes the counter
+    // flicker: an arrow click sets the target index immediately, but for the
+    // first half of the smooth scroll the nearest slide is still the old one,
+    // so the number bounces target -> previous -> target on every move.
+    this._onScroll = () => {
+      clearTimeout(this._settleTimer);
+      this._settleTimer = setTimeout(() => this.onScrollSettled(), 120);
+    };
+    this.viewport.addEventListener('scroll', this._onScroll, { passive: true });
+    this.viewport.addEventListener('pointerdown', () => {
+      this._pointerScrollLeft = this.viewport.scrollLeft;
+    });
+    this._onResize = () => {
+      clearTimeout(this._resizeTimer);
+      this._resizeTimer = setTimeout(() => this.jumpTo(this.slides[this.index], 'auto'), 150);
+    };
+    window.addEventListener('resize', this._onResize);
+
+    this.setActive(0);
+  }
+
+  disconnectedCallback() {
+    if (this.viewport && this._onScroll) {
+      this.viewport.removeEventListener('scroll', this._onScroll);
+    }
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    clearTimeout(this._settleTimer);
+    clearTimeout(this._resizeTimer);
+  }
+
+  buildLoop() {
+    this.cloneOfFirst = this.cloneSlide(this.slides[0]);
+    this.cloneOfLast = this.cloneSlide(this.slides[this.slides.length - 1]);
+    this.viewport.append(this.cloneOfFirst);
+    this.viewport.prepend(this.cloneOfLast);
+  }
+
+  cloneSlide(slide) {
+    const clone = slide.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.removeAttribute('data-carousel-slide');
+    clone.dataset.carouselClone = '';
+    clone.querySelectorAll('[data-pswp-item]').forEach((img) => {
+      delete img.dataset.pswpItem;
+    });
+    return clone;
+  }
+
+  wasSwipe() {
+    if (this._pointerScrollLeft == null || !this.viewport) return false;
+    return Math.abs(this.viewport.scrollLeft - this._pointerScrollLeft) > 8;
+  }
+
+  // offsetLeft is rounded to whole pixels, but slides are 100% of a viewport
+  // whose width is routinely fractional. On every other slide that rounding put
+  // the scroll half a pixel past the slide start, which showed as a sliver of
+  // the next image at the edge. Measuring against the scrollport keeps the
+  // sub-pixel value so the active slide fills the frame exactly.
+  contentOrigin() {
+    return this.viewport.getBoundingClientRect().left - this.viewport.scrollLeft;
+  }
+
+  scrollTargetFor(cell, origin) {
+    const base = origin == null ? this.contentOrigin() : origin;
+    return cell.getBoundingClientRect().left - base;
+  }
+
+  jumpTo(cell, behavior) {
+    if (!cell) return;
+    const left = this.scrollTargetFor(cell);
+    if (behavior === 'smooth') {
+      this.viewport.scrollTo({ left, behavior: 'smooth' });
+    } else {
+      this.viewport.scrollLeft = left;
+    }
+  }
+
+  goTo(index, behavior = 'smooth') {
+    const total = this.slides.length;
+    if (total === 0) return;
+
+    if (!this.loop) {
+      const target = Math.max(0, Math.min(index, total - 1));
+      this.jumpTo(this.slides[target], behavior);
+      this.setActive(target);
+      return;
+    }
+
+    if (index < 0) {
+      this.jumpTo(this.cloneOfLast, behavior);
+      this.setActive(total - 1);
+    } else if (index >= total) {
+      this.jumpTo(this.cloneOfFirst, behavior);
+      this.setActive(0);
+    } else {
+      this.jumpTo(this.slides[index], behavior);
+      this.setActive(index);
+    }
+  }
+
+  goToMedia(mediaId, behavior) {
+    if (!this.slides) return;
+    const target = this.slides.findIndex((slide) => slide.dataset.mediaId === String(mediaId));
+    if (target === -1) return;
+    this.goTo(target, behavior);
+  }
+
+  nearestCell() {
+    const { scrollLeft } = this.viewport;
+    const origin = this.contentOrigin();
+    let nearest = 0;
+    let shortest = Infinity;
+    this.cells.forEach((cell, i) => {
+      const distance = Math.abs(this.scrollTargetFor(cell, origin) - scrollLeft);
+      if (distance < shortest) {
+        shortest = distance;
+        nearest = i;
+      }
+    });
+    return nearest;
+  }
+
+  onScrollSettled() {
+    // Normalize first: scrollLeft is applied synchronously, so the nearest cell
+    // read straight after is the real slide rather than the clone.
+    this.normalizeLoop();
+    const real = this.cellIndex[this.nearestCell()];
+    if (real >= 0) this.setActive(real);
+  }
+
+  normalizeLoop() {
+    if (!this.loop) return;
+    const cell = this.cells[this.nearestCell()];
+    if (cell === this.cloneOfLast) {
+      this.jumpTo(this.slides[this.slides.length - 1], 'auto');
+    } else if (cell === this.cloneOfFirst) {
+      this.jumpTo(this.slides[0], 'auto');
+    }
+  }
+
+  setActive(index) {
+    this.index = index;
+    if (this.thumb) this.thumb.style.transform = `translateX(${index * 100}%)`;
+    if (!this.loop) {
+      if (this.prevBtn) this.prevBtn.disabled = index === 0;
+      if (this.nextBtn) this.nextBtn.disabled = index === this.slides.length - 1;
+    }
+  }
+}
+customElements.define('product-media-carousel', ProductMediaCarousel);
+
 class ProductUpdated extends HTMLElement {
   connectedCallback() {
     const productJsonEl = this.querySelector('[data-product-json]');
@@ -9,8 +183,6 @@ class ProductUpdated extends HTMLElement {
     this.product = JSON.parse(productJsonEl.textContent);
     this.sqftPerBox = parseFloat(this.dataset.sqftPerBox) || 10.24;
     this.unitType = this.dataset.unitType || '';
-
-    // Variant IDs eligible for the "This item ships FREE!" badge (computed in Liquid)
     this.shipsFreeVariants = new Set(
       (this.dataset.shipsFreeVariants || '')
         .split(',')
@@ -32,17 +204,11 @@ class ProductUpdated extends HTMLElement {
     if (this._masonryResizeObserver) this._masonryResizeObserver.disconnect();
   }
 
-  /* Masonry gallery (5+ images, desktop only).
-     CSS gives the grid 8px auto-rows with no row gap; each tile is then told how
-     many rows to span so variable-height images tile without leaving gaps.
-     Liquid picks the layout — this only runs for the masonry variant. */
   initMasonry() {
     this.masonryGrid = this.querySelector('.product-media-grid--masonry');
     if (!this.masonryGrid) return;
-
     const relayout = () => this.layoutMasonry();
 
-    // Images arrive at different times (and lazily), so re-measure per load.
     this.masonryGrid.querySelectorAll('img').forEach((img) => {
       if (img.complete) return;
       img.addEventListener('load', relayout, { once: true });
@@ -50,8 +216,6 @@ class ProductUpdated extends HTMLElement {
     });
 
     if (typeof ResizeObserver === 'function') {
-      // Guard on width: laying out changes the grid's HEIGHT, so an unguarded
-      // observer on this element would re-trigger itself forever.
       this._masonryWidth = null;
       this._masonryResizeObserver = new ResizeObserver((entries) => {
         const width = entries[0].contentRect.width;
@@ -70,19 +234,15 @@ class ProductUpdated extends HTMLElement {
   layoutMasonry() {
     const grid = this.masonryGrid;
     if (!grid) return;
-
     const styles = window.getComputedStyle(grid);
-    // Mobile swaps the grid for a horizontal scroller — nothing to span there.
     if (styles.display !== 'grid') return;
 
     const rowHeight = parseFloat(styles.gridAutoRows) || 8;
     const rowGap = parseFloat(styles.rowGap) || 0;
     const gutter = parseFloat(styles.columnGap) || 0;
-
-    // Batch reads before writes so the loop doesn't thrash layout.
     const items = [...grid.querySelectorAll('.product-media-item')];
     const spans = items.map((item) => {
-      if (!item.offsetParent) return null; // hidden behind "Show more"
+      if (!item.offsetParent) return null;
       const height = item.getBoundingClientRect().height + gutter;
       return Math.max(1, Math.round(height / (rowHeight + rowGap)));
     });
@@ -93,26 +253,42 @@ class ProductUpdated extends HTMLElement {
   }
 
   initImageZoom() {
-    // Mobile: zoom button click
     this.querySelectorAll('.media-zoom-btn').forEach((btn) => {
       btn.addEventListener('click', () => this.openPhotoswipe(parseInt(btn.dataset.index, 10) - 1));
     });
-
-    // Desktop: clicking the image opens the lightbox
-    this.querySelectorAll('.product-media-item .photoswipe__image').forEach((img) => {
+    this.querySelectorAll('.photoswipe__image').forEach((img) => {
       img.style.cursor = 'zoom-in';
-      img.addEventListener('click', () => this.openPhotoswipe(parseInt(img.dataset.index, 10) - 1));
+      img.addEventListener('click', () => {
+        const carousel = img.closest('product-media-carousel');
+        if (carousel && typeof carousel.wasSwipe === 'function' && carousel.wasSwipe()) return;
+        this.openPhotoswipe(parseInt(img.dataset.mediaIndex, 10) - 1);
+      });
     });
   }
 
+  visibleThumbFor(mediaIndex) {
+    const candidates = [...this.querySelectorAll(`[data-media-index="${mediaIndex}"]`)];
+    const onScreen = candidates.find((el) => {
+      if (!el.offsetParent) return false;
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.width > 0 &&
+        rect.right > 0 &&
+        rect.left < window.innerWidth &&
+        rect.bottom > 0 &&
+        rect.top < window.innerHeight
+      );
+    });
+    return onScreen || candidates[0];
+  }
+
   openPhotoswipe(index) {
-    const images = [...this.querySelectorAll('.photoswipe__image')];
+    const images = [...this.querySelectorAll('[data-pswp-item]')];
     const items = images.map((img) => ({
       src: img.dataset.photoswipeSrc || img.src,
       w: parseInt(img.dataset.photoswipeWidth, 10) || img.naturalWidth,
       h: parseInt(img.dataset.photoswipeHeight, 10) || img.naturalHeight,
       msrc: img.currentSrc || img.src,
-      el: img,
     }));
 
     const pswpEl = document.querySelector('.pswp');
@@ -129,8 +305,8 @@ class ProductUpdated extends HTMLElement {
       pinchToClose: false,
       allowPanToNext: true,
       tapToToggleControls: false,
-      getThumbBoundsFn(i) {
-        const thumb = items[i] && items[i].el;
+      getThumbBoundsFn: (i) => {
+        const thumb = this.visibleThumbFor(i + 1);
         if (!thumb) return;
         const rect = thumb.getBoundingClientRect();
         return { x: rect.left, y: rect.top + window.pageYOffset, w: rect.width };
@@ -158,8 +334,6 @@ class ProductUpdated extends HTMLElement {
         this.toggleExpanded(showMoreSwatches, '.buybox-color-swatches');
         return;
       }
-
-      // Sample button — adds the sample variant (quantity 1) to cart
       const sampleBtn = e.target.closest('[data-sample-btn]');
       if (sampleBtn) {
         e.preventDefault();
@@ -167,29 +341,22 @@ class ProductUpdated extends HTMLElement {
       }
     });
 
-    // Quantity changes from <quantity-input-updated>
     this.addEventListener('quantity:change', () => this.updatePrices());
 
-    // Calculator changes from <sqft-calculator>
     this.addEventListener('calculator:change', (e) => {
       const qty = this.querySelector('quantity-input-updated');
       if (qty) qty.setValue(e.detail.boxes);
     });
 
-    // Calculator open/close: "How much do I need?" opens the inline sqft box,
-    // the X button closes it. The grout variant (#grout-form-modal-btn) is handled
-    // by the global grout-calculator modal, so it's excluded here.
     const needLink = this.querySelector('.buybox-need-link:not(#grout-form-modal-btn)');
     if (needLink) needLink.addEventListener('click', (e) => this.openCalculator(e));
 
     const closeBtn = this.querySelector('.buybox-calc-toggle');
     if (closeBtn) closeBtn.addEventListener('click', () => this.closeCalculator());
 
-    // Add to cart (form submission)
     const form = this.querySelector('[data-product-form]');
     if (form) form.addEventListener('submit', (e) => this.addToCart(e));
 
-    // Wishlist
     const wishBtn = this.querySelector('[data-wishlist-btn]');
     if (wishBtn) {
       wishBtn.addEventListener('click', () => this.handleWishlistClick());
@@ -206,9 +373,7 @@ class ProductUpdated extends HTMLElement {
     if (lessText) lessText.hidden = !expanded;
 
     if (containerSelector === '.product-media-grid') {
-      // Newly revealed tiles have no row span yet (and hidden ones keep a stale one)
       this.layoutMasonry();
-
       if (!expanded) {
         const wrapper = this.querySelector('.updated-product-media-wrapper');
         if (wrapper) wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -227,10 +392,7 @@ class ProductUpdated extends HTMLElement {
       v.options.every((opt, i) => opt === nextOptions[i])
     );
     if (!newVariant) return;
-
     this.currentVariant = newVariant;
-
-    // Update active state for clicked group
     button.parentElement
       .querySelectorAll('[data-option-index]')
       .forEach((el) => el.classList.remove('is-active'));
@@ -249,9 +411,6 @@ class ProductUpdated extends HTMLElement {
     this.updateShipping();
   }
 
-  // Toggle the "ships FREE!" badge for the current variant. The
-  // "Usually ships in X-X business days" line is always shown, so both can
-  // appear together (free badge on top).
   updateShipping() {
     const showFree = this.shipsFreeVariants.has(this.currentVariant.id);
     this.querySelectorAll('[data-shipping-slot]').forEach((slot) => {
@@ -275,7 +434,6 @@ class ProductUpdated extends HTMLElement {
       : this.formatMoney(variantPrice);
     this.setText('[data-price-box]', priceBoxText);
     this.setText('[data-total-price]', this.formatMoney(totalPrice));
-    this.setText('[data-atc-price]', this.formatMoney(totalPrice));
   }
 
   updateSku() {
@@ -285,26 +443,18 @@ class ProductUpdated extends HTMLElement {
   }
 
   updateMedia() {
-    const img = this.currentVariant.featured_image;
-    if (!img) return;
-    const firstImg = this.querySelector('.product-media-item img');
-    if (!firstImg) return;
-    // The gallery images carry a srcset, which would win over a new src —
-    // rebuild it for the variant image instead of leaving the old one behind.
-    firstImg.srcset = [480, 768, 1024, 1440]
-      .map((w) => `${this.appendImageWidth(img.src, w)} ${w}w`)
-      .join(', ');
-    firstImg.src = this.appendImageWidth(img.src, 1024);
-    firstImg.alt = img.alt || '';
-    if (firstImg.dataset.photoswipeSrc) {
-      firstImg.dataset.photoswipeSrc = this.appendImageWidth(img.src, 2000);
-      // Keep the lightbox dimensions in step with the swapped-in image
-      if (img.width) firstImg.dataset.photoswipeWidth = img.width;
-      if (img.height) firstImg.dataset.photoswipeHeight = img.height;
+    const carousel = this.querySelector('product-media-carousel');
+    if (!carousel || typeof carousel.goToMedia !== 'function') return;
+    const behavior = this._mediaSynced ? 'smooth' : 'auto';
+    this._mediaSynced = true;
+
+    const media = this.currentVariant.featured_media;
+    if (media && media.id) {
+      carousel.goToMedia(media.id, behavior);
+      return;
     }
-    // A variant image can have a different aspect ratio, so the masonry tile
-    // it sits in needs re-measuring once it has actually loaded.
-    firstImg.addEventListener('load', () => this.layoutMasonry(), { once: true });
+    const image = this.currentVariant.featured_image;
+    if (image && image.position) carousel.goTo(image.position - 1, behavior);
   }
 
   updateAvailability() {
@@ -340,7 +490,6 @@ class ProductUpdated extends HTMLElement {
     if (!box) return;
     if (event) event.preventDefault();
     box.classList.add('is-open');
-    // Scroll into view after the box is visible
     requestAnimationFrame(() => {
       box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       const firstInput = box.querySelector('input[type="number"]');
@@ -371,8 +520,6 @@ class ProductUpdated extends HTMLElement {
   async handleSampleClick(button) {
     const variantId = parseInt(button.dataset.sampleVariantId, 10);
     if (!variantId || button.disabled) return;
-
-    // Sync state across both desktop + mobile sample buttons
     const allSampleBtns = this.querySelectorAll('[data-sample-btn]');
     const allSampleLabels = this.querySelectorAll('[data-sample-label]');
 
@@ -412,8 +559,6 @@ class ProductUpdated extends HTMLElement {
       const item = await response.json();
       document.dispatchEvent(new CustomEvent('cart:item-added', { detail: { item } }));
       document.dispatchEvent(new CustomEvent('cart:updated'));
-
-      // Notify the theme so it rebuilds the cart drawer and opens it
       document.dispatchEvent(new CustomEvent('ajaxProduct:added', { detail: { item } }));
 
       labels.forEach((l) => (l.textContent = successText));
@@ -434,7 +579,6 @@ class ProductUpdated extends HTMLElement {
     const qtyComponent = this.querySelector('quantity-input-updated');
     if (!qtyComponent) return 1;
     if (typeof qtyComponent.getValue === 'function') return qtyComponent.getValue();
-    // Fallback when custom element isn't upgraded yet (registration order issue)
     const valueEl = qtyComponent.querySelector('[data-qty-value]');
     return parseInt(valueEl?.textContent, 10) || 1;
   }
@@ -447,14 +591,7 @@ class ProductUpdated extends HTMLElement {
   formatMoney(cents) {
     return '$' + (cents / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
-
-  appendImageWidth(src, width) {
-    if (!src) return src;
-    const sep = src.includes('?') ? '&' : '?';
-    return `${src}${sep}width=${width}`;
-  }
 }
-
 customElements.define('product-updated', ProductUpdated);
 
 /* ============================================================
@@ -471,8 +608,6 @@ class QuantityInputUpdated extends HTMLElement {
 
     if (decrease) decrease.addEventListener('click', () => this.setValue(this.getValue() - 1));
     if (increase) increase.addEventListener('click', () => this.setValue(this.getValue() + 1));
-
-    // Manual entry: dispatch on each keystroke, clamp on blur.
     if (this.valueEl) {
       this.valueEl.addEventListener('input', () => this.dispatchChange(this.getValue()));
       this.valueEl.addEventListener('change', () => this.setValue(this.valueEl.value));
@@ -501,7 +636,6 @@ class QuantityInputUpdated extends HTMLElement {
     );
   }
 }
-
 customElements.define('quantity-input-updated', QuantityInputUpdated);
 
 /* ============================================================
@@ -534,7 +668,6 @@ class SqftCalculator extends HTMLElement {
           this.calculate();
         }
       });
-      // Clear the other field when typing in one (mutually exclusive)
       input.addEventListener('input', () => {
         if (input === this.sqftInput && input.value) this.boxesInput.value = '';
         if (input === this.boxesInput && input.value) this.sqftInput.value = '';
@@ -577,17 +710,11 @@ class SqftCalculator extends HTMLElement {
       : parseFloat(n.toFixed(2)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 }
-
 customElements.define('sqft-calculator', SqftCalculator);
 
 /* ============================================================
    <tilesview-popup> — TilesView visualizer modal
-   ============================================================
-   - Wraps a native <dialog>.
-   - Opens via any element with [data-tilesview-trigger] anywhere on the page.
-   - Closes via [data-tilesview-close], Esc key, or backdrop click.
-   - Iframe src is set lazily on first open to avoid loading on page load.
-*/
+   ============================================================*/
 class TilesviewPopup extends HTMLElement {
   connectedCallback() {
     this.dialog = this.querySelector('dialog');
@@ -641,17 +768,11 @@ class TilesviewPopup extends HTMLElement {
     document.body.style.overflow = '';
   }
 }
-
 customElements.define('tilesview-popup', TilesviewPopup);
 
 /* ============================================================
    <quote-popup> — Request a Quote modal
-   ============================================================
-   - Wraps a native <dialog>.
-   - Opens via any element with [data-quote-trigger] anywhere on the page.
-   - Closes via [data-quote-close], Esc key, or backdrop click.
-   - Submits the form via AJAX to Shopify's contact endpoint.
-*/
+   ============================================================*/
 class QuotePopup extends HTMLElement {
   connectedCallback() {
     this.dialog = this.querySelector('dialog');
@@ -659,8 +780,6 @@ class QuotePopup extends HTMLElement {
     this.successEl = this.querySelector('[data-quote-success]');
     this.errorEl = this.querySelector('[data-quote-error]');
     if (!this.dialog) return;
-
-    // Open from any [data-quote-trigger] on the page
     this._onTriggerClick = (e) => {
       const trigger = e.target.closest('[data-quote-trigger]');
       if (!trigger) return;
@@ -668,12 +787,8 @@ class QuotePopup extends HTMLElement {
       this.open();
     };
     document.addEventListener('click', this._onTriggerClick);
-
-    // Close button
     const closeBtn = this.querySelector('[data-quote-close]');
     if (closeBtn) closeBtn.addEventListener('click', () => this.close());
-
-    // Backdrop click closes (clicking the dialog itself, not its inner content)
     this.dialog.addEventListener('click', (e) => {
       const rect = this.dialog.getBoundingClientRect();
       const inDialog =
@@ -683,8 +798,6 @@ class QuotePopup extends HTMLElement {
         e.clientY <= rect.bottom;
       if (!inDialog) this.close();
     });
-
-    // Form submit
     if (this.form) this.form.addEventListener('submit', (e) => this.handleSubmit(e));
   }
 
@@ -697,7 +810,6 @@ class QuotePopup extends HTMLElement {
     if (typeof this.dialog.showModal === 'function') {
       this.dialog.showModal();
     } else {
-      // Fallback for browsers without <dialog> support
       this.dialog.setAttribute('open', '');
     }
     document.body.style.overflow = 'hidden';
@@ -737,21 +849,15 @@ class QuotePopup extends HTMLElement {
       });
 
       if (!response.ok) throw new Error('Submission failed');
-
-      // Shopify answers a rejected contact form with a 200 + the re-rendered
-      // page, so response.ok alone proves nothing. A genuine success redirects
-      // to ?contact_posted=true — that's the only reliable signal.
       if (!response.url.includes('contact_posted=true')) {
         throw new Error('Contact form rejected the submission');
       }
 
-      // Success: reset form and show success state
       this.form.reset();
       if (this.successEl) this.successEl.hidden = false;
       if (submitLabel) submitLabel.textContent = originalText;
       submitBtn.disabled = false;
 
-      // Auto-close after a moment so the user sees the success message
       setTimeout(() => this.close(), 2500);
     } catch (err) {
       console.error('Quote submission error:', err);
@@ -761,5 +867,4 @@ class QuotePopup extends HTMLElement {
     }
   }
 }
-
 customElements.define('quote-popup', QuotePopup);

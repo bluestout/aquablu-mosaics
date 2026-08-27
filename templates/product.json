@@ -95,7 +95,7 @@
       "type": "product-feature-details",
       "name": "Product Feature Details",
       "settings": {
-        "specs_title": "Product Specification",
+        "specs_title": "Product Specifications",
         "shipping_title": "Shipping & Delivery",
         "resources_title": "Resources"
       }

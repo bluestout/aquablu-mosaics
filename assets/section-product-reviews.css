@@ -1,0 +1,9 @@
+/* ============================================
+   Product Reviews - company-reviews fallback
+   ============================================ */
+
+/* Yotpo's own stylesheet sets display on .yotpo-widget-instance, so the
+   toggled pane needs to win outright. */
+.product-reviews__pane--hidden {
+  display: none !important;
+}

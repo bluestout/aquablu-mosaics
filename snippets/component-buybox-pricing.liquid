@@ -57,6 +57,13 @@
       {%- render 'component-buybox-shipping', current_variant: current_variant, shipping_window: shipping_window -%}
     </span>
 
+    {%- comment -%}
+      Mobile visualizer trigger. Desktop keeps its copy under the media
+      gallery, which is a different column — on mobile that column is pushed
+      below the buybox, so the button is repeated here, above order-a-sample.
+    {%- endcomment -%}
+    {%- render 'component-visualize-btn', product: product, device: 'mobile' -%}
+
     {%- comment -%} Order-a-sample — hidden in simplified mode (default / grout) {%- endcomment -%}
     {%- if sample_variant and simplified != true -%}
       <button

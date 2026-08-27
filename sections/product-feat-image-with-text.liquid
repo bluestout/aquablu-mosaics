@@ -198,7 +198,14 @@
 
         <div class="pfiwt__text-col">
           {%- if heading_text != blank -%}
-            <h2 class="pfiwt__heading">{{ heading_text | escape }}</h2>
+            {%- comment -%}
+              escape_once, not escape: heading_text is pulled out of the
+              product description with strip_html, so entities in it are
+              already encoded (`&amp;`). Escaping again produced `&amp;amp;`,
+              which rendered as the literal text "&amp;" — and the heading's
+              text-transform: uppercase turned that into "&AMP;".
+            {%- endcomment -%}
+            <h2 class="pfiwt__heading">{{ heading_text | escape_once }}</h2>
           {%- endif -%}
 
           {%- if body_content != blank -%}

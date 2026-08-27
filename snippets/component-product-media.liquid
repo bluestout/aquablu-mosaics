@@ -1,10 +1,5 @@
-{%- comment -%}
-  Gallery layout (desktop):
-    1-4 images -> full-width, one per row
-    5+ images  -> two-column masonry (row spans computed in JS)
-  Mobile keeps the horizontal scroll carousel in both cases.
-{%- endcomment -%}
 {%- assign media_visible_limit = 6 -%}
+{%- assign tile_count = product.media.size | minus: 1 -%}
 {%- if product.media.size > 4 -%}
   {%- assign gallery_layout = 'masonry' -%}
 {%- else -%}
@@ -12,48 +7,125 @@
 {%- endif -%}
 
 <div class="updated-product-media-wrapper">
-  <div class="product-media-grid product-media-grid--{{ gallery_layout }}" data-gallery-layout="{{ gallery_layout }}">
-    {%- for media in product.media -%}
-      <div class="product-media-item{% if forloop.index > media_visible_limit %} product-media-item--hidden{% endif %}">
-        <img
-          class="photoswipe__image"
-          src="{{ media | image_url: width: 1024 }}"
-          srcset="{{ media | image_url: width: 480 }} 480w, {{ media | image_url: width: 768 }} 768w, {{ media | image_url: width: 1024 }} 1024w, {{ media | image_url: width: 1440 }} 1440w"
-          sizes="(min-width: 769px) {% if gallery_layout == 'masonry' %}25vw{% else %}50vw{% endif %}, 80vw"
-          data-photoswipe-src="{{ media | image_url: width: 2000 }}"
-          data-photoswipe-width="{{ media.preview_image.width }}"
-          data-photoswipe-height="{{ media.preview_image.height }}"
-          data-index="{{ forloop.index }}"
-          alt="{{ media.alt | escape }}"
-          width="{{ media.preview_image.width }}"
-          height="{{ media.preview_image.height }}"
-          loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
-        >
-          <button class="media-zoom-btn js-photoswipe__zoom up-mobile-only" type="button" aria-label="Zoom image" data-index="{{ forloop.index }}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-              <path d="M17.7188 17.7188L13.7616 13.7812M15.4744 9.37781C15.4744 10.5836 15.1168 11.7623 14.4469 12.7649C13.777 13.7675 12.8249 14.5489 11.7109 15.0103C10.5969 15.4717 9.37105 15.5925 8.18843 15.3572C7.00582 15.122 5.91951 14.5414 5.06689 13.6887C4.21427 12.8361 3.63363 11.7498 3.3984 10.5672C3.16316 9.38458 3.28389 8.15876 3.74533 7.04476C4.20676 5.93076 4.98817 4.9786 5.99075 4.30871C6.99332 3.63881 8.17203 3.28125 9.37781 3.28125C10.1784 3.28125 10.9712 3.43894 11.7109 3.74532C12.4505 4.0517 13.1226 4.50077 13.6887 5.06689C14.2549 5.63301 14.7039 6.30509 15.0103 7.04476C15.3167 7.78443 15.4744 8.5772 15.4744 9.37781Z" stroke="#374759" stroke-width="1.64062" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-      </div>
-    {%- endfor -%}
-  </div>
+  {%- if product.media.size > 0 -%}
+    <product-media-carousel
+      class="product-media-carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="{{ product.title | escape }} image gallery"
+    >
+      <div class="product-media-carousel__frame">
+        <div class="product-media-carousel__viewport" data-carousel-viewport>
+          {%- for media in product.media -%}
+            <div
+              class="product-media-carousel__slide"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="Image {{ forloop.index }} of {{ product.media.size }}"
+              data-carousel-slide
+              data-media-id="{{ media.id }}"
+            >
+              <img
+                class="photoswipe__image product-media-carousel__image"
+                src="{{ media | image_url: width: 1024 }}"
+                srcset="{{ media | image_url: width: 480 }} 480w, {{ media | image_url: width: 768 }} 768w, {{ media | image_url: width: 1024 }} 1024w, {{ media | image_url: width: 1440 }} 1440w"
+                sizes="(min-width: 769px) 48vw, 100vw"
+                data-photoswipe-src="{{ media | image_url: width: 2000 }}"
+                data-photoswipe-width="{{ media.preview_image.width }}"
+                data-photoswipe-height="{{ media.preview_image.height }}"
+                data-media-index="{{ forloop.index }}"
+                data-pswp-item
+                alt="{{ media.alt | escape }}"
+                width="{{ media.preview_image.width }}"
+                height="{{ media.preview_image.height }}"
+                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                {% if forloop.first %}fetchpriority="high"{% endif %}
+              >
+              <button class="media-zoom-btn js-photoswipe__zoom up-mobile-only" type="button" aria-label="Zoom image" data-index="{{ forloop.index }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <path d="M17.7188 17.7188L13.7616 13.7812M15.4744 9.37781C15.4744 10.5836 15.1168 11.7623 14.4469 12.7649C13.777 13.7675 12.8249 14.5489 11.7109 15.0103C10.5969 15.4717 9.37105 15.5925 8.18843 15.3572C7.00582 15.122 5.91951 14.5414 5.06689 13.6887C4.21427 12.8361 3.63363 11.7498 3.3984 10.5672C3.16316 9.38458 3.28389 8.15876 3.74533 7.04476C4.20676 5.93076 4.98817 4.9786 5.99075 4.30871C6.99332 3.63881 8.17203 3.28125 9.37781 3.28125C10.1784 3.28125 10.9712 3.43894 11.7109 3.74532C12.4505 4.0517 13.1226 4.50077 13.6887 5.06689C14.2549 5.63301 14.7039 6.30509 15.0103 7.04476C15.3167 7.78443 15.4744 8.5772 15.4744 9.37781Z" stroke="#374759" stroke-width="1.64062" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          {%- endfor -%}
+        </div>
 
-  {%- if product.media.size > media_visible_limit -%}
+        {%- if product.media.size > 1 -%}
+          <button
+            class="product-media-carousel__arrow product-media-carousel__arrow--prev"
+            type="button"
+            aria-label="Previous image"
+            data-carousel-prev
+          >
+            {%- render 'icon-slider-chevron', direction: 'left' -%}
+          </button>
+          <button
+            class="product-media-carousel__arrow product-media-carousel__arrow--next"
+            type="button"
+            aria-label="Next image"
+            data-carousel-next
+          >
+            {%- render 'icon-slider-chevron', direction: 'right' -%}
+          </button>
+        {%- endif -%}
+      </div>
+
+      {%- if product.media.size > 1 -%}
+        <div class="product-media-carousel__track" aria-hidden="true">
+          <span class="product-media-carousel__thumb" data-carousel-thumb></span>
+        </div>
+      {%- endif -%}
+    </product-media-carousel>
+  {%- endif -%}
+
+  {%- if tile_count > 0 -%}
+    <div class="product-media-grid product-media-grid--{{ gallery_layout }}" data-gallery-layout="{{ gallery_layout }}">
+      {%- for media in product.media -%}
+        {%- unless forloop.first -%}
+          {%- assign tile_index = forloop.index | minus: 1 -%}
+          <div class="product-media-item{% if tile_index > media_visible_limit %} product-media-item--hidden{% endif %}">
+            <img
+              class="photoswipe__image"
+              src="{{ media | image_url: width: 1024 }}"
+              srcset="{{ media | image_url: width: 480 }} 480w, {{ media | image_url: width: 768 }} 768w, {{ media | image_url: width: 1024 }} 1024w, {{ media | image_url: width: 1440 }} 1440w"
+              {%- comment -%}
+                Every masonry tile is half a column now that the lead image lives in
+                the carousel above, so they all share the same width hint.
+              {%- endcomment -%}
+              sizes="(min-width: 769px) {% if gallery_layout == 'masonry' %}25vw{% else %}50vw{% endif %}, 80vw"
+              data-photoswipe-src="{{ media | image_url: width: 2000 }}"
+              data-photoswipe-width="{{ media.preview_image.width }}"
+              data-photoswipe-height="{{ media.preview_image.height }}"
+              data-media-index="{{ forloop.index }}"
+              alt="{{ media.alt | escape }}"
+              width="{{ media.preview_image.width }}"
+              height="{{ media.preview_image.height }}"
+              loading="lazy"
+            >
+            <button class="media-zoom-btn js-photoswipe__zoom up-mobile-only" type="button" aria-label="Zoom image" data-index="{{ forloop.index }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                <path d="M17.7188 17.7188L13.7616 13.7812M15.4744 9.37781C15.4744 10.5836 15.1168 11.7623 14.4469 12.7649C13.777 13.7675 12.8249 14.5489 11.7109 15.0103C10.5969 15.4717 9.37105 15.5925 8.18843 15.3572C7.00582 15.122 5.91951 14.5414 5.06689 13.6887C4.21427 12.8361 3.63363 11.7498 3.3984 10.5672C3.16316 9.38458 3.28389 8.15876 3.74533 7.04476C4.20676 5.93076 4.98817 4.9786 5.99075 4.30871C6.99332 3.63881 8.17203 3.28125 9.37781 3.28125C10.1784 3.28125 10.9712 3.43894 11.7109 3.74532C12.4505 4.0517 13.1226 4.50077 13.6887 5.06689C14.2549 5.63301 14.7039 6.30509 15.0103 7.04476C15.3167 7.78443 15.4744 8.5772 15.4744 9.37781Z" stroke="#374759" stroke-width="1.64062" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- if tile_count > media_visible_limit -%}
     <button type="button" class="product-media-show-more" data-show-more-media>
-      <span data-more-text>Show More Images ({{ product.media.size | minus: media_visible_limit }})</span>
+      <span data-more-text>Show More Images ({{ tile_count | minus: media_visible_limit }})</span>
       <span data-less-text hidden>Show less</span>
     </button>
   {%- endif -%}
 
+  {%- comment -%}
+    Desktop visualizer trigger. The mobile one lives above the order-a-sample
+    button (component-buybox-pricing) — see component-visualize-btn.
+  {%- endcomment -%}
   {%- if product.metafields.tileview.product_id != blank -%}
-    <button type="button" class="media-visualize-btn up-desktop-only" data-tilesview-trigger>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-      </svg>
-      Visualize in Your Space
-    </button>
+    {%- render 'component-visualize-btn', product: product, device: 'desktop' -%}
     {%- render 'component-tilesview-popup', product: product -%}
   {%- endif -%}
 </div>

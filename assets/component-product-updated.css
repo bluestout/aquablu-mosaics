@@ -28,11 +28,11 @@
   gap: 10px;
 }
 
-@media screen and (min-width: 768px){
-    .product-updated-child-wrapper:has(.product-media-grid--full) .up-product-info-wrapper{
-        position: sticky;
-        top: 120px;
-    }
+@media only screen and (min-width: 769px) {
+  .up-product-info-wrapper {
+    position: sticky;
+    top: 120px;
+  }
 }
 
 /* === Utility === */
@@ -46,6 +46,136 @@
 /* ============================================
    Media Gallery
    ============================================ */
+
+.product-media-carousel {
+  --carousel-arrow-width: 28px;
+  --carousel-arrow-height: 68px;
+  --carousel-arrow-inset: 12px;
+  --carousel-arrow-bg: rgba(255, 255, 255, 0.4);
+  --carousel-arrow-bg-hover: rgba(255, 255, 255, 0.72);
+  --carousel-arrow-color: #374759;
+
+  display: block;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.product-media-carousel__frame {
+  position: relative;
+}
+
+.product-media-carousel__viewport {
+  display: flex;
+  /* Hairline separation between slides. Belt-and-braces for the sliver fix in
+     component-product-updated.js: if a scroll ever rests a fraction off the
+     slide start, the edge shows this gap rather than the next image. */
+  gap: 2px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-radius: 3px;
+}
+
+.product-media-carousel__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.product-media-carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.product-media-carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-media-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--carousel-arrow-width);
+  height: var(--carousel-arrow-height);
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: var(--carousel-arrow-bg);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  color: var(--carousel-arrow-color);
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.product-media-carousel__arrow--prev {
+  left: var(--carousel-arrow-inset);
+}
+
+.product-media-carousel__arrow--next {
+  right: var(--carousel-arrow-inset);
+}
+
+.product-media-carousel__arrow:hover {
+  background: var(--carousel-arrow-bg-hover);
+}
+
+.product-media-carousel__arrow:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.product-media-carousel__arrow:focus-visible {
+  outline: 2px solid #374759;
+  outline-offset: 2px;
+}
+
+.product-media-carousel__arrow svg {
+  width: 12px;
+  height: 24px;
+}
+
+@media only screen and (min-width: 769px) {
+  .product-media-carousel__arrow {
+    display: flex;
+  }
+}
+
+.product-media-carousel__track {
+  display: none;
+  height: 3px;
+  margin: 10px 17px 0;
+  background: #e8e8e8;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.product-media-carousel__thumb {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #374759;
+  transition: transform 0.25s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-media-carousel__track {
+    display: block;
+    margin: 0px;
+  }
+}
+
 .product-media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -56,6 +186,7 @@
   aspect-ratio: 1;
   overflow: hidden;
   position: relative;
+  border-radius: 3px;
 }
 
 .product-media-item:only-child {
@@ -77,15 +208,6 @@
   display: block;
 }
 
-/* --- Desktop gallery layouts -------------------------------------------
-   1-4 images  -> `--full`:    one image per row, full container width,
-                               natural aspect ratio (no square crop).
-   5+ images   -> `--masonry`: two columns, natural aspect ratios, row spans
-                               computed in JS (see layoutMasonry) so images
-                               tile without gaps.
-   Both are desktop-only; mobile keeps the horizontal scroll carousel defined
-   in the max-width: 768px block below.
-   -------------------------------------------------------------------- */
 @media only screen and (min-width: 769px) {
   .product-media-grid--full {
     grid-template-columns: 1fr;
@@ -178,6 +300,26 @@
 .media-visualize-btn svg {
   width: 20px;
   height: 20px;
+}
+
+.media-visualize-btn:hover {
+  background: #f0f0f0;
+}
+
+.media-visualize-btn:focus-visible {
+  outline: 2px solid #374759;
+  outline-offset: 2px;
+}
+
+/* Mobile copy of the trigger — sits above the order-a-sample button inside
+   .buybox-price-row, so it matches that button's size rather than the
+   desktop gallery button's. */
+.media-visualize-btn--mobile {
+  width: 100%;
+  height: 40px;
+  border-width: 1.5px;
+  font-size: 16px;
+  margin: 10px 0 0;
 }
 
 /* ============================================
@@ -404,21 +546,33 @@
 /* ============================================
    Buybox Options
    ============================================ */
+/* Spacing rhythm for the combined-listing swatches, the variant pickers and
+   the quantity selector below them. All of the vertical space between groups
+   comes from this one `gap` (the groups themselves no longer add padding), so
+   the "Size" row sits as close to the swatches as the swatches sit to their
+   own label, instead of being pushed down by a stacked gap + padding. */
 .buybox-options {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 22px;
+  padding-top: 6px;
 }
 
 .buybox-option-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-top: 15px;
+  gap: 12px;
+  padding-top: 0;
 }
 
 .buybox-option-group--size {
-  gap: 14px;
+  gap: 12px;
+}
+
+/* The quantity selector is a separate block, so it only gets the 10px flex gap
+   of .up-product-info-wrapper — too tight against the last option row. */
+.buybox-options + .buybox-calculator {
+  padding-top: 14px;
 }
 
 .buybox-option-header {
@@ -499,6 +653,24 @@
   display: block;
 }
 
+.buybox-color-swatch--view-all {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+  border-color: #d5d5d5;
+  font-family: FuturaMedium, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.3px;
+  color: #000;
+}
+
+.buybox-color-swatch--view-all:hover {
+  border-color: #000;
+}
+
 .buybox-color-swatch--hidden {
   display: none;
 }
@@ -555,13 +727,6 @@
 /* Single real size shown as a static value, not a picker */
 .buybox-size-option--static {
   cursor: default;
-}
-
-.buybox-options-divider {
-  height: 1px;
-  background: #d5d5d5;
-  border: none;
-  margin: 5px 0 0;
 }
 
 /* Mobile links inside options */
@@ -887,14 +1052,14 @@ button.buybox-need-link--grout:focus-visible {
 }
 
 .buybox-total-row {
+  /* Roughly a tab's worth of space. The row is sized to its content so the
+     price stays put next to the label rather than tracking the container. */
+  --total-gap: 16px;
+
   display: flex;
-  align-items: flex-end;
-  gap: 12px;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 50%;
+  align-items: baseline;
+  gap: var(--total-gap);
   margin-bottom: 10px;
-  column-gap: 60px;
 }
 
 .buybox-total-label {
@@ -908,10 +1073,11 @@ button.buybox-need-link--grout:focus-visible {
 
 .buybox-total-value {
   font-family: FuturaMedium, sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: 0.7px;
   color: #000;
   line-height: normal;
+  white-space: nowrap;
 }
 
 /* ============================================
@@ -949,10 +1115,6 @@ button.buybox-need-link--grout:focus-visible {
   padding-inline: 15px;
 }
 
-.buybox-atc-btn .atc-separator {
-  text-transform: none;
-}
-
 .buybox-wishlist-btn {
   display: flex!important;
   align-items: center;
@@ -977,6 +1139,42 @@ button.buybox-need-link--grout:focus-visible {
   height: 24px;
 }
 
+/* === Hover / focus states for the two primary CTAs === */
+.buybox-atc-btn,
+.buybox-wishlist-btn {
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buybox-atc-btn:not(:disabled):hover {
+  background: #2b3846;
+}
+
+.buybox-wishlist-btn:hover {
+  background: #e2e2e2;
+}
+
+.buybox-atc-btn:focus-visible,
+.buybox-wishlist-btn:focus-visible {
+  outline: 2px solid #374759;
+  outline-offset: 2px;
+}
+
+/* Touch devices fire :hover on tap and leave it stuck until the next tap
+   elsewhere, so the darker states are desktop-pointer only. */
+@media (hover: none) {
+  .buybox-atc-btn:not(:disabled):hover {
+    background: #374759;
+  }
+
+  .buybox-wishlist-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .media-visualize-btn:hover {
+    background: transparent;
+  }
+}
+
 .swym-added.swym-add-to-wishlist.swym-added.swym-add-to-wishlist, .swym-added.swym-add-to-wishlist:after, .swym-added.swym-add-to-wishlist + .swym-fave-count{
   color: black!important;
 }
@@ -989,7 +1187,6 @@ button.buybox-need-link--grout:focus-visible {
   fill: #000;
 }
 
-/* Product form wrapper inside buybox-cta */
 .buybox-cta form[data-product-form] {
   display: flex;
   flex-direction: column;
@@ -997,7 +1194,6 @@ button.buybox-need-link--grout:focus-visible {
   margin: 0;
 }
 
-/* Shop Pay installments widget — Shopify renders its own markup */
 .buybox-shop-pay {
   font-family: FuturaBook, sans-serif;
   font-size: 14px;
@@ -1393,6 +1589,12 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     width: 100%;
   }
 
+  /* Mobile already has margin-top on .buybox-calculator, so the desktop
+     padding would double up. */
+  .buybox-options + .buybox-calculator {
+    padding-top: 6px;
+  }
+
   .buybox-cta {
     order: 6;
     padding: 0 17px;
@@ -1401,41 +1603,17 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     width: 100%;
   }
 
-  /* Media gallery: horizontal scroll */
-  .product-media-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 0;
-    scrollbar-width: none;
-    column-gap: 1.6px;
-  }
-
-  .product-media-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .product-media-item {
-    min-width: 50%;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    width: 100%;
-    max-width: 80%;
-  }
-
-  /* Mobile: show all media, hide the show-more/less button */
-  .product-media-item--hidden {
-    display: block;
-  }
-
+  .product-media-grid,
   .product-media-show-more {
     display: none;
   }
 
-  .media-visualize-btn {
-    display: none;
+  .product-media-carousel {
+    margin-bottom: 0;
   }
+
+  /* The desktop copy carries .up-desktop-only, which the utility above already
+     hides; the mobile copy inside .buybox-price-row stays visible. */
 
   /* Mobile header styles */
   .buybox-title-block {
@@ -1469,7 +1647,7 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
 
   .buybox-sample-btn {
     width: 100%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     height: 40px;
   }
 
@@ -1489,9 +1667,15 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     padding-inline: 15px;
   }
 
-  /* Mobile options: collection link alignment */
+  /* Mobile options: the header link is replaced by the "View All" tile that
+     sits at the end of the swatch grid, so it stops competing with the
+     "Options:" label for width. */
   .buybox-view-collection {
-    justify-content: flex-end;
+    display: none;
+  }
+
+  .buybox-color-swatch--view-all {
+    display: flex;
   }
 
   /* Mobile calculator */
@@ -1513,7 +1697,6 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   }
   
   .buybox-total-row{
-    max-width: 95%;
     margin-bottom: 0px;
   }
 
@@ -1638,6 +1821,5 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   display: block;
   width: 100%;
   border: none;
-  /* subtract header height (14+14 padding + ~20px text) = ~49px */
   height: calc(100% - 61px);
 }

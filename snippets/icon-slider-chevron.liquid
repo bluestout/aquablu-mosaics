@@ -1,0 +1,22 @@
+{%- comment -%}
+  Chevron used by the product media carousel arrows.
+
+  Drawn in a 12x24 viewBox so the glyph keeps the tall, narrow proportions of
+  the arrow button instead of being stretched from a square icon.
+
+  Accepts:
+    direction — 'left' (default) or 'right'
+{%- endcomment -%}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 12 24"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+>
+  {%- if direction == 'right' -%}
+    <path d="M3.75 3.5 8.25 12 3.75 20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  {%- else -%}
+    <path d="M8.25 3.5 3.75 12 8.25 20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  {%- endif -%}
+</svg>

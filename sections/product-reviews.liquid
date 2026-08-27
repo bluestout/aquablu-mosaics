@@ -1,2 +1,156 @@
+{{ 'section-product-reviews.css' | asset_url | stylesheet_tag }}
 
-<div id="product-reviews-widget" class="yotpo-widget-instance" data-yotpo-instance-id="593212" data-yotpo-product-id="{{product.id}}" data-yotpo-name="{{ product.title | escape }}" data-yotpo-url="{{ shop.url }}{{ product.url }}" data-yotpo-image-url="{{ product.featured_image | product_img_url: "large" | prepend: "https:" | replace: '?', '%3F' | replace: '&','%26'}}" data-yotpo-price="{{ product.price | divided_by: 100.00 }}" data-yotpo-currency="{{ shop.currency }}" data-yotpo-description="{{ product.description | escape }}"></div>
+{%- comment -%}
+  Product reviews (Yotpo).
+
+  When the product has no reviews of its own, the product widget is swapped for
+  the company / site-reviews widget so the section is never an empty shell.
+
+  How "no reviews" is determined:
+    1. Yotpo mirrors the review count onto a product metafield. The key differs
+       between app versions, so both spellings are read; the value is
+       digit-checked because an unsynced product returns nothing usable.
+    2. When that count isn't available at render time, the count is unresolved
+       and section-product-reviews.js asks Yotpo's public widget API before
+       swapping. A failed lookup leaves the product widget in place — Yotpo's
+       own empty state is a safer default than hiding real reviews.
+
+  The company widget only renders once its instance ID is filled in, so the
+  section behaves exactly as before until it is.
+{%- endcomment -%}
+
+{%- assign product_widget_id = section.settings.product_widget_id | default: '593212' -%}
+{%- assign company_widget_id = section.settings.company_widget_id | strip -%}
+{%- assign fallback_mode = section.settings.fallback_mode | default: 'replace' -%}
+
+{%- assign raw_reviews_count = product.metafields.yotpo.reviews_count.value
+  | default: product.metafields.yotpo.reviews_count
+  | default: product.metafields.yotpo.review_count.value
+  | default: product.metafields.yotpo.review_count
+-%}
+
+{%- comment -%}
+  Only a plain run of digits counts as a resolved value; anything else (a blank
+  metafield, an unexpected object) is treated as "unknown" and left to the JS.
+{%- endcomment -%}
+{%- assign count_string = raw_reviews_count | append: '' | strip -%}
+{%- assign count_chars = count_string | split: '' -%}
+{%- assign reviews_count_known = false -%}
+{%- assign reviews_count = 0 -%}
+{%- if count_chars.size > 0 -%}
+  {%- assign reviews_count_known = true -%}
+  {%- for ch in count_chars -%}
+    {%- unless '0123456789' contains ch -%}
+      {%- assign reviews_count_known = false -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- if reviews_count_known -%}
+  {%- assign reviews_count = count_string | times: 1 -%}
+{%- endif -%}
+
+{%- assign show_company = false -%}
+{%- if company_widget_id != blank and reviews_count_known and reviews_count == 0 -%}
+  {%- assign show_company = true -%}
+{%- endif -%}
+
+{%- comment -%}
+  The buybox star rating links to #product-reviews-widget, so the anchor lives
+  on the wrapper rather than on the product widget itself — it has to stay
+  scrollable-to even when the product widget is the hidden pane.
+{%- endcomment -%}
+<div
+  id="product-reviews-widget"
+  class="product-reviews"
+  data-product-reviews
+  data-reviews-count-known="{{ reviews_count_known }}"
+  data-fallback-mode="{{ fallback_mode }}"
+  data-product-id="{{ product.id }}"
+  data-yotpo-app-key="{{ section.settings.yotpo_app_key | default: '7grhf0lP3zYoAmdQOa6FxrOsngY8diqMaeG2uT5K' | strip | escape }}"
+>
+  {%- comment -%}
+    In 'replace' mode the product widget is hidden once the company one takes
+    over; in 'below' mode it stays put so Yotpo's empty state — and its
+    "Write a review" button — remain reachable.
+  {%- endcomment -%}
+  <div
+    class="product-reviews__pane{% if show_company and fallback_mode == 'replace' %} product-reviews__pane--hidden{% endif %}"
+    data-reviews-product
+  >
+    <div
+      class="yotpo-widget-instance"
+      data-yotpo-instance-id="{{ product_widget_id }}"
+      data-yotpo-product-id="{{ product.id }}"
+      data-yotpo-name="{{ product.title | escape }}"
+      data-yotpo-url="{{ shop.url }}{{ product.url }}"
+      data-yotpo-image-url="{{ product.featured_image | image_url: width: 600 | prepend: 'https:' | replace: '?', '%3F' | replace: '&', '%26' }}"
+      data-yotpo-price="{{ product.price | divided_by: 100.00 }}"
+      data-yotpo-currency="{{ shop.currency }}"
+      data-yotpo-description="{{ product.description | escape }}"
+    ></div>
+  </div>
+
+  {%- if company_widget_id != blank -%}
+    <div
+      class="product-reviews__pane{% unless show_company %} product-reviews__pane--hidden{% endunless %}"
+      data-reviews-company
+    >
+      <div
+        class="yotpo-widget-instance"
+        data-yotpo-instance-id="{{ company_widget_id }}"
+      ></div>
+    </div>
+  {%- endif -%}
+</div>
+
+<script src="{{ 'section-product-reviews.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Product Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "product_widget_id",
+      "label": "Product reviews widget ID",
+      "info": "Yotpo instance ID of the product Reviews widget.",
+      "default": "593212"
+    },
+    {
+      "type": "header",
+      "content": "No product reviews yet"
+    },
+    {
+      "type": "select",
+      "id": "fallback_mode",
+      "label": "When this product has no reviews",
+      "info": "'Replace' also hides Yotpo's 'Write a review' button, since that lives inside the product widget.",
+      "options": [
+        { "value": "replace", "label": "Replace with company reviews" },
+        { "value": "below", "label": "Show company reviews below" }
+      ],
+      "default": "replace"
+    },
+    {
+      "type": "text",
+      "id": "company_widget_id",
+      "label": "Company reviews widget ID",
+      "info": "Yotpo instance ID of the store-wide reviews widget (Reviews Carousel / Testimonials). Shown when this product has no reviews of its own. Leave empty to always show the product widget.",
+      "default": "1368648"
+    },
+    {
+      "type": "text",
+      "id": "company_heading",
+      "label": "Company reviews heading",
+      "default": "What Our Customers Say"
+    },
+    {
+      "type": "text",
+      "id": "yotpo_app_key",
+      "label": "Yotpo store app key",
+      "info": "Public storefront key, used only to look up the review count when Yotpo hasn't written it to the product yet. Found in Yotpo under Settings → Store settings.",
+      "default": "7grhf0lP3zYoAmdQOa6FxrOsngY8diqMaeG2uT5K"
+    }
+  ]
+}
+{% endschema %}

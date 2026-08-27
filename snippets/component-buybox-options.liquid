@@ -34,7 +34,8 @@
     <div class="buybox-option-group">
       <div class="buybox-option-header">
         <p class="buybox-option-label">
-          Options: <strong>{{ current_label }}</strong>
+          Options: 
+          {% comment %} <strong>{{ current_label }}</strong> {% endcomment %}
         </p>
         {%- if options_collection.url -%}
           <a href="{{ options_collection.url }}" class="buybox-view-collection">
@@ -80,6 +81,23 @@
             {%- endif -%}
           </a>
         {%- endfor -%}
+
+        {%- comment -%}
+          Mobile only: "View All" reads as the last tile in the swatch grid
+          rather than as a separate link under it. The desktop header keeps the
+          "View the Collection" link, which is hidden on mobile in CSS.
+          Rendered outside the visible-limit loop so it is never collapsed by
+          the Show More toggle.
+        {%- endcomment -%}
+        {%- if options_collection.url -%}
+          <a
+            href="{{ options_collection.url }}"
+            class="buybox-color-swatch buybox-color-swatch--view-all"
+            aria-label="View the collection"
+          >
+            View All
+          </a>
+        {%- endif -%}
       </div>
 
       {%- if combine_products.size > swatch_visible_limit and auto_expand_swatches == false -%}
@@ -141,7 +159,8 @@
         {%- assign has_variant_options = true -%}
         <div class="buybox-option-group buybox-option-group--size">
           <p class="buybox-option-label">
-            {{ option.name }}: <strong>{{ selected_value }}</strong>
+            {{ option.name }}: 
+            {% comment %} <strong>{{ selected_value }}</strong> {% endcomment %}
           </p>
           <div class="buybox-size-options">
             {%- for value in option.values -%}
@@ -168,7 +187,8 @@
         {%- assign has_variant_options = true -%}
         <div class="buybox-option-group buybox-option-group--size">
           <p class="buybox-option-label">
-            {{ option.name }}: <strong>{{ single_value }}</strong>
+            {{ option.name }}: 
+            {% comment %} <strong>{{ single_value }}</strong> {% endcomment %}
           </p>
           <div class="buybox-size-options">
             <span class="buybox-size-option buybox-size-option--static is-active">
@@ -180,8 +200,4 @@
 
     {%- endunless -%}
   {%- endfor -%}
-
-  {%- if combine_products.size > 0 or has_variant_options -%}
-    <hr class="buybox-options-divider">
-  {%- endif -%}
 </div>
