@@ -52,12 +52,12 @@
       {%- assign swatch_visible_limit = swatch_visible_limit | default: 10 -%}
 
       {%- comment -%}
-        The active swatch is exempt from the limit rather than the limit being
-        dropped for it. A product deep in the listing (say #31 of 32) used to
-        auto-expand the whole grid and suppress the toggle with it, so those
-        pages rendered every swatch with no way to collapse — the exact thing
-        the limit exists to prevent. Now it stays visible in place as one extra
-        tile and the toggle still covers the rest.
+        The active swatch stays visible even when it falls past the limit, but
+        it takes one of the visible slots rather than being added on top of
+        them — otherwise those pages rendered limit + 1 tiles while every other
+        product in the same listing rendered exactly the limit. The collapsed
+        grid is therefore always the same size, and the toggle still covers the
+        rest.
       {%- endcomment -%}
       {%- assign active_swatch_index = 0 -%}
       {%- for option_product in combine_products -%}
@@ -67,11 +67,16 @@
         {%- endif -%}
       {%- endfor -%}
 
-      {%- comment -%} An active swatch past the limit is already on screen, so it isn't "more". {%- endcomment -%}
-      {%- assign hidden_swatch_count = combine_products.size | minus: swatch_visible_limit -%}
+      {%- comment -%}
+        An active swatch past the limit gives up the last in-limit slot to make
+        room for itself, so the visible total is the limit either way and the
+        hidden count is simply everything beyond it.
+      {%- endcomment -%}
+      {%- assign visible_cutoff = swatch_visible_limit -%}
       {%- if active_swatch_index > swatch_visible_limit -%}
-        {%- assign hidden_swatch_count = hidden_swatch_count | minus: 1 -%}
+        {%- assign visible_cutoff = swatch_visible_limit | minus: 1 -%}
       {%- endif -%}
+      {%- assign hidden_swatch_count = combine_products.size | minus: swatch_visible_limit -%}
 
       <div class="buybox-color-swatches">
         {%- for option_product in combine_products -%}
@@ -80,7 +85,7 @@
 
           <a
             href="{{ option_product.url }}?view=updated-template"
-            class="buybox-color-swatch{% if is_current %} is-active{% endif %}{% if forloop.index > swatch_visible_limit and is_current == false %} buybox-color-swatch--hidden{% endif %}"
+            class="buybox-color-swatch{% if is_current %} is-active{% endif %}{% if forloop.index > visible_cutoff and is_current == false %} buybox-color-swatch--hidden{% endif %}"
             aria-label="{{ option_product.title | escape }}"
             title="{{ option_product.title | escape }}"
             {% if is_current %}
