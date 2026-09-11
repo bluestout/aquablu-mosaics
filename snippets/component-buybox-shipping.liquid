@@ -4,7 +4,7 @@
   Two independent lines — both can show at the same time:
   - "This item ships FREE!" (truck icon) when the variant costs more than $299
     and weighs under 120 (weight_in_unit). Rendered first / on top.
-  - "Usually ships in X-X business days." — always rendered, on its own line
+  - "Usually ships in <window>." — always rendered, on its own line
     underneath.
 
   The free-shipping line is always in the DOM so the JS variant-switcher
@@ -12,12 +12,14 @@
   visible, which also keeps it correct with JS disabled.
 
   @param current_variant  - the currently selected variant
-  @param shipping_window  - e.g. "3-5"; resolved by the section (product
-                            metafield → vendor metaobject → theme default)
+  @param shipping_window  - a COMPLETE phrase including its unit, e.g.
+                            "3-5 business days" or "2-3 weeks"; resolved by the
+                            section (custom.ship_window metafield → parsed
+                            custom.tab_shipping → theme default)
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
-{%- assign shipping_window = shipping_window | default: '3-5' -%}
+{%- assign shipping_window = shipping_window | default: '3-5 business days' -%}
 {%- assign ships_free = false -%}
 {%- if current_variant.price > 29900 and current_variant.weight_in_unit < 120 -%}
   {%- assign ships_free = true -%}
@@ -28,5 +30,5 @@
   <span>This item ships FREE!</span>
 </span>
 <span class="buybox-shipping-standard">
-  Usually ships in {{ shipping_window }} business days.
+  Usually ships in {{ shipping_window }}.
 </span>

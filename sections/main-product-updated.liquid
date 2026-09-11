@@ -43,31 +43,27 @@
 {%- endif -%}
 
 {%- comment -%}
-  Shipping window for "Usually ships in X-X business days".
+  Shipping window for "Usually ships in <window>".
   Resolution order (most specific wins):
-    3. Section setting    "Default shipping window"
-    2. Vendor default     metaobject `shipping_window`, entry handle = the
-                          handleized vendor name, field `window`
-    1. Product metafield  custom.tab_shipping — the sentence already maintained
-                          per product for the shipping tab, e.g.
-                          "Item ships from USA within 3-5 business days. ..."
-                          The range is read out of it so there is only ever one
-                          place to edit a product's lead time.
-{%- endcomment -%}
-{%- assign shipping_window = section.settings.default_shipping_window | default: '3-5' -%}
+    3. Section setting     "Default shipping window"
+    2. Parsed fallback     custom.tab_shipping — legacy behaviour, kept so
+                           products without the metafield keep working.
+    1. Product metafield   custom.ship_window — the authoritative value.
 
-{%- assign vendor_handle = product.vendor | handleize -%}
-{%- assign vendor_entry = metaobjects.shipping_window[vendor_handle] -%}
-{%- if vendor_entry.window.value != blank -%}
-  {%- assign shipping_window = vendor_entry.window.value -%}
-{%- endif -%}
+  `shipping_window` always ends up as a COMPLETE phrase including its unit
+  ("3-5 business days", "2-3 weeks"), so the snippet prints it verbatim. That
+  is what lets a weeks-based lead time render correctly, which the old
+  digits-only value could not do.
+{%- endcomment -%}
+{%- assign shipping_window = section.settings.default_shipping_window | default: '3-5 business days' -%}
 
 {%- comment -%}
-  Pull the "3-5" out of "... within 3-5 business days. ..." — the token
-  immediately before "business days". Products worded differently (e.g. "ships
-  in 1-2 weeks") won't yield digits, so the candidate is character-checked and
-  discarded unless it is purely digits and dashes; those fall back to the
-  vendor / section default rather than printing nonsense.
+  Fallback: pull the "3-5" out of "... within 3-5 business days. ..." — the
+  token immediately before "business days". This is unreliable by nature: it
+  takes the FIRST "business days" in the copy, which on some vendors is the
+  transit time or the sample lead time rather than the ship window, and copy
+  worded in weeks yields nothing. It is a safety net only — set
+  custom.ship_window on the product to bypass it entirely.
 {%- endcomment -%}
 {%- assign tab_shipping = product.metafields.custom.tab_shipping.value -%}
 {%- if tab_shipping contains 'business days' -%}
@@ -98,8 +94,17 @@
   {%- endfor -%}
 
   {%- if candidate_is_range and candidate_has_digit -%}
-    {%- assign shipping_window = candidate -%}
+    {%- assign shipping_window = candidate | append: ' business days' -%}
   {%- endif -%}
+{%- endif -%}
+
+{%- comment -%}
+  Authoritative override. A complete phrase such as "2-3 weeks" or
+  "1-3 business days" — printed exactly as entered, no parsing.
+{%- endcomment -%}
+{%- assign ship_window_field = product.metafields.custom.ship_window.value | strip -%}
+{%- if ship_window_field != blank -%}
+  {%- assign shipping_window = ship_window_field -%}
 {%- endif -%}
 
 {%- comment -%}
@@ -258,8 +263,8 @@
       "type": "text",
       "id": "default_shipping_window",
       "label": "Default shipping window",
-      "info": "Fallback for 'Usually ships in X-X business days'. Overridden per vendor by the 'shipping_window' metaobject, and per product by the range inside the custom.tab_shipping metafield.",
-      "default": "3-5"
+      "info": "Fallback for 'Usually ships in ...'. Include the unit, e.g. '3-5 business days' or '2-3 weeks'. Overridden per product by the custom.ship_window metafield, then by the range parsed out of custom.tab_shipping.",
+      "default": "3-5 business days"
     }
   ],
   "blocks": [

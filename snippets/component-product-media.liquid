@@ -114,7 +114,12 @@
   {%- endif -%}
 
   {%- if tile_count > media_visible_limit -%}
-    <button type="button" class="product-media-show-more" data-show-more-media>
+    <button
+      type="button"
+      class="product-media-show-more"
+      aria-expanded="false"
+      data-show-more-media
+    >
       <span data-more-text>Show More Images ({{ tile_count | minus: media_visible_limit }})</span>
       <span data-less-text hidden>Show less</span>
     </button>

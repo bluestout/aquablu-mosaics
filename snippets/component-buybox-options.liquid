@@ -17,7 +17,7 @@
   @param hide_single_size - when true (sqft template) an option with only one
                             real value is dropped instead of shown as a static row.
   @param swatch_visible_limit - how many swatches render before the
-                            "Show More" toggle. Defaults to 10.
+                            "Show N more options" toggle. Defaults to 10.
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
@@ -42,10 +42,7 @@
         {%- if options_collection.url -%}
           <a href="{{ options_collection.url }}" class="buybox-view-collection">
             View the Collection
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
-              <path d="M0 5.85355H11" stroke="black"/>
-              <path d="M6 0.353546L11.5 5.85355L6 10.8535" stroke="black"/>
-            </svg>
+            {%- render 'icon-arrow-right' -%}
           </a>
         {%- endif -%}
       </div>
@@ -105,27 +102,41 @@
         {%- endfor -%}
 
         {%- comment -%}
-          Mobile only: "View All" reads as the last tile in the swatch grid
-          rather than as a separate link under it. The desktop header keeps the
-          "View the Collection" link, which is hidden on mobile in CSS.
-          Rendered outside the visible-limit loop so it is never collapsed by
-          the Show More toggle.
+          Mobile expander: the last cell of the grid reads "+N", so the control
+          for the overflow sits with the thing it overflows. Rendered outside
+          the visible-limit loop so it is never collapsed by itself, and it
+          shares [data-show-more-swatches] with the desktop button below —
+          toggleExpanded keeps every control for the grid in sync.
         {%- endcomment -%}
-        {%- if options_collection.url -%}
-          <a
-            href="{{ options_collection.url }}"
-            class="buybox-color-swatch buybox-color-swatch--view-all"
-            aria-label="View the collection"
+        {%- if hidden_swatch_count > 0 -%}
+          <button
+            type="button"
+            class="buybox-color-swatch buybox-color-swatch--more"
+            aria-expanded="false"
+            data-show-more-swatches
           >
-            View All
-          </a>
+            <span data-more-text>+{{ hidden_swatch_count }}<span class="visually-hidden"> more options</span></span>
+            <span data-less-text hidden>Less<span class="visually-hidden"> options</span></span>
+          </button>
         {%- endif -%}
       </div>
 
+      {%- comment -%}
+        Desktop expander. Hidden on mobile, where the "+N" tile in the grid
+        does the same job — mobile used to carry both this and a "View All"
+        collection tile, which read as two ways to "see the rest" while doing
+        different things. Naming the count here keeps it unambiguous against
+        the "Options:" label above.
+      {%- endcomment -%}
       {%- if hidden_swatch_count > 0 -%}
-        <button type="button" class="buybox-swatches-show-more" data-show-more-swatches>
-          <span data-more-text>Show More ({{ hidden_swatch_count }})</span>
-          <span data-less-text hidden>Show less</span>
+        <button
+          type="button"
+          class="buybox-swatches-show-more"
+          aria-expanded="false"
+          data-show-more-swatches
+        >
+          <span data-more-text>Show {{ hidden_swatch_count }} more options</span>
+          <span data-less-text hidden>Show fewer options</span>
         </button>
       {%- endif -%}
     </div>

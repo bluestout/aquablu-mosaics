@@ -325,13 +325,13 @@ class ProductUpdated extends HTMLElement {
 
       const showMoreMedia = e.target.closest('[data-show-more-media]');
       if (showMoreMedia) {
-        this.toggleExpanded(showMoreMedia, '.product-media-grid');
+        this.toggleExpanded(showMoreMedia, '.product-media-grid', '[data-show-more-media]');
         return;
       }
 
       const showMoreSwatches = e.target.closest('[data-show-more-swatches]');
       if (showMoreSwatches) {
-        this.toggleExpanded(showMoreSwatches, '.buybox-color-swatches');
+        this.toggleExpanded(showMoreSwatches, '.buybox-color-swatches', '[data-show-more-swatches]');
         return;
       }
       const sampleBtn = e.target.closest('[data-sample-btn]');
@@ -363,14 +363,24 @@ class ProductUpdated extends HTMLElement {
     }
   }
 
-  toggleExpanded(button, containerSelector) {
+  /* A container can have more than one control: the swatch grid carries a "+N"
+     tile inside the grid for mobile and a full-width button below it for
+     desktop. Only one is visible at a time, but both must track the state —
+     otherwise a resize (or an orientation change) reveals a toggle still
+     labelled for the state the grid is no longer in. */
+  toggleExpanded(button, containerSelector, toggleSelector) {
     const container = this.querySelector(containerSelector);
     if (!container) return;
     const expanded = container.classList.toggle('is-expanded');
-    const moreText = button.querySelector('[data-more-text]');
-    const lessText = button.querySelector('[data-less-text]');
-    if (moreText) moreText.hidden = expanded;
-    if (lessText) lessText.hidden = !expanded;
+
+    const toggles = toggleSelector ? this.querySelectorAll(toggleSelector) : [button];
+    toggles.forEach((toggle) => {
+      toggle.setAttribute('aria-expanded', String(expanded));
+      const moreText = toggle.querySelector('[data-more-text]');
+      const lessText = toggle.querySelector('[data-less-text]');
+      if (moreText) moreText.hidden = expanded;
+      if (lessText) lessText.hidden = !expanded;
+    });
 
     if (containerSelector === '.product-media-grid') {
       this.layoutMasonry();
