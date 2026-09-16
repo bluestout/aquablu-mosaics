@@ -208,31 +208,9 @@
   display: block;
 }
 
-@media only screen and (min-width: 769px) {
-  .product-media-grid--full {
-    grid-template-columns: 1fr;
-  }
-
-  .product-media-grid--full .product-media-item {
-    aspect-ratio: auto;
-  }
-
-  .product-media-grid--masonry {
-    grid-auto-rows: 8px;
-    align-items: start;
-    row-gap: 0;
-  }
-
-  .product-media-grid--masonry .product-media-item {
-    aspect-ratio: auto;
-  }
-
-  .product-media-grid--full .product-media-item img,
-  .product-media-grid--masonry .product-media-item img {
-    height: auto;
-    object-fit: contain;
-  }
-}
+/* Every tile is a square at every breakpoint. The grid used to fall back to a
+   masonry layout on desktop, which let each photo keep its own aspect ratio and
+   left the columns ragged. */
 
 .product-media-show-more {
   display: block;
@@ -352,15 +330,6 @@
 .buybox-breadcrumbs .breadcrumb-separator {
   opacity: 0.2;
   margin: 0 3px;
-}
-
-.buybox-collection-link-mobile {
-  font-family: FuturaBook, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.65px;
-  color: #374759;
-  text-decoration: none;
-  line-height: 20.8px;
 }
 
 .buybox-title-block {
@@ -1130,8 +1099,12 @@ button.buybox-need-link--grout:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  /* `flex: 0 1 213px` keeps the 213px design width on roomy rows but lets the
+     button wrap onto its own line instead of overflowing when the column is
+     tight (narrow Quick Shop panels, long Add to Cart labels). */
+  flex: 0 1 213px;
   width: 213px;
-  min-width: 213px;
+  max-width: 100%;
   height: 46px!important;
   background: #f0f0f0;
   border: none;
@@ -1558,6 +1531,12 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     flex-direction: column;
     gap: 0;
     padding: 0;
+    /* The desktop rule sets align-items: flex-start for the two side-by-side
+       columns. Once the axis turns vertical that same value shrinks every row
+       to its content width, which is why the gallery sat narrower than the
+       screen and "View the Collection" bunched up against "Options:" instead
+       of sitting at the right edge. Stretch puts each row back at full width. */
+    align-items: stretch;
   }
 
   .up-product-info-wrapper {
@@ -1670,9 +1649,10 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     display: none;
   }
 
+  /* Icon-only here, so drop the 213px basis and size to the icon. */
   .buybox-wishlist-btn {
+    flex: 0 0 auto;
     width: unset;
-    min-width: unset;
     padding-inline: 15px;
   }
 

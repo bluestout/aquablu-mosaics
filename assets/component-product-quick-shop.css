@@ -1,0 +1,132 @@
+/* ============================================
+   Quick Shop — the updated product buybox inside
+   the collection-page modal.
+
+   Loaded only by `?view=modal` (see main-product-updated.liquid), and copied
+   onto the collection page by theme.js QuickShop alongside
+   component-product-updated.css, which it layers on top of.
+
+   The product page is a tall, page-scrolled, two sticky-column layout. The
+   modal is a short, self-scrolling panel, so everything tied to page scroll
+   (sticky columns, page gutters, section padding) is unwound here. Scoped
+   entirely to .quick-shop-product / .modal--quick-shop so the product page is
+   untouched.
+   ============================================ */
+
+/* === Modal shell === */
+/* `width` alone is not clamped by the ancestors: .modal__inner caps itself at
+   calc(100% - 80px) and .modal__centered at 100%, but a fixed-width child
+   overflows a shrunken parent rather than following it. Below ~1140px the panel
+   therefore ran off the right of the viewport and clipped whatever sat at the
+   end of a row — in practice the Add to wishlist button. Quick Shop is live
+   from 770px up, so that band is a real one. */
+.modal--quick-shop .modal__centered-content {
+  width: 1060px;
+  max-width: 100%;
+  padding: 30px;
+}
+
+@media only screen and (min-width: 990px) {
+  .modal--quick-shop .modal__centered-content {
+    padding: 40px;
+  }
+}
+
+/* === Layout === */
+.quick-shop-product {
+  display: block;
+  padding: 0;
+}
+
+.quick-shop-product .product-updated-child-wrapper.page-width {
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Sticky columns track the page scroller, which the modal is not — inside it
+   they detach and float over the content as the panel scrolls. */
+.quick-shop-product .up-media-wrapper,
+.quick-shop-product .up-product-info-wrapper {
+  position: static;
+  top: auto;
+}
+
+.quick-shop-product .up-media-wrapper {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+/* === Media === */
+/* Only the carousel renders here (component-product-media `modal`), so the
+   bottom margin that separated it from the tile grid is dead space. */
+.quick-shop-product .product-media-carousel {
+  margin-bottom: 0;
+}
+
+/* === Buybox === */
+.quick-shop-product .buybox-title {
+  font-size: 26px;
+  line-height: 31px;
+}
+
+.quick-shop-product .buybox-title a,
+.quick-shop-product .buybox-title a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.quick-shop-product .buybox-title a:hover,
+.quick-shop-product .buybox-title a:focus-visible {
+  text-decoration: underline;
+}
+
+.quick-shop-product .buybox-title-block {
+  gap: 10px;
+}
+
+/* An empty Yotpo mount (the widget script only binds instances present at page
+   load) would otherwise hold open a gap above the price. */
+.quick-shop-product .buybox-reviews:empty,
+.quick-shop-product .buybox-reviews .yotpo-widget-instance:empty {
+  display: none;
+}
+
+/* === View full details === */
+.quick-shop-product .buybox-view-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-family: FuturaBook, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.quick-shop-product .buybox-view-details svg {
+  width: 14px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.quick-shop-product .buybox-view-details:focus-visible {
+  outline: 2px solid #374759;
+  outline-offset: 3px;
+}
+
+/* === Narrow viewports === */
+/* Quick Shop is desktop-only (the trigger carries .small--hide and
+   theme.QuickShop bails at the small breakpoint), but the modal can still be
+   left open across a resize, so the columns stack rather than crush. */
+@media only screen and (max-width: 900px) {
+  .quick-shop-product .product-updated-child-wrapper.page-width {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .quick-shop-product .up-media-wrapper {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+}

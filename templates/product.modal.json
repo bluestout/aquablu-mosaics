@@ -11,8 +11,40 @@
   "layout": false,
   "sections": {
     "main": {
-      "type": "main-product",
-      "settings": {}
+      "type": "main-product-updated",
+      "blocks": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "pricing": {
+          "type": "pricing",
+          "settings": {}
+        },
+        "options": {
+          "type": "options",
+          "settings": {}
+        },
+        "calculator": {
+          "type": "calculator",
+          "settings": {}
+        },
+        "cta": {
+          "type": "cta",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "header",
+        "pricing",
+        "options",
+        "calculator",
+        "cta"
+      ],
+      "settings": {
+        "template_mode": "auto",
+        "swatch_visible_limit": 8
+      }
     }
   },
   "order": [

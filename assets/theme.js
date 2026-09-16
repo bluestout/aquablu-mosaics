@@ -5021,6 +5021,34 @@ if (theme.config.isTouch) {
       preloadProductModal(data);
     }
 
+    // Move the stylesheet/script tags of a fetched section onto this page.
+    // Nodes parsed by DOMParser are inert — a <script> copied across as-is
+    // never executes — so each tag is recreated. Both are no-ops once the
+    // asset is present, which it is from the second product onwards.
+    function copySectionAssets(doc) {
+      doc.querySelectorAll('link[rel="stylesheet"][href]').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (document.querySelector('link[rel="stylesheet"][href="' + href + '"]')) {
+          return;
+        }
+        var el = document.createElement('link');
+        el.rel = 'stylesheet';
+        el.href = href;
+        document.head.appendChild(el);
+      });
+
+      doc.querySelectorAll('script[src]').forEach(function(script) {
+        var src = script.getAttribute('src');
+        if (document.querySelector('script[src="' + src + '"]')) {
+          return;
+        }
+        var el = document.createElement('script');
+        el.src = src;
+        el.defer = true;
+        document.head.appendChild(el);
+      });
+    }
+
     function preloadProductModal(data) {
       var modals = document.querySelectorAll('.modal--quick-shop[data-product-id="' + data.id + '"]');
 
@@ -5049,16 +5077,36 @@ if (theme.config.isTouch) {
           // Convert the HTML string into a document object
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, 'text/html');
-          var div = doc.querySelector('.product-section[data-product-handle="' + data.handle + '"]');
 
-          if (!holder) {
+          // The updated product template (main-product-updated) renders a
+          // <product-updated> custom element rather than the legacy
+          // .product-section markup. Both are supported so the modal keeps
+          // working for whichever template the product is on.
+          var updated = doc.querySelector('product-updated[data-product-handle="' + data.handle + '"]');
+          var div = updated || doc.querySelector('.product-section[data-product-handle="' + data.handle + '"]');
+
+          if (!holder || !div) {
             return;
           }
 
-          holder.append(div);
+          if (updated) {
+            // The modal template renders with `layout: false`, so its own CSS
+            // and JS tags come back in this response. A collection page does
+            // not load them; copy them over before the markup goes in, so the
+            // custom elements upgrade already styled.
+            copySectionAssets(doc);
+            holder.append(div);
 
-          // Register product template inside quick view
-          theme.sections.register('product', theme.Product, holder);
+            // Swym binds its action buttons on page load, so the wishlist
+            // button that just arrived with the modal needs a rescan
+            // (swym-custom.liquid answers this with initializeActionButtons).
+            document.dispatchEvent(new CustomEvent('swym:collections-loaded'));
+          } else {
+            holder.append(div);
+
+            // Register product template inside quick view
+            theme.sections.register('product', theme.Product, holder);
+          }
 
           // Register collapsible elements
           theme.collapsibles.init();

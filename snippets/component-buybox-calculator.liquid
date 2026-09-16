@@ -3,6 +3,12 @@
   - <quantity-input-updated> wraps the quantity selector
   - <sqft-calculator> wraps the calculator box
   Both dispatch events bubbling up to <product-updated>.
+
+  @param modal - true inside the Quick Shop modal. Only the quantity selector
+                 and the running total survive there: the sqft box and the
+                 grout modal trigger both carry fixed element ids, which a
+                 second preloaded product on the same collection page would
+                 duplicate, and the grout one opens a modal on top of a modal.
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
@@ -13,8 +19,9 @@
   The sqft box turns square footage into tile boxes; the grout calculator
   (grout-calculator.liquid, rendered globally in theme.liquid) turns tile
   dimensions into pounds of grout & adhesive.
-  Detected via product.template_suffix so it holds even when the page is
-  previewed through ?view=updated-template (which changes template.suffix).
+  Detected via product.template_suffix so it holds even when the page renders
+  through a `?view=` template of its own — the Quick Shop modal (?view=modal),
+  for one, which changes template.suffix but not the product's.
 {%- endcomment -%}
 {%- assign is_grout = false -%}
 {%- if product.template_suffix == 'grout' -%}
@@ -73,25 +80,28 @@
         #grout-form-modal-btn trigger (a distinct, tile-dimension calculator).
       - Sqft (full) mode: opens the inline <sqft-calculator> box below.
       - Simplified default products: no calculator.
+      - Quick Shop modal: no calculator either — see the @param note above.
     {%- endcomment -%}
-    {%- if is_grout -%}
-    <button type="button" id="grout-form-modal-btn" class="buybox-need-link buybox-need-link--grout">
-      {%- render 'icon-buybox-calculator' -%}
-      How much do I need?
-    </button>
-    {%- elsif simplified == false -%}
-    <a href="#calculator" class="buybox-need-link">
-      {%- render 'icon-buybox-calculator' -%}
-      How much do I need?
-    </a>
-    {%- endif -%}
+    {%- unless modal -%}
+      {%- if is_grout -%}
+        <button type="button" id="grout-form-modal-btn" class="buybox-need-link buybox-need-link--grout">
+          {%- render 'icon-buybox-calculator' -%}
+          How much do I need?
+        </button>
+      {%- elsif simplified == false -%}
+        <a href="#calculator" class="buybox-need-link">
+          {%- render 'icon-buybox-calculator' -%}
+          How much do I need?
+        </a>
+      {%- endif -%}
+    {%- endunless -%}
   </div>
 
   {%- comment -%}
     Sqft calculator box — only for full sqft mode. Never for grout (grout uses
     the modal above) or simplified default products.
   {%- endcomment -%}
-  {%- if simplified == false and is_grout == false -%}
+  {%- if simplified == false and is_grout == false and modal != true -%}
   <sqft-calculator class="buybox-calc-box" id="calculator" data-sqft-per-box="{{ sq_ft }}" data-unit-type="{{ unit_type }}">
     <div class="buybox-calc-header">
       <p class="buybox-calc-header-title">Calculate how much I need:</p>

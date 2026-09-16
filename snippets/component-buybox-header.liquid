@@ -1,34 +1,65 @@
 {%- comment -%}
   Buybox Header
-  Displays: breadcrumbs (mobile), collection link (mobile), SKU, title, reviews.
+  Displays: SKU, title, reviews.
+
+  @param modal - true inside the Quick Shop modal. The collection page already
+                 owns the page's <h1>, so the title drops to a <p> styled the
+                 same, and the reviews link points at the product page's review
+                 widget instead of an anchor that does not exist here.
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
+{%- if modal -%}
+  {%- assign reviews_href = product.url | append: '#product-reviews-widget' -%}
+{%- else -%}
+  {%- assign reviews_href = '#product-reviews-widget' -%}
+{%- endif -%}
+
+{%- comment -%}
+  Products with no reviews rendered an empty "☆☆☆☆☆ 0 Reviews" row, so the
+  widget is only mounted once Yotpo reports at least one review. The count is
+  read off the metafield Yotpo syncs per product; `.value` covers the metafield
+  drop and the bare fallback covers the legacy shape, and `times: 1` turns
+  either (or a missing metafield) into a number we can compare.
+{%- endcomment -%}
+{%- assign yotpo_review_count = product.metafields.yotpo.review_count.value
+  | default: product.metafields.yotpo.review_count
+  | times: 1
+-%}
 
 <div class="buybox-header">
-  {%- comment -%} Mobile collection link {%- endcomment -%}
-  {%- if product.collections.size > 0 -%}
-    <a href="{{ product.collections.first.url }}" class="buybox-collection-link-mobile up-mobile-only">
-      {{ product.collections.first.title }}
-    </a>
-  {%- endif -%}
+  {%- comment -%}
+    The mobile collection line used to sit here, printing
+    product.collections.first. That is whichever collection Shopify happens to
+    return first, so it surfaced internal ones ("BC All", "Artistry in
+    Mosaics") rather than the series — and the breadcrumbs above already name
+    the series on mobile, so the line was redundant even when it was right.
+  {%- endcomment -%}
 
   {%- comment -%} Title block: Desktop = SKU above title, Mobile = title above SKU (via CSS order) {%- endcomment -%}
   <div class="buybox-title-block">
     {%- if current_variant.sku != blank -%}
       <p class="buybox-sku" data-sku>SKU: {{ current_variant.sku }}</p>
     {%- endif -%}
-    <h1 class="buybox-title">{{ product.title }}</h1>
+    {%- if modal -%}
+      <p class="buybox-title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </p>
+    {%- else -%}
+      <h1 class="buybox-title">{{ product.title }}</h1>
+    {%- endif -%}
   </div>
 
-  {%- comment -%} Yotpo star rating + reviews count {%- endcomment -%}
-  <a class="yotpo-link buybox-reviews" href="#product-reviews-widget">
-    <div
-      class="yotpo-widget-instance"
-      data-yotpo-instance-id="593213"
-      data-yotpo-product-id="{{ product.id }}"
-      data-yotpo-cart-product-id="{{ product.id }}"
-      data-yotpo-section-id="{{ template.name }}"
-    ></div>
-  </a>
+  {%- comment -%} Yotpo star rating + reviews count — only once there is one {%- endcomment -%}
+  {%- if yotpo_review_count > 0 -%}
+    <a class="yotpo-link buybox-reviews" href="{{ reviews_href }}">
+      <div
+        class="yotpo-widget-instance"
+        data-yotpo-instance-id="593213"
+        data-yotpo-product-id="{{ product.id }}"
+        data-yotpo-cart-product-id="{{ product.id }}"
+        data-yotpo-section-id="{{ template.name }}"
+      ></div>
+    </a>
+  {%- endif -%}
 </div>

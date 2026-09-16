@@ -1,17 +1,12 @@
 {{ 'component-product-updated.css' | asset_url | stylesheet_tag }}
 
+{%- assign is_quick_shop = false -%}
+{%- if template.suffix == 'modal' -%}
+  {%- assign is_quick_shop = true -%}
+  {{ 'component-product-quick-shop.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 {%- assign current_variant = product.selected_or_first_available_variant -%}
-
-{%- comment -%}
-  Simplified mode strips the sqft-only features (per-sqft price, per-unit sq.ft.
-  label, order-a-sample, how-much calculator) for the default & grout templates.
-
-  The mode is resolved from `product.template_suffix` by default rather than the
-  section setting alone, so it stays correct when a product is previewed through
-  `?view=updated-template` (which swaps the template JSON — and therefore the
-  section settings — out from under the product). The setting can still force a
-  mode when needed.
-{%- endcomment -%}
 {%- assign is_grout = false -%}
 {%- if product.template_suffix == 'grout' -%}
   {%- assign is_grout = true -%}
@@ -31,52 +26,77 @@
   {%- assign simplified = true -%}
 {%- endif -%}
 
-{%- comment -%}
-  The how-much calculator can be shown independently of simplified mode.
-  In full sqft mode it always shows; grout products always get their own
-  (tile-dimension) calculator; other simplified products only get one when
-  `show_calculator` is enabled.
-{%- endcomment -%}
 {%- assign hide_calculator = simplified -%}
 {%- if section.settings.show_calculator or is_grout -%}
   {%- assign hide_calculator = false -%}
 {%- endif -%}
 
 {%- comment -%}
-  Shipping window for "Usually ships in <window>".
-  Resolution order (most specific wins):
-    3. Section setting     "Default shipping window"
-    2. Parsed fallback     custom.tab_shipping — legacy behaviour, kept so
-                           products without the metafield keep working.
-    1. Product metafield   custom.ship_window — the authoritative value.
-
-  `shipping_window` always ends up as a COMPLETE phrase including its unit
-  ("3-5 business days", "2-3 weeks"), so the snippet prints it verbatim. That
-  is what lets a weeks-based lead time render correctly, which the old
-  digits-only value could not do.
+  "Visualize in Your Space" is off by default and comes back from the theme
+  editor rather than a code change. The TilesView markup and its metafield gate
+  are untouched underneath, so flipping the setting restores both the desktop
+  trigger under the gallery and the mobile one above Order a Sample.
 {%- endcomment -%}
-{%- assign shipping_window = section.settings.default_shipping_window | default: '3-5 business days' -%}
+{%- assign show_visualizer = section.settings.show_visualizer -%}
 
 {%- comment -%}
-  Fallback: pull the "3-5" out of "... within 3-5 business days. ..." — the
-  token immediately before "business days". This is unreliable by nature: it
-  takes the FIRST "business days" in the copy, which on some vendors is the
-  transit time or the sample lead time rather than the ship window, and copy
-  worded in weeks yields nothing. It is a safety net only — set
-  custom.ship_window on the product to bypass it entirely.
+  Shipping window for "Usually ships in <window>."
+
+  Priority: custom.ship_window metafield (an exact, complete phrase) → the first
+  duration range found in custom.tab_shipping → the section default.
+
+  tab_shipping copy is written per product and uses several units, e.g.
+    "...orders ship within 2-3 weeks."
+    "...product ships within an estimated 14-16 weeks."
+    "...usually ships in 3-5 business days."
+    "Item ships from Florida, USA within 1-2 weeks. ... Average transit time
+     3-6 business days to most states."
+  so we take the FIRST duration in the copy — that is the lead time — and keep
+  whatever unit it was written in. In the last example above that gives
+  "1-2 weeks", not the "3-6 business days" transit estimate that follows it.
 {%- endcomment -%}
-{%- assign tab_shipping = product.metafields.custom.tab_shipping.value -%}
-{%- if tab_shipping contains 'business days' -%}
-  {%- comment -%} Normalise "2 - 4" / "2- 4" / "2 -4" to "2-4" first {%- endcomment -%}
-  {%- assign lead_in = tab_shipping
-    | split: 'business days'
-    | first
-    | replace: ' - ', '-'
-    | replace: '- ', '-'
-    | replace: ' -', '-'
-    | strip
-  -%}
-  {%- assign candidate = lead_in | split: ' ' | last | strip -%}
+
+{%- assign shipping_window = section.settings.default_shipping_window | default: '3-5 business days' -%}
+
+{%- assign newline = '
+' -%}
+{%- capture tab_shipping_raw -%}{{ product.metafields.custom.tab_shipping.value }}{%- endcapture -%}
+{%- assign tab_shipping = tab_shipping_raw
+  | strip_html
+  | downcase
+  | replace: newline, ' '
+  | replace: '&nbsp;', ' '
+  | replace: '&ndash;', '-'
+  | replace: '–', '-'
+  | replace: '—', '-'
+  | replace: ' - ', '-'
+  | replace: '- ', '-'
+  | replace: ' -', '-'
+-%}
+
+{%- comment -%}
+  Most specific unit first so "business days" wins over the "days" inside it and
+  "weeks" wins over "week"; ties keep the earlier entry.
+{%- endcomment -%}
+{%- assign ship_units = 'business days,business day,weeks,week,days,day' | split: ',' -%}
+{%- assign matched_unit = '' -%}
+{%- assign matched_lead_in = '' -%}
+{%- assign matched_at = 999999 -%}
+
+{%- for unit in ship_units -%}
+  {%- if tab_shipping contains unit -%}
+    {%- assign lead_in = tab_shipping | split: unit | first -%}
+    {%- assign unit_at = lead_in.size -%}
+    {%- if unit_at < matched_at -%}
+      {%- assign matched_at = unit_at -%}
+      {%- assign matched_unit = unit -%}
+      {%- assign matched_lead_in = lead_in -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if matched_unit != '' -%}
+  {%- assign candidate = matched_lead_in | strip | split: ' ' | last | strip -%}
 
   {%- assign candidate_chars = candidate | split: '' -%}
   {%- assign candidate_is_range = true -%}
@@ -94,30 +114,20 @@
   {%- endfor -%}
 
   {%- if candidate_is_range and candidate_has_digit -%}
-    {%- assign shipping_window = candidate | append: ' business days' -%}
+    {%- assign shipping_window = candidate | append: ' ' | append: matched_unit -%}
   {%- endif -%}
 {%- endif -%}
 
-{%- comment -%}
-  Authoritative override. A complete phrase such as "2-3 weeks" or
-  "1-3 business days" — printed exactly as entered, no parsing.
-{%- endcomment -%}
 {%- assign ship_window_field = product.metafields.custom.ship_window.value | strip -%}
 {%- if ship_window_field != blank -%}
   {%- assign shipping_window = ship_window_field -%}
 {%- endif -%}
 
-{%- comment -%}
-  Sqft template only: a product with a single real size has nothing to choose
-  between, so the size row is dropped entirely. Default/grout keep it as a
-  static spec line.
-{%- endcomment -%}
 {%- assign hide_single_size = false -%}
 {%- if resolved_mode == 'sqft' -%}
   {%- assign hide_single_size = true -%}
 {%- endif -%}
 
-{%- comment -%} Parse sq_ft and per from product tags (old implementation) {%- endcomment -%}
 {%- assign sq_ft = false -%}
 {%- assign per = false -%}
 {%- for tag in product.tags -%}
@@ -147,11 +157,6 @@
   {%- endif -%}
 {%- endfor -%}
 
-{%- comment -%}
-  Variant IDs eligible for the "This item ships FREE!" badge, using the live
-  site's rule (price > $299 and weight_in_unit < 120). weight_in_unit is a
-  Liquid-only field, so we precompute the eligible set here for the JS toggle.
-{%- endcomment -%}
 {%- assign ships_free_variants = '' -%}
 {%- for v in product.variants -%}
   {%- if v.price > 29900 and v.weight_in_unit < 120 -%}
@@ -160,27 +165,37 @@
 {%- endfor -%}
 
 <product-updated
-  class="product-updated-main-wrapper"
-  id="updated-product-{{ section.id }}"
+  class="product-updated-main-wrapper{% if is_quick_shop %} quick-shop-product{% endif %}"
+  id="updated-product-{{ section.id }}{% if is_quick_shop %}-{{ product.id }}{% endif %}"
+  data-product-handle="{{ product.handle }}"
+  data-product-id="{{ product.id }}"
   data-current-variant-id="{{ current_variant.id }}"
   data-sqft-per-box="{{ sq_ft }}"
   data-unit-type="{{ unit_type }}"
   data-ships-free-variants="{{ ships_free_variants }}"
+  {% if is_quick_shop %}data-in-modal{% endif %}
 >
-  {%- comment -%} Inject product JSON for variant lookup {%- endcomment -%}
   <script type="application/json" data-product-json>
     {{ product | json }}
   </script>
 
   <div class="product-updated-child-wrapper page-width">
     <div class="up-media-wrapper">
-      {% render 'component-product-media', product: product %}
+      {% render 'component-product-media',
+        product: product,
+        modal: is_quick_shop,
+        show_visualizer: show_visualizer
+      %}
     </div>
     <div class="up-product-info-wrapper">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'header' -%}
-            {% render 'component-buybox-header', product: product, current_variant: current_variant %}
+            {% render 'component-buybox-header',
+              product: product,
+              current_variant: current_variant,
+              modal: is_quick_shop
+            %}
           {%- when 'pricing' -%}
             {% render 'component-buybox-pricing',
               product: product,
@@ -189,7 +204,9 @@
               per: per,
               sample_variant: sample_variant,
               simplified: simplified,
-              shipping_window: shipping_window
+              shipping_window: shipping_window,
+              modal: is_quick_shop,
+              show_visualizer: show_visualizer
             %}
           {%- when 'options' -%}
             {% render 'component-buybox-options',
@@ -197,7 +214,8 @@
               current_variant: current_variant,
               sample_variant: sample_variant,
               hide_single_size: hide_single_size,
-              swatch_visible_limit: section.settings.swatch_visible_limit
+              swatch_visible_limit: section.settings.swatch_visible_limit,
+              modal: is_quick_shop
             %}
           {%- when 'calculator' -%}
             {% render 'component-buybox-calculator',
@@ -205,13 +223,15 @@
               current_variant: current_variant,
               sq_ft: sq_ft,
               per: per,
-              simplified: hide_calculator
+              simplified: hide_calculator,
+              modal: is_quick_shop
             %}
           {%- when 'cta' -%}
             {% render 'component-buybox-cta',
               product: product,
               current_variant: current_variant,
-              simplified: simplified
+              simplified: simplified,
+              modal: is_quick_shop
             %}
           {%- when '@app' -%}
             {% render block %}
@@ -221,10 +241,14 @@
   </div>
 </product-updated>
 
-{%- comment -%} Request Custom Quote — available on all three product templates {%- endcomment -%}
-{% render 'component-quote-popup', product: product, current_variant: current_variant %}
+{%- unless is_quick_shop -%}
+  {% render 'component-quote-popup', product: product, current_variant: current_variant %}
+{%- endunless -%}
 
 <script src="{{ 'component-product-updated.js' | asset_url }}" defer></script>
+{%- if is_quick_shop -%}
+  <script src="{{ 'photoswipe_ori.min.js' | asset_url }}" defer></script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -250,6 +274,13 @@
       "default": false
     },
     {
+      "type": "checkbox",
+      "id": "show_visualizer",
+      "label": "Show \"Visualize in Your Space\"",
+      "info": "Off hides the TilesView trigger on both desktop and mobile. When on, it still only appears on products that carry a TilesView product id.",
+      "default": false
+    },
+    {
       "type": "range",
       "id": "swatch_visible_limit",
       "label": "Combined listing swatches shown",
@@ -263,7 +294,7 @@
       "type": "text",
       "id": "default_shipping_window",
       "label": "Default shipping window",
-      "info": "Fallback for 'Usually ships in ...'. Include the unit, e.g. '3-5 business days' or '2-3 weeks'. Overridden per product by the custom.ship_window metafield, then by the range parsed out of custom.tab_shipping.",
+      "info": "Fallback for 'Usually ships in ...'. Include the unit, e.g. '3-5 business days' or '2-3 weeks'. Used only when nothing can be read from the product: the first duration in custom.tab_shipping (days or weeks) wins over this, and custom.ship_window wins over both.",
       "default": "3-5 business days"
     }
   ],

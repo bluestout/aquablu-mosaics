@@ -1,9 +1,20 @@
+{%- comment -%}
+  Product media.
+
+  @param product          - the product to show
+  @param show_visualizer  - section setting; when false the TilesView trigger
+                            and its modal are left out entirely.
+  @param modal   - true inside the Quick Shop modal. The modal is a fixed,
+                   scrolling panel beside the buybox, so it keeps the carousel
+                   only: the tile grid, its "Show More Images" toggle and the
+                   TilesView visualizer (a modal of its own, with fixed ids) are
+                   all dropped and left to the full product page.
+{%- endcomment -%}
+
 {%- assign media_visible_limit = 6 -%}
 {%- assign tile_count = product.media.size | minus: 1 -%}
-{%- if product.media.size > 4 -%}
-  {%- assign gallery_layout = 'masonry' -%}
-{%- else -%}
-  {%- assign gallery_layout = 'full' -%}
+{%- if modal -%}
+  {%- assign tile_count = 0 -%}
 {%- endif -%}
 
 <div class="updated-product-media-wrapper">
@@ -79,7 +90,7 @@
   {%- endif -%}
 
   {%- if tile_count > 0 -%}
-    <div class="product-media-grid product-media-grid--{{ gallery_layout }}" data-gallery-layout="{{ gallery_layout }}">
+    <div class="product-media-grid">
       {%- for media in product.media -%}
         {%- unless forloop.first -%}
           {%- assign tile_index = forloop.index | minus: 1 -%}
@@ -89,10 +100,10 @@
               src="{{ media | image_url: width: 1024 }}"
               srcset="{{ media | image_url: width: 480 }} 480w, {{ media | image_url: width: 768 }} 768w, {{ media | image_url: width: 1024 }} 1024w, {{ media | image_url: width: 1440 }} 1440w"
               {%- comment -%}
-                Every masonry tile is half a column now that the lead image lives in
-                the carousel above, so they all share the same width hint.
+                Every tile is half a column now that the lead image lives in the
+                carousel above, so they all share the same width hint.
               {%- endcomment -%}
-              sizes="(min-width: 769px) {% if gallery_layout == 'masonry' %}25vw{% else %}50vw{% endif %}, 80vw"
+              sizes="(min-width: 769px) 25vw, 80vw"
               data-photoswipe-src="{{ media | image_url: width: 2000 }}"
               data-photoswipe-width="{{ media.preview_image.width }}"
               data-photoswipe-height="{{ media.preview_image.height }}"
@@ -129,7 +140,7 @@
     Desktop visualizer trigger. The mobile one lives above the order-a-sample
     button (component-buybox-pricing) — see component-visualize-btn.
   {%- endcomment -%}
-  {%- if product.metafields.tileview.product_id != blank -%}
+  {%- if show_visualizer and product.metafields.tileview.product_id != blank and modal != true -%}
     {%- render 'component-visualize-btn', product: product, device: 'desktop' -%}
     {%- render 'component-tilesview-popup', product: product -%}
   {%- endif -%}

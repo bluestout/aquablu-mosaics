@@ -6,6 +6,11 @@
     - Only renders when `sample_variant` is provided.
     - Uses the sample variant's price and ID.
     - Click is handled by <product-updated> which adds sample_variant to cart.
+
+  @param modal - true inside the Quick Shop modal, which drops the "Visualize
+                 in Your Space" trigger (that opens a second modal).
+  @param show_visualizer - section setting; gates the mobile "Visualize in Your
+                 Space" trigger the same way it gates the desktop one.
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
@@ -62,7 +67,9 @@
       gallery, which is a different column — on mobile that column is pushed
       below the buybox, so the button is repeated here, above order-a-sample.
     {%- endcomment -%}
-    {%- render 'component-visualize-btn', product: product, device: 'mobile' -%}
+    {%- if show_visualizer and modal != true -%}
+      {%- render 'component-visualize-btn', product: product, device: 'mobile' -%}
+    {%- endif -%}
 
     {%- comment -%} Order-a-sample — hidden in simplified mode (default / grout) {%- endcomment -%}
     {%- if sample_variant and simplified != true -%}

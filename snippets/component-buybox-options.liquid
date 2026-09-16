@@ -81,7 +81,7 @@
           {%- if option_product.id == product.id -%}{%- assign is_current = true -%}{%- endif -%}
 
           <a
-            href="{{ option_product.url }}?view=updated-template"
+            href="{{ option_product.url }}"
             class="buybox-color-swatch{% if is_current %} is-active{% endif %}{% if forloop.index > visible_cutoff and is_current == false %} buybox-color-swatch--hidden{% endif %}"
             aria-label="{{ option_product.title | escape }}"
             title="{{ option_product.title | escape }}"

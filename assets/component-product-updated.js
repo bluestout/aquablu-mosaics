@@ -40,6 +40,30 @@ class ProductMediaCarousel extends HTMLElement {
     window.addEventListener('resize', this._onResize);
 
     this.setActive(0);
+    this.syncWhenVisible();
+  }
+
+  /* Scroll position is set by measuring the slides, and a hidden element
+     measures 0 — so a carousel connected inside a closed modal (the quick shop
+     appends it into `display: none` markup) parks on the leading loop clone
+     rather than the first slide. Redo the jump the moment it has a real width;
+     by then this.index also carries any variant-driven move. */
+  syncWhenVisible() {
+    if (typeof ResizeObserver !== 'function') return;
+    if (this.viewport.getBoundingClientRect().width > 0) return;
+
+    this._visibilityObserver = new ResizeObserver(() => {
+      if (this.viewport.getBoundingClientRect().width === 0) return;
+      this.stopVisibilityWatch();
+      this.jumpTo(this.slides[this.index], 'auto');
+    });
+    this._visibilityObserver.observe(this.viewport);
+  }
+
+  stopVisibilityWatch() {
+    if (!this._visibilityObserver) return;
+    this._visibilityObserver.disconnect();
+    this._visibilityObserver = null;
   }
 
   disconnectedCallback() {
@@ -47,6 +71,7 @@ class ProductMediaCarousel extends HTMLElement {
       this.viewport.removeEventListener('scroll', this._onScroll);
     }
     if (this._onResize) window.removeEventListener('resize', this._onResize);
+    this.stopVisibilityWatch();
     clearTimeout(this._settleTimer);
     clearTimeout(this._resizeTimer);
   }
@@ -99,6 +124,7 @@ class ProductMediaCarousel extends HTMLElement {
   }
 
   goTo(index, behavior = 'smooth') {
+    if (!this.slides) return;
     const total = this.slides.length;
     if (total === 0) return;
 
@@ -197,59 +223,6 @@ class ProductUpdated extends HTMLElement {
     this.bindEvents();
     this.updateAll();
     this.initImageZoom();
-    this.initMasonry();
-  }
-
-  disconnectedCallback() {
-    if (this._masonryResizeObserver) this._masonryResizeObserver.disconnect();
-  }
-
-  initMasonry() {
-    this.masonryGrid = this.querySelector('.product-media-grid--masonry');
-    if (!this.masonryGrid) return;
-    const relayout = () => this.layoutMasonry();
-
-    this.masonryGrid.querySelectorAll('img').forEach((img) => {
-      if (img.complete) return;
-      img.addEventListener('load', relayout, { once: true });
-      img.addEventListener('error', relayout, { once: true });
-    });
-
-    if (typeof ResizeObserver === 'function') {
-      this._masonryWidth = null;
-      this._masonryResizeObserver = new ResizeObserver((entries) => {
-        const width = entries[0].contentRect.width;
-        if (width === this._masonryWidth) return;
-        this._masonryWidth = width;
-        relayout();
-      });
-      this._masonryResizeObserver.observe(this.masonryGrid);
-    } else {
-      window.addEventListener('resize', relayout);
-    }
-
-    relayout();
-  }
-
-  layoutMasonry() {
-    const grid = this.masonryGrid;
-    if (!grid) return;
-    const styles = window.getComputedStyle(grid);
-    if (styles.display !== 'grid') return;
-
-    const rowHeight = parseFloat(styles.gridAutoRows) || 8;
-    const rowGap = parseFloat(styles.rowGap) || 0;
-    const gutter = parseFloat(styles.columnGap) || 0;
-    const items = [...grid.querySelectorAll('.product-media-item')];
-    const spans = items.map((item) => {
-      if (!item.offsetParent) return null;
-      const height = item.getBoundingClientRect().height + gutter;
-      return Math.max(1, Math.round(height / (rowHeight + rowGap)));
-    });
-
-    items.forEach((item, i) => {
-      item.style.gridRowEnd = spans[i] === null ? '' : `span ${spans[i]}`;
-    });
   }
 
   initImageZoom() {
@@ -383,7 +356,6 @@ class ProductUpdated extends HTMLElement {
     });
 
     if (containerSelector === '.product-media-grid') {
-      this.layoutMasonry();
       if (!expanded) {
         const wrapper = this.querySelector('.updated-product-media-wrapper');
         if (wrapper) wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -455,6 +427,19 @@ class ProductUpdated extends HTMLElement {
   updateMedia() {
     const carousel = this.querySelector('product-media-carousel');
     if (!carousel || typeof carousel.goToMedia !== 'function') return;
+
+    /* On the product page the carousel is upgraded first, because its class is
+       defined before this one. Appending the section into the Quick Shop modal
+       upgrades an already-defined tree instead, which runs parent-before-child
+       — so the carousel has not read its slides yet. Retry once on the next
+       frame, by which time it has. */
+    if (!carousel.slides) {
+      if (this._mediaRetried) return;
+      this._mediaRetried = true;
+      requestAnimationFrame(() => this.updateMedia());
+      return;
+    }
+
     const behavior = this._mediaSynced ? 'smooth' : 'auto';
     this._mediaSynced = true;
 
@@ -489,6 +474,9 @@ class ProductUpdated extends HTMLElement {
   }
 
   updateURL() {
+    /* In the Quick Shop modal the address bar belongs to the collection page —
+       switching a swatch there must not rewrite it with a product variant. */
+    if (this.hasAttribute('data-in-modal')) return;
     if (!window.history.replaceState) return;
     const url = new URL(window.location);
     url.searchParams.set('variant', this.currentVariant.id);

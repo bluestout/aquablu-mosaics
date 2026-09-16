@@ -59,7 +59,7 @@
         "shoppinggives_donation_on_purchase_wgXeLJ"
       ],
       "settings": {
-        "template_mode": "simplified",
+        "template_mode": "auto",
         "show_calculator": true
       }
     },
