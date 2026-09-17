@@ -48,11 +48,11 @@
           <div class="grid">
             <div class="grid__item one-whole anim-in">
               <label for="tile-length">Length of tile (inches)</label>
-              <input type="text" name="tile_length" id="tile-length" value="{% if DEV_MODE %}1{% endif %}">
+              <input type="text" inputmode="decimal" name="tile_length" id="tile-length" value="{% if DEV_MODE %}1{% endif %}">
             </div>
             <div class="grid__item one-whole anim-in">
               <label for="tile-width">Width of tile (inches)</label>
-              <input type="text" name="tile_width" id="tile-width" value="{% if DEV_MODE %}1{% endif %}">
+              <input type="text" inputmode="decimal" name="tile_width" id="tile-width" value="{% if DEV_MODE %}1{% endif %}">
             </div>
             <div class="grid__item one-whole anim-in">
               <label for="tile-depth">Tile Thickness</label>
@@ -77,7 +77,7 @@
             
             <div class="grid__item one-whole anim-in">
               <label for="square-feet">Total Sq Ft of project</label>
-              <input type="text" name="square_feet" id="square-feet" value="{% if DEV_MODE %}100{% endif %}">
+              <input type="text" inputmode="decimal" name="square_feet" id="square-feet" value="{% if DEV_MODE %}100{% endif %}">
             </div>
             <div class="grid__item one-whole anim-in">
               <button class="btn btn--primary modal-grout-calculator__submit" id="js-grout-calculator-submit-btn">Calculate</button>

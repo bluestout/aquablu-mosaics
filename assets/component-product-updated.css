@@ -1005,6 +1005,7 @@ button.buybox-need-link--grout:focus-visible {
 .buybox-calc-row {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   font-size: 18px;
   letter-spacing: 0.7px;
   color: #000;
@@ -1013,12 +1014,17 @@ button.buybox-need-link--grout:focus-visible {
 .buybox-calc-row-label {
   font-family: FuturaBook, sans-serif;
   line-height: normal;
+  min-width: 0;
 }
 
+/* min-width/overflow-wrap keep a long result string wrapping inside the box
+   instead of stretching the row past it. */
 .buybox-calc-row-value {
   font-family: FuturaMedium, sans-serif;
   text-align: right;
   line-height: normal;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Total Price */
@@ -1713,9 +1719,12 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
     font-size: 16px;
   }
 
+  /* Must stay >= 16px: iOS Safari zooms the whole viewport in when a focused
+     input is smaller than that, and it does not zoom back out on blur — which
+     leaves the page scrolled sideways after Calculate. */
   .buybox-calc-input{
     height: 38px;
-    font-size: 14px!important;
+    font-size: 16px!important;
   }
 
   .buybox-calc-box{

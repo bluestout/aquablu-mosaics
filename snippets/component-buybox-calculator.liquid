@@ -112,6 +112,12 @@
       </button>
     </div>
 
+    {%- comment -%}
+      inputmode="decimal" is what puts the big numeric keypad under these on a
+      phone. type="number" alone gets iOS's numbers-and-punctuation keyboard,
+      which is a full keyboard layout — harder to hit than a 10-key pad for a
+      field that only ever takes a number.
+    {%- endcomment -%}
     <div class="buybox-calc-form">
       <input
         type="number"
@@ -120,6 +126,7 @@
         data-calc-sqft
         min="0"
         step="any"
+        inputmode="decimal"
       >
       <input
         type="number"
@@ -128,6 +135,7 @@
         data-calc-boxes
         min="0"
         step="any"
+        inputmode="decimal"
       >
       <button type="button" class="buybox-calc-btn">Calculate</button>
     </div>
