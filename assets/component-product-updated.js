@@ -794,9 +794,6 @@ customElements.define('tilesview-popup', TilesviewPopup);
 class QuotePopup extends HTMLElement {
   connectedCallback() {
     this.dialog = this.querySelector('dialog');
-    this.form = this.querySelector('[data-quote-form]');
-    this.successEl = this.querySelector('[data-quote-success]');
-    this.errorEl = this.querySelector('[data-quote-error]');
     if (!this.dialog) return;
     this._onTriggerClick = (e) => {
       const trigger = e.target.closest('[data-quote-trigger]');
@@ -816,7 +813,19 @@ class QuotePopup extends HTMLElement {
         e.clientY <= rect.bottom;
       if (!inDialog) this.close();
     });
-    if (this.form) this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+
+    // The form submits natively (see component-quote-popup.liquid), so the
+    // result arrives with the next page load: reopen to show it, and drop
+    // ?contact_posted from the URL so a refresh doesn't reopen it again.
+    if (this.querySelector('[data-quote-posted]')) {
+      this.open();
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('contact_posted')) {
+        url.searchParams.delete('contact_posted');
+        url.hash = '';
+        history.replaceState(history.state, '', url);
+      }
+    }
   }
 
   disconnectedCallback() {
@@ -824,9 +833,8 @@ class QuotePopup extends HTMLElement {
   }
 
   open() {
-    this.resetMessages();
     if (typeof this.dialog.showModal === 'function') {
-      this.dialog.showModal();
+      if (!this.dialog.open) this.dialog.showModal();
     } else {
       this.dialog.setAttribute('open', '');
     }
@@ -840,49 +848,6 @@ class QuotePopup extends HTMLElement {
       this.dialog.removeAttribute('open');
     }
     document.body.style.overflow = '';
-  }
-
-  resetMessages() {
-    if (this.successEl) this.successEl.hidden = true;
-    if (this.errorEl) this.errorEl.hidden = true;
-  }
-
-  async handleSubmit(event) {
-    event.preventDefault();
-    this.resetMessages();
-
-    const submitBtn = this.form.querySelector('[type="submit"]');
-    const submitLabel = submitBtn.querySelector('[data-submit-label]');
-    const originalText = submitLabel ? submitLabel.textContent : '';
-
-    submitBtn.disabled = true;
-    if (submitLabel) submitLabel.textContent = 'Sending...';
-
-    try {
-      const formData = new FormData(this.form);
-      const response = await fetch('/contact', {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'text/html' },
-      });
-
-      if (!response.ok) throw new Error('Submission failed');
-      if (!response.url.includes('contact_posted=true')) {
-        throw new Error('Contact form rejected the submission');
-      }
-
-      this.form.reset();
-      if (this.successEl) this.successEl.hidden = false;
-      if (submitLabel) submitLabel.textContent = originalText;
-      submitBtn.disabled = false;
-
-      setTimeout(() => this.close(), 2500);
-    } catch (err) {
-      console.error('Quote submission error:', err);
-      if (this.errorEl) this.errorEl.hidden = false;
-      if (submitLabel) submitLabel.textContent = originalText;
-      submitBtn.disabled = false;
-    }
   }
 }
 customElements.define('quote-popup', QuotePopup);

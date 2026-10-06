@@ -3,8 +3,11 @@
 
   Native <dialog> wrapped in <quote-popup> web component.
   Triggered by any element with [data-quote-trigger] anywhere on the page.
-  Submits via AJAX to Shopify's contact form endpoint, with hidden
-  product/SKU/URL fields so the store admin knows what was requested.
+  Submits as a normal POST to Shopify's contact form endpoint, with hidden
+  product/SKU/URL fields so the store admin knows what was requested. It must
+  not be an AJAX post: the store has Shopify's hCaptcha spam protection on,
+  which only attaches its token to a native submit, so a fetch() is rejected.
+  Shopify returns to this page afterwards and the popup reopens on the result.
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
@@ -45,16 +48,23 @@
         </div>
       </div>
 
-      {%- comment -%} Success / error states {%- endcomment -%}
-      <div class="quote-popup__success" data-quote-success hidden>
-        <p>Thanks! Your quote request has been sent. We&rsquo;ll be in touch soon.</p>
-      </div>
-      <div class="quote-popup__error" data-quote-error hidden>
-        <p>Something went wrong. Please try again or email us directly.</p>
-      </div>
-
       {%- comment -%} Form {%- endcomment -%}
-      {%- form 'contact', class: 'quote-popup__form', data-quote-form: '' -%}
+      {%- form 'contact', id: 'QuoteForm', class: 'quote-popup__form', data-quote-form: '' -%}
+        {%- comment -%}
+          Result of the last submit. `data-quote-posted` tells <quote-popup> to
+          reopen on page load. This is the only contact form on the product
+          page (the footer newsletter is a customer form), so the flags are ours.
+        {%- endcomment -%}
+        {%- if form.posted_successfully? -%}
+          <div class="quote-popup__success" role="status" data-quote-posted>
+            <p>Thanks! Your quote request has been sent. We&rsquo;ll be in touch soon.</p>
+          </div>
+        {%- elsif form.errors -%}
+          <div class="quote-popup__error" role="alert" data-quote-posted>
+            {{ form.errors | default_errors }}
+          </div>
+        {%- endif -%}
+
         <input type="hidden" name="contact[Product]" value="{{ product.title }}">
         <input type="hidden" name="contact[Product URL]" value="{{ shop.url }}{{ product.url }}">
         <input type="hidden" name="contact[SKU]" value="{{ current_variant.sku }}">

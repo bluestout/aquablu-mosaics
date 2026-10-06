@@ -1346,6 +1346,17 @@ button.buybox-need-link--grout:focus-visible {
   color: #b71c1c;
 }
 
+/* Inside the form the flex gap already spaces it from the fields */
+.quote-popup__form > .quote-popup__success,
+.quote-popup__form > .quote-popup__error {
+  margin-bottom: 0;
+}
+
+.quote-popup__error ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
 .quote-popup__form {
   display: flex;
   flex-direction: column;
