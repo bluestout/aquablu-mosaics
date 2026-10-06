@@ -142,6 +142,17 @@
   {%- endif -%}
 {%- endfor -%}
 {%- unless sq_ft -%}{%- assign sq_ft = 10.24 -%}{%- endunless -%}
+
+{%- comment -%} Coverage for display, always two decimals: 1.0 → "1.00", 11.14 → "11.14" {%- endcomment -%}
+{%- liquid
+  assign sq_ft_hundredths = sq_ft | times: 100 | round
+  assign sq_ft_whole = sq_ft_hundredths | divided_by: 100
+  assign sq_ft_frac = sq_ft_hundredths | modulo: 100
+  if sq_ft_frac < 10
+    assign sq_ft_frac = '0' | append: sq_ft_frac
+  endif
+  assign sq_ft_label = sq_ft_whole | append: '.' | append: sq_ft_frac
+-%}
 {%- if per -%}
   {%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
 {%- else -%}
@@ -222,6 +233,7 @@
               product: product,
               current_variant: current_variant,
               sq_ft: sq_ft,
+              sq_ft_label: sq_ft_label,
               per: per,
               sample_variant: sample_variant,
               simplified: simplified,
@@ -245,6 +257,7 @@
               product: product,
               current_variant: current_variant,
               sq_ft: sq_ft,
+              sq_ft_label: sq_ft_label,
               per: per,
               simplified: hide_calculator,
               display_price: display_price,

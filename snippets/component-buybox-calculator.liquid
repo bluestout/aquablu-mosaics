@@ -168,7 +168,7 @@
       </div>
       <div class="buybox-calc-row">
         <span class="buybox-calc-row-label">{{ units_required_label }}</span>
-        <span class="buybox-calc-row-value" data-calc-boxes-required>0 @ {{ sq_ft }} sq.ft./{{ unit_noun }}</span>
+        <span class="buybox-calc-row-value" data-calc-boxes-required>0 @ {{ sq_ft_label | default: sq_ft }} sq.ft./{{ unit_noun }}</span>
       </div>
       <div class="buybox-calc-row">
         <span class="buybox-calc-row-label">Square Feet Included</span>

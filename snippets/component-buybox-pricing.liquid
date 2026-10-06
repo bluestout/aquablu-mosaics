@@ -19,6 +19,7 @@
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
 {%- assign sq_ft = sq_ft | default: 10.24 -%}
+{%- assign sq_ft_label = sq_ft_label | default: sq_ft -%}
 {%- if per -%}
   {%- assign unit_type = per | remove: 'per ' | downcase | strip -%}
 {%- else -%}
@@ -72,7 +73,7 @@
       </span>
       {%- if unit_type != blank and unit_type != 'each' -%}
         <span class="buybox-sold-by-label">
-          Sold by {{ unit_type }}{% unless simplified %} ({{ sq_ft }} sq.ft.){% endunless %}
+          Sold by {{ unit_type }}{% unless simplified %} ({{ sq_ft_label }} sq.ft.){% endunless %}
         </span>
       {%- endif -%}
     </div>

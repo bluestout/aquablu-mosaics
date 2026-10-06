@@ -711,7 +711,7 @@ class SqftCalculator extends HTMLElement {
     this.subtotalEl.textContent = `${this.fmt(subtotal)} sq. ft.`;
     this.overageValueEl.textContent = `${this.fmt(overage)} sq. ft.`;
     this.totalEl.textContent = `${this.fmt(total)} sq. ft.`;
-    this.boxesRequiredEl.textContent = `${boxesRequired.toLocaleString('en-US')} @ ${this.sqftPerBox} sq.ft./${this.unitNoun}`;
+    this.boxesRequiredEl.textContent = `${boxesRequired.toLocaleString('en-US')} @ ${this.sqftPerBox.toFixed(2)} sq.ft./${this.unitNoun}`;
     this.sqftIncludedEl.textContent = `${this.fmt(parseFloat(sqftIncluded))} sq.ft.`;
 
     this.dispatchEvent(
