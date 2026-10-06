@@ -7,3 +7,10 @@
 .product-reviews__pane--hidden {
   display: none !important;
 }
+
+/* Q&A is retired on product pages: hide Yotpo's "Questions & Answers" tab so
+   only Reviews shows. Also turn Q&A off in the Yotpo widget settings; this
+   rule just keeps the tab hidden if it is ever switched back on. */
+#yotpo-app #yotpo-tabs-main-widget-tab-1[aria-label="Questions & Answers"] {
+  display: none;
+}
