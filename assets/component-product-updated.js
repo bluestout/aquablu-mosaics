@@ -208,7 +208,7 @@ class ProductUpdated extends HTMLElement {
 
     this.product = JSON.parse(productJsonEl.textContent);
     this.sqftPerBox = parseFloat(this.dataset.sqftPerBox) || 10.24;
-    this.unitType = this.dataset.unitType || '';
+    this.discountPct = parseFloat(this.dataset.discountPct) || 0;
     this.shipsFreeVariants = new Set(
       (this.dataset.shipsFreeVariants || '')
         .split(',')
@@ -403,19 +403,39 @@ class ProductUpdated extends HTMLElement {
 
   updatePrices() {
     const qty = this.getQuantity();
-    const variantPrice = this.currentVariant.price;
-    const pricePerSqft = variantPrice / this.sqftPerBox;
-    const totalPrice = variantPrice * qty;
+    const { price, compare } = this.getDisplayPrices(this.currentVariant);
 
-    this.setText('[data-price-sqft]', `${this.formatMoney(pricePerSqft)} per sq. ft.`);
-    let unitLabel = '';
-    if (this.unitType === 'each') unitLabel = 'each';
-    else if (this.unitType) unitLabel = `per ${this.unitType}`;
-    const priceBoxText = unitLabel
-      ? `${this.formatMoney(variantPrice)} ${unitLabel}`
-      : this.formatMoney(variantPrice);
-    this.setText('[data-price-box]', priceBoxText);
-    this.setText('[data-total-price]', this.formatMoney(totalPrice));
+    this.setText('[data-price-sqft]', this.formatMoney(price / this.sqftPerBox));
+    this.setText('[data-price-box]', this.formatMoney(price));
+    this.setText('[data-total-price]', this.formatMoney(price * qty));
+
+    // Struck-through retail / compare-at price beside each figure
+    const showCompare = compare > price;
+    this.setCompare('[data-compare-sqft]', showCompare, compare / this.sqftPerBox);
+    this.setCompare('[data-compare-box]', showCompare, compare);
+    this.setCompare('[data-compare-total]', showCompare, compare * qty);
+  }
+
+  /* What the customer pays (sale price less any AquaPro discount, rounded as
+     main-product-updated.liquid does) and the retail / compare-at price to
+     strike through beside it. */
+  getDisplayPrices(variant) {
+    const price = Math.floor(variant.price - (variant.price * this.discountPct) / 100);
+    const compare = Math.max(variant.compare_at_price || 0, variant.price);
+    return { price, compare };
+  }
+
+  setCompare(selector, show, cents) {
+    const el = this.querySelector(selector);
+    if (!el) return;
+    el.hidden = !show;
+    const wrap = el.closest('[data-price-wrap]');
+    if (wrap) wrap.classList.toggle('is-discounted', show);
+    if (!show) return;
+    // Keep the visually-hidden "Regular price" label, replace only the amount
+    const label = el.querySelector('.visually-hidden');
+    el.textContent = ' ' + this.formatMoney(cents);
+    if (label) el.prepend(label);
   }
 
   updateSku() {

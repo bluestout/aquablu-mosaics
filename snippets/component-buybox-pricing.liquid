@@ -11,6 +11,10 @@
                  in Your Space" trigger (that opens a second modal).
   @param show_visualizer - section setting; gates the mobile "Visualize in Your
                  Space" trigger the same way it gates the desktop one.
+  @param display_price - what the customer pays: sale price less any AquaPro
+                 discount (cents). Falls back to the variant price.
+  @param compare_price - retail / compare-at price struck through beside it
+                 when higher than display_price (cents).
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
@@ -24,7 +28,14 @@
 {%- if unit_type == 'each' -%}
   {%- assign per = 'each' -%}
 {%- endif -%}
-{%- assign price_per_sqft_cents = current_variant.price | divided_by: sq_ft -%}
+{%- assign display_price = display_price | default: current_variant.price -%}
+{%- assign compare_price = compare_price | default: display_price -%}
+{%- assign show_compare = false -%}
+{%- if compare_price > display_price -%}
+  {%- assign show_compare = true -%}
+{%- endif -%}
+{%- assign price_per_sqft_cents = display_price | divided_by: sq_ft -%}
+{%- assign compare_per_sqft_cents = compare_price | divided_by: sq_ft -%}
 
 {%- comment -%} Split the sample price into dollars + cents for the superscript styling {%- endcomment -%}
 {%- if sample_variant -%}
@@ -40,16 +51,24 @@
 <div class="buybox-pricing">
   {%- comment -%} Price per sq ft — hidden in simplified mode (default / grout) {%- endcomment -%}
   {%- unless simplified -%}
-    <p class="buybox-price-sqft" data-price-sqft>
-      {{ price_per_sqft_cents | money }} per sq. ft.
+    <p class="buybox-price-sqft{% if show_compare %} is-discounted{% endif %}" data-price-wrap>
+      <span class="buybox-price-current" data-price-sqft>{{ price_per_sqft_cents | money }}</span> per sq. ft.
+      <s class="buybox-price-compare" data-compare-sqft{% unless show_compare %} hidden{% endunless %}>
+        <span class="visually-hidden">Regular price</span>
+        {{ compare_per_sqft_cents | money }}
+      </s>
     </p>
   {%- endunless -%}
 
   {%- comment -%} Price per box row {%- endcomment -%}
   <div class="buybox-price-row">
     <div class="buybox-price-box-info">
-      <span class="buybox-price-box" data-price-box>
-        {{ current_variant.price | money }}{% if per %} {{ per }}{% endif %}
+      <span class="buybox-price-box{% if show_compare %} is-discounted{% endif %}" data-price-wrap>
+        <span class="buybox-price-current" data-price-box>{{ display_price | money }}</span>{% if per %} {{ per }}{% endif %}
+        <s class="buybox-price-compare" data-compare-box{% unless show_compare %} hidden{% endunless %}>
+          <span class="visually-hidden">Regular price</span>
+          {{ compare_price | money }}
+        </s>
       </span>
       {%- if unit_type != blank and unit_type != 'each' -%}
         <span class="buybox-sold-by-label">

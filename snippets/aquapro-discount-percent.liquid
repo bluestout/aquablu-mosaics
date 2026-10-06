@@ -1,0 +1,54 @@
+{%- comment -%}
+  AquaPro (B2B) discount percentage for the logged-in customer on this product.
+  Outputs a whole number (e.g. 25), or 0 when no discount applies. Capture it:
+
+    {%- capture discount_pct -%}{% render 'aquapro-discount-percent', product: product %}{%- endcapture -%}
+
+  Mirrors the rules in product-template-sqft / product-grid-item so the PDP
+  matches what the cart's "AquaPro Discount" charges:
+    1. A product tag `aqua_<customer tag>_<percent>` wins when the customer
+       carries that tag (case-insensitive). A percent of 0 means no discount.
+    2. Otherwise the customer tag defaults apply: wholesale 25, vip 20,
+       trade 15 — checked in that order, the last match wins, as before.
+{%- endcomment -%}
+
+{%- liquid
+  assign pct = 0
+  assign product_specific = false
+
+  if customer
+    for product_tag in product.tags
+      if product_tag contains 'aqua_'
+        assign tag_parts = product_tag | split: '_'
+        if tag_parts.size == 3
+          assign customer_tag_to_match = tag_parts[1] | downcase
+          for customer_tag in customer.tags
+            assign customer_tag_lower = customer_tag | downcase
+            if customer_tag_lower == customer_tag_to_match
+              assign pct = tag_parts[2] | times: 1
+              assign product_specific = true
+              break
+            endif
+          endfor
+          if product_specific
+            break
+          endif
+        endif
+      endif
+    endfor
+
+    unless product_specific
+      if customer.tags contains 'wholesale' or customer.tags contains 'Wholesale'
+        assign pct = 25
+      endif
+      if customer.tags contains 'vip' or customer.tags contains 'VIP'
+        assign pct = 20
+      endif
+      if customer.tags contains 'trade' or customer.tags contains 'Trade'
+        assign pct = 15
+      endif
+    endunless
+  endif
+
+  echo pct
+-%}

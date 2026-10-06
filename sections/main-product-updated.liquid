@@ -157,6 +157,26 @@
   {%- endif -%}
 {%- endfor -%}
 
+{%- comment -%}
+  AquaPro (B2B) customer discount, applied in the cart as "AquaPro Discount".
+  Shown here so the buybox price matches what the customer will pay.
+{%- endcomment -%}
+{%- capture discount_pct -%}{% render 'aquapro-discount-percent', product: product %}{%- endcapture -%}
+{%- assign discount_pct = discount_pct | strip | times: 1 -%}
+
+{%- comment -%}
+  display_price: what the customer pays (sale price less any AquaPro discount).
+  compare_price: the retail / compare-at price struck through beside it —
+  the variant's compare-at when it is on sale, otherwise its regular price.
+  Rounded the same way as the legacy template and collection grid.
+{%- endcomment -%}
+{%- assign discount_amount = current_variant.price | times: discount_pct | divided_by: 100.0 -%}
+{%- assign display_price = current_variant.price | minus: discount_amount | floor -%}
+{%- assign compare_price = current_variant.price -%}
+{%- if current_variant.compare_at_price > current_variant.price -%}
+  {%- assign compare_price = current_variant.compare_at_price -%}
+{%- endif -%}
+
 {%- assign ships_free_variants = '' -%}
 {%- for v in product.variants -%}
   {%- if v.price > 29900 and v.weight_in_unit < 120 -%}
@@ -172,6 +192,7 @@
   data-current-variant-id="{{ current_variant.id }}"
   data-sqft-per-box="{{ sq_ft }}"
   data-unit-type="{{ unit_type }}"
+  data-discount-pct="{{ discount_pct }}"
   data-ships-free-variants="{{ ships_free_variants }}"
   {% if is_quick_shop %}data-in-modal{% endif %}
 >
@@ -204,6 +225,8 @@
               per: per,
               sample_variant: sample_variant,
               simplified: simplified,
+              display_price: display_price,
+              compare_price: compare_price,
               shipping_window: shipping_window,
               modal: is_quick_shop,
               show_visualizer: show_visualizer
@@ -224,6 +247,8 @@
               sq_ft: sq_ft,
               per: per,
               simplified: hide_calculator,
+              display_price: display_price,
+              compare_price: compare_price,
               modal: is_quick_shop
             %}
           {%- when 'cta' -%}

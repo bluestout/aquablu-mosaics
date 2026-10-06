@@ -424,6 +424,30 @@
   line-height: 24px;
 }
 
+/* Sale / AquaPro pricing: the price paid takes the theme's savings colour (as
+   the cart's discount line does) with the retail / compare-at price struck
+   through beside it. */
+.product-updated-main-wrapper {
+  --price-discounted-color: var(--colorTextSavings, #c20000);
+  --price-compare-color: #6b6b6b;
+}
+
+.is-discounted .buybox-price-current {
+  color: var(--price-discounted-color);
+}
+
+.buybox-price-compare {
+  margin-left: 6px;
+  font-size: 0.75em;
+  color: var(--price-compare-color);
+  text-decoration: line-through;
+  white-space: nowrap;
+}
+
+.buybox-price-compare[hidden] {
+  display: none;
+}
+
 .buybox-sold-by-label {
   background: #f8f8f8;
   border-radius: 4px;

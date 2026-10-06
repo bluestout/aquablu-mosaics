@@ -9,6 +9,8 @@
                  grout modal trigger both carry fixed element ids, which a
                  second preloaded product on the same collection page would
                  duplicate, and the grout one opens a modal on top of a modal.
+  @param display_price / compare_price - per-unit prices for the running
+                 total; see component-buybox-pricing.
 {%- endcomment -%}
 
 {%- assign current_variant = current_variant | default: product.selected_or_first_available_variant -%}
@@ -181,7 +183,15 @@
     <hr class="buybox-total-divider">
     <div class="buybox-total-row">
       <span class="buybox-total-label">Total Price:</span>
-      <span class="buybox-total-value" data-total-price>{{ current_variant.price | money }}</span>
+      {%- assign display_price = display_price | default: current_variant.price -%}
+      {%- assign compare_price = compare_price | default: display_price -%}
+      <span class="buybox-total-value{% if compare_price > display_price %} is-discounted{% endif %}" data-price-wrap>
+        <span class="buybox-price-current" data-total-price>{{ display_price | money }}</span>
+        <s class="buybox-price-compare" data-compare-total{% unless compare_price > display_price %} hidden{% endunless %}>
+          <span class="visually-hidden">Regular price</span>
+          {{ compare_price | money }}
+        </s>
+      </span>
     </div>
   </div>
 </div>
