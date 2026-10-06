@@ -99,7 +99,7 @@
   font-family: FuturaBook, sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--pdp-text-color);
   text-decoration: underline;
 }
 

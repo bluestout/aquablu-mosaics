@@ -223,7 +223,7 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 15px;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--pdp-text-color);
   cursor: pointer;
   text-align: center;
   transition: border-color 0.15s ease;
@@ -271,7 +271,7 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--pdp-text-color);
   text-decoration: none;
 }
 
@@ -378,7 +378,7 @@
   font-family: FuturaBook, sans-serif;
   font-size: 15px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 24px;
 }
 
@@ -395,7 +395,7 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 24px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 24px;
   margin: 0;
 }
@@ -420,13 +420,20 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 18px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 24px;
 }
 
 /* Sale / AquaPro pricing: the price paid takes the theme's savings colour (as
    the cart's discount line does) with the retail / compare-at price struck
    through beside it. */
+/* Brand text colour for every new-template text style (was black). The quote
+   popup renders outside <product-updated>, so it gets the token too. */
+.product-updated-main-wrapper,
+.quote-popup-root {
+  --pdp-text-color: #374759;
+}
+
 .product-updated-main-wrapper {
   --price-discounted-color: var(--colorTextSavings, #c20000);
   --price-compare-color: #6b6b6b;
@@ -455,7 +462,7 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 14px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 24px;
 }
 
@@ -472,7 +479,7 @@
   font-size: 18px;
   letter-spacing: 0.09px;
   text-transform: uppercase;
-  color: #000;
+  color: var(--pdp-text-color);
   white-space: nowrap;
   padding: 0 15px;
   text-decoration: none;
@@ -578,7 +585,7 @@
   font-family: FuturaBook, sans-serif;
   font-size: 15px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 24px;
   margin: 0;
 }
@@ -595,7 +602,7 @@
   font-family: FuturaBook, sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--pdp-text-color);
   text-decoration: none;
   min-width: max-content;
 }
@@ -659,7 +666,7 @@
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.3px;
-  color: #000;
+  color: var(--pdp-text-color);
 }
 
 .buybox-color-swatch--more:hover {
@@ -685,7 +692,7 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 14px;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--pdp-text-color);
   cursor: pointer;
   transition: border-color 0.15s ease;
 }
@@ -718,7 +725,7 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 15px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   cursor: pointer;
   padding: 0 20px;
 }
@@ -746,7 +753,7 @@
   font-family: FuturaBook, sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--pdp-text-color);
   text-decoration: underline;
 }
 
@@ -781,7 +788,7 @@
 .buybox-quantity-label {
   font-family: FuturaBook, sans-serif;
   font-size: 15px;
-  color: #000;
+  color: var(--pdp-text-color);
   letter-spacing: 0.8px;
   line-height: normal;
   margin: 0;
@@ -812,7 +819,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: var(--pdp-text-color);
   font-size: 16px;
   line-height: 1;
 }
@@ -821,7 +828,7 @@
   font-family: FuturaMedium, sans-serif;
   font-size: 20px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 24px;
   width: 60px;
   min-width: 20px;
@@ -858,6 +865,8 @@
 }
 
 .buybox-need-link svg {
+  /* The icon keeps the text colour, not the link's lighter grey */
+  color: var(--pdp-text-color);
   width: 18px;
   height: 22px;
   flex-shrink: 0;
@@ -909,7 +918,7 @@ button.buybox-need-link--grout:focus-visible {
   font-family: FuturaMedium, sans-serif;
   font-size: 18px;
   letter-spacing: 0.7px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: normal;
   margin: 0;
 }
@@ -946,11 +955,11 @@ button.buybox-need-link--grout:focus-visible {
   font-family: FuturaMedium, sans-serif;
   font-size: 15px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
 }
 
 .buybox-calc-input::placeholder {
-  color: #000;
+  color: var(--pdp-text-color);
   opacity: 1;
 }
 
@@ -1010,7 +1019,7 @@ button.buybox-need-link--grout:focus-visible {
 .buybox-calc-overage-label {
   font-family: FuturaMedium, sans-serif;
   font-size: 16px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: normal;
 }
 
@@ -1032,7 +1041,7 @@ button.buybox-need-link--grout:focus-visible {
   gap: 12px;
   font-size: 18px;
   letter-spacing: 0.7px;
-  color: #000;
+  color: var(--pdp-text-color);
 }
 
 .buybox-calc-row-label {
@@ -1075,7 +1084,7 @@ button.buybox-need-link--grout:focus-visible {
   font-family: FuturaMedium, sans-serif;
   font-size: 24px;
   letter-spacing: 0.7px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: normal;
   white-space: nowrap;
 }
@@ -1084,7 +1093,7 @@ button.buybox-need-link--grout:focus-visible {
   font-family: FuturaMedium, sans-serif;
   font-size: 24px;
   letter-spacing: 0.7px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: normal;
   white-space: nowrap;
 }
@@ -1143,7 +1152,7 @@ button.buybox-need-link--grout:focus-visible {
   font-size: 16px!important;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #000;
+  color: var(--pdp-text-color);
   cursor: pointer;
 }
 
@@ -1189,7 +1198,7 @@ button.buybox-need-link--grout:focus-visible {
 }
 
 .swym-added.swym-add-to-wishlist.swym-added.swym-add-to-wishlist, .swym-added.swym-add-to-wishlist:after, .swym-added.swym-add-to-wishlist + .swym-fave-count{
-  color: black!important;
+  color: var(--pdp-text-color) !important;
 }
 
 .swym-button.disabled{
@@ -1197,7 +1206,7 @@ button.buybox-need-link--grout:focus-visible {
 }
 
 .buybox-wishlist-btn.swym-added svg {
-  fill: #000;
+  fill: var(--pdp-text-color);
 }
 
 .buybox-cta form[data-product-form] {
@@ -1210,7 +1219,7 @@ button.buybox-need-link--grout:focus-visible {
 .buybox-shop-pay {
   font-family: FuturaBook, sans-serif;
   font-size: 14px;
-  color: #000;
+  color: var(--pdp-text-color);
   margin: 0px;
 }
 
@@ -1255,7 +1264,7 @@ button.buybox-need-link--grout:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: var(--pdp-text-color);
   padding: 0;
 }
 
@@ -1268,7 +1277,7 @@ button.buybox-need-link--grout:focus-visible {
   font-family: FuturaDemi, sans-serif;
   font-size: 36px;
   letter-spacing: 0.8px;
-  color: #000;
+  color: var(--pdp-text-color);
   text-align: center;
   margin: 0 0 16px;
   font-weight: normal;
@@ -1277,7 +1286,7 @@ button.buybox-need-link--grout:focus-visible {
 .quote-popup__subtitle {
   font-family: FuturaBook, sans-serif;
   font-size: 18px;
-  color: #393939;
+  color: var(--pdp-text-color);
   text-align: center;
   margin: 0 0 30px;
   line-height: 1.4;
@@ -1315,14 +1324,14 @@ button.buybox-need-link--grout:focus-visible {
 .quote-popup__product-sku {
   font-family: FuturaBook, sans-serif;
   font-size: 14px;
-  color: #393939;
+  color: var(--pdp-text-color);
   margin: 0 0 6px;
 }
 
 .quote-popup__product-title {
   font-family: FuturaDemi, sans-serif;
   font-size: 18px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 1.3;
   margin: 0;
 }
@@ -1382,7 +1391,7 @@ button.buybox-need-link--grout:focus-visible {
 .quote-popup__field label {
   font-family: FuturaMedium, sans-serif;
   font-size: 16px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 24px;
 }
 
@@ -1395,7 +1404,7 @@ button.buybox-need-link--grout:focus-visible {
   padding: 12px 14px;
   font-family: FuturaBook, sans-serif;
   font-size: 16px;
-  color: #000;
+  color: var(--pdp-text-color);
   box-sizing: border-box;
 }
 
@@ -1428,7 +1437,7 @@ button.buybox-need-link--grout:focus-visible {
 .quote-popup__radio-group legend {
   font-family: FuturaMedium, sans-serif;
   font-size: 16px;
-  color: #000;
+  color: var(--pdp-text-color);
   margin-bottom: 8px;
   padding: 0;
 }
@@ -1440,7 +1449,7 @@ button.buybox-need-link--grout:focus-visible {
   cursor: pointer;
   font-family: FuturaMedium, sans-serif;
   font-size: 16px;
-  color: #000;
+  color: var(--pdp-text-color);
   line-height: 32px;
 }
 
@@ -1512,7 +1521,7 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   font-family: 'FuturaMedium'!important;
   font-size: 15px!important;
   font-weight: 400!important;
-  color: black!important;
+  color: var(--pdp-text-color) !important;
   letter-spacing: 0.8px!important;
 }
 
@@ -1832,7 +1841,7 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   font-family: FuturaDemi, sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--pdp-text-color);
   margin: 0;
   font-weight: normal;
 }
@@ -1846,7 +1855,7 @@ span.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: var(--pdp-text-color);
   padding: 0;
   flex-shrink: 0;
 }
