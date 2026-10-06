@@ -7286,6 +7286,11 @@ input[type="image"] {
     max-height: 80vh;
     max-height: var(--maxFiltersHeight);
     overflow: auto;
+    /* the page behind is scroll-locked, so keep the touch scroll in the drawer
+       and leave room to reach the last filter in the list */
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
 
@@ -12571,20 +12576,24 @@ strong {
 .grout-calculator-footer {
   padding: 20px;
 }
-.grout-modal-close:hover,
-.grout-modal-close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 /** Form Area **/
 .form-area {
   padding: 20px;
 }
+/* The submit row is the only row in the form without a value field beside the
+   label, so drop the two-column track and let it use the full modal gutter. */
+.grout-calculator-container-main .grid__item.one-whole.anim-in.grout-calculator__submit-row {
+  grid-template-columns: 1fr;
+}
 button.btn.btn--primary.modal-grout-calculator__submit {
   background: #152755;
-  width: 140px;
-  margin-bottom: 30px;
+  /* Same box as one Grout / Adhesive tab below: half the gutter minus the 10px
+     gap between them, and the 50px height the tab headings render at. */
+  width: calc(50% - 5px);
+  height: 50px;
+  padding: 0;
+  line-height: 50px;
+  margin-bottom: 0px;
 }
 /** Tab Area **/
 .modal-grout-calculator__results .flex .one-half.text-center {
@@ -12594,16 +12603,22 @@ button.btn.btn--primary.modal-grout-calculator__submit {
   height: 100%;
 }
 
+.modal-grout-calculator__results .flex.btns-main-wrapper{
+  gap: 10px;
+}
+
 .modal-grout-calculator__results .flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  /* keep the tabs inside the same gutter as the rest of the modal */
+  margin: 0 20px 20px;
 }
 .modal-grout-calculator__results .flex .one-half.text-center h4 {
   margin: 0;
   font-size: 16px;
   line-height: 50px;
+  border-radius: 3px;
 }
 .modal-grout-calculator__results .flex .one-half.text-center.active {
   background: #003c91;
@@ -12621,10 +12636,10 @@ h4.modal-grout-calculator__results--heading button {
   /*display: block;*/
   cursor: pointer;
   font-size: 16px;
-  text-transform: uppercase;
   color: #000;
   letter-spacing: var(--typeHeaderSpacing);
   line-height: 50px;
+  width: 100%;
 }
 
 .grout-adhesive--quick-row a.btn.btn--primary {
@@ -12635,16 +12650,46 @@ h4.modal-grout-calculator__results--heading button {
 }
 .flex.flex--space-between.flex--align-center.grout-adhesive--quick-row {
   display: grid;
-  grid-template-columns: 20% 40% 1fr;
+  /* size the stepper and button to their content so the add to cart label always
+     fits on narrow phones, and let the "view all" link take what is left */
+  grid-template-columns: auto auto minmax(0, 1fr);
+  align-items: center;
   height: 60px;
   margin: 20px 10px;
 }
+/* Fixed track widths: the count runs from a single digit up to three, and an
+   auto-sized control would resize and shove the add to cart button sideways on
+   every tap of the steppers. */
 .ajaxcart-item--quantity.grout-qty .qty-step {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 26px minmax(0, 1fr) 26px;
+  width: 96px;
   border: 1px solid gray;
   justify-items: center;
+  align-items: center;
   padding: 5px 3px;
+}
+/* The stepper icons rendered larger than the quantity beside them */
+.ajaxcart-item--quantity.grout-qty .qty-step-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  min-height: 26px;
+  color: #152755;
+}
+.ajaxcart-item--quantity.grout-qty .qty-step-btn .icon {
+  width: 13px;
+  height: 13px;
+}
+.ajaxcart-item--quantity.grout-qty .qty-step-count {
+  font-family: FuturaMedium, var(--typeHeaderPrimary);
+  font-size: 16px;
+  line-height: 1;
+  color: #152755;
+  /* stays inside its fixed track rather than widening it */
+  overflow: hidden;
+  text-align: center;
 }
 a.upsell-all-link {
   text-transform: capitalize;
@@ -12837,6 +12882,9 @@ a.site-nav__link.site-nav__link--underline.site-nav__link--has-dropdown {
   .header-item--search{
     display: none!important;
   } 
+  .upsell__qty-step-btn:hover {
+    color: #374759;
+  }
 }
 .site-navigation--below .site-nav__link {
   text-transform: uppercase;
@@ -13502,6 +13550,25 @@ div#FooterMenus {
 }
 .cart-upsell-area .ajaxcart__product-name-wrapper a {
   font-size: 14px;
+}
+/* The upsell thumbnail sat in a 20% column at its intrinsic size, so it rendered
+   around 50px wide and looked soft on high-density screens. Give the image its
+   own wider column and let it fill that column edge to edge. */
+.cart-upsell-area .grid > .grid__item.one-fifth {
+  width: 30%;
+}
+.cart-upsell-area .grid > .grid__item.four-fifths {
+  width: 70%;
+}
+.cart-upsell-area .ajaxcart__product-image {
+  display: block;
+}
+.cart-upsell-area .ajaxcart__product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 .cart-upsell-area a.ajaxcart__product-name.h4 {
   margin-bottom: 10px;
@@ -16172,3 +16239,40 @@ label.tag__checkbox-wrapper {
   }
 }
 /* <-- Custom answerbase widget customization*/
+
+/* --> Product description lists (PDP) */
+.product-block .rte ul,
+.product-block .rte ol {
+  text-align: left;
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 1.35em;
+}
+.product-block .rte ul {
+  list-style-type: disc;
+}
+.product-block .rte ul ul {
+  list-style-type: circle;
+  margin-top: 8px;
+  padding-left: 1.2em;
+}
+.product-block .rte li {
+  margin-bottom: 10px;
+  padding-left: 4px;
+  line-height: 1.6;
+}
+.product-block .rte li:last-child {
+  margin-bottom: 0;
+}
+.product-block .rte li::marker {
+  color: #152755;
+}
+/* Author-applied centering on the description should not orphan the bullets.
+   !important is needed because the alignment is set inline in the product HTML. */
+.product-block .rte ul[style*="center"],
+.product-block .rte ol[style*="center"],
+.product-block .rte ul li[style*="center"],
+.product-block .rte ol li[style*="center"] {
+  text-align: left !important;
+}
+/* <-- Product description lists (PDP) */

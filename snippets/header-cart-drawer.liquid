@@ -57,7 +57,7 @@
 
 {% if product__object %}
   {%- assign product__url = product__object.url -%}
-  {%- assign product__img = product__object.featured_image | img_url  -%}
+  {%- assign product__img = product__object.featured_image | image_url: width: 300  -%}
   {%- assign product__name = product__object.title -%}
   {%- assign product__id = product__object.id -%}
   {%- assign product__variant__id = product__object.selected_or_first_available_variant.id -%}
@@ -214,7 +214,7 @@
   let choices = {
     product1: {
       product__url: '{{ productObject1.url }}',
-      product__img: '{{ productObject1.featured_image | img_url }}',
+      product__img: '{{ productObject1.featured_image | image_url: width: 300 }}',
       product__name: '{{ productObject1.title }}',
       product__id: '{{ productObject1.id }}',
       product__variant__id: '{{ productObject1.selected_or_first_available_variant.id }}',
@@ -226,7 +226,7 @@
     },
     product2: {
       product__url: '{{ productObject2.url }}',
-      product__img: '{{ productObject2.featured_image | img_url }}',
+      product__img: '{{ productObject2.featured_image | image_url: width: 300 }}',
       product__name: '{{ productObject2.title }}',
       product__id: '{{ productObject2.id }}',
       product__variant__id: '{{ productObject2.selected_or_first_available_variant.id }}',
@@ -239,7 +239,7 @@
     },
     product3: {
       product__url: '{{ productObject3.url }}',
-      product__img: '{{ productObject3.featured_image | img_url }}',
+      product__img: '{{ productObject3.featured_image | image_url: width: 300 }}',
       product__name: '{{ productObject3.title }}',
       product__id: '{{ productObject3.id }}',
       product__variant__id: '{{ productObject3.selected_or_first_available_variant.id }}',
@@ -251,7 +251,7 @@
     },
     product4: {
       product__url: '{{ productObject4.url }}',
-      product__img: '{{ productObject4.featured_image | img_url }}',
+      product__img: '{{ productObject4.featured_image | image_url: width: 300 }}',
       product__name: '{{ productObject4.title }}',
       product__id: '{{ productObject4.id }}',
       product__variant__id: '{{ productObject4.selected_or_first_available_variant.id }}',
@@ -263,7 +263,7 @@
     },
     product5: {
       product__url: '{{ productObject5.url }}',
-      product__img: '{{ productObject5.featured_image | img_url }}',
+      product__img: '{{ productObject5.featured_image | image_url: width: 300 }}',
       product__name: "{{ productObject5.title }}",
       product__id: '{{ productObject5.id }}',
       product__variant__id: '{{ productObject5.selected_or_first_available_variant.id }}',
@@ -275,7 +275,7 @@
     },
     product6: {
       product__url: '{{ productObject6.url }}',
-      product__img: '{{ productObject6.featured_image | img_url }}',
+      product__img: '{{ productObject6.featured_image | image_url: width: 300 }}',
       product__name: '{{ productObject6.title }}',
       product__id: '{{ productObject6.id }}',
       product__variant__id: '{{ productObject6.selected_or_first_available_variant.id }}',
@@ -287,7 +287,7 @@
     },
     product7: {
       product__url: '{{ productObject7.url }}',
-      product__img: '{{ productObject7.featured_image | img_url }}',
+      product__img: '{{ productObject7.featured_image | image_url: width: 300 }}',
       product__name: '{{ productObject7.title }}',
       product__id: '{{ productObject7.id }}',
       product__variant__id: '{{ productObject7.selected_or_first_available_variant.id }}',
@@ -302,7 +302,39 @@
   /* ===== Modules ===== */
   let groutToggle = "";
 
+  /* The drawer renders on every template, but clear defensively all the same */
+  function clearUpsellArea() {
+    var elUpsellArea = document.querySelector('.cart-upsell-area-default');
+    if (!!elUpsellArea) {
+      elUpsellArea.innerHTML = '';
+    }
+  }
+
+  /* Variant ids already in the cart, read off each line item's key ("variantId:hash") */
+  function cartVariantIds() {
+    var ids = [];
+    document.querySelectorAll('.cart__items .cart__item').forEach(function(item) {
+      if (item.dataset.key) {
+        ids.push(String(item.dataset.key).split(':')[0]);
+      }
+    });
+    return ids;
+  }
+
   function printUpsellArea(productTypeCheck) {
+
+    /* A handle that no longer resolves to a live product renders an empty id/price/image,
+       which showed up as a "No image / From" card. Hide the block instead. */
+    if (!activeUpsell || !activeUpsell.product__id || !activeUpsell.product__variant__id) {
+      clearUpsellArea();
+      return;
+    }
+
+    /* Don't keep recommending something the shopper has already added */
+    if (cartVariantIds().indexOf(String(activeUpsell.product__variant__id)) !== -1) {
+      clearUpsellArea();
+      return;
+    }
 
     let approvedGroutTypes = ["Ceramic Tile", "Glass Tile", "Porcelain Tile", "Stone Tile"];
     if (approvedGroutTypes.find((str) => str === productTypeCheck)) {
@@ -318,7 +350,7 @@
         <div class="grid grid--half-gutters flex">
           <div class="grid__item one-fifth">
             <a href=" ${activeUpsell.product__url}" class="ajaxcart__product-image">
-              <img src=" ${activeUpsell.product__img}" alt=" ${activeUpsell.product__name}">
+              <img src="${activeUpsell.product__img}" alt="${activeUpsell.product__name}" width="300" height="300" loading="lazy">
             </a>
           </div>
           <div class="grid__item four-fifths">
@@ -361,6 +393,11 @@
     let productTypeCheck = false;
 
     var elFirstCartItem = document.querySelectorAll('.cart__items .cart__item')[0];
+    if (!elFirstCartItem || !elFirstCartItem.querySelector('.cart-drawer-product-type')) {
+      clearUpsellArea();
+      return;
+    }
+
     var productType = String(elFirstCartItem.querySelector('.cart-drawer-product-type').textContent.trim());
 
     switch (productType) {
@@ -435,18 +472,20 @@
       } 
     }
 
-    var elQtyDecrease = event.target.closest('.upsell__qty-step-btn[data-qty-change="dec"]');
-    if (!!elQtyDecrease) {
-      var currentQty = Number(document.querySelector('.cart-upsell-area .qty-step-count').textContent);
-      var newValue = currentQty - 1;
-      document.querySelector('.cart-upsell-area .qty-step-count').textContent = newValue;
-    }
+    /* These steppers are used by the drawer upsell and by the grout calculator,
+       so always step the counter that belongs to the clicked button. */
+    var elQtyStepBtn = event.target.closest('.upsell__qty-step-btn');
+    if (!!elQtyStepBtn) {
+      event.preventDefault();
 
-    var elQtyIncrease = event.target.closest('.upsell__qty-step-btn[data-qty-change="inc"]');
-    if (!!elQtyIncrease) {
-      var currentQty = Number(document.querySelector('.cart-upsell-area .qty-step-count').textContent);
-      var newValue = currentQty + 1;
-      document.querySelector('.cart-upsell-area .qty-step-count').textContent = newValue;
+      var elStepper = elQtyStepBtn.closest('.qty-step');
+      var elQtyCount = elStepper ? elStepper.querySelector('.qty-step-count') : null;
+
+      if (!!elQtyCount) {
+        var step = elQtyStepBtn.dataset.qtyChange === 'inc' ? 1 : -1;
+        var currentQty = Number(elQtyCount.textContent) || 0;
+        elQtyCount.textContent = Math.max(currentQty + step, 1);
+      }
     }
 
     var elUpsellAtcButton = event.target.closest('.cart-upsell-area .ajaxcart__upsell-add');
@@ -461,6 +500,17 @@
     var totalItems = parseInt(document.querySelector('.cart__items').dataset.count);
     if (totalItems > 0) {
       adjustUpsellProduct();
+    }
+  });
+
+  /* The drawer re-renders its line items after every cart change, so re-pick the
+     upsell then too - otherwise a product stays recommended after it was added. */
+  document.addEventListener('cart:rebuilt', function(evt) {
+    var totalItems = evt.detail ? parseInt(evt.detail.count) : 0;
+    if (totalItems > 0) {
+      adjustUpsellProduct();
+    } else {
+      clearUpsellArea();
     }
   });
 

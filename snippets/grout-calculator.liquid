@@ -19,9 +19,57 @@
   .grout-adhesive--quick-row .results-btn-add-to-cart{
     background: #152755;
     margin: 0 14px;
-    font-size: 12px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1.2;
     height: 40px;
     color: white;
+    border: 0;
+    cursor: pointer;
+  }
+
+  /* Close button */
+  .grout-calculator__topbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 12px 0;
+    background: #f5f5f5;
+  }
+  .grout-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #d5dbe4;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #152755;
+    line-height: 0;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .grout-modal-close svg {
+    width: 13px;
+    height: 13px;
+    pointer-events: none;
+  }
+  .grout-modal-close:hover,
+  .grout-modal-close:focus-visible {
+    background: #152755;
+    border-color: #152755;
+    color: #ffffff;
+  }
+  .grout-modal-close:focus-visible {
+    outline: 2px solid #152755;
+    outline-offset: 2px;
+  }
+  .grout-calculator-container-main .form-area {
+    padding-top: 10px;
   }
 
   @media(max-width:768px){
@@ -29,21 +77,90 @@
       padding-top: 0;
       top: 0;
       z-index: 7; /* Sit on top */
+      pointer-events: auto; /* tapping the gap on the left closes the panel */
+      background-color: rgba(10,21,44,0.45);
     }
-    .grout-calculator-container-main {
+    .grout-calculator-container {
       height: 100%;
+    }
+    /* Slide-in panel, anchored right with a tap-to-close gap on the left */
+    .grout-calculator-container-main {
       position: fixed;
+      top: 0;
       right: 0;
+      bottom: 0;
+      height: 100%;
+      width: calc(100% - 56px);
+      max-width: 420px;
+      margin: 0;
+      border-radius: 16px 0 0 16px;
+      box-shadow: -8px 0 24px rgba(0,0,0,0.18);
+      transform: translateX(100%);
+      transition: transform .3s cubic-bezier(0.16, 0.84, 0.44, 1);
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+    .grout-form-modal-container.is-open .grout-calculator-container-main {
+      transform: translateX(0);
+    }
+    .grout-calculator__topbar {
+      padding: 14px 16px 0;
+    }
+    .grout-modal-close {
+      width: 40px;
+      height: 40px;
+    }
+    body.grout-modal-is-open {
+      overflow: hidden;
     }
  }
+
+  /* Desktop: centre the panel in the viewport below the sticky header, and let
+     it scroll inside itself so the results and footer are never cut off below
+     the fold on shorter screens. */
+  @media (min-width: 769px) {
+    .grout-form-modal-container {
+      padding-top: 0;
+      height: calc(100% - 60px);
+    }
+    .grout-calculator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+      padding: 24px 20px;
+      box-sizing: border-box;
+    }
+    .grout-calculator-container {
+      width: 100%;
+      max-width: 450px;
+    }
+    .grout-calculator-container-main {
+      max-height: calc(100vh - 108px);
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .grout-calculator-container-main {
+      transition: none;
+    }
+  }
 </style>
 
 <div id="grout-form-modal" class="grout-form-modal-container">
   <div class="grout-calculator">
     <div class="grout-calculator-container">
       <div class="grout-calculator-container-main" id="js-grout-calculator-container-main">
+        <div class="grout-calculator__topbar">
+          <button type="button" class="grout-modal-close" id="js-grout-modal-close" aria-label="{{ 'general.accessibility.close' | t }}">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
         <div class="form-area">
-          <span class="grout-modal-close" id="js-grout-modal-close">X</span>
           {% comment %}<h2>Grout / Adhesive Calculator</h2>{% endcomment %}
           <div class="grid">
             <div class="grid__item one-whole anim-in">
@@ -79,7 +196,7 @@
               <label for="square-feet">Total Sq Ft of project</label>
               <input type="text" inputmode="decimal" name="square_feet" id="square-feet" value="{% if DEV_MODE %}100{% endif %}">
             </div>
-            <div class="grid__item one-whole anim-in">
+            <div class="grid__item one-whole anim-in grout-calculator__submit-row">
               <button class="btn btn--primary modal-grout-calculator__submit" id="js-grout-calculator-submit-btn">Calculate</button>
             </div>
 
@@ -87,7 +204,7 @@
         </div>
         <div class="modal-grout-calculator__results">          
           {% assign product_title = product.title %}
-          <div class="flex">
+          <div class="flex btns-main-wrapper">
             <div class="one-half text-center">
               <h4 class="text-center modal-grout-calculator__results--heading {% if product_title contains 'Adhesive' %} {% else %} active {% endif %}">
                 <button class="js-grout-calculator-heading" data-matching-content="modal-grout-calculator__results--grout">Grout</button>
@@ -135,13 +252,13 @@
           <div id="modal-grout-calculator__results--adhesive" class="modal-grout-calculator__results--content" style="{% if product_title contains 'Adhesive' %}  {% else %} display: none; {% endif %}">
             <div class="modal-grout-calculator__results-title">
               {% assign default_adhesive_variant = 12840157773896 %}
-              We recommend <span class="grout-calculator__adhesive-pounds-needed"></span>lbs of <a href="/products/litoelastic-11lb-pail-epoxy-poly-tile-adhesive"><u>Litoelastic Tile Adhesive</u></a>, 
+              We recommend <span class="grout-calculator__adhesive-pounds-needed"></span>lbs of <a href="/products/powergel-pro-max-litokol-epoxy-gel-adhesive"><u>Litokol Tile Adhesive</u></a>, 
               or <span class="grout-calculator__adhesive-pails-needed"></span> 11lb pails.
               <small>(based on 1/8" trowel)</small>
             </div>
             <div class="flex flex--space-between flex--align-center grout-adhesive--quick-row small--flex-wrap">
               <div class="ajaxcart-item--quantity grout-qty grout-qty-value-2">
-                <div class="qty-step" data-variant-id="{{default_grout_variant}}">
+                <div class="qty-step" data-variant-id="{{default_adhesive_variant}}">
                   <a href="#" class="qty-step-btn upsell__qty-step-btn" data-qty-change="dec">
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 64 64"><path class="cls-1" d="M55 32H9"/></svg>
                     <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
@@ -240,10 +357,35 @@
 
     function openGroutModal() {
       groutModal.style.display = 'block';
+      document.body.classList.add('grout-modal-is-open');
+      /* force a reflow so the slide-in transition runs from its start position */
+      void groutModal.offsetWidth;
+      groutModal.classList.add('is-open');
     }
 
     function closeGroutModal() {
-      groutModal.style.display = 'none';
+      /* the document click handler calls this on every outside click, so bail when already closed */
+      if (groutModal.style.display !== 'block') {
+        return;
+      }
+
+      groutModal.classList.remove('is-open');
+      document.body.classList.remove('grout-modal-is-open');
+
+      var slidesIn = window.matchMedia('(max-width: 768px)').matches
+        && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!slidesIn) {
+        groutModal.style.display = 'none';
+        return;
+      }
+
+      /* let the panel slide back out before it is removed from the flow */
+      window.setTimeout(function() {
+        if (!groutModal.classList.contains('is-open')) {
+          groutModal.style.display = 'none';
+        }
+      }, 300);
     }
 
     function submitGroutCalculator() {
@@ -295,12 +437,20 @@
     }
 
     function groutCalculatorAtc(clickedAtcBtn) {
+      /* read the stepper that sits in the same results row as the clicked button */
+      var elRow = clickedAtcBtn.closest('.grout-adhesive--quick-row');
+      var elCount = elRow ? elRow.querySelector('.qty-step-count') : null;
+
       var productObj = {
         "id": clickedAtcBtn.dataset.quickAdd, 
-        "quantity": Number(clickedAtcBtn.previousElementSibling.querySelector('.qty-step-count').textContent)
+        "quantity": elCount ? Number(elCount.textContent) : 1
       }
 
       addItemToCart(productObj);
+
+      /* Adding opens the cart drawer, which the calculator panel would otherwise
+         sit on top of, so slide the calculator away as soon as the add fires. */
+      closeGroutModal();
     }    
 </script>
 

@@ -25,11 +25,75 @@
     endfor  
   -%}
   
+  {%- style -%}
+    /* Close control for the mobile filter drawer (cloned into .collection-mobile-filters by theme.js) */
+    .collection-mobile-filters .mobile-filter__header {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--colorBody);
+      border-bottom: 1px solid var(--colorBorder);
+    }
+    .collection-mobile-filters .mobile-filter__header-title {
+      font-family: FuturaMedium, var(--typeHeaderPrimary);
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #152755;
+    }
+    .collection-mobile-filters .mobile-filter__close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border: 1px solid #d5dbe4;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #152755;
+      line-height: 0;
+      cursor: pointer;
+      transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .collection-mobile-filters .mobile-filter__close svg {
+      width: 13px;
+      height: 13px;
+      pointer-events: none;
+    }
+    .collection-mobile-filters .mobile-filter__close:hover,
+    .collection-mobile-filters .mobile-filter__close:focus-visible {
+      background: #152755;
+      border-color: #152755;
+      color: #ffffff;
+    }
+    .collection-mobile-filters .mobile-filter__close:focus-visible {
+      outline: 2px solid #152755;
+      outline-offset: 2px;
+    }
+  {%- endstyle -%}
+
   {%- if enable_sidebar or enable_sort -%}
     {%- assign location = 'CollectionSidebar' -%}
     <div id="CollectionSidebar-Mobile" class="medium-up--one-fifth" style="display:none;">
       <div class="collection-sidebar small--hide" id="CollectionSidebarFilterWrap-Mobile">
         <div class="filter-wrapper mobile-filter">
+          <div class="mobile-filter__header">
+            <span class="mobile-filter__header-title">{{ 'collections.filters.title_tags' | t }}</span>
+            <button
+              type="button"
+              class="mobile-filter__close js-mobile-filter-close"
+              aria-label="{{ 'general.accessibility.close' | t }}">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
           <ul class="no-bullets tag-list tag-list--active-tags">
             {%- for filter in collection.filters -%}
               {%- for filter_value in filter.active_values -%}

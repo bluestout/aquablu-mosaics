@@ -1800,6 +1800,14 @@ if (theme.config.isTouch) {
 
         this.reInit();
 
+        // Line items have been replaced, so anything keyed off cart contents
+        // (like the drawer upsell) can refresh itself now
+        document.dispatchEvent(new CustomEvent('cart:rebuilt', {
+          detail: {
+            count: count
+          }
+        }));
+
         if (Shopify && Shopify.StorefrontExpressButtons) {
           Shopify.StorefrontExpressButtons.initialize();
         }
@@ -5959,6 +5967,7 @@ if (theme.config.isTouch) {
     var selectors = {
       sidebarId: 'CollectionSidebar',
       trigger: '.collection-filter__btn',
+      closeBtn: '.js-mobile-filter-close',
       mobileWrapper: '#CollectionInlineFilterWrap',
       filters: '.filter-wrapper',
       filterBar: '.collection-filter'
@@ -5988,9 +5997,17 @@ if (theme.config.isTouch) {
     // Set a max-height on drawers when they're opened via CSS variable
     // to account for changing mobile window heights
     function sizeDrawer() {
-      var header = document.getElementById('HeaderWrapper').offsetHeight;
-      var filters = document.querySelector(selectors.filterBar).offsetHeight;
-      var max = window.innerHeight - header - 20;   // Header Update
+      var filterBar = document.querySelector(selectors.filterBar);
+      if (!filterBar) {
+        return;
+      }
+
+      // The drawer hangs off the bottom of the filter bar, so measure what is
+      // actually left below the bar on screen. Reading the live position keeps
+      // the whole list reachable whether or not the bar has stuck to the header,
+      // and whether or not the smooth scroll on open has settled yet.
+      var spaceBelowBar = window.innerHeight - filterBar.getBoundingClientRect().bottom;
+      var max = Math.max(spaceBelowBar - 20, 240);   // Header Update
       document.documentElement.style.setProperty('--maxFiltersHeight', `${max}px`);
     }
 
@@ -6008,6 +6025,14 @@ if (theme.config.isTouch) {
 
         this.trigger.off('click');
         this.trigger.on('click', this.toggle.bind(this));
+
+        // Close control inside the mobile filter drawer, so it can be dismissed
+        // even when the filter bar has scrolled out of view
+        this.closeBtns = document.querySelectorAll(selectors.closeBtn);
+        this.closeBtns.forEach(function(btn) {
+          btn.off('click');
+          btn.on('click', this.close.bind(this));
+        }.bind(this));
 
         var sidebarShow = localStorage.getItem("sidebarShow");
         if (sidebarShow == 'true') {
@@ -6046,6 +6071,13 @@ if (theme.config.isTouch) {
 
         theme.a11y.lockMobileScrolling(config.namespace);
 
+        // The bar moves while the open scroll settles, and mobile viewports resize
+        // as browser chrome hides, so keep the drawer sized to the space on screen
+        window.off('scroll' + config.namespace);
+        window.off('resize' + config.namespace);
+        window.on('scroll' + config.namespace, theme.utils.debounce(50, sizeDrawer), {passive: true});
+        window.on('resize' + config.namespace, theme.utils.debounce(100, sizeDrawer), {passive: true});
+
         window.on('keyup' + config.namespace, function(evt) {
           if (evt.keyCode === 27) {
             this.close();
@@ -6063,6 +6095,8 @@ if (theme.config.isTouch) {
 
         theme.a11y.unlockMobileScrolling(config.namespace);
 
+        window.off('scroll' + config.namespace);
+        window.off('resize' + config.namespace);
         window.off('keyup' + config.namespace);
       },
 
