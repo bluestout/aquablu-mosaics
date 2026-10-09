@@ -1,0 +1,181 @@
+<!-- begin Convert Experiences code-->
+<script type="text/javascript">
+  // Function to turn on the conversion integration
+  function _conv_integration_on() {
+    true;
+  }
+
+  // Initialize the _conv_q array if it doesn't exist
+  window._conv_q = window._conv_q || [];
+
+  // Function to align segments to the first format
+  function alignSegmentsToFirstFormat(segFromSecondFormat) {
+    // Initialize the aligned segment with direct mappings
+    const alignedSeg = {
+      browser: segFromSecondFormat.browser,
+      devices: segFromSecondFormat.devices,
+      source: segFromSecondFormat.source,
+      campaign: segFromSecondFormat.campaign,
+      // Directly map 'country' to 'ctry', ensuring a value is always provided
+      ctry: segFromSecondFormat.country || "",
+      // Handle 'customSegments' with a check to ensure it's treated correctly
+      cust:
+        segFromSecondFormat.customSegments &&
+        Array.isArray(segFromSecondFormat.customSegments)
+          ? segFromSecondFormat.customSegments
+          : [],
+    };
+
+    // Adjust the 'new' flag based on 'visitorType'
+    // Since 'visitorType' of "returning" implies the visitor is not new, we map accordingly
+    alignedSeg.new =
+      segFromSecondFormat.visitorType === "new"
+        ? 1
+        : segFromSecondFormat.visitorType === "returning"
+        ? 0
+        : undefined;
+
+    return alignedSeg;
+  }
+
+  // Push a new listener to the _conv_q array
+  _conv_q.push({
+    what: "addListener",
+    params: {
+      event: "snippet.goals_evaluated",
+      handler: function () {
+        // Try to get the session cookie
+        let session_cookie;
+        try {
+          session_cookie = convert.getCookie("_conv_s");
+        } catch (error) {
+          console.error(
+            'Convert: Error getting session cookie. Operation: convert.getCookie("_conv_s")',
+            error
+          );
+          return; // Exit the function if there's an error
+        }
+
+        const isCurrentData = Boolean(convert.currentData && convert.currentData.experiences);
+        const isHistoricalData = Boolean(convert.historicalData && convert.historicalData.experiences);
+
+        // If there are experiments and a session cookie, proceed
+        if (
+          (isCurrentData || isHistoricalData) &&
+          session_cookie
+        ) {
+          // Define some variables
+          let revenue_goal_id = "100452705";
+          let visitor_id = session_cookie.split("*")[0].replace("sh:", "");
+          let exp_list = [];
+          let variation_list = [];
+          let varID;
+
+          // If there are current experiments, add them to the lists
+          if (isCurrentData) {
+            let new_exp = convert.currentData.experiences;
+            for (let expID in new_exp) {
+              varID = new_exp[expID].variation.id;
+              if (!exp_list.includes(expID.toString())) {
+                exp_list.push(expID.toString());
+                variation_list.push(varID.toString());
+              }
+            }
+          }
+
+          // Adjusting for the new historicalData format
+          if (isHistoricalData) {
+            let old_exp = convert.historicalData.experiences;
+            for (let expID in old_exp) {
+              varID = old_exp[expID].variation_id;
+              if (!exp_list.includes(expID.toString())) {
+                exp_list.push(expID.toString());
+                variation_list.push(varID.toString());
+              }
+            }
+          }
+
+          // Define the base convert attributes
+          let convert_attributes = {
+            cid: convert.data.account_id,
+            pid: convert.data.project.id,
+            vid: visitor_id,
+            goals: revenue_goal_id,
+            vars: variation_list,
+            exps: exp_list,
+          };
+
+          // Try to get visitor segments
+          try {
+            let segmentsFromConvert = convert.getVisitorSegments();
+            convert_attributes.visitorSegments =
+              alignSegmentsToFirstFormat(segmentsFromConvert);
+          } catch (error) {
+            console.error("Convert: Error getting visitor segments:", error);
+          }
+
+          // Try to set convert_attributes in localStorage
+          try {
+            localStorage.setItem("convert_revenue_goal", revenue_goal_id);
+            console.log(
+              "%cConvert: convert_revenue_goal successfully saved to localStorage",
+              "color: lightgreen"
+            ); // Debugging line
+          } catch (error) {
+            console.error(
+              "%cConvert: Error saving convert_attributes to localStorage: ",
+              "color: deeppink",
+              error
+            ); // Error handling
+          }
+
+          // Prefix the convert attributes
+          const prefixed_convert_attributes = {
+            __event: btoa(JSON.stringify(convert_attributes)),
+            __currency: "USD",
+            __version: "5",
+          };
+
+          const shopifyRoot =
+            window.Shopify && window.Shopify.routes
+              ? window.Shopify.routes.root
+              : "/";
+          console.log("shopifyRoot:", shopifyRoot);
+          fetch(shopifyRoot + "cart/update.js", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              attributes: prefixed_convert_attributes,
+            }),
+          })
+            .then(function () {
+              console.log(
+                "%cConvert: Hidden cart attributes successfully updated",
+                "color: lightgreen"
+              ); // Debugging line
+            })
+            .catch(function (errorThrown) {
+              console.error(
+                "%cConvert: Error updating hidden cart attribute values: ",
+                "color: deeppink",
+                errorThrown
+              ); // Error handling
+              console.log(
+                "%cValues: ",
+                "color: deeppink",
+                prefixed_convert_attributes
+              ); // Error debugging
+            });
+        }
+      },
+    },
+  });
+</script>
+<script
+  type="text/javascript"
+  src="//cdn-4.convertexperiments.com/v1/js/10042572-10049736.js"
+></script>
+<!-- end Convert Experiences code -->
+<script src="https://cdn.shopify.com/s/javascripts/currencies.js"></script>
